@@ -145,7 +145,7 @@ const BinderPage = ({
                         <img
                           src={
                             parsedMissingCards.has(card.number)
-                              ? "/back.png"
+                              ? "https://pkmnbinder.com/images/000/000.png"
                               : card.images.small
                           }
                           alt={card.name}
@@ -239,7 +239,7 @@ const BinderPage = ({
                       className="absolute opacity-10"
                     />
                     <div className="text-4xl font-bold text-[#d62e36] opacity-20 rotate-45 mb-4">
-                      WORK IN PROGRESS
+                      PkmnBindr
                     </div>
                   </div>
                 ) : (
