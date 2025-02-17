@@ -145,7 +145,7 @@ const BinderPage = ({
                         <img
                           src={
                             parsedMissingCards.has(card.number)
-                              ? "https://pkmnbinder.com/images/000/000.png"
+                              ? "/back.png"
                               : card.images.small
                           }
                           alt={card.name}
