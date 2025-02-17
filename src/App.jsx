@@ -478,6 +478,13 @@ const App = () => {
           }}
         />
       )}
+      <footer className="absolute bottom-0 left-100 right-0 text-center p-4 text-gray-500/50 text-xs">
+        <p>
+          The PkmnBindr Website are not affiliated with, sponsored or endorsed
+          by, or in any way associated with Pokemon or The Pokemon Company
+          International Inc
+        </p>
+      </footer>
     </div>
   );
 };
