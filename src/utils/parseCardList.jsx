@@ -9,7 +9,7 @@ export const parseCardList = (text, setCards) => {
     ])
   );
 
-  const normalizeText = (text) => text.toLowerCase().replace(/[^\w\s]/g, "");
+  //const normalizeText = (text) => text.toLowerCase().replace(/[^\w\s]/g, "");
 
   const strategies = [
     (line) => {
@@ -24,6 +24,7 @@ export const parseCardList = (text, setCards) => {
       const match = line.match(/#(\d+[a-z]?)/);
       return match ? match[1] : null;
     },
+    /*
     (line) => {
       const normalizedLine = normalizeText(line);
       for (const [number, card] of cardReference) {
@@ -33,6 +34,7 @@ export const parseCardList = (text, setCards) => {
       }
       return null;
     },
+    */
   ];
 
   const lines = text.split("\n").filter((line) => line.trim());
