@@ -17,7 +17,7 @@ const DeleteConfirmationModal = ({ binderName, onConfirm, onCancel }) => {
 
         <p className="text-yellow-500/80 mb-6">
           Are you sure you want to delete{" "}
-          <span className="font-semibold">{binderName}</span>? This action
+          <span className="font-semibold pb-6">{binderName}</span>? This action
           cannot be undone.
         </p>
 
