@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { X, Copy, Check } from "lucide-react";
+import { useTheme } from "../../theme/ThemeContent";
 
 const DeckListModal = ({ cards, onClose }) => {
+  const { theme } = useTheme();
   const [deckList, setDeckList] = useState("");
   const [copied, setCopied] = useState(false);
 
@@ -12,19 +14,15 @@ const DeckListModal = ({ cards, onClose }) => {
         .map((card) => {
           const abilities = card.abilities || [];
           const attacks = card.attacks || [];
-
           const skills = [
             ...abilities.map((ability) => ability.name),
             ...attacks.map((attack) => attack.name),
           ].map((name) => (name.includes(" ") ? `"${name}"` : name));
-
           return `${card.name} ${skills.join(" ")}`;
         })
         .join("\n");
-
       setDeckList(list);
     };
-
     generateDeckList();
   }, [cards]);
 
@@ -40,12 +38,16 @@ const DeckListModal = ({ cards, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-gray-900 rounded-2xl p-6 max-w-2xl w-full m-4 shadow-2xl border border-yellow-500/20">
+      <div
+        className={`${theme.colors.background.sidebar} rounded-2xl p-6 max-w-2xl w-full m-4 shadow-2xl border ${theme.colors.border.accent}`}
+      >
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold text-yellow-500">Deck List</h2>
+          <h2 className={`text-2xl font-bold ${theme.colors.text.accent}`}>
+            Deck List
+          </h2>
           <button
             onClick={onClose}
-            className="text-yellow-500/60 hover:text-yellow-500 transition-colors"
+            className={`${theme.colors.text.secondary} hover:${theme.colors.text.accent} transition-colors`}
           >
             <X className="w-6 h-6" />
           </button>
@@ -55,12 +57,14 @@ const DeckListModal = ({ cards, onClose }) => {
           <textarea
             value={deckList}
             readOnly
-            className="w-full h-96 p-4 bg-gray-800/50 border border-yellow-500/20 rounded-xl 
-            text-yellow-100 font-mono text-sm mb-4 
-            focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
+            className={`w-full h-96 p-4 ${theme.colors.background.card} border ${theme.colors.border.accent} rounded-xl
+              ${theme.colors.text.primary} font-mono text-sm mb-4
+              focus:outline-none focus:ring-2 focus:ring-offset-2`}
           />
           <div className="absolute top-2 right-2">
-            <span className="text-xs text-yellow-500/60 bg-gray-900/80 px-2 py-1 rounded-full border border-yellow-500/20">
+            <span
+              className={`text-xs ${theme.colors.text.secondary} ${theme.colors.background.sidebar} px-2 py-1 rounded-full border ${theme.colors.border.accent}`}
+            >
               {cards.length} cards
             </span>
           </div>
@@ -69,12 +73,12 @@ const DeckListModal = ({ cards, onClose }) => {
         <div className="flex justify-end gap-4">
           <button
             onClick={copyToClipboard}
-            className="px-4 py-2 bg-yellow-500 text-gray-900 
-            rounded-lg hover:bg-yellow-400
-            focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
-            shadow-lg shadow-yellow-500/20
-            transition-all duration-200
-            flex items-center gap-2 font-semibold"
+            className={`px-4 py-2 rounded-lg
+              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900
+              shadow-lg
+              transition-all duration-200
+              flex items-center gap-2 font-semibold
+              ${theme.colors.button.primary}`}
           >
             {copied ? (
               <>
@@ -88,12 +92,14 @@ const DeckListModal = ({ cards, onClose }) => {
               </>
             )}
           </button>
+
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-gray-800 text-yellow-500 rounded-lg 
-            hover:bg-gray-700 border border-yellow-500/20
-            focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
-            transition-colors duration-200"
+            className={`px-4 py-2 rounded-lg
+              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900
+              transition-colors duration-200
+              border ${theme.colors.border.accent}
+              ${theme.colors.button.secondary}`}
           >
             Close
           </button>

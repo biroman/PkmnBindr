@@ -23,8 +23,11 @@ import {
   getSetFromCache,
   saveSetToCache,
 } from "./utils/storageUtils";
+import { useTheme } from "./theme/ThemeContent";
+import ThemeSelector from "./components/ThemeSelector";
 
 const App = () => {
+  const { theme } = useTheme();
   const [selectedSet, setSelectedSet] = useState(null);
   const [set, setSet] = useState(null);
   const [cards, setCards] = useState([]);
@@ -252,18 +255,27 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 flex">
-      <div className="w-100 bg-gray-900/80 backdrop-blur-sm p-4 flex flex-col gap-4 overflow-y-auto border-r border-yellow-500/20">
+    <div
+      className={`h-screen bg-gradient-to-br ${theme.colors.background.main} flex`}
+    >
+      <div
+        className={`w-100 ${theme.colors.background.sidebar} backdrop-blur-sm p-4 flex flex-col gap-4 overflow-y-auto border-r ${theme.colors.border.accent}`}
+      >
         <div className="flex items-center justify-between">
-          <div className="text-yellow-500">
-            <h1 className="text-2xl text-[#d62e36] font-bold mb-1">
+          <div className={theme.colors.text.primary}>
+            <h1
+              className={`text-2xl ${theme.colors.text.accent} font-bold mb-1`}
+            >
               PkmnBindr
             </h1>
-            <p className="text-yellow-500/60 text-sm">
+            <p className={`${theme.colors.text.secondary} text-sm`}>
               Generate Master Set Binder
             </p>
           </div>
-          <StorageControls onDataImported={handleDataImported} />
+          <div className="flex items-center gap-2">
+            <StorageControls onDataImported={handleDataImported} />
+            <ThemeSelector />
+          </div>
         </div>
 
         <div className="space-y-4">
@@ -286,14 +298,14 @@ const App = () => {
                 <button
                   onClick={handleSearch}
                   disabled={loading || !selectedSet}
-                  className="flex-1 px-3 py-2 bg-yellow-500 text-gray-900 text-sm rounded-lg 
-                    hover:bg-yellow-400 
-                    focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 
+                  className={`flex-1 px-3 py-2 text-sm rounded-lg 
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 
                     disabled:opacity-50 disabled:cursor-not-allowed
                     flex items-center justify-center gap-2 
-                    shadow-lg shadow-yellow-500/20
+                    shadow-lg
                     font-semibold
-                    transition-all duration-200"
+                    transition-all duration-200
+                    ${theme.colors.button.primary}`}
                 >
                   {loading ? (
                     <>
@@ -311,7 +323,9 @@ const App = () => {
               />
 
               {saveStatus === "success" && (
-                <div className="text-green-500 text-sm text-center bg-green-500/10 py-2 px-4 rounded-lg">
+                <div
+                  className={`${theme.colors.button.success} bg-opacity-10 text-sm text-center py-2 px-4 rounded-lg`}
+                >
                   Binder saved successfully!
                 </div>
               )}
@@ -326,13 +340,19 @@ const App = () => {
 
         {error && <p className="text-red-400 text-xs">{error}</p>}
 
-        <div className="space-y-2 bg-gray-800/50 p-4 rounded-xl border border-yellow-500/20">
+        <div
+          className={`space-y-2 ${theme.colors.background.card} p-4 rounded-xl border ${theme.colors.border.accent}`}
+        >
           <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-medium text-yellow-500">
+            <label
+              className={`text-sm font-medium ${theme.colors.text.accent}`}
+            >
               Hide Missing Cards
             </label>
             {missingCards && (
-              <span className="text-xs bg-yellow-500/10 px-3 py-1 rounded-full text-yellow-500 font-medium border border-yellow-500/20">
+              <span
+                className={`text-xs ${theme.colors.background.card} px-3 py-1 rounded-full ${theme.colors.text.accent} font-medium border ${theme.colors.border.accent}`}
+              >
                 {parsedMissingCards.size} cards
               </span>
             )}
@@ -345,45 +365,24 @@ const App = () => {
             placeholder={
               currentBinder ? "One card per line..." : "Select a binder first"
             }
-            className="w-full h-24 px-3 py-2 bg-gray-800/50 border border-yellow-500/20 rounded-lg 
-  text-yellow-100 text-sm placeholder-yellow-500/30
-  focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent
-  disabled:opacity-50 disabled:cursor-not-allowed"
+            className={`w-full h-24 px-3 py-2 ${theme.colors.background.card} border ${theme.colors.border.accent} rounded-lg 
+              ${theme.colors.text.primary} text-sm
+              focus:outline-none focus:ring-2 focus:ring-offset-2 
+              disabled:opacity-50 disabled:cursor-not-allowed`}
           />
-          <div className="mt-2 space-y-2 text-xs text-yellow-500/60">
-            <p>Format examples: #1, [2], 003/189, Caterpie (id best)</p>
 
-            <div className="mt-4 p-3 bg-gray-800/30 rounded-lg space-y-3">
-              <p className="text-yellow-500 font-medium">
-                Quick steps to import from pkmn.gg:
-              </p>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>Go to pkmn.gg and select your set</li>
-                <li className="flex items-start gap-3">
-                  Find this button in the top right corner:
-                </li>
-                <img
-                  src="/pkmngg.png"
-                  alt="pkmn.gg missing cards button"
-                  className="h-8 rounded border border-yellow-500/20"
-                />
-                <li>Click it to see your missing cards list</li>
-                <li>Copy the entire list and paste it here</li>
-              </ol>
-            </div>
-          </div>
           <div className="flex gap-2">
             <button
               onClick={handleSaveBinder}
               disabled={saving || !selectedSet || !set}
-              className="px-3 py-2 bg-green-600 w-full text-white text-sm rounded-lg 
-                    hover:bg-green-500 
-                    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 
-                    disabled:opacity-50 disabled:cursor-not-allowed
-                    flex items-center justify-center gap-2 
-                    shadow-lg shadow-green-500/20
-                    font-semibold
-                    transition-all duration-200"
+              className={`px-3 py-2 w-full text-sm rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-offset-2 
+                disabled:opacity-50 disabled:cursor-not-allowed
+                flex items-center justify-center gap-2 
+                shadow-lg
+                font-semibold
+                transition-all duration-200
+                ${theme.colors.button.success}`}
             >
               {saving ? (
                 <>
@@ -400,31 +399,20 @@ const App = () => {
           </div>
         </div>
 
-        {/* <div className="flex flex-col items-center justify-end mt-auto space-y-4">
-          <a
-            href="https://www.buymeacoffee.com/biroman"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-full flex justify-center group"
-          >
-            <div className="bg-fuchsia-400 text-white font-bold px-4 py-2 rounded-lg hover:bg-fuchsia-300 transition-colors ">
-              Buy me a coffee? ☕
-            </div>
-          </a>
-        </div> */}
         {set && cards.length > 0 && (
-          <div className=" space-y-2 mt-4">
+          <div className="space-y-2 mt-4">
             <button
               onClick={() => {
                 setCardListToShow([]);
                 setShowDeckList(true);
               }}
-              className="w-full px-4 py-3 bg-yellow-500 text-gray-900 text-sm font-semibold 
-                rounded-lg hover:bg-yellow-400
+              className={`w-full px-4 py-3 text-sm font-semibold 
+                rounded-lg
                 transition-all duration-200 ease-in-out
-                shadow-lg shadow-yellow-500/20
-                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
-                flex items-center justify-center gap-3"
+                shadow-lg
+                focus:outline-none focus:ring-2 focus:ring-offset-2
+                flex items-center justify-center gap-3
+                ${theme.colors.button.primary}`}
             >
               Create Full Set Deck List
             </button>
@@ -437,13 +425,14 @@ const App = () => {
                 setCardListToShow(missingCardsList);
                 setShowDeckList(true);
               }}
-              className="w-full px-4 py-3 bg-gray-800 text-yellow-500 text-sm font-semibold 
-                rounded-lg hover:bg-gray-700
+              className={`w-full px-4 py-3 text-sm font-semibold 
+                rounded-lg
                 transition-all duration-200 ease-in-out
-                border border-yellow-500/20
-                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                border ${theme.colors.border.light}
+                focus:outline-none focus:ring-2 focus:ring-offset-2
                 flex items-center justify-center gap-3
-                disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled:opacity-50 disabled:cursor-not-allowed
+                ${theme.colors.button.secondary}`}
               disabled={parsedMissingCards.size === 0}
             >
               Create Missing Cards Deck List
@@ -452,7 +441,7 @@ const App = () => {
         )}
       </div>
 
-      <div className="flex-1 min-w-0 bg-gray-950">
+      <div className={`flex-1 min-w-0 ${theme.colors.background.main}`}>
         {cards.length > 0 ? (
           <BinderPage
             cards={cards}
@@ -471,10 +460,10 @@ const App = () => {
         ) : (
           <div className="h-full flex items-center justify-center">
             <div className="text-center space-y-4">
-              <div className="text-4xl font-bold text-yellow-500">
+              <div className={`text-4xl font-bold ${theme.colors.text.accent}`}>
                 {currentBinder ? "Select a Set" : "Select a Binder"}
               </div>
-              <p className="text-yellow-500/60">
+              <p className={theme.colors.text.secondary}>
                 {currentBinder
                   ? "Choose a set to start building your collection"
                   : "Create or select a binder to get started"}
@@ -493,7 +482,10 @@ const App = () => {
           }}
         />
       )}
-      <footer className="absolute bottom-0 left-100 right-0 text-center p-4 text-gray-500/50 text-xs">
+
+      <footer
+        className={`absolute bottom-0 left-100 right-0 text-center p-4 ${theme.colors.text.secondary} text-opacity-50 text-xs`}
+      >
         <p>
           The PkmnBindr Website are not affiliated with, sponsored or endorsed
           by, or in any way associated with Pokemon or The Pokemon Company

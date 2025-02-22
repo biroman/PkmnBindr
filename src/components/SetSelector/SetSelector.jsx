@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Search, Loader2, ChevronDown } from "lucide-react";
+import { useTheme } from "../../theme/ThemeContent";
 
 const SetSelector = ({ onSetSelect, selectedSet }) => {
+  const { theme } = useTheme();
   const [sets, setSets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -50,43 +52,66 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`
-        w-full px-3 py-1.5 
-        bg-gray-700/50 backdrop-blur-sm 
-        border border-gray-600 rounded 
-        text-white text-sm 
-        flex items-center justify-between 
-        focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent
-        ${!selectedSet ? "animate-pulse" : ""}
-      `}
+          w-full px-3 py-1.5 
+          ${theme.colors.button.secondary}
+          border ${theme.colors.border.accent} rounded 
+          ${theme.colors.text.primary} text-sm 
+          flex items-center justify-between 
+          focus:outline-none focus:ring-1 focus:ring-offset-2
+          ${!selectedSet ? "animate-pulse" : ""}
+        `}
       >
         <span className="truncate">
-          {selectedSet ? selectedSet.name : "Select a set"}
+          {selectedSet ? (
+            <span className={theme.colors.text.primary}>
+              {selectedSet.name}
+            </span>
+          ) : (
+            <span className={theme.colors.text.secondary}>Select a set</span>
+          )}
         </span>
-        <ChevronDown className="w-4 h-4 text-gray-400" />
+        <ChevronDown className={`w-4 h-4 ${theme.colors.text.secondary}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 w-full mt-1 bg-gray-800 border border-gray-700 rounded-lg shadow-xl max-h-96 overflow-hidden flex flex-col">
-          <div className="p-2 border-b border-gray-700">
+        <div
+          className={`absolute z-50 w-full mt-1 ${theme.colors.background.sidebar} border ${theme.colors.border.accent} rounded-lg shadow-xl max-h-96 overflow-hidden flex flex-col`}
+        >
+          <div
+            className={`p-2 border-b ${theme.colors.border.light} ${theme.colors.button.secondary}`}
+          >
             <div className="relative">
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search sets..."
-                className="w-full px-3 py-1.5 pl-8 bg-gray-700/50 backdrop-blur-sm border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                className={`w-full px-3 py-1.5 pl-8 
+                  ${theme.colors.button.secondary}
+                  border ${theme.colors.border.accent} rounded 
+                  ${theme.colors.text.primary} text-sm 
+                  placeholder:${theme.colors.text.secondary}
+                  focus:outline-none focus:ring-1 focus:ring-offset-2`}
               />
-              <Search className="w-4 h-4 text-gray-500 absolute left-2 top-1/2 transform -translate-y-1/2" />
+              <Search
+                className={`w-4 h-4 ${theme.colors.text.secondary} absolute left-2 top-1/2 transform -translate-y-1/2`}
+              />
             </div>
           </div>
 
-          <div className="overflow-y-auto flex-1">
+          <div
+            className={`overflow-y-auto flex-1 ${theme.colors.background.sidebar}`}
+          >
             {isLoading ? (
               <div className="flex items-center justify-center p-4">
-                <Loader2 className="w-6 h-6 text-blue-500 animate-spin" />
+                <Loader2
+                  className={`w-6 h-6 ${theme.colors.text.accent} animate-spin`}
+                />
               </div>
             ) : filteredSets.length === 0 ? (
-              <div className="p-4 text-center text-gray-500">No sets found</div>
+              <div className={`p-4 text-center ${theme.colors.text.secondary}`}>
+                No sets found
+              </div>
             ) : (
               <div className="py-1">
                 {filteredSets.map((set) => (
@@ -97,7 +122,7 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
                       setIsOpen(false);
                       setSearchTerm("");
                     }}
-                    className="w-full px-4 py-2 text-left hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
+                    className={`w-full px-4 py-2 text-left ${theme.colors.button.secondary} transition-colors`}
                   >
                     <div className="flex items-center gap-2">
                       <img
@@ -106,8 +131,10 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
                         className="w-6 h-6"
                       />
                       <div>
-                        <div className="text-white text-sm">{set.name}</div>
-                        <div className="text-gray-400 text-xs">
+                        <div className={theme.colors.text.primary}>
+                          {set.name}
+                        </div>
+                        <div className={theme.colors.text.secondary}>
                           {set.series}
                         </div>
                       </div>
