@@ -15,6 +15,20 @@ const BinderSelector = ({
   const [newBinderName, setNewBinderName] = useState("");
   const [editingBinder, setEditingBinder] = useState(null);
   const dropdownRef = useRef(null);
+  const newBinderInputRef = useRef(null);
+  const editBinderInputRef = useRef(null);
+
+  useEffect(() => {
+    if (showNewBinderInput && newBinderInputRef.current) {
+      newBinderInputRef.current.focus();
+    }
+  }, [showNewBinderInput]);
+
+  useEffect(() => {
+    if (editingBinder && editBinderInputRef.current) {
+      editBinderInputRef.current.focus();
+    }
+  }, [editingBinder]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -26,6 +40,16 @@ const BinderSelector = ({
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const handleBinderKeyPress = (e, type) => {
+    if (e.key === "Enter") {
+      if (type === "new") {
+        handleCreateBinder();
+      } else if (type === "edit") {
+        handleSaveEdit();
+      }
+    }
+  };
 
   const handleCreateBinder = () => {
     if (newBinderName.trim()) {
@@ -89,6 +113,7 @@ const BinderSelector = ({
                   {editingBinder?.id === binder.id ? (
                     <div className="flex items-center gap-2 p-2">
                       <input
+                        ref={editBinderInputRef}
                         type="text"
                         value={editingBinder.newName}
                         onChange={(e) =>
@@ -97,9 +122,10 @@ const BinderSelector = ({
                             newName: e.target.value,
                           })
                         }
+                        onKeyPress={(e) => handleBinderKeyPress(e, "edit")}
                         className="flex-1 px-2 py-1 bg-gray-700 border border-yellow-500/20 rounded 
-                        text-yellow-500 text-sm
-                        focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
+    text-yellow-500 text-sm
+    focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
                         placeholder="Binder name..."
                       />
                       <button
@@ -157,12 +183,14 @@ const BinderSelector = ({
               <div className="p-2 border-t border-yellow-500/10">
                 <div className="flex items-center gap-2">
                   <input
+                    ref={newBinderInputRef}
                     type="text"
                     value={newBinderName}
                     onChange={(e) => setNewBinderName(e.target.value)}
+                    onKeyPress={(e) => handleBinderKeyPress(e, "new")}
                     className="flex-1 px-2 py-1 bg-gray-700 border border-yellow-500/20 rounded 
-                    text-yellow-500 text-sm
-                    focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
+    text-yellow-500 text-sm
+    focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
                     placeholder="New binder name..."
                   />
                   <button

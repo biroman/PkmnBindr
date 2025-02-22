@@ -106,7 +106,10 @@ const App = () => {
         setCards(cardsData);
         setSet(currentSet);
 
-        const savedMissingCards = getMissingCards(currentSet.id);
+        // Load missing cards from the binder's data directly
+        const savedMissingCards = new Set(
+          binder.missingCards?.[currentSet.id] || []
+        );
         setParsedMissingCards(savedMissingCards);
         const missingCardsText = Array.from(savedMissingCards)
           .map((number) => `#${number}`)
@@ -129,15 +132,19 @@ const App = () => {
     setSaveStatus(null);
 
     try {
-      // Save the missing cards first
-      if (set) {
+      // First save missing cards to ensure they're stored
+      if (selectedSet) {
         saveMissingCards(selectedSet.id, parsedMissingCards);
       }
 
-      // Then save the binder
+      // Then update the binder with the latest missing cards
       const updatedBinder = {
         ...currentBinder,
         sets: [selectedSet], // Only allow one set
+        missingCards: {
+          ...currentBinder.missingCards,
+          [selectedSet.id]: Array.from(parsedMissingCards),
+        },
       };
 
       await saveBinder(updatedBinder);
