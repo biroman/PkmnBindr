@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Book, Plus, ChevronDown, Pencil, Trash2, Save, X } from "lucide-react";
+import DeleteConfirmationModal from "./DeleteConfirmationModal";
 
 const BinderSelector = ({
   binders,
@@ -17,6 +18,18 @@ const BinderSelector = ({
   const dropdownRef = useRef(null);
   const newBinderInputRef = useRef(null);
   const editBinderInputRef = useRef(null);
+  const [binderToDelete, setBinderToDelete] = useState(null);
+
+  const handleDeleteClick = (binder) => {
+    setBinderToDelete(binder);
+  };
+
+  const handleConfirmDelete = () => {
+    if (binderToDelete) {
+      onBinderDelete(binderToDelete.id);
+      setBinderToDelete(null);
+    }
+  };
 
   useEffect(() => {
     if (showNewBinderInput && newBinderInputRef.current) {
@@ -165,7 +178,7 @@ const BinderSelector = ({
                         </button>
                         {binders.length > 1 && (
                           <button
-                            onClick={() => onBinderDelete(binder.id)}
+                            onClick={() => handleDeleteClick(binder)}
                             className="p-1 text-red-500/60 hover:text-red-500"
                             title="Delete binder"
                           >
@@ -224,6 +237,13 @@ const BinderSelector = ({
           </div>
         )}
       </div>
+      {binderToDelete && (
+        <DeleteConfirmationModal
+          binderName={binderToDelete.name}
+          onConfirm={handleConfirmDelete}
+          onCancel={() => setBinderToDelete(null)}
+        />
+      )}
     </div>
   );
 };
