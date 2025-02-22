@@ -129,6 +129,12 @@ const App = () => {
     setSaveStatus(null);
 
     try {
+      // Save the missing cards first
+      if (set) {
+        saveMissingCards(selectedSet.id, parsedMissingCards);
+      }
+
+      // Then save the binder
       const updatedBinder = {
         ...currentBinder,
         sets: [selectedSet], // Only allow one set
