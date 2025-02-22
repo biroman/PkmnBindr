@@ -282,10 +282,6 @@ const App = () => {
                 onSetSelect={setSelectedSet}
                 selectedSet={selectedSet}
               />
-              <BinderLayoutSelector
-                currentLayout={layout}
-                onLayoutChange={handleLayoutChange}
-              />
               <div className="flex gap-2">
                 <button
                   onClick={handleSearch}
@@ -308,31 +304,12 @@ const App = () => {
                     "Search"
                   )}
                 </button>
-                <button
-                  onClick={handleSaveBinder}
-                  disabled={saving || !selectedSet || !set}
-                  className="px-3 py-2 bg-green-600 text-white text-sm rounded-lg 
-                    hover:bg-green-500 
-                    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 
-                    disabled:opacity-50 disabled:cursor-not-allowed
-                    flex items-center justify-center gap-2 
-                    shadow-lg shadow-green-500/20
-                    font-semibold
-                    transition-all duration-200"
-                >
-                  {saving ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Saving...
-                    </>
-                  ) : (
-                    <>
-                      <Save className="w-4 h-4" />
-                      Save
-                    </>
-                  )}
-                </button>
               </div>
+              <BinderLayoutSelector
+                currentLayout={layout}
+                onLayoutChange={handleLayoutChange}
+              />
+
               {saveStatus === "success" && (
                 <div className="text-green-500 text-sm text-center bg-green-500/10 py-2 px-4 rounded-lg">
                   Binder saved successfully!
@@ -395,45 +372,32 @@ const App = () => {
               </ol>
             </div>
           </div>
-
-          {set && cards.length > 0 && (
-            <div className="space-y-2 mt-4">
-              <button
-                onClick={() => {
-                  setCardListToShow([]);
-                  setShowDeckList(true);
-                }}
-                className="w-full px-4 py-3 bg-yellow-500 text-gray-900 text-sm font-semibold 
-                rounded-lg hover:bg-yellow-400
-                transition-all duration-200 ease-in-out
-                shadow-lg shadow-yellow-500/20
-                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
-                flex items-center justify-center gap-3"
-              >
-                Create Full Set Deck List
-              </button>
-
-              <button
-                onClick={() => {
-                  const missingCardsList = cards.filter((card) =>
-                    parsedMissingCards.has(card.number)
-                  );
-                  setCardListToShow(missingCardsList);
-                  setShowDeckList(true);
-                }}
-                className="w-full px-4 py-3 bg-gray-800 text-yellow-500 text-sm font-semibold 
-                rounded-lg hover:bg-gray-700
-                transition-all duration-200 ease-in-out
-                border border-yellow-500/20
-                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
-                flex items-center justify-center gap-3
-                disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={parsedMissingCards.size === 0}
-              >
-                Create Missing Cards Deck List
-              </button>
-            </div>
-          )}
+          <div className="flex gap-2">
+            <button
+              onClick={handleSaveBinder}
+              disabled={saving || !selectedSet || !set}
+              className="px-3 py-2 bg-green-600 w-full text-white text-sm rounded-lg 
+                    hover:bg-green-500 
+                    focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 
+                    disabled:opacity-50 disabled:cursor-not-allowed
+                    flex items-center justify-center gap-2 
+                    shadow-lg shadow-green-500/20
+                    font-semibold
+                    transition-all duration-200"
+            >
+              {saving ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                <>
+                  <Save className="w-4 h-4" />
+                  Save Binder
+                </>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* <div className="flex flex-col items-center justify-end mt-auto space-y-4">
@@ -448,6 +412,44 @@ const App = () => {
             </div>
           </a>
         </div> */}
+        {set && cards.length > 0 && (
+          <div className=" space-y-2 mt-4">
+            <button
+              onClick={() => {
+                setCardListToShow([]);
+                setShowDeckList(true);
+              }}
+              className="w-full px-4 py-3 bg-yellow-500 text-gray-900 text-sm font-semibold 
+                rounded-lg hover:bg-yellow-400
+                transition-all duration-200 ease-in-out
+                shadow-lg shadow-yellow-500/20
+                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                flex items-center justify-center gap-3"
+            >
+              Create Full Set Deck List
+            </button>
+
+            <button
+              onClick={() => {
+                const missingCardsList = cards.filter((card) =>
+                  parsedMissingCards.has(card.number)
+                );
+                setCardListToShow(missingCardsList);
+                setShowDeckList(true);
+              }}
+              className="w-full px-4 py-3 bg-gray-800 text-yellow-500 text-sm font-semibold 
+                rounded-lg hover:bg-gray-700
+                transition-all duration-200 ease-in-out
+                border border-yellow-500/20
+                focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                flex items-center justify-center gap-3
+                disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={parsedMissingCards.size === 0}
+            >
+              Create Missing Cards Deck List
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="flex-1 min-w-0 bg-gray-950">
