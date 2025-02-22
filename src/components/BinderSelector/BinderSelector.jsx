@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Book, Plus, ChevronDown, Pencil, Trash2, Save, X } from "lucide-react";
-import DeleteConfirmationModal from "./DeleteConfirmationModal";
+import DeleteConfirmationModal from "../DeleteConfirmationModal";
 
 const BinderSelector = ({
   binders,
