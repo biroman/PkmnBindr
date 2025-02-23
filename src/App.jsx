@@ -72,11 +72,22 @@ const App = () => {
 
     // Sort cards based on number and reverse holo status
     processedCards.sort((a, b) => {
-      const aNum = parseInt(a.number);
-      const bNum = parseInt(b.number);
+      // Extract base number and any letter suffix
+      const [, aBase, aLetter] = a.number.match(/(\d+)([a-zA-Z])?/) || [];
+      const [, bBase, bLetter] = b.number.match(/(\d+)([a-zA-Z])?/) || [];
+
+      const aNum = parseInt(aBase);
+      const bNum = parseInt(bBase);
 
       if (aNum === bNum) {
-        // If numbers are the same, reverse holos come after regular cards
+        // First sort by letter suffix (no letter comes before letters)
+        if ((!aLetter && bLetter) || (aLetter && !bLetter)) {
+          return !aLetter ? -1 : 1;
+        }
+        if (aLetter !== bLetter) {
+          return (aLetter || "").localeCompare(bLetter || "");
+        }
+        // If numbers and letters are the same, reverse holos come after regular cards
         return (a.isReverseHolo ? 1 : 0) - (b.isReverseHolo ? 1 : 0);
       }
 
