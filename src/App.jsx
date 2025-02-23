@@ -383,7 +383,9 @@ const App = () => {
           {error && <p className="text-red-400 text-xs">{error}</p>}
 
           <div
-            className={`${theme.colors.background.card} rounded-xl border ${theme.colors.border.accent} p-4 space-y-4`}
+            className={`${theme.colors.background.card} ${
+              !selectedSet ? "hidden" : ""
+            } rounded-xl border ${theme.colors.border.accent} p-4 space-y-4`}
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
