@@ -148,21 +148,23 @@ const BinderPage = ({
                       <div className="relative w-full h-full group flex items-center justify-center">
                         {/* Base card layer */}
                         <div className="w-full h-full cursor-pointer hover:scale-[1.02] transition-transform duration-200">
-                          <img
-                            src={
-                              parsedMissingCards.has(card.number)
-                                ? "https://pkmnbinder.com/images/000/000.png"
-                                : card.images.small
-                            }
-                            alt={card.name}
-                            className={`w-full h-full object-contain rounded-lg shadow-lg transition-all duration-200 
-            group-hover:shadow-${theme.colors.primary}-500/20
-            ${card.isReverseHolo ? "reverse-holo-effect" : ""}`}
-                            onClick={() =>
-                              !parsedMissingCards.has(card.number) &&
-                              setSelectedCard(card)
-                            }
-                          />
+                          <div className="relative w-full h-full">
+                            <img
+                              src={
+                                parsedMissingCards.has(card.number)
+                                  ? "https://pkmnbinder.com/images/000/000.png"
+                                  : card.images.small
+                              }
+                              alt={card.name}
+                              className={`w-full h-full object-contain rounded-lg shadow-lg 
+        transition-all duration-200 
+        group-hover:shadow-${theme.colors.primary}-500/20`}
+                              onClick={() =>
+                                !parsedMissingCards.has(card.number) &&
+                                setSelectedCard(card)
+                              }
+                            />
+                          </div>
                         </div>
 
                         {/* Hover layer for missing cards */}
