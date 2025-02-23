@@ -92,13 +92,17 @@ const BinderSelector = ({
   };
 
   return (
-    <div className={`space-y-2 ${!currentBinder ? "animate-pulse" : ""}`}>
+    <div className="space-y-2">
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-full px-3 py-2 rounded-lg
+          className={`w-full px-3 py-2 rounded-lg ${
+            !currentBinder ? "animate-pulse" : ""
+          }
         flex items-center justify-between
-        focus:outline-none ${theme.colors.button.secondary} border ${theme.colors.border.accent}`}
+        focus:outline-none ${theme.colors.button.secondary} border ${
+            theme.colors.border.accent
+          }`}
         >
           <div className="flex items-center gap-2">
             <Book className={`w-4 h-4 ${theme.colors.text.accent}`} />
