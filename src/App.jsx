@@ -327,6 +327,11 @@ const App = () => {
           <p className={`${theme.colors.text.secondary} text-sm`}>
             Generate Master Set Binder
           </p>
+          <p className="hidden">
+            Generate and preview your complete Pokémon sets or master sets with
+            PKMN Binder. Save your progress and explore features to organize,
+            track, and manage your collection efficiently.
+          </p>
         </div>
 
         {/* Main Content Area - Scrollable */}
