@@ -1,12 +1,5 @@
 import PropTypes from "prop-types";
-import {
-  Grid2X2,
-  Grid3X3,
-  LayoutGrid,
-  ArrowDown,
-  ArrowUp,
-  Star,
-} from "lucide-react";
+import { Grid2X2, Grid3X3, LayoutGrid, ArrowDown, ArrowUp } from "lucide-react";
 import { useTheme } from "../../theme/ThemeContent";
 
 const BinderLayoutSelector = ({
@@ -69,7 +62,7 @@ const BinderLayoutSelector = ({
       </div>
 
       {/* Display Options */}
-      <div className="space-y-3 pt-2 border-t border-dashed border-opacity-50 ${theme.colors.border.accent}">
+      <div className="space-y-3 pt-2 ${theme.colors.border.accent}">
         <label className={`text-sm font-medium ${theme.colors.text.accent}`}>
           Display Options
         </label>
@@ -85,7 +78,13 @@ const BinderLayoutSelector = ({
             }`}
           >
             <div className="flex items-center gap-3">
-              <Star className={`w-4 h-4 ${theme.colors.text.accent}`} />
+              <div
+                className={`w-6 h-6 flex items-center justify-center 
+      rounded-md border text-xs font-bold relative
+      overflow-hidden text-gray-400`}
+              >
+                R<div className="absolute inset-0"></div>
+              </div>
               <span className={`text-sm ${theme.colors.text.primary}`}>
                 Reverse Holos
               </span>
