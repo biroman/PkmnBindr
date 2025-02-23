@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Loader2, Save } from "lucide-react";
+import { Loader2, Save, FileText, ListX } from "lucide-react";
 import SetSelector from "./components/SetSelector/SetSelector";
 import BinderLayoutSelector from "./components/BinderPage/BinderLayoutSelector";
 import BinderPage from "./components/BinderPage/BinderPage";
@@ -383,88 +383,150 @@ const App = () => {
           {error && <p className="text-red-400 text-xs">{error}</p>}
 
           <div
-            className={`space-y-2 ${theme.colors.background.card} p-4 rounded-xl border ${theme.colors.border.accent}`}
+            className={`${theme.colors.background.card} rounded-xl border ${theme.colors.border.accent} p-4 space-y-4`}
           >
-            <div className="flex items-center justify-between mb-2">
-              <label
-                className={`text-sm font-medium ${theme.colors.text.accent}`}
-              >
-                Hide Missing Cards
-              </label>
-              {missingCards && (
-                <span
-                  className={`text-xs ${theme.colors.background.card} px-3 py-1 rounded-full ${theme.colors.text.accent} font-medium border ${theme.colors.border.accent}`}
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <label
+                  className={`text-sm font-medium ${theme.colors.text.accent}`}
                 >
-                  {parsedMissingCards.size} cards
-                </span>
-              )}
-            </div>
+                  Missing Cards
+                </label>
+                {missingCards && (
+                  <span
+                    className={`px-3 py-1 text-xs font-medium rounded-lg
+              ${theme.colors.button.primary}`}
+                  >
+                    {parsedMissingCards.size} cards missing
+                  </span>
+                )}
+              </div>
 
-            <textarea
-              value={missingCards}
-              onChange={handleMissingCardsChange}
-              disabled={!currentBinder}
-              placeholder={
-                currentBinder ? "One card per line..." : "Select a binder first"
-              }
-              className={`w-full h-24 px-3 py-2 ${theme.colors.background.card} border ${theme.colors.border.accent} rounded-lg 
-                ${theme.colors.text.primary} text-sm
-                focus:outline-none focus:ring-2 focus:ring-offset-2 
-                disabled:opacity-50 disabled:cursor-not-allowed`}
-            />
-            <div className={`text-xs ${theme.colors.text.secondary} px-2`}>
-              <p className="mb-1">Supported formats (numbers recommended):</p>
-              <div className="flex flex-col gap-2">
-                <span>#1</span>
-                <span>[1]</span>
-                <span>001/178</span>
-                <span>Pikachu</span>
+              <textarea
+                value={missingCards}
+                onChange={handleMissingCardsChange}
+                disabled={!currentBinder}
+                placeholder={
+                  currentBinder
+                    ? "One card per line..."
+                    : "Select a binder first"
+                }
+                className={`w-full h-24 px-3 py-2 rounded-lg text-sm
+            transition-all duration-200
+            ${theme.colors.background.sidebar} backdrop-blur-sm
+            border ${theme.colors.border.accent}
+            ${theme.colors.text.primary}
+            focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-sky-500/50
+            disabled:opacity-50 disabled:cursor-not-allowed
+            placeholder:${theme.colors.text.secondary}`}
+              />
+            </div>
+            {/* Format Guide */}
+            <div
+              className={`p-3 rounded-lg ${theme.colors.background.sidebar} backdrop-blur-sm`}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <FileText className={`w-4 h-4 ${theme.colors.text.accent}`} />
+                <span
+                  className={`text-xs font-medium ${theme.colors.text.accent}`}
+                >
+                  Supported Formats
+                </span>
+              </div>
+              <div
+                className={`grid grid-cols-2 gap-2 text-xs ${theme.colors.text.secondary}`}
+              >
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`px-2 py-1 rounded-md ${theme.colors.background.card}`}
+                  >
+                    #1
+                  </span>
+                  <span>Number with hash</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`px-2 py-1 rounded-md ${theme.colors.background.card}`}
+                  >
+                    [1]
+                  </span>
+                  <span>Bracketed number</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`px-2 py-1 rounded-md ${theme.colors.background.card}`}
+                  >
+                    001/178
+                  </span>
+                  <span>Set fraction</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`px-2 py-1 rounded-md ${theme.colors.background.card}`}
+                  >
+                    Pikachu
+                  </span>
+                  <span>Card name</span>
+                </div>
               </div>
             </div>
             <div className="flex gap-2">
+              {/* Save Button */}
               <button
                 onClick={handleSaveBinder}
                 disabled={saving || !selectedSet || !set}
-                className={`px-3 py-2 w-full text-sm rounded-lg 
-                  focus:outline-none focus:ring-2 focus:ring-offset-2 
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  flex items-center justify-center gap-2 
-                  shadow-lg
-                  font-semibold
-                  transition-all duration-200
-                  ${theme.colors.button.success}`}
+                className={`w-full px-4 py-2.5 text-sm rounded-lg
+            transition-all duration-200
+            font-medium
+            focus:outline-none focus:ring-2 focus:ring-offset-2
+            disabled:opacity-50 disabled:cursor-not-allowed
+            shadow-lg
+            ${theme.colors.button.success}
+            flex items-center justify-center gap-2`}
               >
                 {saving ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Saving...
+                    <span>Saving...</span>
                   </>
                 ) : (
                   <>
                     <Save className="w-4 h-4" />
-                    Save Binder
+                    <span>Save Binder</span>
                   </>
                 )}
               </button>
             </div>
           </div>
 
+          {/* Deck List Buttons */}
           {set && cards.length > 0 && (
-            <div className="space-y-2">
+            <div
+              className={`${theme.colors.background.card} rounded-xl border ${theme.colors.border.accent} p-4 space-y-3`}
+            >
+              <div className="flex items-center gap-2 mb-1">
+                <FileText className={`w-4 h-4 ${theme.colors.text.accent}`} />
+                <span
+                  className={`text-sm font-medium ${theme.colors.text.accent}`}
+                >
+                  Deck Lists
+                </span>
+              </div>
+
               <button
                 onClick={() => {
                   setCardListToShow([]);
                   setShowDeckList(true);
                 }}
-                className={`w-full px-4 py-3 text-sm font-semibold 
-                  rounded-lg
-                  transition-all duration-200 ease-in-out
-                  shadow-lg
-                  focus:outline-none focus:ring-2 focus:ring-offset-2
-                  flex items-center justify-center gap-3
-                  ${theme.colors.button.secondary}`}
+                className={`w-full px-4 py-2.5 text-sm font-medium rounded-lg
+            transition-all duration-200
+            hover:${theme.colors.background.sidebar}
+            focus:outline-none focus:ring-2 focus:ring-offset-2
+            flex items-center justify-center gap-2
+            ${theme.colors.button.secondary} border ${theme.colors.border.accent}`}
               >
-                Create Full Set Deck List
+                <FileText className="w-4 h-4" />
+                Full Set Deck List
               </button>
 
               <button
@@ -475,16 +537,17 @@ const App = () => {
                   setCardListToShow(missingCardsList);
                   setShowDeckList(true);
                 }}
-                className={`w-full px-4 py-3 text-sm font-semibold 
-                  rounded-lg
-                  transition-all duration-200 ease-in-out
-                  focus:outline-none focus:ring-2 focus:ring-offset-2
-                  flex items-center justify-center gap-3
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  ${theme.colors.button.secondary}`}
                 disabled={parsedMissingCards.size === 0}
+                className={`w-full px-4 py-2.5 text-sm font-medium rounded-lg
+            transition-all duration-200
+            hover:${theme.colors.background.sidebar}
+            focus:outline-none focus:ring-2 focus:ring-offset-2
+            flex items-center justify-center gap-2
+            disabled:opacity-50 disabled:cursor-not-allowed
+            ${theme.colors.button.secondary} border ${theme.colors.border.accent}`}
               >
-                Create Missing Cards Deck List
+                <ListX className="w-4 h-4" />
+                Missing Cards Deck List
               </button>
             </div>
           )}
