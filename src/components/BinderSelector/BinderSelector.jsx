@@ -97,9 +97,9 @@ const BinderSelector = ({
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`w-full px-3 py-2 rounded-lg
-          flex items-center justify-between
-          focus:outline-none focus:ring-2 focus:ring-offset-2
-          ${theme.colors.button.secondary} border ${theme.colors.border.accent}`}
+  flex items-center justify-between
+  focus:outline-none ${/* Removed focus:ring-2 focus:ring-offset-2 */ ""}
+  ${theme.colors.button.secondary} border ${theme.colors.border.accent}`}
         >
           <div className="flex items-center gap-2">
             <Book className={`w-4 h-4 ${theme.colors.text.accent}`} />
@@ -174,7 +174,7 @@ const BinderSelector = ({
                     </div>
                   ) : (
                     <div
-                      className={`group flex items-center justify-between p-2 
+                      className={`group flex items-center justify-between 
             ${theme.colors.dropdown.hover}
             transition-colors`}
                     >
@@ -183,7 +183,7 @@ const BinderSelector = ({
                           onBinderSelect(binder);
                           setIsOpen(false);
                         }}
-                        className="flex items-center gap-2 flex-1 text-left"
+                        className="flex p-2 hover:cursor-pointer items-center gap-2 flex-1 text-left"
                       >
                         <Book
                           className={`w-4 h-4 ${theme.colors.text.accent}`}
@@ -267,7 +267,7 @@ const BinderSelector = ({
         ${theme.colors.text.secondary}
         hover:${theme.colors.text.primary}
         ${theme.colors.dropdown.hover}
-        transition-colors
+        transition-colors hover:cursor-pointer
         border-t ${theme.colors.border.light}`}
               >
                 <Plus className="w-4 h-4" />

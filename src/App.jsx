@@ -135,7 +135,7 @@ const App = () => {
     setSaveStatus(null);
 
     try {
-      // First save missing cards to ensure they're stored
+      // Save missing cards when the user explicitly clicks save
       if (selectedSet) {
         saveMissingCards(selectedSet.id, parsedMissingCards);
       }
@@ -143,7 +143,7 @@ const App = () => {
       // Then update the binder with the latest missing cards
       const updatedBinder = {
         ...currentBinder,
-        sets: [selectedSet], // Only allow one set
+        sets: [selectedSet],
         missingCards: {
           ...currentBinder.missingCards,
           [selectedSet.id]: Array.from(parsedMissingCards),
@@ -155,7 +155,6 @@ const App = () => {
       setBinders(getBinders());
       setSaveStatus("success");
 
-      // Reset save status after 3 seconds
       setTimeout(() => {
         setSaveStatus(null);
       }, 3000);
@@ -229,11 +228,6 @@ const App = () => {
     setMissingCards(newText);
     const newParsedCards = parseCardList(newText, cards);
     setParsedMissingCards(newParsedCards);
-
-    // Save to storage
-    if (set) {
-      saveMissingCards(set.id, newParsedCards);
-    }
   };
 
   const handleDataImported = () => {
