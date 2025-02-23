@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import CardModal from "./CardModal";
@@ -155,8 +155,9 @@ const BinderPage = ({
                                 : card.images.small
                             }
                             alt={card.name}
-                            className="w-full h-full object-contain rounded-lg shadow-lg transition-all duration-200 
-                              group-hover:shadow-${theme.colors.primary}-500/20"
+                            className={`w-full h-full object-contain rounded-lg shadow-lg transition-all duration-200 
+            group-hover:shadow-${theme.colors.primary}-500/20
+            ${card.isReverseHolo ? "reverse-holo-effect" : ""}`}
                             onClick={() =>
                               !parsedMissingCards.has(card.number) &&
                               setSelectedCard(card)
@@ -174,18 +175,27 @@ const BinderPage = ({
                               src={card.images.small}
                               alt={card.name}
                               className="w-full h-full object-contain rounded-lg shadow-lg 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                             />
                           </div>
                         )}
 
                         {/* Card number badge */}
-                        <div className="absolute top-[-8px] right-[-8px]">
+                        <div className="absolute top-[-8px] right-[-8px] flex gap-1">
                           <span
                             className={`${theme.colors.button.primary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold`}
                           >
                             #{card.number}
                           </span>
+                          {card.isReverseHolo && (
+                            <span
+                              className={`${theme.colors.button.secondary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold
+              flex items-center gap-1`}
+                            >
+                              <Star className="w-3 h-3" />
+                              RH
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>

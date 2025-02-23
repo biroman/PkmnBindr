@@ -47,6 +47,52 @@ const App = () => {
     label: "3×3",
     cards: 9,
   });
+  const [rawCards, setRawCards] = useState([]); // Store the original unprocessed cards
+  const [displayOptions, setDisplayOptions] = useState({
+    showReverseHolos: false,
+    sortDirection: "asc",
+  });
+
+  const processCards = (rawCards) => {
+    let processedCards = [...rawCards];
+
+    // Add reverse holo versions for common and uncommon cards if enabled
+    if (displayOptions.showReverseHolos) {
+      const reverseHoloCards = rawCards
+        .filter((card) =>
+          ["Common", "Uncommon", "Rare", "Rare Holo"].includes(card.rarity)
+        )
+        .map((card) => ({
+          ...card,
+          id: `${card.id}_reverse`,
+          isReverseHolo: true,
+        }));
+      processedCards = [...processedCards, ...reverseHoloCards];
+    }
+
+    // Sort cards based on number and reverse holo status
+    processedCards.sort((a, b) => {
+      const aNum = parseInt(a.number);
+      const bNum = parseInt(b.number);
+
+      if (aNum === bNum) {
+        // If numbers are the same, reverse holos come after regular cards
+        return (a.isReverseHolo ? 1 : 0) - (b.isReverseHolo ? 1 : 0);
+      }
+
+      return displayOptions.sortDirection === "asc" ? aNum - bNum : bNum - aNum;
+    });
+
+    return processedCards;
+  };
+
+  useEffect(() => {
+    if (rawCards.length > 0) {
+      const processedCards = processCards(rawCards);
+      setCards(processedCards);
+      setCurrentPage(0); // Reset to first page when display changes
+    }
+  }, [displayOptions]);
 
   // Initialize storage and load saved data
   useEffect(() => {
@@ -84,6 +130,7 @@ const App = () => {
     setSelectedSet(null);
     setSet(null);
     setCards([]);
+    setRawCards([]); // Reset raw cards
     setMissingCards("");
     setParsedMissingCards(new Set());
     setCurrentPage(0);
@@ -106,7 +153,9 @@ const App = () => {
           saveSetToCache(currentSet.id, cardsData);
         }
 
-        setCards(cardsData);
+        setRawCards(cardsData); // Store the original cards
+        const processedCards = processCards(cardsData);
+        setCards(processedCards);
         setSet(currentSet);
 
         // Load missing cards from the binder's data directly
@@ -122,6 +171,7 @@ const App = () => {
         setError(err.message);
         setSet(null);
         setCards([]);
+        setRawCards([]);
       } finally {
         setLoading(false);
       }
@@ -206,13 +256,16 @@ const App = () => {
         saveSetToCache(selectedSet.id, cardsData);
       }
 
-      setCards(cardsData);
+      setRawCards(cardsData); // Store the original cards
+      const processedCards = processCards(cardsData);
+      setCards(processedCards);
       setSet(selectedSet);
       setCurrentPage(0);
     } catch (err) {
       setError(err.message);
       setSet(null);
       setCards([]);
+      setRawCards([]);
     } finally {
       setLoading(false);
     }
@@ -308,6 +361,8 @@ const App = () => {
               <BinderLayoutSelector
                 currentLayout={layout}
                 onLayoutChange={handleLayoutChange}
+                displayOptions={displayOptions}
+                onDisplayOptionsChange={setDisplayOptions}
               />
 
               {saveStatus === "success" && (
