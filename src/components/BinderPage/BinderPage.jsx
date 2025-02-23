@@ -1,6 +1,8 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
+import CardModal from "./CardModal";
+import { useState } from "react";
 
 const BinderPage = ({
   cards = [],
@@ -11,6 +13,7 @@ const BinderPage = ({
   layout,
 }) => {
   const { theme } = useTheme();
+  const [selectedCard, setSelectedCard] = useState(null);
   const cardsPerPage = layout.cards;
   const totalPhysicalPages = Math.ceil(cards.length / cardsPerPage);
   const adjustedTotalPages = Math.ceil((totalPhysicalPages + 1) / 2);
@@ -143,24 +146,40 @@ const BinderPage = ({
                   {card && (
                     <div className="relative w-[98%] h-[98%] flex items-center justify-center">
                       <div className="relative w-full h-full group flex items-center justify-center">
-                        <img
-                          src={
-                            parsedMissingCards.has(card.number)
-                              ? "https://pkmnbinder.com/images/000/000.png"
-                              : card.images.small
-                          }
-                          alt={card.name}
-                          className={`w-full h-full object-contain rounded-lg shadow-lg transition-all duration-200 
-                            group-hover:shadow-${theme.colors.primary}-500/20`}
-                        />
-                        {parsedMissingCards.has(card.number) && (
+                        {/* Base card layer */}
+                        <div className="w-full h-full cursor-pointer hover:scale-[1.02] transition-transform duration-200">
                           <img
-                            src={card.images.small}
+                            src={
+                              parsedMissingCards.has(card.number)
+                                ? "https://pkmnbinder.com/images/000/000.png"
+                                : card.images.small
+                            }
                             alt={card.name}
-                            className="absolute inset-0 w-full h-full object-contain rounded-lg shadow-lg 
-                              opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            className="w-full h-full object-contain rounded-lg shadow-lg transition-all duration-200 
+                              group-hover:shadow-${theme.colors.primary}-500/20"
+                            onClick={() =>
+                              !parsedMissingCards.has(card.number) &&
+                              setSelectedCard(card)
+                            }
                           />
+                        </div>
+
+                        {/* Hover layer for missing cards */}
+                        {parsedMissingCards.has(card.number) && (
+                          <div
+                            className="absolute inset-0 cursor-pointer"
+                            onClick={() => setSelectedCard(card)}
+                          >
+                            <img
+                              src={card.images.small}
+                              alt={card.name}
+                              className="w-full h-full object-contain rounded-lg shadow-lg 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            />
+                          </div>
                         )}
+
+                        {/* Card number badge */}
                         <div className="absolute top-[-8px] right-[-8px]">
                           <span
                             className={`${theme.colors.button.primary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold`}
@@ -298,6 +317,9 @@ const BinderPage = ({
           </button>
         </div>
       </div>
+      {selectedCard && (
+        <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} />
+      )}
     </div>
   );
 };

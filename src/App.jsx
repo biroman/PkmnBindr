@@ -370,7 +370,15 @@ const App = () => {
               focus:outline-none focus:ring-2 focus:ring-offset-2 
               disabled:opacity-50 disabled:cursor-not-allowed`}
           />
-
+          <div className={`text-xs ${theme.colors.text.secondary} px-2`}>
+            <p className="mb-1">Supported formats (numbers recommended):</p>
+            <div className="flex flex-col gap-2">
+              <span>#1</span>
+              <span>[1]</span>
+              <span>001/178</span>
+              <span>Pikachu</span>
+            </div>
+          </div>
           <div className="flex gap-2">
             <button
               onClick={handleSaveBinder}
@@ -412,7 +420,7 @@ const App = () => {
                 shadow-lg
                 focus:outline-none focus:ring-2 focus:ring-offset-2
                 flex items-center justify-center gap-3
-                ${theme.colors.button.primary}`}
+                ${theme.colors.button.secondary}`}
             >
               Create Full Set Deck List
             </button>
@@ -428,7 +436,7 @@ const App = () => {
               className={`w-full px-4 py-3 text-sm font-semibold 
                 rounded-lg
                 transition-all duration-200 ease-in-out
-                border ${theme.colors.border.light}
+                
                 focus:outline-none focus:ring-2 focus:ring-offset-2
                 flex items-center justify-center gap-3
                 disabled:opacity-50 disabled:cursor-not-allowed
