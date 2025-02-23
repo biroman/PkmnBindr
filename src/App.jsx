@@ -253,26 +253,20 @@ const App = () => {
       className={`h-screen bg-gradient-to-br ${theme.colors.background.main} flex`}
     >
       <div
-        className={`w-100 ${theme.colors.background.sidebar} backdrop-blur-sm p-4 flex flex-col gap-4 overflow-y-auto border-r ${theme.colors.border.accent}`}
+        className={`w-100 ${theme.colors.background.sidebar} backdrop-blur-sm p-4 flex flex-col border-r ${theme.colors.border.accent}`}
       >
-        <div className="flex items-center justify-between">
-          <div className={theme.colors.text.primary}>
-            <h1
-              className={`text-2xl ${theme.colors.text.accent} font-bold mb-1`}
-            >
-              PkmnBindr
-            </h1>
-            <p className={`${theme.colors.text.secondary} text-sm`}>
-              Generate Master Set Binder
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <StorageControls onDataImported={handleDataImported} />
-            <ThemeSelector />
-          </div>
+        {/* Header */}
+        <div className={theme.colors.text.primary}>
+          <h1 className={`text-2xl ${theme.colors.text.accent} font-bold mb-1`}>
+            PkmnBindr
+          </h1>
+          <p className={`${theme.colors.text.secondary} text-sm`}>
+            Generate Master Set Binder
+          </p>
         </div>
 
-        <div className="space-y-4">
+        {/* Main Content Area - Scrollable */}
+        <div className="flex-1 overflow-y-auto space-y-4 my-4">
           <BinderSelector
             binders={binders}
             currentBinder={currentBinder}
@@ -330,117 +324,124 @@ const App = () => {
               )}
             </>
           )}
-        </div>
 
-        {error && <p className="text-red-400 text-xs">{error}</p>}
+          {error && <p className="text-red-400 text-xs">{error}</p>}
 
-        <div
-          className={`space-y-2 ${theme.colors.background.card} p-4 rounded-xl border ${theme.colors.border.accent}`}
-        >
-          <div className="flex items-center justify-between mb-2">
-            <label
-              className={`text-sm font-medium ${theme.colors.text.accent}`}
-            >
-              Hide Missing Cards
-            </label>
-            {missingCards && (
-              <span
-                className={`text-xs ${theme.colors.background.card} px-3 py-1 rounded-full ${theme.colors.text.accent} font-medium border ${theme.colors.border.accent}`}
+          <div
+            className={`space-y-2 ${theme.colors.background.card} p-4 rounded-xl border ${theme.colors.border.accent}`}
+          >
+            <div className="flex items-center justify-between mb-2">
+              <label
+                className={`text-sm font-medium ${theme.colors.text.accent}`}
               >
-                {parsedMissingCards.size} cards
-              </span>
-            )}
-          </div>
+                Hide Missing Cards
+              </label>
+              {missingCards && (
+                <span
+                  className={`text-xs ${theme.colors.background.card} px-3 py-1 rounded-full ${theme.colors.text.accent} font-medium border ${theme.colors.border.accent}`}
+                >
+                  {parsedMissingCards.size} cards
+                </span>
+              )}
+            </div>
 
-          <textarea
-            value={missingCards}
-            onChange={handleMissingCardsChange}
-            disabled={!currentBinder}
-            placeholder={
-              currentBinder ? "One card per line..." : "Select a binder first"
-            }
-            className={`w-full h-24 px-3 py-2 ${theme.colors.background.card} border ${theme.colors.border.accent} rounded-lg 
-              ${theme.colors.text.primary} text-sm
-              focus:outline-none focus:ring-2 focus:ring-offset-2 
-              disabled:opacity-50 disabled:cursor-not-allowed`}
-          />
-          <div className={`text-xs ${theme.colors.text.secondary} px-2`}>
-            <p className="mb-1">Supported formats (numbers recommended):</p>
-            <div className="flex flex-col gap-2">
-              <span>#1</span>
-              <span>[1]</span>
-              <span>001/178</span>
-              <span>Pikachu</span>
+            <textarea
+              value={missingCards}
+              onChange={handleMissingCardsChange}
+              disabled={!currentBinder}
+              placeholder={
+                currentBinder ? "One card per line..." : "Select a binder first"
+              }
+              className={`w-full h-24 px-3 py-2 ${theme.colors.background.card} border ${theme.colors.border.accent} rounded-lg 
+                ${theme.colors.text.primary} text-sm
+                focus:outline-none focus:ring-2 focus:ring-offset-2 
+                disabled:opacity-50 disabled:cursor-not-allowed`}
+            />
+            <div className={`text-xs ${theme.colors.text.secondary} px-2`}>
+              <p className="mb-1">Supported formats (numbers recommended):</p>
+              <div className="flex flex-col gap-2">
+                <span>#1</span>
+                <span>[1]</span>
+                <span>001/178</span>
+                <span>Pikachu</span>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={handleSaveBinder}
+                disabled={saving || !selectedSet || !set}
+                className={`px-3 py-2 w-full text-sm rounded-lg 
+                  focus:outline-none focus:ring-2 focus:ring-offset-2 
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  flex items-center justify-center gap-2 
+                  shadow-lg
+                  font-semibold
+                  transition-all duration-200
+                  ${theme.colors.button.success}`}
+              >
+                {saving ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Saving...
+                  </>
+                ) : (
+                  <>
+                    <Save className="w-4 h-4" />
+                    Save Binder
+                  </>
+                )}
+              </button>
             </div>
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={handleSaveBinder}
-              disabled={saving || !selectedSet || !set}
-              className={`px-3 py-2 w-full text-sm rounded-lg 
-                focus:outline-none focus:ring-2 focus:ring-offset-2 
-                disabled:opacity-50 disabled:cursor-not-allowed
-                flex items-center justify-center gap-2 
-                shadow-lg
-                font-semibold
-                transition-all duration-200
-                ${theme.colors.button.success}`}
-            >
-              {saving ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  Saving...
-                </>
-              ) : (
-                <>
-                  <Save className="w-4 h-4" />
-                  Save Binder
-                </>
-              )}
-            </button>
-          </div>
+
+          {set && cards.length > 0 && (
+            <div className="space-y-2">
+              <button
+                onClick={() => {
+                  setCardListToShow([]);
+                  setShowDeckList(true);
+                }}
+                className={`w-full px-4 py-3 text-sm font-semibold 
+                  rounded-lg
+                  transition-all duration-200 ease-in-out
+                  shadow-lg
+                  focus:outline-none focus:ring-2 focus:ring-offset-2
+                  flex items-center justify-center gap-3
+                  ${theme.colors.button.secondary}`}
+              >
+                Create Full Set Deck List
+              </button>
+
+              <button
+                onClick={() => {
+                  const missingCardsList = cards.filter((card) =>
+                    parsedMissingCards.has(card.number)
+                  );
+                  setCardListToShow(missingCardsList);
+                  setShowDeckList(true);
+                }}
+                className={`w-full px-4 py-3 text-sm font-semibold 
+                  rounded-lg
+                  transition-all duration-200 ease-in-out
+                  focus:outline-none focus:ring-2 focus:ring-offset-2
+                  flex items-center justify-center gap-3
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  ${theme.colors.button.secondary}`}
+                disabled={parsedMissingCards.size === 0}
+              >
+                Create Missing Cards Deck List
+              </button>
+            </div>
+          )}
         </div>
 
-        {set && cards.length > 0 && (
-          <div className="space-y-2 mt-4">
-            <button
-              onClick={() => {
-                setCardListToShow([]);
-                setShowDeckList(true);
-              }}
-              className={`w-full px-4 py-3 text-sm font-semibold 
-                rounded-lg
-                transition-all duration-200 ease-in-out
-                shadow-lg
-                focus:outline-none focus:ring-2 focus:ring-offset-2
-                flex items-center justify-center gap-3
-                ${theme.colors.button.secondary}`}
-            >
-              Create Full Set Deck List
-            </button>
-
-            <button
-              onClick={() => {
-                const missingCardsList = cards.filter((card) =>
-                  parsedMissingCards.has(card.number)
-                );
-                setCardListToShow(missingCardsList);
-                setShowDeckList(true);
-              }}
-              className={`w-full px-4 py-3 text-sm font-semibold 
-                rounded-lg
-                transition-all duration-200 ease-in-out
-                
-                focus:outline-none focus:ring-2 focus:ring-offset-2
-                flex items-center justify-center gap-3
-                disabled:opacity-50 disabled:cursor-not-allowed
-                ${theme.colors.button.secondary}`}
-              disabled={parsedMissingCards.size === 0}
-            >
-              Create Missing Cards Deck List
-            </button>
+        {/* Bottom Controls */}
+        <div className={`pt-4 border-t ${theme.colors.border.accent}`}>
+          <div className="flex items-center justify-between">
+            <StorageControls onDataImported={handleDataImported} />
+            <ThemeSelector />
           </div>
-        )}
+        </div>
       </div>
 
       <div className={`flex-1 min-w-0 ${theme.colors.background.main}`}>

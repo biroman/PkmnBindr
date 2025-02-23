@@ -15,8 +15,8 @@ const ThemeSelector = () => {
       </button>
 
       <div
-        className="absolute right-0 mt-2 w-48 py-2 
-        bg-slate-900 rounded-lg shadow-xl border border-slate-800 
+        className="absolute right-0 bottom-10 mt-2 w-48 py-2 
+        bg-zinc-900 rounded-lg shadow-xl border border-slate-800 
         opacity-0 group-hover:opacity-100 invisible group-hover:visible 
         transition-all duration-200 z-50"
       >
