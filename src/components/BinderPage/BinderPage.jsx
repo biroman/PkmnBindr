@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star, Eye, Plus, Trash2 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import CardModal from "./CardModal";
@@ -11,6 +11,7 @@ const BinderPage = ({
   onPrevPage,
   parsedMissingCards,
   layout,
+  onToggleCardStatus,
 }) => {
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState(null);
@@ -114,6 +115,20 @@ const BinderPage = ({
     }
   };
 
+  // Handle toggling card status (add/remove from missing cards)
+  const handleToggleCardStatus = (e, card) => {
+    e.stopPropagation(); // Prevent opening the card modal
+    if (onToggleCardStatus) {
+      onToggleCardStatus(card.number);
+    }
+  };
+
+  // Handle opening card details
+  const handleInspectCard = (e, card) => {
+    e.stopPropagation(); // Redundant but good practice
+    setSelectedCard(card);
+  };
+
   const renderPage = (pageCards) => {
     return (
       <div
@@ -157,12 +172,9 @@ const BinderPage = ({
                               }
                               alt={card.name}
                               className={`w-full h-full object-contain rounded-lg shadow-lg 
-        transition-all duration-200 
-        group-hover:shadow-${theme.colors.primary}-500/20`}
-                              onClick={() =>
-                                !parsedMissingCards.has(card.number) &&
-                                setSelectedCard(card)
-                              }
+                                transition-all duration-200 
+                                group-hover:shadow-${theme.colors.primary}-500/20`}
+                              onClick={() => setSelectedCard(card)}
                             />
                           </div>
                         </div>
@@ -177,10 +189,41 @@ const BinderPage = ({
                               src={card.images.small}
                               alt={card.name}
                               className="w-full h-full object-contain rounded-lg shadow-lg 
-              opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                             />
                           </div>
                         )}
+
+                        {/* Action buttons on hover */}
+                        <div className="absolute inset-x-0 bottom-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mb-2">
+                          {/* Inspect button */}
+                          <button
+                            onClick={(e) => handleInspectCard(e, card)}
+                            className={`${theme.colors.button.primary} shadow-lg p-2 rounded-full flex items-center justify-center`}
+                            title="Inspect card"
+                          >
+                            <Eye className="w-4 h-4" />
+                          </button>
+
+                          {/* Add/Remove toggle button */}
+                          {parsedMissingCards.has(card.number) ? (
+                            <button
+                              onClick={(e) => handleToggleCardStatus(e, card)}
+                              className={`${theme.colors.button.success} shadow-lg p-2 rounded-full flex items-center justify-center`}
+                              title="Add to collection"
+                            >
+                              <Plus className="w-4 h-4" />
+                            </button>
+                          ) : (
+                            <button
+                              onClick={(e) => handleToggleCardStatus(e, card)}
+                              className={`bg-red-500 text-white shadow-lg p-2 rounded-full flex items-center justify-center`}
+                              title="Remove from collection"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
+                        </div>
 
                         {/* Card number badge */}
                         <div className="absolute top-[-8px] right-[-8px] flex gap-1">
@@ -192,7 +235,7 @@ const BinderPage = ({
                           {card.isReverseHolo && (
                             <span
                               className={`${theme.colors.button.secondary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold
-              flex items-center gap-1`}
+                                flex items-center gap-1`}
                             >
                               <Star className="w-3 h-3" />
                               RH
@@ -347,6 +390,7 @@ BinderPage.propTypes = {
     label: PropTypes.string.isRequired,
     cards: PropTypes.number.isRequired,
   }).isRequired,
+  onToggleCardStatus: PropTypes.func,
 };
 
 export default BinderPage;

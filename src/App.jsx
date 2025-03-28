@@ -189,6 +189,29 @@ const App = () => {
     }
   };
 
+  const handleToggleCardStatus = (cardNumber) => {
+    const newMissingCards = new Set(parsedMissingCards);
+
+    if (newMissingCards.has(cardNumber)) {
+      // Remove card from missing cards (mark as collected)
+      newMissingCards.delete(cardNumber);
+    } else {
+      // Add card to missing cards (mark as missing)
+      newMissingCards.add(cardNumber);
+    }
+
+    setParsedMissingCards(newMissingCards);
+
+    // Update the missing cards text area
+    const missingCardsText = Array.from(newMissingCards)
+      .map((number) => `#${number}`)
+      .join("\n");
+    setMissingCards(missingCardsText);
+
+    // Show save indicator
+    setSaveStatus(null); // Reset previous save status
+  };
+
   const handleSaveBinder = async () => {
     if (!currentBinder || !selectedSet) return;
 
@@ -595,6 +618,7 @@ const App = () => {
             onPrevPage={() => setCurrentPage((p) => Math.max(p - 1, 0))}
             parsedMissingCards={parsedMissingCards}
             layout={layout}
+            onToggleCardStatus={handleToggleCardStatus}
           />
         ) : (
           <div className="h-full flex items-center justify-center">
