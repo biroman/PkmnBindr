@@ -1,6 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Book, Plus, ChevronDown, Pencil, Trash2, Save, X } from "lucide-react";
+import {
+  Book,
+  Plus,
+  ChevronDown,
+  Pencil,
+  Trash2,
+  Save,
+  X,
+  FolderOpen,
+} from "lucide-react";
 import DeleteConfirmationModal from "../DeleteConfirmationModal";
 import { useTheme } from "../../theme/ThemeContent";
 
@@ -92,161 +101,256 @@ const BinderSelector = ({
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-4">
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-full px-3 py-2 rounded-lg ${
-            !currentBinder ? "animate-pulse" : ""
-          }
-        flex items-center justify-between
-        focus:outline-none ${theme.colors.button.secondary} border ${
-            theme.colors.border.accent
-          }`}
+          className={`
+            w-full px-4 py-3 rounded-xl
+            ${theme.colors.background.card}
+            border ${theme.colors.border.accent}
+            ${theme.colors.text.primary} 
+            flex items-center gap-3
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+            transition-all duration-200
+            hover:shadow-md
+            ${isOpen ? "shadow-md" : ""}
+          `}
         >
-          <div className="flex items-center gap-2">
-            <Book className={`w-4 h-4 ${theme.colors.text.accent}`} />
-            <span className="truncate">
-              {currentBinder ? (
-                <span className={theme.colors.text.accent}>
-                  {currentBinder.name}
-                </span>
-              ) : (
-                <span className={theme.colors.text.secondary}>
-                  Select or create a binder
-                </span>
-              )}
-            </span>
+          <div
+            className={`w-8 h-8 rounded-lg ${theme.colors.background.sidebar} flex items-center justify-center flex-shrink-0`}
+          >
+            {currentBinder ? (
+              <Book className={`w-4 h-4 ${theme.colors.text.accent}`} />
+            ) : (
+              <FolderOpen className={`w-4 h-4 ${theme.colors.text.accent}`} />
+            )}
           </div>
-          <ChevronDown className={`w-4 h-4 ${theme.colors.text.secondary}`} />
+
+          <div className="flex-1 text-left">
+            {currentBinder ? (
+              <div>
+                <div className={`font-medium ${theme.colors.text.primary}`}>
+                  {currentBinder.name}
+                </div>
+                <div className={`text-sm ${theme.colors.text.secondary}`}>
+                  Current Collection
+                </div>
+              </div>
+            ) : (
+              <div>
+                <div className={`font-medium ${theme.colors.text.secondary}`}>
+                  Select Collection
+                </div>
+                <div
+                  className={`text-sm ${theme.colors.text.secondary} opacity-60`}
+                >
+                  Choose or create a binder
+                </div>
+              </div>
+            )}
+          </div>
+
+          <ChevronDown
+            className={`w-5 h-5 ${
+              theme.colors.text.secondary
+            } transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          />
         </button>
 
         {isOpen && (
           <div
-            className={`absolute z-50 w-full mt-1 
-    ${theme.colors.dropdown.background}
-    border ${theme.colors.border.light}
-    rounded-lg shadow-lg overflow-hidden
-    backdrop-blur-sm`}
+            className={`
+              absolute z-50 w-full mt-2 
+              ${theme.colors.background.sidebar} 
+              border ${theme.colors.border.accent} 
+              rounded-xl shadow-2xl 
+              max-h-96 overflow-hidden 
+              flex flex-col
+            `}
           >
-            <div className="max-h-96 overflow-y-auto">
-              {binders.map((binder) => (
-                <div
-                  key={binder.id}
-                  className={`border-b ${theme.colors.border.light}`}
-                >
-                  {editingBinder?.id === binder.id ? (
-                    <div className="flex items-center gap-2 p-2">
-                      <input
-                        ref={editBinderInputRef}
-                        type="text"
-                        value={editingBinder.newName}
-                        onChange={(e) =>
-                          setEditingBinder({
-                            ...editingBinder,
-                            newName: e.target.value,
-                          })
-                        }
-                        onKeyPress={(e) => handleBinderKeyPress(e, "edit")}
-                        className={`flex-1 px-2 py-1 
-                ${theme.colors.dropdown.input}
-                border ${theme.colors.border.light}
-                rounded 
-                ${theme.colors.text.primary}
-                text-sm
-                focus:outline-none focus:ring-1 
-                focus:ring-offset-1
-                focus:ring-sky-500/50
-                transition-colors`}
-                        placeholder="Binder name..."
-                      />
-                      <button
-                        onClick={handleSaveEdit}
-                        className={`p-1 ${theme.colors.button.success} rounded`}
-                      >
-                        <Save className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => setEditingBinder(null)}
-                        className={`p-1 ${theme.colors.text.secondary} 
-                hover:${theme.colors.text.primary} rounded
-                transition-colors`}
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ) : (
-                    <div
-                      className={`group flex items-center justify-between 
-            ${theme.colors.dropdown.hover}
-            transition-colors`}
-                    >
-                      <button
-                        onClick={() => {
-                          onBinderSelect(binder);
-                          setIsOpen(false);
-                        }}
-                        className="flex p-2 hover:cursor-pointer items-center gap-2 flex-1 text-left"
-                      >
-                        <Book
-                          className={`w-4 h-4 ${theme.colors.text.accent}`}
-                        />
-                        <div>
-                          <span className={theme.colors.text.primary}>
-                            {binder.name}
-                          </span>
-                        </div>
-                      </button>
-                      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button
-                          onClick={() => handleEditBinder(binder)}
-                          className={`p-1 ${theme.colors.text.secondary} 
-                  hover:${theme.colors.text.primary} rounded
-                  transition-colors`}
-                          title="Rename binder"
-                        >
-                          <Pencil className="w-4 h-4" />
-                        </button>
-                        {binders.length > 1 && (
-                          <button
-                            onClick={() => handleDeleteClick(binder)}
-                            className="p-1 text-red-400 hover:text-red-500 rounded transition-colors"
-                            title="Delete binder"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  )}
+            {/* Binders List */}
+            <div className="max-h-64 overflow-y-auto">
+              {binders.length === 0 ? (
+                <div className="p-8 text-center">
+                  <div
+                    className={`w-12 h-12 mx-auto rounded-full ${theme.colors.background.card} flex items-center justify-center mb-3`}
+                  >
+                    <Book
+                      className={`w-5 h-5 ${theme.colors.text.secondary}`}
+                    />
+                  </div>
+                  <div className={`text-sm ${theme.colors.text.secondary}`}>
+                    No binders yet
+                  </div>
+                  <div
+                    className={`text-xs ${theme.colors.text.secondary} opacity-60 mt-1`}
+                  >
+                    Create your first collection below
+                  </div>
                 </div>
-              ))}
+              ) : (
+                <div className="p-2">
+                  {binders.map((binder, index) => (
+                    <div
+                      key={binder.id}
+                      className={`
+                        ${index !== binders.length - 1 ? "mb-1" : ""}
+                      `}
+                    >
+                      {editingBinder?.id === binder.id ? (
+                        <div className="flex items-center gap-2 p-3 rounded-lg bg-opacity-50">
+                          <div
+                            className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
+                          >
+                            <Book
+                              className={`w-4 h-4 ${theme.colors.text.accent}`}
+                            />
+                          </div>
+                          <input
+                            ref={editBinderInputRef}
+                            type="text"
+                            value={editingBinder.newName}
+                            onChange={(e) =>
+                              setEditingBinder({
+                                ...editingBinder,
+                                newName: e.target.value,
+                              })
+                            }
+                            onKeyPress={(e) => handleBinderKeyPress(e, "edit")}
+                            className={`
+                              flex-1 px-3 py-2 rounded-lg
+                              ${theme.colors.background.card}
+                              border ${theme.colors.border.accent}
+                              ${theme.colors.text.primary}
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+                              transition-all duration-200
+                            `}
+                            placeholder="Binder name..."
+                          />
+                          <button
+                            onClick={handleSaveEdit}
+                            className={`w-8 h-8 rounded-lg ${theme.colors.button.success} flex items-center justify-center hover:scale-105 transition-transform`}
+                          >
+                            <Save className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => setEditingBinder(null)}
+                            className={`w-8 h-8 rounded-lg ${theme.colors.button.secondary} flex items-center justify-center hover:scale-105 transition-transform`}
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="group relative">
+                          <button
+                            onClick={() => {
+                              onBinderSelect(binder);
+                              setIsOpen(false);
+                            }}
+                            className={`
+                              w-full p-3 rounded-lg text-left
+                              ${theme.colors.button.secondary}
+                              transition-all duration-200
+                              hover:shadow-md
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+                              ${
+                                currentBinder?.id === binder.id
+                                  ? "ring-2 ring-blue-500/50"
+                                  : ""
+                              }
+                            `}
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
+                              >
+                                <Book
+                                  className={`w-4 h-4 ${theme.colors.text.accent}`}
+                                />
+                              </div>
+
+                              <div className="flex-1 min-w-0">
+                                <div
+                                  className={`font-medium ${theme.colors.text.primary} truncate`}
+                                >
+                                  {binder.name}
+                                </div>
+                                <div
+                                  className={`text-sm ${theme.colors.text.secondary}`}
+                                >
+                                  {binder.sets?.length || 0} sets • Updated{" "}
+                                  {binder.updatedAt
+                                    ? new Date(
+                                        binder.updatedAt
+                                      ).toLocaleDateString()
+                                    : "never"}
+                                </div>
+                              </div>
+                            </div>
+                          </button>
+
+                          {/* Action buttons */}
+                          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleEditBinder(binder);
+                              }}
+                              className={`w-6 h-6 rounded ${theme.colors.button.secondary} flex items-center justify-center hover:scale-110 transition-transform`}
+                              title="Rename binder"
+                            >
+                              <Pencil className="w-3 h-3" />
+                            </button>
+                            {binders.length > 1 && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleDeleteClick(binder);
+                                }}
+                                className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
+                                title="Delete binder"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {showNewBinderInput ? (
-              <div className={`p-2 border-t ${theme.colors.border.light}`}>
+            {/* Create New Binder */}
+            <div className={`border-t ${theme.colors.border.accent} p-3`}>
+              {showNewBinderInput ? (
                 <div className="flex items-center gap-2">
+                  <div
+                    className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
+                  >
+                    <Plus className={`w-4 h-4 ${theme.colors.text.accent}`} />
+                  </div>
                   <input
                     ref={newBinderInputRef}
                     type="text"
                     value={newBinderName}
                     onChange={(e) => setNewBinderName(e.target.value)}
                     onKeyPress={(e) => handleBinderKeyPress(e, "new")}
-                    className={`flex-1 px-2 py-1
-            ${theme.colors.dropdown.input}
-            border ${theme.colors.border.light}
-            rounded 
-            ${theme.colors.text.primary}
-            text-sm
-            focus:outline-none focus:ring-1
-            focus:ring-offset-1
-            focus:ring-sky-500/50
-            transition-colors`}
+                    className={`
+                      flex-1 px-3 py-2 rounded-lg
+                      ${theme.colors.background.card}
+                      border ${theme.colors.border.accent}
+                      ${theme.colors.text.primary}
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+                      transition-all duration-200
+                    `}
                     placeholder="New binder name..."
                   />
                   <button
                     onClick={handleCreateBinder}
-                    className={`p-1 ${theme.colors.button.success} rounded`}
+                    className={`w-8 h-8 rounded-lg ${theme.colors.button.success} flex items-center justify-center hover:scale-105 transition-transform`}
                   >
                     <Save className="w-4 h-4" />
                   </button>
@@ -255,31 +359,42 @@ const BinderSelector = ({
                       setShowNewBinderInput(false);
                       setNewBinderName("");
                     }}
-                    className={`p-1 ${theme.colors.text.secondary} 
-            hover:${theme.colors.text.primary} rounded
-            transition-colors`}
+                    className={`w-8 h-8 rounded-lg ${theme.colors.button.secondary} flex items-center justify-center hover:scale-105 transition-transform`}
                   >
                     <X className="w-4 h-4" />
                   </button>
                 </div>
-              </div>
-            ) : (
-              <button
-                onClick={() => setShowNewBinderInput(true)}
-                className={`w-full p-2 flex items-center gap-2 
-        ${theme.colors.text.secondary}
-        hover:${theme.colors.text.primary}
-        ${theme.colors.dropdown.hover}
-        transition-colors hover:cursor-pointer
-        border-t ${theme.colors.border.light}`}
-              >
-                <Plus className="w-4 h-4" />
-                <span>Create New Binder</span>
-              </button>
-            )}
+              ) : (
+                <button
+                  onClick={() => setShowNewBinderInput(true)}
+                  className={`
+                    w-full p-3 rounded-lg flex items-center gap-3
+                    ${theme.colors.button.secondary}
+                    transition-all duration-200
+                    hover:shadow-md
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+                  `}
+                >
+                  <div
+                    className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
+                  >
+                    <Plus className={`w-4 h-4 ${theme.colors.text.accent}`} />
+                  </div>
+                  <div>
+                    <div className={`font-medium ${theme.colors.text.primary}`}>
+                      Create New Binder
+                    </div>
+                    <div className={`text-sm ${theme.colors.text.secondary}`}>
+                      Start a new collection
+                    </div>
+                  </div>
+                </button>
+              )}
+            </div>
           </div>
         )}
       </div>
+
       {binderToDelete && (
         <DeleteConfirmationModal
           binderName={binderToDelete.name}

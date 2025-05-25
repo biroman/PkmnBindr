@@ -1,117 +1,79 @@
 export const themes = {
   default: {
-    name: "Default",
+    name: "Clean",
     colors: {
-      primary: "zinc",
-      secondary: "zinc",
-      accent: "sky",
+      primary: "blue",
+      secondary: "slate",
+      accent: "blue",
       background: {
-        main: "from-zinc-950 via-zinc-900 to-zinc-950",
-        sidebar: "bg-zinc-900/70 backdrop-blur-sm",
-        card: "bg-zinc-800/30 backdrop-blur-xs",
+        main: "bg-white",
+        sidebar: "bg-white/80 backdrop-blur-lg",
+        card: "bg-slate-50/50 backdrop-blur-sm",
       },
       dropdown: {
-        background: "bg-zinc-900",
-        hover: "hover:bg-zinc-800/80",
-        input: "bg-zinc-800/50",
+        background: "bg-white",
+        hover: "hover:bg-slate-50",
+        input: "bg-slate-50",
       },
       text: {
-        primary: "text-zinc-100",
-        secondary: "text-zinc-400",
-        accent: "text-sky-400",
+        primary: "text-slate-900",
+        secondary: "text-slate-600",
+        accent: "text-blue-600",
       },
       border: {
-        light: "border-zinc-800",
-        accent: "border-sky-500/10",
-      },
-      button: {
-        primary: "bg-sky-500/90 hover:bg-sky-400 text-white transition-colors",
-        secondary:
-          "bg-zinc-800/50 hover:bg-zinc-700/50 text-zinc-100 transition-colors",
-        success:
-          "bg-emerald-500/90 hover:bg-emerald-400 text-white transition-colors",
-      },
-      progress: {
-        from: "from-sky-500",
-        to: "to-sky-400",
-      },
-    },
-  },
-  umbreon: {
-    name: "Umbreon",
-    colors: {
-      primary: "yellow",
-      secondary: "zinc",
-      accent: "yellow",
-      background: {
-        main: "from-zinc-950 via-zinc-900 to-zinc-950",
-        sidebar: "bg-zinc-900/70 backdrop-blur-sm",
-        card: "bg-zinc-800/30 backdrop-blur-xs",
-      },
-      dropdown: {
-        background: "bg-zinc-900",
-        hover: "hover:bg-zinc-800/80",
-        input: "bg-zinc-800/50",
-      },
-      text: {
-        primary: "text-zinc-100",
-        secondary: "text-zinc-400",
-        accent: "text-yellow-300",
-      },
-      border: {
-        light: "border-zinc-800",
-        accent: "border-yellow-500/20",
+        light: "border-slate-200",
+        accent: "border-slate-200/60",
       },
       button: {
         primary:
-          "bg-yellow-500/90 hover:bg-yellow-400 text-zinc-900 transition-colors",
+          "bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm",
         secondary:
-          "bg-zinc-800/50 hover:bg-zinc-700/50 text-zinc-100 transition-colors",
+          "bg-white hover:bg-slate-50 text-slate-700 transition-colors shadow-sm",
         success:
-          "bg-yellow-400/90 hover:bg-yellow-300 text-zinc-900 transition-colors",
+          "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-sm",
       },
       progress: {
-        from: "from-yellow-400",
-        to: "to-yellow-300",
+        from: "from-blue-500",
+        to: "to-blue-600",
       },
     },
   },
-  mew: {
-    name: "Mew",
+  dark: {
+    name: "Dark",
     colors: {
-      primary: "pink",
-      secondary: "zinc",
-      accent: "fuchsia",
+      primary: "slate",
+      secondary: "slate",
+      accent: "blue",
       background: {
-        main: "from-zinc-950 via-zinc-900 to-zinc-950",
-        sidebar: "bg-zinc-900/70 backdrop-blur-sm",
-        card: "bg-zinc-800/30 backdrop-blur-xs",
+        main: "from-slate-900 via-slate-800 to-slate-900",
+        sidebar: "bg-slate-800/90 backdrop-blur-lg",
+        card: "bg-slate-700/30 backdrop-blur-sm",
       },
       dropdown: {
-        background: "bg-zinc-900",
-        hover: "hover:bg-zinc-800/80",
-        input: "bg-zinc-800/50",
+        background: "bg-slate-800",
+        hover: "hover:bg-slate-700/80",
+        input: "bg-slate-700/50",
       },
       text: {
-        primary: "text-zinc-100",
-        secondary: "text-zinc-400",
-        accent: "text-pink-300",
+        primary: "text-slate-100",
+        secondary: "text-slate-400",
+        accent: "text-blue-400",
       },
       border: {
-        light: "border-zinc-800",
-        accent: "border-pink-500/20",
+        light: "border-slate-700",
+        accent: "border-slate-600/40",
       },
       button: {
         primary:
-          "bg-pink-400/90 hover:bg-pink-300 text-white transition-colors",
+          "bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm",
         secondary:
-          "bg-zinc-800/50 hover:bg-zinc-700/50 text-zinc-100 transition-colors",
+          "bg-slate-700/50 hover:bg-slate-600/50 text-slate-100 transition-colors shadow-sm",
         success:
-          "bg-fuchsia-400/90 hover:bg-fuchsia-300 text-white transition-colors",
+          "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-sm",
       },
       progress: {
-        from: "from-pink-400",
-        to: "to-pink-300",
+        from: "from-blue-500",
+        to: "to-blue-400",
       },
     },
   },
@@ -119,38 +81,38 @@ export const themes = {
     name: "Pikachu",
     colors: {
       primary: "yellow",
-      secondary: "zinc",
+      secondary: "amber",
       accent: "amber",
       background: {
-        main: "from-zinc-950 via-zinc-900 to-zinc-950",
-        sidebar: "bg-zinc-900/70 backdrop-blur-sm",
-        card: "bg-zinc-800/30 backdrop-blur-xs",
+        main: "from-amber-50 via-yellow-50 to-amber-50",
+        sidebar: "bg-white/90 backdrop-blur-lg",
+        card: "bg-amber-50/40 backdrop-blur-sm",
       },
       dropdown: {
-        background: "bg-zinc-900",
-        hover: "hover:bg-zinc-800/80",
-        input: "bg-zinc-800/50",
+        background: "bg-white",
+        hover: "hover:bg-amber-50",
+        input: "bg-amber-50/50",
       },
       text: {
-        primary: "text-zinc-100",
-        secondary: "text-zinc-400",
-        accent: "text-amber-300",
+        primary: "text-amber-900",
+        secondary: "text-amber-700",
+        accent: "text-amber-600",
       },
       border: {
-        light: "border-zinc-800",
-        accent: "border-amber-500/20",
+        light: "border-amber-200",
+        accent: "border-amber-200/60",
       },
       button: {
         primary:
-          "bg-amber-400/90 hover:bg-amber-300 text-zinc-900 transition-colors",
+          "bg-amber-500 hover:bg-amber-600 text-white transition-colors shadow-sm",
         secondary:
-          "bg-zinc-800/50 hover:bg-zinc-700/50 text-zinc-100 transition-colors",
+          "bg-white hover:bg-amber-50 text-amber-700 transition-colors shadow-sm",
         success:
-          "bg-yellow-400/90 hover:bg-yellow-300 text-zinc-900 transition-colors",
+          "bg-yellow-500 hover:bg-yellow-600 text-amber-900 transition-colors shadow-sm",
       },
       progress: {
         from: "from-amber-400",
-        to: "to-amber-300",
+        to: "to-yellow-500",
       },
     },
   },
@@ -158,37 +120,116 @@ export const themes = {
     name: "Charizard",
     colors: {
       primary: "orange",
-      secondary: "zinc",
-      accent: "red",
+      secondary: "red",
+      accent: "orange",
       background: {
-        main: "from-zinc-950 via-zinc-900 to-zinc-950",
-        sidebar: "bg-zinc-900/70 backdrop-blur-sm",
-        card: "bg-zinc-800/30 backdrop-blur-xs",
+        main: "from-orange-50 via-red-50 to-orange-50",
+        sidebar: "bg-white/90 backdrop-blur-lg",
+        card: "bg-orange-50/40 backdrop-blur-sm",
       },
       dropdown: {
-        background: "bg-zinc-900",
-        hover: "hover:bg-zinc-800/80",
-        input: "bg-zinc-800/50",
+        background: "bg-white",
+        hover: "hover:bg-orange-50",
+        input: "bg-orange-50/50",
       },
       text: {
-        primary: "text-zinc-100",
-        secondary: "text-zinc-400",
-        accent: "text-orange-400",
+        primary: "text-orange-900",
+        secondary: "text-orange-700",
+        accent: "text-orange-600",
       },
       border: {
-        light: "border-zinc-800",
-        accent: "border-orange-500/20",
+        light: "border-orange-200",
+        accent: "border-orange-200/60",
       },
       button: {
         primary:
-          "bg-orange-500/90 hover:bg-orange-400 text-white transition-colors",
+          "bg-orange-500 hover:bg-orange-600 text-white transition-colors shadow-sm",
         secondary:
-          "bg-zinc-800/50 hover:bg-zinc-700/50 text-zinc-100 transition-colors",
-        success: "bg-red-500/90 hover:bg-red-400 text-white transition-colors",
+          "bg-white hover:bg-orange-50 text-orange-700 transition-colors shadow-sm",
+        success:
+          "bg-red-500 hover:bg-red-600 text-white transition-colors shadow-sm",
       },
       progress: {
         from: "from-orange-500",
-        to: "to-red-400",
+        to: "to-red-500",
+      },
+    },
+  },
+  umbreon: {
+    name: "Umbreon",
+    colors: {
+      primary: "slate",
+      secondary: "yellow",
+      accent: "yellow",
+      background: {
+        main: "from-slate-50 via-yellow-50 to-slate-50",
+        sidebar: "bg-white/90 backdrop-blur-lg",
+        card: "bg-slate-50/40 backdrop-blur-sm",
+      },
+      dropdown: {
+        background: "bg-white",
+        hover: "hover:bg-slate-50",
+        input: "bg-slate-50/50",
+      },
+      text: {
+        primary: "text-slate-900",
+        secondary: "text-slate-700",
+        accent: "text-yellow-600",
+      },
+      border: {
+        light: "border-slate-200",
+        accent: "border-yellow-200/60",
+      },
+      button: {
+        primary:
+          "bg-yellow-500 hover:bg-yellow-600 text-slate-900 transition-colors shadow-sm",
+        secondary:
+          "bg-white hover:bg-slate-50 text-slate-700 transition-colors shadow-sm",
+        success:
+          "bg-yellow-400 hover:bg-yellow-500 text-slate-900 transition-colors shadow-sm",
+      },
+      progress: {
+        from: "from-yellow-400",
+        to: "to-yellow-500",
+      },
+    },
+  },
+  mew: {
+    name: "Mew",
+    colors: {
+      primary: "pink",
+      secondary: "rose",
+      accent: "pink",
+      background: {
+        main: "from-pink-50 via-rose-50 to-pink-50",
+        sidebar: "bg-white/90 backdrop-blur-lg",
+        card: "bg-pink-50/40 backdrop-blur-sm",
+      },
+      dropdown: {
+        background: "bg-white",
+        hover: "hover:bg-pink-50",
+        input: "bg-pink-50/50",
+      },
+      text: {
+        primary: "text-pink-900",
+        secondary: "text-pink-700",
+        accent: "text-pink-600",
+      },
+      border: {
+        light: "border-pink-200",
+        accent: "border-pink-200/60",
+      },
+      button: {
+        primary:
+          "bg-pink-500 hover:bg-pink-600 text-white transition-colors shadow-sm",
+        secondary:
+          "bg-white hover:bg-pink-50 text-pink-700 transition-colors shadow-sm",
+        success:
+          "bg-rose-500 hover:bg-rose-600 text-white transition-colors shadow-sm",
+      },
+      progress: {
+        from: "from-pink-400",
+        to: "to-rose-500",
       },
     },
   },

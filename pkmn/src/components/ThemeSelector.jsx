@@ -15,20 +15,21 @@ const ThemeSelector = () => {
       </button>
 
       <div
-        className="absolute right-0 bottom-10 mt-2 w-48 py-2 
-        bg-zinc-900 rounded-lg shadow-xl border border-slate-800 
-        opacity-0 group-hover:opacity-100 invisible group-hover:visible 
-        transition-all duration-200 z-50"
+        className={`absolute right-0 top-10 mt-2 w-48 py-2 
+        ${theme.colors.background.sidebar} rounded-lg shadow-xl border ${theme.colors.border.accent}
+          invisible group-hover:visible 
+        transition-all duration-200 z-50`}
       >
         {Object.entries(themes).map(([key, themeOption]) => (
           <button
             key={key}
             onClick={() => setTheme(key)}
-            className={`w-full px-4 py-2 text-left hover:bg-slate-800
+            className={`w-full px-4 py-2 text-left transition-colors duration-200
+              hover:${theme.colors.background.card}
               ${
                 theme.name === themeOption.name
-                  ? "text-indigo-400"
-                  : "text-slate-200"
+                  ? `${theme.colors.text.accent} font-medium`
+                  : `${theme.colors.text.primary}`
               }`}
           >
             {themeOption.name}

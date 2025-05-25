@@ -1,30 +1,39 @@
-import { ArrowLeft, ArrowRight, Star, Eye, Plus, Trash2 } from "lucide-react";
+import { Star, Eye, Plus, Trash2 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import CardModal from "./CardModal";
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const BinderPage = ({
   cards = [],
   currentPage,
-  onNextPage,
-  onPrevPage,
   parsedMissingCards,
   layout,
   onToggleCardStatus,
 }) => {
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState(null);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
   const cardsPerPage = layout.cards;
   const totalPhysicalPages = Math.ceil(cards.length / cardsPerPage);
-  const adjustedTotalPages = Math.ceil((totalPhysicalPages + 1) / 2);
 
-  // Calculate progress
-  const totalCards = cards.length;
-  const missingCount = parsedMissingCards.size;
-  const collectedCount = totalCards - missingCount;
-  const progressPercentage =
-    totalCards > 0 ? (collectedCount / totalCards) * 100 : 0;
+  // Handle window resize for responsive binder sizing
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Progress calculation removed - now handled in App.jsx header
 
   let leftPhysicalPage, rightPhysicalPage;
 
@@ -51,212 +60,351 @@ const BinderPage = ({
         )
       : [];
 
-  // Calculate grid classes based on layout
+  /**
+   * Responsive Binder Sizing Algorithm
+   *
+   * This algorithm calculates optimal binder dimensions based on:
+   * - Viewport dimensions (responsive design)
+   * - Layout density (cards per page)
+   * - Card aspect ratio (2.5:3.5 for Pokemon cards)
+   * - Screen size breakpoints
+   * - Optimal card visibility and usability
+   */
+  const binderDimensions = useMemo(() => {
+    // Extract grid dimensions from layout
+    const getGridDimensions = (layoutId) => {
+      const gridMap = {
+        "2x2": { cols: 2, rows: 2 },
+        "3x3": { cols: 3, rows: 3 },
+        "4x3": { cols: 4, rows: 3 },
+        "4x4": { cols: 4, rows: 4 },
+      };
+      return gridMap[layoutId] || { cols: 3, rows: 3 };
+    };
+
+    const { cols, rows } = getGridDimensions(layout.id);
+
+    // Get viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Define responsive breakpoints
+    const breakpoints = {
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      "2xl": 1536,
+    };
+
+    // Calculate available space (accounting for sidebar, header, padding)
+    const sidebarWidth = viewportWidth >= breakpoints.lg ? 384 : 320; // w-96 on lg+, w-80 on smaller
+    const headerHeight = 80; // Approximate header height
+    const footerHeight = 60; // Approximate footer height
+    const padding = viewportWidth >= breakpoints.md ? 32 : 16; // Less padding on mobile
+
+    // On mobile/tablet, sidebar is overlay so use full width
+    const effectiveSidebarWidth =
+      viewportWidth >= breakpoints.lg ? sidebarWidth : 0;
+    const availableWidth = viewportWidth - effectiveSidebarWidth - padding;
+    const availableHeight =
+      viewportHeight - headerHeight - footerHeight - padding;
+
+    // Calculate optimal binder dimensions
+    const calculateResponsiveDimensions = () => {
+      // Card aspect ratio: 2.5:3.5 (width:height)
+      const cardAspectRatio = 2.5 / 3.5;
+
+      // Calculate ideal card size based on available space
+      const maxCardWidth = (availableWidth * 0.45) / cols; // 45% width per page, divided by columns
+      const maxCardHeight = (availableHeight * 0.85) / rows; // 85% height, divided by rows
+
+      // Respect card aspect ratio
+      const cardWidthFromHeight = maxCardHeight * cardAspectRatio;
+      const cardHeightFromWidth = maxCardWidth / cardAspectRatio;
+
+      // Use the smaller dimension to ensure cards fit
+      const finalCardWidth = Math.min(maxCardWidth, cardWidthFromHeight);
+      const finalCardHeight = Math.min(maxCardHeight, cardHeightFromWidth);
+
+      // Calculate binder dimensions based on final card size
+      const pageWidth = finalCardWidth * cols;
+      const pageHeight = finalCardHeight * rows;
+
+      // Add padding and gaps
+      const gap = Math.max(8, Math.min(16, finalCardWidth * 0.05)); // 5% of card width, min 8px, max 16px
+      const padding = Math.max(16, Math.min(32, finalCardWidth * 0.1)); // 10% of card width, min 16px, max 32px
+
+      const totalPageWidth = pageWidth + gap * (cols - 1) + padding * 2;
+      const totalPageHeight = pageHeight + gap * (rows - 1) + padding * 2;
+
+      // Calculate binder container size (two pages side by side)
+      const binderWidth = totalPageWidth * 2 + 16; // 16px gap between pages
+      const binderHeight = totalPageHeight;
+
+      // Ensure binder fits in available space
+      const maxBinderWidth = availableWidth * 0.95;
+      const maxBinderHeight = availableHeight * 0.9;
+
+      let finalBinderWidth = Math.min(binderWidth, maxBinderWidth);
+      let finalBinderHeight = Math.min(binderHeight, maxBinderHeight);
+
+      // If we had to scale down, maintain aspect ratio
+      if (binderWidth > maxBinderWidth || binderHeight > maxBinderHeight) {
+        const scaleX = maxBinderWidth / binderWidth;
+        const scaleY = maxBinderHeight / binderHeight;
+        const scale = Math.min(scaleX, scaleY);
+
+        finalBinderWidth = binderWidth * scale;
+        finalBinderHeight = binderHeight * scale;
+      }
+
+      // Responsive adjustments for different screen sizes
+      let responsiveScale = 1;
+      if (viewportWidth <= breakpoints.md) {
+        // Mobile/tablet: smaller binder
+        responsiveScale = 0.8;
+      } else if (viewportWidth <= breakpoints.lg) {
+        // Small desktop: slightly smaller
+        responsiveScale = 0.9;
+      } else if (viewportWidth >= breakpoints["2xl"]) {
+        // Large desktop: can be bigger
+        responsiveScale = 1.1;
+      }
+
+      finalBinderWidth *= responsiveScale;
+      finalBinderHeight *= responsiveScale;
+
+      return {
+        width: `${Math.round(finalBinderWidth)}px`,
+        height: `${Math.round(finalBinderHeight)}px`,
+        padding: `${Math.round(padding * responsiveScale)}px`,
+        gap: `${Math.round(gap * responsiveScale)}px`,
+        gridCols: cols,
+        gridRows: rows,
+      };
+    };
+
+    return calculateResponsiveDimensions();
+  }, [layout.id, layout.cards, windowSize]);
+
+  // Generate dynamic CSS classes based on calculated dimensions
   const getGridClasses = () => {
-    switch (layout.id) {
-      case "2x2":
-        return "grid-cols-2 grid-rows-2";
-      case "3x3":
-        return "grid-cols-3 grid-rows-3";
-      case "4x3":
-        return "grid-cols-4 grid-rows-3";
-      case "4x4":
-        return "grid-cols-4 grid-rows-4";
-      default:
-        return "grid-cols-3 grid-rows-3";
-    }
+    return `grid-cols-${binderDimensions.gridCols} grid-rows-${binderDimensions.gridRows}`;
   };
 
-  // Calculate container size classes based on layout
-  const getContainerClasses = () => {
-    switch (layout.id) {
-      case "2x2":
-        return "w-[70%]";
-      case "3x3":
-        return "w-[78%]";
-      case "4x3":
-        return "w-[92%]"; // Wider for 4 columns
-      case "4x4":
-        return "w-[80%]";
-      default:
-        return "w-[75%]";
-    }
-  };
+  const getContainerStyles = () => ({
+    width: binderDimensions.width,
+    height: binderDimensions.height,
+    maxWidth: "95vw",
+    maxHeight: "85vh",
+  });
 
-  // Calculate binder height based on layout
-  const getBinderSizeClasses = () => {
-    switch (layout.id) {
-      case "2x2":
-        return "h-[85%]";
-      case "3x3":
-        return "h-[95%]";
-      case "4x3":
-        return "h-[85%]"; // Shorter for 3 rows
-      case "4x4":
-        return "h-[98%]";
-      default:
-        return "h-[95%]";
-    }
-  };
-
-  // Calculate grid spacing based on layout
-  const getGridSpacingClasses = () => {
-    switch (layout.id) {
-      case "2x2":
-        return "gap-3 p-4";
-      case "3x3":
-        return "gap-2 p-3";
-      case "4x3":
-        return "gap-1.5 p-2";
-      case "4x4":
-        return "gap-1 p-2";
-      default:
-        return "gap-2 p-3";
-    }
-  };
+  const getGridStyles = () => ({
+    padding: binderDimensions.padding,
+    gap: binderDimensions.gap,
+  });
 
   // Handle toggling card status (add/remove from missing cards)
   const handleToggleCardStatus = (e, card) => {
-    e.stopPropagation(); // Prevent opening the card modal
+    e.stopPropagation();
     if (onToggleCardStatus) {
-      onToggleCardStatus(card.number);
+      onToggleCardStatus(e, card);
     }
   };
 
   // Handle opening card details
   const handleInspectCard = (e, card) => {
-    e.stopPropagation(); // Redundant but good practice
+    e.stopPropagation();
     setSelectedCard(card);
   };
 
   const renderPage = (pageCards) => {
     return (
       <div
-        className={`relative ${theme.colors.background.sidebar} backdrop-blur-sm w-full h-full rounded-2xl shadow-xl`}
+        className={`relative ${theme.colors.background.sidebar} w-full h-full rounded-3xl shadow-2xl border ${theme.colors.border.light}`}
       >
         <div
-          className={`grid ${getGridClasses()} h-full w-full ${getGridSpacingClasses()}`}
+          className={`grid ${getGridClasses()} h-full w-full`}
+          style={getGridStyles()}
         >
           {Array.from({ length: layout.cards }).map((_, idx) => {
             const card = pageCards[idx];
-            const column = idx % parseInt(layout.id[0]);
-
-            let borderClasses = "";
-            if (column === parseInt(layout.id[0]) - 1) {
-              borderClasses = `border-r border-t border-b border-dashed ${theme.colors.border.accent}`;
-            } else {
-              borderClasses = `border-l border-t border-b border-dashed ${theme.colors.border.accent}`;
-            }
 
             return (
-              <div key={idx} className="relative w-full pt-[140%]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    className={`absolute inset-0 ${borderClasses} rounded-lg pointer-events-none`}
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br from-${theme.colors.primary}-500/5 via-transparent to-${theme.colors.primary}-500/5 rounded-lg pointer-events-none`}
-                  />
-
-                  {card && (
-                    <div className="relative w-[98%] h-[98%] flex items-center justify-center">
-                      <div className="relative w-full h-full group flex items-center justify-center">
-                        {/* Base card layer */}
-                        <div className="w-full h-full cursor-pointer hover:scale-[1.02] transition-transform duration-200">
-                          <div className="relative w-full h-full">
-                            <img
-                              src={
-                                parsedMissingCards.has(
-                                  card.isReverseHolo
-                                    ? `${card.number}_reverse`
-                                    : card.number
-                                )
-                                  ? "https://img.pkmnbindr.com/000.png"
-                                  : card.images.small
-                              }
-                              alt={card.name}
-                              className={`w-full h-full object-contain rounded-lg shadow-lg 
-                                transition-all duration-200 
-                                group-hover:shadow-${theme.colors.primary}-500/20`}
-                              onClick={() => setSelectedCard(card)}
-                            />
-                          </div>
-                        </div>
-
-                        {/* Hover layer for missing cards */}
-                        {parsedMissingCards.has(
-                          card.isReverseHolo
-                            ? `${card.number}_reverse`
-                            : card.number
-                        ) && (
-                          <div
-                            className="absolute inset-0 cursor-pointer"
-                            onClick={() => setSelectedCard(card)}
-                          >
-                            <img
-                              src={card.images.small}
-                              alt={card.name}
-                              className="w-full h-full object-contain rounded-lg shadow-lg 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                            />
-                          </div>
-                        )}
-
-                        {/* Action buttons on hover */}
-                        <div className="absolute inset-x-0 bottom-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mb-2">
-                          {/* Inspect button */}
-                          <button
-                            onClick={(e) => handleInspectCard(e, card)}
-                            className={`${theme.colors.button.primary} shadow-lg p-2 rounded-full flex items-center justify-center`}
-                            title="Inspect card"
-                          >
-                            <Eye className="w-4 h-4" />
-                          </button>
-
-                          {/* Add/Remove toggle button */}
+              <div key={idx} className="relative w-full">
+                <div className="aspect-[2.5/3.5] w-full">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    {card ? (
+                      <div className="relative w-full h-full group">
+                        {/* Card container */}
+                        <div className="relative w-full h-full">
+                          {/* Missing card placeholder */}
                           {parsedMissingCards.has(
                             card.isReverseHolo
                               ? `${card.number}_reverse`
                               : card.number
                           ) ? (
-                            <button
-                              onClick={(e) => handleToggleCardStatus(e, card)}
-                              className={`${theme.colors.button.success} shadow-lg p-2 rounded-full flex items-center justify-center`}
-                              title="Add to collection"
-                            >
-                              <Plus className="w-4 h-4" />
-                            </button>
-                          ) : (
-                            <button
-                              onClick={(e) => handleToggleCardStatus(e, card)}
-                              className={`bg-red-500 text-white shadow-lg p-2 rounded-full flex items-center justify-center`}
-                              title="Remove from collection"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </button>
-                          )}
-                        </div>
+                            <div className="relative w-full h-full">
+                              {/* Empty slot background */}
+                              <div
+                                className={`
+                                  w-full h-full rounded-lg border-2 border-dashed 
+                                  ${theme.colors.border.accent} ${theme.colors.background.card}
+                                  flex items-center justify-center cursor-pointer
+                                  hover:border-solid transition-all duration-200
+                                  group-hover:shadow-lg
+                                `}
+                                onClick={() => setSelectedCard(card)}
+                              >
+                                <div className="text-center space-y-2">
+                                  <div
+                                    className={`w-12 h-12 mx-auto rounded-full ${theme.colors.background.sidebar} flex items-center justify-center`}
+                                  >
+                                    <span
+                                      className={`text-lg font-bold ${theme.colors.text.accent}`}
+                                    >
+                                      {card.number}
+                                    </span>
+                                  </div>
+                                  <div
+                                    className={`text-xs ${theme.colors.text.secondary} font-medium max-w-16 truncate`}
+                                  >
+                                    {card.name}
+                                  </div>
+                                  {card.isReverseHolo && (
+                                    <div className="flex items-center justify-center gap-1">
+                                      <Star
+                                        className={`w-3 h-3 ${theme.colors.text.accent}`}
+                                      />
+                                      <span
+                                        className={`text-xs ${theme.colors.text.accent}`}
+                                      >
+                                        RH
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
 
-                        {/* Card number badge */}
-                        <div className="absolute top-[-8px] right-[-8px] flex gap-1">
-                          <span
-                            className={`${theme.colors.button.primary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold`}
-                          >
-                            #{card.number}
-                          </span>
-                          {card.isReverseHolo && (
-                            <span
-                              className={`${theme.colors.button.secondary} text-xs px-2 py-1 rounded-lg shadow-lg font-bold
-                                flex items-center gap-1`}
+                              {/* Hover preview */}
+                              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <img
+                                  src={card.images.small}
+                                  alt={card.name}
+                                  className="w-full h-full object-contain rounded-lg shadow-xl"
+                                />
+                              </div>
+                            </div>
+                          ) : (
+                            /* Collected card */
+                            <div
+                              className="relative w-full h-full cursor-pointer"
+                              onClick={() => setSelectedCard(card)}
                             >
-                              <Star className="w-3 h-3" />
-                              RH
-                            </span>
+                              <img
+                                src={card.images.small}
+                                alt={card.name}
+                                className={`
+                                  w-full h-full object-contain rounded-lg shadow-lg
+                                  transition-all duration-200 
+                                  group-hover:shadow-xl group-hover:scale-[1.02]
+                                `}
+                              />
+
+                              {/* Collected indicator */}
+                              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <div
+                                  className={`w-6 h-6 rounded-full ${theme.colors.button.success} flex items-center justify-center shadow-lg`}
+                                >
+                                  <span className="text-xs font-bold text-white">
+                                    ✓
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                           )}
+
+                          {/* Action buttons overlay */}
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <div className="absolute top-3 left-3 flex flex-col gap-2">
+                              {/* Inspect button */}
+                              <button
+                                onClick={(e) => handleInspectCard(e, card)}
+                                className={`
+                                  w-8 h-8 rounded-full ${theme.colors.button.secondary} 
+                                  flex items-center justify-center shadow-lg
+                                  hover:scale-110 transition-transform duration-200
+                                `}
+                                title="View details"
+                              >
+                                <Eye className="w-4 h-4" />
+                              </button>
+
+                              {/* Toggle collection status button */}
+                              <button
+                                onClick={(e) => handleToggleCardStatus(e, card)}
+                                className={`
+                                  w-8 h-8 rounded-full flex items-center justify-center shadow-lg
+                                  hover:scale-110 transition-transform duration-200
+                                  ${
+                                    parsedMissingCards.has(
+                                      card.isReverseHolo
+                                        ? `${card.number}_reverse`
+                                        : card.number
+                                    )
+                                      ? `${theme.colors.button.success}`
+                                      : "bg-red-500 hover:bg-red-600 text-white"
+                                  }
+                                `}
+                                title={
+                                  parsedMissingCards.has(
+                                    card.isReverseHolo
+                                      ? `${card.number}_reverse`
+                                      : card.number
+                                  )
+                                    ? "Mark as collected"
+                                    : "Mark as missing"
+                                }
+                              >
+                                {parsedMissingCards.has(
+                                  card.isReverseHolo
+                                    ? `${card.number}_reverse`
+                                    : card.number
+                                ) ? (
+                                  <Plus className="w-4 h-4" />
+                                ) : (
+                                  <Trash2 className="w-4 h-4" />
+                                )}
+                              </button>
+                            </div>
+
+                            {/* Card info badge */}
+                            <div className="absolute bottom-3 right-3 flex flex-col gap-1 items-end">
+                              <span
+                                className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.primary} shadow-lg`}
+                              >
+                                #{card.number}
+                              </span>
+                              {card.isReverseHolo && (
+                                <span
+                                  className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.secondary} shadow-lg flex items-center gap-1`}
+                                >
+                                  <Star className="w-3 h-3" />
+                                  RH
+                                </span>
+                              )}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    ) : (
+                      /* Empty slot */
+                      <div
+                        className={`w-full h-full rounded-lg border-2 border-dashed ${theme.colors.border.accent} ${theme.colors.background.card} opacity-30`}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
             );
@@ -268,122 +416,57 @@ const BinderPage = ({
 
   return (
     <div className="h-full flex flex-col">
-      {/* Progress bar at top */}
+      {/* Main Binder View - Responsive layout */}
       <div
-        className={`flex justify-between items-center px-6 py-3 ${theme.colors.background.sidebar}`}
+        className={`flex-1 relative overflow-auto ${theme.colors.background.main} p-2 md:p-4`}
       >
-        <div className="flex-1 mr-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className={`text-sm font-medium ${theme.colors.text.accent}`}>
-              Set Progress
-            </span>
-            <span className={`text-sm font-medium ${theme.colors.text.accent}`}>
-              {collectedCount} / {totalCards} cards (
-              {Math.round(progressPercentage)}%)
-            </span>
-          </div>
-          <div
-            className={`w-full h-2 ${theme.colors.background.card} rounded-full overflow-hidden`}
-          >
-            <div
-              className={`h-full bg-gradient-to-r ${
-                theme.colors.progress?.from || "from-sky-500"
-              } ${
-                theme.colors.progress?.to || "to-sky-400"
-              } transition-all duration-300 ease-out`}
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Main content with side buttons */}
-      <div
-        className={`flex-1 relative overflow-hidden ${theme.colors.background.main}`}
-      >
-        <div className="absolute inset-0 flex items-center justify-center ">
-          {/* Left page turn button */}
-          <button
-            onClick={onPrevPage}
-            disabled={currentPage === 0}
-            className={`absolute left-4 top-1/2 -translate-y-1/2 z-10
-              w-12 h-24 flex items-center justify-center
-              ${theme.colors.background.sidebar} backdrop-blur-sm rounded-lg
-              enabled:hover:${theme.colors.background.card}
-              disabled:opacity-40 disabled:cursor-not-allowed
-              border ${theme.colors.border.accent}
-              transition-all duration-200
-              group`}
-          >
-            <ArrowLeft
-              className={`w-6 h-6 ${theme.colors.text.accent} group-enabled:group-hover:scale-110 transition-transform`}
-            />
-          </button>
-
-          {/* Binder content */}
-          <div
-            className={`relative ${getBinderSizeClasses()} ${getContainerClasses()} rounded-lg overflow-hidden`}
-          >
-            <div className="absolute inset-0 flex gap-2 ">
-              <div className="flex-1">
+        <div className="min-h-full flex items-center justify-center">
+          {/* Binder Pages Container - Responsive centered layout */}
+          <div className="relative" style={getContainerStyles()}>
+            <div className="flex gap-2 md:gap-4 h-full">
+              {/* Left Page */}
+              <div className="flex-1 min-w-0">
                 {currentPage === 0 ? (
+                  /* Cover Page */
                   <div
-                    className={`h-full w-full ${theme.colors.background.sidebar} backdrop-blur-sm rounded-2xl shadow-xl 
-                    flex flex-col items-center justify-center p-8`}
+                    className={`h-full w-full ${theme.colors.background.sidebar} rounded-3xl shadow-2xl border ${theme.colors.border.light} flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden`}
                   >
-                    <img
-                      src={`/${theme.name.toLowerCase()}.png`}
-                      alt={theme.name}
-                      className="absolute opacity-10"
-                    />
-                    <div className="text-4xl font-bold text-[#d62e36] opacity-20 rotate-45 mb-4">
-                      PkmnBindr
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-current via-transparent to-current" />
+                    </div>
+
+                    <div className="relative z-10 text-center space-y-3 md:space-y-6">
+                      <div
+                        className={`text-3xl md:text-6xl font-bold ${theme.colors.text.accent} mb-2 md:mb-4`}
+                      >
+                        PkmnBindr
+                      </div>
+                      <div
+                        className={`text-sm md:text-xl ${theme.colors.text.secondary}`}
+                      >
+                        Collection Manager
+                      </div>
+                      <div
+                        className={`text-xs md:text-sm ${theme.colors.text.secondary} opacity-60`}
+                      >
+                        Organize • Track • Collect
+                      </div>
                     </div>
                   </div>
                 ) : (
                   renderPage(leftPageCards)
                 )}
               </div>
-              <div className="flex-1">{renderPage(rightPageCards)}</div>
+
+              {/* Right Page */}
+              <div className="flex-1 min-w-0">{renderPage(rightPageCards)}</div>
             </div>
           </div>
-
-          {/* Page indicator */}
-          <div
-            className={`absolute bottom-8 right-13 px-3 py-1.5 
-            ${theme.colors.background.sidebar} backdrop-blur-sm rounded-lg 
-            border ${theme.colors.border.accent}
-            text-sm ${theme.colors.text.accent}`}
-          >
-            <span className="font-medium">
-              {currentPage === 0
-                ? "Cover"
-                : `Pages ${leftPhysicalPage + 1}-${rightPhysicalPage + 1}`}
-            </span>
-            <span className={`${theme.colors.text.secondary} ml-2`}>
-              of {totalPhysicalPages}
-            </span>
-          </div>
-
-          {/* Right page turn button */}
-          <button
-            onClick={onNextPage}
-            disabled={currentPage >= adjustedTotalPages - 1}
-            className={`absolute right-4 top-1/2 -translate-y-1/2 z-10
-              w-12 h-24 flex items-center justify-center
-              ${theme.colors.background.sidebar} backdrop-blur-sm rounded-lg
-              enabled:hover:${theme.colors.background.card}
-              disabled:opacity-40 disabled:cursor-not-allowed
-              border ${theme.colors.border.accent}
-              transition-all duration-200
-              group`}
-          >
-            <ArrowRight
-              className={`w-6 h-6 ${theme.colors.text.accent} group-enabled:group-hover:scale-110 transition-transform`}
-            />
-          </button>
         </div>
       </div>
+
+      {/* Card Modal */}
       {selectedCard && (
         <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} />
       )}
@@ -394,8 +477,6 @@ const BinderPage = ({
 BinderPage.propTypes = {
   cards: PropTypes.array,
   currentPage: PropTypes.number.isRequired,
-  onNextPage: PropTypes.func.isRequired,
-  onPrevPage: PropTypes.func.isRequired,
   parsedMissingCards: PropTypes.instanceOf(Set).isRequired,
   layout: PropTypes.shape({
     id: PropTypes.string.isRequired,

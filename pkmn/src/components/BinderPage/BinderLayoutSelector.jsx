@@ -7,6 +7,7 @@ const BinderLayoutSelector = ({
   onLayoutChange,
   displayOptions,
   onDisplayOptionsChange,
+  isCustomBinder = false,
 }) => {
   const layouts = [
     { id: "2x2", label: "2×2", icon: Grid2X2, cards: 4 },
@@ -68,60 +69,62 @@ const BinderLayoutSelector = ({
         </label>
 
         <div className="space-y-3">
-          {/* Show Reverse Holos */}
-          <div
-            className={`flex items-center justify-between p-2 rounded-lg transition-colors
-            ${
-              displayOptions.showReverseHolos
-                ? theme.colors.background.sidebar
-                : ""
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className={`w-6 h-6 flex items-center justify-center 
-      rounded-md border text-xs font-bold relative
-      overflow-hidden text-gray-400`}
-              >
-                R<div className="absolute inset-0"></div>
+          {/* Show Reverse Holos - Only for set collections */}
+          {!isCustomBinder && (
+            <div
+              className={`flex items-center justify-between p-2 rounded-lg transition-colors
+              ${
+                displayOptions.showReverseHolos
+                  ? theme.colors.background.sidebar
+                  : ""
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <div
+                  className={`w-6 h-6 flex items-center justify-center 
+        rounded-md border text-xs font-bold relative
+        overflow-hidden text-gray-400`}
+                >
+                  R<div className="absolute inset-0"></div>
+                </div>
+                <span className={`text-sm ${theme.colors.text.primary}`}>
+                  Reverse Holos
+                </span>
               </div>
-              <span className={`text-sm ${theme.colors.text.primary}`}>
-                Reverse Holos
-              </span>
-            </div>
 
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={displayOptions.showReverseHolos}
-                onChange={(e) =>
-                  onDisplayOptionsChange({
-                    ...displayOptions,
-                    showReverseHolos: e.target.checked,
-                  })
-                }
-                className="sr-only peer"
-              />
-              <div
-                className={`w-10 h-5 rounded-full
-                transition-colors duration-200 ease-in-out
-                ${
-                  displayOptions.showReverseHolos
-                    ? theme.colors.button.primary
-                    : "bg-gray-200"
-                }
-                after:content-[''] after:absolute after:top-0.5 after:left-0.5
-                after:bg-white after:rounded-full after:h-4 after:w-4 
-                after:transition-all after:duration-200 peer-checked:after:translate-x-5
-                peer-focus:ring-2 peer-focus:ring-offset-1
-                ${
-                  displayOptions.showReverseHolos
-                    ? "peer-focus:ring-sky-500/50"
-                    : "peer-focus:ring-gray-300"
-                }`}
-              />
-            </label>
-          </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={displayOptions.showReverseHolos}
+                  onChange={(e) =>
+                    onDisplayOptionsChange({
+                      ...displayOptions,
+                      showReverseHolos: e.target.checked,
+                    })
+                  }
+                  className="sr-only peer"
+                />
+                <div
+                  className={`w-10 h-5 rounded-full
+                  transition-colors duration-200 ease-in-out
+                  ${
+                    displayOptions.showReverseHolos
+                      ? theme.colors.button.primary
+                      : "bg-gray-200"
+                  }
+                  after:content-[''] after:absolute after:top-0.5 after:left-0.5
+                  after:bg-white after:rounded-full after:h-4 after:w-4 
+                  after:transition-all after:duration-200 peer-checked:after:translate-x-5
+                  peer-focus:ring-2 peer-focus:ring-offset-1
+                  ${
+                    displayOptions.showReverseHolos
+                      ? "peer-focus:ring-sky-500/50"
+                      : "peer-focus:ring-gray-300"
+                  }`}
+                />
+              </label>
+            </div>
+          )}
 
           {/* Sort Direction */}
           <div className="flex items-center justify-between">
@@ -189,6 +192,7 @@ BinderLayoutSelector.propTypes = {
     sortDirection: PropTypes.oneOf(["asc", "desc"]).isRequired,
   }).isRequired,
   onDisplayOptionsChange: PropTypes.func.isRequired,
+  isCustomBinder: PropTypes.bool,
 };
 
 export default BinderLayoutSelector;
