@@ -178,7 +178,7 @@ const EnhancedBinderSelector = ({
               bg-white 
               border ${theme.colors.border.accent}
               rounded-xl shadow-xl z-50
-              max-h-80 overflow-hidden
+              max-h-100 overflow-hidden
             `}
           >
             {binders.length > 0 ? (
