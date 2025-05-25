@@ -166,7 +166,11 @@ const BinderPage = ({
                           <div className="relative w-full h-full">
                             <img
                               src={
-                                parsedMissingCards.has(card.number)
+                                parsedMissingCards.has(
+                                  card.isReverseHolo
+                                    ? `${card.number}_reverse`
+                                    : card.number
+                                )
                                   ? "https://img.pkmnbindr.com/000.png"
                                   : card.images.small
                               }
@@ -180,7 +184,11 @@ const BinderPage = ({
                         </div>
 
                         {/* Hover layer for missing cards */}
-                        {parsedMissingCards.has(card.number) && (
+                        {parsedMissingCards.has(
+                          card.isReverseHolo
+                            ? `${card.number}_reverse`
+                            : card.number
+                        ) && (
                           <div
                             className="absolute inset-0 cursor-pointer"
                             onClick={() => setSelectedCard(card)}
@@ -206,7 +214,11 @@ const BinderPage = ({
                           </button>
 
                           {/* Add/Remove toggle button */}
-                          {parsedMissingCards.has(card.number) ? (
+                          {parsedMissingCards.has(
+                            card.isReverseHolo
+                              ? `${card.number}_reverse`
+                              : card.number
+                          ) ? (
                             <button
                               onClick={(e) => handleToggleCardStatus(e, card)}
                               className={`${theme.colors.button.success} shadow-lg p-2 rounded-full flex items-center justify-center`}

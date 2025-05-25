@@ -189,23 +189,34 @@ const App = () => {
     }
   };
 
-  const handleToggleCardStatus = (cardNumber) => {
+  const handleToggleCardStatus = (e, card) => {
+    e.stopPropagation(); // Prevent opening the card modal
+
+    // Generate the appropriate card ID based on whether it's a reverse holo
+    const cardId = card.isReverseHolo ? `${card.number}_reverse` : card.number;
     const newMissingCards = new Set(parsedMissingCards);
 
-    if (newMissingCards.has(cardNumber)) {
+    if (newMissingCards.has(cardId)) {
       // Remove card from missing cards (mark as collected)
-      newMissingCards.delete(cardNumber);
+      newMissingCards.delete(cardId);
     } else {
       // Add card to missing cards (mark as missing)
-      newMissingCards.add(cardNumber);
+      newMissingCards.add(cardId);
     }
 
     setParsedMissingCards(newMissingCards);
 
     // Update the missing cards text area
     const missingCardsText = Array.from(newMissingCards)
-      .map((number) => `#${number}`)
+      .map((id) => {
+        // Format reverse holos with "RH" in the display
+        if (id.includes("_reverse")) {
+          return `#${id.replace("_reverse", "")} RH`;
+        }
+        return `#${id}`;
+      })
       .join("\n");
+
     setMissingCards(missingCardsText);
 
     // Show save indicator
