@@ -17,6 +17,7 @@ import BinderPage from "./components/BinderPage/BinderPage";
 import CustomBinderPage from "./components/BinderPage/CustomBinderPage";
 import CardSearch from "./components/CardSearch/CardSearch";
 import CardClipboard from "./components/CardClipboard/CardClipboard";
+import BinderHistory from "./components/BinderHistory/BinderHistory";
 import DeckListModal from "./components/DeckListModal/DeckListModal";
 import StorageControls from "./components/StorageControls/StorageControls";
 
@@ -47,6 +48,13 @@ import {
   removeFromCardClipboard,
   clearCardClipboard,
   moveCardFromClipboard,
+  getBinderHistory,
+  revertToHistoryEntry,
+  clearBinderHistory,
+  navigateHistory,
+  canNavigateHistory,
+  getHistoryPosition,
+  updateHistoryWithFinalState,
 } from "./utils/storageUtils";
 import { useTheme } from "./theme/ThemeContent";
 import ThemeSelector from "./components/ThemeSelector";
@@ -77,9 +85,12 @@ const App = () => {
   });
   const [showSidebar, setShowSidebar] = useState(false);
   const [showCardSearch, setShowCardSearch] = useState(false);
+  const [targetCardPosition, setTargetCardPosition] = useState(null); // For tracking specific position when adding cards
   const [customCards, setCustomCards] = useState([]);
   const [clipboardCards, setClipboardCards] = useState([]);
   const [isClipboardCollapsed, setIsClipboardCollapsed] = useState(false);
+  const [historyEntries, setHistoryEntries] = useState([]);
+  const [isHistoryCollapsed, setIsHistoryCollapsed] = useState(true);
 
   const processCards = (rawCards) => {
     let processedCards = [...rawCards];
@@ -179,6 +190,14 @@ const App = () => {
       const savedCustomCards = getCustomCards(binder.id);
       setCustomCards(savedCustomCards);
       setCards(savedCustomCards);
+
+      // Load history for custom binder
+      const savedHistory = getBinderHistory(binder.id);
+      setHistoryEntries(savedHistory);
+
+      // Load missing cards for custom binder
+      const savedMissingCards = new Set(binder.missingCards || []);
+      setParsedMissingCards(savedMissingCards);
     } else {
       setCustomCards([]);
 
@@ -229,8 +248,16 @@ const App = () => {
   const handleToggleCardStatus = (e, card) => {
     e.stopPropagation(); // Prevent opening the card modal
 
-    // Generate the appropriate card ID based on whether it's a reverse holo
-    const cardId = card.isReverseHolo ? `${card.number}_reverse` : card.number;
+    // Generate the appropriate card ID based on binder type and whether it's a reverse holo
+    const cardId =
+      currentBinder?.binderType === "custom"
+        ? card.isReverseHolo
+          ? `${card.positionId || card.id}_reverse`
+          : card.positionId || card.id
+        : card.isReverseHolo
+        ? `${card.number}_reverse`
+        : card.number;
+
     const newMissingCards = new Set(parsedMissingCards);
 
     if (newMissingCards.has(cardId)) {
@@ -243,15 +270,49 @@ const App = () => {
 
     setParsedMissingCards(newMissingCards);
 
-    // Update the text representation
-    const missingCardsText = Array.from(newMissingCards)
-      .map((number) => `#${number}`)
-      .join("\n");
-    setMissingCards(missingCardsText);
+    // Update the text representation for set-based binders
+    if (currentBinder?.binderType !== "custom") {
+      const missingCardsText = Array.from(newMissingCards)
+        .map((number) => `#${number}`)
+        .join("\n");
+      setMissingCards(missingCardsText);
+    }
 
-    // Save to storage if we have a set
-    if (set) {
+    // Save to storage
+    if (currentBinder?.binderType === "custom") {
+      // For custom binders, save missing cards to the binder data
+      const updatedBinder = {
+        ...currentBinder,
+        missingCards: Array.from(newMissingCards),
+        updatedAt: new Date().toISOString(),
+      };
+
+      saveBinder(updatedBinder);
+      setCurrentBinder(updatedBinder);
+      setBinders((prev) =>
+        prev.map((b) => (b.id === updatedBinder.id ? updatedBinder : b))
+      );
+    } else if (set) {
+      // For set-based binders, save to set-specific storage
       saveMissingCards(set.id, newMissingCards);
+
+      // Update the current binder's missing cards data
+      if (currentBinder) {
+        const updatedBinder = {
+          ...currentBinder,
+          missingCards: {
+            ...currentBinder.missingCards,
+            [set.id]: Array.from(newMissingCards),
+          },
+          updatedAt: new Date().toISOString(),
+        };
+
+        saveBinder(updatedBinder);
+        setCurrentBinder(updatedBinder);
+        setBinders((prev) =>
+          prev.map((b) => (b.id === updatedBinder.id ? updatedBinder : b))
+        );
+      }
     }
   };
 
@@ -341,27 +402,88 @@ const App = () => {
   // Custom card handlers
   const handleAddCard = (card, position = null) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      const addedCard = addCustomCard(currentBinder.id, card, position);
+      // Use targetCardPosition if set (from clicking specific empty slot), otherwise use provided position
+      let targetPosition =
+        targetCardPosition !== null ? targetCardPosition : position;
+
+      if (targetPosition === null) {
+        // Calculate current page range
+        const cardsPerPage = layout.cards;
+        let startIndex, endIndex;
+
+        if (currentPage === 0) {
+          // Right page only (page 0)
+          startIndex = 0;
+          endIndex = cardsPerPage - 1;
+        } else {
+          // Calculate for left and right pages
+          const leftPhysicalPage = 2 * currentPage - 1;
+          const rightPhysicalPage = 2 * currentPage;
+
+          // Start from left page, end at right page
+          startIndex = leftPhysicalPage * cardsPerPage;
+          endIndex = (rightPhysicalPage + 1) * cardsPerPage - 1;
+        }
+
+        // Find first empty spot in current page range
+        const currentCards = getCustomCards(currentBinder.id);
+        for (let i = startIndex; i <= endIndex; i++) {
+          if (!currentCards[i]) {
+            targetPosition = i;
+            break;
+          }
+        }
+
+        // If no empty spot on current page, find first empty spot globally
+        if (targetPosition === null) {
+          const emptyIndex = currentCards.findIndex((card) => card === null);
+          if (emptyIndex >= 0) {
+            targetPosition = emptyIndex;
+          }
+        }
+      }
+
+      const addedCard = addCustomCard(currentBinder.id, card, targetPosition);
       if (addedCard) {
+        // Update history with final state after the action
+        updateHistoryWithFinalState(currentBinder.id);
+
         const updatedCards = getCustomCards(currentBinder.id);
         setCustomCards(updatedCards);
         setCards(updatedCards);
+
+        // Update history state
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
 
         // Update current binder state
         const updatedBinder = { ...currentBinder, customCards: updatedCards };
         setCurrentBinder(updatedBinder);
         setBinders(getBinders());
+
+        // Clear the target position after adding the card
+        setTargetCardPosition(null);
+        return true;
       }
+      return false;
     }
+    return false;
   };
 
   const handleRemoveCard = (cardIndex) => {
     if (currentBinder && currentBinder.binderType === "custom") {
       const success = removeCustomCard(currentBinder.id, cardIndex);
       if (success) {
+        // Update history with final state after the action
+        updateHistoryWithFinalState(currentBinder.id);
+
         const updatedCards = getCustomCards(currentBinder.id);
         setCustomCards(updatedCards);
         setCards(updatedCards);
+
+        // Update history state
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
 
         // Update current binder state
         const updatedBinder = { ...currentBinder, customCards: updatedCards };
@@ -380,9 +502,16 @@ const App = () => {
         isSwap
       );
       if (success) {
+        // Update history with final state after the action
+        updateHistoryWithFinalState(currentBinder.id);
+
         const updatedCards = getCustomCards(currentBinder.id);
         setCustomCards(updatedCards);
         setCards(updatedCards);
+
+        // Update history state
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
 
         // Update current binder state
         const updatedBinder = { ...currentBinder, customCards: updatedCards };
@@ -392,12 +521,14 @@ const App = () => {
     }
   };
 
-  const handleOpenCardSearch = () => {
+  const handleOpenCardSearch = (position = null) => {
+    setTargetCardPosition(position);
     setShowCardSearch(true);
   };
 
   const handleCloseCardSearch = () => {
     setShowCardSearch(false);
+    setTargetCardPosition(null); // Clear target position when closing
   };
 
   // Clipboard handlers
@@ -431,14 +562,57 @@ const App = () => {
       );
 
       if (actualIndex >= 0) {
-        const result = moveCardFromClipboard(actualIndex, currentBinder.id);
+        // Calculate first empty spot on current page
+        let targetPosition = null;
+
+        if (currentBinder.binderType === "custom") {
+          // Calculate current page range
+          const cardsPerPage = layout.cards;
+          let startIndex, endIndex;
+
+          if (currentPage === 0) {
+            // Right page only (page 0)
+            startIndex = 0;
+            endIndex = cardsPerPage - 1;
+          } else {
+            // Calculate for left and right pages
+            const leftPhysicalPage = 2 * currentPage - 1;
+            const rightPhysicalPage = 2 * currentPage;
+
+            // Start from left page, end at right page
+            startIndex = leftPhysicalPage * cardsPerPage;
+            endIndex = (rightPhysicalPage + 1) * cardsPerPage - 1;
+          }
+
+          // Find first empty spot in current page range
+          const currentCards = getCustomCards(currentBinder.id);
+          for (let i = startIndex; i <= endIndex; i++) {
+            if (!currentCards[i]) {
+              targetPosition = i;
+              break;
+            }
+          }
+        }
+
+        const result = moveCardFromClipboard(
+          actualIndex,
+          currentBinder.id,
+          targetPosition
+        );
         if (result) {
           setClipboardCards(getCardClipboard());
           // Refresh custom cards if it's a custom binder
           if (currentBinder.binderType === "custom") {
+            // Update history with final state after the action
+            updateHistoryWithFinalState(currentBinder.id);
+
             const updatedCustomCards = getCustomCards(currentBinder.id);
             setCustomCards(updatedCustomCards);
             setCards(updatedCustomCards);
+
+            // Update history state
+            const updatedHistory = getBinderHistory(currentBinder.id);
+            setHistoryEntries(updatedHistory);
           }
         }
         return result;
@@ -450,6 +624,172 @@ const App = () => {
   const handleToggleClipboard = () => {
     setIsClipboardCollapsed(!isClipboardCollapsed);
   };
+
+  const handleToggleHistory = () => {
+    setIsHistoryCollapsed(!isHistoryCollapsed);
+  };
+
+  const handleRevertToEntry = (entryId) => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      const success = revertToHistoryEntry(currentBinder.id, entryId);
+      if (success) {
+        // Refresh the binder state
+        const updatedCustomCards = getCustomCards(currentBinder.id);
+        setCustomCards(updatedCustomCards);
+        setCards(updatedCustomCards);
+
+        // Refresh history
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
+
+        // Update current binder state
+        const updatedBinder = {
+          ...currentBinder,
+          customCards: updatedCustomCards,
+        };
+        setCurrentBinder(updatedBinder);
+        setBinders(getBinders());
+      }
+    }
+  };
+
+  const handleClearHistory = () => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      clearBinderHistory(currentBinder.id);
+      setHistoryEntries([]);
+    }
+  };
+
+  const handleNavigateHistory = (direction) => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      const success = navigateHistory(currentBinder.id, direction);
+      if (success) {
+        // Refresh the binder state
+        const updatedCustomCards = getCustomCards(currentBinder.id);
+        setCustomCards(updatedCustomCards);
+        setCards(updatedCustomCards);
+
+        // Refresh history
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
+
+        // Update current binder state
+        const updatedBinder = {
+          ...currentBinder,
+          customCards: updatedCustomCards,
+        };
+        setCurrentBinder(updatedBinder);
+        setBinders(getBinders());
+      }
+    }
+  };
+
+  const handleNavigateToPage = (targetPage) => {
+    setCurrentPage(targetPage);
+  };
+
+  // Helper function to calculate which page a position belongs to
+  const calculatePageFromPosition = (position, cardsPerPage) => {
+    if (position < cardsPerPage) {
+      return 0; // Cover page (right side only)
+    }
+
+    // For positions beyond the first page, calculate which physical page
+    const physicalPage = Math.floor(position / cardsPerPage);
+
+    // Convert physical page to binder page (accounting for left/right layout)
+    // Physical pages 0 = binder page 0 (cover)
+    // Physical pages 1,2 = binder page 1 (left/right)
+    // Physical pages 3,4 = binder page 2 (left/right)
+    // etc.
+    if (physicalPage === 0) {
+      return 0;
+    } else {
+      return Math.ceil(physicalPage / 2);
+    }
+  };
+
+  const handleNavigateHistoryWithPageJump = (direction) => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      // Get the entry we're navigating to
+      const history = getBinderHistory(currentBinder.id);
+      const currentPosition = getHistoryPosition(currentBinder.id);
+      let targetEntry = null;
+
+      if (direction === "back") {
+        if (currentPosition === -1) {
+          targetEntry = history[history.length - 1];
+        } else if (currentPosition > 0) {
+          targetEntry = history[currentPosition - 1];
+        }
+      } else if (direction === "forward") {
+        if (currentPosition !== -1 && currentPosition < history.length - 1) {
+          targetEntry = history[currentPosition + 1];
+        }
+      }
+
+      // Calculate page and navigate if we have a target entry
+      if (targetEntry) {
+        let targetPosition = null;
+
+        if (targetEntry.position !== undefined) {
+          targetPosition = targetEntry.position;
+        } else if (targetEntry.toPosition !== undefined) {
+          targetPosition = targetEntry.toPosition;
+        } else if (targetEntry.fromPosition !== undefined) {
+          targetPosition = targetEntry.fromPosition;
+        }
+
+        if (targetPosition !== null) {
+          const targetPage = calculatePageFromPosition(
+            targetPosition,
+            layout.cards
+          );
+          setCurrentPage(targetPage);
+        }
+      }
+
+      // Perform the actual history navigation
+      handleNavigateHistory(direction);
+    }
+  };
+
+  // Keyboard shortcuts for history navigation
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Only handle shortcuts for custom binders
+      if (!currentBinder || currentBinder.binderType !== "custom") {
+        return;
+      }
+
+      // Check if Ctrl (or Cmd on Mac) is pressed
+      const isCtrlPressed = event.ctrlKey || event.metaKey;
+
+      if (isCtrlPressed) {
+        if (event.key === "z" && !event.shiftKey) {
+          // Ctrl+Z for undo
+          event.preventDefault();
+          if (canNavigateHistory(currentBinder.id, "back")) {
+            handleNavigateHistoryWithPageJump("back");
+          }
+        } else if (event.key === "y" || (event.key === "z" && event.shiftKey)) {
+          // Ctrl+Y or Ctrl+Shift+Z for redo
+          event.preventDefault();
+          if (canNavigateHistory(currentBinder.id, "forward")) {
+            handleNavigateHistoryWithPageJump("forward");
+          }
+        }
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [currentBinder, handleNavigateHistory, layout.cards]);
 
   const handleMoveFromClipboard = (
     clipboardIndex,
@@ -475,10 +815,17 @@ const App = () => {
           const newClipboard = getCardClipboard();
           setClipboardCards(newClipboard);
 
+          // Update history with final state after the action
+          updateHistoryWithFinalState(currentBinder.id);
+
           // Refresh custom cards
           const updatedCustomCards = getCustomCards(currentBinder.id);
           setCustomCards(updatedCustomCards);
           setCards(updatedCustomCards);
+
+          // Update history state
+          const updatedHistory = getBinderHistory(currentBinder.id);
+          setHistoryEntries(updatedHistory);
         }
         return result;
       }
@@ -490,14 +837,20 @@ const App = () => {
   const totalCards = cards.length;
   const missingCount = parsedMissingCards.size;
 
-  // For custom binders, show actual card count instead of collection progress
+  // For custom binders, show actual card count and missing cards
   const isCustomBinder = currentBinder?.binderType === "custom";
+  const actualCardsInBinder = isCustomBinder
+    ? cards.filter((card) => card !== null).length
+    : totalCards;
+
   const collectedCount = isCustomBinder
-    ? cards.filter((card) => card !== null).length // Count non-null cards in custom binder
+    ? actualCardsInBinder - missingCount // Subtract missing cards from actual cards
     : totalCards - missingCount; // Traditional missing cards calculation for sets
 
   const progressPercentage = isCustomBinder
-    ? 100 // Custom binders are always "complete" since users add what they want
+    ? actualCardsInBinder > 0
+      ? (collectedCount / actualCardsInBinder) * 100
+      : 100 // Show 100% if no cards added yet
     : totalCards > 0
     ? (collectedCount / totalCards) * 100
     : 0;
@@ -679,30 +1032,31 @@ const App = () => {
           {/* Right Section */}
           <div className="flex items-center gap-3 justify-end">
             {/* Collection Progress - Responsive version */}
-            {totalCards > 0 && (
-              <div className="flex items-center gap-2 lg:gap-3">
-                <div className="flex items-center gap-1 lg:gap-2">
+            {(totalCards > 0 ||
+              (isCustomBinder && actualCardsInBinder > 0)) && (
+              <div className="flex items-center gap-3 lg:gap-4">
+                <div className="flex items-center gap-2 lg:gap-3">
                   <span
                     className={`text-xs lg:text-sm font-medium ${theme.colors.text.accent} hidden sm:inline`}
                   >
-                    {isCustomBinder ? "Cards:" : "Collection:"}
+                    {isCustomBinder ? "Collection:" : "Collection:"}
                   </span>
                   <span
-                    className={`text-xs lg:text-sm font-bold ${theme.colors.text.primary}`}
+                    className={`text-sm lg:text-base font-bold ${theme.colors.text.primary} min-w-[80px] text-right`}
                   >
                     {isCustomBinder
-                      ? collectedCount
+                      ? `${collectedCount} / ${actualCardsInBinder}`
                       : `${collectedCount} / ${totalCards}`}
                   </span>
                   <span
-                    className={`text-xs ${theme.colors.text.secondary} hidden md:inline`}
+                    className={`text-xs lg:text-sm ${theme.colors.text.secondary} hidden md:inline font-medium`}
                   >
                     ({progressPercentage.toFixed(1)}%)
                   </span>
                 </div>
-                <div className="w-16 lg:w-20 h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div className="w-24 lg:w-32 h-2.5 bg-gray-700 rounded-full overflow-hidden shadow-inner">
                   <div
-                    className={`h-full bg-gradient-to-r ${theme.colors.progress.from} ${theme.colors.progress.to} transition-all duration-500`}
+                    className={`h-full bg-gradient-to-r ${theme.colors.progress.from} ${theme.colors.progress.to} transition-all duration-500 ease-out`}
                     style={{ width: `${progressPercentage}%` }}
                   />
                 </div>
@@ -1089,6 +1443,8 @@ const App = () => {
                 onRemoveCard={handleRemoveCard}
                 onOpenCardSearch={handleOpenCardSearch}
                 onMoveFromClipboard={handleMoveFromClipboard}
+                parsedMissingCards={parsedMissingCards}
+                onToggleCardStatus={handleToggleCardStatus}
               />
             ) : (
               <BinderPage
@@ -1174,6 +1530,23 @@ const App = () => {
           currentPage={currentPage + 1}
           isCollapsed={isClipboardCollapsed}
           onToggleCollapse={handleToggleClipboard}
+        />
+      )}
+
+      {/* Binder History - Only show for custom binders */}
+      {currentBinder?.binderType === "custom" && (
+        <BinderHistory
+          historyEntries={historyEntries}
+          onRevertToEntry={handleRevertToEntry}
+          onClearHistory={handleClearHistory}
+          onNavigateHistory={handleNavigateHistory}
+          canNavigateBack={canNavigateHistory(currentBinder.id, "back")}
+          canNavigateForward={canNavigateHistory(currentBinder.id, "forward")}
+          currentPosition={getHistoryPosition(currentBinder.id)}
+          isCollapsed={isHistoryCollapsed}
+          onToggleCollapse={handleToggleHistory}
+          onNavigateToPage={handleNavigateToPage}
+          cardsPerPage={layout.cards}
         />
       )}
 

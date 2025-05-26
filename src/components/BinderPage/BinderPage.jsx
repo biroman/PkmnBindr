@@ -326,8 +326,8 @@ const BinderPage = ({
                           )}
 
                           {/* Action buttons overlay */}
-                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            <div className="absolute top-3 left-3 flex flex-col gap-2">
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                            <div className="absolute top-3 left-3 flex flex-col gap-2 pointer-events-auto">
                               {/* Inspect button */}
                               <button
                                 onClick={(e) => handleInspectCard(e, card)}
@@ -380,7 +380,7 @@ const BinderPage = ({
                             </div>
 
                             {/* Card info badge */}
-                            <div className="absolute bottom-3 right-3 flex flex-col gap-1 items-end">
+                            <div className="absolute bottom-3 right-3 flex flex-col gap-1 items-end pointer-events-auto">
                               <span
                                 className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.primary} shadow-lg`}
                               >

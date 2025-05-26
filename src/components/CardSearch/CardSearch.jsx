@@ -8,6 +8,7 @@ import {
   Star,
   Loader2,
   Clipboard,
+  Check,
 } from "lucide-react";
 import { useTheme } from "../../theme/ThemeContent";
 
@@ -47,6 +48,8 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
   const [scrollPosition, setScrollPosition] = useState(
     savedState.scrollPosition
   );
+  const [recentlyAdded, setRecentlyAdded] = useState(new Set());
+  const [pulsing, setPulsing] = useState(new Set()); // For pulse effect on already-added buttons
   const searchInputRef = useRef(null);
   const resultsRef = useRef(null);
 
@@ -215,7 +218,37 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
       isReverseHolo,
       id: isReverseHolo ? `${card.id}_reverse` : card.id,
     };
-    onAddCard(cardToAdd);
+
+    const cardKey = `${card.id}_${isReverseHolo ? "rh" : "normal"}`;
+
+    // If button is already in "Added!" state, show pulse effect
+    if (recentlyAdded.has(cardKey)) {
+      setPulsing((prev) => new Set([...prev, cardKey]));
+
+      // Remove pulse effect after 300ms
+      setTimeout(() => {
+        setPulsing((prev) => {
+          const newSet = new Set(prev);
+          newSet.delete(cardKey);
+          return newSet;
+        });
+      }, 200);
+    }
+
+    const success = onAddCard(cardToAdd);
+    if (success !== false) {
+      // Add visual feedback
+      setRecentlyAdded((prev) => new Set([...prev, cardKey]));
+
+      // Remove feedback after 2 seconds
+      setTimeout(() => {
+        setRecentlyAdded((prev) => {
+          const newSet = new Set(prev);
+          newSet.delete(cardKey);
+          return newSet;
+        });
+      }, 2000);
+    }
   };
 
   const handleAddToClipboard = (card, isReverseHolo = false) => {
@@ -224,7 +257,37 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
       isReverseHolo,
       id: isReverseHolo ? `${card.id}_reverse` : card.id,
     };
-    onAddToClipboard(cardToAdd);
+
+    const cardKey = `${card.id}_${isReverseHolo ? "rh" : "normal"}_clipboard`;
+
+    // If button is already in "Added!" state, show pulse effect
+    if (recentlyAdded.has(cardKey)) {
+      setPulsing((prev) => new Set([...prev, cardKey]));
+
+      // Remove pulse effect after 300ms
+      setTimeout(() => {
+        setPulsing((prev) => {
+          const newSet = new Set(prev);
+          newSet.delete(cardKey);
+          return newSet;
+        });
+      }, 200);
+    }
+
+    const success = onAddToClipboard(cardToAdd);
+    if (success !== false) {
+      // Add visual feedback for clipboard
+      setRecentlyAdded((prev) => new Set([...prev, cardKey]));
+
+      // Remove feedback after 2 seconds
+      setTimeout(() => {
+        setRecentlyAdded((prev) => {
+          const newSet = new Set(prev);
+          newSet.delete(cardKey);
+          return newSet;
+        });
+      }, 2000);
+    }
   };
 
   if (!isOpen) return null;
@@ -334,14 +397,36 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
                       <div className="flex gap-1">
                         <button
                           onClick={() => handleAddCard(card, false)}
-                          className={`flex-1 px-2 py-1.5 rounded-md ${theme.colors.button.primary} text-xs font-medium flex items-center justify-center gap-1 hover:scale-105 transition-transform`}
+                          className={`flex-1 px-2 py-1.5 rounded-md text-xs font-medium flex items-center justify-center gap-1 transition-all duration-200 ${
+                            recentlyAdded.has(`${card.id}_normal`)
+                              ? `bg-green-500 text-white ${
+                                  pulsing.has(`${card.id}_normal`)
+                                    ? "bg-green-300 shadow-md"
+                                    : ""
+                                }`
+                              : `${theme.colors.button.primary} hover:scale-105`
+                          }`}
                         >
-                          <Plus className="w-3 h-3" />
-                          Add
+                          {recentlyAdded.has(`${card.id}_normal`) ? (
+                            <Check className="w-3 h-3" />
+                          ) : (
+                            <Plus className="w-3 h-3" />
+                          )}
+                          {recentlyAdded.has(`${card.id}_normal`)
+                            ? "Added!"
+                            : "Add"}
                         </button>
                         <button
                           onClick={() => handleAddToClipboard(card, false)}
-                          className={`px-2 py-1.5 rounded-md ${theme.colors.button.secondary} text-xs font-medium flex items-center justify-center hover:scale-105 transition-transform`}
+                          className={`px-2 py-1.5 rounded-md text-xs font-medium flex items-center justify-center transition-all duration-200 ${
+                            recentlyAdded.has(`${card.id}_normal_clipboard`)
+                              ? `bg-green-500 text-white ${
+                                  pulsing.has(`${card.id}_normal_clipboard`)
+                                    ? "bg-green-300 shadow-md"
+                                    : ""
+                                }`
+                              : `${theme.colors.button.secondary} hover:scale-105`
+                          }`}
                           title="Add to clipboard"
                         >
                           <Clipboard className="w-3 h-3" />
@@ -354,14 +439,36 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
                         <div className="flex gap-1">
                           <button
                             onClick={() => handleAddCard(card, true)}
-                            className={`flex-1 px-2 py-1.5 rounded-md ${theme.colors.button.secondary} text-xs font-medium flex items-center justify-center gap-1 hover:scale-105 transition-transform`}
+                            className={`flex-1 px-2 py-1.5 rounded-md text-xs font-medium flex items-center justify-center gap-1 transition-all duration-200 ${
+                              recentlyAdded.has(`${card.id}_rh`)
+                                ? `bg-green-500 text-white ${
+                                    pulsing.has(`${card.id}_rh`)
+                                      ? "bg-green-300 shadow-md"
+                                      : ""
+                                  }`
+                                : `${theme.colors.button.secondary} hover:scale-105`
+                            }`}
                           >
-                            <Star className="w-3 h-3" />
-                            Add RH
+                            {recentlyAdded.has(`${card.id}_rh`) ? (
+                              <Check className="w-3 h-3" />
+                            ) : (
+                              <Star className="w-3 h-3" />
+                            )}
+                            {recentlyAdded.has(`${card.id}_rh`)
+                              ? "Added!"
+                              : "Add RH"}
                           </button>
                           <button
                             onClick={() => handleAddToClipboard(card, true)}
-                            className={`px-2 py-1.5 rounded-md ${theme.colors.button.secondary} text-xs font-medium flex items-center justify-center hover:scale-105 transition-transform`}
+                            className={`px-2 py-1.5 rounded-md text-xs font-medium flex items-center justify-center transition-all duration-200 ${
+                              recentlyAdded.has(`${card.id}_rh_clipboard`)
+                                ? `bg-green-500 text-white ${
+                                    pulsing.has(`${card.id}_rh_clipboard`)
+                                      ? "bg-green-300 shadow-md"
+                                      : ""
+                                  }`
+                                : `${theme.colors.button.secondary} hover:scale-105`
+                            }`}
                             title="Add reverse holo to clipboard"
                           >
                             <Clipboard className="w-3 h-3" />

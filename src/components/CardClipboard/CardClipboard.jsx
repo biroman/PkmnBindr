@@ -96,7 +96,7 @@ const CardClipboard = ({
   if (isCollapsed) {
     return (
       <div
-        className={`fixed right-4 top-1/2 -translate-y-1/2 z-40`}
+        className={`fixed right-4 top-20 z-40`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -105,18 +105,18 @@ const CardClipboard = ({
           onClick={onToggleCollapse}
           className={`${
             theme.colors.background.card
-          } border rounded-l-xl p-3 shadow-lg hover:scale-105 transition-all duration-200 ${
+          } border rounded-l-xl p-2.5 shadow-lg hover:scale-105 transition-all duration-200 ${
             isDragOver
               ? "border-blue-500 ring-2 ring-blue-500/30 scale-110"
               : theme.colors.border.light
           }`}
           title="Open Card Clipboard"
         >
-          <div className="flex flex-col items-center gap-2">
-            <Clipboard className={`w-5 h-5 ${theme.colors.text.accent}`} />
+          <div className="flex flex-col items-center gap-1.5">
+            <Clipboard className={`w-4 h-4 ${theme.colors.text.accent}`} />
             {clipboardCards.length > 0 && (
               <div
-                className={`w-6 h-6 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-bold`}
+                className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium`}
               >
                 {clipboardCards.length}
               </div>
@@ -129,9 +129,9 @@ const CardClipboard = ({
 
   return (
     <div
-      className={`fixed right-4 top-1/2 -translate-y-1/2 w-72 ${
+      className={`fixed right-4 top-20 w-72 ${
         theme.colors.background.card
-      } rounded-xl shadow-2xl border z-40 max-h-[80vh] flex flex-col transition-all duration-200 ${
+      } rounded-xl shadow-2xl border z-40 max-h-[calc(100vh-7rem)] flex flex-col transition-all duration-200 ${
         isDragOver
           ? "border-blue-500 ring-2 ring-blue-500/30 scale-105"
           : theme.colors.border.light
@@ -231,32 +231,38 @@ const CardClipboard = ({
                     </div>
                   )}
 
-                  {/* Card Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                    <p className="text-white text-xs font-medium truncate">
-                      {card.name}
-                    </p>
-                    <p className="text-white/70 text-xs truncate">
-                      #{card.number} • {card.set.name}
-                    </p>
-                  </div>
+                  {/* Bottom overlay - Action buttons only */}
+                  <div className="absolute bottom-0 left-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    {/* Action buttons */}
+                    <div className="flex gap-1 justify-center">
+                      <button
+                        onClick={() => onAddToCurrentPage(card)}
+                        className={`
+                          flex-1 px-2 py-2 rounded-lg ${theme.colors.button.success} backdrop-blur-sm bg-opacity-90
+                          flex items-center justify-center gap-1 shadow-lg
+                          hover:bg-opacity-80 transition-all duration-200
+                          text-xs font-medium
+                        `}
+                        title="Add to current page"
+                      >
+                        <Plus className="w-3 h-3" />
+                        Add
+                      </button>
 
-                  {/* Action Buttons */}
-                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
-                    <button
-                      onClick={() => onAddToCurrentPage(card)}
-                      className="w-6 h-6 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center transition-colors shadow-lg"
-                      title="Add to current page"
-                    >
-                      <Plus className="w-3 h-3 text-white" />
-                    </button>
-                    <button
-                      onClick={() => onRemoveFromClipboard(index)}
-                      className="w-6 h-6 rounded-full bg-red-500 hover:bg-red-600 flex items-center justify-center transition-colors shadow-lg"
-                      title="Remove from clipboard"
-                    >
-                      <X className="w-3 h-3 text-white" />
-                    </button>
+                      <button
+                        onClick={() => onRemoveFromClipboard(index)}
+                        className={`
+                          flex-1 px-2 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white backdrop-blur-sm bg-opacity-90
+                          flex items-center justify-center gap-1 shadow-lg
+                          hover:bg-opacity-80 transition-all duration-200
+                          text-xs font-medium
+                        `}
+                        title="Remove from clipboard"
+                      >
+                        <X className="w-3 h-3" />
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

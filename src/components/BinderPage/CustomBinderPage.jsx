@@ -1,4 +1,4 @@
-import { Star, Eye, Plus, Trash2, GripVertical, Search } from "lucide-react";
+import { Star, Eye, Plus, Trash2, Search, Lightbulb } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import CardModal from "./CardModal";
@@ -12,6 +12,8 @@ const CustomBinderPage = ({
   onRemoveCard,
   onOpenCardSearch,
   onMoveFromClipboard,
+  parsedMissingCards = new Set(),
+  onToggleCardStatus,
 }) => {
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState(null);
@@ -290,6 +292,13 @@ const CustomBinderPage = ({
     onRemoveCard(globalIndex);
   };
 
+  const handleToggleCardStatus = (e, card) => {
+    e.stopPropagation();
+    if (onToggleCardStatus) {
+      onToggleCardStatus(e, card);
+    }
+  };
+
   const renderPage = (pageCards, pageOffset = 0) => {
     return (
       <div
@@ -353,30 +362,44 @@ const CustomBinderPage = ({
                                     ? "shadow-2xl"
                                     : "group-hover:shadow-xl group-hover:shadow-blue-500/20"
                                 }
+                                ${
+                                  parsedMissingCards.has(
+                                    card.isReverseHolo
+                                      ? `${card.positionId || card.id}_reverse`
+                                      : card.positionId || card.id
+                                  )
+                                    ? "opacity-50 grayscale"
+                                    : ""
+                                }
                               `}
                             />
 
-                            {/* Top overlay - Drag handle and reverse holo */}
-                            <div className="absolute top-0 left-0 right-0 p-2 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                              {/* Drag handle */}
-                              <div
-                                className={`w-7 h-7 rounded-lg ${theme.colors.button.secondary} backdrop-blur-sm bg-opacity-90 flex items-center justify-center shadow-lg cursor-move`}
-                              >
-                                <GripVertical className="w-4 h-4" />
+                            {/* Missing card overlay */}
+                            {parsedMissingCards.has(
+                              card.isReverseHolo
+                                ? `${card.positionId || card.id}_reverse`
+                                : card.positionId || card.id
+                            ) && (
+                              <div className="absolute inset-0 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <div className="bg-orange-500 text-white px-2 py-1 rounded-md text-xs font-bold shadow-lg">
+                                  MISSING
+                                </div>
                               </div>
+                            )}
 
-                              {/* Reverse holo indicator */}
-                              {card.isReverseHolo && (
+                            {/* Top overlay - Reverse holo indicator */}
+                            {card.isReverseHolo && (
+                              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 <div
                                   className={`w-7 h-7 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 backdrop-blur-sm bg-opacity-90 flex items-center justify-center shadow-lg`}
                                 >
                                   <Star className="w-4 h-4 text-white" />
                                 </div>
-                              )}
-                            </div>
+                              </div>
+                            )}
 
                             {/* Bottom overlay - Card info and actions */}
-                            <div className="absolute bottom-0 left-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <div className="absolute bottom-0 left-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                               {/* Card info bar */}
                               <div
                                 className={`${theme.colors.background.main} backdrop-blur-sm bg-opacity-95 rounded-lg p-2 mb-2 shadow-lg border ${theme.colors.border.light}`}
@@ -407,12 +430,12 @@ const CustomBinderPage = ({
                               </div>
 
                               {/* Action buttons */}
-                              <div className="flex gap-2 justify-center">
+                              <div className="flex gap-1 justify-center pointer-events-auto">
                                 <button
                                   onClick={(e) => handleInspectCard(e, card)}
                                   className={`
-                                    flex-1 px-3 py-2 rounded-lg ${theme.colors.button.secondary} backdrop-blur-sm bg-opacity-90
-                                    flex items-center justify-center gap-2 shadow-lg
+                                    flex-1 px-2 py-2 rounded-lg ${theme.colors.button.secondary} backdrop-blur-sm bg-opacity-90
+                                    flex items-center justify-center gap-1 shadow-lg
                                     hover:scale-105 transition-all duration-200
                                     text-xs font-medium
                                   `}
@@ -422,13 +445,70 @@ const CustomBinderPage = ({
                                   View
                                 </button>
 
+                                {onToggleCardStatus && (
+                                  <button
+                                    onClick={(e) =>
+                                      handleToggleCardStatus(e, card)
+                                    }
+                                    className={`
+                                      flex-1 px-2 py-2 rounded-lg backdrop-blur-sm bg-opacity-90
+                                      flex items-center justify-center gap-1 shadow-lg
+                                      hover:scale-105 transition-all duration-200
+                                      text-xs font-medium
+                                      ${
+                                        parsedMissingCards.has(
+                                          card.isReverseHolo
+                                            ? `${
+                                                card.positionId || card.id
+                                              }_reverse`
+                                            : card.positionId || card.id
+                                        )
+                                          ? `${theme.colors.button.success}`
+                                          : "bg-orange-500 hover:bg-orange-600 text-white"
+                                      }
+                                    `}
+                                    title={
+                                      parsedMissingCards.has(
+                                        card.isReverseHolo
+                                          ? `${
+                                              card.positionId || card.id
+                                            }_reverse`
+                                          : card.positionId || card.id
+                                      )
+                                        ? "Mark as collected"
+                                        : "Mark as missing"
+                                    }
+                                  >
+                                    {parsedMissingCards.has(
+                                      card.isReverseHolo
+                                        ? `${
+                                            card.positionId || card.id
+                                          }_reverse`
+                                        : card.positionId || card.id
+                                    ) ? (
+                                      <Plus className="w-3 h-3" />
+                                    ) : (
+                                      <Star className="w-3 h-3" />
+                                    )}
+                                    {parsedMissingCards.has(
+                                      card.isReverseHolo
+                                        ? `${
+                                            card.positionId || card.id
+                                          }_reverse`
+                                        : card.positionId || card.id
+                                    )
+                                      ? "Need"
+                                      : "Missing"}
+                                  </button>
+                                )}
+
                                 <button
                                   onClick={(e) =>
                                     handleRemoveCard(e, card, globalIndex)
                                   }
                                   className={`
-                                    flex-1 px-3 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white backdrop-blur-sm bg-opacity-90
-                                    flex items-center justify-center gap-2 shadow-lg
+                                    flex-1 px-2 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white backdrop-blur-sm bg-opacity-90
+                                    flex items-center justify-center gap-1 shadow-lg
                                     hover:scale-105 transition-all duration-200
                                     text-xs font-medium
                                   `}
@@ -459,7 +539,7 @@ const CustomBinderPage = ({
                               : "hover:border-blue-400/50 hover:bg-blue-50/10"
                           }
                         `}
-                        onClick={onOpenCardSearch}
+                        onClick={() => onOpenCardSearch(globalIndex)}
                         onDragOver={(e) => handleDragOver(e, globalIndex)}
                         onDragLeave={handleDragLeave}
                         onDrop={(e) => handleDrop(e, globalIndex)}
@@ -505,27 +585,89 @@ const CustomBinderPage = ({
                   <div
                     className={`w-16 h-16 mx-auto rounded-full ${theme.colors.background.card} flex items-center justify-center`}
                   >
-                    <Search className={`w-8 h-8 ${theme.colors.text.accent}`} />
+                    {cards.filter((card) => card !== null).length === 0 ? (
+                      <Search
+                        className={`w-8 h-8 ${theme.colors.text.accent}`}
+                      />
+                    ) : (
+                      <Lightbulb
+                        className={`w-8 h-8 ${theme.colors.text.accent}`}
+                      />
+                    )}
                   </div>
                   <div>
                     <h3
                       className={`text-lg font-bold ${theme.colors.text.primary} mb-2`}
                     >
-                      Custom Collection
+                      {cards.filter((card) => card !== null).length === 0
+                        ? "Custom Collection"
+                        : "Tips & Tricks"}
                     </h3>
-                    <p
-                      className={`${theme.colors.text.secondary} text-sm max-w-48`}
-                    >
-                      Add individual cards from any set to create your
-                      personalized collection
-                    </p>
+                    {cards.filter((card) => card !== null).length === 0 ? (
+                      <p
+                        className={`${theme.colors.text.secondary} text-sm max-w-80`}
+                      >
+                        Add individual cards from any set to create your
+                        personalized collection
+                      </p>
+                    ) : (
+                      <div
+                        className={`${theme.colors.text.secondary} text-sm max-w-80 mx-auto space-y-3 text-left`}
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className="text-blue-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span className="leading-relaxed">
+                            Click and drag cards to rearrange their position
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-green-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span className="leading-relaxed">
+                            Mark cards as &ldquo;Missing&rdquo; to track what
+                            you need
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-purple-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span className="leading-relaxed">
+                            Drag cards to the clipboard on the right to store
+                            them between pages
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-orange-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span className="leading-relaxed">
+                            Drag cards from clipboard to specific positions
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-yellow-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span className="leading-relaxed">
+                            If you regret an action, you can undo it with the
+                            undo button in the bottom right corner
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <button
-                    onClick={onOpenCardSearch}
-                    className={`px-4 py-2 rounded-lg ${theme.colors.button.primary} font-medium`}
-                  >
-                    Add Cards
-                  </button>
+                  {cards.filter((card) => card !== null).length === 0 && (
+                    <button
+                      onClick={() => onOpenCardSearch()}
+                      className={`px-4 py-2 rounded-lg ${theme.colors.button.primary} font-medium`}
+                    >
+                      Add Cards
+                    </button>
+                  )}
                 </div>
               </div>
             ) : (
@@ -560,6 +702,8 @@ CustomBinderPage.propTypes = {
   onRemoveCard: PropTypes.func.isRequired,
   onOpenCardSearch: PropTypes.func.isRequired,
   onMoveFromClipboard: PropTypes.func,
+  parsedMissingCards: PropTypes.instanceOf(Set),
+  onToggleCardStatus: PropTypes.func,
 };
 
 export default CustomBinderPage;

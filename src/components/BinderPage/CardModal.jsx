@@ -5,11 +5,12 @@ import PropTypes from "prop-types";
 const CardModal = ({ card, onClose }) => {
   const { theme } = useTheme();
 
-  // Construct the Cloudflare image URL for high-res version
+  // Use the high-resolution Pokemon TCG image with _hires suffix
   const getHighResImageUrl = (card) => {
-    const setCode = card.set.id.toLowerCase();
-    const paddedNumber = card.number.padStart(3, "0");
-    return `https://img.pkmnbindr.com/${setCode}/${paddedNumber}.jpg`;
+    // Construct the high-res URL: https://images.pokemontcg.io/{setId}/{number}_hires.png
+    const setId = card.set.id.toLowerCase();
+    const cardNumber = card.number; // Use card number as-is, no padding
+    return `https://images.pokemontcg.io/${setId}/${cardNumber}_hires.png`;
   };
 
   const handleBackdropClick = (e) => {
@@ -63,8 +64,12 @@ const CardModal = ({ card, onClose }) => {
                 alt={card.name}
                 className="w-full h-auto rounded-xl shadow-2xl"
                 onError={(e) => {
-                  // Fallback to Pokemon TCG API image if Cloudflare image fails
-                  e.target.src = card.images.large;
+                  // Fallback to Pokemon TCG API large image, then small image
+                  if (e.target.src.includes("_hires.png")) {
+                    e.target.src = card.images.large;
+                  } else if (e.target.src === card.images.large) {
+                    e.target.src = card.images.small;
+                  }
                 }}
               />
               {/* Reverse Holo Indicator */}
@@ -196,6 +201,7 @@ CardModal.propTypes = {
     isReverseHolo: PropTypes.bool,
     images: PropTypes.shape({
       large: PropTypes.string.isRequired,
+      small: PropTypes.string.isRequired,
     }).isRequired,
     set: PropTypes.shape({
       id: PropTypes.string.isRequired,

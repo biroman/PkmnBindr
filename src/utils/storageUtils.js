@@ -5,6 +5,7 @@ const STORAGE_KEYS = {
   LAYOUT_PREFS: "pkmnbinder_layout_prefs",
   SET_CACHE: "pkmnbinder_set_cache", // New key for set cache
   CARD_CLIPBOARD: "pkmnbinder_card_clipboard", // New key for card clipboard
+  BINDER_HISTORY: "pkmnbinder_binder_history", // New key for binder history
 };
 
 const CACHE_EXPIRY = 24 * 60 * 60 * 1000;
@@ -250,6 +251,20 @@ export const addCustomCard = (binderId, card, position = null) => {
       binder.customCards = [];
     }
 
+    // Determine final position for history
+    let finalPosition = position;
+    if (position === null || position < 0) {
+      const emptyIndex = binder.customCards.findIndex((card) => card === null);
+      finalPosition = emptyIndex >= 0 ? emptyIndex : binder.customCards.length;
+    }
+
+    // Add history entry before making changes
+    addHistoryEntry(binderId, "add", {
+      cardName: card.name,
+      cardImage: card.images?.small,
+      position: finalPosition,
+    });
+
     // Add card with unique position ID
     const cardWithPosition = {
       ...card,
@@ -287,6 +302,17 @@ export const removeCustomCard = (binderId, cardIndex) => {
   if (binderIndex >= 0) {
     const binder = binders[binderIndex];
     if (binder.customCards && cardIndex < binder.customCards.length) {
+      const cardToRemove = binder.customCards[cardIndex];
+
+      if (cardToRemove) {
+        // Add history entry before making changes
+        addHistoryEntry(binderId, "remove", {
+          cardName: cardToRemove.name,
+          cardImage: cardToRemove.images?.small,
+          position: cardIndex,
+        });
+      }
+
       // Set the position to null instead of removing to maintain positions
       binder.customCards[cardIndex] = null;
       binder.updatedAt = new Date().toISOString();
@@ -337,12 +363,25 @@ export const reorderCustomCards = (
       if (fromIndex < sparseArray.length && sparseArray[fromIndex]) {
         const fromCard = sparseArray[fromIndex];
 
+        // Add history entry before making changes
         if (isSwap && sparseArray[toIndex]) {
+          addHistoryEntry(binderId, "swap", {
+            cardName: fromCard.name,
+            cardImage: fromCard.images?.small,
+            fromPosition: fromIndex,
+            toPosition: toIndex,
+          });
           // Swap the two cards
           const toCard = sparseArray[toIndex];
           sparseArray[fromIndex] = toCard;
           sparseArray[toIndex] = fromCard;
         } else {
+          addHistoryEntry(binderId, "move", {
+            cardName: fromCard.name,
+            cardImage: fromCard.images?.small,
+            fromPosition: fromIndex,
+            toPosition: toIndex,
+          });
           // Move to empty position
           sparseArray[fromIndex] = null;
           sparseArray[toIndex] = fromCard;
@@ -453,4 +492,347 @@ export const moveCardFromClipboard = (
     }
   }
   return null;
+};
+
+// Binder History functions
+export const getBinderHistory = (binderId) => {
+  const historyKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}`;
+  const history = localStorage.getItem(historyKey);
+  return history ? JSON.parse(history) : [];
+};
+
+// Helper function to create lightweight card snapshots for history
+const createCardSnapshot = (card) => {
+  // Handle null cards (empty slots) - preserve them as null
+  if (card === null || card === undefined) {
+    return null;
+  }
+
+  return {
+    id: card.id,
+    name: card.name,
+    set: card.set,
+    number: card.number,
+    rarity: card.rarity,
+    // Store only small image URL if available
+    images: card.images ? { small: card.images.small } : null,
+    // Keep any custom properties but remove large data
+    ...(card.customCard && { customCard: true }),
+    ...(card.position && { position: card.position }),
+    // Preserve important metadata for restoration
+    ...(card.positionId && { positionId: card.positionId }),
+    ...(card.addedAt && { addedAt: card.addedAt }),
+  };
+};
+
+// Helper function to create lightweight binder state snapshot
+const createBinderSnapshot = (cards) => {
+  // Preserve the exact array structure including null values
+  return cards.map(createCardSnapshot);
+};
+
+export const addHistoryEntry = (binderId, action, details) => {
+  const historyKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}`;
+  const history = getBinderHistory(binderId);
+
+  // If we're currently viewing a historical state, truncate history from that point
+  const currentPosition = getHistoryPosition(binderId);
+  if (currentPosition !== -1) {
+    history.splice(currentPosition + 1);
+    setHistoryPosition(binderId, -1); // Reset to current state
+  }
+
+  const entry = {
+    id: `history_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString(),
+    action, // "add", "remove", "move", "swap"
+    ...details, // Additional details like cardName, position, etc.
+    binderState: createBinderSnapshot(getCustomCards(binderId)), // Lightweight snapshot
+  };
+
+  history.push(entry);
+
+  // Keep only last 20 entries to prevent storage bloat (reduced from 50)
+  if (history.length > 20) {
+    history.splice(0, history.length - 20);
+  }
+
+  try {
+    localStorage.setItem(historyKey, JSON.stringify(history));
+  } catch (error) {
+    if (error.name === "QuotaExceededError") {
+      // If still hitting quota, reduce history further and try again
+      console.warn("localStorage quota exceeded, reducing history size");
+      history.splice(0, Math.floor(history.length / 2)); // Keep only half
+      try {
+        localStorage.setItem(historyKey, JSON.stringify(history));
+      } catch (secondError) {
+        console.error(
+          "Unable to save history even after reduction:",
+          secondError
+        );
+        // Clear history as last resort
+        localStorage.removeItem(historyKey);
+        return null;
+      }
+    } else {
+      throw error;
+    }
+  }
+
+  return entry;
+};
+
+// Store the final state after an action is completed
+export const updateHistoryWithFinalState = (binderId) => {
+  const historyKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}`;
+  const history = getBinderHistory(binderId);
+
+  if (history.length > 0) {
+    // Update the last entry with the final state after the action
+    const lastEntry = history[history.length - 1];
+    lastEntry.finalState = createBinderSnapshot(getCustomCards(binderId));
+
+    try {
+      localStorage.setItem(historyKey, JSON.stringify(history));
+    } catch (error) {
+      if (error.name === "QuotaExceededError") {
+        console.warn(
+          "localStorage quota exceeded in updateHistoryWithFinalState, clearing old history"
+        );
+        // Remove older entries and try again
+        history.splice(0, Math.floor(history.length / 2));
+        try {
+          localStorage.setItem(historyKey, JSON.stringify(history));
+        } catch (secondError) {
+          console.error(
+            "Unable to save final state even after reduction:",
+            secondError
+          );
+          // Clear history as last resort
+          localStorage.removeItem(historyKey);
+        }
+      } else {
+        throw error;
+      }
+    }
+  }
+
+  // Also update the current state if we're not in history navigation mode
+  const currentPosition = getHistoryPosition(binderId);
+  if (currentPosition === -1) {
+    saveCurrentState(binderId);
+  }
+};
+
+export const revertToHistoryEntry = (binderId, entryId) => {
+  const history = getBinderHistory(binderId);
+  const entryIndex = history.findIndex((entry) => entry.id === entryId);
+
+  if (entryIndex >= 0) {
+    const entry = history[entryIndex];
+    const binders = getBinders();
+    const binderIndex = binders.findIndex((b) => b.id === binderId);
+
+    if (binderIndex >= 0) {
+      // Restore the binder state from the history entry
+      binders[binderIndex].customCards = [...entry.binderState];
+      binders[binderIndex].updatedAt = new Date().toISOString();
+
+      try {
+        localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
+
+        // Remove all history entries after this one (since we're reverting)
+        const newHistory = history.slice(0, entryIndex);
+        const historyKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}`;
+        localStorage.setItem(historyKey, JSON.stringify(newHistory));
+
+        return true;
+      } catch (error) {
+        if (error.name === "QuotaExceededError") {
+          console.warn(
+            "localStorage quota exceeded in revertToHistoryEntry, unable to save state"
+          );
+          return false;
+        } else {
+          throw error;
+        }
+      }
+    }
+  }
+  return false;
+};
+
+export const clearBinderHistory = (binderId) => {
+  const historyKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}`;
+  localStorage.removeItem(historyKey);
+  // Also clear the current position
+  const positionKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_position`;
+  localStorage.removeItem(positionKey);
+  // Also clear the current state
+  const currentStateKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_current`;
+  localStorage.removeItem(currentStateKey);
+};
+
+// Utility function to free up localStorage space when quota is exceeded
+export const freeUpStorageSpace = () => {
+  try {
+    // Clear set cache first (usually largest)
+    clearSetCache();
+
+    // Clear all binder history for all binders
+    const binders = getBinders();
+    binders.forEach((binder) => {
+      clearBinderHistory(binder.id);
+    });
+
+    console.log("Cleared cache and history to free up storage space");
+    return true;
+  } catch (error) {
+    console.error("Error freeing up storage space:", error);
+    return false;
+  }
+};
+
+// Enhanced history navigation functions
+export const getHistoryPosition = (binderId) => {
+  const positionKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_position`;
+  const position = localStorage.getItem(positionKey);
+  return position ? parseInt(position, 10) : -1; // -1 means current state (no history navigation)
+};
+
+export const setHistoryPosition = (binderId, position) => {
+  const positionKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_position`;
+  if (position === -1) {
+    localStorage.removeItem(positionKey);
+  } else {
+    localStorage.setItem(positionKey, position.toString());
+  }
+};
+
+// Store current state separately for proper navigation
+export const saveCurrentState = (binderId) => {
+  const currentStateKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_current`;
+  const currentCards = createBinderSnapshot(getCustomCards(binderId));
+
+  try {
+    localStorage.setItem(currentStateKey, JSON.stringify(currentCards));
+  } catch (error) {
+    if (error.name === "QuotaExceededError") {
+      console.warn(
+        "localStorage quota exceeded in saveCurrentState, skipping save"
+      );
+      // Don't save current state if quota exceeded
+    } else {
+      throw error;
+    }
+  }
+};
+
+export const getCurrentState = (binderId) => {
+  const currentStateKey = `${STORAGE_KEYS.BINDER_HISTORY}_${binderId}_current`;
+  const currentState = localStorage.getItem(currentStateKey);
+  return currentState ? JSON.parse(currentState) : [];
+};
+
+export const navigateHistory = (binderId, direction) => {
+  const history = getBinderHistory(binderId);
+  if (history.length === 0) return false;
+
+  const currentPosition = getHistoryPosition(binderId);
+  let newPosition;
+
+  // Save current state before first navigation
+  if (currentPosition === -1 && direction === "back") {
+    saveCurrentState(binderId);
+  }
+
+  if (direction === "back") {
+    // Going back in history (undo)
+    if (currentPosition === -1) {
+      // Currently at latest state, go to last history entry
+      newPosition = history.length - 1;
+    } else if (currentPosition > 0) {
+      // Go to previous history entry
+      newPosition = currentPosition - 1;
+    } else {
+      // Already at oldest state
+      return false;
+    }
+  } else if (direction === "forward") {
+    // Going forward in history (redo)
+    if (currentPosition === -1) {
+      // Already at latest state
+      return false;
+    } else if (currentPosition < history.length - 1) {
+      // Go to next history entry
+      newPosition = currentPosition + 1;
+    } else {
+      // Go back to current state
+      newPosition = -1;
+    }
+  } else {
+    return false;
+  }
+
+  // Apply the state
+  const binders = getBinders();
+  const binderIndex = binders.findIndex((b) => b.id === binderId);
+
+  if (binderIndex >= 0) {
+    if (newPosition === -1) {
+      // Restore to current state (latest)
+      const currentState = getCurrentState(binderId);
+      if (currentState && currentState.length > 0) {
+        binders[binderIndex].customCards = [...currentState];
+      } else {
+        // Fallback: reconstruct from history
+        const lastEntry = history[history.length - 1];
+        if (lastEntry && lastEntry.finalState) {
+          binders[binderIndex].customCards = [...lastEntry.finalState];
+        } else {
+          binders[binderIndex].customCards = getCustomCards(binderId);
+        }
+      }
+    } else {
+      // Restore to specific history entry state (before the action)
+      const targetEntry = history[newPosition];
+      binders[binderIndex].customCards = [...targetEntry.binderState];
+    }
+
+    binders[binderIndex].updatedAt = new Date().toISOString();
+
+    try {
+      localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
+    } catch (error) {
+      if (error.name === "QuotaExceededError") {
+        console.warn(
+          "localStorage quota exceeded in navigateHistory, unable to save state"
+        );
+        return false;
+      } else {
+        throw error;
+      }
+    }
+
+    setHistoryPosition(binderId, newPosition);
+    return true;
+  }
+
+  return false;
+};
+
+export const canNavigateHistory = (binderId, direction) => {
+  const history = getBinderHistory(binderId);
+  if (history.length === 0) return false;
+
+  const currentPosition = getHistoryPosition(binderId);
+
+  if (direction === "back") {
+    return currentPosition === -1 || currentPosition > 0;
+  } else if (direction === "forward") {
+    return currentPosition !== -1; // Can always go forward if not at current state
+  }
+
+  return false;
 };
