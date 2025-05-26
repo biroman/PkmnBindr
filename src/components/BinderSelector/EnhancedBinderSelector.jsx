@@ -144,9 +144,7 @@ const EnhancedBinderSelector = ({
   };
 
   const getBinderTypeLabel = (binder) => {
-    return binder.binderType === "custom"
-      ? "Custom Collection"
-      : "Set Collection";
+    return binder.binderType === "custom" ? "Custom Collection" : "Master Set";
   };
 
   const getBinderStats = (binder) => {
@@ -422,7 +420,7 @@ const EnhancedBinderSelector = ({
                           <div
                             className={`text-sm font-medium ${theme.colors.text.primary}`}
                           >
-                            Set Collection
+                            Master Set
                           </div>
                           <div
                             className={`text-xs ${theme.colors.text.secondary}`}
