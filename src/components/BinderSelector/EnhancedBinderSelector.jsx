@@ -4,6 +4,7 @@ import {
   Book,
   Plus,
   ChevronDown,
+  ChevronUp,
   Pencil,
   Trash2,
   Save,
@@ -32,7 +33,11 @@ const EnhancedBinderSelector = ({
   const dropdownRef = useRef(null);
   const newBinderInputRef = useRef(null);
   const editBinderInputRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   const [binderToDelete, setBinderToDelete] = useState(null);
+  const [canScrollUp, setCanScrollUp] = useState(false);
+  const [canScrollDown, setCanScrollDown] = useState(false);
+  const [shouldScroll, setShouldScroll] = useState(false);
 
   useEffect(() => {
     if (showNewBinderInput && newBinderInputRef.current) {
@@ -56,6 +61,33 @@ const EnhancedBinderSelector = ({
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Reset form states when dropdown closes
+  useEffect(() => {
+    if (!isOpen) {
+      setShowNewBinderInput(false);
+      setNewBinderName("");
+      setNewBinderType("set");
+      setEditingBinder(null);
+    }
+  }, [isOpen]);
+
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } =
+        scrollContainerRef.current;
+      const needsScroll = scrollHeight > clientHeight;
+      setShouldScroll(needsScroll);
+      setCanScrollUp(scrollTop > 0);
+      setCanScrollDown(scrollTop < scrollHeight - clientHeight - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen && scrollContainerRef.current) {
+      checkScrollPosition();
+    }
+  }, [isOpen, binders.length]);
 
   const handleDeleteClick = (binder) => {
     setBinderToDelete(binder);
@@ -178,131 +210,153 @@ const EnhancedBinderSelector = ({
               bg-white 
               border ${theme.colors.border.accent}
               rounded-xl shadow-xl z-50
-              max-h-100 overflow-hidden
+              max-h-[80vh] overflow-hidden
             `}
           >
             {binders.length > 0 ? (
-              <div className="p-2 max-h-60 overflow-y-auto">
-                {binders.map((binder, index) => (
-                  <div
-                    key={binder.id}
-                    className={`
-                      ${index !== binders.length - 1 ? "mb-1" : ""}
-                    `}
-                  >
-                    {editingBinder?.id === binder.id ? (
-                      <div className="flex items-center gap-2 p-3 rounded-lg bg-opacity-50">
-                        <div
-                          className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
-                        >
-                          {getBinderIcon(binder)}
-                        </div>
-                        <input
-                          ref={editBinderInputRef}
-                          type="text"
-                          value={editingBinder.newName}
-                          onChange={(e) =>
-                            setEditingBinder({
-                              ...editingBinder,
-                              newName: e.target.value,
-                            })
-                          }
-                          onKeyPress={(e) => handleBinderKeyPress(e, "edit")}
-                          className={`
-                            flex-1 px-3 py-2 rounded-lg
-                            ${theme.colors.background.card}
-                            border ${theme.colors.border.accent}
-                            ${theme.colors.text.primary}
-                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
-                            transition-all duration-200
-                          `}
-                          placeholder="Binder name..."
-                        />
-                        <button
-                          onClick={handleSaveEdit}
-                          className={`w-8 h-8 rounded-lg ${theme.colors.button.success} flex items-center justify-center hover:scale-105 transition-transform`}
-                        >
-                          <Save className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => setEditingBinder(null)}
-                          className={`w-8 h-8 rounded-lg ${theme.colors.button.secondary} flex items-center justify-center hover:scale-105 transition-transform`}
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
-                      </div>
-                    ) : (
-                      <div
-                        className={`
-                          relative p-3 rounded-lg cursor-pointer group
-                          transition-all duration-200
-                          hover:${theme.colors.background.sidebar}
-                          ${
-                            currentBinder?.id === binder.id
-                              ? `${theme.colors.background.sidebar} shadow-sm`
-                              : ""
-                          }
-                        `}
-                        onClick={() => {
-                          onBinderSelect(binder);
-                          setIsOpen(false);
-                        }}
-                      >
-                        <div className="flex items-center gap-3">
+              <div className="relative">
+                {/* Scroll indicators */}
+                {shouldScroll && canScrollUp && (
+                  <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white via-white/80 to-transparent z-10 pointer-events-none flex items-start justify-center pt-1">
+                    <ChevronUp className="w-4 h-4 text-gray-400" />
+                  </div>
+                )}
+                {shouldScroll && canScrollDown && (
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none flex items-end justify-center pb-1">
+                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                  </div>
+                )}
+
+                <div
+                  className={`p-2 ${
+                    shouldScroll
+                      ? "max-h-[50vh] overflow-y-auto"
+                      : "overflow-visible"
+                  }`}
+                  ref={scrollContainerRef}
+                  onScroll={checkScrollPosition}
+                >
+                  {binders.map((binder, index) => (
+                    <div
+                      key={binder.id}
+                      className={`
+                        ${index !== binders.length - 1 ? "mb-1" : ""}
+                      `}
+                    >
+                      {editingBinder?.id === binder.id ? (
+                        <div className="flex items-center gap-2 p-3 rounded-lg bg-opacity-50">
                           <div
                             className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
                           >
                             {getBinderIcon(binder)}
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <div
-                              className={`font-medium ${theme.colors.text.primary} truncate`}
-                            >
-                              {binder.name}
-                            </div>
-                            <div
-                              className={`text-sm ${theme.colors.text.secondary} truncate`}
-                            >
-                              {getBinderTypeLabel(binder)} •{" "}
-                              {getBinderStats(binder)}
-                            </div>
-                          </div>
-                          {currentBinder?.id === binder.id && (
-                            <div
-                              className={`w-2 h-2 rounded-full ${theme.colors.button.success}`}
-                            />
-                          )}
-                        </div>
-
-                        {/* Action buttons */}
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <input
+                            ref={editBinderInputRef}
+                            type="text"
+                            value={editingBinder.newName}
+                            onChange={(e) =>
+                              setEditingBinder({
+                                ...editingBinder,
+                                newName: e.target.value,
+                              })
+                            }
+                            onKeyPress={(e) => handleBinderKeyPress(e, "edit")}
+                            className={`
+                              flex-1 px-3 py-2 rounded-lg
+                              ${theme.colors.background.card}
+                              border ${theme.colors.border.accent}
+                              ${theme.colors.text.primary}
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500/50
+                              transition-all duration-200
+                            `}
+                            placeholder="Binder name..."
+                          />
                           <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleEditBinder(binder);
-                            }}
-                            className={`w-6 h-6 rounded ${theme.colors.button.secondary} flex items-center justify-center hover:scale-110 transition-transform`}
-                            title="Rename binder"
+                            onClick={handleSaveEdit}
+                            className={`w-8 h-8 rounded-lg ${theme.colors.button.success} flex items-center justify-center hover:scale-105 transition-transform`}
                           >
-                            <Pencil className="w-3 h-3" />
+                            <Save className="w-4 h-4" />
                           </button>
-                          {binders.length > 1 && (
+                          <button
+                            onClick={() => setEditingBinder(null)}
+                            className={`w-8 h-8 rounded-lg ${theme.colors.button.secondary} flex items-center justify-center hover:scale-105 transition-transform`}
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          className={`
+                            relative p-3 rounded-lg cursor-pointer group
+                            transition-all duration-200
+                            hover:${theme.colors.background.sidebar}
+                            ${
+                              currentBinder?.id === binder.id
+                                ? `${theme.colors.background.sidebar} shadow-sm`
+                                : ""
+                            }
+                          `}
+                          onClick={() => {
+                            onBinderSelect(binder);
+                            setIsOpen(false);
+                          }}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div
+                              className={`w-8 h-8 rounded-lg ${theme.colors.background.card} flex items-center justify-center flex-shrink-0`}
+                            >
+                              {getBinderIcon(binder)}
+                            </div>
+                            <div className="flex-1 min-w-0 pr-16">
+                              <div
+                                className={`font-medium ${theme.colors.text.primary} truncate`}
+                              >
+                                {binder.name}
+                              </div>
+                              <div
+                                className={`text-sm ${theme.colors.text.secondary} truncate`}
+                              >
+                                {getBinderTypeLabel(binder)} •{" "}
+                                {getBinderStats(binder)}
+                              </div>
+                            </div>
+                            {currentBinder?.id === binder.id && (
+                              <div
+                                className={`w-2 h-2 rounded-full ${theme.colors.button.success} absolute right-12`}
+                              />
+                            )}
+                          </div>
+
+                          {/* Action buttons */}
+                          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                handleDeleteClick(binder);
+                                handleEditBinder(binder);
                               }}
-                              className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
-                              title="Delete binder"
+                              className={`w-6 h-6 rounded ${theme.colors.button.secondary} flex items-center justify-center hover:scale-110 transition-transform`}
+                              title="Rename binder"
                             >
-                              <Trash2 className="w-3 h-3" />
+                              <Pencil className="w-3 h-3" />
                             </button>
-                          )}
+                            {binders.length > 1 && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleDeleteClick(binder);
+                                }}
+                                className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
+                                title="Delete binder"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             ) : (
               <div className="p-6 text-center">
@@ -413,7 +467,8 @@ const EnhancedBinderSelector = ({
                   <div className="flex gap-2">
                     <button
                       onClick={handleCreateBinder}
-                      className={`flex-1 px-4 py-2 rounded-lg ${theme.colors.button.success} font-medium text-sm`}
+                      disabled={!newBinderName.trim()}
+                      className={`flex-1 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${theme.colors.button.success}`}
                     >
                       Create Binder
                     </button>
@@ -423,7 +478,7 @@ const EnhancedBinderSelector = ({
                         setNewBinderName("");
                         setNewBinderType("set");
                       }}
-                      className={`px-4 py-2 rounded-lg ${theme.colors.button.secondary} text-sm`}
+                      className={`px-4 py-2 rounded-lg ${theme.colors.button.secondary} text-sm transition-all duration-200`}
                     >
                       Cancel
                     </button>

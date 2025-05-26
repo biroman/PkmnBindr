@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {
   Loader2,
-  Save,
   FileText,
   ListX,
   Grid3X3,
@@ -59,8 +58,6 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [saveStatus, setSaveStatus] = useState(null); // 'success' | 'error' | null
   const [error, setError] = useState("");
   const [missingCards, setMissingCards] = useState("");
   const [parsedMissingCards, setParsedMissingCards] = useState(new Set());
@@ -78,7 +75,7 @@ const App = () => {
     showReverseHolos: false,
     sortDirection: "asc",
   });
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
   const [showCardSearch, setShowCardSearch] = useState(false);
   const [customCards, setCustomCards] = useState([]);
   const [clipboardCards, setClipboardCards] = useState([]);
@@ -167,7 +164,6 @@ const App = () => {
   const handleBinderSelect = async (binder) => {
     setCurrentBinder(binder);
     setCurrentBinderInStorage(binder.id);
-    setSaveStatus(null);
 
     // Reset current view
     setSelectedSet(null);
@@ -259,75 +255,6 @@ const App = () => {
     }
   };
 
-  const handleSaveBinder = async () => {
-    if (!currentBinder || !set) return;
-
-    setSaving(true);
-    setSaveStatus(null);
-
-    try {
-      // Create the updated binder data
-      const updatedBinder = {
-        ...currentBinder,
-        sets: [set],
-        missingCards: {
-          ...currentBinder.missingCards,
-          [set.id]: Array.from(parsedMissingCards),
-        },
-        updatedAt: new Date().toISOString(),
-      };
-
-      // Save the binder
-      saveBinder(updatedBinder.id, updatedBinder);
-
-      // Update local state
-      setCurrentBinder(updatedBinder);
-      setBinders((prev) =>
-        prev.map((b) => (b.id === updatedBinder.id ? updatedBinder : b))
-      );
-
-      setSaveStatus("success");
-      setTimeout(() => setSaveStatus(null), 3000);
-    } catch (err) {
-      console.error("Failed to save binder:", err);
-      setSaveStatus("error");
-      setTimeout(() => setSaveStatus(null), 5000);
-    } finally {
-      setSaving(false);
-    }
-  };
-
-  const handleBinderCreate = (name, binderType = "set") => {
-    const newBinder = createBinder(name);
-    setBinderType(newBinder.id, binderType);
-
-    // Get the updated binder with the correct type
-    const updatedBinders = getBinders();
-    const binderWithType = updatedBinders.find((b) => b.id === newBinder.id);
-
-    setBinders(updatedBinders);
-    handleBinderSelect(binderWithType);
-  };
-
-  const handleBinderDelete = (binderId) => {
-    deleteBinder(binderId);
-    setBinders(getBinders());
-    if (currentBinder?.id === binderId) {
-      setCurrentBinder(null);
-    }
-  };
-
-  const handleBinderRename = (binderId, newName) => {
-    const binder = binders.find((b) => b.id === binderId);
-    if (binder) {
-      const renamedBinder = renameBinder(binderId, newName);
-      setBinders(getBinders());
-      if (currentBinder?.id === binderId) {
-        setCurrentBinder(renamedBinder);
-      }
-    }
-  };
-
   const handleSearch = async () => {
     if (!selectedSet) return;
 
@@ -369,8 +296,38 @@ const App = () => {
   const handleMissingCardsChange = (e) => {
     const text = e.target.value;
     setMissingCards(text);
-    const parsed = parseCardList(text);
-    setParsedMissingCards(parsed);
+
+    // Only parse if we have a set loaded
+    if (set && rawCards.length > 0) {
+      const parsed = parseCardList(text, rawCards);
+      setParsedMissingCards(parsed);
+
+      // Automatically save missing cards to storage
+      saveMissingCards(set.id, parsed);
+
+      // Update the current binder's missing cards data
+      if (currentBinder) {
+        const updatedBinder = {
+          ...currentBinder,
+          missingCards: {
+            ...currentBinder.missingCards,
+            [set.id]: Array.from(parsed),
+          },
+          updatedAt: new Date().toISOString(),
+        };
+
+        // Save the updated binder
+        saveBinder(updatedBinder);
+        setCurrentBinder(updatedBinder);
+        setBinders((prev) =>
+          prev.map((b) => (b.id === updatedBinder.id ? updatedBinder : b))
+        );
+      }
+    } else {
+      // If no set is loaded, just parse without card reference
+      const parsed = parseCardList(text, []);
+      setParsedMissingCards(parsed);
+    }
   };
 
   const handleDataImported = () => {
@@ -544,6 +501,37 @@ const App = () => {
     : totalCards > 0
     ? (collectedCount / totalCards) * 100
     : 0;
+
+  const handleBinderCreate = (name, binderType = "set") => {
+    const newBinder = createBinder(name);
+    setBinderType(newBinder.id, binderType);
+
+    // Get the updated binder with the correct type
+    const updatedBinders = getBinders();
+    const binderWithType = updatedBinders.find((b) => b.id === newBinder.id);
+
+    setBinders(updatedBinders);
+    handleBinderSelect(binderWithType);
+  };
+
+  const handleBinderDelete = (binderId) => {
+    deleteBinder(binderId);
+    setBinders(getBinders());
+    if (currentBinder?.id === binderId) {
+      setCurrentBinder(null);
+    }
+  };
+
+  const handleBinderRename = (binderId, newName) => {
+    const binder = binders.find((b) => b.id === binderId);
+    if (binder) {
+      const renamedBinder = renameBinder(binderId, newName);
+      setBinders(getBinders());
+      if (currentBinder?.id === binderId) {
+        setCurrentBinder(renamedBinder);
+      }
+    }
+  };
 
   return (
     <div
@@ -897,20 +885,33 @@ const App = () => {
                         >
                           Track Missing Cards
                         </span>
-                        {missingCards && (
+                        {parsedMissingCards.size > 0 && (
                           <span
                             className={`px-2 py-1 text-xs font-medium rounded-md ${theme.colors.button.primary}`}
                           >
-                            {parsedMissingCards.size} missing
+                            {parsedMissingCards.size} hidden
                           </span>
                         )}
                       </div>
 
+                      {parsedMissingCards.size > 0 && (
+                        <div
+                          className={`text-xs ${theme.colors.text.secondary} bg-blue-500/10 p-2 rounded-lg`}
+                        >
+                          💡 Cards listed below are automatically hidden from
+                          the binder view
+                        </div>
+                      )}
+
                       <textarea
                         value={missingCards}
                         onChange={handleMissingCardsChange}
-                        disabled={!currentBinder}
-                        placeholder="One card per line..."
+                        disabled={!currentBinder || !set}
+                        placeholder={`Enter missing cards (one per line):
+5, 13, 58
+[1], [25], [150]  
+001/178, 025/178
+5rh, 13rh`}
                         className={`w-full h-32 px-3 py-2 rounded-lg text-sm
                           resize-none
                           transition-all duration-200
@@ -922,42 +923,12 @@ const App = () => {
                           placeholder:${theme.colors.text.secondary}`}
                       />
 
-                      {/* Save Button */}
-                      <button
-                        onClick={handleSaveBinder}
-                        disabled={saving || !selectedSet || !set}
-                        className={`w-full px-4 py-3 text-sm rounded-xl
-                          transition-all duration-200
-                          font-medium
-                          focus:outline-none focus:ring-2 focus:ring-offset-2
-                          disabled:opacity-50 disabled:cursor-not-allowed
-                          ${theme.colors.button.success}
-                          flex items-center justify-center gap-2`}
-                      >
-                        {saving ? (
-                          <>
-                            <Loader2 className="w-4 h-4 animate-spin" />
-                            <span>Saving...</span>
-                          </>
-                        ) : (
-                          <>
-                            <Save className="w-4 h-4" />
-                            <span>Save Progress</span>
-                          </>
-                        )}
-                      </button>
-
-                      {/* Status Messages */}
-                      {saveStatus === "success" && (
+                      {/* Auto-save indicator */}
+                      {set && currentBinder && (
                         <div
-                          className={`${theme.colors.button.success} bg-opacity-10 text-sm text-center py-2 px-4 rounded-lg`}
+                          className={`text-xs ${theme.colors.text.secondary} text-center`}
                         >
-                          Progress saved successfully!
-                        </div>
-                      )}
-                      {saveStatus === "error" && (
-                        <div className="text-red-500 text-sm text-center bg-red-500/10 py-2 px-4 rounded-lg">
-                          Failed to save. Please try again.
+                          ✓ Changes are automatically saved
                         </div>
                       )}
                     </div>
@@ -1007,9 +978,25 @@ const App = () => {
                           <span
                             className={`px-2 py-1 rounded-md ${theme.colors.background.card} font-mono`}
                           >
+                            25
+                          </span>
+                          <span>Just the number</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span
+                            className={`px-2 py-1 rounded-md ${theme.colors.background.card} font-mono`}
+                          >
                             Pikachu
                           </span>
                           <span>Card name</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span
+                            className={`px-2 py-1 rounded-md ${theme.colors.background.card} font-mono`}
+                          >
+                            25rh
+                          </span>
+                          <span>Reverse holo cards</span>
                         </div>
                       </div>
                     </div>
