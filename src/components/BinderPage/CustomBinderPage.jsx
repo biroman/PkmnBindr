@@ -656,7 +656,7 @@ const CustomBinderPage = ({
               onClick={toggleSelectionMode}
               className={`px-3 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 ${
                 isSelectionMode
-                  ? `${theme.colors.button.primary}`
+                  ? "bg-red-500 hover:bg-red-600 text-white"
                   : `${theme.colors.button.secondary}`
               }`}
             >
