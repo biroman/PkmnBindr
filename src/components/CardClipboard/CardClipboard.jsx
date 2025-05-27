@@ -116,7 +116,7 @@ const CardClipboard = ({
             <Clipboard className={`w-4 h-4 ${theme.colors.text.accent}`} />
             {clipboardCards.length > 0 && (
               <div
-                className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium`}
+                className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium text-white`}
               >
                 {clipboardCards.length}
               </div>
@@ -282,7 +282,7 @@ const CardClipboard = ({
                 onAddToCurrentPage(clipboardCards[i]);
               }
             }}
-            className={`w-full ${theme.colors.button.accent} rounded-lg py-2 px-3 text-sm font-medium hover:scale-[1.02] transition-transform flex items-center justify-center gap-2`}
+            className={`w-full ${theme.colors.button.accent} rounded-lg py-2 px-3 text-sm font-medium text-white hover:scale-[1.02] transition-transform flex items-center justify-center gap-2`}
           >
             <Plus className="w-4 h-4" />
             Add All to Page {currentPage}
