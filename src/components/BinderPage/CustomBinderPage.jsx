@@ -7,6 +7,7 @@ import {
   CheckSquare,
   Square,
   Move,
+  CircleHelp,
 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
@@ -524,7 +525,7 @@ const CustomBinderPage = ({
                             {/* Bottom overlay - Card info and actions */}
                             <div className="absolute bottom-0 left-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                               {/* Action buttons */}
-                              <div className="flex gap-1 justify-center pointer-events-auto">
+                              <div className="flex gap-6 mx-4 my-4 justify-center pointer-events-auto">
                                 <button
                                   onClick={(e) =>
                                     handleToggleCardStatus(e, card)
@@ -565,14 +566,14 @@ const CustomBinderPage = ({
                                   ) ? (
                                     <Plus className="w-3 h-3" />
                                   ) : (
-                                    <Star className="w-3 h-3" />
+                                    <CircleHelp className="w-3 h-3" />
                                   )}
                                   {parsedMissingCards.has(
                                     card.isReverseHolo
                                       ? `${card.positionId || card.id}_reverse`
                                       : card.positionId || card.id
                                   )
-                                    ? "Need"
+                                    ? "Collected"
                                     : "Missing"}
                                 </button>
 
