@@ -9,7 +9,6 @@ import {
   X,
   ArrowLeft,
   ArrowRight,
-  Plus,
 } from "lucide-react";
 import SetSelector from "./components/SetSelector/SetSelector";
 import BinderLayoutSelector from "./components/BinderPage/BinderLayoutSelector";
@@ -88,7 +87,6 @@ const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showCardSearch, setShowCardSearch] = useState(false);
   const [targetCardPosition, setTargetCardPosition] = useState(null); // For tracking specific position when adding cards
-  const [customCards, setCustomCards] = useState([]);
   const [clipboardCards, setClipboardCards] = useState([]);
   const [isClipboardCollapsed, setIsClipboardCollapsed] = useState(true);
   const [historyEntries, setHistoryEntries] = useState([]);
@@ -190,7 +188,6 @@ const App = () => {
     // Load custom cards if it's a custom binder
     if (binder.binderType === "custom") {
       const savedCustomCards = getCustomCards(binder.id);
-      setCustomCards(savedCustomCards);
       setCards(savedCustomCards);
 
       // Load history for custom binder
@@ -201,7 +198,7 @@ const App = () => {
       const savedMissingCards = new Set(binder.missingCards || []);
       setParsedMissingCards(savedMissingCards);
     } else {
-      setCustomCards([]);
+      setCards([]);
 
       // If binder has a set, load it automatically
       if (binder.sets && binder.sets.length > 0) {
@@ -451,7 +448,6 @@ const App = () => {
         updateHistoryWithFinalState(currentBinder.id);
 
         const updatedCards = getCustomCards(currentBinder.id);
-        setCustomCards(updatedCards);
         setCards(updatedCards);
 
         // Update history state
@@ -480,7 +476,6 @@ const App = () => {
         updateHistoryWithFinalState(currentBinder.id);
 
         const updatedCards = getCustomCards(currentBinder.id);
-        setCustomCards(updatedCards);
         setCards(updatedCards);
 
         // Update history state
@@ -508,7 +503,6 @@ const App = () => {
         updateHistoryWithFinalState(currentBinder.id);
 
         const updatedCards = getCustomCards(currentBinder.id);
-        setCustomCards(updatedCards);
         setCards(updatedCards);
 
         // Update history state
@@ -609,7 +603,6 @@ const App = () => {
             updateHistoryWithFinalState(currentBinder.id);
 
             const updatedCustomCards = getCustomCards(currentBinder.id);
-            setCustomCards(updatedCustomCards);
             setCards(updatedCustomCards);
 
             // Update history state
@@ -637,7 +630,6 @@ const App = () => {
       if (success) {
         // Refresh the binder state
         const updatedCustomCards = getCustomCards(currentBinder.id);
-        setCustomCards(updatedCustomCards);
         setCards(updatedCustomCards);
 
         // Refresh history
@@ -668,7 +660,6 @@ const App = () => {
       if (success) {
         // Refresh the binder state
         const updatedCustomCards = getCustomCards(currentBinder.id);
-        setCustomCards(updatedCustomCards);
         setCards(updatedCustomCards);
 
         // Refresh history
@@ -827,7 +818,6 @@ const App = () => {
 
           // Refresh custom cards
           const updatedCustomCards = getCustomCards(currentBinder.id);
-          setCustomCards(updatedCustomCards);
           setCards(updatedCustomCards);
 
           // Update history state
@@ -964,7 +954,6 @@ const App = () => {
         updateHistoryWithFinalState(currentBinder.id);
 
         // Update state
-        setCustomCards(newCards);
         setCards(newCards);
         setCurrentBinder(updatedBinder);
         setBinders(getBinders());
@@ -1298,51 +1287,6 @@ const App = () => {
 
             {currentBinder && (
               <>
-                {/* Custom Binder Actions */}
-                {currentBinder.binderType === "custom" && (
-                  <section>
-                    <h3
-                      className={`text-sm font-medium ${theme.colors.text.accent} mb-4 uppercase tracking-wide`}
-                    >
-                      Custom Collection
-                    </h3>
-                    <div className="space-y-4">
-                      <button
-                        onClick={handleOpenCardSearch}
-                        className={`w-full px-4 py-3 text-sm rounded-xl 
-                          focus:outline-none focus:ring-2 focus:ring-offset-2 
-                          flex items-center justify-center gap-2 
-                          font-medium
-                          transition-all duration-200
-                          ${theme.colors.button.primary}`}
-                      >
-                        <Plus className="w-4 h-4" />
-                        Add Cards
-                      </button>
-
-                      {customCards.length > 0 && (
-                        <div
-                          className={`${theme.colors.background.card} rounded-xl p-4`}
-                        >
-                          <div className="flex items-center justify-between mb-2">
-                            <span
-                              className={`text-sm font-medium ${theme.colors.text.primary}`}
-                            >
-                              Collection Stats
-                            </span>
-                          </div>
-                          <div
-                            className={`text-xs ${theme.colors.text.secondary}`}
-                          >
-                            {customCards.length} card
-                            {customCards.length !== 1 ? "s" : ""} in collection
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </section>
-                )}
-
                 {/* Set Selection */}
                 {currentBinder.binderType !== "custom" && (
                   <section>
