@@ -1,6 +1,6 @@
 export const themes = {
   default: {
-    name: "Clean",
+    name: "Default",
     colors: {
       primary: "blue",
       secondary: "slate",
@@ -38,45 +38,45 @@ export const themes = {
       },
     },
   },
-  dark: {
-    name: "Dark",
-    colors: {
-      primary: "slate",
-      secondary: "slate",
-      accent: "blue",
-      background: {
-        main: "from-slate-900 via-slate-800 to-slate-900",
-        sidebar: "bg-slate-800/90 backdrop-blur-lg",
-        card: "bg-slate-700/30 backdrop-blur-sm",
-      },
-      dropdown: {
-        background: "bg-slate-800",
-        hover: "hover:bg-slate-700/80",
-        input: "bg-slate-700/50",
-      },
-      text: {
-        primary: "text-slate-100",
-        secondary: "text-slate-400",
-        accent: "text-blue-400",
-      },
-      border: {
-        light: "border-slate-700",
-        accent: "border-slate-600/40",
-      },
-      button: {
-        primary:
-          "bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm",
-        secondary:
-          "bg-slate-700/50 hover:bg-slate-600/50 text-slate-100 transition-colors shadow-sm",
-        success:
-          "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-sm",
-      },
-      progress: {
-        from: "from-blue-500",
-        to: "to-blue-400",
-      },
-    },
-  },
+  // dark: {
+  //   name: "Dark",
+  //   colors: {
+  //     primary: "slate",
+  //     secondary: "slate",
+  //     accent: "blue",
+  //     background: {
+  //       main: "from-slate-900 via-slate-800 to-slate-900",
+  //       sidebar: "bg-slate-800/90 backdrop-blur-lg",
+  //       card: "bg-slate-700/30 backdrop-blur-sm",
+  //     },
+  //     dropdown: {
+  //       background: "bg-slate-800",
+  //       hover: "hover:bg-slate-700/80",
+  //       input: "bg-slate-700/50",
+  //     },
+  //     text: {
+  //       primary: "text-slate-100",
+  //       secondary: "text-slate-400",
+  //       accent: "text-blue-400",
+  //     },
+  //     border: {
+  //       light: "border-slate-700",
+  //       accent: "border-slate-600/40",
+  //     },
+  //     button: {
+  //       primary:
+  //         "bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm",
+  //       secondary:
+  //         "bg-slate-700/50 hover:bg-slate-600/50 text-slate-100 transition-colors shadow-sm",
+  //       success:
+  //         "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-sm",
+  //     },
+  //     progress: {
+  //       from: "from-blue-500",
+  //       to: "to-blue-400",
+  //     },
+  //   },
+  // },
   pikachu: {
     name: "Pikachu",
     colors: {

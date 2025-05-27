@@ -88,7 +88,7 @@ const App = () => {
   const [targetCardPosition, setTargetCardPosition] = useState(null); // For tracking specific position when adding cards
   const [customCards, setCustomCards] = useState([]);
   const [clipboardCards, setClipboardCards] = useState([]);
-  const [isClipboardCollapsed, setIsClipboardCollapsed] = useState(false);
+  const [isClipboardCollapsed, setIsClipboardCollapsed] = useState(true);
   const [historyEntries, setHistoryEntries] = useState([]);
   const [isHistoryCollapsed, setIsHistoryCollapsed] = useState(true);
 
