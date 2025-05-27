@@ -1,6 +1,5 @@
 import {
   Star,
-  Eye,
   Plus,
   Trash2,
   Search,
@@ -11,7 +10,6 @@ import {
 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
-import CardModal from "./CardModal";
 import MoveCardsModal from "./MoveCardsModal";
 import { useState, useMemo, useEffect } from "react";
 
@@ -28,7 +26,6 @@ const CustomBinderPage = ({
   onMoveCards,
 }) => {
   const { theme } = useTheme();
-  const [selectedCard, setSelectedCard] = useState(null);
   const [draggedCard, setDraggedCard] = useState(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
   const [windowSize, setWindowSize] = useState({
@@ -299,11 +296,6 @@ const CustomBinderPage = ({
     setDragOverIndex(null);
   };
 
-  const handleInspectCard = (e, card) => {
-    e.stopPropagation();
-    setSelectedCard(card);
-  };
-
   const handleRemoveCard = (e, card, globalIndex) => {
     e.stopPropagation();
     onRemoveCard(globalIndex);
@@ -321,8 +313,6 @@ const CustomBinderPage = ({
     if (isSelectionMode) {
       e.stopPropagation();
       handleCardSelection(card, globalIndex);
-    } else {
-      setSelectedCard(card);
     }
   };
 
@@ -533,74 +523,18 @@ const CustomBinderPage = ({
 
                             {/* Bottom overlay - Card info and actions */}
                             <div className="absolute bottom-0 left-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                              {/* Card info bar */}
-                              <div
-                                className={`${theme.colors.background.main} backdrop-blur-sm bg-opacity-95 rounded-lg p-2 mb-2 shadow-lg border ${theme.colors.border.light}`}
-                              >
-                                <div className="flex items-center justify-between">
-                                  <div className="flex-1 min-w-0">
-                                    <div
-                                      className={`text-xs font-semibold ${theme.colors.text.primary} truncate`}
-                                    >
-                                      {card.name}
-                                    </div>
-                                    <div
-                                      className={`text-xs ${theme.colors.text.secondary} flex items-center gap-1`}
-                                    >
-                                      <span>#{card.number}</span>
-                                      <span>•</span>
-                                      <span className="truncate">
-                                        {card.set.name}
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div
-                                    className={`px-2 py-1 text-xs font-medium rounded ${theme.colors.button.accent} ml-2`}
-                                  >
-                                    {card.rarity}
-                                  </div>
-                                </div>
-                              </div>
-
                               {/* Action buttons */}
                               <div className="flex gap-1 justify-center pointer-events-auto">
                                 <button
-                                  onClick={(e) => handleInspectCard(e, card)}
+                                  onClick={(e) =>
+                                    handleToggleCardStatus(e, card)
+                                  }
                                   className={`
-                                    flex-1 px-2 py-2 rounded-lg ${theme.colors.button.secondary} backdrop-blur-sm bg-opacity-90
+                                    flex-1 px-2 py-2 rounded-lg backdrop-blur-sm bg-opacity-90
                                     flex items-center justify-center gap-1 shadow-lg
                                     hover:scale-105 transition-all duration-200
                                     text-xs font-medium
-                                  `}
-                                  title="View details"
-                                >
-                                  <Eye className="w-3 h-3" />
-                                  View
-                                </button>
-
-                                {onToggleCardStatus && (
-                                  <button
-                                    onClick={(e) =>
-                                      handleToggleCardStatus(e, card)
-                                    }
-                                    className={`
-                                      flex-1 px-2 py-2 rounded-lg backdrop-blur-sm bg-opacity-90
-                                      flex items-center justify-center gap-1 shadow-lg
-                                      hover:scale-105 transition-all duration-200
-                                      text-xs font-medium
-                                      ${
-                                        parsedMissingCards.has(
-                                          card.isReverseHolo
-                                            ? `${
-                                                card.positionId || card.id
-                                              }_reverse`
-                                            : card.positionId || card.id
-                                        )
-                                          ? `${theme.colors.button.success}`
-                                          : "bg-orange-500 hover:bg-orange-600 text-white"
-                                      }
-                                    `}
-                                    title={
+                                    ${
                                       parsedMissingCards.has(
                                         card.isReverseHolo
                                           ? `${
@@ -608,32 +542,39 @@ const CustomBinderPage = ({
                                             }_reverse`
                                           : card.positionId || card.id
                                       )
-                                        ? "Mark as collected"
-                                        : "Mark as missing"
+                                        ? `${theme.colors.button.success}`
+                                        : "bg-orange-500 hover:bg-orange-600 text-white"
                                     }
-                                  >
-                                    {parsedMissingCards.has(
-                                      card.isReverseHolo
-                                        ? `${
-                                            card.positionId || card.id
-                                          }_reverse`
-                                        : card.positionId || card.id
-                                    ) ? (
-                                      <Plus className="w-3 h-3" />
-                                    ) : (
-                                      <Star className="w-3 h-3" />
-                                    )}
-                                    {parsedMissingCards.has(
+                                  `}
+                                  title={
+                                    parsedMissingCards.has(
                                       card.isReverseHolo
                                         ? `${
                                             card.positionId || card.id
                                           }_reverse`
                                         : card.positionId || card.id
                                     )
-                                      ? "Need"
-                                      : "Missing"}
-                                  </button>
-                                )}
+                                      ? "Mark as collected"
+                                      : "Mark as missing"
+                                  }
+                                >
+                                  {parsedMissingCards.has(
+                                    card.isReverseHolo
+                                      ? `${card.positionId || card.id}_reverse`
+                                      : card.positionId || card.id
+                                  ) ? (
+                                    <Plus className="w-3 h-3" />
+                                  ) : (
+                                    <Star className="w-3 h-3" />
+                                  )}
+                                  {parsedMissingCards.has(
+                                    card.isReverseHolo
+                                      ? `${card.positionId || card.id}_reverse`
+                                      : card.positionId || card.id
+                                  )
+                                    ? "Need"
+                                    : "Missing"}
+                                </button>
 
                                 <button
                                   onClick={(e) =>
@@ -877,11 +818,6 @@ const CustomBinderPage = ({
           </div>
         </div>
       </div>
-
-      {/* Card Modal */}
-      {selectedCard && (
-        <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} />
-      )}
 
       {/* Move Cards Modal */}
       {showMoveModal && (

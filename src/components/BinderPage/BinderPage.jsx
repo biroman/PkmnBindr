@@ -1,7 +1,6 @@
-import { Star, Eye, Plus, Trash2 } from "lucide-react";
+import { Star, Plus, Trash2 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
-import CardModal from "./CardModal";
 import { useState, useMemo, useEffect } from "react";
 
 const BinderPage = ({
@@ -12,7 +11,6 @@ const BinderPage = ({
   onToggleCardStatus,
 }) => {
   const { theme } = useTheme();
-  const [selectedCard, setSelectedCard] = useState(null);
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -205,7 +203,6 @@ const BinderPage = ({
     gap: binderDimensions.gap,
   });
 
-  // Handle toggling card status (add/remove from missing cards)
   const handleToggleCardStatus = (e, card) => {
     e.stopPropagation();
     if (onToggleCardStatus) {
@@ -213,40 +210,31 @@ const BinderPage = ({
     }
   };
 
-  // Handle opening card details
-  const handleInspectCard = (e, card) => {
-    e.stopPropagation();
-    setSelectedCard(card);
-  };
-
   const renderPage = (pageCards) => {
     return (
       <div
-        className={`relative ${theme.colors.background.sidebar} w-full h-full rounded-3xl shadow-2xl border ${theme.colors.border.light}`}
+        className={`relative ${theme.colors.background.sidebar} w-full h-full rounded-3xl shadow-2xl border ${theme.colors.border.light} overflow-hidden`}
       >
         <div
-          className={`grid ${getGridClasses()} h-full w-full`}
+          className={`grid ${getGridClasses()} w-full h-full`}
           style={getGridStyles()}
         >
-          {Array.from({ length: layout.cards }).map((_, idx) => {
-            const card = pageCards[idx];
-
+          {Array.from({ length: layout.cards }, (_, index) => {
+            const card = pageCards[index];
             return (
-              <div key={idx} className="relative w-full">
-                <div className="aspect-[2.5/3.5] w-full">
-                  <div className="absolute inset-0 flex items-center justify-center">
+              <div key={index} className="relative">
+                <div className="w-full h-full">
+                  <div className="relative w-full h-full group">
                     {card ? (
-                      <div className="relative w-full h-full group">
-                        {/* Card container */}
-                        <div className="relative w-full h-full">
-                          {/* Missing card placeholder */}
-                          {parsedMissingCards.has(
-                            card.isReverseHolo
-                              ? `${card.number}_reverse`
-                              : card.number
-                          ) ? (
-                            <div className="relative w-full h-full">
-                              {/* Empty slot background */}
+                      <div className="relative w-full h-full">
+                        {parsedMissingCards.has(
+                          card.isReverseHolo
+                            ? `${card.number}_reverse`
+                            : card.number
+                        ) ? (
+                          /* Missing card placeholder */
+                          <div className="relative w-full h-full">
+                            <div className="relative w-full h-full group">
                               <div
                                 className={`
                                   w-full h-full rounded-lg border-2 border-dashed 
@@ -255,7 +243,6 @@ const BinderPage = ({
                                   hover:border-solid transition-all duration-200
                                   group-hover:shadow-lg
                                 `}
-                                onClick={() => setSelectedCard(card)}
                               >
                                 <div className="text-center space-y-2">
                                   <div
@@ -268,7 +255,7 @@ const BinderPage = ({
                                     </span>
                                   </div>
                                   <div
-                                    className={`text-xs ${theme.colors.text.secondary} font-medium max-w-16 truncate`}
+                                    className={`text-xs ${theme.colors.text.secondary} font-medium text-center`}
                                   >
                                     {card.name}
                                   </div>
@@ -296,105 +283,89 @@ const BinderPage = ({
                                 />
                               </div>
                             </div>
-                          ) : (
-                            /* Collected card */
-                            <div
-                              className="relative w-full h-full cursor-pointer"
-                              onClick={() => setSelectedCard(card)}
-                            >
-                              <img
-                                src={card.images.small}
-                                alt={card.name}
-                                className={`
-                                  w-full h-full object-contain rounded-lg shadow-lg
-                                  transition-all duration-200 
-                                  group-hover:shadow-xl group-hover:scale-[1.02]
-                                `}
-                              />
+                          </div>
+                        ) : (
+                          /* Collected card */
+                          <div className="relative w-full h-full cursor-pointer">
+                            <img
+                              src={card.images.small}
+                              alt={card.name}
+                              className={`
+                                w-full h-full object-contain rounded-lg shadow-lg
+                                transition-all duration-200 
+                                group-hover:shadow-xl group-hover:scale-[1.02]
+                              `}
+                            />
 
-                              {/* Collected indicator */}
-                              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                <div
-                                  className={`w-6 h-6 rounded-full ${theme.colors.button.success} flex items-center justify-center shadow-lg`}
-                                >
-                                  <span className="text-xs font-bold text-white">
-                                    ✓
-                                  </span>
-                                </div>
+                            {/* Collected indicator */}
+                            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                              <div
+                                className={`w-6 h-6 rounded-full ${theme.colors.button.success} flex items-center justify-center shadow-lg`}
+                              >
+                                <span className="text-xs font-bold text-white">
+                                  ✓
+                                </span>
                               </div>
                             </div>
-                          )}
+                          </div>
+                        )}
 
-                          {/* Action buttons overlay */}
-                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                            <div className="absolute top-3 left-3 flex flex-col gap-2 pointer-events-auto">
-                              {/* Inspect button */}
-                              <button
-                                onClick={(e) => handleInspectCard(e, card)}
-                                className={`
-                                  w-8 h-8 rounded-full ${theme.colors.button.secondary} 
-                                  flex items-center justify-center shadow-lg
-                                  hover:scale-110 transition-transform duration-200
-                                `}
-                                title="View details"
-                              >
-                                <Eye className="w-4 h-4" />
-                              </button>
-
-                              {/* Toggle collection status button */}
-                              <button
-                                onClick={(e) => handleToggleCardStatus(e, card)}
-                                className={`
-                                  w-8 h-8 rounded-full flex items-center justify-center shadow-lg
-                                  hover:scale-110 transition-transform duration-200
-                                  ${
-                                    parsedMissingCards.has(
-                                      card.isReverseHolo
-                                        ? `${card.number}_reverse`
-                                        : card.number
-                                    )
-                                      ? `${theme.colors.button.success}`
-                                      : "bg-red-500 hover:bg-red-600 text-white"
-                                  }
-                                `}
-                                title={
+                        {/* Action buttons overlay */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                          <div className="absolute top-3 left-3 flex flex-col gap-2 pointer-events-auto">
+                            {/* Toggle collection status button */}
+                            <button
+                              onClick={(e) => handleToggleCardStatus(e, card)}
+                              className={`
+                                w-8 h-8 rounded-full flex items-center justify-center shadow-lg
+                                hover:scale-110 transition-transform duration-200
+                                ${
                                   parsedMissingCards.has(
                                     card.isReverseHolo
                                       ? `${card.number}_reverse`
                                       : card.number
                                   )
-                                    ? "Mark as collected"
-                                    : "Mark as missing"
+                                    ? `${theme.colors.button.success}`
+                                    : "bg-red-500 hover:bg-red-600 text-white"
                                 }
-                              >
-                                {parsedMissingCards.has(
+                              `}
+                              title={
+                                parsedMissingCards.has(
                                   card.isReverseHolo
                                     ? `${card.number}_reverse`
                                     : card.number
-                                ) ? (
-                                  <Plus className="w-4 h-4" />
-                                ) : (
-                                  <Trash2 className="w-4 h-4" />
-                                )}
-                              </button>
-                            </div>
-
-                            {/* Card info badge */}
-                            <div className="absolute bottom-3 right-3 flex flex-col gap-1 items-end pointer-events-auto">
-                              <span
-                                className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.primary} shadow-lg`}
-                              >
-                                #{card.number}
-                              </span>
-                              {card.isReverseHolo && (
-                                <span
-                                  className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.secondary} shadow-lg flex items-center gap-1`}
-                                >
-                                  <Star className="w-3 h-3" />
-                                  RH
-                                </span>
+                                )
+                                  ? "Mark as collected"
+                                  : "Mark as missing"
+                              }
+                            >
+                              {parsedMissingCards.has(
+                                card.isReverseHolo
+                                  ? `${card.number}_reverse`
+                                  : card.number
+                              ) ? (
+                                <Plus className="w-4 h-4" />
+                              ) : (
+                                <Trash2 className="w-4 h-4" />
                               )}
-                            </div>
+                            </button>
+                          </div>
+
+                          {/* Card info badge */}
+                          <div className="absolute bottom-3 right-3 flex flex-col gap-1 items-end pointer-events-auto">
+                            <span
+                              className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.primary} shadow-lg`}
+                            >
+                              #{card.number}
+                            </span>
+                            {card.isReverseHolo && (
+                              <span
+                                className={`px-2 py-1 text-xs font-bold rounded-md ${theme.colors.button.secondary} shadow-lg flex items-center gap-1`}
+                              >
+                                <Star className="w-3 h-3" />
+                                RH
+                              </span>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -465,11 +436,6 @@ const BinderPage = ({
           </div>
         </div>
       </div>
-
-      {/* Card Modal */}
-      {selectedCard && (
-        <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} />
-      )}
     </div>
   );
 };

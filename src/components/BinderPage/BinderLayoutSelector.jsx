@@ -105,25 +105,33 @@ const BinderLayoutSelector = ({
                   className="sr-only peer"
                 />
                 <div
-                  className={`w-10 h-5 rounded-full
-                  transition-colors duration-200 ease-in-out
+                  className={`relative w-11 h-6 rounded-full transition-colors duration-200 ease-in-out flex items-center
                   ${
                     displayOptions.showReverseHolos
                       ? theme.colors.button.primary
                       : `${theme.colors.background.sidebar} border ${theme.colors.border.accent}`
                   }
-                  after:content-[''] after:absolute after:top-0.5 after:left-0.5
-                  after:${
-                    theme.colors.background.card
-                  } after:rounded-full after:h-4 after:w-4 
-                  after:transition-all after:duration-200 peer-checked:after:translate-x-5
                   peer-focus:ring-2 peer-focus:ring-offset-1
                   ${
                     displayOptions.showReverseHolos
                       ? "peer-focus:ring-sky-500/50"
                       : `peer-focus:ring-${theme.colors.text.secondary}/30`
                   }`}
-                />
+                >
+                  <div
+                    className={`w-5 h-5 rounded-full shadow-sm border transition-transform duration-200 ease-in-out
+                    ${
+                      theme.isDark
+                        ? "bg-white border-gray-200"
+                        : "bg-gray-100 border-gray-300"
+                    }
+                    ${
+                      displayOptions.showReverseHolos
+                        ? "translate-x-[21px]"
+                        : "translate-x-0.5"
+                    }`}
+                  />
+                </div>
               </label>
             </div>
           )}

@@ -215,7 +215,7 @@ const BinderHistory = ({
           </span>
           {historyEntries.length > 0 && (
             <div
-              className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium ml-1`}
+              className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium ml-1 text-white`}
             >
               {historyEntries.length}
             </div>
