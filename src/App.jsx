@@ -55,9 +55,11 @@ import {
   canNavigateHistory,
   getHistoryPosition,
   updateHistoryWithFinalState,
+  addHistoryEntry,
 } from "./utils/storageUtils";
 import { useTheme } from "./theme/ThemeContent";
 import ThemeSelector from "./components/ThemeSelector";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 const App = () => {
   const { theme } = useTheme();
@@ -738,6 +740,11 @@ const App = () => {
           targetPosition = targetEntry.toPosition;
         } else if (targetEntry.fromPosition !== undefined) {
           targetPosition = targetEntry.fromPosition;
+        } else if (
+          targetEntry.action === "bulk_move" &&
+          targetEntry.targetPosition !== undefined
+        ) {
+          targetPosition = targetEntry.targetPosition;
         }
 
         if (targetPosition !== null) {
@@ -831,6 +838,148 @@ const App = () => {
       }
     }
     return null;
+  };
+
+  const handleMoveCards = async (
+    selectedCardData,
+    targetPageIndex,
+    moveOption
+  ) => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      try {
+        // Get current cards
+        const currentCards = getCustomCards(currentBinder.id);
+        const newCards = [...currentCards];
+
+        // Sort selected cards by their current position (descending) to avoid index issues when removing
+        const sortedSelectedCards = selectedCardData.sort(
+          (a, b) => b.globalIndex - a.globalIndex
+        );
+
+        // Calculate target position based on page and move option
+        const cardsPerPage = layout.cards;
+        let targetPosition;
+
+        if (moveOption === "newPage") {
+          // Add to the end of the collection
+          targetPosition = newCards.length;
+        } else {
+          // Calculate position based on target page
+          if (targetPageIndex === 0) {
+            // Cover page (right side only)
+            targetPosition = 0;
+          } else {
+            // Calculate for left and right pages
+            const leftPhysicalPage = 2 * targetPageIndex - 1;
+            targetPosition = leftPhysicalPage * cardsPerPage;
+          }
+
+          if (moveOption === "fill") {
+            // Find first empty slot on target page
+            const pageStart = targetPosition;
+            const pageEnd =
+              targetPosition +
+              (targetPageIndex === 0 ? cardsPerPage : cardsPerPage * 2);
+
+            for (let i = pageStart; i < pageEnd && i < newCards.length; i++) {
+              if (!newCards[i]) {
+                targetPosition = i;
+                break;
+              }
+            }
+          }
+        }
+
+        // Create a comprehensive history entry for the bulk move operation
+        const cardNames = selectedCardData.map(
+          (cardData) => cardData.card.name
+        );
+        const fromPositions = selectedCardData.map(
+          (cardData) => cardData.globalIndex
+        );
+
+        addHistoryEntry(currentBinder.id, "bulk_move", {
+          cardNames: cardNames,
+          cardCount: selectedCardData.length,
+          fromPositions: fromPositions,
+          targetPosition: targetPosition,
+          targetPage: targetPageIndex + 1, // Display as 1-indexed
+          moveOption: moveOption,
+          description: `Moved ${selectedCardData.length} card${
+            selectedCardData.length !== 1 ? "s" : ""
+          } to page ${targetPageIndex + 1}`,
+        });
+
+        // Remove selected cards from their current positions
+        const cardsToMove = [];
+        sortedSelectedCards.forEach((cardData) => {
+          if (newCards[cardData.globalIndex]) {
+            cardsToMove.unshift(newCards[cardData.globalIndex]); // Add to beginning to maintain order
+            newCards[cardData.globalIndex] = null;
+          }
+        });
+
+        // Insert cards at target position
+        if (moveOption === "insert" || moveOption === "newPage") {
+          // Insert and shift existing cards
+          cardsToMove.forEach((card, index) => {
+            newCards.splice(targetPosition + index, 0, card);
+          });
+        } else if (moveOption === "fill") {
+          // Fill empty slots only
+          let currentTargetPos = targetPosition;
+          cardsToMove.forEach((card) => {
+            // Find next empty slot
+            while (
+              currentTargetPos < newCards.length &&
+              newCards[currentTargetPos]
+            ) {
+              currentTargetPos++;
+            }
+            if (currentTargetPos < newCards.length) {
+              newCards[currentTargetPos] = card;
+            } else {
+              newCards.push(card);
+            }
+            currentTargetPos++;
+          });
+        }
+
+        // Remove any trailing null values
+        while (newCards.length > 0 && newCards[newCards.length - 1] === null) {
+          newCards.pop();
+        }
+
+        // Update the binder with new card arrangement
+        const updatedBinder = {
+          ...currentBinder,
+          customCards: newCards,
+          updatedAt: new Date().toISOString(),
+        };
+
+        // Save to storage
+        saveBinder(updatedBinder);
+
+        // Update history with final state after the action
+        updateHistoryWithFinalState(currentBinder.id);
+
+        // Update state
+        setCustomCards(newCards);
+        setCards(newCards);
+        setCurrentBinder(updatedBinder);
+        setBinders(getBinders());
+
+        // Update history state
+        const updatedHistory = getBinderHistory(currentBinder.id);
+        setHistoryEntries(updatedHistory);
+
+        return true;
+      } catch (error) {
+        console.error("Error moving cards:", error);
+        return false;
+      }
+    }
+    return false;
   };
 
   // Calculate progress stats
@@ -973,8 +1122,29 @@ const App = () => {
                     px-3 py-1.5 ${theme.colors.background.card} rounded-lg
                     border ${theme.colors.border.accent}
                     text-sm font-medium ${theme.colors.text.primary}
-                    min-w-[120px] text-center
+                    min-w-[120px] text-center cursor-pointer
+                    hover:shadow-lg transition-all duration-200
                   `}
+                  title="Hover and scroll to navigate pages quickly"
+                  onWheel={(e) => {
+                    e.preventDefault();
+                    const totalPhysicalPages = Math.ceil(
+                      cards.length / layout.cards
+                    );
+                    const adjustedTotalPages = Math.ceil(
+                      (totalPhysicalPages + 1) / 2
+                    );
+
+                    if (e.deltaY > 0) {
+                      // Scroll up - previous page
+                      setCurrentPage((p) => Math.max(p - 1, 0));
+                    } else {
+                      // Scroll down - next page
+                      setCurrentPage((p) =>
+                        Math.min(p + 1, adjustedTotalPages - 1)
+                      );
+                    }
+                  }}
                 >
                   {(() => {
                     const totalPhysicalPages = Math.ceil(
@@ -1090,7 +1260,13 @@ const App = () => {
                 >
                   Collection Manager
                 </h2>
-                <ThemeSelector />
+                <div className="flex items-center gap-3">
+                  <DarkModeToggle />
+                  <div
+                    className={`w-px h-6 ${theme.colors.border.light}`}
+                  ></div>
+                  <ThemeSelector />
+                </div>
               </div>
               <button
                 onClick={() => setShowSidebar(false)}
@@ -1421,10 +1597,10 @@ const App = () => {
           </div>
         </aside>
 
-        {/* Sidebar Overlay for Mobile */}
+        {/* Sidebar Overlay */}
         {showSidebar && (
           <div
-            className="fixed inset-0 bg-black/50 z-20 lg:hidden"
+            className="fixed inset-0 bg-black/50 z-20 lg:bg-transparent"
             onClick={() => setShowSidebar(false)}
           />
         )}
@@ -1445,6 +1621,7 @@ const App = () => {
                 onMoveFromClipboard={handleMoveFromClipboard}
                 parsedMissingCards={parsedMissingCards}
                 onToggleCardStatus={handleToggleCardStatus}
+                onMoveCards={handleMoveCards}
               />
             ) : (
               <BinderPage
@@ -1490,7 +1667,7 @@ const App = () => {
                     onClick={() => setShowSidebar(true)}
                     className={`px-6 py-3 rounded-xl ${theme.colors.button.primary} font-medium`}
                   >
-                    Open Collection Manager
+                    Catch &apos;em all!
                   </button>
                 )}
               </div>

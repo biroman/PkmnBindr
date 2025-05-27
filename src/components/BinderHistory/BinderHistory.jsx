@@ -78,6 +78,11 @@ const BinderHistory = ({
         targetPosition = entry.toPosition;
       } else if (entry.fromPosition !== undefined) {
         targetPosition = entry.fromPosition;
+      } else if (
+        entry.action === "bulk_move" &&
+        entry.targetPosition !== undefined
+      ) {
+        targetPosition = entry.targetPosition;
       }
 
       if (targetPosition !== null) {
@@ -121,6 +126,11 @@ const BinderHistory = ({
         targetPosition = targetEntry.toPosition;
       } else if (targetEntry.fromPosition !== undefined) {
         targetPosition = targetEntry.fromPosition;
+      } else if (
+        targetEntry.action === "bulk_move" &&
+        targetEntry.targetPosition !== undefined
+      ) {
+        targetPosition = targetEntry.targetPosition;
       }
 
       if (targetPosition !== null) {
@@ -160,6 +170,8 @@ const BinderHistory = ({
         return <ArrowRightLeft className="w-3 h-3 text-blue-400" />;
       case "swap":
         return <ArrowUpDown className="w-3 h-3 text-purple-400" />;
+      case "bulk_move":
+        return <ArrowRightLeft className="w-3 h-3 text-orange-400" />;
       default:
         return <History className="w-3 h-3 text-gray-400" />;
     }
@@ -179,6 +191,11 @@ const BinderHistory = ({
         return `Swapped cards at positions ${entry.fromPosition + 1} and ${
           entry.toPosition + 1
         }`;
+      case "bulk_move":
+        return (
+          entry.description ||
+          `Moved ${entry.cardCount} cards to page ${entry.targetPage}`
+        );
       default:
         return "Unknown action";
     }
@@ -369,16 +386,6 @@ const BinderHistory = ({
                             onMouseEnter={() => setHoveredRevertIndex(index)}
                             onMouseLeave={() => setHoveredRevertIndex(null)}
                             className={`opacity-0 group-hover:opacity-100 p-1 rounded-md ${theme.colors.button.secondary} hover:bg-opacity-80 transition-all duration-200 flex-shrink-0`}
-                            title={`Revert to this state (will undo ${
-                              hoveredRevertIndex !== null
-                                ? hoveredRevertIndex + 1
-                                : 1
-                            } change${
-                              hoveredRevertIndex !== null &&
-                              hoveredRevertIndex > 0
-                                ? "s"
-                                : ""
-                            })`}
                           >
                             <History className="w-3 h-3" />
                           </button>
@@ -406,18 +413,6 @@ const BinderHistory = ({
                 </div>
               )}
             </div>
-            {hoveredRevertIndex !== null && (
-              <div
-                className={`flex items-center gap-2 ${theme.colors.text.secondary} bg-gray-500/5 px-2 py-1 rounded text-xs`}
-              >
-                <span>ℹ️</span>
-                <span>
-                  Will revert {hoveredRevertIndex + 1} change
-                  {hoveredRevertIndex > 0 ? "s" : ""}
-                  {hoveredRevertIndex > 0 && " (faded entries will be undone)"}
-                </span>
-              </div>
-            )}
           </div>
         </div>
       )}
@@ -425,20 +420,24 @@ const BinderHistory = ({
       {/* Clear History Confirmation Dialog */}
       {showClearConfirmation && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-6 max-w-sm mx-4">
+          <div
+            className={`${theme.colors.background.card} rounded-xl shadow-2xl border ${theme.colors.border.accent} p-6 max-w-sm mx-4`}
+          >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
                 <AlertTriangle className="w-5 h-5 text-red-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">Clear History</h3>
-                <p className="text-sm text-gray-600">
+                <h3 className={`font-semibold ${theme.colors.text.primary}`}>
+                  Clear History
+                </h3>
+                <p className={`text-sm ${theme.colors.text.secondary}`}>
                   This action cannot be undone
                 </p>
               </div>
             </div>
 
-            <p className="text-gray-600 mb-6">
+            <p className={`${theme.colors.text.secondary} mb-6`}>
               Are you sure you want to clear all {historyEntries.length} history
               entries? You will lose the ability to undo or navigate through
               previous actions.
@@ -447,7 +446,7 @@ const BinderHistory = ({
             <div className="flex gap-2">
               <button
                 onClick={cancelClearHistory}
-                className="flex-1 px-3 py-1.5 text-sm rounded-md bg-gray-100 hover:bg-gray-200 text-gray-700 hover:scale-105 transition-transform"
+                className={`flex-1 px-3 py-1.5 text-sm rounded-md ${theme.colors.button.secondary} hover:scale-105 transition-transform`}
               >
                 <div className="flex items-center justify-center gap-1.5">
                   <X className="w-3.5 h-3.5" />

@@ -110,16 +110,18 @@ const BinderLayoutSelector = ({
                   ${
                     displayOptions.showReverseHolos
                       ? theme.colors.button.primary
-                      : "bg-gray-200"
+                      : `${theme.colors.background.sidebar} border ${theme.colors.border.accent}`
                   }
                   after:content-[''] after:absolute after:top-0.5 after:left-0.5
-                  after:bg-white after:rounded-full after:h-4 after:w-4 
+                  after:${
+                    theme.colors.background.card
+                  } after:rounded-full after:h-4 after:w-4 
                   after:transition-all after:duration-200 peer-checked:after:translate-x-5
                   peer-focus:ring-2 peer-focus:ring-offset-1
                   ${
                     displayOptions.showReverseHolos
                       ? "peer-focus:ring-sky-500/50"
-                      : "peer-focus:ring-gray-300"
+                      : `peer-focus:ring-${theme.colors.text.secondary}/30`
                   }`}
                 />
               </label>

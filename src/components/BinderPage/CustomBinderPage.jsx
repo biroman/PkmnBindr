@@ -1,7 +1,18 @@
-import { Star, Eye, Plus, Trash2, Search, Lightbulb } from "lucide-react";
+import {
+  Star,
+  Eye,
+  Plus,
+  Trash2,
+  Search,
+  Lightbulb,
+  CheckSquare,
+  Square,
+  Move,
+} from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import CardModal from "./CardModal";
+import MoveCardsModal from "./MoveCardsModal";
 import { useState, useMemo, useEffect } from "react";
 
 const CustomBinderPage = ({
@@ -14,6 +25,7 @@ const CustomBinderPage = ({
   onMoveFromClipboard,
   parsedMissingCards = new Set(),
   onToggleCardStatus,
+  onMoveCards,
 }) => {
   const { theme } = useTheme();
   const [selectedCard, setSelectedCard] = useState(null);
@@ -23,6 +35,11 @@ const CustomBinderPage = ({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  // Selection state
+  const [isSelectionMode, setIsSelectionMode] = useState(false);
+  const [selectedCards, setSelectedCards] = useState(new Set());
+  const [showMoveModal, setShowMoveModal] = useState(false);
 
   const cardsPerPage = layout.cards;
   const totalPhysicalPages = Math.ceil(cards.length / cardsPerPage);
@@ -299,6 +316,89 @@ const CustomBinderPage = ({
     }
   };
 
+  // Selection handlers
+  const handleCardClick = (e, card, globalIndex) => {
+    if (isSelectionMode) {
+      e.stopPropagation();
+      handleCardSelection(card, globalIndex);
+    } else {
+      setSelectedCard(card);
+    }
+  };
+
+  const handleCardSelection = (card, globalIndex) => {
+    // Use a more reliable card identifier
+    const cardKey = `${globalIndex}`;
+    const newSelectedCards = new Set(selectedCards);
+
+    if (newSelectedCards.has(cardKey)) {
+      newSelectedCards.delete(cardKey);
+    } else {
+      newSelectedCards.add(cardKey);
+    }
+
+    setSelectedCards(newSelectedCards);
+    console.log("Selected cards:", Array.from(newSelectedCards)); // Debug log
+  };
+
+  const toggleSelectionMode = () => {
+    setIsSelectionMode(!isSelectionMode);
+    if (isSelectionMode) {
+      setSelectedCards(new Set());
+    }
+  };
+
+  const handleMoveSelectedCards = () => {
+    if (selectedCards.size === 0) return;
+    setShowMoveModal(true);
+  };
+
+  const handleMoveCards = async (
+    selectedCardData,
+    targetPageIndex,
+    moveOption
+  ) => {
+    if (onMoveCards) {
+      await onMoveCards(selectedCardData, targetPageIndex, moveOption);
+      setSelectedCards(new Set());
+      setIsSelectionMode(false);
+    }
+  };
+
+  const selectAllOnPage = () => {
+    const newSelectedCards = new Set(selectedCards);
+
+    // Get cards on current page
+    const leftPageStart =
+      leftPhysicalPage !== null ? leftPhysicalPage * cardsPerPage : -1;
+    const leftPageEnd =
+      leftPhysicalPage !== null ? (leftPhysicalPage + 1) * cardsPerPage : -1;
+    const rightPageStart = rightPhysicalPage * cardsPerPage;
+    const rightPageEnd = (rightPhysicalPage + 1) * cardsPerPage;
+
+    // Add left page cards
+    if (leftPhysicalPage !== null) {
+      for (let i = leftPageStart; i < leftPageEnd && i < cards.length; i++) {
+        if (cards[i]) {
+          newSelectedCards.add(`${i}`);
+        }
+      }
+    }
+
+    // Add right page cards
+    for (let i = rightPageStart; i < rightPageEnd && i < cards.length; i++) {
+      if (cards[i]) {
+        newSelectedCards.add(`${i}`);
+      }
+    }
+
+    setSelectedCards(newSelectedCards);
+  };
+
+  const deselectAll = () => {
+    setSelectedCards(new Set());
+  };
+
   const renderPage = (pageCards, pageOffset = 0) => {
     return (
       <div
@@ -313,6 +413,7 @@ const CustomBinderPage = ({
             const globalIndex = pageOffset + idx;
             const isDragOver = dragOverIndex === globalIndex;
             const isDragging = draggedCard?.globalIndex === globalIndex;
+            const isSelected = card && selectedCards.has(`${globalIndex}`);
 
             return (
               <div
@@ -337,19 +438,28 @@ const CustomBinderPage = ({
                             ? "opacity-30 scale-95 rotate-2"
                             : isDragOver
                             ? "scale-105 rotate-1 ring-2 ring-orange-400"
+                            : isSelected
+                            ? "ring-2 ring-blue-500 scale-[1.02]"
                             : "hover:scale-[1.02] hover:-rotate-1"
                         }`}
-                        draggable
+                        draggable={!isSelectionMode}
                         onDragStart={(e) =>
+                          !isSelectionMode &&
                           handleDragStart(e, card, globalIndex)
                         }
                         onDragEnd={handleDragEnd}
                       >
                         {/* Card container */}
-                        <div className="relative w-full h-full cursor-move">
+                        <div
+                          className={`relative w-full h-full ${
+                            isSelectionMode ? "cursor-pointer" : "cursor-move"
+                          }`}
+                        >
                           <div
                             className="relative w-full h-full cursor-pointer"
-                            onClick={() => setSelectedCard(card)}
+                            onClick={(e) =>
+                              handleCardClick(e, card, globalIndex)
+                            }
                           >
                             <img
                               src={card.images.small}
@@ -387,9 +497,32 @@ const CustomBinderPage = ({
                               </div>
                             )}
 
+                            {/* Selection indicator */}
+                            {isSelectionMode && (
+                              <div className="absolute top-2 left-2 z-10">
+                                <div
+                                  className={`w-6 h-6 rounded-md flex items-center justify-center shadow-lg transition-all duration-200 ${
+                                    isSelected
+                                      ? "bg-blue-500 text-white"
+                                      : `${theme.colors.background.card} ${theme.colors.text.secondary} hover:${theme.colors.background.sidebar}`
+                                  }`}
+                                >
+                                  {isSelected ? (
+                                    <CheckSquare className="w-4 h-4" />
+                                  ) : (
+                                    <Square className="w-4 h-4" />
+                                  )}
+                                </div>
+                              </div>
+                            )}
+
                             {/* Top overlay - Reverse holo indicator */}
                             {card.isReverseHolo && (
-                              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                              <div
+                                className={`absolute top-2 ${
+                                  isSelectionMode ? "right-2" : "right-2"
+                                } opacity-0 group-hover:opacity-100 transition-opacity duration-200`}
+                              >
                                 <div
                                   className={`w-7 h-7 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 backdrop-blur-sm bg-opacity-90 flex items-center justify-center shadow-lg`}
                                 >
@@ -573,6 +706,69 @@ const CustomBinderPage = ({
   return (
     <div className="h-full flex items-center justify-center p-4">
       <div className="flex flex-col items-center space-y-6">
+        {/* Selection Controls */}
+        {cards.filter((card) => card !== null).length > 0 && (
+          <div
+            className={`flex items-center gap-3 px-4 py-2 rounded-lg ${theme.colors.background.card} border ${theme.colors.border.accent}`}
+          >
+            <button
+              onClick={toggleSelectionMode}
+              className={`px-3 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 ${
+                isSelectionMode
+                  ? `${theme.colors.button.primary}`
+                  : `${theme.colors.button.secondary}`
+              }`}
+            >
+              {isSelectionMode ? (
+                <>
+                  <CheckSquare className="w-4 h-4" />
+                  Exit Selection
+                </>
+              ) : (
+                <>
+                  <Square className="w-4 h-4" />
+                  Select Cards
+                </>
+              )}
+            </button>
+
+            {isSelectionMode && (
+              <>
+                <div className={`h-4 w-px ${theme.colors.border.accent}`} />
+                <span className={`text-sm ${theme.colors.text.secondary}`}>
+                  {selectedCards.size} selected
+                </span>
+
+                {selectedCards.size > 0 && (
+                  <>
+                    <button
+                      onClick={handleMoveSelectedCards}
+                      className={`px-3 py-2 rounded-lg ${theme.colors.button.primary} font-medium transition-all duration-200 flex items-center gap-2`}
+                    >
+                      <Move className="w-4 h-4" />
+                      Move Cards
+                    </button>
+                  </>
+                )}
+
+                <button
+                  onClick={selectAllOnPage}
+                  className={`px-3 py-2 rounded-lg ${theme.colors.button.secondary} font-medium transition-all duration-200`}
+                >
+                  Select Page
+                </button>
+
+                <button
+                  onClick={deselectAll}
+                  className={`px-3 py-2 rounded-lg ${theme.colors.button.secondary} font-medium transition-all duration-200`}
+                >
+                  Clear
+                </button>
+              </>
+            )}
+          </div>
+        )}
+
         {/* Binder Container */}
         <div className="flex gap-4 relative" style={getContainerStyles()}>
           {/* Left Page */}
@@ -686,6 +882,29 @@ const CustomBinderPage = ({
       {selectedCard && (
         <CardModal card={selectedCard} onClose={() => setSelectedCard(null)} />
       )}
+
+      {/* Move Cards Modal */}
+      {showMoveModal && (
+        <MoveCardsModal
+          isOpen={showMoveModal}
+          onClose={() => setShowMoveModal(false)}
+          selectedCards={Array.from(selectedCards)
+            .map((cardKey) => {
+              const globalIndex = parseInt(cardKey);
+              const card = cards[globalIndex];
+              console.log("Processing card:", globalIndex, card); // Debug log
+              return {
+                card,
+                globalIndex,
+                cardKey,
+              };
+            })
+            .filter((item) => item.card !== null && item.card !== undefined)}
+          currentPage={currentPage}
+          totalPages={Math.ceil((totalPhysicalPages + 1) / 2)}
+          onMoveCards={handleMoveCards}
+        />
+      )}
     </div>
   );
 };
@@ -704,6 +923,7 @@ CustomBinderPage.propTypes = {
   onMoveFromClipboard: PropTypes.func,
   parsedMissingCards: PropTypes.instanceOf(Set),
   onToggleCardStatus: PropTypes.func,
+  onMoveCards: PropTypes.func,
 };
 
 export default CustomBinderPage;

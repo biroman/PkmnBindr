@@ -542,7 +542,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
               <select
                 value={selectedFilters.rarity}
                 onChange={(e) => handleFilterChange("rarity", e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg ${theme.colors.background.main} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
+                className={`w-full px-3 py-2 rounded-lg ${theme.colors.dropdown.background} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
               >
                 <option value="">All Rarities</option>
                 <option value="Common">Common</option>
@@ -566,7 +566,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
               <select
                 value={selectedFilters.type}
                 onChange={(e) => handleFilterChange("type", e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg ${theme.colors.background.main} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
+                className={`w-full px-3 py-2 rounded-lg ${theme.colors.dropdown.background} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
               >
                 <option value="">All Types</option>
                 <option value="Grass">Grass</option>
@@ -593,7 +593,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
               <select
                 value={selectedFilters.set}
                 onChange={(e) => handleFilterChange("set", e.target.value)}
-                className={`w-full px-3 py-2 rounded-lg ${theme.colors.background.main} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
+                className={`w-full px-3 py-2 rounded-lg ${theme.colors.dropdown.background} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
               >
                 <option value="">All Sets</option>
                 {availableSets.map((set) => (

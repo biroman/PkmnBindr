@@ -205,7 +205,7 @@ const EnhancedBinderSelector = ({
           <div
             className={`
               absolute top-full left-0 right-0 mt-2 
-              bg-white 
+              ${theme.colors.background.card}
               border ${theme.colors.border.accent}
               rounded-xl shadow-xl z-50
               max-h-[80vh] overflow-hidden
@@ -215,13 +215,21 @@ const EnhancedBinderSelector = ({
               <div className="relative">
                 {/* Scroll indicators */}
                 {shouldScroll && canScrollUp && (
-                  <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white via-white/80 to-transparent z-10 pointer-events-none flex items-start justify-center pt-1">
-                    <ChevronUp className="w-4 h-4 text-gray-400" />
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-8 ${theme.colors.background.card} z-10 pointer-events-none flex items-start justify-center pt-1 opacity-90`}
+                  >
+                    <ChevronUp
+                      className={`w-4 h-4 ${theme.colors.text.secondary}`}
+                    />
                   </div>
                 )}
                 {shouldScroll && canScrollDown && (
-                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none flex items-end justify-center pb-1">
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 h-8 ${theme.colors.background.card} z-10 pointer-events-none flex items-end justify-center pb-1 opacity-90`}
+                  >
+                    <ChevronDown
+                      className={`w-4 h-4 ${theme.colors.text.secondary}`}
+                    />
                   </div>
                 )}
 
