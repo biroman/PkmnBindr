@@ -3,54 +3,52 @@ import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import { useCardSearch, useSets } from "../../hooks";
 import logger from "../../utils/logger";
+import {
+  saveSearchState,
+  loadSearchState,
+  clearSearchState,
+} from "../../utils/storageUtilsIndexedDB";
 
 // Sub-components
 import SearchHeader from "./SearchHeader";
 import SearchResults from "./SearchResults";
 import SearchFilters from "./SearchFilters";
 
-// Storage key for persisting search state
-const SEARCH_STATE_KEY = "pkmnbinder_card_search_state";
-
 const CardSearchQuery = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
   const { theme } = useTheme();
 
-  // Load initial state from localStorage
-  const loadSavedState = () => {
-    try {
-      const saved = localStorage.getItem(SEARCH_STATE_KEY);
-      if (saved) {
-        const state = JSON.parse(saved);
-        return {
-          searchQuery: state.searchQuery || "",
-          selectedFilters: state.selectedFilters || {
-            rarity: "",
-            type: "",
-            set: "",
-          },
-          scrollPosition: state.scrollPosition || 0,
-        };
+  // Load initial state from IndexedDB
+  const [savedState, setSavedState] = useState({
+    searchQuery: "",
+    selectedFilters: { rarity: "", type: "", set: "" },
+    scrollPosition: 0,
+  });
+  const [isStateLoaded, setIsStateLoaded] = useState(false);
+
+  // Load saved state on component mount
+  useEffect(() => {
+    const loadSavedState = async () => {
+      try {
+        const state = await loadSearchState();
+        setSavedState(state);
+      } catch (error) {
+        logger.error("Failed to load search state:", error);
+      } finally {
+        setIsStateLoaded(true);
       }
-    } catch (error) {
-      logger.error("Failed to load search state:", error);
-    }
-    return {
-      searchQuery: "",
-      selectedFilters: { rarity: "", type: "", set: "" },
-      scrollPosition: 0,
     };
-  };
 
-  const savedState = loadSavedState();
+    loadSavedState();
+  }, []);
 
-  // Component state
-  const [searchQuery, setSearchQuery] = useState(savedState.searchQuery);
-  const [selectedFilters, setSelectedFilters] = useState(
-    savedState.selectedFilters
-  );
-  const [scrollPosition, setScrollPosition] = useState(
-    savedState.scrollPosition
-  );
+  // Component state - only initialize after saved state is loaded
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedFilters, setSelectedFilters] = useState({
+    rarity: "",
+    type: "",
+    set: "",
+  });
+  const [scrollPosition, setScrollPosition] = useState(0);
   const [recentlyAdded, setRecentlyAdded] = useState(new Set());
   const [pulsing, setPulsing] = useState(new Set());
   const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
@@ -59,6 +57,15 @@ const CardSearchQuery = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
 
   const searchInputRef = useRef(null);
   const resultsRef = useRef(null);
+
+  // Initialize state once saved state is loaded
+  useEffect(() => {
+    if (isStateLoaded) {
+      setSearchQuery(savedState.searchQuery);
+      setSelectedFilters(savedState.selectedFilters);
+      setScrollPosition(savedState.scrollPosition);
+    }
+  }, [isStateLoaded, savedState]);
 
   // Debounce search query and filters
   useEffect(() => {
@@ -102,22 +109,24 @@ const CardSearchQuery = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
   }, [searchResults]);
 
   // State persistence
-  const saveState = useCallback(() => {
+  const saveState = useCallback(async () => {
     try {
       const stateToSave = {
         searchQuery,
         selectedFilters,
         scrollPosition,
       };
-      localStorage.setItem(SEARCH_STATE_KEY, JSON.stringify(stateToSave));
+      await saveSearchState(stateToSave);
     } catch (error) {
       logger.error("Failed to save search state:", error);
     }
   }, [searchQuery, selectedFilters, scrollPosition]);
 
   useEffect(() => {
-    saveState();
-  }, [searchQuery, selectedFilters, scrollPosition]);
+    if (isStateLoaded) {
+      saveState();
+    }
+  }, [searchQuery, selectedFilters, scrollPosition, isStateLoaded, saveState]);
 
   // Modal lifecycle effects
   useEffect(() => {
@@ -181,12 +190,16 @@ const CardSearchQuery = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
     setScrollPosition(0);
   };
 
-  const handleClearAll = () => {
+  const handleClearAll = async () => {
     setSearchQuery("");
     setSelectedFilters({ rarity: "", type: "", set: "" });
     setScrollPosition(0);
     setHasSearched(false);
-    localStorage.removeItem(SEARCH_STATE_KEY);
+    try {
+      await clearSearchState();
+    } catch (error) {
+      logger.error("Failed to clear search state:", error);
+    }
   };
 
   const handleAddCard = (card, isReverseHolo = false) => {

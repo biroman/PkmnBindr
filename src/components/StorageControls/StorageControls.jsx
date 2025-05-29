@@ -1,7 +1,10 @@
 import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { Save, Upload, Check, AlertCircle } from "lucide-react";
-import { exportBinderData, importBinderData } from "../../utils/storageUtils";
+import {
+  exportBinderData,
+  importBinderData,
+} from "../../utils/storageUtilsIndexedDB";
 import { useTheme } from "../../theme/ThemeContent";
 
 const StorageControls = ({ onDataImported }) => {

@@ -21,8 +21,8 @@ import {
   useKeyboardShortcuts,
 } from "./hooks";
 
-// Storage utilities
-import { getLayoutPrefs, saveLayoutPrefs } from "./utils/storageUtils";
+// Updated storage utilities (IndexedDB)
+import { getLayoutPrefs, saveLayoutPrefs } from "./utils/storageUtilsIndexedDB";
 import logger from "./utils/logger";
 
 /**
@@ -177,12 +177,28 @@ const App = () => {
 
   // ===== LAYOUT PERSISTENCE =====
   useEffect(() => {
-    const savedLayout = getLayoutPrefs();
-    if (savedLayout) setLayout(savedLayout);
+    const loadSavedLayout = async () => {
+      try {
+        const savedLayout = await getLayoutPrefs();
+        if (savedLayout) setLayout(savedLayout);
+      } catch (error) {
+        logger.warn("Failed to load layout preferences:", error);
+      }
+    };
+
+    loadSavedLayout();
   }, []);
 
   useEffect(() => {
-    saveLayoutPrefs(layout);
+    const saveLayout = async () => {
+      try {
+        await saveLayoutPrefs(layout);
+      } catch (error) {
+        logger.warn("Failed to save layout preferences:", error);
+      }
+    };
+
+    saveLayout();
   }, [layout]);
 
   // ===== BINDER SYNC LOGIC =====
@@ -505,8 +521,8 @@ const App = () => {
 
   // ===== OTHER ENHANCED HANDLERS =====
   const handleAddToCurrentPage = useCallback(
-    (card) => {
-      const result = baseHandleAddToCurrentPage(
+    async (card) => {
+      const result = await baseHandleAddToCurrentPage(
         card,
         currentBinder,
         layout,
@@ -534,8 +550,8 @@ const App = () => {
   );
 
   const handleMoveFromClipboard = useCallback(
-    (clipboardIndex, binderPosition, cardId, isReverseHolo) => {
-      const result = baseHandleMoveFromClipboard(
+    async (clipboardIndex, binderPosition, cardId, isReverseHolo) => {
+      const result = await baseHandleMoveFromClipboard(
         clipboardIndex,
         binderPosition,
         cardId,

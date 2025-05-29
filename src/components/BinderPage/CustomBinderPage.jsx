@@ -18,11 +18,25 @@ import { useTheme } from "../../theme/ThemeContent";
 import { useContextMenu } from "../../hooks";
 import ContextMenu from "../ContextMenu/ContextMenu";
 import MoveCardsModal from "./MoveCardsModal";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import {
-  addPageToBinder,
-  removePageFromBinder,
-} from "../../utils/storageUtils";
+  getCustomCards,
+  addCustomCard,
+  removeCustomCard,
+  reorderCustomCards,
+  updateHistoryWithFinalState,
+  getBinderHistory,
+  addHistoryEntry,
+  saveBinder,
+  getAllBinders,
+  getMissingCards,
+  saveToClipboard,
+  getCardClipboard,
+  updateCardClipboard,
+  parseMissingCards,
+  addToMissingCards,
+  updateMissingCards,
+} from "../../utils/storageUtilsIndexedDB";
 
 const CustomBinderPage = ({
   cards = [],
@@ -286,6 +300,7 @@ const CustomBinderPage = ({
           // Only allow dropping on empty slots from clipboard
           // Call the parent to handle moving card from clipboard to binder
           if (onMoveFromClipboard) {
+            // Call async function and handle the result
             onMoveFromClipboard(
               dragData.clipboardIndex,
               targetIndex,

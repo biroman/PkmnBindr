@@ -3,18 +3,10 @@ import { Palette, Check } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 const ThemeSelector = () => {
-  const { theme, setTheme, previewTheme, currentThemeName, themes } =
+  const { theme, changeTheme, currentTheme, availableThemes, themes } =
     useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-
-  const handleMouseEnter = (themeName) => {
-    previewTheme(themeName);
-  };
-
-  const handleMouseLeave = () => {
-    previewTheme(null);
-  };
 
   const handleToggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -22,7 +14,6 @@ const ThemeSelector = () => {
 
   const handleCloseDropdown = () => {
     setIsOpen(false);
-    previewTheme(null);
   };
 
   // Handle click outside to close dropdown
@@ -60,21 +51,19 @@ const ThemeSelector = () => {
         }
           ${isOpen ? "visible opacity-100" : "invisible opacity-0"} 
         transition-all duration-200 z-50`}
-        onMouseLeave={handleMouseLeave}
       >
-        {Object.entries(themes)
-          .filter(([key]) => !key.endsWith("_dark")) // Only show light themes
-          .map(([key, themeOption]) => {
-            const isSelected = currentThemeName === key;
+        {availableThemes
+          .filter((themeName) => !themeName.endsWith("_dark")) // Only show light themes
+          .map((themeName) => {
+            const isSelected = currentTheme === themeName;
 
             return (
               <button
-                key={key}
+                key={themeName}
                 onClick={() => {
-                  setTheme(key);
+                  changeTheme(themeName);
                   handleCloseDropdown();
                 }}
-                onMouseEnter={() => handleMouseEnter(key)}
                 className={`w-full px-4 py-2 text-left transition-all duration-200 flex items-center justify-between group/item
                 ${theme.colors.dropdown.hover}
                 ${
@@ -83,7 +72,7 @@ const ThemeSelector = () => {
                     : `${theme.colors.text.primary}`
                 }`}
               >
-                <span>{themeOption.name}</span>
+                <span>{themes[themeName]?.name || themeName}</span>
                 {isSelected && (
                   <Check className={`w-4 h-4 ${theme.colors.text.accent}`} />
                 )}

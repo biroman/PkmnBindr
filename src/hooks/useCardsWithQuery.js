@@ -9,7 +9,12 @@ import {
   updateHistoryWithFinalState,
   getBinderHistory,
   addHistoryEntry,
-} from "../utils/storageUtils";
+  saveBinder,
+  getAllBinders,
+  throttleApiCall,
+  getApiDelay,
+  recordApiCall,
+} from "../utils/storageUtilsIndexedDB";
 
 /**
  * Enhanced useCards hook that integrates React Query for API calls

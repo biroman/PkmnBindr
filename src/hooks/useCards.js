@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { parseCardList } from "../utils/parseCardList";
 import {
   getSetFromCache,
   saveSetToCache,
   getCustomCards,
+  saveCustomCard,
+  deleteCustomCard,
+  updateCustomCard,
   addCustomCard,
   removeCustomCard,
   reorderCustomCards,
@@ -11,11 +14,11 @@ import {
   getBinderHistory,
   addHistoryEntry,
   saveBinder,
-  getBinders,
+  getAllBinders,
   throttleApiCall,
   getApiDelay,
   recordApiCall,
-} from "../utils/storageUtils";
+} from "../utils/storageUtilsIndexedDB";
 import logger from "../utils/logger";
 
 const useCards = () => {
@@ -32,6 +35,12 @@ const useCards = () => {
   const [targetCardPosition, setTargetCardPosition] = useState(null);
 
   const processCards = (rawCards) => {
+    // Validate rawCards is an array before processing
+    if (!rawCards || !Array.isArray(rawCards)) {
+      logger.error("processCards received invalid rawCards:", rawCards);
+      return [];
+    }
+
     let processedCards = [...rawCards];
 
     // Add reverse holo versions for common and uncommon cards if enabled
@@ -76,7 +85,7 @@ const useCards = () => {
   };
 
   useEffect(() => {
-    if (rawCards.length > 0) {
+    if (rawCards && Array.isArray(rawCards) && rawCards.length > 0) {
       const processedCards = processCards(rawCards);
       setCards(processedCards);
     }
@@ -89,7 +98,7 @@ const useCards = () => {
     setError("");
 
     try {
-      let cardsData = getSetFromCache(selectedSet.id);
+      let cardsData = await getSetFromCache(selectedSet.id);
 
       if (!cardsData) {
         const cardsResponse = await fetch(
@@ -97,7 +106,7 @@ const useCards = () => {
         );
         const response = await cardsResponse.json();
         cardsData = response.data;
-        saveSetToCache(selectedSet.id, cardsData);
+        await saveSetToCache(selectedSet.id, cardsData);
       }
 
       setRawCards(cardsData); // Store the original cards
@@ -125,7 +134,7 @@ const useCards = () => {
   };
 
   // Custom card handlers
-  const handleAddCard = (
+  const handleAddCard = async (
     card,
     position = null,
     currentBinder,
@@ -133,114 +142,133 @@ const useCards = () => {
     currentPage
   ) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      // Use targetCardPosition if set (from clicking specific empty slot), otherwise use provided position
-      let targetPosition =
-        targetCardPosition !== null ? targetCardPosition : position;
+      try {
+        // Use targetCardPosition if set (from clicking specific empty slot), otherwise use provided position
+        let targetPosition =
+          targetCardPosition !== null ? targetCardPosition : position;
 
-      if (targetPosition === null) {
-        // Calculate current page range
-        const cardsPerPage = layout.cards;
-        let startIndex, endIndex;
-
-        if (currentPage === 0) {
-          // Right page only (page 0)
-          startIndex = 0;
-          endIndex = cardsPerPage - 1;
-        } else {
-          // Calculate for left and right pages
-          const leftPhysicalPage = 2 * currentPage - 1;
-          const rightPhysicalPage = 2 * currentPage;
-
-          // Start from left page, end at right page
-          startIndex = leftPhysicalPage * cardsPerPage;
-          endIndex = (rightPhysicalPage + 1) * cardsPerPage - 1;
-        }
-
-        // Find first empty spot in current page range
-        const currentCards = getCustomCards(currentBinder.id);
-        for (let i = startIndex; i <= endIndex; i++) {
-          if (!currentCards[i]) {
-            targetPosition = i;
-            break;
-          }
-        }
-
-        // If no empty spot on current page, find first empty spot globally
         if (targetPosition === null) {
-          const emptyIndex = currentCards.findIndex((card) => card === null);
-          if (emptyIndex >= 0) {
-            targetPosition = emptyIndex;
+          // Calculate current page range
+          const cardsPerPage = layout.cards;
+          let startIndex, endIndex;
+
+          if (currentPage === 0) {
+            // Right page only (page 0)
+            startIndex = 0;
+            endIndex = cardsPerPage - 1;
+          } else {
+            // Calculate for left and right pages
+            const leftPhysicalPage = 2 * currentPage - 1;
+            const rightPhysicalPage = 2 * currentPage;
+
+            // Start from left page, end at right page
+            startIndex = leftPhysicalPage * cardsPerPage;
+            endIndex = (rightPhysicalPage + 1) * cardsPerPage - 1;
+          }
+
+          // Find first empty spot in current page range
+          const currentCards = await getCustomCards(currentBinder.id);
+          for (let i = startIndex; i <= endIndex; i++) {
+            if (!currentCards[i]) {
+              targetPosition = i;
+              break;
+            }
+          }
+
+          // If no empty spot on current page, find first empty spot globally
+          if (targetPosition === null) {
+            const emptyIndex = currentCards.findIndex((card) => card === null);
+            if (emptyIndex >= 0) {
+              targetPosition = emptyIndex;
+            }
           }
         }
+
+        const addedCard = await addCustomCard(
+          currentBinder.id,
+          card,
+          targetPosition
+        );
+        if (addedCard) {
+          // Update history with final state after the action
+          await updateHistoryWithFinalState(currentBinder.id);
+
+          const updatedCards = await getCustomCards(currentBinder.id);
+          setCards(updatedCards);
+
+          // Clear the target position after adding the card
+          setTargetCardPosition(null);
+
+          return {
+            success: true,
+            updatedCards,
+            updatedHistory: await getBinderHistory(currentBinder.id),
+          };
+        }
+        return { success: false };
+      } catch (error) {
+        logger.error("Failed to add card:", error);
+        return { success: false, error };
       }
-
-      const addedCard = addCustomCard(currentBinder.id, card, targetPosition);
-      if (addedCard) {
-        // Update history with final state after the action
-        updateHistoryWithFinalState(currentBinder.id);
-
-        const updatedCards = getCustomCards(currentBinder.id);
-        setCards(updatedCards);
-
-        // Clear the target position after adding the card
-        setTargetCardPosition(null);
-
-        return {
-          success: true,
-          updatedCards,
-          updatedHistory: getBinderHistory(currentBinder.id),
-        };
-      }
-      return { success: false };
     }
     return { success: false };
   };
 
-  const handleRemoveCard = (cardIndex, currentBinder) => {
+  const handleRemoveCard = async (cardIndex, currentBinder) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      const success = removeCustomCard(currentBinder.id, cardIndex);
-      if (success) {
-        // Update history with final state after the action
-        updateHistoryWithFinalState(currentBinder.id);
+      try {
+        const success = await removeCustomCard(currentBinder.id, cardIndex);
+        if (success) {
+          // Update history with final state after the action
+          await updateHistoryWithFinalState(currentBinder.id);
 
-        const updatedCards = getCustomCards(currentBinder.id);
-        setCards(updatedCards);
+          const updatedCards = await getCustomCards(currentBinder.id);
+          setCards(updatedCards);
 
-        return {
-          success: true,
-          updatedCards,
-          updatedHistory: getBinderHistory(currentBinder.id),
-        };
+          return {
+            success: true,
+            updatedCards,
+            updatedHistory: await getBinderHistory(currentBinder.id),
+          };
+        }
+      } catch (error) {
+        logger.error("Failed to remove card:", error);
+        return { success: false, error };
       }
     }
     return { success: false };
   };
 
-  const handleReorderCards = (
+  const handleReorderCards = async (
     fromIndex,
     toIndex,
     isSwap = false,
     currentBinder
   ) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      const success = reorderCustomCards(
-        currentBinder.id,
-        fromIndex,
-        toIndex,
-        isSwap
-      );
-      if (success) {
-        // Update history with final state after the action
-        updateHistoryWithFinalState(currentBinder.id);
+      try {
+        const success = await reorderCustomCards(
+          currentBinder.id,
+          fromIndex,
+          toIndex,
+          isSwap
+        );
+        if (success) {
+          // Update history with final state after the action
+          await updateHistoryWithFinalState(currentBinder.id);
 
-        const updatedCards = getCustomCards(currentBinder.id);
-        setCards(updatedCards);
+          const updatedCards = await getCustomCards(currentBinder.id);
+          setCards(updatedCards);
 
-        return {
-          success: true,
-          updatedCards,
-          updatedHistory: getBinderHistory(currentBinder.id),
-        };
+          return {
+            success: true,
+            updatedCards,
+            updatedHistory: await getBinderHistory(currentBinder.id),
+          };
+        }
+      } catch (error) {
+        logger.error("Failed to reorder cards:", error);
+        return { success: false, error };
       }
     }
     return { success: false };
@@ -266,7 +294,7 @@ const useCards = () => {
     if (currentBinder && currentBinder.binderType === "custom") {
       try {
         // Get current cards
-        const currentCards = getCustomCards(currentBinder.id);
+        const currentCards = await getCustomCards(currentBinder.id);
         const newCards = [...currentCards];
 
         // Sort selected cards by their current position (descending) to avoid index issues when removing
@@ -316,7 +344,7 @@ const useCards = () => {
           (cardData) => cardData.globalIndex
         );
 
-        addHistoryEntry(currentBinder.id, "bulk_move", {
+        await addHistoryEntry(currentBinder.id, "bulk_move", {
           cardNames: cardNames,
           cardCount: selectedCardData.length,
           fromPositions: fromPositions,
@@ -376,10 +404,10 @@ const useCards = () => {
         };
 
         // Save to storage
-        saveBinder(updatedBinder);
+        await saveBinder(updatedBinder);
 
         // Update history with final state after the action
-        updateHistoryWithFinalState(currentBinder.id);
+        await updateHistoryWithFinalState(currentBinder.id);
 
         // Update state
         setCards(newCards);
@@ -388,7 +416,7 @@ const useCards = () => {
           success: true,
           updatedCards: newCards,
           updatedBinder,
-          updatedHistory: getBinderHistory(currentBinder.id),
+          updatedHistory: await getBinderHistory(currentBinder.id),
         };
       } catch (error) {
         logger.error("Error moving cards:", error);
@@ -407,9 +435,14 @@ const useCards = () => {
     setTargetCardPosition(null);
   };
 
-  const loadCustomCards = (binderId) => {
-    const savedCustomCards = getCustomCards(binderId);
-    setCards(savedCustomCards);
+  const loadCustomCards = async (binderId) => {
+    try {
+      const savedCustomCards = await getCustomCards(binderId);
+      setCards(savedCustomCards);
+    } catch (error) {
+      logger.error("Failed to load custom cards:", error);
+      setCards([]);
+    }
   };
 
   const loadSetCards = async (setData, processCardsFunc) => {
@@ -464,7 +497,7 @@ const useCards = () => {
     };
 
     try {
-      let cardsData = getSetFromCache(setData.id);
+      let cardsData = await getSetFromCache(setData.id);
 
       if (!cardsData) {
         logger.debug(`Fetching cards for set: ${setData.name} (${setData.id})`);
@@ -490,6 +523,11 @@ const useCards = () => {
         );
       } else {
         logger.debug(`Using cached cards for set: ${setData.name}`);
+      }
+
+      // Validate cardsData is an array before processing
+      if (!cardsData || !Array.isArray(cardsData)) {
+        throw new Error("rawCards is not iterable");
       }
 
       setRawCards(cardsData); // Store the original cards

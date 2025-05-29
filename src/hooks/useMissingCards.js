@@ -4,32 +4,39 @@ import {
   getMissingCards,
   saveMissingCards,
   saveBinder,
-} from "../utils/storageUtils";
+} from "../utils/storageUtilsIndexedDB";
+import logger from "../utils/logger";
 
 const useMissingCards = () => {
   const [missingCards, setMissingCards] = useState("");
   const [parsedMissingCards, setParsedMissingCards] = useState(new Set());
 
   // Load missing cards when set/binder changes
-  const loadMissingCards = useCallback((set, currentBinder) => {
-    if (set) {
-      const savedMissingCards = getMissingCards(set.id);
-      setParsedMissingCards(savedMissingCards);
-      const missingCardsText = Array.from(savedMissingCards)
-        .map((number) => `#${number}`)
-        .join("\n");
-      setMissingCards(missingCardsText);
-    } else if (currentBinder?.binderType === "custom") {
-      // Load missing cards for custom binder
-      const savedMissingCards = new Set(currentBinder.missingCards || []);
-      setParsedMissingCards(savedMissingCards);
-    } else {
+  const loadMissingCards = useCallback(async (set, currentBinder) => {
+    try {
+      if (set) {
+        const savedMissingCards = await getMissingCards(set.id);
+        setParsedMissingCards(savedMissingCards);
+        const missingCardsText = Array.from(savedMissingCards)
+          .map((number) => `#${number}`)
+          .join("\n");
+        setMissingCards(missingCardsText);
+      } else if (currentBinder?.binderType === "custom") {
+        // Load missing cards for custom binder
+        const savedMissingCards = new Set(currentBinder.missingCards || []);
+        setParsedMissingCards(savedMissingCards);
+      } else {
+        setMissingCards("");
+        setParsedMissingCards(new Set());
+      }
+    } catch (error) {
+      logger.error("Failed to load missing cards:", error);
       setMissingCards("");
       setParsedMissingCards(new Set());
     }
   }, []); // Empty dependency array since it only uses stable setState functions
 
-  const handleMissingCardsChange = (
+  const handleMissingCardsChange = async (
     e,
     set,
     rawCards,
@@ -39,36 +46,40 @@ const useMissingCards = () => {
     const text = e.target.value;
     setMissingCards(text);
 
-    // Only parse if we have a set loaded
-    if (set && rawCards.length > 0) {
-      const parsed = parseCardList(text, rawCards);
-      setParsedMissingCards(parsed);
+    try {
+      // Only parse if we have a set loaded
+      if (set && rawCards.length > 0) {
+        const parsed = parseCardList(text, rawCards);
+        setParsedMissingCards(parsed);
 
-      // Automatically save missing cards to storage
-      saveMissingCards(set.id, parsed);
+        // Automatically save missing cards to storage
+        await saveMissingCards(set.id, parsed);
 
-      // Update the current binder's missing cards data
-      if (currentBinder) {
-        const updatedBinder = {
-          ...currentBinder,
-          missingCards: {
-            ...currentBinder.missingCards,
-            [set.id]: Array.from(parsed),
-          },
-          updatedAt: new Date().toISOString(),
-        };
+        // Update the current binder's missing cards data
+        if (currentBinder) {
+          const updatedBinder = {
+            ...currentBinder,
+            missingCards: {
+              ...currentBinder.missingCards,
+              [set.id]: Array.from(parsed),
+            },
+            updatedAt: new Date().toISOString(),
+          };
 
-        // Save the updated binder
-        updateBinderState(updatedBinder);
+          // Save the updated binder
+          await updateBinderState(updatedBinder);
+        }
+      } else {
+        // If no set is loaded, just parse without card reference
+        const parsed = parseCardList(text, []);
+        setParsedMissingCards(parsed);
       }
-    } else {
-      // If no set is loaded, just parse without card reference
-      const parsed = parseCardList(text, []);
-      setParsedMissingCards(parsed);
+    } catch (error) {
+      logger.error("Failed to save missing cards:", error);
     }
   };
 
-  const handleToggleCardStatus = (
+  const handleToggleCardStatus = async (
     e,
     card,
     currentBinder,
@@ -77,69 +88,74 @@ const useMissingCards = () => {
   ) => {
     e.stopPropagation(); // Prevent opening the card modal
 
-    // Generate the appropriate card ID based on binder type and whether it's a reverse holo
-    const cardId =
-      currentBinder?.binderType === "custom"
-        ? card.isReverseHolo
-          ? `${card.positionId || card.id}_reverse`
-          : card.positionId || card.id
-        : card.isReverseHolo
-        ? `${card.number}_reverse`
-        : card.number;
+    try {
+      // Generate the appropriate card ID based on binder type and whether it's a reverse holo
+      const cardId =
+        currentBinder?.binderType === "custom"
+          ? card.isReverseHolo
+            ? `${card.positionId || card.id}_reverse`
+            : card.positionId || card.id
+          : card.isReverseHolo
+          ? `${card.number}_reverse`
+          : card.number;
 
-    const newMissingCards = new Set(parsedMissingCards);
+      const newMissingCards = new Set(parsedMissingCards);
 
-    if (newMissingCards.has(cardId)) {
-      // Remove card from missing cards (mark as collected)
-      newMissingCards.delete(cardId);
-    } else {
-      // Add card to missing cards (mark as missing)
-      newMissingCards.add(cardId);
-    }
+      if (newMissingCards.has(cardId)) {
+        // Remove card from missing cards (mark as collected)
+        newMissingCards.delete(cardId);
+      } else {
+        // Add card to missing cards (mark as missing)
+        newMissingCards.add(cardId);
+      }
 
-    setParsedMissingCards(newMissingCards);
+      setParsedMissingCards(newMissingCards);
 
-    // Update the text representation for set-based binders
-    if (currentBinder?.binderType !== "custom") {
-      const missingCardsText = Array.from(newMissingCards)
-        .map((number) => `#${number}`)
-        .join("\n");
-      setMissingCards(missingCardsText);
-    }
+      // Update the text representation for set-based binders
+      if (currentBinder?.binderType !== "custom") {
+        const missingCardsText = Array.from(newMissingCards)
+          .map((number) => `#${number}`)
+          .join("\n");
+        setMissingCards(missingCardsText);
+      }
 
-    // Save to storage
-    if (currentBinder?.binderType === "custom") {
-      // For custom binders, save missing cards to the binder data
-      const updatedBinder = {
-        ...currentBinder,
-        missingCards: Array.from(newMissingCards),
-        updatedAt: new Date().toISOString(),
-      };
-
-      updateBinderState(updatedBinder);
-    } else if (set) {
-      // For set-based binders, save to set-specific storage
-      saveMissingCards(set.id, newMissingCards);
-
-      // Update the current binder's missing cards data
-      if (currentBinder) {
+      // Save to storage
+      if (currentBinder?.binderType === "custom") {
+        // For custom binders, save missing cards to the binder data
         const updatedBinder = {
           ...currentBinder,
-          missingCards: {
-            ...currentBinder.missingCards,
-            [set.id]: Array.from(newMissingCards),
-          },
+          missingCards: Array.from(newMissingCards),
           updatedAt: new Date().toISOString(),
         };
 
-        updateBinderState(updatedBinder);
-      }
-    }
+        await updateBinderState(updatedBinder);
+      } else if (set) {
+        // For set-based binders, save to set-specific storage
+        await saveMissingCards(set.id, newMissingCards);
 
-    return {
-      success: true,
-      newMissingCards,
-    };
+        // Update the current binder's missing cards data
+        if (currentBinder) {
+          const updatedBinder = {
+            ...currentBinder,
+            missingCards: {
+              ...currentBinder.missingCards,
+              [set.id]: Array.from(newMissingCards),
+            },
+            updatedAt: new Date().toISOString(),
+          };
+
+          await updateBinderState(updatedBinder);
+        }
+      }
+
+      return {
+        success: true,
+        newMissingCards,
+      };
+    } catch (error) {
+      logger.error("Failed to toggle card status:", error);
+      return { success: false, error };
+    }
   };
 
   const calculateProgress = (cards, currentBinder) => {

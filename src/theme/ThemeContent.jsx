@@ -1,102 +1,70 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { themes } from "./themeConfig";
+import { getTheme, saveTheme } from "../utils/storageUtilsIndexedDB";
 
 const ThemeContext = createContext();
 
-// Helper function to get saved theme from localStorage
-const getSavedTheme = () => {
-  try {
-    const savedTheme = localStorage.getItem("pkmnbindr-theme");
-    return savedTheme && themes[savedTheme] ? savedTheme : "default";
-  } catch {
-    return "default";
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
-};
-
-// Helper function to get saved dark mode preference
-const getSavedDarkMode = () => {
-  try {
-    const savedDarkMode = localStorage.getItem("pkmnbindr-darkmode");
-    return savedDarkMode === "true";
-  } catch {
-    return false;
-  }
-};
-
-// Helper function to save theme to localStorage
-const saveTheme = (themeName) => {
-  try {
-    localStorage.setItem("pkmnbindr-theme", themeName);
-  } catch {
-    // Silently fail if localStorage is not available
-  }
-};
-
-// Helper function to save dark mode preference
-const saveDarkMode = (isDark) => {
-  try {
-    localStorage.setItem("pkmnbindr-darkmode", isDark.toString());
-  } catch {
-    // Silently fail if localStorage is not available
-  }
+  return context;
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [currentThemeName, setCurrentThemeName] = useState(() =>
-    getSavedTheme()
-  );
-  const [isDarkMode, setIsDarkMode] = useState(() => getSavedDarkMode());
-  const [previewTheme, setPreviewTheme] = useState(null);
+  const [currentTheme, setCurrentTheme] = useState("default"); // Default theme
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Get the actual theme based on current theme name and dark mode
-  const getActualTheme = (themeName, darkMode) => {
-    if (darkMode && themes[`${themeName}_dark`]) {
-      return themes[`${themeName}_dark`];
-    }
-    return themes[themeName];
-  };
-
-  const currentTheme = getActualTheme(currentThemeName, isDarkMode);
-
-  const value = {
-    theme: previewTheme || currentTheme,
-    setTheme: (themeName) => {
-      setCurrentThemeName(themeName);
-      setPreviewTheme(null); // Clear preview when theme is actually selected
-      saveTheme(themeName); // Persist theme preference
-    },
-    previewTheme: (themeName) => {
-      if (themeName) {
-        const previewThemeObj = getActualTheme(themeName, isDarkMode);
-        setPreviewTheme(previewThemeObj);
-      } else {
-        setPreviewTheme(null);
+  useEffect(() => {
+    const loadSavedTheme = async () => {
+      try {
+        const savedTheme = await getTheme();
+        if (savedTheme && themes[savedTheme]) {
+          setCurrentTheme(savedTheme);
+        }
+      } catch (error) {
+        console.warn("Failed to load theme from storage:", error);
+        // Keep default theme
+      } finally {
+        setIsLoading(false);
       }
-    },
-    currentThemeName,
-    isDarkMode,
-    setDarkMode: (darkMode) => {
-      setIsDarkMode(darkMode);
-      saveDarkMode(darkMode);
-      setPreviewTheme(null); // Clear preview when dark mode changes
-    },
-    themes,
+    };
+
+    loadSavedTheme();
+  }, []);
+
+  const changeTheme = async (themeName) => {
+    if (themes[themeName]) {
+      setCurrentTheme(themeName);
+      try {
+        await saveTheme(themeName);
+      } catch (error) {
+        console.warn("Failed to save theme to storage:", error);
+      }
+    }
   };
+
+  // Always provide a theme, even while loading
+  const theme = themes[currentTheme] || themes.default;
 
   return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider
+      value={{
+        theme,
+        currentTheme,
+        changeTheme,
+        availableThemes: Object.keys(themes),
+        themes,
+        isLoading,
+      }}
+    >
+      {children}
+    </ThemeContext.Provider>
   );
 };
 
 ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
-};
-
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
 };

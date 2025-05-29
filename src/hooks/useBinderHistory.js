@@ -1,58 +1,69 @@
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import {
   getBinderHistory,
-  revertToHistoryEntry,
   clearBinderHistory,
-  navigateHistory,
-  canNavigateHistory,
-  getHistoryPosition,
+  undoLastAction,
+  redoLastAction,
   getCustomCards,
-} from "../utils/storageUtils";
+} from "../utils/storageUtilsIndexedDB";
+import logger from "../utils/logger";
 
 const useBinderHistory = () => {
   const [historyEntries, setHistoryEntries] = useState([]);
   const [isHistoryCollapsed, setIsHistoryCollapsed] = useState(true);
 
-  const handleRevertToEntry = (currentBinder, entryId) => {
+  const handleClearHistory = async (currentBinder) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      const success = revertToHistoryEntry(currentBinder.id, entryId);
-      if (success) {
-        // Refresh the binder state
-        const updatedCustomCards = getCustomCards(currentBinder.id);
-        const updatedHistory = getBinderHistory(currentBinder.id);
-        setHistoryEntries(updatedHistory);
+      try {
+        await clearBinderHistory(currentBinder.id);
+        setHistoryEntries([]);
+      } catch (error) {
+        logger.error("Failed to clear history:", error);
+      }
+    }
+  };
 
-        return {
-          success: true,
-          updatedCustomCards,
-          updatedHistory,
-        };
+  const handleUndoAction = async (currentBinder) => {
+    if (currentBinder && currentBinder.binderType === "custom") {
+      try {
+        const success = await undoLastAction(currentBinder.id);
+        if (success) {
+          // Refresh the binder state
+          const updatedCustomCards = await getCustomCards(currentBinder.id);
+          const updatedHistory = await getBinderHistory(currentBinder.id);
+          setHistoryEntries(updatedHistory);
+
+          return {
+            success: true,
+            updatedCustomCards,
+            updatedHistory,
+          };
+        }
+      } catch (error) {
+        logger.error("Failed to undo action:", error);
       }
     }
     return { success: false };
   };
 
-  const handleClearHistory = (currentBinder) => {
+  const handleRedoAction = async (currentBinder) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      clearBinderHistory(currentBinder.id);
-      setHistoryEntries([]);
-    }
-  };
+      try {
+        const success = await redoLastAction(currentBinder.id);
+        if (success) {
+          // Refresh the binder state
+          const updatedCustomCards = await getCustomCards(currentBinder.id);
+          const updatedHistory = await getBinderHistory(currentBinder.id);
+          setHistoryEntries(updatedHistory);
 
-  const handleNavigateHistory = (currentBinder, direction) => {
-    if (currentBinder && currentBinder.binderType === "custom") {
-      const success = navigateHistory(currentBinder.id, direction);
-      if (success) {
-        // Refresh the binder state
-        const updatedCustomCards = getCustomCards(currentBinder.id);
-        const updatedHistory = getBinderHistory(currentBinder.id);
-        setHistoryEntries(updatedHistory);
-
-        return {
-          success: true,
-          updatedCustomCards,
-          updatedHistory,
-        };
+          return {
+            success: true,
+            updatedCustomCards,
+            updatedHistory,
+          };
+        }
+      } catch (error) {
+        logger.error("Failed to redo action:", error);
       }
     }
     return { success: false };
@@ -83,58 +94,30 @@ const useBinderHistory = () => {
     }
   };
 
-  const handleNavigateHistoryWithPageJump = (
+  const handleNavigateHistoryWithPageJump = async (
     currentBinder,
     direction,
     layout,
     setCurrentPage
   ) => {
     if (currentBinder && currentBinder.binderType === "custom") {
-      // Get the entry we're navigating to
-      const history = getBinderHistory(currentBinder.id);
-      const currentPosition = getHistoryPosition(currentBinder.id);
-      let targetEntry = null;
+      try {
+        // Get the entry we're navigating to
+        const history = await getBinderHistory(currentBinder.id);
 
-      if (direction === "back") {
-        if (currentPosition === -1) {
-          targetEntry = history[history.length - 1];
-        } else if (currentPosition > 0) {
-          targetEntry = history[currentPosition - 1];
+        // For now, just use undo/redo logic
+        let result = { success: false };
+        if (direction === "back") {
+          result = await handleUndoAction(currentBinder);
+        } else if (direction === "forward") {
+          result = await handleRedoAction(currentBinder);
         }
-      } else if (direction === "forward") {
-        if (currentPosition !== -1 && currentPosition < history.length - 1) {
-          targetEntry = history[currentPosition + 1];
-        }
+
+        // TODO: Add page jumping logic when needed
+        return result;
+      } catch (error) {
+        logger.error("Failed to navigate history with page jump:", error);
       }
-
-      // Calculate page and navigate if we have a target entry
-      if (targetEntry) {
-        let targetPosition = null;
-
-        if (targetEntry.position !== undefined) {
-          targetPosition = targetEntry.position;
-        } else if (targetEntry.toPosition !== undefined) {
-          targetPosition = targetEntry.toPosition;
-        } else if (targetEntry.fromPosition !== undefined) {
-          targetPosition = targetEntry.fromPosition;
-        } else if (
-          targetEntry.action === "bulk_move" &&
-          targetEntry.targetPosition !== undefined
-        ) {
-          targetPosition = targetEntry.targetPosition;
-        }
-
-        if (targetPosition !== null) {
-          const targetPage = calculatePageFromPosition(
-            targetPosition,
-            layout.cards
-          );
-          setCurrentPage(targetPage);
-        }
-      }
-
-      // Perform the actual history navigation
-      return handleNavigateHistory(currentBinder, direction);
     }
     return { success: false };
   };
@@ -143,27 +126,33 @@ const useBinderHistory = () => {
     setIsHistoryCollapsed(!isHistoryCollapsed);
   };
 
-  const loadHistoryForBinder = (binderId) => {
+  const loadHistoryForBinder = async (binderId) => {
     if (binderId) {
-      const savedHistory = getBinderHistory(binderId);
-      setHistoryEntries(savedHistory);
+      try {
+        const savedHistory = await getBinderHistory(binderId);
+        setHistoryEntries(savedHistory);
+      } catch (error) {
+        logger.error("Failed to load history for binder:", error);
+        setHistoryEntries([]);
+      }
     } else {
       setHistoryEntries([]);
     }
   };
 
   const canNavigateBack = (currentBinder) => {
-    return currentBinder ? canNavigateHistory(currentBinder.id, "back") : false;
+    // For now, simplified check - can undo if there are history entries
+    return historyEntries.length > 0;
   };
 
   const canNavigateForward = (currentBinder) => {
-    return currentBinder
-      ? canNavigateHistory(currentBinder.id, "forward")
-      : false;
+    // For now, simplified check - will be enhanced when redo state tracking is added
+    return false;
   };
 
   const getCurrentPosition = (currentBinder) => {
-    return currentBinder ? getHistoryPosition(currentBinder.id) : -1;
+    // Simplified for now
+    return historyEntries.length;
   };
 
   return {
@@ -172,9 +161,9 @@ const useBinderHistory = () => {
     isHistoryCollapsed,
 
     // Actions
-    handleRevertToEntry,
     handleClearHistory,
-    handleNavigateHistory,
+    handleUndoAction,
+    handleRedoAction,
     handleNavigateToPage,
     handleNavigateHistoryWithPageJump,
     handleToggleHistory,
