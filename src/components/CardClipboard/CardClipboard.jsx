@@ -19,8 +19,7 @@ const CardClipboard = ({
   // Get high-res image URL
   const getHighResImageUrl = (card) => {
     const setCode = card.set.id.toLowerCase();
-    const paddedNumber = card.number.padStart(3, "0");
-    return `https://img.pkmnbindr.com/${setCode}/${paddedNumber}.jpg`;
+    return `https://images.pokemontcg.io/${setCode}/${card.number}.png`;
   };
 
   const handleDragStart = (e, card, index) => {

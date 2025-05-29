@@ -1111,29 +1111,9 @@ const App = () => {
                     px-3 py-1.5 ${theme.colors.background.card} rounded-lg
                     border ${theme.colors.border.accent}
                     text-sm font-medium ${theme.colors.text.primary}
-                    min-w-[120px] text-center cursor-pointer
-                    hover:shadow-lg transition-all duration-200
+                    min-w-[120px] text-center
+                    transition-all duration-200
                   `}
-                  title="Hover and scroll to navigate pages quickly"
-                  onWheel={(e) => {
-                    e.preventDefault();
-                    const totalPhysicalPages = Math.ceil(
-                      cards.length / layout.cards
-                    );
-                    const adjustedTotalPages = Math.ceil(
-                      (totalPhysicalPages + 1) / 2
-                    );
-
-                    if (e.deltaY > 0) {
-                      // Scroll up - previous page
-                      setCurrentPage((p) => Math.max(p - 1, 0));
-                    } else {
-                      // Scroll down - next page
-                      setCurrentPage((p) =>
-                        Math.min(p + 1, adjustedTotalPages - 1)
-                      );
-                    }
-                  }}
                 >
                   {(() => {
                     const totalPhysicalPages = Math.ceil(
@@ -1190,34 +1170,43 @@ const App = () => {
 
           {/* Right Section */}
           <div className="flex items-center gap-3 justify-end">
-            {/* Collection Progress - Responsive version */}
+            {/* Collection Progress - Enhanced Design */}
             {(totalCards > 0 ||
               (isCustomBinder && actualCardsInBinder > 0)) && (
-              <div className="flex items-center gap-3 lg:gap-4">
-                <div className="flex items-center gap-2 lg:gap-3">
-                  <span
-                    className={`text-xs lg:text-sm font-medium ${theme.colors.text.accent} hidden sm:inline`}
-                  >
-                    {isCustomBinder ? "Collection:" : "Collection:"}
-                  </span>
-                  <span
-                    className={`text-sm lg:text-base font-bold ${theme.colors.text.primary} min-w-[80px] text-right`}
-                  >
-                    {isCustomBinder
-                      ? `${collectedCount} / ${actualCardsInBinder}`
-                      : `${collectedCount} / ${totalCards}`}
-                  </span>
-                  <span
-                    className={`text-xs lg:text-sm ${theme.colors.text.secondary} hidden md:inline font-medium`}
-                  >
-                    ({progressPercentage.toFixed(1)}%)
-                  </span>
-                </div>
-                <div className="w-24 lg:w-32 h-2.5 bg-gray-700 rounded-full overflow-hidden shadow-inner">
-                  <div
-                    className={`h-full bg-gradient-to-r ${theme.colors.progress.from} ${theme.colors.progress.to} transition-all duration-500 ease-out`}
-                    style={{ width: `${progressPercentage}%` }}
-                  />
+              <div className="flex items-center gap-4">
+                <div className="text-right">
+                  <div className="flex items-center justify-end gap-2 mb-1">
+                    <span
+                      className={`text-sm font-bold ${theme.colors.text.primary}`}
+                    >
+                      {isCustomBinder
+                        ? `${collectedCount}/${actualCardsInBinder}`
+                        : `${collectedCount}/${totalCards}`}
+                    </span>
+                    <span
+                      className={`text-xs ${theme.colors.text.secondary} font-medium`}
+                    >
+                      Collected
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-32 h-2 bg-gray-700 rounded-full overflow-hidden shadow-inner relative">
+                      <div
+                        className={`h-full bg-gradient-to-r ${theme.colors.progress.from} ${theme.colors.progress.to} transition-all duration-500 ease-out rounded-full`}
+                        style={{ width: `${progressPercentage}%` }}
+                      />
+                      {/* Progress bar glow effect */}
+                      <div
+                        className={`absolute top-0 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500 ease-out rounded-full`}
+                        style={{ width: `${progressPercentage}%` }}
+                      />
+                    </div>
+                    <span
+                      className={`text-sm font-bold ${theme.colors.text.accent} min-w-[45px]`}
+                    >
+                      {progressPercentage.toFixed(1)}%
+                    </span>
+                  </div>
                 </div>
               </div>
             )}
@@ -1566,6 +1555,7 @@ const App = () => {
                 parsedMissingCards={parsedMissingCards}
                 onToggleCardStatus={handleToggleCardStatus}
                 onMoveCards={handleMoveCards}
+                onPageChange={setCurrentPage}
               />
             ) : (
               <BinderPage

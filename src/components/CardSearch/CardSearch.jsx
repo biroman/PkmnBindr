@@ -9,6 +9,9 @@ import {
   Loader2,
   Clipboard,
   Check,
+  HelpCircle,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { useTheme } from "../../theme/ThemeContent";
 
@@ -50,6 +53,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
   );
   const [recentlyAdded, setRecentlyAdded] = useState(new Set());
   const [pulsing, setPulsing] = useState(new Set()); // For pulse effect on already-added buttons
+  const [showSearchHelp, setShowSearchHelp] = useState(false);
   const searchInputRef = useRef(null);
   const resultsRef = useRef(null);
 
@@ -142,11 +146,70 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
 
     setLoading(true);
     try {
-      // Build search query
+      // Build search query with enhanced parsing
       let searchParams = [];
 
       if (query.trim()) {
-        searchParams.push(`name:"${query.trim()}*"`);
+        const trimmedQuery = query.trim();
+
+        // Parse different search patterns
+        const patterns = {
+          // Pattern: "Pikachu #5" or "Pikachu #005" - name with number
+          nameWithNumber: /^(.+?)\s*#(\d+)$/i,
+          // Pattern: "artist:Mitsuhiro Arita" - artist search
+          artist: /^artist:\s*(.+)$/i,
+          // Pattern: "number:5" or "num:5" - number only search
+          numberOnly: /^(?:number|num):\s*(\d+)$/i,
+          // Pattern: "set:base1 Pikachu" - set with name
+          setWithName: /^set:(\w+)\s+(.+)$/i,
+        };
+
+        let matched = false;
+
+        // Check for name with number pattern (e.g., "Pikachu #5")
+        const nameNumberMatch = trimmedQuery.match(patterns.nameWithNumber);
+        if (nameNumberMatch) {
+          const [, cardName, cardNumber] = nameNumberMatch;
+          searchParams.push(`name:"${cardName.trim()}*"`);
+          searchParams.push(`number:"${cardNumber}"`);
+          matched = true;
+        }
+
+        // Check for artist search pattern (e.g., "artist:Mitsuhiro Arita")
+        const artistMatch = trimmedQuery.match(patterns.artist);
+        if (artistMatch && !matched) {
+          const [, artistName] = artistMatch;
+          searchParams.push(`artist:"${artistName.trim()}*"`);
+          matched = true;
+        }
+
+        // Check for number only search (e.g., "number:5")
+        const numberMatch = trimmedQuery.match(patterns.numberOnly);
+        if (numberMatch && !matched) {
+          const [, cardNumber] = numberMatch;
+          searchParams.push(`number:"${cardNumber}"`);
+          matched = true;
+        }
+
+        // Check for set with name pattern (e.g., "set:base1 Pikachu")
+        const setNameMatch = trimmedQuery.match(patterns.setWithName);
+        if (setNameMatch && !matched) {
+          const [, setId, cardName] = setNameMatch;
+          searchParams.push(`set.id:"${setId}"`);
+          searchParams.push(`name:"${cardName.trim()}*"`);
+          matched = true;
+        }
+
+        // If no special pattern matched, treat as regular name search
+        if (!matched) {
+          // Check if it's just a number (for number-only searches without prefix)
+          if (/^\d+$/.test(trimmedQuery)) {
+            searchParams.push(`number:"${trimmedQuery}"`);
+          } else {
+            // Regular name search
+            searchParams.push(`name:"${trimmedQuery}*"`);
+          }
+        }
       }
 
       if (filters.rarity) {
@@ -329,7 +392,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search for cards by name..."
+                    placeholder="Search: Pikachu, Pikachu #25, artist:Ken Sugimori, number:5..."
                     className={`w-full pl-10 pr-4 py-3 rounded-xl ${theme.colors.background.card} border ${theme.colors.border.accent} ${theme.colors.text.primary} focus:outline-none focus:ring-2 focus:ring-blue-500/50`}
                   />
                 </div>
@@ -347,6 +410,127 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
                 </button>
               </div>
             </form>
+
+            {/* Search Help Section */}
+            <div className="mt-4">
+              <button
+                onClick={() => setShowSearchHelp(!showSearchHelp)}
+                className={`flex items-center gap-2 text-sm ${theme.colors.text.secondary} hover:${theme.colors.text.primary} transition-colors`}
+              >
+                <HelpCircle className="w-4 h-4" />
+                <span>Search Help & Examples</span>
+                {showSearchHelp ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </button>
+
+              {showSearchHelp && (
+                <div
+                  className={`mt-3 p-4 rounded-lg ${theme.colors.background.card} border ${theme.colors.border.accent}`}
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h4
+                        className={`font-medium ${theme.colors.text.primary} mb-2`}
+                      >
+                        Search Patterns
+                      </h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            Pikachu
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Card name
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            Pikachu #25
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Name + number
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            25
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Number only
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            number:25
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Explicit number
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4
+                        className={`font-medium ${theme.colors.text.primary} mb-2`}
+                      >
+                        Advanced Search
+                      </h4>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            artist:Ken Sugimori
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            By artist
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            artist:Mitsuhiro Arita
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Artist search
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <code
+                            className={`px-2 py-1 rounded ${theme.colors.background.sidebar} font-mono text-xs`}
+                          >
+                            set:base1 Charizard
+                          </code>
+                          <span className={theme.colors.text.secondary}>
+                            Set + name
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className={`mt-3 pt-3 border-t ${theme.colors.border.accent}`}
+                  >
+                    <p className={`text-xs ${theme.colors.text.secondary}`}>
+                      💡 <strong>Tip:</strong> Combine search patterns with the
+                      filters below for even more precise results!
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Results */}
@@ -520,7 +704,7 @@ const CardSearch = ({ onAddCard, onAddToClipboard, isOpen, onClose }) => {
 
         {/* Filters Sidebar */}
         <div
-          className={`w-80 ${theme.colors.background.sidebar} border-l ${theme.colors.border.light} p-6 overflow-y-auto`}
+          className={`w-80 ${theme.colors.background.sidebar} ${theme.colors.border.light} p-6 border-l overflow-y-auto rounded-r-2xl`}
         >
           <div className="space-y-6">
             <div className="flex items-center gap-2 mb-4">
