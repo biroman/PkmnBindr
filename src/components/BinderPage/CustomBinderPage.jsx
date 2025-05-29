@@ -10,11 +10,19 @@ import {
   CircleHelp,
   ChevronLeft,
   ChevronRight,
+  Undo2,
+  Clipboard,
 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
+import { useContextMenu } from "../../hooks";
+import ContextMenu from "../ContextMenu/ContextMenu";
 import MoveCardsModal from "./MoveCardsModal";
 import { useState, useMemo, useEffect } from "react";
+import {
+  addPageToBinder,
+  removePageFromBinder,
+} from "../../utils/storageUtils";
 
 const CustomBinderPage = ({
   cards = [],
@@ -28,8 +36,11 @@ const CustomBinderPage = ({
   onToggleCardStatus,
   onMoveCards,
   onPageChange,
+  currentBinder,
+  onCardsUpdate,
 }) => {
   const { theme } = useTheme();
+  const { contextMenu, handleContextMenu, closeContextMenu } = useContextMenu();
   const [draggedCard, setDraggedCard] = useState(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
   const [dragOverZone, setDragOverZone] = useState(null);
@@ -216,6 +227,30 @@ const CustomBinderPage = ({
     setDraggedCard({ card, globalIndex });
     e.dataTransfer.effectAllowed = "move";
 
+    // Create enhanced drag image (same style as clipboard)
+    const dragImage = document.createElement("div");
+    dragImage.style.width = "80px";
+    dragImage.style.height = "112px";
+    dragImage.style.background = `url(${card.images.small}) center/cover`;
+    dragImage.style.borderRadius = "8px";
+    dragImage.style.border = "2px solid #3b82f6";
+    dragImage.style.boxShadow = "0 8px 25px rgba(0,0,0,0.3)";
+    dragImage.style.position = "absolute";
+    dragImage.style.top = "-1000px";
+    dragImage.style.transform = "rotate(-5deg) scale(1.1)";
+    dragImage.style.pointerEvents = "none";
+    dragImage.style.zIndex = "9999";
+
+    document.body.appendChild(dragImage);
+    e.dataTransfer.setDragImage(dragImage, 40, 56);
+
+    // Clean up after drag starts
+    setTimeout(() => {
+      if (document.body.contains(dragImage)) {
+        document.body.removeChild(dragImage);
+      }
+    }, 1);
+
     // Set drag data for clipboard to read
     const dragData = {
       card,
@@ -223,36 +258,6 @@ const CustomBinderPage = ({
       source: "binder",
     };
     e.dataTransfer.setData("text/plain", JSON.stringify(dragData));
-
-    // Find the actual card image element
-    const cardImg = e.currentTarget.querySelector("img");
-    if (cardImg) {
-      // Create a smaller drag image
-      const dragImage = document.createElement("img");
-      dragImage.src = cardImg.src;
-      dragImage.style.width = "120px";
-      dragImage.style.height = "auto";
-      dragImage.style.transform = "rotate(-5deg) scale(1.05)";
-      dragImage.style.boxShadow = "0 10px 30px rgba(0,0,0,0.3)";
-      dragImage.style.borderRadius = "8px";
-      dragImage.style.position = "absolute";
-      dragImage.style.top = "-1000px";
-      dragImage.style.left = "-1000px";
-      dragImage.style.zIndex = "9999";
-      dragImage.style.pointerEvents = "none";
-
-      document.body.appendChild(dragImage);
-
-      // Set the drag image
-      e.dataTransfer.setDragImage(dragImage, 60, 84); // Center of 120px wide card
-
-      // Clean up after drag starts
-      setTimeout(() => {
-        if (document.body.contains(dragImage)) {
-          document.body.removeChild(dragImage);
-        }
-      }, 1);
-    }
   };
 
   const handleDragOver = (e, targetIndex) => {
@@ -349,7 +354,6 @@ const CustomBinderPage = ({
     }
 
     setSelectedCards(newSelectedCards);
-    console.log("Selected cards:", Array.from(newSelectedCards)); // Debug log
   };
 
   const toggleSelectionMode = () => {
@@ -369,10 +373,74 @@ const CustomBinderPage = ({
     targetPageIndex,
     moveOption
   ) => {
-    if (onMoveCards) {
-      await onMoveCards(selectedCardData, targetPageIndex, moveOption);
+    const success = await onMoveCards(
+      selectedCardData,
+      targetPageIndex,
+      moveOption
+    );
+    if (success) {
       setSelectedCards(new Set());
       setIsSelectionMode(false);
+      setShowMoveModal(false);
+    }
+  };
+
+  // Handle adding a new page to the binder
+  const handleAddPage = () => {
+    if (!currentBinder || currentBinder.binderType !== "custom") {
+      return;
+    }
+
+    const result = addPageToBinder(currentBinder.id, layout.cards);
+    if (result && result.success && onCardsUpdate) {
+      // Notify parent component that cards have been updated
+      onCardsUpdate();
+
+      // Navigate to the new page if user wants
+      const newPageCount = Math.ceil(result.newLength / layout.cards);
+      const maxPage = Math.ceil((newPageCount + 1) / 2) - 1;
+
+      // Optionally navigate to the last page to show the new empty slots
+      if (currentPage < maxPage) {
+        onPageChange(maxPage);
+      }
+    }
+  };
+
+  // Handle removing the current page from the binder
+  const handleRemovePage = () => {
+    if (!currentBinder || currentBinder.binderType !== "custom") {
+      return;
+    }
+
+    // Don't allow removing the cover page (page 0)
+    if (currentPage <= 0) {
+      return;
+    }
+
+    const result = removePageFromBinder(
+      currentBinder.id,
+      currentPage,
+      layout.cards
+    );
+
+    if (result && result.success) {
+      // Notify parent component that cards have been updated
+      if (onCardsUpdate) {
+        onCardsUpdate();
+      }
+
+      // Navigate back if we're now beyond the last page
+      if (result.shouldNavigateBack && onPageChange) {
+        onPageChange(Math.max(0, result.newMaxPage));
+      }
+    } else if (result && result.hasCards) {
+      // Show an alert or notification that the page contains cards
+      alert(
+        `Cannot remove page: it contains ${result.cardCount} card${
+          result.cardCount !== 1 ? "s" : ""
+        }. Remove the cards first.`
+      );
     }
   };
 
@@ -738,7 +806,11 @@ const CustomBinderPage = ({
   };
 
   return (
-    <div className="h-full flex items-center justify-center p-4">
+    <div
+      className="h-full flex items-center justify-center p-4"
+      data-custom-context-menu
+      onContextMenu={handleContextMenu}
+    >
       <div className="flex flex-col items-center space-y-6">
         {/* Binder Container with Navigation Zones */}
         <div
@@ -856,10 +928,15 @@ const CustomBinderPage = ({
                             <span className="text-purple-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
                               •
                             </span>
-                            <span className="leading-relaxed">
-                              Drag cards to the clipboard on the right to store
-                              them between pages
-                            </span>
+                            <div className="leading-relaxed">
+                              Drag cards to the clipboard on the right
+                              <span
+                                className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
+                              >
+                                <Clipboard className="w-2.5 h-2.5 text-blue-500" />
+                              </span>{" "}
+                              to store them between pages
+                            </div>
                           </div>
                           <div className="flex items-start gap-3">
                             <span className="text-orange-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
@@ -882,9 +959,24 @@ const CustomBinderPage = ({
                             <span className="text-yellow-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
                               •
                             </span>
-                            <span className="leading-relaxed">
+                            <div className="leading-relaxed">
                               If you regret an action, you can undo it with the
-                              undo button in the bottom right corner
+                              undo button
+                              <span
+                                className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
+                              >
+                                <Undo2 className="w-2.5 h-2.5 text-blue-500" />
+                              </span>{" "}
+                              in the bottom right corner
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <span className="text-cyan-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                              •
+                            </span>
+                            <span className="leading-relaxed">
+                              Right-click anywhere to access quick actions like
+                              adding new pages
                             </span>
                           </div>
                         </div>
@@ -1025,7 +1117,6 @@ const CustomBinderPage = ({
             .map((cardKey) => {
               const globalIndex = parseInt(cardKey);
               const card = cards[globalIndex];
-              console.log("Processing card:", globalIndex, card); // Debug log
               return {
                 card,
                 globalIndex,
@@ -1038,6 +1129,17 @@ const CustomBinderPage = ({
           onMoveCards={handleMoveCards}
         />
       )}
+
+      {/* Context Menu */}
+      <ContextMenu
+        isVisible={contextMenu.isVisible}
+        position={contextMenu.position}
+        onClose={closeContextMenu}
+        onAddPage={handleAddPage}
+        onRemovePage={handleRemovePage}
+        currentBinder={currentBinder}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
@@ -1058,6 +1160,8 @@ CustomBinderPage.propTypes = {
   onToggleCardStatus: PropTypes.func,
   onMoveCards: PropTypes.func,
   onPageChange: PropTypes.func,
+  currentBinder: PropTypes.object,
+  onCardsUpdate: PropTypes.func,
 };
 
 export default CustomBinderPage;

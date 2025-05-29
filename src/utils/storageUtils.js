@@ -8,6 +8,8 @@ const STORAGE_KEYS = {
   BINDER_HISTORY: "pkmnbinder_binder_history", // New key for binder history
 };
 
+import logger from "./logger";
+
 const CACHE_EXPIRY = 24 * 60 * 60 * 1000;
 
 // Default binder structure
@@ -20,18 +22,6 @@ const DEFAULT_BINDER = {
   binderType: "set", // "set" or "custom"
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
-};
-
-// Initialize storage with default values if empty
-export const initializeStorage = () => {
-  const binders = localStorage.getItem(STORAGE_KEYS.BINDERS);
-  if (!binders) {
-    localStorage.setItem(
-      STORAGE_KEYS.BINDERS,
-      JSON.stringify([DEFAULT_BINDER])
-    );
-    localStorage.setItem(STORAGE_KEYS.CURRENT_BINDER, DEFAULT_BINDER.id);
-  }
 };
 
 // Get all binders
@@ -108,16 +98,18 @@ export const createBinder = (name) => {
 export const deleteBinder = (binderId) => {
   let binders = getBinders();
 
-  // Don't delete if it's the last binder
-  if (binders.length <= 1) return false;
-
   binders = binders.filter((b) => b.id !== binderId);
   localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
 
-  // If deleted binder was current, switch to first available
+  // If deleted binder was current and there are still binders left, switch to first available
   const currentBinderId = localStorage.getItem(STORAGE_KEYS.CURRENT_BINDER);
   if (binderId === currentBinderId) {
-    localStorage.setItem(STORAGE_KEYS.CURRENT_BINDER, binders[0].id);
+    if (binders.length > 0) {
+      localStorage.setItem(STORAGE_KEYS.CURRENT_BINDER, binders[0].id);
+    } else {
+      // No binders left, clear current binder
+      localStorage.removeItem(STORAGE_KEYS.CURRENT_BINDER);
+    }
   }
 
   return true;
@@ -189,7 +181,7 @@ export const importBinderData = async (file) => {
 
     return true;
   } catch (error) {
-    console.error("Error importing data:", error);
+    logger.error("Error importing data:", error);
     return false;
   }
 };
@@ -562,12 +554,12 @@ export const addHistoryEntry = (binderId, action, details) => {
   } catch (error) {
     if (error.name === "QuotaExceededError") {
       // If still hitting quota, reduce history further and try again
-      console.warn("localStorage quota exceeded, reducing history size");
+      logger.warn("localStorage quota exceeded, reducing history size");
       history.splice(0, Math.floor(history.length / 2)); // Keep only half
       try {
         localStorage.setItem(historyKey, JSON.stringify(history));
       } catch (secondError) {
-        console.error(
+        logger.error(
           "Unable to save history even after reduction:",
           secondError
         );
@@ -597,7 +589,7 @@ export const updateHistoryWithFinalState = (binderId) => {
       localStorage.setItem(historyKey, JSON.stringify(history));
     } catch (error) {
       if (error.name === "QuotaExceededError") {
-        console.warn(
+        logger.warn(
           "localStorage quota exceeded in updateHistoryWithFinalState, clearing old history"
         );
         // Remove older entries and try again
@@ -605,7 +597,7 @@ export const updateHistoryWithFinalState = (binderId) => {
         try {
           localStorage.setItem(historyKey, JSON.stringify(history));
         } catch (secondError) {
-          console.error(
+          logger.error(
             "Unable to save final state even after reduction:",
             secondError
           );
@@ -650,7 +642,7 @@ export const revertToHistoryEntry = (binderId, entryId) => {
         return true;
       } catch (error) {
         if (error.name === "QuotaExceededError") {
-          console.warn(
+          logger.warn(
             "localStorage quota exceeded in revertToHistoryEntry, unable to save state"
           );
           return false;
@@ -686,10 +678,10 @@ export const freeUpStorageSpace = () => {
       clearBinderHistory(binder.id);
     });
 
-    console.log("Cleared cache and history to free up storage space");
+    logger.info("Cleared cache and history to free up storage space");
     return true;
   } catch (error) {
-    console.error("Error freeing up storage space:", error);
+    logger.error("Error freeing up storage space:", error);
     return false;
   }
 };
@@ -719,7 +711,7 @@ export const saveCurrentState = (binderId) => {
     localStorage.setItem(currentStateKey, JSON.stringify(currentCards));
   } catch (error) {
     if (error.name === "QuotaExceededError") {
-      console.warn(
+      logger.warn(
         "localStorage quota exceeded in saveCurrentState, skipping save"
       );
       // Don't save current state if quota exceeded
@@ -806,7 +798,7 @@ export const navigateHistory = (binderId, direction) => {
       localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
     } catch (error) {
       if (error.name === "QuotaExceededError") {
-        console.warn(
+        logger.warn(
           "localStorage quota exceeded in navigateHistory, unable to save state"
         );
         return false;
@@ -823,15 +815,189 @@ export const navigateHistory = (binderId, direction) => {
 };
 
 export const canNavigateHistory = (binderId, direction) => {
-  const history = getBinderHistory(binderId);
-  if (history.length === 0) return false;
+  const currentState = getCurrentState(binderId);
+  const historyPosition = getHistoryPosition(binderId);
+  const historyEntries = getBinderHistory(binderId);
 
-  const currentPosition = getHistoryPosition(binderId);
+  if (direction === "forward") {
+    return historyPosition > 0;
+  } else {
+    return historyPosition < historyEntries.length - 1;
+  }
+};
 
-  if (direction === "back") {
-    return currentPosition === -1 || currentPosition > 0;
-  } else if (direction === "forward") {
-    return currentPosition !== -1; // Can always go forward if not at current state
+// ===== API RATE LIMITING UTILITIES =====
+
+let lastApiCall = 0;
+const MIN_API_INTERVAL = 100; // Minimum 100ms between API calls
+
+/**
+ * Add a small delay between API calls to prevent rate limiting
+ */
+export const throttleApiCall = async () => {
+  const now = Date.now();
+  const timeSinceLastCall = now - lastApiCall;
+
+  if (timeSinceLastCall < MIN_API_INTERVAL) {
+    const waitTime = MIN_API_INTERVAL - timeSinceLastCall;
+    await new Promise((resolve) => setTimeout(resolve, waitTime));
+  }
+
+  lastApiCall = Date.now();
+};
+
+/**
+ * Check if we should add extra delay based on recent API usage
+ */
+export const getApiDelay = () => {
+  // Add progressively longer delays if making frequent requests
+  const recentCalls = getRecentApiCalls();
+  if (recentCalls > 10) return 2000; // 2 second delay if > 10 calls in last minute
+  if (recentCalls > 5) return 1000; // 1 second delay if > 5 calls in last minute
+  return 0;
+};
+
+let apiCallHistory = [];
+
+const getRecentApiCalls = () => {
+  const oneMinuteAgo = Date.now() - 60000;
+  apiCallHistory = apiCallHistory.filter(
+    (timestamp) => timestamp > oneMinuteAgo
+  );
+  return apiCallHistory.length;
+};
+
+export const recordApiCall = () => {
+  apiCallHistory.push(Date.now());
+};
+
+export const addPageToBinder = (binderId, cardsPerPage = 9) => {
+  const binders = getBinders();
+  const binderIndex = binders.findIndex((b) => b.id === binderId);
+
+  if (binderIndex >= 0) {
+    const binder = binders[binderIndex];
+
+    // Only works for custom binders
+    if (binder.binderType !== "custom") {
+      return false;
+    }
+
+    if (!binder.customCards) {
+      binder.customCards = [];
+    }
+
+    // Add empty slots for two physical pages (left and right) since it's a book format
+    // This adds cardsPerPage * 2 slots to accommodate a full "book page" (left + right)
+    const currentLength = binder.customCards.length;
+    const slotsToAdd = cardsPerPage * 2; // Two physical pages
+    const newSlots = new Array(slotsToAdd).fill(null);
+    binder.customCards = [...binder.customCards, ...newSlots];
+
+    binder.updatedAt = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
+
+    return {
+      success: true,
+      previousLength: currentLength,
+      newLength: binder.customCards.length,
+      addedSlots: slotsToAdd,
+      addedPages: 2, // Two physical pages added
+    };
+  }
+
+  return false;
+};
+
+export const removePageFromBinder = (
+  binderId,
+  currentPage,
+  cardsPerPage = 9
+) => {
+  const binders = getBinders();
+  const binderIndex = binders.findIndex((b) => b.id === binderId);
+
+  if (binderIndex >= 0) {
+    const binder = binders[binderIndex];
+
+    // Only works for custom binders
+    if (binder.binderType !== "custom") {
+      return false;
+    }
+
+    if (!binder.customCards || binder.customCards.length === 0) {
+      return false;
+    }
+
+    // Calculate which physical pages to remove based on current page
+    const totalPhysicalPages = Math.ceil(
+      binder.customCards.length / cardsPerPage
+    );
+    const maxPage = Math.ceil((totalPhysicalPages + 1) / 2) - 1;
+
+    // Don't allow removing if we're on page 0 (cover page) or if there are no pages to remove
+    if (currentPage <= 0 || currentPage > maxPage) {
+      return false;
+    }
+
+    let leftPhysicalPage, rightPhysicalPage;
+
+    if (currentPage === 0) {
+      // This shouldn't happen as we check above, but safety check
+      return false;
+    } else {
+      leftPhysicalPage = 2 * currentPage - 1;
+      rightPhysicalPage = 2 * currentPage;
+    }
+
+    // Calculate the range of slots to remove
+    const leftPageStart = leftPhysicalPage * cardsPerPage;
+    const rightPageEnd = (rightPhysicalPage + 1) * cardsPerPage;
+
+    // Check if any cards would be lost
+    const cardsToRemove = binder.customCards.slice(leftPageStart, rightPageEnd);
+    const hasCards = cardsToRemove.some(
+      (card) => card !== null && card !== undefined
+    );
+
+    if (hasCards) {
+      // Don't remove pages that contain cards - return info about the conflict
+      return {
+        success: false,
+        error: "Cannot remove page that contains cards",
+        hasCards: true,
+        cardCount: cardsToRemove.filter(
+          (card) => card !== null && card !== undefined
+        ).length,
+      };
+    }
+
+    // Remove the slots for both pages
+    const newCustomCards = [
+      ...binder.customCards.slice(0, leftPageStart),
+      ...binder.customCards.slice(rightPageEnd),
+    ];
+
+    binder.customCards = newCustomCards;
+    binder.updatedAt = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEYS.BINDERS, JSON.stringify(binders));
+
+    // Calculate new max page after removal
+    const newTotalPhysicalPages = Math.ceil(
+      newCustomCards.length / cardsPerPage
+    );
+    const newMaxPage = Math.ceil((newTotalPhysicalPages + 1) / 2) - 1;
+
+    return {
+      success: true,
+      previousLength:
+        binder.customCards.length + (rightPageEnd - leftPageStart),
+      newLength: newCustomCards.length,
+      removedSlots: rightPageEnd - leftPageStart,
+      removedPages: 2, // Two physical pages removed
+      newMaxPage: newMaxPage,
+      shouldNavigateBack: currentPage > newMaxPage,
+    };
   }
 
   return false;

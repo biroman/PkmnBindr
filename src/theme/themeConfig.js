@@ -44,6 +44,7 @@ const createDarkVariant = (lightTheme, accentColor = "blue") => {
           "bg-slate-600 hover:bg-slate-500 text-slate-100 transition-colors shadow-lg border border-slate-500/50",
         success:
           "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-lg",
+        accent: `bg-${accentColor}-600 hover:bg-${accentColor}-700 text-white transition-colors shadow-lg`,
       },
       progress: {
         from: `from-${accentColor}-500`,
@@ -86,6 +87,8 @@ export const themes = {
           "bg-white hover:bg-slate-50 text-slate-700 transition-colors shadow-sm",
         success:
           "bg-emerald-600 hover:bg-emerald-700 text-white transition-colors shadow-sm",
+        accent:
+          "bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm",
       },
       progress: {
         from: "from-blue-500",
@@ -126,6 +129,8 @@ export const themes = {
           "bg-white hover:bg-yellow-50 text-yellow-700 transition-colors shadow-sm",
         success:
           "bg-yellow-400 hover:bg-yellow-500 text-yellow-900 transition-colors shadow-sm",
+        accent:
+          "bg-yellow-500 hover:bg-yellow-600 text-white transition-colors shadow-sm",
       },
       progress: {
         from: "from-yellow-400",
@@ -165,6 +170,8 @@ export const themes = {
           "bg-white hover:bg-orange-50 text-orange-700 transition-colors shadow-sm",
         success:
           "bg-red-500 hover:bg-red-600 text-white transition-colors shadow-sm",
+        accent:
+          "bg-orange-500 hover:bg-orange-600 text-white transition-colors shadow-sm",
       },
       progress: {
         from: "from-orange-500",
@@ -204,6 +211,8 @@ export const themes = {
           "bg-white hover:bg-slate-50 text-slate-700 transition-colors shadow-sm",
         success:
           "bg-yellow-400 hover:bg-yellow-500 text-slate-900 transition-colors shadow-sm",
+        accent:
+          "bg-yellow-500 hover:bg-yellow-600 text-slate-900 transition-colors shadow-sm",
       },
       progress: {
         from: "from-yellow-400",
@@ -243,6 +252,8 @@ export const themes = {
           "bg-white hover:bg-pink-50 text-pink-700 transition-colors shadow-sm",
         success:
           "bg-rose-500 hover:bg-rose-600 text-white transition-colors shadow-sm",
+        accent:
+          "bg-pink-500 hover:bg-pink-600 text-white transition-colors shadow-sm",
       },
       progress: {
         from: "from-pink-400",

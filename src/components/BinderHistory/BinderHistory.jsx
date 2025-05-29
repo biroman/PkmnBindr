@@ -32,6 +32,15 @@ const BinderHistory = ({
   const [showClearConfirmation, setShowClearConfirmation] = useState(false);
   const [hoveredRevertIndex, setHoveredRevertIndex] = useState(null);
 
+  // Extract text color from button.accent class for theme consistency
+  const getAccentTextColor = () => {
+    const accentButtonClass = theme.colors.button.accent || "";
+    if (accentButtonClass.includes("text-white")) return "text-white";
+    if (accentButtonClass.includes("text-slate-900")) return "text-slate-900";
+    if (accentButtonClass.includes("text-yellow-900")) return "text-yellow-900";
+    return "text-white"; // fallback
+  };
+
   const handleClearHistory = () => {
     setShowClearConfirmation(true);
   };
@@ -215,7 +224,9 @@ const BinderHistory = ({
           </span>
           {historyEntries.length > 0 && (
             <div
-              className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium ml-1 text-white`}
+              className={`w-5 h-5 rounded-full ${
+                theme.colors.button.accent
+              } flex items-center justify-center text-xs font-medium ml-1 ${getAccentTextColor()}`}
             >
               {historyEntries.length}
             </div>

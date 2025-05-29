@@ -302,18 +302,16 @@ const BinderSelector = ({
                             >
                               <Pencil className="w-3 h-3" />
                             </button>
-                            {binders.length > 1 && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  handleDeleteClick(binder);
-                                }}
-                                className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
-                                title="Delete binder"
-                              >
-                                <Trash2 className="w-3 h-3" />
-                              </button>
-                            )}
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteClick(binder);
+                              }}
+                              className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
+                              title="Delete binder"
+                            >
+                              <Trash2 className="w-3 h-3" />
+                            </button>
                           </div>
                         </div>
                       )}

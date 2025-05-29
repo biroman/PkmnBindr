@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTheme } from "../../theme/ThemeContent";
 import { Clipboard, X, ChevronRight, Plus, Trash2, Star } from "lucide-react";
 import PropTypes from "prop-types";
+import logger from "../../utils/logger";
 
 const CardClipboard = ({
   clipboardCards,
@@ -15,14 +16,37 @@ const CardClipboard = ({
 }) => {
   const { theme } = useTheme();
   const [isDragOver, setIsDragOver] = useState(false);
+  const [draggedCardIndex, setDraggedCardIndex] = useState(null);
+
+  // Extract text color from button.accent class for theme consistency
+  const getAccentTextColor = () => {
+    const accentButtonClass = theme.colors.button.accent || "";
+    if (accentButtonClass.includes("text-white")) return "text-white";
+    if (accentButtonClass.includes("text-slate-900")) return "text-slate-900";
+    if (accentButtonClass.includes("text-yellow-900")) return "text-yellow-900";
+    return "text-white"; // fallback
+  };
 
   // Get high-res image URL
   const getHighResImageUrl = (card) => {
-    const setCode = card.set.id.toLowerCase();
-    return `https://images.pokemontcg.io/${setCode}/${card.number}.png`;
+    // Fallback to small image if set info is missing
+    if (!card.set || !card.set.id || !card.number) {
+      return card.images?.small || card.images?.large || "";
+    }
+
+    try {
+      const setCode = card.set.id.toLowerCase();
+      return `https://images.pokemontcg.io/${setCode}/${card.number}.png`;
+    } catch (error) {
+      logger.debug("Error generating high-res URL, using fallback:", error);
+      return card.images?.small || card.images?.large || "";
+    }
   };
 
   const handleDragStart = (e, card, index) => {
+    // Set visual feedback for the dragged card
+    setDraggedCardIndex(index);
+
     // Create drag image
     const dragImage = document.createElement("div");
     dragImage.style.width = "80px";
@@ -55,7 +79,8 @@ const CardClipboard = ({
   };
 
   const handleDragEnd = () => {
-    // Drag ended - no cleanup needed for visual state
+    // Clear visual feedback for the dragged card
+    setDraggedCardIndex(null);
   };
 
   // Handle drops from binder cards
@@ -79,16 +104,29 @@ const CardClipboard = ({
     try {
       const dragData = JSON.parse(e.dataTransfer.getData("text/plain"));
 
-      // Check if this is a card from the binder
-      if (dragData.card && dragData.source !== "clipboard") {
-        const success = onAddToClipboard(dragData.card);
-        if (!success) {
-          // Could show a toast notification here that clipboard is full or card already exists
-          console.log("Could not add card to clipboard (full or duplicate)");
-        }
+      // Extract the actual card object based on the drag source
+      let cardToAdd;
+      if (dragData.source === "clipboard") {
+        // Prevent dropping clipboard cards back onto clipboard
+        return;
+      } else if (dragData.card) {
+        // Card from binder or search
+        cardToAdd = dragData.card;
+      } else if (dragData.source === "binder") {
+        // Direct card object
+        cardToAdd = dragData;
+      } else {
+        // Fallback - assume dragData is the card itself
+        cardToAdd = dragData;
+      }
+
+      const added = onAddToClipboard(cardToAdd);
+
+      if (!added) {
+        logger.debug("Could not add card to clipboard (full or duplicate)");
       }
     } catch (error) {
-      console.error("Error handling drop:", error);
+      logger.error("Error handling drop:", error);
     }
   };
 
@@ -115,7 +153,9 @@ const CardClipboard = ({
             <Clipboard className={`w-4 h-4 ${theme.colors.text.accent}`} />
             {clipboardCards.length > 0 && (
               <div
-                className={`w-5 h-5 rounded-full ${theme.colors.button.accent} flex items-center justify-center text-xs font-medium text-white`}
+                className={`w-5 h-5 rounded-full ${
+                  theme.colors.button.accent
+                } flex items-center justify-center text-xs font-medium ${getAccentTextColor()}`}
               >
                 {clipboardCards.length}
               </div>
@@ -203,7 +243,11 @@ const CardClipboard = ({
                 key={`${card.id}-${card.isReverseHolo}-${
                   card.clipboardAddedAt || index
                 }`}
-                className={`relative group cursor-move transition-all duration-200`}
+                className={`relative group cursor-move transition-all duration-200 ${
+                  draggedCardIndex === index
+                    ? "opacity-50 transform rotate-2 scale-105"
+                    : ""
+                }`}
                 draggable
                 onDragStart={(e) => handleDragStart(e, card, index)}
                 onDragEnd={handleDragEnd}
@@ -281,7 +325,9 @@ const CardClipboard = ({
                 onAddToCurrentPage(clipboardCards[i]);
               }
             }}
-            className={`w-full ${theme.colors.button.accent} rounded-lg py-2 px-3 text-sm font-medium text-white hover:scale-[1.02] transition-transform flex items-center justify-center gap-2`}
+            className={`w-full ${
+              theme.colors.button.accent
+            } rounded-lg py-2 px-3 text-sm font-medium ${getAccentTextColor()} hover:scale-[1.02] transition-transform flex items-center justify-center gap-2`}
           >
             <Plus className="w-4 h-4" />
             Add All to Page {currentPage}

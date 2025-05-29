@@ -11,6 +11,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import PropTypes from "prop-types";
+import logger from "../../utils/logger";
 
 const MoveCardsModal = ({
   isOpen,
@@ -42,7 +43,7 @@ const MoveCardsModal = ({
       await onMoveCards(selectedCards, targetPageIndex, moveOption);
       onClose();
     } catch (error) {
-      console.error("Error moving cards:", error);
+      logger.error("Error moving cards:", error);
     } finally {
       setIsLoading(false);
     }

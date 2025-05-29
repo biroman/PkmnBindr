@@ -149,7 +149,11 @@ const EnhancedBinderSelector = ({
 
   const getBinderStats = (binder) => {
     if (binder.binderType === "custom") {
-      const cardCount = binder.customCards?.length || 0;
+      // Count only non-null cards (exclude empty slots in sparse array)
+      const cardCount =
+        binder.customCards?.filter(
+          (card) => card !== null && card !== undefined
+        ).length || 0;
       return `${cardCount} card${cardCount !== 1 ? "s" : ""}`;
     } else {
       const setCount = binder.sets?.length || 0;
@@ -345,18 +349,16 @@ const EnhancedBinderSelector = ({
                             >
                               <Pencil className="w-3 h-3" />
                             </button>
-                            {binders.length > 1 && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  handleDeleteClick(binder);
-                                }}
-                                className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
-                                title="Delete binder"
-                              >
-                                <Trash2 className="w-3 h-3" />
-                              </button>
-                            )}
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteClick(binder);
+                              }}
+                              className="w-6 h-6 rounded bg-red-500/10 hover:bg-red-500/20 text-red-500 hover:text-red-600 flex items-center justify-center hover:scale-110 transition-all"
+                              title="Delete binder"
+                            >
+                              <Trash2 className="w-3 h-3" />
+                            </button>
                           </div>
                         </div>
                       )}

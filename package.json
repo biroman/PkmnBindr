@@ -7,10 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check-console": "powershell \"Get-ChildItem -Path src -Recurse -Include *.js,*.jsx | Select-String 'console\\.' | ForEach-Object { $_.Filename + ':' + $_.LineNumber + ':' + $_.Line.Trim() }\"",
+    "check-console-count": "powershell \"(Get-ChildItem -Path src -Recurse -Include *.js,*.jsx | Select-String 'console\\.' | Measure-Object).Count\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
+    "@tanstack/react-query": "^5.79.0",
+    "@tanstack/react-query-devtools": "^5.79.0",
     "date-fns": "^4.1.0",
     "firebase": "^11.8.1",
     "lodash": "^4.17.21",

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { X, Copy, Check } from "lucide-react";
 import { useTheme } from "../../theme/ThemeContent";
+import logger from "../../utils/logger";
 
 const DeckListModal = ({ cards, onClose }) => {
   const { theme } = useTheme();
@@ -26,13 +27,13 @@ const DeckListModal = ({ cards, onClose }) => {
     generateDeckList();
   }, [cards]);
 
-  const copyToClipboard = async () => {
+  const copyToClipboard = async (content) => {
     try {
-      await navigator.clipboard.writeText(deckList);
+      await navigator.clipboard.writeText(content);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error("Failed to copy:", err);
+      logger.error("Failed to copy:", err);
     }
   };
 
@@ -72,7 +73,7 @@ const DeckListModal = ({ cards, onClose }) => {
 
         <div className="flex justify-end gap-4">
           <button
-            onClick={copyToClipboard}
+            onClick={() => copyToClipboard(deckList)}
             className={`px-4 py-2 rounded-lg
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900
               shadow-lg

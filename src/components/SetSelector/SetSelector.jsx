@@ -2,33 +2,25 @@ import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Search, Loader2, ChevronDown, Package } from "lucide-react";
 import { useTheme } from "../../theme/ThemeContent";
+import { useFilteredSets } from "../../hooks";
 
-const SetSelector = ({ onSetSelect, selectedSet }) => {
+const SetSelector = ({
+  onSetSelect,
+  selectedSet,
+  loading = false,
+  error = null,
+}) => {
   const { theme } = useTheme();
-  const [sets, setSets] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const fetchSets = async () => {
-      try {
-        const response = await fetch("https://api.pokemontcg.io/v2/sets");
-        const data = await response.json();
-        const sortedSets = data.data.sort(
-          (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
-        );
-        setSets(sortedSets);
-      } catch (error) {
-        console.error("Failed to fetch sets:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchSets();
-  }, []);
+  // Use React Query for sets data with built-in filtering
+  const {
+    data: filteredSets = [],
+    isLoading,
+    error: queryError,
+  } = useFilteredSets(searchTerm);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -41,16 +33,11 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const filteredSets = sets.filter(
-    (set) =>
-      set.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      set.series.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => !loading && setIsOpen(!isOpen)}
+        disabled={loading}
         className={`
           w-full px-4 py-3 rounded-xl
           ${theme.colors.background.card}
@@ -61,12 +48,17 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
           transition-all duration-200
           hover:shadow-md
           ${isOpen ? "shadow-md" : ""}
+          ${loading ? "cursor-not-allowed opacity-75" : ""}
         `}
       >
         <div
           className={`w-8 h-8 rounded-lg ${theme.colors.background.sidebar} flex items-center justify-center flex-shrink-0`}
         >
-          {selectedSet ? (
+          {loading ? (
+            <Loader2
+              className={`w-4 h-4 ${theme.colors.text.accent} animate-spin`}
+            />
+          ) : selectedSet ? (
             <img
               src={selectedSet.images.symbol}
               alt={`${selectedSet.name} symbol`}
@@ -78,7 +70,27 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
         </div>
 
         <div className="flex-1 text-left">
-          {selectedSet ? (
+          {loading ? (
+            <div>
+              <div className={`font-medium ${theme.colors.text.primary}`}>
+                Loading Cards...
+              </div>
+              <div className={`text-sm ${theme.colors.text.secondary}`}>
+                {selectedSet
+                  ? `Fetching ${selectedSet.name} cards`
+                  : "Please wait"}
+              </div>
+            </div>
+          ) : error ? (
+            <div>
+              <div className={`font-medium text-red-400`}>API Error</div>
+              <div className={`text-sm text-red-300`}>
+                {error.includes("quota")
+                  ? "Rate limit exceeded"
+                  : "Loading failed"}
+              </div>
+            </div>
+          ) : selectedSet ? (
             <div>
               <div className={`font-medium ${theme.colors.text.primary}`}>
                 {selectedSet.name}
@@ -101,14 +113,16 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
           )}
         </div>
 
-        <ChevronDown
-          className={`w-5 h-5 ${
-            theme.colors.text.secondary
-          } transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-        />
+        {!loading && (
+          <ChevronDown
+            className={`w-5 h-5 ${
+              theme.colors.text.secondary
+            } transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          />
+        )}
       </button>
 
-      {isOpen && (
+      {isOpen && !loading && (
         <div
           className={`
             absolute z-50 w-full mt-2 
@@ -156,6 +170,17 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
                   </div>
                 </div>
               </div>
+            ) : queryError ? (
+              <div className="p-8 text-center">
+                <div className={`text-sm ${theme.colors.text.secondary} mb-2`}>
+                  Failed to load sets
+                </div>
+                <div
+                  className={`text-xs ${theme.colors.text.secondary} opacity-60`}
+                >
+                  {queryError.message}
+                </div>
+              </div>
             ) : filteredSets.length === 0 ? (
               <div className="p-8 text-center">
                 <div
@@ -198,7 +223,6 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
                           className="w-6 h-6"
                         />
                       </div>
-
                       <div className="flex-1 min-w-0">
                         <div
                           className={`font-medium ${theme.colors.text.primary} truncate`}
@@ -210,13 +234,6 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
                         >
                           {set.series} • {set.total} cards
                         </div>
-                        {set.releaseDate && (
-                          <div
-                            className={`text-xs ${theme.colors.text.secondary} opacity-60`}
-                          >
-                            Released {new Date(set.releaseDate).getFullYear()}
-                          </div>
-                        )}
                       </div>
                     </div>
                   </button>
@@ -233,6 +250,8 @@ const SetSelector = ({ onSetSelect, selectedSet }) => {
 SetSelector.propTypes = {
   onSetSelect: PropTypes.func.isRequired,
   selectedSet: PropTypes.object,
+  loading: PropTypes.bool,
+  error: PropTypes.object,
 };
 
 export default SetSelector;
