@@ -201,6 +201,14 @@ const BinderPage = ({
   const getGridStyles = () => ({
     padding: binderDimensions.padding,
     gap: binderDimensions.gap,
+    // Ensure consistent grid layout regardless of content
+    gridAutoRows: "1fr",
+    gridAutoColumns: "1fr",
+    alignItems: "stretch",
+    justifyItems: "stretch",
+    // Prevent grid from collapsing or expanding unexpectedly
+    minHeight: "100%",
+    minWidth: "100%",
   });
 
   const handleToggleCardStatus = (e, card) => {
@@ -372,8 +380,29 @@ const BinderPage = ({
                     ) : (
                       /* Empty slot */
                       <div
-                        className={`w-full h-full rounded-lg border-2 border-dashed ${theme.colors.border.accent} ${theme.colors.background.card} opacity-30`}
-                      />
+                        className={`
+                          w-full h-full rounded-lg border-2 border-dashed 
+                          ${theme.colors.border.accent} ${theme.colors.background.card}
+                          flex items-center justify-center
+                          hover:border-solid transition-all duration-200
+                          opacity-30 hover:opacity-50
+                        `}
+                      >
+                        <div className="text-center space-y-2">
+                          <div
+                            className={`w-12 h-12 mx-auto rounded-full ${theme.colors.background.sidebar} flex items-center justify-center opacity-50`}
+                          >
+                            <div
+                              className={`w-4 h-4 rounded-full ${theme.colors.border.accent}`}
+                            />
+                          </div>
+                          <div
+                            className={`text-xs ${theme.colors.text.secondary} font-medium opacity-60`}
+                          >
+                            Empty
+                          </div>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
