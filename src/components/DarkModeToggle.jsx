@@ -2,10 +2,19 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../theme/ThemeContent";
 
 const DarkModeToggle = () => {
-  const { theme, isDarkMode, setDarkMode } = useTheme();
+  const { theme, currentTheme, changeTheme } = useTheme();
+
+  // Determine if current theme is dark variant
+  const isDarkMode = currentTheme.endsWith("_dark");
+
+  // Get the base theme name (without _dark suffix)
+  const baseTheme = isDarkMode
+    ? currentTheme.replace("_dark", "")
+    : currentTheme;
 
   const toggleDarkMode = () => {
-    setDarkMode(!isDarkMode);
+    const targetTheme = isDarkMode ? baseTheme : `${baseTheme}_dark`;
+    changeTheme(targetTheme);
   };
 
   return (

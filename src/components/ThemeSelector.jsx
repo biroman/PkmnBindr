@@ -52,33 +52,31 @@ const ThemeSelector = () => {
           ${isOpen ? "visible opacity-100" : "invisible opacity-0"} 
         transition-all duration-200 z-50`}
       >
-        {availableThemes
-          .filter((themeName) => !themeName.endsWith("_dark")) // Only show light themes
-          .map((themeName) => {
-            const isSelected = currentTheme === themeName;
+        {availableThemes.map((themeName) => {
+          const isSelected = currentTheme === themeName;
 
-            return (
-              <button
-                key={themeName}
-                onClick={() => {
-                  changeTheme(themeName);
-                  handleCloseDropdown();
-                }}
-                className={`w-full px-4 py-2 text-left transition-all duration-200 flex items-center justify-between group/item
-                ${theme.colors.dropdown.hover}
-                ${
-                  isSelected
-                    ? `${theme.colors.text.accent} font-medium ${theme.colors.dropdown.input}`
-                    : `${theme.colors.text.primary}`
-                }`}
-              >
-                <span>{themes[themeName]?.name || themeName}</span>
-                {isSelected && (
-                  <Check className={`w-4 h-4 ${theme.colors.text.accent}`} />
-                )}
-              </button>
-            );
-          })}
+          return (
+            <button
+              key={themeName}
+              onClick={() => {
+                changeTheme(themeName);
+                handleCloseDropdown();
+              }}
+              className={`w-full px-4 py-2 text-left transition-all duration-200 flex items-center justify-between group/item
+              ${theme.colors.dropdown.hover}
+              ${
+                isSelected
+                  ? `${theme.colors.text.accent} font-medium ${theme.colors.dropdown.input}`
+                  : `${theme.colors.text.primary}`
+              }`}
+            >
+              <span>{themes[themeName]?.name || themeName}</span>
+              {isSelected && (
+                <Check className={`w-4 h-4 ${theme.colors.text.accent}`} />
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
