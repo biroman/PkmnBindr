@@ -12,30 +12,16 @@ import {
   ChevronRight,
   Undo2,
   Clipboard,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
 import { useContextMenu } from "../../hooks";
 import ContextMenu from "../ContextMenu/ContextMenu";
 import MoveCardsModal from "./MoveCardsModal";
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
-  getCustomCards,
-  addCustomCard,
-  removeCustomCard,
-  reorderCustomCards,
-  updateHistoryWithFinalState,
-  getBinderHistory,
-  addHistoryEntry,
-  saveBinder,
-  getAllBinders,
-  getMissingCards,
-  saveToClipboard,
-  getCardClipboard,
-  updateCardClipboard,
-  parseMissingCards,
-  addToMissingCards,
-  updateMissingCards,
   addPageToBinder,
   removePageFromBinder,
 } from "../../utils/storageUtilsIndexedDB";
@@ -62,10 +48,6 @@ const CustomBinderPage = ({
   const [dragOverZone, setDragOverZone] = useState(null);
   const [navigationTimer, setNavigationTimer] = useState(null);
   const [navigationProgress, setNavigationProgress] = useState(0);
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
 
   // Selection state
   const [isSelectionMode, setIsSelectionMode] = useState(false);
@@ -75,19 +57,6 @@ const CustomBinderPage = ({
   const cardsPerPage = layout.cards;
   const totalPhysicalPages = Math.ceil(cards.length / cardsPerPage);
   const maxPage = Math.ceil((totalPhysicalPages + 1) / 2) - 1;
-
-  // Handle window resize for responsive binder sizing
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   // Cleanup navigation timer on unmount
   useEffect(() => {
@@ -220,7 +189,7 @@ const CustomBinderPage = ({
     };
 
     return calculateResponsiveDimensions();
-  }, [layout.id, layout.cards, windowSize]);
+  }, [layout.id]);
 
   const getGridClasses = () => {
     return `grid-cols-${binderDimensions.gridCols} grid-rows-${binderDimensions.gridRows}`;
@@ -493,6 +462,22 @@ const CustomBinderPage = ({
 
   const deselectAll = () => {
     setSelectedCards(new Set());
+  };
+
+  // Navigation button handlers
+  const handlePreviousPage = () => {
+    if (currentPage > 0 && onPageChange) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < maxPage && onPageChange) {
+      onPageChange(currentPage + 1);
+    } else if (currentPage >= maxPage) {
+      // At the last page, add a new page
+      handleAddPage();
+    }
   };
 
   const renderPage = (pageCards, pageOffset = 0) => {
@@ -831,7 +816,7 @@ const CustomBinderPage = ({
       <div className="flex flex-col items-center space-y-6">
         {/* Binder Container with Navigation Zones */}
         <div
-          className="relative flex items-center"
+          className="relative flex items-center gap-6"
           onWheel={(e) => {
             e.preventDefault();
 
@@ -854,200 +839,239 @@ const CustomBinderPage = ({
             }
           }}
         >
-          {/* Left Navigation Zone */}
-          {currentPage > 0 && draggedCard && (
-            <div
-              className={`absolute left-0 top-0 bottom-0 w-16 z-50 flex items-center justify-center transition-all duration-200 ${
-                dragOverZone === "left"
-                  ? "bg-blue-500/20 border-2 border-blue-500 border-dashed rounded-l-lg"
-                  : "bg-transparent"
-              }`}
-              style={{ transform: "translateX(-100%)" }}
-              onDragOver={(e) => handleNavigationZoneDragOver(e, "left")}
-              onDragLeave={handleNavigationZoneDragLeave}
-              onDrop={handleNavigationZoneDrop}
-            >
-              {dragOverZone === "left" && (
-                <div className="flex flex-col items-center text-blue-500">
-                  <ChevronLeft className="w-8 h-8" />
-                  <span className="text-xs font-medium">Previous</span>
-                  {/* Progress indicator */}
-                  <div className="w-12 h-1 bg-blue-200 rounded-full mt-2 overflow-hidden">
-                    <div
-                      className="h-full bg-blue-500 transition-all duration-100 ease-linear"
-                      style={{ width: `${navigationProgress}%` }}
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+          {/* Left Navigation Button */}
+          <button
+            onClick={handlePreviousPage}
+            disabled={currentPage === 0}
+            className={`
+              w-12 h-12 rounded-full flex items-center justify-center shadow-lg
+              ${theme.colors.button.secondary}
+              enabled:hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed
+              transition-all duration-200 z-10
+              ${currentPage === 0 ? "invisible" : "visible"}
+            `}
+            title="Previous page"
+          >
+            <ArrowLeft className="w-6 h-6" />
+          </button>
 
-          {/* Binder Pages */}
-          <div className="flex gap-4 relative" style={getContainerStyles()}>
-            {/* Left Page */}
-            <div className="flex-1 min-w-0">
-              {currentPage === 0 ? (
-                <div
-                  className={`relative ${theme.colors.background.sidebar} w-full h-full rounded-3xl shadow-2xl border ${theme.colors.border.light} flex items-center justify-center`}
-                >
-                  <div className="text-center space-y-4">
-                    <div
-                      className={`w-16 h-16 mx-auto rounded-full ${theme.colors.background.card} flex items-center justify-center`}
-                    >
-                      {cards.filter((card) => card !== null).length === 0 ? (
-                        <Search
-                          className={`w-8 h-8 ${theme.colors.text.accent}`}
-                        />
-                      ) : (
-                        <Lightbulb
-                          className={`w-8 h-8 ${theme.colors.text.accent}`}
-                        />
-                      )}
+          <div className="relative">
+            {/* Left Navigation Zone */}
+            {currentPage > 0 && draggedCard && (
+              <div
+                className={`absolute left-0 top-0 bottom-0 w-16 z-50 flex items-center justify-center transition-all duration-200 ${
+                  dragOverZone === "left"
+                    ? "bg-blue-500/20 border-2 border-blue-500 border-dashed rounded-l-lg"
+                    : "bg-transparent"
+                }`}
+                style={{ transform: "translateX(-100%)" }}
+                onDragOver={(e) => handleNavigationZoneDragOver(e, "left")}
+                onDragLeave={handleNavigationZoneDragLeave}
+                onDrop={handleNavigationZoneDrop}
+              >
+                {dragOverZone === "left" && (
+                  <div className="flex flex-col items-center text-blue-500">
+                    <ChevronLeft className="w-8 h-8" />
+                    <span className="text-xs font-medium">Previous</span>
+                    {/* Progress indicator */}
+                    <div className="w-12 h-1 bg-blue-200 rounded-full mt-2 overflow-hidden">
+                      <div
+                        className="h-full bg-blue-500 transition-all duration-100 ease-linear"
+                        style={{ width: `${navigationProgress}%` }}
+                      />
                     </div>
-                    <div>
-                      <h3
-                        className={`text-lg font-bold ${theme.colors.text.primary} mb-2`}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Binder Pages */}
+            <div className="flex gap-4 relative" style={getContainerStyles()}>
+              {/* Left Page */}
+              <div className="flex-1 min-w-0">
+                {currentPage === 0 ? (
+                  <div
+                    className={`relative ${theme.colors.background.sidebar} w-full h-full rounded-3xl shadow-2xl border ${theme.colors.border.light} flex items-center justify-center`}
+                  >
+                    <div className="text-center space-y-4">
+                      <div
+                        className={`w-16 h-16 mx-auto rounded-full ${theme.colors.background.card} flex items-center justify-center`}
                       >
-                        {cards.filter((card) => card !== null).length === 0
-                          ? "Custom Collection"
-                          : "Tips & Tricks"}
-                      </h3>
-                      {cards.filter((card) => card !== null).length === 0 ? (
-                        <p
-                          className={`${theme.colors.text.secondary} text-sm max-w-80`}
+                        {cards.filter((card) => card !== null).length === 0 ? (
+                          <Search
+                            className={`w-8 h-8 ${theme.colors.text.accent}`}
+                          />
+                        ) : (
+                          <Lightbulb
+                            className={`w-8 h-8 ${theme.colors.text.accent}`}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <h3
+                          className={`text-lg font-bold ${theme.colors.text.primary} mb-2`}
                         >
-                          Add individual cards from any set to create your
-                          personalized collection
-                        </p>
-                      ) : (
-                        <div
-                          className={`${theme.colors.text.secondary} text-sm max-w-80 mx-auto space-y-3 text-left`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <span className="text-blue-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <span className="leading-relaxed">
-                              Click and drag cards to rearrange their position
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-green-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <span className="leading-relaxed">
-                              Mark cards as &ldquo;Missing&rdquo; to track what
-                              you need
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-purple-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <div className="leading-relaxed">
-                              Drag cards to the clipboard on the right
-                              <span
-                                className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
-                              >
-                                <Clipboard className="w-2.5 h-2.5 text-blue-500" />
-                              </span>{" "}
-                              to store them between pages
+                          {cards.filter((card) => card !== null).length === 0
+                            ? "Custom Collection"
+                            : "Tips & Tricks"}
+                        </h3>
+                        {cards.filter((card) => card !== null).length === 0 ? (
+                          <p
+                            className={`${theme.colors.text.secondary} text-sm max-w-80`}
+                          >
+                            Add individual cards from any set to create your
+                            personalized collection
+                          </p>
+                        ) : (
+                          <div
+                            className={`${theme.colors.text.secondary} text-sm max-w-80 mx-auto space-y-3 text-left`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <span className="text-blue-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span className="leading-relaxed">
+                                Click and drag cards to rearrange their position
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-green-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span className="leading-relaxed">
+                                Mark cards as &ldquo;Missing&rdquo; to track
+                                what you need
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-purple-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <div className="leading-relaxed">
+                                Drag cards to the clipboard on the right
+                                <span
+                                  className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
+                                >
+                                  <Clipboard className="w-2.5 h-2.5 text-blue-500" />
+                                </span>{" "}
+                                to store them between pages
+                              </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-orange-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span className="leading-relaxed">
+                                Drag cards from clipboard to specific positions
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-red-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span className="leading-relaxed">
+                                Drag cards to the left or right edges to
+                                navigate between pages
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-yellow-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <div className="leading-relaxed">
+                                If you regret an action, you can undo it with
+                                the undo button
+                                <span
+                                  className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
+                                >
+                                  <Undo2 className="w-2.5 h-2.5 text-blue-500" />
+                                </span>{" "}
+                                in the bottom right corner
+                              </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <span className="text-cyan-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
+                                •
+                              </span>
+                              <span className="leading-relaxed">
+                                Right-click anywhere to access quick actions
+                                like adding new pages
+                              </span>
                             </div>
                           </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-orange-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <span className="leading-relaxed">
-                              Drag cards from clipboard to specific positions
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-red-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <span className="leading-relaxed">
-                              Drag cards to the left or right edges to navigate
-                              between pages
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-yellow-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <div className="leading-relaxed">
-                              If you regret an action, you can undo it with the
-                              undo button
-                              <span
-                                className={`inline-flex items-center justify-center w-4 h-4 rounded ml-1 ${theme.colors.background.card} border ${theme.colors.border.light}`}
-                              >
-                                <Undo2 className="w-2.5 h-2.5 text-blue-500" />
-                              </span>{" "}
-                              in the bottom right corner
-                            </div>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <span className="text-cyan-400 font-bold text-base leading-none mt-0.5 flex-shrink-0">
-                              •
-                            </span>
-                            <span className="leading-relaxed">
-                              Right-click anywhere to access quick actions like
-                              adding new pages
-                            </span>
-                          </div>
-                        </div>
+                        )}
+                      </div>
+                      {cards.filter((card) => card !== null).length === 0 && (
+                        <button
+                          onClick={() => onOpenCardSearch()}
+                          className={`px-4 py-2 rounded-lg ${theme.colors.button.primary} font-medium`}
+                        >
+                          Add Cards
+                        </button>
                       )}
                     </div>
-                    {cards.filter((card) => card !== null).length === 0 && (
-                      <button
-                        onClick={() => onOpenCardSearch()}
-                        className={`px-4 py-2 rounded-lg ${theme.colors.button.primary} font-medium`}
-                      >
-                        Add Cards
-                      </button>
-                    )}
                   </div>
-                </div>
-              ) : (
-                renderPage(leftPageCards, leftPhysicalPage * cardsPerPage)
-              )}
+                ) : (
+                  renderPage(leftPageCards, leftPhysicalPage * cardsPerPage)
+                )}
+              </div>
+
+              {/* Right Page */}
+              <div className="flex-1 min-w-0">
+                {renderPage(rightPageCards, rightPhysicalPage * cardsPerPage)}
+              </div>
             </div>
 
-            {/* Right Page */}
-            <div className="flex-1 min-w-0">
-              {renderPage(rightPageCards, rightPhysicalPage * cardsPerPage)}
-            </div>
+            {/* Right Navigation Zone */}
+            {currentPage < maxPage && draggedCard && (
+              <div
+                className={`absolute right-0 top-0 bottom-0 w-16 z-50 flex items-center justify-center transition-all duration-200 ${
+                  dragOverZone === "right"
+                    ? "bg-blue-500/20 border-2 border-blue-500 border-dashed rounded-r-lg"
+                    : "bg-transparent"
+                }`}
+                style={{ transform: "translateX(100%)" }}
+                onDragOver={(e) => handleNavigationZoneDragOver(e, "right")}
+                onDragLeave={handleNavigationZoneDragLeave}
+                onDrop={handleNavigationZoneDrop}
+              >
+                {dragOverZone === "right" && (
+                  <div className="flex flex-col items-center text-blue-500">
+                    <ChevronRight className="w-8 h-8" />
+                    <span className="text-xs font-medium">Next</span>
+                    {/* Progress indicator */}
+                    <div className="w-12 h-1 bg-blue-200 rounded-full mt-2 overflow-hidden">
+                      <div
+                        className="h-full bg-blue-500 transition-all duration-100 ease-linear"
+                        style={{ width: `${navigationProgress}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
-          {/* Right Navigation Zone */}
-          {currentPage < maxPage && draggedCard && (
-            <div
-              className={`absolute right-0 top-0 bottom-0 w-16 z-50 flex items-center justify-center transition-all duration-200 ${
-                dragOverZone === "right"
-                  ? "bg-blue-500/20 border-2 border-blue-500 border-dashed rounded-r-lg"
-                  : "bg-transparent"
-              }`}
-              style={{ transform: "translateX(100%)" }}
-              onDragOver={(e) => handleNavigationZoneDragOver(e, "right")}
-              onDragLeave={handleNavigationZoneDragLeave}
-              onDrop={handleNavigationZoneDrop}
-            >
-              {dragOverZone === "right" && (
-                <div className="flex flex-col items-center text-blue-500">
-                  <ChevronRight className="w-8 h-8" />
-                  <span className="text-xs font-medium">Next</span>
-                  {/* Progress indicator */}
-                  <div className="w-12 h-1 bg-blue-200 rounded-full mt-2 overflow-hidden">
-                    <div
-                      className="h-full bg-blue-500 transition-all duration-100 ease-linear"
-                      style={{ width: `${navigationProgress}%` }}
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+          {/* Right Navigation Button */}
+          <button
+            onClick={handleNextPage}
+            className={`
+              w-12 h-12 rounded-full flex items-center justify-center shadow-lg
+              transition-all duration-200 z-10
+              ${
+                currentPage >= maxPage
+                  ? "bg-blue-500 hover:bg-blue-600 text-white hover:scale-110"
+                  : `${theme.colors.button.secondary} enabled:hover:scale-110`
+              }
+            `}
+            title={currentPage >= maxPage ? "Add new page" : "Next page"}
+          >
+            {currentPage >= maxPage ? (
+              <Plus className="w-6 h-6" />
+            ) : (
+              <ArrowRight className="w-6 h-6" />
+            )}
+          </button>
         </div>
       </div>
 

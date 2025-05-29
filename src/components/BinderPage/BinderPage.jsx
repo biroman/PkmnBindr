@@ -1,7 +1,7 @@
-import { Star, Plus, Trash2 } from "lucide-react";
+import { Star, Plus, Trash2, ArrowLeft, ArrowRight } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../theme/ThemeContent";
-import { useState, useMemo, useEffect } from "react";
+import { useMemo } from "react";
 
 const BinderPage = ({
   cards = [],
@@ -9,27 +9,25 @@ const BinderPage = ({
   parsedMissingCards,
   layout,
   onToggleCardStatus,
+  onPageChange,
 }) => {
   const { theme } = useTheme();
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
   const cardsPerPage = layout.cards;
   const totalPhysicalPages = Math.ceil(cards.length / cardsPerPage);
+  const maxPage = Math.ceil((totalPhysicalPages + 1) / 2) - 1;
 
-  // Handle window resize for responsive binder sizing
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+  // Navigation button handlers
+  const handlePreviousPage = () => {
+    if (currentPage > 0 && onPageChange) {
+      onPageChange(currentPage - 1);
+    }
+  };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const handleNextPage = () => {
+    if (currentPage < maxPage && onPageChange) {
+      onPageChange(currentPage + 1);
+    }
+  };
 
   // Progress calculation removed - now handled in App.jsx header
 
@@ -184,7 +182,7 @@ const BinderPage = ({
     };
 
     return calculateResponsiveDimensions();
-  }, [layout.id, layout.cards, windowSize]);
+  }, [layout.id]);
 
   // Generate dynamic CSS classes based on calculated dimensions
   const getGridClasses = () => {
@@ -421,47 +419,83 @@ const BinderPage = ({
         className={`flex-1 relative overflow-auto ${theme.colors.background.main} p-2 md:p-4`}
       >
         <div className="min-h-full flex items-center justify-center">
-          {/* Binder Pages Container - Responsive centered layout */}
-          <div className="relative" style={getContainerStyles()}>
-            <div className="flex gap-2 md:gap-4 h-full">
-              {/* Left Page */}
-              <div className="flex-1 min-w-0">
-                {currentPage === 0 ? (
-                  /* Cover Page */
-                  <div
-                    className={`h-full w-full ${theme.colors.background.sidebar} rounded-3xl shadow-2xl border ${theme.colors.border.light} flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden`}
-                  >
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-5">
-                      <div className="absolute inset-0 bg-gradient-to-br from-current via-transparent to-current" />
-                    </div>
+          {/* Binder Pages Container with Navigation - Responsive centered layout */}
+          <div className="relative flex items-center gap-6">
+            {/* Left Navigation Button */}
+            <button
+              onClick={handlePreviousPage}
+              disabled={currentPage === 0}
+              className={`
+                w-12 h-12 rounded-full flex items-center justify-center shadow-lg
+                ${theme.colors.button.secondary}
+                enabled:hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed
+                transition-all duration-200 z-10
+                ${currentPage === 0 ? "invisible" : "visible"}
+              `}
+              title="Previous page"
+            >
+              <ArrowLeft className="w-6 h-6" />
+            </button>
 
-                    <div className="relative z-10 text-center space-y-3 md:space-y-6">
-                      <div
-                        className={`text-3xl md:text-6xl font-bold ${theme.colors.text.accent} mb-2 md:mb-4`}
-                      >
-                        PkmnBindr
+            <div className="relative" style={getContainerStyles()}>
+              <div className="flex gap-2 md:gap-4 h-full">
+                {/* Left Page */}
+                <div className="flex-1 min-w-0">
+                  {currentPage === 0 ? (
+                    /* Cover Page */
+                    <div
+                      className={`h-full w-full ${theme.colors.background.sidebar} rounded-3xl shadow-2xl border ${theme.colors.border.light} flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden`}
+                    >
+                      {/* Background Pattern */}
+                      <div className="absolute inset-0 opacity-5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-current via-transparent to-current" />
                       </div>
-                      <div
-                        className={`text-sm md:text-xl ${theme.colors.text.secondary}`}
-                      >
-                        Collection Manager
-                      </div>
-                      <div
-                        className={`text-xs md:text-sm ${theme.colors.text.secondary} opacity-60`}
-                      >
-                        Organize • Track • Collect
+
+                      <div className="relative z-10 text-center space-y-3 md:space-y-6">
+                        <div
+                          className={`text-3xl md:text-6xl font-bold ${theme.colors.text.accent} mb-2 md:mb-4`}
+                        >
+                          PkmnBindr
+                        </div>
+                        <div
+                          className={`text-sm md:text-xl ${theme.colors.text.secondary}`}
+                        >
+                          Collection Manager
+                        </div>
+                        <div
+                          className={`text-xs md:text-sm ${theme.colors.text.secondary} opacity-60`}
+                        >
+                          Organize • Track • Collect
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ) : (
-                  renderPage(leftPageCards)
-                )}
+                  ) : (
+                    renderPage(leftPageCards)
+                  )}
+                </div>
+
+                {/* Right Page */}
+                <div className="flex-1 min-w-0">
+                  {renderPage(rightPageCards)}
+                </div>
               </div>
-
-              {/* Right Page */}
-              <div className="flex-1 min-w-0">{renderPage(rightPageCards)}</div>
             </div>
+
+            {/* Right Navigation Button */}
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage >= maxPage}
+              className={`
+                w-12 h-12 rounded-full flex items-center justify-center shadow-lg
+                ${theme.colors.button.secondary}
+                enabled:hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed
+                transition-all duration-200 z-10
+                ${currentPage >= maxPage ? "invisible" : "visible"}
+              `}
+              title="Next page"
+            >
+              <ArrowRight className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>
@@ -479,6 +513,7 @@ BinderPage.propTypes = {
     cards: PropTypes.number.isRequired,
   }).isRequired,
   onToggleCardStatus: PropTypes.func,
+  onPageChange: PropTypes.func,
 };
 
 export default BinderPage;

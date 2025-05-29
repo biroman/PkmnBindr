@@ -1,6 +1,7 @@
 import BinderPage from "../BinderPage/BinderPage";
 import CustomBinderPage from "../BinderPage/CustomBinderPage";
 import { EmptyState } from "../AppLayout";
+import PropTypes from "prop-types";
 
 /**
  * AppContent - Handles main content area rendering
@@ -60,8 +61,30 @@ const AppContent = ({
       parsedMissingCards={parsedMissingCards}
       layout={layout}
       onToggleCardStatus={onToggleCardStatus}
+      onPageChange={onPageChange}
     />
   );
+};
+
+AppContent.propTypes = {
+  currentBinder: PropTypes.object,
+  cards: PropTypes.array,
+  currentPage: PropTypes.number.isRequired,
+  layout: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    cards: PropTypes.number.isRequired,
+  }).isRequired,
+  parsedMissingCards: PropTypes.instanceOf(Set),
+  onShowSidebar: PropTypes.func,
+  onReorderCards: PropTypes.func,
+  onRemoveCard: PropTypes.func,
+  onOpenCardSearch: PropTypes.func,
+  onMoveFromClipboard: PropTypes.func,
+  onToggleCardStatus: PropTypes.func,
+  onMoveCards: PropTypes.func,
+  onPageChange: PropTypes.func,
+  onCardsUpdate: PropTypes.func,
 };
 
 export default AppContent;
