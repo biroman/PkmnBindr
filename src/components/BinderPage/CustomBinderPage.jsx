@@ -36,6 +36,8 @@ import {
   parseMissingCards,
   addToMissingCards,
   updateMissingCards,
+  addPageToBinder,
+  removePageFromBinder,
 } from "../../utils/storageUtilsIndexedDB";
 
 const CustomBinderPage = ({
@@ -401,12 +403,12 @@ const CustomBinderPage = ({
   };
 
   // Handle adding a new page to the binder
-  const handleAddPage = () => {
+  const handleAddPage = async () => {
     if (!currentBinder || currentBinder.binderType !== "custom") {
       return;
     }
 
-    const result = addPageToBinder(currentBinder.id, layout.cards);
+    const result = await addPageToBinder(currentBinder.id, layout.cards);
     if (result && result.success && onCardsUpdate) {
       // Notify parent component that cards have been updated
       onCardsUpdate();
@@ -423,7 +425,7 @@ const CustomBinderPage = ({
   };
 
   // Handle removing the current page from the binder
-  const handleRemovePage = () => {
+  const handleRemovePage = async () => {
     if (!currentBinder || currentBinder.binderType !== "custom") {
       return;
     }
@@ -433,7 +435,7 @@ const CustomBinderPage = ({
       return;
     }
 
-    const result = removePageFromBinder(
+    const result = await removePageFromBinder(
       currentBinder.id,
       currentPage,
       layout.cards
