@@ -9,6 +9,14 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent horizontal scrolling and improve drag behavior */
+  overflow-x: hidden;
+  position: relative;
+}
+
+html {
+  /* Prevent horizontal scrolling on the root element */
+  overflow-x: hidden;
 }
 
 * {
@@ -51,5 +59,22 @@ button {
 
   .alert-success {
     @apply bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-md;
+  }
+
+  /* Drag and drop utilities */
+  .drag-container {
+    @apply touch-none select-none overflow-hidden;
+    /* Prevent drag from affecting document scroll */
+    overscroll-behavior: contain;
+  }
+
+  .dragging-active {
+    @apply cursor-grabbing;
+    /* Disable text selection and touch actions during drag */
+    user-select: none;
+    touch-action: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 }

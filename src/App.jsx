@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
 import { RulesProvider } from "./contexts/RulesContext";
+import { BinderProvider } from "./contexts/BinderContext";
+import { CardCacheProvider } from "./contexts/CardCacheContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import PublicRoute from "./components/auth/PublicRoute";
 import RootLayout from "./components/layout/RootLayout";
@@ -9,6 +12,9 @@ import AuthLayout from "./components/layout/AuthLayout";
 
 // Pages
 import HomePage from "./pages/HomePage";
+import BinderPage from "./pages/BinderPage";
+import BindersPage from "./pages/BindersPage";
+import CardBrowserPage from "./pages/CardBrowserPage";
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import AdminPage from "./pages/AdminPage";
@@ -32,37 +38,49 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <RulesProvider>
-        <BrowserRouter>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<RootLayout />}>
-              <Route index element={<HomePage />} />
-
-              {/* Auth Routes - Only accessible when not logged in */}
-              <Route element={<PublicRoute />}>
-                <Route path="auth" element={<AuthLayout />}>
-                  <Route path="login" element={<LoginPage />} />
-                  <Route path="register" element={<RegisterPage />} />
+        <CardCacheProvider>
+          <BinderProvider>
+            <BrowserRouter>
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<RootLayout />}>
+                  <Route index element={<HomePage />} />
+                  <Route path="binders" element={<BindersPage />} />
+                  <Route path="binder/:id" element={<BinderPage />} />
                   <Route
-                    path="forgot-password"
-                    element={<ForgotPasswordPage />}
+                    path="binder"
+                    element={<Navigate to="/binders" replace />}
                   />
+                  <Route path="browse" element={<CardBrowserPage />} />
+
+                  {/* Auth Routes - Only accessible when not logged in */}
+                  <Route element={<PublicRoute />}>
+                    <Route path="auth" element={<AuthLayout />}>
+                      <Route path="login" element={<LoginPage />} />
+                      <Route path="register" element={<RegisterPage />} />
+                      <Route
+                        path="forgot-password"
+                        element={<ForgotPasswordPage />}
+                      />
+                    </Route>
+                  </Route>
+
+                  {/* Protected Routes - Only accessible when logged in */}
+                  <Route element={<ProtectedRoute />}>
+                    <Route path="dashboard" element={<DashboardPage />} />
+                    <Route path="profile" element={<ProfilePage />} />
+                    <Route path="admin" element={<AdminPage />} />
+                    <Route path="rules" element={<RulesPage />} />
+                  </Route>
+
+                  {/* Fallback route */}
+                  <Route path="*" element={<NotFoundPage />} />
                 </Route>
-              </Route>
-
-              {/* Protected Routes - Only accessible when logged in */}
-              <Route element={<ProtectedRoute />}>
-                <Route path="dashboard" element={<DashboardPage />} />
-                <Route path="profile" element={<ProfilePage />} />
-                <Route path="admin" element={<AdminPage />} />
-                <Route path="rules" element={<RulesPage />} />
-              </Route>
-
-              {/* Fallback route */}
-              <Route path="*" element={<NotFoundPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+              </Routes>
+            </BrowserRouter>
+            <Toaster position="top-right" />
+          </BinderProvider>
+        </CardCacheProvider>
       </RulesProvider>
     </QueryClientProvider>
   );

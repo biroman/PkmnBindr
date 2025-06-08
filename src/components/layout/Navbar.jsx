@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth, useOwner } from "../../hooks/useAuth";
 import { useRules } from "../../contexts/RulesContext";
+import { useBinderContext } from "../../contexts/BinderContext";
 import { Button } from "../ui/Button";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const isOwner = useOwner();
   const { isOwner: isRulesOwner } = useRules();
+  const { currentBinder } = useBinderContext();
   const location = useLocation();
 
   const handleLogout = async () => {
@@ -27,6 +29,40 @@ const Navbar = () => {
             <Link to="/" className="text-xl font-bold text-blue-600">
               PokemonAPI
             </Link>
+
+            {/* Public Links */}
+            <div className="hidden md:flex space-x-4">
+              <Link
+                to="/binders"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/binders")
+                    ? "bg-purple-100 text-purple-700"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                📁 Binders
+              </Link>
+              <Link
+                to={currentBinder ? `/binder/${currentBinder.id}` : "/binders"}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname.startsWith("/binder")
+                    ? "bg-green-100 text-green-700"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                🎴 {currentBinder ? currentBinder.metadata.name : "Binder"}
+              </Link>
+              <Link
+                to="/browse"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/browse")
+                    ? "bg-blue-100 text-blue-700"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                🔍 Browse Cards
+              </Link>
+            </div>
 
             {user && (
               <div className="hidden md:flex space-x-4">

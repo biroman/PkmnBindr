@@ -56,15 +56,35 @@ const HomePage = () => {
           )}
         </div>
 
+        {/* Feature Highlight - Binder */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-lg shadow-xl p-8 text-center text-white">
+            <div className="text-6xl mb-4">🎴</div>
+            <h2 className="text-3xl font-bold mb-4">Pokemon Card Binder</h2>
+            <p className="text-xl mb-6 opacity-90">
+              Organize your Pokemon card collection in beautiful digital
+              binders. Works offline and syncs with your account when signed in!
+            </p>
+            <Link to="/binders">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
+                🔍 Explore Binders
+              </Button>
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-blue-600 text-3xl mb-4">🔐</div>
+            <div className="text-green-600 text-3xl mb-4">🎴</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Secure Authentication
+              Pokemon Card Binder
             </h3>
             <p className="text-gray-600">
-              Advanced Firebase authentication with email/password, password
-              reset, and secure user management.
+              Create and organize digital binders for your Pokemon card
+              collection. Works locally and syncs when you're signed in.
             </p>
           </div>
 
@@ -82,11 +102,11 @@ const HomePage = () => {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-blue-600 text-3xl mb-4">🛡️</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Protected Routes
+              Secure & Reliable
             </h3>
             <p className="text-gray-600">
-              Role-based access control with protected routes and admin
-              privileges for enhanced security.
+              Your data is safe with Firebase security and works offline. Sign
+              in to sync across all your devices.
             </p>
           </div>
         </div>
