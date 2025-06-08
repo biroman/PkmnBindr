@@ -1,0 +1,193 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is owner
+    function isOwner() {
+      return request.auth != null && 
+             request.auth.uid != null &&
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == "owner");
+    }
+
+    // Helper function to validate string length
+    function isValidStringLength(str, maxLength) {
+      return str is string && str.size() <= maxLength;
+    }
+
+    // Helper function to validate number range
+    function isValidNumberRange(num, min, max) {
+      return num is number && num >= min && num <= max;
+    }
+
+    // Helper function to check if system is in emergency mode
+    function isEmergencyMode() {
+      return exists(/databases/$(database)/documents/systemMonitoring/currentUsage) &&
+             get(/databases/$(database)/documents/systemMonitoring/currentUsage).data.keys().hasAll(['emergencyMode']) &&
+             get(/databases/$(database)/documents/systemMonitoring/currentUsage).data.emergencyMode == true;
+    }
+
+    // System Monitoring - only owners can write, read restricted
+    match /systemMonitoring/{docId} {
+      allow read: if isOwner();
+      allow write: if isOwner();
+    }
+
+    // System Configuration - only owners can write, anyone can read
+    match /systemConfiguration/{configId} {
+      allow read: if true;  // Everyone needs to read limits
+      allow write: if isOwner();
+    }
+
+    // Users collection - allow owners to read for admin purposes
+    match /users/{userId} {
+      // Block operations if in emergency mode (except for owners)
+      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner(); // Owners can always access
+      
+      // Enhanced data validation for user profile updates
+      allow update: if request.auth != null && 
+                       request.auth.uid == userId &&
+                       !isEmergencyMode() &&
+                       // Validate displayName length (max 50 chars)
+                       (!('displayName' in resource.data) || 
+                        !('displayName' in request.resource.data) ||
+                        isValidStringLength(request.resource.data.displayName, 50)) &&
+                       // Validate email format (basic check)
+                       (!('email' in resource.data) || 
+                        !('email' in request.resource.data) ||
+                        (isValidStringLength(request.resource.data.email, 100) && 
+                         request.resource.data.email.matches('.*@.*\\..*'))) &&
+                       // Validate role cannot be changed by user (unless they don't have one yet)
+                       (!('role' in resource.data) || 
+                        !('role' in request.resource.data) ||
+                        resource.data.role == request.resource.data.role);
+    }
+
+    // User subcollections - keep private to user only with enhanced validation
+    match /users/{userId}/binders/{binderId} {
+      // Block operations if in emergency mode (except for owners)
+      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner();
+      
+      // Enhanced validation for binder creation/updates
+      allow create, update: if request.auth != null && 
+                               request.auth.uid == userId &&
+                               !isEmergencyMode() &&
+                               // Validate binder name (required, max 100 chars)
+                               request.resource.data.keys().hasAll(['binderName']) &&
+                               isValidStringLength(request.resource.data.binderName, 100) &&
+                               // Validate description (max 500 chars if present)
+                               (!('description' in request.resource.data) ||
+                                isValidStringLength(request.resource.data.description, 500)) &&
+                               // Validate pageCount (1-200 range)
+                               (!('pageCount' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.pageCount, 1, 200)) &&
+                               // Validate maxPages (1-200 range)
+                               (!('maxPages' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.maxPages, 1, 200)) &&
+                               // Validate gridSize (specific values only)
+                               (!('gridSize' in request.resource.data) ||
+                                request.resource.data.gridSize in ['1x1', '2x2', '3x3', '3x4', '4x4']);
+    }
+
+    // User cards subcollection with strict validation
+    match /users/{userId}/binders/{binderId}/cards/{cardId} {
+      // Block operations if in emergency mode (except for owners)
+      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner();
+      
+      // Enhanced validation for card creation/updates
+      allow create, update: if request.auth != null && 
+                               request.auth.uid == userId &&
+                               !isEmergencyMode() &&
+                               // Validate required fields
+                               request.resource.data.keys().hasAll(['cardApiId', 'name']) &&
+                               // Validate card name (max 100 chars)
+                               isValidStringLength(request.resource.data.name, 100) &&
+                               // Validate cardApiId (max 50 chars)
+                               isValidStringLength(request.resource.data.cardApiId, 50) &&
+                               // Validate value if present (0-999999 range)
+                               (!('value' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.value, 0, 999999)) &&
+                               // Validate pageNumber if present (1-200 range)
+                               (!('pageNumber' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.pageNumber, 1, 200)) &&
+                               // Validate slotInPage if present (0-35 range for max 6x6 grid)
+                               (!('slotInPage' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.slotInPage, 0, 35));
+    }
+
+    // User activity subcollection - read only for users, write only for system
+    match /users/{userId}/activity/{activityId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner(); // Owners can manage activity logs
+      // Users cannot write to activity logs directly (only server-side operations)
+    }
+
+    // User collections subcollection
+    match /users/{userId}/collections/{collectionId} {
+      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner();
+      
+      // Validate collection data
+      allow create, update: if request.auth != null && 
+                               request.auth.uid == userId &&
+                               !isEmergencyMode() &&
+                               // Validate name (required, max 100 chars)
+                               request.resource.data.keys().hasAll(['name']) &&
+                               isValidStringLength(request.resource.data.name, 100) &&
+                               // Validate description (max 500 chars if present)
+                               (!('description' in request.resource.data) ||
+                                isValidStringLength(request.resource.data.description, 500));
+    }
+
+    // User wishlist subcollection
+    match /users/{userId}/wishlist/{wishlistId} {
+      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write: if isOwner();
+      
+      // Validate wishlist data
+      allow create, update: if request.auth != null && 
+                               request.auth.uid == userId &&
+                               !isEmergencyMode() &&
+                               // Validate name (required, max 100 chars)
+                               request.resource.data.keys().hasAll(['name']) &&
+                               isValidStringLength(request.resource.data.name, 100) &&
+                               // Validate itemType
+                               request.resource.data.itemType in ['card', 'binder'] &&
+                               // Validate maxPrice if present (0-999999 range)
+                               (!('maxPrice' in request.resource.data) ||
+                                isValidNumberRange(request.resource.data.maxPrice, 0, 999999));
+    }
+
+    // Global Rules collection - Owner can manage, users can read
+    match /globalRules/{ruleId} {
+      // Owner has full access to create, read, update, delete rules
+      allow read, write: if isOwner();
+      
+      // All authenticated users can read rules (needed to check what rules apply to them)
+      allow read: if request.auth != null;
+    }
+
+    // Rule Usage collection - Users can read their own usage, owner can read all
+    match /ruleUsage/{usageId} {
+      // Users can read their own usage records
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Users can create/update their own usage records (for tracking)
+      allow create, update: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Owner can read all usage records (for analytics)
+      allow read: if isOwner();
+      
+      // Owner can write usage records (for management and cleanup)
+      allow write: if isOwner();
+    }
+
+    // Deny all other collections/documents
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
