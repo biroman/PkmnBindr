@@ -183,20 +183,68 @@ export const pokemonTcgApi = {
   } = {}) {
     try {
       // Build search query
-      let q = query;
+      let q = "";
 
-      // Add filters to query
+      // Parse and handle different query types
+      if (query) {
+        const trimmedQuery = query.trim();
+
+        // Check if the query is already a formatted API query (contains colon and quotes)
+        if (trimmedQuery.match(/^\w+(\.\w+)?:".*"$/)) {
+          // Already formatted query like set.id:"sv7" or name:"Pikachu"
+          q += trimmedQuery;
+        } else if (trimmedQuery.includes("#")) {
+          // Pattern: "Pikachu #3" or "#3" - search by card number
+          const parts = trimmedQuery.split("#");
+          if (parts.length === 2) {
+            const pokemonName = parts[0].trim();
+            const cardNumber = parts[1].trim();
+
+            if (pokemonName) {
+              // Both name and number: "Pikachu #3"
+              q += `name:"${pokemonName}" number:${cardNumber}`;
+            } else {
+              // Just number: "#3"
+              q += `number:${cardNumber}`;
+            }
+          } else {
+            // Fallback to name search if # parsing fails
+            q += `name:"${trimmedQuery}"`;
+          }
+        } else if (trimmedQuery.toLowerCase().startsWith("artist:")) {
+          // Pattern: "artist:Ken Sugimori"
+          const artistName = trimmedQuery.substring(7).trim(); // Remove "artist:"
+          q += `artist:"${artistName}"`;
+        } else if (trimmedQuery.toLowerCase().startsWith("set:")) {
+          // Pattern: "set:Base Set"
+          const setName = trimmedQuery.substring(4).trim(); // Remove "set:"
+          q += `set.name:"${setName}"`;
+        } else if (trimmedQuery.toLowerCase().startsWith("type:")) {
+          // Pattern: "type:Fire"
+          const typeName = trimmedQuery.substring(5).trim(); // Remove "type:"
+          q += `types:"${typeName}"`;
+        } else if (trimmedQuery.toLowerCase().startsWith("rarity:")) {
+          // Pattern: "rarity:Rare Holo"
+          const rarityName = trimmedQuery.substring(7).trim(); // Remove "rarity:"
+          q += `rarity:"${rarityName}"`;
+        } else {
+          // Default: treat as pokemon name search
+          q += `name:"${trimmedQuery}"`;
+        }
+      }
+
+      // Add filters to query (these will be combined with the parsed query above)
       if (filters.name) {
-        q += (q ? " " : "") + `name:${filters.name}*`;
+        q += (q ? " " : "") + `name:"${filters.name}"`;
       }
       if (filters.types && filters.types.length > 0) {
-        q += (q ? " " : "") + `types:${filters.types.join(",")}`;
+        q += (q ? " " : "") + `types:"${filters.types.join('","')}"`;
       }
       if (filters.supertype) {
-        q += (q ? " " : "") + `supertype:${filters.supertype}`;
+        q += (q ? " " : "") + `supertype:"${filters.supertype}"`;
       }
       if (filters.subtypes && filters.subtypes.length > 0) {
-        q += (q ? " " : "") + `subtypes:${filters.subtypes.join(",")}`;
+        q += (q ? " " : "") + `subtypes:"${filters.subtypes.join('","')}"`;
       }
       if (filters.set) {
         // Always treat as set ID first, fallback to set name
@@ -216,8 +264,8 @@ export const pokemonTcgApi = {
         ...(orderBy && { orderBy }),
       };
 
-      // console.log("Search params:", params);
-      // console.log("Built query:", q);
+      console.log("Search params:", params);
+      console.log("Built query:", q);
 
       const response = await apiRequest("/cards", { params });
 
@@ -256,7 +304,6 @@ export const pokemonTcgApi = {
         params: {
           q: 'supertype:Pokémon rarity:"Rare Holo"',
           pageSize: limit,
-          orderBy: "-set.releaseDate",
         },
       });
 
@@ -273,7 +320,6 @@ export const pokemonTcgApi = {
       return await this.searchCards({
         filters: { name: pokemonName },
         pageSize: limit,
-        orderBy: "-set.releaseDate",
       });
     } catch (error) {
       console.error("Search by Pokemon failed:", error);

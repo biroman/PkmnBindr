@@ -25,6 +25,7 @@ const DEFAULT_BINDER_SETTINGS = {
   // Page management
   minPages: 1, // Minimum number of pages (including cover)
   maxPages: 100, // Maximum number of pages allowed
+  pageCount: 1, // Actual number of pages in the binder
   autoExpand: true, // Automatically add pages when cards are added beyond current pages
   autoShrink: false, // Automatically remove empty pages at the end
 };
@@ -217,16 +218,26 @@ const createBatchOperation = (operations, binder) => {
 
 // Migration function to upgrade old binder format to new format
 const migrateBinder = (oldBinder) => {
-  // Check if already migrated
-  if (oldBinder.schemaVersion === "2.0") {
+  // Check if already migrated to current schema
+  if (
+    oldBinder.schemaVersion === "2.0" &&
+    oldBinder.settings?.pageCount !== undefined
+  ) {
     return oldBinder;
   }
 
-  console.log(`Migrating binder "${oldBinder.name}" to new schema`);
+  console.log(
+    `Migrating binder "${
+      oldBinder.name || oldBinder.metadata?.name
+    }" to new schema`
+  );
 
-  // Convert old array-based cards to new position-based object
   let newCards = {};
+  let calculatedPageCount = 1;
+
+  // Handle both array-based and object-based cards
   if (Array.isArray(oldBinder.cards)) {
+    // Old array format
     oldBinder.cards.forEach((card, index) => {
       if (card && card.id) {
         newCards[index.toString()] = {
@@ -241,6 +252,24 @@ const migrateBinder = (oldBinder) => {
         };
       }
     });
+  } else if (oldBinder.cards && typeof oldBinder.cards === "object") {
+    // Already object format, keep as is
+    newCards = oldBinder.cards;
+  }
+
+  // Calculate current page count based on existing cards
+  if (Object.keys(newCards).length > 0) {
+    const positions = Object.keys(newCards).map((pos) => parseInt(pos));
+    const maxPosition = Math.max(...positions);
+    const gridSize = oldBinder.settings?.gridSize || "3x3";
+    const gridConfig = {
+      "3x3": { total: 9 },
+      "4x4": { total: 16 },
+      "5x5": { total: 25 },
+      "6x6": { total: 36 },
+    };
+    const cardsPerPage = gridConfig[gridSize]?.total || 9;
+    calculatedPageCount = Math.ceil((maxPosition + 1) / cardsPerPage);
   }
 
   // Create migrated binder with new structure
@@ -251,7 +280,7 @@ const migrateBinder = (oldBinder) => {
 
     // Ownership
     ownerId: oldBinder.ownerId || "local_user",
-    permissions: {
+    permissions: oldBinder.permissions || {
       public: false,
       collaborators: [],
       shareCode: null,
@@ -260,10 +289,14 @@ const migrateBinder = (oldBinder) => {
     // Version control & sync
     version: oldBinder.version || 1,
     lastModified:
-      oldBinder.updatedAt || oldBinder.createdAt || new Date().toISOString(),
-    lastModifiedBy: oldBinder.ownerId || "local_user",
+      oldBinder.lastModified ||
+      oldBinder.updatedAt ||
+      oldBinder.createdAt ||
+      new Date().toISOString(),
+    lastModifiedBy:
+      oldBinder.lastModifiedBy || oldBinder.ownerId || "local_user",
 
-    sync: {
+    sync: oldBinder.sync || {
       status: "local",
       lastSynced: null,
       pendingChanges: [],
@@ -272,8 +305,8 @@ const migrateBinder = (oldBinder) => {
       lastError: null,
     },
 
-    // Metadata (from old root-level properties)
-    metadata: {
+    // Metadata (handle both old and new formats)
+    metadata: oldBinder.metadata || {
       name: oldBinder.name || "Untitled Binder",
       description: oldBinder.description || "",
       createdAt: oldBinder.createdAt || new Date().toISOString(),
@@ -283,17 +316,20 @@ const migrateBinder = (oldBinder) => {
       sortOrder: 0,
     },
 
-    // Settings (merge old and new defaults)
+    // Settings (merge old and new defaults, ensure pageCount is set)
     settings: {
       ...DEFAULT_BINDER_SETTINGS,
       ...oldBinder.settings,
+      pageCount:
+        oldBinder.settings?.pageCount ||
+        Math.max(calculatedPageCount, oldBinder.settings?.minPages || 1),
     },
 
     // Cards (converted to new format)
     cards: newCards,
 
     // Change tracking
-    changelog: [
+    changelog: oldBinder.changelog || [
       {
         id: generateChangeId(),
         timestamp: new Date().toISOString(),
@@ -303,6 +339,10 @@ const migrateBinder = (oldBinder) => {
           fromVersion: oldBinder.schemaVersion || "1.0",
           toVersion: "2.0",
           cardsCount: Object.keys(newCards).length,
+          pageCount: Math.max(
+            calculatedPageCount,
+            oldBinder.settings?.minPages || 1
+          ),
         },
       },
     ],
@@ -491,11 +531,51 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
+          const updatedCards = {
+            ...binder.cards,
+            [targetPosition.toString()]: cardEntry,
+          };
+
+          // Calculate required pages after adding this card
+          const gridConfig = {
+            "3x3": { total: 9 },
+            "4x4": { total: 16 },
+            "5x5": { total: 25 },
+            "6x6": { total: 36 },
+          };
+
+          const cardsPerPage =
+            gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+          const maxPosition = Math.max(
+            ...Object.keys(updatedCards).map((pos) => parseInt(pos))
+          );
+          const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+          // Convert card pages to binder pages
+          // Page 1 is special (cover + 1 card page), subsequent pages are pairs of card pages
+          let requiredBinderPages;
+          if (requiredCardPages <= 1) {
+            requiredBinderPages = 1; // Just the cover page with first card page
+          } else {
+            const pairsNeeded = Math.ceil((requiredCardPages - 1) / 2);
+            requiredBinderPages = 1 + pairsNeeded; // Cover page + pairs
+          }
+
+          const currentPageCount = binder.settings?.pageCount || 1;
+
+          // Update pageCount if we need more binder pages
+          const newPageCount = Math.max(
+            requiredBinderPages,
+            currentPageCount,
+            binder.settings?.minPages || 1
+          );
+
           const updatedBinder = {
             ...binder,
-            cards: {
-              ...binder.cards,
-              [targetPosition.toString()]: cardEntry,
+            cards: updatedCards,
+            settings: {
+              ...binder.settings,
+              pageCount: newPageCount,
             },
             version: binder.version + 1,
             lastModified: new Date().toISOString(),
@@ -766,6 +846,75 @@ export const BinderProvider = ({ children }) => {
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
+          let updatedSettings = { ...binder.settings, ...settings };
+
+          // If grid size is changing, recalculate page count
+          if (
+            settings.gridSize &&
+            settings.gridSize !== binder.settings.gridSize
+          ) {
+            // Get grid configuration for new size
+            const gridConfig = {
+              "2x2": { total: 4 },
+              "3x3": { total: 9 },
+              "4x3": { total: 12 },
+              "4x4": { total: 16 },
+            };
+
+            const newCardsPerPage = gridConfig[settings.gridSize]?.total || 9;
+
+            // Calculate required pages based on existing cards and new grid size
+            if (binder.cards && typeof binder.cards === "object") {
+              const positions = Object.keys(binder.cards).map((pos) =>
+                parseInt(pos)
+              );
+
+              if (positions.length > 0) {
+                const maxPosition = Math.max(...positions);
+                const requiredCardPages = Math.ceil(
+                  (maxPosition + 1) / newCardsPerPage
+                );
+
+                // Convert card pages to actual binder pages
+                // Page 1 is special (cover + 1 card page)
+                // All other pages are pairs of card pages
+                let requiredBinderPages;
+                if (requiredCardPages <= 1) {
+                  requiredBinderPages = 1;
+                } else {
+                  const pairsNeeded = Math.ceil((requiredCardPages - 1) / 2);
+                  requiredBinderPages = 1 + pairsNeeded;
+                }
+
+                // Update page count to accommodate all cards with new grid size
+                // Don't use current pageCount in max() - recalculate based on actual needs
+                const newPageCount = Math.max(
+                  requiredBinderPages,
+                  updatedSettings.minPages || 1
+                );
+
+                // Respect max pages setting
+                const maxPages = updatedSettings.maxPages || 100;
+                updatedSettings.pageCount = Math.min(newPageCount, maxPages);
+
+                console.log(
+                  `Grid size changed from ${binder.settings.gridSize} to ${settings.gridSize}`
+                );
+                console.log(
+                  `Cards per page: ${binder.settings.gridSize} (${
+                    gridConfig[binder.settings.gridSize]?.total || 9
+                  }) → ${settings.gridSize} (${newCardsPerPage})`
+                );
+                console.log(`Max card position: ${maxPosition}`);
+                console.log(`Required card pages: ${requiredCardPages}`);
+                console.log(`Required binder pages: ${requiredBinderPages}`);
+                console.log(
+                  `Page count updated: ${binder.settings.pageCount} → ${updatedSettings.pageCount}`
+                );
+              }
+            }
+          }
+
           const changeEntry = {
             id: generateChangeId(),
             timestamp: new Date().toISOString(),
@@ -774,12 +923,16 @@ export const BinderProvider = ({ children }) => {
             data: {
               changes: settings,
               previousSettings: binder.settings,
+              calculatedPageCount:
+                updatedSettings.pageCount !== binder.settings.pageCount
+                  ? updatedSettings.pageCount
+                  : undefined,
             },
           };
 
           return {
             ...binder,
-            settings: { ...binder.settings, ...settings },
+            settings: updatedSettings,
             version: binder.version + 1,
             lastModified: new Date().toISOString(),
             lastModifiedBy: binder.ownerId,
@@ -872,34 +1025,18 @@ export const BinderProvider = ({ children }) => {
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
-          // Get grid configuration
-          const gridConfig = {
-            "3x3": { total: 9 },
-            "4x4": { total: 16 },
-            "5x5": { total: 25 },
-            "6x6": { total: 36 },
-          };
-
-          const cardsPerPage = gridConfig[binder.settings.gridSize]?.total || 9;
-
-          // Calculate current max position
-          const positions = Object.keys(binder.cards).map((pos) =>
-            parseInt(pos)
-          );
-          const maxPosition =
-            positions.length > 0 ? Math.max(...positions) : -1;
-
-          // Calculate what page this would be adding (considering cover page)
-          const totalCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
-          const newPageNumber = totalCardPages + 1;
+          // Get current page count from settings
+          const currentPageCount = binder.settings?.pageCount || 1;
 
           // Check if we're within max pages limit
-          if (newPageNumber > binder.settings.maxPages) {
+          if (currentPageCount >= binder.settings.maxPages) {
             toast.error(
               `Cannot add more pages. Maximum is ${binder.settings.maxPages}`
             );
             return binder;
           }
+
+          const newPageCount = currentPageCount + 1;
 
           const changeEntry = {
             id: generateChangeId(),
@@ -907,15 +1044,19 @@ export const BinderProvider = ({ children }) => {
             type: "page_added",
             userId: binder.ownerId,
             data: {
-              pageNumber: newPageNumber,
-              cardsPerPage,
+              pageNumber: newPageCount,
+              previousPageCount: currentPageCount,
             },
           };
 
-          toast.success(`Added page ${newPageNumber}`);
+          toast.success(`Added page ${newPageCount}`);
 
           return {
             ...binder,
+            settings: {
+              ...binder.settings,
+              pageCount: newPageCount,
+            },
             version: binder.version + 1,
             lastModified: new Date().toISOString(),
             lastModifiedBy: binder.ownerId,
@@ -938,13 +1079,89 @@ export const BinderProvider = ({ children }) => {
     [currentBinder]
   );
 
+  const batchAddPages = useCallback(
+    async (binderId, pageCount) => {
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          // Get current page count from settings
+          const currentPageCount = binder.settings?.pageCount || 1;
+
+          // Check if we're within max pages limit
+          const newPageCount = currentPageCount + pageCount;
+          if (newPageCount > binder.settings.maxPages) {
+            const maxPossible = binder.settings.maxPages - currentPageCount;
+            toast.error(
+              `Cannot add ${pageCount} pages. Maximum is ${binder.settings.maxPages}. Can only add ${maxPossible} more pages.`
+            );
+            return binder;
+          }
+
+          const changeEntry = {
+            id: generateChangeId(),
+            timestamp: new Date().toISOString(),
+            type: "pages_batch_added",
+            userId: binder.ownerId,
+            data: {
+              pagesAdded: pageCount,
+              fromPageCount: currentPageCount,
+              toPageCount: newPageCount,
+            },
+          };
+
+          toast.success(
+            `Added ${pageCount} page${pageCount > 1 ? "s" : ""} (${
+              currentPageCount + 1
+            }-${newPageCount})`
+          );
+
+          return {
+            ...binder,
+            settings: {
+              ...binder.settings,
+              pageCount: newPageCount,
+            },
+            version: binder.version + 1,
+            lastModified: new Date().toISOString(),
+            lastModifiedBy: binder.ownerId,
+            changelog: [...binder.changelog, changeEntry].slice(-50),
+          };
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+      } catch (error) {
+        console.error("Failed to add pages:", error);
+        toast.error("Failed to add pages");
+        throw error;
+      }
+    },
+    [currentBinder]
+  );
+
   const removePage = useCallback(
     async (binderId) => {
       try {
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
-          // Get grid configuration
+          // Get current page count from settings
+          const currentPageCount = binder.settings?.pageCount || 1;
+
+          // Check if we're at minimum pages
+          if (currentPageCount <= binder.settings.minPages) {
+            toast.error(
+              `Cannot remove pages. Minimum is ${binder.settings.minPages}`
+            );
+            return binder;
+          }
+
+          // Get grid configuration to check if last page has cards
           const gridConfig = {
             "3x3": { total: 9 },
             "4x4": { total: 16 },
@@ -954,30 +1171,13 @@ export const BinderProvider = ({ children }) => {
 
           const cardsPerPage = gridConfig[binder.settings.gridSize]?.total || 9;
 
-          // Calculate current max position and pages
+          // Check if last page has cards
+          const lastPageStartPosition = (currentPageCount - 1) * cardsPerPage;
+          const lastPageEndPosition = currentPageCount * cardsPerPage - 1;
+
           const positions = Object.keys(binder.cards).map((pos) =>
             parseInt(pos)
           );
-          if (positions.length === 0) {
-            toast.error("Cannot remove pages - binder is empty");
-            return binder;
-          }
-
-          const maxPosition = Math.max(...positions);
-          const totalCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
-
-          // Check if we're at minimum pages
-          if (totalCardPages <= binder.settings.minPages) {
-            toast.error(
-              `Cannot remove pages. Minimum is ${binder.settings.minPages}`
-            );
-            return binder;
-          }
-
-          // Check if last page has cards
-          const lastPageStartPosition = (totalCardPages - 1) * cardsPerPage;
-          const lastPageEndPosition = totalCardPages * cardsPerPage - 1;
-
           const hasCardsOnLastPage = positions.some(
             (pos) => pos >= lastPageStartPosition && pos <= lastPageEndPosition
           );
@@ -987,21 +1187,27 @@ export const BinderProvider = ({ children }) => {
             return binder;
           }
 
+          const newPageCount = currentPageCount - 1;
+
           const changeEntry = {
             id: generateChangeId(),
             timestamp: new Date().toISOString(),
             type: "page_removed",
             userId: binder.ownerId,
             data: {
-              pageNumber: totalCardPages,
-              cardsPerPage,
+              pageNumber: currentPageCount,
+              newPageCount: newPageCount,
             },
           };
 
-          toast.success(`Removed page ${totalCardPages}`);
+          toast.success(`Removed page ${currentPageCount}`);
 
           return {
             ...binder,
+            settings: {
+              ...binder.settings,
+              pageCount: newPageCount,
+            },
             version: binder.version + 1,
             lastModified: new Date().toISOString(),
             lastModifiedBy: binder.ownerId,
@@ -1030,29 +1236,87 @@ export const BinderProvider = ({ children }) => {
         ? binders.find((b) => b.id === binderId)
         : currentBinder;
 
-      if (!binder?.cards || typeof binder.cards !== "object") return 1;
+      if (!binder) return 1;
 
-      // Get grid configuration
-      const gridConfig = {
-        "3x3": { total: 9 },
-        "4x4": { total: 16 },
-        "5x5": { total: 25 },
-        "6x6": { total: 36 },
-      };
+      // Get the stored page count from settings (this includes manually added pages)
+      const storedPageCount = binder.settings?.pageCount || 1;
 
-      const cardsPerPage =
-        gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+      // Calculate minimum pages needed based on cards (if any)
+      if (binder.cards && typeof binder.cards === "object") {
+        const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
 
-      // Calculate pages based on highest position
-      const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
-      if (positions.length === 0)
-        return Math.max(binder.settings?.minPages || 1, 1);
+        if (positions.length > 0) {
+          // Get grid configuration
+          const gridConfig = {
+            "3x3": { total: 9 },
+            "4x4": { total: 16 },
+            "5x5": { total: 25 },
+            "6x6": { total: 36 },
+          };
 
-      const maxPosition = Math.max(...positions);
-      const cardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+          const cardsPerPage =
+            gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
 
-      // Ensure we respect minimum pages setting
-      return Math.max(cardPages, binder.settings?.minPages || 1);
+          const maxPosition = Math.max(...positions);
+          const requiredPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+          // Return the higher of stored pages or required pages for cards
+          return Math.max(
+            storedPageCount,
+            requiredPages,
+            binder.settings?.minPages || 1
+          );
+        }
+      }
+
+      // No cards, return stored page count (respecting minimum)
+      return Math.max(storedPageCount, binder.settings?.minPages || 1);
+    },
+    [binders, currentBinder]
+  );
+
+  const updateBinderMetadata = useCallback(
+    async (binderId, metadataUpdates) => {
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const changeEntry = {
+            id: generateChangeId(),
+            timestamp: new Date().toISOString(),
+            type: "metadata_updated",
+            userId: binder.ownerId,
+            data: { updates: metadataUpdates },
+          };
+
+          return {
+            ...binder,
+            metadata: {
+              ...binder.metadata,
+              ...metadataUpdates,
+            },
+            version: binder.version + 1,
+            lastModified: new Date().toISOString(),
+            lastModifiedBy: binder.ownerId,
+            changelog: [...binder.changelog, changeEntry].slice(-50),
+          };
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        // Save to localStorage
+        const updatedBinders = binders.map(updateBinder);
+        storage.set(STORAGE_KEYS.BINDERS, updatedBinders);
+      } catch (error) {
+        console.error("Failed to update binder metadata:", error);
+        toast.error("Failed to update binder metadata");
+        throw error;
+      }
     },
     [binders, currentBinder]
   );
@@ -1074,9 +1338,11 @@ export const BinderProvider = ({ children }) => {
     moveCardOptimistic,
     batchMoveCards,
     updateBinderSettings,
+    updateBinderMetadata,
 
     // Page Management
     addPage,
+    batchAddPages,
     removePage,
     getPageCount,
 

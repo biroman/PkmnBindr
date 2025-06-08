@@ -8,7 +8,9 @@ const CardPage = ({
   onCardClick,
   onCardDelete,
   onSlotClick,
+  onToggleMissing, // New prop for toggling missing status
   cardPageIndex = 0, // For calculating global positions
+  missingCards = [], // Array of missing card numbers
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
@@ -48,6 +50,20 @@ const CardPage = ({
             // Calculate global position based on page index and slot index
             const globalPosition = cardPageIndex * gridConfig.total + index;
 
+            // Check if this card is marked as missing
+            const cardNumber = card?.number;
+            const isReverseHolo = card?.reverseHolo || false;
+
+            // Create the missing card identifier
+            const missingCardId = cardNumber
+              ? isReverseHolo
+                ? `${cardNumber}rh`
+                : cardNumber
+              : null;
+
+            const isMissing =
+              missingCardId && missingCards.includes(missingCardId);
+
             return (
               <DroppableSlot
                 key={`slot-${globalPosition}`}
@@ -57,7 +73,9 @@ const CardPage = ({
                 onCardClick={onCardClick}
                 onCardDelete={onCardDelete}
                 onSlotClick={onSlotClick}
+                onToggleMissing={onToggleMissing}
                 className="w-full h-full"
+                isMissing={isMissing}
               />
             );
           })}

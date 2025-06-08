@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { getGridConfig } from "./useBinderDimensions";
 import { useCardCache } from "../contexts/CardCacheContext";
 
@@ -10,10 +10,16 @@ const useBinderPages = (binder) => {
   const totalPages = useMemo(() => {
     if (!binder?.cards || typeof binder.cards !== "object") {
       // Return minimum pages from settings or default to 1
-      return Math.max(binder?.settings?.minPages || 1, 1);
+      return Math.max(
+        binder?.settings?.minPages || 1,
+        binder?.settings?.pageCount || 1
+      );
     }
 
-    // Get the highest position number to determine how many pages we need
+    // Get the stored page count from settings (includes manually added pages)
+    const storedPageCount = binder?.settings?.pageCount || 1;
+
+    // Get the highest position number to determine how many pages we need for cards
     const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
 
     // Calculate how many cards per page based on grid size
@@ -21,36 +27,58 @@ const useBinderPages = (binder) => {
     const cardsPerPage = gridConfig.total;
 
     if (positions.length === 0) {
-      // No cards, return minimum pages from settings
-      return Math.max(binder?.settings?.minPages || 1, 1);
+      // No cards, return stored page count (respecting minimum)
+      return Math.max(binder?.settings?.minPages || 1, storedPageCount);
     }
 
     const maxPosition = Math.max(...positions);
 
     // Calculate how many card pages we need based on highest position
-    const cardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+    const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
 
-    // Respect minimum pages setting
-    const minCardPages = Math.max(binder?.settings?.minPages || 1, 1);
-    const actualCardPages = Math.max(cardPages, minCardPages);
-
-    // Check if auto-expand is enabled and respect max pages
-    if (binder?.settings?.autoExpand && cardPages > actualCardPages) {
-      const maxPages = binder?.settings?.maxPages || 100;
-      return Math.min(cardPages, maxPages);
-    }
-
+    // Convert card pages to actual binder pages
     // Page 1 is special (cover + 1 card page)
     // All other pages are pairs of card pages
-    const pairsNeeded = Math.ceil((actualCardPages - 1) / 2);
-    return 1 + pairsNeeded; // Cover page + pairs
+    let requiredBinderPages;
+    if (requiredCardPages <= 1) {
+      requiredBinderPages = 1; // Just the cover page with first card page
+    } else {
+      const pairsNeeded = Math.ceil((requiredCardPages - 1) / 2);
+      requiredBinderPages = 1 + pairsNeeded; // Cover page + pairs
+    }
+
+    // Return the higher of stored pages or required pages for cards
+    const finalPageCount = Math.max(
+      storedPageCount,
+      requiredBinderPages,
+      binder?.settings?.minPages || 1
+    );
+
+    // Respect max pages setting
+    const maxPages = binder?.settings?.maxPages || 100;
+    return Math.min(finalPageCount, maxPages);
   }, [
     binder?.cards,
     binder?.settings?.gridSize,
     binder?.settings?.minPages,
     binder?.settings?.maxPages,
+    binder?.settings?.pageCount,
     binder?.settings?.autoExpand,
   ]);
+
+  // Auto-adjust current page when total pages changes
+  useEffect(() => {
+    if (currentPageIndex >= totalPages) {
+      // Current page is beyond the new total, move to the last available page
+      const newPageIndex = Math.max(0, totalPages - 1);
+
+      // Use setTimeout to defer the state update until after the current render cycle
+      // This prevents the "Cannot update a component while rendering a different component" error
+      setTimeout(() => {
+        setCurrentPageIndex(newPageIndex);
+      }, 0);
+    }
+  }, [totalPages, currentPageIndex]);
 
   // Get page configuration for current view
   const getCurrentPageConfig = useMemo(() => {

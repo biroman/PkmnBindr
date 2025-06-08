@@ -8,6 +8,8 @@ const DraggableCard = ({
   gridSize,
   onCardClick,
   onCardDelete,
+  onToggleMissing,
+  isMissing = false,
   className = "",
   isDragging = false,
   ...props
@@ -51,7 +53,10 @@ const DraggableCard = ({
         size="small"
         onClick={() => onCardClick && onCardClick(card, position)}
         onDelete={onCardDelete ? () => onCardDelete(card, position) : undefined}
+        onToggleMissing={onToggleMissing ? () => onToggleMissing() : undefined}
         showDeleteButton={!!onCardDelete && !isCurrentlyDragging}
+        showMissingButton={!!onToggleMissing && !isCurrentlyDragging}
+        isMissing={isMissing}
         dragHandleProps={{ ...attributes, ...listeners }}
         className={`
           touch-none select-none ${

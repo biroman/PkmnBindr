@@ -13,6 +13,28 @@ const PageManager = ({ binder, className = "" }) => {
   const maxPages = binder.settings?.maxPages || 100;
   const autoExpand = binder.settings?.autoExpand;
 
+  // Calculate card pages for clarity
+  const calculateCardPages = () => {
+    if (!binder?.cards || typeof binder.cards !== "object") return 0;
+
+    const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
+    if (positions.length === 0) return 0;
+
+    const gridConfig = {
+      "2x2": { total: 4 },
+      "3x3": { total: 9 },
+      "4x3": { total: 12 },
+      "4x4": { total: 16 },
+    };
+
+    const cardsPerPage =
+      gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+    const maxPosition = Math.max(...positions);
+    return Math.ceil((maxPosition + 1) / cardsPerPage);
+  };
+
+  const cardPages = calculateCardPages();
+
   const handleAddPage = async () => {
     try {
       await addPage(binder.id);
@@ -46,8 +68,9 @@ const PageManager = ({ binder, className = "" }) => {
           <div className="text-left">
             <h3 className="font-medium text-gray-900">Page Management</h3>
             <p className="text-sm text-gray-500">
-              {currentPageCount} page{currentPageCount !== 1 ? "s" : ""} •{" "}
-              {minPages}-{maxPages} allowed
+              {currentPageCount} binder page{currentPageCount !== 1 ? "s" : ""}{" "}
+              / {cardPages} card page{cardPages !== 1 ? "s" : ""} • {minPages}-
+              {maxPages} allowed
             </p>
           </div>
         </div>
@@ -84,10 +107,14 @@ const PageManager = ({ binder, className = "" }) => {
             {/* Page Count Display */}
             <div className="bg-gray-50 rounded-lg p-3">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600">Current Pages:</span>
+                <span className="text-gray-600">Binder Pages:</span>
                 <span className="font-medium text-gray-900">
                   {currentPageCount}
                 </span>
+              </div>
+              <div className="flex items-center justify-between text-sm mt-1">
+                <span className="text-gray-600">Card Pages:</span>
+                <span className="font-medium text-gray-900">{cardPages}</span>
               </div>
               <div className="flex items-center justify-between text-sm mt-1">
                 <span className="text-gray-600">Range:</span>
@@ -152,10 +179,16 @@ const PageManager = ({ binder, className = "" }) => {
             {/* Help Text */}
             <div className="text-xs text-gray-500 space-y-1">
               <p>
+                • <strong>Binder pages:</strong> Physical spreads you flip
+                through
+              </p>
+              <p>
+                • <strong>Card pages:</strong> Individual pages that hold cards
+              </p>
+              <p>
                 • Pages are added automatically when cards exceed current space
               </p>
               <p>• Can only remove empty pages from the end</p>
-              <p>• Grid size changes may affect pages needed</p>
             </div>
           </div>
         </div>

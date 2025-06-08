@@ -18,7 +18,7 @@ const useCardSearch = () => {
     rarity: "",
     artist: "",
   });
-  const [orderBy, setOrderBy] = useState("-set.releaseDate");
+  const [orderBy, setOrderBy] = useState("");
 
   // Results state
   const [cards, setCards] = useState([]);
@@ -242,11 +242,23 @@ const useCardSearch = () => {
     setSearchQuery(query);
   }, []);
 
-  // Auto-search when query or filters change (debounced)
+  // Manual search function
+  const performSearch = useCallback(() => {
+    if (
+      searchQuery ||
+      Object.values(filters).some(
+        (value) => value && (Array.isArray(value) ? value.length > 0 : true)
+      )
+    ) {
+      searchCards({ resetResults: true });
+    }
+  }, [searchCards, searchQuery, filters]);
+
+  // Auto-search only for filters changes, not searchQuery
   useEffect(() => {
     const timeoutId = setTimeout(() => {
+      // Only auto-search when filters change, not when searchQuery changes
       if (
-        searchQuery ||
         Object.values(filters).some(
           (value) => value && (Array.isArray(value) ? value.length > 0 : true)
         )
@@ -256,7 +268,7 @@ const useCardSearch = () => {
     }, 500); // 500ms debounce
 
     return () => clearTimeout(timeoutId);
-  }, [searchCards]);
+  }, [searchCards, filters]); // Removed searchQuery from dependencies
 
   // Computed values
   const hasActiveFilters = useMemo(() => {
@@ -317,6 +329,9 @@ const useCardSearch = () => {
     hasActiveFilters,
     isEmpty,
     showFeatured,
+
+    // Manual search
+    performSearch,
   };
 };
 

@@ -35,6 +35,18 @@ export default {
         md: "calc(0.5rem - 2px)",
         sm: "calc(0.5rem - 4px)",
       },
+      aspectRatio: {
+        card: "5 / 7",
+      },
+      animation: {
+        shimmer: "shimmer 2s linear infinite",
+      },
+      keyframes: {
+        shimmer: {
+          "0%": { transform: "translateX(-100%) rotate(-45deg)" },
+          "100%": { transform: "translateX(200%) rotate(-45deg)" },
+        },
+      },
     },
   },
   plugins: [],
