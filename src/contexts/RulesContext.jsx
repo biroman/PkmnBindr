@@ -13,6 +13,7 @@ import {
   checkAccessControl,
   RULE_TYPES,
 } from "../lib/rules";
+import { BINDER_ACTION_MAPPINGS, checkBinderLimits } from "../lib/binderRules";
 
 const RulesContext = createContext();
 
@@ -217,6 +218,9 @@ export const RulesProvider = ({ children }) => {
         // Content actions
         upload_file: { type: "content_limit", resource: "file_upload" },
         create_text_content: { type: "content_limit", resource: "text_input" },
+
+        // Binder actions
+        ...BINDER_ACTION_MAPPINGS,
       };
 
       const mapping = actionMappings[action];
@@ -349,6 +353,9 @@ export const RulesProvider = ({ children }) => {
     getRulesOfType,
     hasActiveRules,
     RULE_TYPES,
+
+    // Binder-specific helpers
+    checkBinderLimits,
   };
 
   return (

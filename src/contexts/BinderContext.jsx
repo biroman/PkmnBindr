@@ -6,6 +6,7 @@ import {
   useCallback,
 } from "react";
 import { toast } from "react-hot-toast";
+import { useRules } from "./RulesContext";
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -357,6 +358,7 @@ export const BinderProvider = ({ children }) => {
   const [binders, setBinders] = useState([]);
   const [currentBinder, setCurrentBinder] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { checkBinderLimits, canPerformAction } = useRules();
 
   // Initialize from localStorage
   useEffect(() => {
@@ -417,25 +419,42 @@ export const BinderProvider = ({ children }) => {
   }, [currentBinder, isLoading]);
 
   // Create a new binder
-  const createBinder = useCallback(async (name, description = "") => {
-    try {
-      if (!name.trim()) {
-        throw new Error("Binder name is required");
+  const createBinder = useCallback(
+    async (name, description = "") => {
+      try {
+        if (!name.trim()) {
+          throw new Error("Binder name is required");
+        }
+
+        // Check if user can create more binders
+        const canCreate = await checkBinderLimits.canCreateBinder(
+          { canPerformAction },
+          "local_user", // TODO: Replace with actual user ID
+          binders.length
+        );
+
+        if (!canCreate.allowed) {
+          throw new Error(canCreate.reason || "Cannot create more binders");
+        }
+
+        const newBinder = createNewBinder(name.trim(), description.trim());
+
+        setBinders((prev) => [...prev, newBinder]);
+        setCurrentBinder(newBinder);
+
+        // Track usage for rate limiting
+        await canPerformAction("create_binder_rate");
+
+        toast.success(`Created binder "${name}"`);
+        return newBinder;
+      } catch (error) {
+        console.error("Failed to create binder:", error);
+        toast.error(error.message || "Failed to create binder");
+        throw error;
       }
-
-      const newBinder = createNewBinder(name.trim(), description.trim());
-
-      setBinders((prev) => [...prev, newBinder]);
-      setCurrentBinder(newBinder);
-
-      toast.success(`Created binder "${name}"`);
-      return newBinder;
-    } catch (error) {
-      console.error("Failed to create binder:", error);
-      toast.error(error.message || "Failed to create binder");
-      throw error;
-    }
-  }, []);
+    },
+    [binders.length, checkBinderLimits, canPerformAction]
+  );
 
   // Update binder
   const updateBinder = useCallback(
@@ -500,6 +519,27 @@ export const BinderProvider = ({ children }) => {
       try {
         if (!card || !card.id) {
           throw new Error("Invalid card data");
+        }
+
+        // Find the target binder for rule checking
+        const targetBinder =
+          binders.find((b) => b.id === binderId) || currentBinder;
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        // Check if user can add cards to this binder
+        const canAdd = await checkBinderLimits.canAddCardsToBinder(
+          { canPerformAction },
+          "local_user", // TODO: Replace with actual user ID
+          targetBinder,
+          1
+        );
+
+        if (!canAdd.allowed) {
+          throw new Error(
+            canAdd.reason || "Cannot add more cards to this binder"
+          );
         }
 
         // Note: Card will be cached when retrieved in useBinderPages hook
@@ -600,7 +640,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders, checkBinderLimits, canPerformAction]
   );
 
   // Remove card from binder
@@ -763,6 +803,27 @@ export const BinderProvider = ({ children }) => {
           throw new Error("Invalid cards data");
         }
 
+        // Find the target binder for rule checking
+        const targetBinder =
+          binders.find((b) => b.id === binderId) || currentBinder;
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        // Check if user can add this many cards to the binder
+        const canAdd = await checkBinderLimits.canAddCardsToBinder(
+          { canPerformAction },
+          "local_user", // TODO: Replace with actual user ID
+          targetBinder,
+          cards.length
+        );
+
+        if (!canAdd.allowed) {
+          throw new Error(
+            canAdd.reason || `Cannot add ${cards.length} cards to this binder`
+          );
+        }
+
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
@@ -878,7 +939,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders, checkBinderLimits, canPerformAction]
   );
 
   // Reorder pages within binder
@@ -1391,8 +1452,6 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
-          toast.success(`Added page ${newPageCount}`);
-
           return {
             ...binder,
             settings: {
@@ -1406,19 +1465,26 @@ export const BinderProvider = ({ children }) => {
           };
         };
 
+        // Get the current page count before updating (for the toast message)
+        const binder = binders.find((b) => b.id === binderId);
+        const newPageNumber = (binder?.settings?.pageCount || 1) + 1;
+
         setBinders((prev) => prev.map(updateBinder));
 
         // Update current binder if it's the one being updated
         if (currentBinder?.id === binderId) {
           setCurrentBinder((prev) => updateBinder(prev));
         }
+
+        // Show success message only once
+        toast.success(`Added page ${newPageNumber}`);
       } catch (error) {
         console.error("Failed to add page:", error);
         toast.error("Failed to add page");
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders]
   );
 
   const batchAddPages = useCallback(
@@ -1452,12 +1518,6 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
-          toast.success(
-            `Added ${pageCount} page${pageCount > 1 ? "s" : ""} (${
-              currentPageCount + 1
-            }-${newPageCount})`
-          );
-
           return {
             ...binder,
             settings: {
@@ -1471,19 +1531,31 @@ export const BinderProvider = ({ children }) => {
           };
         };
 
+        // Get the current page count before updating (for the toast message)
+        const binder = binders.find((b) => b.id === binderId);
+        const currentPageCount = binder?.settings?.pageCount || 1;
+        const newPageCount = currentPageCount + pageCount;
+
         setBinders((prev) => prev.map(updateBinder));
 
         // Update current binder if it's the one being updated
         if (currentBinder?.id === binderId) {
           setCurrentBinder((prev) => updateBinder(prev));
         }
+
+        // Show success message only once
+        toast.success(
+          `Added ${pageCount} page${pageCount > 1 ? "s" : ""} (${
+            currentPageCount + 1
+          }-${newPageCount})`
+        );
       } catch (error) {
         console.error("Failed to add pages:", error);
         toast.error("Failed to add pages");
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders]
   );
 
   const removePage = useCallback(
@@ -1513,9 +1585,17 @@ export const BinderProvider = ({ children }) => {
 
           const cardsPerPage = gridConfig[binder.settings.gridSize]?.total || 9;
 
-          // Check if last page has cards
-          const lastPageStartPosition = (currentPageCount - 1) * cardsPerPage;
-          const lastPageEndPosition = currentPageCount * cardsPerPage - 1;
+          // Calculate positions for the last card pages to be removed
+          // Formula: First binder page has 1 card page, subsequent pages have 2 card pages each
+          // So binder page N corresponds to card pages: 1 + (N-1)*2 = 2*N - 1 card pages total
+          const totalCardPagesBefore =
+            currentPageCount === 1 ? 0 : 1 + (currentPageCount - 2) * 2;
+          const totalCardPagesAfter =
+            currentPageCount === 1 ? 0 : 1 + (currentPageCount - 1) * 2;
+
+          // Check if the card pages that would be removed contain any cards
+          const lastPageStartPosition = totalCardPagesBefore * cardsPerPage;
+          const lastPageEndPosition = totalCardPagesAfter * cardsPerPage - 1;
 
           const positions = Object.keys(binder.cards).map((pos) =>
             parseInt(pos)
@@ -1542,8 +1622,6 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
-          toast.success(`Removed page ${currentPageCount}`);
-
           return {
             ...binder,
             settings: {
@@ -1557,19 +1635,26 @@ export const BinderProvider = ({ children }) => {
           };
         };
 
+        // Get the page number before updating (for the toast message)
+        const binder = binders.find((b) => b.id === binderId);
+        const pageNumberToRemove = binder?.settings?.pageCount || 1;
+
         setBinders((prev) => prev.map(updateBinder));
 
         // Update current binder if it's the one being updated
         if (currentBinder?.id === binderId) {
           setCurrentBinder((prev) => updateBinder(prev));
         }
+
+        // Show success message only once
+        toast.success(`Removed page ${pageNumberToRemove}`);
       } catch (error) {
         console.error("Failed to remove page:", error);
         toast.error("Failed to remove page");
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders]
   );
 
   const getPageCount = useCallback(
@@ -1600,7 +1685,15 @@ export const BinderProvider = ({ children }) => {
             gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
 
           const maxPosition = Math.max(...positions);
-          const requiredPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+          const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+          // Convert card pages to binder pages
+          // Formula: binder pages = 1 + Math.ceil((cardPages - 1) / 2)
+          // This accounts for first binder page having 1 card page, rest having 2
+          const requiredPages =
+            requiredCardPages <= 1
+              ? 1
+              : 1 + Math.ceil((requiredCardPages - 1) / 2);
 
           // Return the higher of stored pages or required pages for cards
           return Math.max(

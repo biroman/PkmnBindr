@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { toast } from "react-hot-toast";
+import PageManager from "./PageManager";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
   const gridSizes = [
@@ -396,6 +397,9 @@ const BinderSidebar = ({
           currentSize={binder.settings.gridSize}
           onSizeChange={onGridSizeChange}
         />
+
+        {/* Page Manager */}
+        <PageManager binder={binder} />
 
         {/* Note: Missing card tracking is now handled via hover buttons on individual cards */}
       </div>

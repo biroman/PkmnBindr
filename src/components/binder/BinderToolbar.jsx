@@ -6,6 +6,7 @@ import {
   PhotoIcon,
   ShareIcon,
   TrashIcon,
+  Squares2X2Icon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -46,6 +47,7 @@ const BinderToolbar = ({
   onSettings,
   onExport,
   onClearBinder,
+  onPageOverview,
   currentBinder,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
@@ -71,6 +73,13 @@ const BinderToolbar = ({
 
           {/* Divider */}
           <div className="h-px bg-white/20 mx-2"></div>
+
+          {/* Page Overview */}
+          <ToolbarButton
+            icon={Squares2X2Icon}
+            onClick={() => handleToolClick("overview", onPageOverview)}
+            title="Page Overview"
+          />
 
           {/* Search within binder */}
           <ToolbarButton

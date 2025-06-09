@@ -9,10 +9,11 @@ import CardPage from "../components/binder/CardPage";
 import GridSizeSelector from "../components/binder/GridSizeSelector";
 import BinderToolbar from "../components/binder/BinderToolbar";
 import AddCardModal from "../components/binder/AddCardModal";
-import PageManager from "../components/binder/PageManager";
+
 import DraggableCard from "../components/binder/DraggableCard";
 import BinderSidebar from "../components/binder/BinderSidebar";
 import BinderPageOverview from "../components/binder/BinderPageOverview";
+import ClearBinderModal from "../components/binder/ClearBinderModal";
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
 
@@ -38,6 +39,7 @@ const BinderPage = () => {
   const [activeCard, setActiveCard] = useState(null); // For drag overlay
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
+  const [isClearModalOpen, setIsClearModalOpen] = useState(false);
 
   // Edge navigation state
   const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
@@ -167,44 +169,47 @@ const BinderPage = () => {
     exportBinderData();
   };
 
-  const handleClearBinder = async () => {
+  const handleClearBinder = () => {
     if (!currentBinder) return;
 
-    if (
-      window.confirm(
-        `Are you sure you want to clear all cards from "${currentBinder.metadata.name}"? This action cannot be undone.`
-      )
-    ) {
-      try {
-        // Get all card positions in the binder
-        const cardPositions = Object.keys(currentBinder.cards || {}).map(
-          (pos) => parseInt(pos)
-        );
+    const cardCount = Object.keys(currentBinder.cards || {}).length;
+    if (cardCount === 0) {
+      toast.info("Binder is already empty");
+      return;
+    }
 
-        if (cardPositions.length === 0) {
-          toast.info("Binder is already empty");
-          return;
-        }
+    setIsClearModalOpen(true);
+  };
 
-        // Remove all cards one by one
-        for (const position of cardPositions) {
-          await removeCardFromBinder(currentBinder.id, position);
-          // Small delay to prevent overwhelming the system
-          await new Promise((resolve) => setTimeout(resolve, 5));
-        }
+  const confirmClearBinder = async () => {
+    if (!currentBinder) return;
 
-        // Also clear any missing instances since all cards are gone
-        await updateBinderMetadata(currentBinder.id, {
-          missingInstances: [],
-        });
+    try {
+      // Get all card positions in the binder
+      const cardPositions = Object.keys(currentBinder.cards || {}).map((pos) =>
+        parseInt(pos)
+      );
 
-        toast.success(
-          `Cleared all ${cardPositions.length} cards from "${currentBinder.metadata.name}"`
-        );
-      } catch (error) {
-        console.error("Failed to clear binder:", error);
-        toast.error("Failed to clear binder");
+      // Remove all cards one by one
+      for (const position of cardPositions) {
+        await removeCardFromBinder(currentBinder.id, position);
+        // Small delay to prevent overwhelming the system
+        await new Promise((resolve) => setTimeout(resolve, 5));
       }
+
+      // Also clear any missing instances since all cards are gone
+      await updateBinderMetadata(currentBinder.id, {
+        missingInstances: [],
+      });
+
+      toast.success(
+        `Cleared all ${cardPositions.length} cards from "${currentBinder.metadata.name}"`
+      );
+
+      setIsClearModalOpen(false);
+    } catch (error) {
+      console.error("Failed to clear binder:", error);
+      toast.error("Failed to clear binder");
     }
   };
 
@@ -467,6 +472,7 @@ const BinderPage = () => {
           onSettings={handleSettings}
           onExport={handleExport}
           onClearBinder={handleClearBinder}
+          onPageOverview={handlePageOverview}
           currentBinder={currentBinder}
         />
 
@@ -745,37 +751,6 @@ const BinderPage = () => {
               </div>
             )}
 
-            {/* Page Manager - moved to top left */}
-            <div className="absolute top-4 left-4 w-80">
-              <PageManager binder={currentBinder} />
-            </div>
-
-            {/* Page Overview Button */}
-            <div className="absolute top-4 left-[22rem]">
-              <button
-                onClick={handlePageOverview}
-                className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
-                title="Page Overview - View and rearrange all pages"
-              >
-                <svg
-                  className="w-5 h-5 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-                <span className="text-sm font-medium text-gray-700">
-                  Overview
-                </span>
-              </button>
-            </div>
-
             {/* Sidebar Toggle Button */}
             <div className="absolute top-4 right-4">
               <button
@@ -845,6 +820,14 @@ const BinderPage = () => {
         onClose={() => setIsPageOverviewOpen(false)}
         currentBinder={currentBinder}
         onCardPageSelect={handlePageSelect}
+      />
+
+      <ClearBinderModal
+        isOpen={isClearModalOpen}
+        onClose={() => setIsClearModalOpen(false)}
+        onConfirm={confirmClearBinder}
+        binderName={currentBinder?.metadata?.name || ""}
+        cardCount={Object.keys(currentBinder?.cards || {}).length}
       />
     </div>
   );

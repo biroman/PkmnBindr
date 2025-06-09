@@ -14,7 +14,7 @@ import AuthLayout from "./components/layout/AuthLayout";
 import HomePage from "./pages/HomePage";
 import BinderPage from "./pages/BinderPage";
 import BindersPage from "./pages/BindersPage";
-import CardBrowserPage from "./pages/CardBrowserPage";
+
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import AdminPage from "./pages/AdminPage";
@@ -51,7 +51,6 @@ const App = () => {
                     path="binder"
                     element={<Navigate to="/binders" replace />}
                   />
-                  <Route path="browse" element={<CardBrowserPage />} />
 
                   {/* Auth Routes - Only accessible when not logged in */}
                   <Route element={<PublicRoute />}>

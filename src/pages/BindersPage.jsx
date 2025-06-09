@@ -271,18 +271,6 @@ const BindersPage = () => {
             ))}
           </div>
         )}
-
-        {/* Quick Actions */}
-        {binders.length > 0 && (
-          <div className="mt-8 flex justify-center space-x-4">
-            <button
-              onClick={() => navigate("/browse")}
-              className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
-            >
-              Browse Cards to Add
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );
