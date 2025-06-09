@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBinderContext } from "../contexts/BinderContext";
 import { useAuth } from "../hooks/useAuth";
@@ -6,15 +6,24 @@ import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
 import {
   PlusIcon,
-  FolderIcon,
+  MagnifyingGlassIcon,
+  FunnelIcon,
+  Squares2X2Icon,
+  QueueListIcon,
+  CloudIcon,
+  ComputerDesktopIcon,
   EyeIcon,
   TrashIcon,
-  Cog6ToothIcon,
   CloudArrowDownIcon,
   ArrowPathIcon,
-  ComputerDesktopIcon,
-  CloudArrowUpIcon,
+  FolderIcon,
+  CalendarDaysIcon,
+  PhotoIcon,
 } from "@heroicons/react/24/outline";
+import {
+  CheckCircleIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/24/solid";
 
 const BindersPage = () => {
   const navigate = useNavigate();
@@ -32,11 +41,92 @@ const BindersPage = () => {
     claimLocalBinder,
   } = useBinderContext();
 
+  // UI State
+  const [viewMode, setViewMode] = useState("grid"); // 'grid' | 'list'
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterStatus, setFilterStatus] = useState("all"); // 'all' | 'synced' | 'local' | 'guest'
+  const [sortBy, setSortBy] = useState("modified"); // 'modified' | 'created' | 'name' | 'cards'
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [newBinderName, setNewBinderName] = useState("");
   const [newBinderDescription, setNewBinderDescription] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
+
+  // Filter and sort binders
+  const filteredAndSortedBinders = useMemo(() => {
+    let filtered = binders.filter((binder) => {
+      // Search filter
+      const matchesSearch =
+        binder.metadata?.name
+          ?.toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        binder.metadata?.description
+          ?.toLowerCase()
+          .includes(searchQuery.toLowerCase());
+
+      if (!matchesSearch) return false;
+
+      // Status filter
+      switch (filterStatus) {
+        case "synced":
+          return !isLocalOnlyBinder(binder) && isOwnedByCurrentUser(binder);
+        case "local":
+          return isLocalOnlyBinder(binder) && binder.ownerId !== "local_user";
+        case "guest":
+          return binder.ownerId === "local_user";
+        default:
+          return true;
+      }
+    });
+
+    // Sort
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case "name":
+          return (a.metadata?.name || "").localeCompare(b.metadata?.name || "");
+        case "created":
+          return (
+            new Date(b.metadata?.createdAt || 0) -
+            new Date(a.metadata?.createdAt || 0)
+          );
+        case "cards":
+          return (
+            Object.keys(b.cards || {}).length -
+            Object.keys(a.cards || {}).length
+          );
+        case "modified":
+        default:
+          return new Date(b.lastModified || 0) - new Date(a.lastModified || 0);
+      }
+    });
+
+    return filtered;
+  }, [
+    binders,
+    searchQuery,
+    filterStatus,
+    sortBy,
+    isLocalOnlyBinder,
+    isOwnedByCurrentUser,
+  ]);
+
+  // Stats
+  const stats = useMemo(() => {
+    const total = binders.length;
+    const synced = binders.filter(
+      (b) => !isLocalOnlyBinder(b) && isOwnedByCurrentUser(b)
+    ).length;
+    const localOnly = binders.filter(
+      (b) => isLocalOnlyBinder(b) && b.ownerId !== "local_user"
+    ).length;
+    const guest = binders.filter((b) => b.ownerId === "local_user").length;
+    const totalCards = binders.reduce(
+      (sum, b) => sum + Object.keys(b.cards || {}).length,
+      0
+    );
+
+    return { total, synced, localOnly, guest, totalCards };
+  }, [binders, isLocalOnlyBinder, isOwnedByCurrentUser]);
 
   const handleCreateBinder = async (e) => {
     e.preventDefault();
@@ -82,7 +172,6 @@ const BindersPage = () => {
     try {
       setIsSyncing(true);
       await autoSyncCloudBinders();
-      // Don't show success toast here as autoSyncCloudBinders handles it
     } catch (error) {
       console.error("Sync failed:", error);
       toast.error("Failed to sync from cloud");
@@ -108,119 +197,224 @@ const BindersPage = () => {
 
     syncOnLoad();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user?.uid]); // Only run when user changes
+  }, [user?.uid]);
+
+  const getBinderStatus = (binder) => {
+    if (binder.ownerId === "local_user") return "guest";
+    if (isLocalOnlyBinder(binder)) return "local";
+    return "synced";
+  };
+
+  const getStatusIcon = (status) => {
+    switch (status) {
+      case "synced":
+        return <CheckCircleIcon className="w-4 h-4 text-green-500" />;
+      case "local":
+        return <ExclamationTriangleIcon className="w-4 h-4 text-orange-500" />;
+      case "guest":
+        return <ComputerDesktopIcon className="w-4 h-4 text-blue-500" />;
+      default:
+        return null;
+    }
+  };
+
+  const getStatusText = (status) => {
+    switch (status) {
+      case "synced":
+        return "Cloud Synced";
+      case "local":
+        return "Local Only";
+      case "guest":
+        return "Guest Binder";
+      default:
+        return "";
+    }
+  };
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-        <div className="text-white text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-          <div>Loading binders...</div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <div className="text-gray-600">Loading your binders...</div>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            {/* Title and Stats */}
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">My Binders</h1>
-              <p className="text-slate-300">
-                Manage your Pokemon card collections
-              </p>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                My Pokemon Binders
+              </h1>
+              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+                <div className="flex items-center gap-2">
+                  <FolderIcon className="w-4 h-4" />
+                  <span>{stats.total} binders</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <PhotoIcon className="w-4 h-4" />
+                  <span>{stats.totalCards} cards</span>
+                </div>
+                {user && (
+                  <>
+                    <div className="flex items-center gap-2">
+                      <CloudIcon className="w-4 h-4 text-green-600" />
+                      <span>{stats.synced} synced</span>
+                    </div>
+                    {stats.localOnly > 0 && (
+                      <div className="flex items-center gap-2">
+                        <ExclamationTriangleIcon className="w-4 h-4 text-orange-600" />
+                        <span>{stats.localOnly} local only</span>
+                      </div>
+                    )}
+                  </>
+                )}
+                {stats.guest > 0 && (
+                  <div className="flex items-center gap-2">
+                    <ComputerDesktopIcon className="w-4 h-4 text-blue-600" />
+                    <span>{stats.guest} guest</span>
+                  </div>
+                )}
+              </div>
             </div>
-            {user && (
+
+            {/* Primary Actions */}
+            <div className="flex items-center gap-3">
               <button
-                onClick={handleSyncFromCloud}
-                disabled={isSyncing}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-lg transition-colors"
+                onClick={() => setShowCreateForm(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
               >
-                <ArrowPathIcon
-                  className={`w-4 h-4 ${isSyncing ? "animate-spin" : ""}`}
-                />
-                {isSyncing ? "Syncing..." : "Sync from Cloud"}
+                <PlusIcon className="w-5 h-5" />
+                New Binder
               </button>
-            )}
+            </div>
           </div>
         </div>
 
         {/* Local Binder Warning */}
         <LocalBinderWarning />
 
-        {/* Current Binder Info */}
-        {currentBinder && (
-          <div className="bg-blue-600 rounded-lg p-4 mb-6">
-            <div className="flex items-center justify-between">
-              <div className="text-white">
-                <div className="font-semibold">
-                  Current Binder: {currentBinder.metadata.name}
-                </div>
-                <div className="text-blue-100 text-sm">
-                  {Object.keys(currentBinder.cards || {}).length} cards • Last
-                  updated{" "}
-                  {new Date(currentBinder.lastModified).toLocaleDateString()}
-                </div>
-              </div>
-              <button
-                onClick={() => navigate(`/binder/${currentBinder.id}`)}
-                className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Open Binder
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Create New Binder */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          {!showCreateForm ? (
-            <button
-              onClick={() => setShowCreateForm(true)}
-              className="w-full flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-slate-300 hover:border-blue-400 hover:bg-blue-50 rounded-lg transition-colors group"
-            >
-              <PlusIcon className="w-6 h-6 text-slate-400 group-hover:text-blue-500" />
-              <span className="text-slate-600 group-hover:text-blue-600 font-medium">
-                Create New Binder
-              </span>
-            </button>
-          ) : (
-            <form onSubmit={handleCreateBinder} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Binder Name
-                </label>
+        {/* Search and Filters */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  value={newBinderName}
-                  onChange={(e) => setNewBinderName(e.target.value)}
-                  placeholder="My Pokemon Collection"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
+                  placeholder="Search binders..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
+            </div>
 
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Description (Optional)
-                </label>
-                <textarea
-                  value={newBinderDescription}
-                  onChange={(e) => setNewBinderDescription(e.target.value)}
-                  placeholder="Description of your collection..."
-                  rows="3"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+            {/* Filters */}
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <FunnelIcon className="w-5 h-5 text-gray-400" />
+                <select
+                  value={filterStatus}
+                  onChange={(e) => setFilterStatus(e.target.value)}
+                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="all">All Binders</option>
+                  {user && <option value="synced">Cloud Synced</option>}
+                  {user && <option value="local">Local Only</option>}
+                  <option value="guest">Guest Binders</option>
+                </select>
               </div>
 
-              <div className="flex space-x-2">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="modified">Last Modified</option>
+                <option value="created">Date Created</option>
+                <option value="name">Name A-Z</option>
+                <option value="cards">Card Count</option>
+              </select>
+
+              <div className="flex items-center border border-gray-300 rounded-lg p-1">
+                <button
+                  onClick={() => setViewMode("grid")}
+                  className={`p-1.5 rounded ${
+                    viewMode === "grid"
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  <Squares2X2Icon className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode("list")}
+                  className={`p-1.5 rounded ${
+                    viewMode === "list"
+                      ? "bg-blue-600 text-white"
+                      : "text-gray-400 hover:text-gray-600"
+                  }`}
+                >
+                  <QueueListIcon className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Create Binder Form */}
+        {showCreateForm && (
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Create New Binder
+            </h3>
+            <form onSubmit={handleCreateBinder} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Binder Name *
+                  </label>
+                  <input
+                    type="text"
+                    value={newBinderName}
+                    onChange={(e) => setNewBinderName(e.target.value)}
+                    placeholder="My Pokemon Collection"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                  </label>
+                  <input
+                    type="text"
+                    value={newBinderDescription}
+                    onChange={(e) => setNewBinderDescription(e.target.value)}
+                    placeholder="Brief description..."
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 pt-2">
                 <button
                   type="submit"
                   disabled={isCreating || !newBinderName.trim()}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
                 >
                   {isCreating ? "Creating..." : "Create Binder"}
                 </button>
@@ -231,159 +425,373 @@ const BindersPage = () => {
                     setNewBinderName("");
                     setNewBinderDescription("");
                   }}
-                  className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg transition-colors"
+                  className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors"
                 >
                   Cancel
                 </button>
               </div>
             </form>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Binders Grid */}
-        {binders.length === 0 ? (
-          <div className="text-center py-12">
-            <FolderIcon className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-white mb-2">
-              No Binders Yet
+        {/* Results Header */}
+        {searchQuery || filterStatus !== "all" ? (
+          <div className="flex items-center justify-between mb-6">
+            <div className="text-sm text-gray-600">
+              {filteredAndSortedBinders.length} of {binders.length} binders
+              {searchQuery && <span> matching "{searchQuery}"</span>}
+            </div>
+            {(searchQuery || filterStatus !== "all") && (
+              <button
+                onClick={() => {
+                  setSearchQuery("");
+                  setFilterStatus("all");
+                }}
+                className="text-sm text-blue-600 hover:text-blue-700"
+              >
+                Clear filters
+              </button>
+            )}
+          </div>
+        ) : null}
+
+        {/* Binders Grid/List */}
+        {filteredAndSortedBinders.length === 0 ? (
+          <div className="text-center py-16">
+            <FolderIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+            <h3 className="text-xl font-medium text-gray-900 mb-2">
+              {searchQuery || filterStatus !== "all"
+                ? "No matching binders"
+                : "No binders yet"}
             </h3>
-            <p className="text-slate-300 mb-4">
-              {user
-                ? "Create your first binder or sync your existing binders from the cloud"
-                : "Create your first binder to start organizing your Pokemon cards"}
+            <p className="text-gray-600 mb-6 max-w-md mx-auto">
+              {searchQuery || filterStatus !== "all"
+                ? "Try adjusting your search or filters to find what you're looking for."
+                : user
+                ? "Create your first binder to start organizing your Pokemon cards, or sync your existing binders from the cloud."
+                : "Create your first binder to start organizing your Pokemon cards."}
             </p>
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => setShowCreateForm(true)}
-                className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
               >
                 Create Your First Binder
               </button>
-              {user && (
-                <button
-                  onClick={handleSyncFromCloud}
-                  disabled={isSyncing}
-                  className="flex items-center gap-2 px-6 py-2 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white rounded-lg transition-colors"
-                >
-                  <CloudArrowDownIcon className="w-4 h-4" />
-                  {isSyncing ? "Syncing..." : "Load from Cloud"}
-                </button>
-              )}
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {binders.map((binder) => {
-              const isLocalOnly = isLocalOnlyBinder(binder);
-              const isOwned = isOwnedByCurrentUser(binder);
+          <div
+            className={
+              viewMode === "grid"
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                : "space-y-4"
+            }
+          >
+            {filteredAndSortedBinders.map((binder) => {
+              const status = getBinderStatus(binder);
+              const isLocalOnly = status === "local";
+              const isGuestBinder = status === "guest";
+              const cardCount = Object.keys(binder.cards || {}).length;
 
-              return (
-                <div
-                  key={binder.id}
-                  className={`
-                    bg-white rounded-lg shadow-lg p-6 transition-all hover:shadow-xl
-                    ${
-                      currentBinder?.id === binder.id
-                        ? "ring-2 ring-blue-500"
+              if (viewMode === "list") {
+                return (
+                  <div
+                    key={binder.id}
+                    className={`bg-white rounded-lg border transition-all hover:shadow-md border-gray-200 hover:border-gray-300 ${
+                      isLocalOnly ? "border-orange-200 bg-orange-50" : ""
+                    } ${
+                      isGuestBinder
+                        ? "opacity-60 border-gray-300 bg-gray-50"
                         : ""
-                    }
-                    ${
-                      isLocalOnly ? "opacity-75 border-2 border-orange-200" : ""
-                    }
-                  `}
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-lg font-semibold text-slate-800">
-                          {binder.metadata.name}
-                        </h3>
-                        {isLocalOnly && (
-                          <div className="flex items-center gap-1 bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">
-                            <ComputerDesktopIcon className="w-3 h-3" />
-                            <span>Local Only</span>
+                    }`}
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-3 mb-2">
+                            <h3
+                              className={`text-lg font-semibold truncate ${
+                                isGuestBinder
+                                  ? "text-gray-500"
+                                  : "text-gray-900"
+                              }`}
+                            >
+                              {binder.metadata?.name || "Unnamed Binder"}
+                            </h3>
+                            <div className="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-full text-xs font-medium">
+                              {getStatusIcon(status)}
+                              {getStatusText(status)}
+                            </div>
                           </div>
-                        )}
+                          {binder.metadata?.description && (
+                            <p
+                              className={`text-sm mb-2 line-clamp-1 ${
+                                isGuestBinder
+                                  ? "text-gray-400"
+                                  : "text-gray-600"
+                              }`}
+                            >
+                              {binder.metadata.description}
+                            </p>
+                          )}
+                          <div
+                            className={`flex items-center gap-4 text-sm ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-500"
+                            }`}
+                          >
+                            <span>{cardCount} cards</span>
+                            <span className="flex items-center gap-1">
+                              <CalendarDaysIcon className="w-4 h-4" />
+                              {new Date(
+                                binder.lastModified
+                              ).toLocaleDateString()}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 ml-4">
+                          {isLocalOnly && user && (
+                            <button
+                              onClick={() => claimLocalBinder(binder.id)}
+                              className="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded-lg font-medium transition-colors"
+                            >
+                              Claim
+                            </button>
+                          )}
+                          {isGuestBinder && user ? (
+                            <button
+                              onClick={() => claimLocalBinder(binder.id)}
+                              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                            >
+                              Claim to Access
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => handleSelectBinder(binder)}
+                              disabled={isGuestBinder}
+                              className={`flex items-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors ${
+                                isGuestBinder
+                                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                  : "bg-blue-600 hover:bg-blue-700 text-white"
+                              }`}
+                            >
+                              <EyeIcon className="w-4 h-4" />
+                              Open
+                            </button>
+                          )}
+                          <button
+                            onClick={() =>
+                              handleDeleteBinder(
+                                binder.id,
+                                binder.metadata?.name
+                              )
+                            }
+                            className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                          >
+                            <TrashIcon className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
-                      {binder.metadata.description && (
-                        <p className="text-sm text-slate-600 mb-2">
+                    </div>
+                  </div>
+                );
+              }
+
+              // Grid view
+              return (
+                <div key={binder.id} className="relative">
+                  {/* Main Card */}
+                  <div
+                    className={`bg-white rounded-xl shadow-sm border transition-all hover:shadow-lg hover:-translate-y-0.5 border-gray-200 hover:border-gray-300 ${
+                      isLocalOnly ? "border-orange-200 bg-orange-50" : ""
+                    } ${
+                      isGuestBinder
+                        ? "opacity-60 border-gray-300 bg-gray-50"
+                        : ""
+                    }`}
+                  >
+                    <div className="p-6">
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <h3
+                              className={`text-lg font-semibold truncate ${
+                                isGuestBinder
+                                  ? "text-gray-500"
+                                  : "text-gray-900"
+                              }`}
+                            >
+                              {binder.metadata?.name || "Unnamed Binder"}
+                            </h3>
+                          </div>
+                          <div className="flex items-center gap-1 mb-2">
+                            {getStatusIcon(status)}
+                            <span
+                              className={`text-sm font-medium ${
+                                isGuestBinder
+                                  ? "text-gray-400"
+                                  : "text-gray-600"
+                              }`}
+                            >
+                              {getStatusText(status)}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      {binder.metadata?.description && (
+                        <p
+                          className={`text-sm mb-4 line-clamp-2 ${
+                            isGuestBinder ? "text-gray-400" : "text-gray-600"
+                          }`}
+                        >
                           {binder.metadata.description}
                         </p>
                       )}
-                    </div>
-                    {currentBinder?.id === binder.id && (
-                      <div className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                        Current
+
+                      {/* Stats */}
+                      <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div
+                          className={`text-center p-3 rounded-lg ${
+                            isGuestBinder ? "bg-gray-100" : "bg-gray-50"
+                          }`}
+                        >
+                          <div
+                            className={`text-2xl font-bold ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-900"
+                            }`}
+                          >
+                            {cardCount}
+                          </div>
+                          <div
+                            className={`text-xs ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-600"
+                            }`}
+                          >
+                            Cards
+                          </div>
+                        </div>
+                        <div
+                          className={`text-center p-3 rounded-lg ${
+                            isGuestBinder ? "bg-gray-100" : "bg-gray-50"
+                          }`}
+                        >
+                          <div
+                            className={`text-2xl font-bold ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-900"
+                            }`}
+                          >
+                            {binder.version || 1}
+                          </div>
+                          <div
+                            className={`text-xs ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-600"
+                            }`}
+                          >
+                            Version
+                          </div>
+                        </div>
                       </div>
-                    )}
+
+                      {/* Local-only claim option */}
+                      {isLocalOnly && user && (
+                        <div className="mb-4 p-3 bg-orange-100 border border-orange-200 rounded-lg">
+                          <p className="text-xs text-orange-700 mb-2">
+                            This binder belongs to another user. Claim it to
+                            save to your account.
+                          </p>
+                          <button
+                            onClick={() => claimLocalBinder(binder.id)}
+                            className="w-full flex items-center justify-center gap-1.5 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded-lg font-medium transition-colors"
+                          >
+                            <CloudIcon className="w-4 h-4" />
+                            Claim Binder
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Actions */}
+                      <div className="flex gap-2">
+                        {isGuestBinder && user ? (
+                          <button
+                            onClick={() => claimLocalBinder(binder.id)}
+                            className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                          >
+                            <CloudIcon className="w-4 h-4" />
+                            Claim to Access
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => handleSelectBinder(binder)}
+                            disabled={isGuestBinder}
+                            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors ${
+                              isGuestBinder
+                                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                : "bg-blue-600 hover:bg-blue-700 text-white"
+                            }`}
+                          >
+                            <EyeIcon className="w-4 h-4" />
+                            {isGuestBinder ? "Claim to Access" : "Open"}
+                          </button>
+                        )}
+                        <button
+                          onClick={() =>
+                            handleDeleteBinder(binder.id, binder.metadata?.name)
+                          }
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        >
+                          <TrashIcon className="w-4 h-4" />
+                        </button>
+                      </div>
+
+                      {/* Footer */}
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div
+                          className={`flex items-center justify-between text-xs ${
+                            isGuestBinder ? "text-gray-400" : "text-gray-500"
+                          }`}
+                        >
+                          <span>
+                            Created{" "}
+                            {new Date(
+                              binder.metadata?.createdAt
+                            ).toLocaleDateString()}
+                          </span>
+                          {binder.lastModified !==
+                            binder.metadata?.createdAt && (
+                            <span>
+                              Updated{" "}
+                              {new Date(
+                                binder.lastModified
+                              ).toLocaleDateString()}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-slate-800">
-                        {Object.keys(binder.cards || {}).length}
+                  {/* Guest binder claim prompt - positioned outside the opacity-affected card */}
+                  {isGuestBinder && user && (
+                    <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 mx-4">
+                      <div className="p-4 bg-blue-50 border-2 border-blue-300 rounded-lg shadow-lg backdrop-blur-sm bg-opacity-95">
+                        <p className="text-sm text-blue-800 font-medium mb-3 text-center">
+                          🎯 This binder was created as a guest. Claim it to
+                          access and save to your account.
+                        </p>
+                        <button
+                          onClick={() => claimLocalBinder(binder.id)}
+                          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition-colors shadow-md"
+                        >
+                          <CloudIcon className="w-4 h-4" />
+                          Claim Binder
+                        </button>
                       </div>
-                      <div className="text-xs text-slate-600">Cards</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-slate-800">
-                        {binder.version}
-                      </div>
-                      <div className="text-xs text-slate-600">Version</div>
-                    </div>
-                  </div>
-
-                  {/* Local-only claim option */}
-                  {isLocalOnly && user && (
-                    <div className="mb-3 p-2 bg-orange-50 border border-orange-200 rounded-lg">
-                      <p className="text-xs text-orange-700 mb-2">
-                        This binder belongs to another user. You can claim it to
-                        save to your cloud account.
-                      </p>
-                      <button
-                        onClick={() => claimLocalBinder(binder.id)}
-                        className="w-full flex items-center justify-center gap-1 px-2 py-1 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded transition-colors"
-                      >
-                        <CloudArrowUpIcon className="w-3 h-3" />
-                        <span>Claim Binder</span>
-                      </button>
                     </div>
                   )}
-
-                  {/* Actions */}
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => handleSelectBinder(binder)}
-                      className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                    >
-                      <EyeIcon className="w-4 h-4" />
-                      <span>Open</span>
-                    </button>
-
-                    <button
-                      onClick={() =>
-                        handleDeleteBinder(binder.id, binder.metadata.name)
-                      }
-                      className="px-3 py-2 bg-red-100 hover:bg-red-200 text-red-600 rounded-lg transition-colors"
-                    >
-                      <TrashIcon className="w-4 h-4" />
-                    </button>
-                  </div>
-
-                  {/* Metadata */}
-                  <div className="mt-4 pt-4 border-t border-slate-200">
-                    <div className="text-xs text-slate-500">
-                      Created{" "}
-                      {new Date(binder.metadata.createdAt).toLocaleDateString()}
-                    </div>
-                    {binder.lastModified !== binder.metadata.createdAt && (
-                      <div className="text-xs text-slate-500">
-                        Updated{" "}
-                        {new Date(binder.lastModified).toLocaleDateString()}
-                      </div>
-                    )}
-                  </div>
                 </div>
               );
             })}
