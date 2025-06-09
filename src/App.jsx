@@ -22,7 +22,6 @@ import RulesPage from "./pages/RulesPage";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
-import EmailVerificationPage from "./pages/auth/EmailVerificationPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Create a client for TanStack Query
