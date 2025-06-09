@@ -11,6 +11,7 @@ import {
   SparklesIcon,
   ComputerDesktopIcon,
   GiftIcon,
+  ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 
 const HomePage = () => {
@@ -50,15 +51,16 @@ const HomePage = () => {
   }
 
   const guestFeatures = [
-    "Create unlimited binders locally",
     "Add and organize Pokemon cards",
     "Works completely offline",
     "No account required",
     "Instant access",
+    "Browser storage limit (~5-10MB per web standard)",
   ];
 
   const registeredFeatures = [
     "Everything in Guest Mode",
+    "Unlimited storage*",
     "Cloud sync across devices",
     "All upcoming features",
   ];
@@ -91,7 +93,7 @@ const HomePage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {/* Guest Mode Card */}
           <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 mt-4">
               <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <UserIcon className="w-8 h-8 text-gray-600" />
               </div>
@@ -106,12 +108,27 @@ const HomePage = () => {
             </div>
 
             <ul className="space-y-4 mb-8">
-              {guestFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckIcon className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
+              {guestFeatures.map((feature, index) => {
+                const isStorageLimitation = feature.includes(
+                  "Browser storage limit"
+                );
+                return (
+                  <li key={index} className="flex items-start">
+                    {isStorageLimitation ? (
+                      <ExclamationTriangleIcon className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                    ) : (
+                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    )}
+                    <span
+                      className={`${
+                        isStorageLimitation ? "text-amber-700" : "text-gray-700"
+                      }`}
+                    >
+                      {feature}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
 
             <Link to="/binders" className="block">
@@ -190,6 +207,10 @@ const HomePage = () => {
               <Link to="/auth/login" className="text-white hover:underline">
                 Sign in here
               </Link>
+            </p>
+
+            <p className="text-xs text-blue-300 text-center mt-3">
+              *Subject to Firebase storage limits and fair use policy
             </p>
           </div>
         </div>

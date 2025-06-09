@@ -168,6 +168,10 @@ service cloud.firestore {
                            docId.matches('^' + request.auth.uid + '_.*');
       allow read, write: if isOwner();
       
+      // Allow collection queries where ownerId equals current user
+      allow list: if !isEmergencyMode() && request.auth != null && 
+                     resource.data.ownerId == request.auth.uid;
+      
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
                                docId.matches('^' + request.auth.uid + '_.*') &&
