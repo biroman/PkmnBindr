@@ -37,6 +37,7 @@ const BindersPage = () => {
     deleteBinder,
     selectBinder,
     autoSyncCloudBinders,
+    refreshCache,
     isLocalOnlyBinder,
     isOwnedByCurrentUser,
     claimLocalBinder,
@@ -116,23 +117,84 @@ const BindersPage = () => {
     isOwnedByCurrentUser,
   ]);
 
+  // Helper functions for binder status
+  const getBinderStatus = (binder) => {
+    // Guest binder (created without login)
+    if (binder.ownerId === "local_user") return "guest";
+
+    // Local-only (belongs to another user)
+    if (isLocalOnlyBinder(binder)) return "local";
+
+    // Check actual sync status for user's own binders
+    if (binder.ownerId === user?.uid) {
+      // Check if it has been synced to cloud
+      const hasBeenSynced =
+        binder.sync?.lastSynced || binder.sync?.status === "synced";
+      const hasLocalChanges =
+        binder.sync?.status === "local" ||
+        binder.sync?.pendingChanges?.length > 0;
+
+      if (hasBeenSynced && !hasLocalChanges) {
+        return "synced";
+      } else {
+        return "unsaved"; // New status for user's binders that need saving
+      }
+    }
+
+    // Fallback for other cases
+    return "synced";
+  };
+
+  const getStatusIcon = (status) => {
+    switch (status) {
+      case "synced":
+        return <CheckCircleIcon className="w-4 h-4 text-green-500" />;
+      case "unsaved":
+        return <ExclamationTriangleIcon className="w-4 h-4 text-amber-500" />;
+      case "local":
+        return <ExclamationTriangleIcon className="w-4 h-4 text-orange-500" />;
+      case "guest":
+        return <ComputerDesktopIcon className="w-4 h-4 text-blue-500" />;
+      default:
+        return null;
+    }
+  };
+
+  const getStatusText = (status) => {
+    switch (status) {
+      case "synced":
+        return "Cloud Synced";
+      case "unsaved":
+        return "Unsaved Changes";
+      case "local":
+        return "Local Only";
+      case "guest":
+        return "Guest Binder";
+      default:
+        return "";
+    }
+  };
+
   // Stats
   const stats = useMemo(() => {
     const total = binders.length;
     const synced = binders.filter(
-      (b) => !isLocalOnlyBinder(b) && isOwnedByCurrentUser(b)
+      (b) => getBinderStatus(b) === "synced"
+    ).length;
+    const unsaved = binders.filter(
+      (b) => getBinderStatus(b) === "unsaved"
     ).length;
     const localOnly = binders.filter(
-      (b) => isLocalOnlyBinder(b) && b.ownerId !== "local_user"
+      (b) => getBinderStatus(b) === "local"
     ).length;
-    const guest = binders.filter((b) => b.ownerId === "local_user").length;
+    const guest = binders.filter((b) => getBinderStatus(b) === "guest").length;
     const totalCards = binders.reduce(
       (sum, b) => sum + Object.keys(b.cards || {}).length,
       0
     );
 
-    return { total, synced, localOnly, guest, totalCards };
-  }, [binders, isLocalOnlyBinder, isOwnedByCurrentUser]);
+    return { total, synced, unsaved, localOnly, guest, totalCards };
+  }, [binders, user, isLocalOnlyBinder, isOwnedByCurrentUser]);
 
   const handleCreateBinder = async (e) => {
     e.preventDefault();
@@ -188,7 +250,7 @@ const BindersPage = () => {
 
     try {
       setIsSyncing(true);
-      await autoSyncCloudBinders();
+      await refreshCache();
     } catch (error) {
       console.error("Sync failed:", error);
       toast.error("Failed to sync from cloud");
@@ -197,56 +259,8 @@ const BindersPage = () => {
     }
   };
 
-  // Auto-sync on page load if user is signed in
-  useEffect(() => {
-    const syncOnLoad = async () => {
-      if (user && !isLoading) {
-        try {
-          setIsSyncing(true);
-          await autoSyncCloudBinders();
-        } catch (error) {
-          console.error("Auto-sync on page load failed:", error);
-        } finally {
-          setIsSyncing(false);
-        }
-      }
-    };
-
-    syncOnLoad();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user?.uid]);
-
-  const getBinderStatus = (binder) => {
-    if (binder.ownerId === "local_user") return "guest";
-    if (isLocalOnlyBinder(binder)) return "local";
-    return "synced";
-  };
-
-  const getStatusIcon = (status) => {
-    switch (status) {
-      case "synced":
-        return <CheckCircleIcon className="w-4 h-4 text-green-500" />;
-      case "local":
-        return <ExclamationTriangleIcon className="w-4 h-4 text-orange-500" />;
-      case "guest":
-        return <ComputerDesktopIcon className="w-4 h-4 text-blue-500" />;
-      default:
-        return null;
-    }
-  };
-
-  const getStatusText = (status) => {
-    switch (status) {
-      case "synced":
-        return "Cloud Synced";
-      case "local":
-        return "Local Only";
-      case "guest":
-        return "Guest Binder";
-      default:
-        return "";
-    }
-  };
+  // The cache system now handles loading data automatically
+  // No need for explicit sync on page load
 
   if (isLoading) {
     return (
@@ -289,6 +303,12 @@ const BindersPage = () => {
                       <CloudIcon className="w-4 h-4 text-green-600" />
                       <span>{stats.synced} synced</span>
                     </div>
+                    {stats.unsaved > 0 && (
+                      <div className="flex items-center gap-2">
+                        <ExclamationTriangleIcon className="w-4 h-4 text-amber-600" />
+                        <span>{stats.unsaved} unsaved</span>
+                      </div>
+                    )}
                     {stats.localOnly > 0 && (
                       <div className="flex items-center gap-2">
                         <ExclamationTriangleIcon className="w-4 h-4 text-orange-600" />
@@ -350,6 +370,7 @@ const BindersPage = () => {
                 >
                   <option value="all">All Binders</option>
                   {user && <option value="synced">Cloud Synced</option>}
+                  {user && <option value="unsaved">Unsaved Changes</option>}
                   {user && <option value="local">Local Only</option>}
                   <option value="guest">Guest Binders</option>
                 </select>
@@ -783,25 +804,6 @@ const BindersPage = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Guest binder claim prompt - positioned outside the opacity-affected card */}
-                  {isGuestBinder && user && (
-                    <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 mx-4">
-                      <div className="p-4 bg-blue-50 border-2 border-blue-300 rounded-lg shadow-lg backdrop-blur-sm bg-opacity-95">
-                        <p className="text-sm text-blue-800 font-medium mb-3 text-center">
-                          🎯 This binder was created as a guest. Claim it to
-                          access and save to your account.
-                        </p>
-                        <button
-                          onClick={() => claimLocalBinder(binder.id)}
-                          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg font-medium transition-colors shadow-md"
-                        >
-                          <CloudIcon className="w-4 h-4" />
-                          Claim Binder
-                        </button>
-                      </div>
-                    </div>
-                  )}
                 </div>
               );
             })}

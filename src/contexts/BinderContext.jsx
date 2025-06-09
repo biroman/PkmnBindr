@@ -398,17 +398,87 @@ export const BinderProvider = ({ children }) => {
   const [binders, setBinders] = useState([]);
   const [currentBinder, setCurrentBinder] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Cache management state
+  const [cache, setCache] = useState({
+    data: null,
+    timestamp: null,
+    isValid: false,
+  });
   const [syncStatus, setSyncStatus] = useState({}); // binderId -> sync status
   const { checkBinderLimits, canPerformAction } = useRules();
   const { user } = useAuth();
 
-  // Initialize from localStorage
+  // Cache configuration
+  const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+  const CACHE_KEY = "binders_cache";
+  const BACKGROUND_SYNC_INTERVAL = 2 * 60 * 1000; // 2 minutes
+
+  // Cache management functions
+  const isCacheValid = useCallback((cacheData) => {
+    if (!cacheData || !cacheData.timestamp || !cacheData.isValid) return false;
+    return Date.now() - cacheData.timestamp < CACHE_TTL;
+  }, []);
+
+  const getCachedData = useCallback(() => {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsedCache = JSON.parse(cached);
+        if (isCacheValid(parsedCache)) {
+          return parsedCache.data;
+        }
+      }
+    } catch (error) {
+      console.warn("Failed to load cache:", error);
+    }
+    return null;
+  }, [isCacheValid]);
+
+  const setCachedData = useCallback((data) => {
+    const cacheData = {
+      data,
+      timestamp: Date.now(),
+      isValid: true,
+    };
+
+    setCache(cacheData);
+
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
+    } catch (error) {
+      console.warn("Failed to save cache:", error);
+    }
+  }, []);
+
+  const invalidateCache = useCallback(() => {
+    setCache({ data: null, timestamp: null, isValid: false });
+    try {
+      localStorage.removeItem(CACHE_KEY);
+    } catch (error) {
+      console.warn("Failed to clear cache:", error);
+    }
+  }, []);
+
+  // Initialize from localStorage with cache support
   useEffect(() => {
     const loadData = () => {
       try {
         setIsLoading(true);
 
-        // Load binders and migrate if necessary
+        // Try to load from cache first if user is logged in
+        if (user) {
+          const cachedData = getCachedData();
+          if (cachedData) {
+            console.log("Loading binders from cache on initialization");
+            setBinders(cachedData);
+            setIsLoading(false);
+
+            return;
+          }
+        }
+
+        // Fallback to localStorage
         const savedBinders = storage.get(STORAGE_KEYS.BINDERS) || [];
         const migratedBinders = savedBinders.map(migrateBinder);
         setBinders(migratedBinders);
@@ -440,7 +510,7 @@ export const BinderProvider = ({ children }) => {
     };
 
     loadData();
-  }, []);
+  }, [user, getCachedData]);
 
   // Save to localStorage whenever binders change
   useEffect(() => {
@@ -471,7 +541,7 @@ export const BinderProvider = ({ children }) => {
         // Check if user can create more binders
         const canCreate = await checkBinderLimits.canCreateBinder(
           { canPerformAction },
-          "local_user", // TODO: Replace with actual user ID
+          user?.uid || "local_user",
           binders.length
         );
 
@@ -488,6 +558,9 @@ export const BinderProvider = ({ children }) => {
         setBinders((prev) => [...prev, newBinder]);
         setCurrentBinder(newBinder);
 
+        // Invalidate cache since we created a new binder
+        invalidateCache();
+
         // Track usage for rate limiting
         await canPerformAction("create_binder_rate");
 
@@ -499,7 +572,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [binders.length, checkBinderLimits, canPerformAction]
+    [binders.length, checkBinderLimits, canPerformAction, user, invalidateCache]
   );
 
   // Update binder
@@ -523,6 +596,9 @@ export const BinderProvider = ({ children }) => {
           setCurrentBinder((prev) => ({ ...prev, ...updatedBinder }));
         }
 
+        // Invalidate cache since we updated a binder
+        invalidateCache();
+
         return updatedBinder;
       } catch (error) {
         console.error("Failed to update binder:", error);
@@ -530,7 +606,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, invalidateCache]
   );
 
   // Delete binder
@@ -568,6 +644,9 @@ export const BinderProvider = ({ children }) => {
           setCurrentBinder(null);
         }
 
+        // Invalidate cache since we deleted a binder
+        invalidateCache();
+
         toast.success("Binder deleted");
       } catch (error) {
         console.error("Failed to delete binder:", error);
@@ -575,7 +654,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder, binders, user, binderSyncService]
+    [currentBinder, binders, user, binderSyncService, invalidateCache]
   );
 
   // Set current binder with security check
@@ -617,7 +696,7 @@ export const BinderProvider = ({ children }) => {
         // Check if user can add cards to this binder
         const canAdd = await checkBinderLimits.canAddCardsToBinder(
           { canPerformAction },
-          "local_user", // TODO: Replace with actual user ID
+          user?.uid || "local_user",
           targetBinder,
           1
         );
@@ -913,7 +992,7 @@ export const BinderProvider = ({ children }) => {
         // Check if user can add this many cards to the binder
         const canAdd = await checkBinderLimits.canAddCardsToBinder(
           { canPerformAction },
-          "local_user", // TODO: Replace with actual user ID
+          user?.uid || "local_user",
           targetBinder,
           cards.length
         );
@@ -2037,51 +2116,95 @@ export const BinderProvider = ({ children }) => {
   );
 
   // Auto-sync cloud binders when user logs in
-  const autoSyncCloudBinders = useCallback(async () => {
-    if (!user) {
-      return;
-    }
-
-    try {
-      // Get all cloud binders
-      const cloudBinders = await binderSyncService.getAllCloudBinders(user.uid);
-
-      if (cloudBinders.length === 0) {
+  const autoSyncCloudBinders = useCallback(
+    async (forceRefresh = false) => {
+      if (!user) {
         return;
       }
 
-      // Merge with local binders
-      setBinders((localBinders) => {
-        const merged = [...localBinders];
-        let addedCount = 0;
-        let updatedCount = 0;
-        const updatedBinderIds = []; // Track which binders were updated
+      // Check cache first unless force refresh is requested
+      if (!forceRefresh) {
+        const cachedData = getCachedData();
+        if (cachedData) {
+          console.log("Loading binders from cache");
+          setBinders(cachedData);
+          return;
+        }
+      }
 
-        cloudBinders.forEach((cloudBinder) => {
-          const existingIndex = merged.findIndex(
-            (b) => b.id === cloudBinder.id
-          );
+      console.log("Loading binders from Firebase");
 
-          if (existingIndex >= 0) {
-            // Binder exists locally, check if cloud version is newer
-            const localBinder = merged[existingIndex];
-            const cloudVersion = cloudBinder.version || 0;
-            const localVersion = localBinder.version || 0;
-            const cloudModified = new Date(cloudBinder.lastModified || 0);
-            const localModified = new Date(localBinder.lastModified || 0);
+      try {
+        // Get all cloud binders
+        const cloudBinders = await binderSyncService.getAllCloudBinders(
+          user.uid
+        );
 
-            // Use cloud version if it's newer (version or timestamp)
-            if (cloudVersion > localVersion || cloudModified > localModified) {
-              console.log(
-                `Cloud binder "${cloudBinder.metadata?.name}" is newer:`,
-                {
-                  cloudVersion,
-                  localVersion,
-                  cloudModified: cloudModified.toISOString(),
-                  localModified: localModified.toISOString(),
-                }
-              );
-              const updatedCloudBinder = {
+        if (cloudBinders.length === 0) {
+          return;
+        }
+
+        // Merge with local binders
+        setBinders((localBinders) => {
+          const merged = [...localBinders];
+          let addedCount = 0;
+          let updatedCount = 0;
+          const updatedBinderIds = []; // Track which binders were updated
+
+          cloudBinders.forEach((cloudBinder) => {
+            const existingIndex = merged.findIndex(
+              (b) => b.id === cloudBinder.id
+            );
+
+            if (existingIndex >= 0) {
+              // Binder exists locally, check if cloud version is newer
+              const localBinder = merged[existingIndex];
+              const cloudVersion = cloudBinder.version || 0;
+              const localVersion = localBinder.version || 0;
+              const cloudModified = new Date(cloudBinder.lastModified || 0);
+              const localModified = new Date(localBinder.lastModified || 0);
+
+              // Use cloud version if it's newer (version or timestamp)
+              if (
+                cloudVersion > localVersion ||
+                cloudModified > localModified
+              ) {
+                console.log(
+                  `Cloud binder "${cloudBinder.metadata?.name}" is newer:`,
+                  {
+                    cloudVersion,
+                    localVersion,
+                    cloudModified: cloudModified.toISOString(),
+                    localModified: localModified.toISOString(),
+                  }
+                );
+                const updatedCloudBinder = {
+                  ...cloudBinder,
+                  sync: {
+                    ...cloudBinder.sync,
+                    status: "synced",
+                    lastSynced:
+                      cloudBinder.sync?.lastSynced || new Date().toISOString(),
+                  },
+                };
+                merged[existingIndex] = updatedCloudBinder;
+                updatedCount++;
+                updatedBinderIds.push(cloudBinder.id);
+
+                // Update current binder if it's the one being updated
+                setCurrentBinder((currentBinder) => {
+                  if (currentBinder?.id === cloudBinder.id) {
+                    console.log(
+                      `Updating current binder "${cloudBinder.metadata?.name}" with cloud version`
+                    );
+                    return updatedCloudBinder;
+                  }
+                  return currentBinder;
+                });
+              }
+            } else {
+              // New binder from cloud, add it
+              const newCloudBinder = {
                 ...cloudBinder,
                 sync: {
                   ...cloudBinder.sync,
@@ -2090,68 +2213,80 @@ export const BinderProvider = ({ children }) => {
                     cloudBinder.sync?.lastSynced || new Date().toISOString(),
                 },
               };
-              merged[existingIndex] = updatedCloudBinder;
-              updatedCount++;
-              updatedBinderIds.push(cloudBinder.id);
-
-              // Update current binder if it's the one being updated
-              setCurrentBinder((currentBinder) => {
-                if (currentBinder?.id === cloudBinder.id) {
-                  console.log(
-                    `Updating current binder "${cloudBinder.metadata?.name}" with cloud version`
-                  );
-                  return updatedCloudBinder;
-                }
-                return currentBinder;
-              });
+              merged.push(newCloudBinder);
+              addedCount++;
             }
-          } else {
-            // New binder from cloud, add it
-            const newCloudBinder = {
-              ...cloudBinder,
-              sync: {
-                ...cloudBinder.sync,
-                status: "synced",
-                lastSynced:
-                  cloudBinder.sync?.lastSynced || new Date().toISOString(),
-              },
-            };
-            merged.push(newCloudBinder);
-            addedCount++;
-          }
-        });
+          });
 
-        // Save merged binders to localStorage
-        if (addedCount > 0 || updatedCount > 0) {
+          // Save merged binders to localStorage and cache
           storage.set(STORAGE_KEYS.BINDERS, merged);
+          setCachedData(merged);
 
-          // Show a toast notification
-          if (addedCount > 0 && updatedCount > 0) {
-            toast.success(
-              `Synced ${addedCount} new and ${updatedCount} updated binders from cloud`
-            );
-          } else if (addedCount > 0) {
-            toast.success(
-              `Downloaded ${addedCount} binder${
-                addedCount > 1 ? "s" : ""
-              } from cloud`
-            );
-          } else if (updatedCount > 0) {
-            toast.success(
-              `Updated ${updatedCount} binder${
-                updatedCount > 1 ? "s" : ""
-              } from cloud`
-            );
+          if (addedCount > 0 || updatedCount > 0) {
+            // Show a toast notification
+            if (addedCount > 0 && updatedCount > 0) {
+              toast.success(
+                `Synced ${addedCount} new and ${updatedCount} updated binders from cloud`
+              );
+            } else if (addedCount > 0) {
+              toast.success(
+                `Downloaded ${addedCount} binder${
+                  addedCount > 1 ? "s" : ""
+                } from cloud`
+              );
+            } else if (updatedCount > 0) {
+              toast.success(
+                `Updated ${updatedCount} binder${
+                  updatedCount > 1 ? "s" : ""
+                } from cloud`
+              );
+            }
           }
-        }
 
-        return merged;
-      });
-    } catch (error) {
-      console.error("Auto-sync failed:", error);
-      // Don't show error toast for auto-sync failures to avoid being intrusive
+          return merged;
+        });
+      } catch (error) {
+        console.error("Auto-sync failed:", error);
+        // Don't show error toast for auto-sync failures to avoid being intrusive
+      }
+    },
+    [user, getCachedData, setCachedData]
+  );
+
+  // Manual cache refresh function
+  const refreshCache = useCallback(async () => {
+    console.log("Manually refreshing cache");
+    await autoSyncCloudBinders(true);
+  }, [autoSyncCloudBinders]);
+
+  // Initial cache refresh for logged-in users after initialization
+  useEffect(() => {
+    if (!user || isLoading) return;
+
+    // If we loaded from cache, schedule a background refresh
+    const cachedData = getCachedData();
+    if (cachedData) {
+      const timeoutId = setTimeout(() => {
+        autoSyncCloudBinders(true);
+      }, 1000);
+
+      return () => clearTimeout(timeoutId);
     }
-  }, [user]);
+  }, [user, isLoading, getCachedData, autoSyncCloudBinders]);
+
+  // Background sync interval - refresh every 2 minutes when user is active
+  useEffect(() => {
+    if (!user) return;
+
+    const interval = setInterval(() => {
+      // Only sync if document is visible (user is active)
+      if (!document.hidden) {
+        autoSyncCloudBinders(true);
+      }
+    }, BACKGROUND_SYNC_INTERVAL);
+
+    return () => clearInterval(interval);
+  }, [user, autoSyncCloudBinders]);
 
   // Migration function to add cardData to existing binder cards
   const migrateBinderCardData = useCallback(async (binderId) => {
@@ -2335,15 +2470,10 @@ export const BinderProvider = ({ children }) => {
         return true;
       }
 
-      // If binder belongs to current user, check if it has never been synced
+      // If binder belongs to current user, it's NOT local-only (it's either synced or unsaved)
+      // The LocalBinderWarning should only show for binders from OTHER users/sessions
       if (binder.ownerId === user.uid) {
-        // Check if it has sync metadata indicating it exists in cloud
-        const hasCloudSync =
-          binder.sync &&
-          (binder.sync.status === "synced" ||
-            binder.sync.lastSynced ||
-            binder.sync.cloudVersion);
-        return !hasCloudSync;
+        return false;
       }
 
       return false;
@@ -2559,6 +2689,7 @@ export const BinderProvider = ({ children }) => {
     getAllCloudBinders,
     deleteBinderFromCloud,
     autoSyncCloudBinders,
+    refreshCache,
     migrateBinderCardData,
     markAsModified,
 

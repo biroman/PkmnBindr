@@ -2,7 +2,9 @@ import { Navigate } from "react-router-dom";
 import { useAuth, useOwner } from "../hooks/useAuth";
 import { Button } from "../components/ui/Button";
 import RulesExample from "../components/examples/RulesExample";
+import BinderLimitsManager from "../components/admin/BinderLimitsManager";
 import { setupOwnerRole } from "../scripts/setupOwner";
+import { setupDefaultBinderLimits } from "../scripts/setupDefaultBinderLimits";
 
 const AdminPage = () => {
   const { user } = useAuth();
@@ -18,6 +20,24 @@ const AdminPage = () => {
         window.location.reload(); // Refresh to update permissions
       } else {
         alert("❌ Failed to setup owner role. Check console for details.");
+      }
+    }
+  };
+
+  const handleSetupBinderLimits = async () => {
+    if (user?.uid) {
+      const result = await setupDefaultBinderLimits(user.uid);
+      if (result.success) {
+        alert(
+          `✅ ${result.message}\n\n` +
+            `Max Binders: ${result.limits?.maxBinders || 5}\n` +
+            `Max Cards per Binder: ${
+              result.limits?.maxCardsPerBinder || 500
+            }\n` +
+            `Max Pages per Binder: ${result.limits?.maxPagesPerBinder || 50}`
+        );
+      } else {
+        alert(`❌ ${result.message}\n\nCheck console for details.`);
       }
     }
   };
@@ -43,10 +63,22 @@ const AdminPage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white rounded-lg shadow p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">
-              User Management
+              📁 Binder Limits
+            </h3>
+            <p className="text-gray-600 text-sm mb-4">
+              Configure user binder and card limits
+            </p>
+            <p className="text-green-600 text-sm font-medium">
+              ✅ Active Management
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">
+              👥 User Management
             </h3>
             <p className="text-gray-600 text-sm mb-4">
               Manage users and permissions
@@ -58,7 +90,7 @@ const AdminPage = () => {
 
           <div className="bg-white rounded-lg shadow p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">
-              System Stats
+              📊 System Stats
             </h3>
             <p className="text-gray-600 text-sm mb-4">View system analytics</p>
             <Button variant="outline" className="w-full">
@@ -68,7 +100,7 @@ const AdminPage = () => {
 
           <div className="bg-white rounded-lg shadow p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">
-              API Management
+              🔧 API Management
             </h3>
             <p className="text-gray-600 text-sm mb-4">Configure API settings</p>
             <Button variant="outline" className="w-full">
@@ -101,20 +133,39 @@ const AdminPage = () => {
                 </Button>
               </div>
 
-              <Button
-                onClick={handleSetupOwnerRole}
-                className="bg-green-600 hover:bg-green-700"
-                size="sm"
-              >
-                🚀 Setup Owner Role (Run Once)
-              </Button>
+              <div className="flex gap-2">
+                <Button
+                  onClick={handleSetupOwnerRole}
+                  className="bg-green-600 hover:bg-green-700"
+                  size="sm"
+                >
+                  🚀 Setup Owner Role
+                </Button>
+
+                <Button
+                  onClick={handleSetupBinderLimits}
+                  className="bg-blue-600 hover:bg-blue-700"
+                  size="sm"
+                >
+                  📁 Setup Binder Limits
+                </Button>
+              </div>
 
               <p className="text-xs text-gray-500">
                 ⚡ If you're getting permission errors with the rules system,
                 click "Setup Owner Role" once to fix it.
               </p>
+              <p className="text-xs text-gray-500">
+                📁 Click "Setup Binder Limits" to initialize default limits (5
+                binders, 500 cards per binder).
+              </p>
             </div>
           </div>
+        </div>
+
+        {/* Binder Limits Management */}
+        <div className="mt-8">
+          <BinderLimitsManager />
         </div>
 
         {/* Rules System Demo */}
