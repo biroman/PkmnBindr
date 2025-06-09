@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { applyActionCode } from "firebase/auth";
-import { auth } from "../../lib/firebase";
+import { applyActionCode, reload } from "firebase/auth";
+import { doc, updateDoc, serverTimestamp } from "firebase/firestore";
+import { auth, db } from "../../lib/firebase";
+import { useAuthStore } from "../../stores/authStore";
 import { Button } from "../../components/ui/Button";
 import { Alert, AlertDescription } from "../../components/ui/Alert";
 
@@ -10,6 +12,7 @@ const EmailVerificationPage = () => {
   const navigate = useNavigate();
   const [status, setStatus] = useState("verifying"); // verifying, success, error
   const [message, setMessage] = useState("");
+  const { refreshUser } = useAuthStore();
 
   useEffect(() => {
     const handleEmailVerification = async () => {
@@ -26,15 +29,32 @@ const EmailVerificationPage = () => {
         // Apply the email verification code
         await applyActionCode(auth, oobCode);
 
+        // Reload the user to get the updated emailVerified status
+        if (auth.currentUser) {
+          await reload(auth.currentUser);
+
+          // Update the user document in Firestore
+          await updateDoc(doc(db, "users", auth.currentUser.uid), {
+            emailVerified: true,
+            updatedAt: serverTimestamp(),
+          });
+
+          // Small delay to ensure Firebase Auth state is updated
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+
+          // Refresh the auth store state
+          await refreshUser();
+        }
+
         setStatus("success");
         setMessage(
           "Email verified successfully! You can now access all features."
         );
 
-        // Redirect to dashboard after 3 seconds
+        // Redirect to dashboard after 5 seconds
         setTimeout(() => {
           navigate("/dashboard", { replace: true });
-        }, 3000);
+        }, 5000);
       } catch (error) {
         console.error("Email verification failed:", error);
 
@@ -108,7 +128,7 @@ const EmailVerificationPage = () => {
                   <AlertDescription>{message}</AlertDescription>
                 </Alert>
                 <p className="text-gray-600 text-sm">
-                  Redirecting to dashboard in 3 seconds...
+                  Redirecting to dashboard in 5 seconds...
                 </p>
               </>
             )}

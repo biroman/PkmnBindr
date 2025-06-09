@@ -301,6 +301,38 @@ export const useAuthStore = create()(
           }
         },
 
+        // Refresh user state (useful after email verification)
+        refreshUser: async () => {
+          try {
+            if (auth.currentUser) {
+              // Reload the Firebase user to get latest data
+              await auth.currentUser.reload();
+
+              // Get updated user data from Firestore
+              const userDoc = await getDoc(
+                doc(db, "users", auth.currentUser.uid)
+              );
+              const userData = userDoc.exists() ? userDoc.data() : {};
+
+              const updatedUser = {
+                uid: auth.currentUser.uid,
+                email: auth.currentUser.email,
+                displayName: auth.currentUser.displayName,
+                photoURL: auth.currentUser.photoURL,
+                emailVerified: auth.currentUser.emailVerified,
+                ...userData,
+              };
+
+              set({ user: updatedUser });
+              return updatedUser;
+            }
+            return null;
+          } catch (error) {
+            console.error("Error refreshing user:", error);
+            throw error;
+          }
+        },
+
         changePassword: async (currentPassword, newPassword) => {
           try {
             if (!auth.currentUser) {

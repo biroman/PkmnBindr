@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
+import { useAuthStore } from "../stores/authStore";
 import { Alert, AlertDescription } from "./ui/Alert";
 import { Button } from "./ui/Button";
 
 export const SecurityBanner = () => {
   const { user, resendEmailVerification } = useAuth();
+  const { refreshUser } = useAuthStore();
   const [isResending, setIsResending] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [message, setMessage] = useState("");
 
   // Don't show if user is not logged in or email is already verified
@@ -36,6 +39,21 @@ export const SecurityBanner = () => {
     }
   };
 
+  const handleRefreshStatus = async () => {
+    try {
+      setIsRefreshing(true);
+      setMessage("");
+
+      await refreshUser();
+      setMessage("Verification status refreshed!");
+    } catch (error) {
+      setMessage("Error refreshing status. Please try again.");
+      console.error("Error refreshing user:", error);
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
+
   return (
     <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
       <div className="flex items-start">
@@ -62,7 +80,7 @@ export const SecurityBanner = () => {
               click the verification link.
             </p>
           </div>
-          <div className="mt-4 flex items-center gap-4">
+          <div className="mt-4 flex items-center gap-4 flex-wrap">
             <Button
               onClick={handleResendVerification}
               disabled={isResending}
@@ -71,6 +89,15 @@ export const SecurityBanner = () => {
               className="bg-yellow-100 text-yellow-800 border-yellow-300 hover:bg-yellow-200"
             >
               {isResending ? "Sending..." : "Resend Verification Email"}
+            </Button>
+            <Button
+              onClick={handleRefreshStatus}
+              disabled={isRefreshing}
+              variant="outline"
+              size="sm"
+              className="bg-blue-100 text-blue-800 border-blue-300 hover:bg-blue-200"
+            >
+              {isRefreshing ? "Refreshing..." : "Refresh Status"}
             </Button>
             {message && (
               <span className="text-sm text-yellow-700">{message}</span>
