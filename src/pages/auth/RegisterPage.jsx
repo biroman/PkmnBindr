@@ -38,6 +38,7 @@ const RegisterPage = () => {
   const onSubmit = async (data) => {
     try {
       setAuthError("");
+
       await signUp(
         data.email,
         data.password,
@@ -45,24 +46,15 @@ const RegisterPage = () => {
         data.agreeToTerms
       );
 
-      // Show success message about email verification
-      setAuthError(""); // Clear any previous errors
-      // Set success message
-      setTimeout(() => {
-        setAuthError("");
-        navigate("/login", {
-          state: {
-            message:
-              "Account created! Please check your email and verify your account before logging in.",
-            type: "success",
-          },
-        });
-      }, 2000);
-
-      // Show immediate success feedback
-      setAuthError(
-        "Account created successfully! Please check your email for verification link. Redirecting to login..."
-      );
+      // Account created successfully - redirect to login with success message
+      navigate("/auth/login", {
+        state: {
+          message:
+            "Account created successfully! Please check your email and verify your account before logging in.",
+          type: "success",
+        },
+        replace: true,
+      });
     } catch (error) {
       const errorMessage = formatErrorMessage(error);
       setAuthError(errorMessage);
