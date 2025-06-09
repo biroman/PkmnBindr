@@ -59,8 +59,7 @@ export const SecurityBanner = () => {
           <div className="mt-2 text-sm text-yellow-700">
             <p>
               Your email address is not verified. Please check your email and
-              click the verification link. Some features may be limited until
-              your email is verified.
+              click the verification link.
             </p>
           </div>
           <div className="mt-4 flex items-center gap-4">

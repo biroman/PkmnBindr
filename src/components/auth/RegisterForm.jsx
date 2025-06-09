@@ -107,12 +107,12 @@ const RegisterForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="displayName">Full Name</Label>
+            <Label htmlFor="displayName">Display Name</Label>
             <Input
               id="displayName"
               name="displayName"
               type="text"
-              placeholder="Enter your full name"
+              placeholder="Enter your display name"
               value={formData.displayName}
               onChange={handleInputChange}
               className={errors.displayName ? "border-red-500" : ""}

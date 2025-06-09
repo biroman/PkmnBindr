@@ -96,11 +96,11 @@ const RegisterPage = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="displayName">Full Name</Label>
+            <Label htmlFor="displayName">Display Name</Label>
             <Input
               id="displayName"
               type="text"
-              placeholder="Enter your full name"
+              placeholder="Enter your display name"
               className={errors.displayName ? "border-red-500" : ""}
               {...register("displayName")}
             />
