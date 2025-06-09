@@ -7,6 +7,8 @@ import {
 } from "react";
 import { toast } from "react-hot-toast";
 import { useRules } from "./RulesContext";
+import { useAuth } from "../hooks/useAuth";
+import { binderSyncService } from "../services/binderSyncService";
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -70,6 +72,44 @@ const generateId = () =>
 
 const generateChangeId = () =>
   `change_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`;
+
+// Sync helper functions
+const markBinderAsModified = (binder, changeType, changeData, userId) => {
+  const now = new Date().toISOString();
+  const changeId = generateChangeId();
+
+  const change = {
+    id: changeId,
+    timestamp: now,
+    type: changeType,
+    userId: userId || "local_user",
+    data: changeData,
+  };
+
+  return {
+    ...binder,
+    version: (binder.version || 0) + 1,
+    lastModified: now,
+    lastModifiedBy: userId || "local_user",
+    sync: {
+      ...binder.sync,
+      status: "local", // Mark as having local changes
+      pendingChanges: [...(binder.sync?.pendingChanges || []), change],
+    },
+    changelog: [...(binder.changelog || []), change],
+  };
+};
+
+const updateBinderSyncStatus = (binder, syncStatus, additionalData = {}) => {
+  return {
+    ...binder,
+    sync: {
+      ...binder.sync,
+      ...syncStatus,
+      ...additionalData,
+    },
+  };
+};
 
 const createNewBinder = (name, description = "", ownerId = "local_user") => ({
   // Core identification
@@ -358,7 +398,9 @@ export const BinderProvider = ({ children }) => {
   const [binders, setBinders] = useState([]);
   const [currentBinder, setCurrentBinder] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [syncStatus, setSyncStatus] = useState({}); // binderId -> sync status
   const { checkBinderLimits, canPerformAction } = useRules();
+  const { user } = useAuth();
 
   // Initialize from localStorage
   useEffect(() => {
@@ -437,7 +479,11 @@ export const BinderProvider = ({ children }) => {
           throw new Error(canCreate.reason || "Cannot create more binders");
         }
 
-        const newBinder = createNewBinder(name.trim(), description.trim());
+        const newBinder = createNewBinder(
+          name.trim(),
+          description.trim(),
+          user?.uid || "local_user"
+        );
 
         setBinders((prev) => [...prev, newBinder]);
         setCurrentBinder(newBinder);
@@ -1756,11 +1802,177 @@ export const BinderProvider = ({ children }) => {
     [binders, currentBinder]
   );
 
+  // Sync functions
+  const syncBinderToCloud = useCallback(
+    async (binderId, options = {}) => {
+      if (!user) {
+        throw new Error("User must be signed in to sync");
+      }
+
+      const binder = binders.find((b) => b.id === binderId);
+      if (!binder) {
+        throw new Error("Binder not found");
+      }
+
+      try {
+        setSyncStatus((prev) => ({
+          ...prev,
+          [binderId]: { status: "syncing", message: "Syncing to cloud..." },
+        }));
+
+        const result = await binderSyncService.syncToCloud(
+          binder,
+          user.uid,
+          options
+        );
+
+        if (result.success) {
+          // Update local binder with synced version
+          setBinders((prev) =>
+            prev.map((b) => (b.id === binderId ? result.binder : b))
+          );
+
+          if (currentBinder?.id === binderId) {
+            setCurrentBinder(result.binder);
+          }
+
+          setSyncStatus((prev) => ({
+            ...prev,
+            [binderId]: { status: "synced", message: "Synced successfully" },
+          }));
+
+          return result;
+        }
+      } catch (error) {
+        setSyncStatus((prev) => ({
+          ...prev,
+          [binderId]: { status: "error", message: error.message },
+        }));
+        throw error;
+      }
+    },
+    [binders, currentBinder, user]
+  );
+
+  const downloadBinderFromCloud = useCallback(
+    async (binderId) => {
+      if (!user) {
+        throw new Error("User must be signed in to download");
+      }
+
+      try {
+        setSyncStatus((prev) => ({
+          ...prev,
+          [binderId]: {
+            status: "downloading",
+            message: "Downloading from cloud...",
+          },
+        }));
+
+        const result = await binderSyncService.downloadFromCloud(
+          binderId,
+          user.uid
+        );
+
+        if (result.success) {
+          // Update or add binder to local storage
+          setBinders((prev) => {
+            const existingIndex = prev.findIndex((b) => b.id === binderId);
+            if (existingIndex >= 0) {
+              const updated = [...prev];
+              updated[existingIndex] = result.binder;
+              return updated;
+            } else {
+              return [...prev, result.binder];
+            }
+          });
+
+          if (currentBinder?.id === binderId) {
+            setCurrentBinder(result.binder);
+          }
+
+          setSyncStatus((prev) => ({
+            ...prev,
+            [binderId]: {
+              status: "synced",
+              message: "Downloaded successfully",
+            },
+          }));
+
+          return result;
+        }
+      } catch (error) {
+        setSyncStatus((prev) => ({
+          ...prev,
+          [binderId]: { status: "error", message: error.message },
+        }));
+        throw error;
+      }
+    },
+    [currentBinder, user]
+  );
+
+  const getAllCloudBinders = useCallback(async () => {
+    if (!user) {
+      throw new Error("User must be signed in");
+    }
+
+    try {
+      return await binderSyncService.getAllCloudBinders(user.uid);
+    } catch (error) {
+      console.error("Failed to get cloud binders:", error);
+      throw error;
+    }
+  }, [user]);
+
+  const deleteBinderFromCloud = useCallback(
+    async (binderId) => {
+      if (!user) {
+        throw new Error("User must be signed in");
+      }
+
+      try {
+        return await binderSyncService.deleteFromCloud(binderId, user.uid);
+      } catch (error) {
+        console.error("Failed to delete from cloud:", error);
+        throw error;
+      }
+    },
+    [user]
+  );
+
+  // Helper to mark binder as modified when any changes are made
+  const markAsModified = useCallback(
+    (binderId, changeType, changeData) => {
+      setBinders((prev) =>
+        prev.map((binder) => {
+          if (binder.id === binderId) {
+            return markBinderAsModified(
+              binder,
+              changeType,
+              changeData,
+              user?.uid
+            );
+          }
+          return binder;
+        })
+      );
+
+      if (currentBinder?.id === binderId) {
+        setCurrentBinder((prev) =>
+          markBinderAsModified(prev, changeType, changeData, user?.uid)
+        );
+      }
+    },
+    [currentBinder, user]
+  );
+
   const value = {
     // State
     binders,
     currentBinder,
     isLoading,
+    syncStatus,
 
     // Actions
     createBinder,
@@ -1775,6 +1987,13 @@ export const BinderProvider = ({ children }) => {
     batchMoveCards,
     updateBinderSettings,
     updateBinderMetadata,
+
+    // Sync Actions
+    syncBinderToCloud,
+    downloadBinderFromCloud,
+    getAllCloudBinders,
+    deleteBinderFromCloud,
+    markAsModified,
 
     // Page Management
     addPage,
