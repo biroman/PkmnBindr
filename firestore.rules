@@ -161,6 +161,37 @@ service cloud.firestore {
                                 isValidNumberRange(request.resource.data.maxPrice, 0, 999999));
     }
 
+    // User Binders collection - for the new sync service
+    match /user_binders/{docId} {
+      // Block operations if in emergency mode (except for owners)
+      allow read, write: if !isEmergencyMode() && request.auth != null && 
+                           docId.matches('^' + request.auth.uid + '_.*');
+      allow read, write: if isOwner();
+      
+      // Enhanced validation for binder creation/updates
+      allow create, update: if request.auth != null && 
+                               docId.matches('^' + request.auth.uid + '_.*') &&
+                               !isEmergencyMode() &&
+                               // Validate required fields
+                               request.resource.data.keys().hasAll(['id', 'ownerId']) &&
+                               request.resource.data.ownerId == request.auth.uid &&
+                               // Validate binder name (max 100 chars if present)
+                               (!('metadata' in request.resource.data) ||
+                                !('name' in request.resource.data.metadata) ||
+                                isValidStringLength(request.resource.data.metadata.name, 100)) &&
+                               // Validate description (max 500 chars if present)
+                               (!('metadata' in request.resource.data) ||
+                                !('description' in request.resource.data.metadata) ||
+                                isValidStringLength(request.resource.data.metadata.description, 500)) &&
+                               // Validate version (must be number)
+                               (!('version' in request.resource.data) ||
+                                request.resource.data.version is number) &&
+                               // Validate grid size (specific values only)
+                               (!('settings' in request.resource.data) ||
+                                !('gridSize' in request.resource.data.settings) ||
+                                request.resource.data.settings.gridSize in ['2x2', '3x3', '4x3', '4x4']);
+    }
+
     // Global Rules collection - Owner can manage, users can read
     match /globalRules/{ruleId} {
       // Owner has full access to create, read, update, delete rules

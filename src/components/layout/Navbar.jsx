@@ -3,21 +3,14 @@ import { useAuth, useOwner } from "../../hooks/useAuth";
 import { useRules } from "../../contexts/RulesContext";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { Button } from "../ui/Button";
+import LogoutButton from "../auth/LogoutButton";
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const isOwner = useOwner();
   const { isOwner: isRulesOwner } = useRules();
   const { currentBinder } = useBinderContext();
   const location = useLocation();
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.error("Logout error:", error);
-    }
-  };
 
   const isActive = (path) => location.pathname === path;
 
@@ -117,13 +110,7 @@ const Navbar = () => {
                     </span>
                   )}
                 </div>
-                <Button
-                  variant="outline"
-                  onClick={handleLogout}
-                  className="text-sm"
-                >
-                  Sign Out
-                </Button>
+                <LogoutButton className="text-sm" />
               </>
             ) : (
               <div className="flex items-center space-x-2">

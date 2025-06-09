@@ -33,6 +33,7 @@ const BinderPage = () => {
     moveCardOptimistic,
     removeCardFromBinder,
     batchAddCards,
+    canAccessBinder,
   } = useBinderContext();
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
@@ -48,11 +49,19 @@ const BinderPage = () => {
   const [progressAnimationId, setProgressAnimationId] = useState(null); // 'left' | 'right' | null
   const navigationZoneRef = useRef(null); // Ref to track current navigation zone without closure issues
 
-  // Auto-select binder based on URL parameter
+  // Auto-select binder based on URL parameter with security check
   useEffect(() => {
     if (binderId && binders.length > 0) {
       const targetBinder = binders.find((binder) => binder.id === binderId);
       if (targetBinder) {
+        // Security check: Verify user can access this binder
+        if (!canAccessBinder(binderId)) {
+          console.warn(`Access denied: User cannot access binder ${binderId}`);
+          toast.error("Access denied: This binder belongs to another user");
+          navigate("/binders", { replace: true });
+          return;
+        }
+
         // Only select if it's not already the current binder
         if (!currentBinder || currentBinder.id !== binderId) {
           selectBinder(targetBinder);
@@ -62,7 +71,14 @@ const BinderPage = () => {
         navigate("/binders", { replace: true });
       }
     }
-  }, [binderId, binders, currentBinder, selectBinder, navigate]);
+  }, [
+    binderId,
+    binders,
+    currentBinder,
+    selectBinder,
+    navigate,
+    canAccessBinder,
+  ]);
 
   // Use the binder pages hook
   const {

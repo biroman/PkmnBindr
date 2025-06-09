@@ -8,8 +8,13 @@ import {
   EyeIcon,
   PlusIcon,
   TrashIcon,
+  CloudArrowUpIcon,
+  CloudIcon,
+  ArrowPathIcon,
+  ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
+import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import PageManager from "./PageManager";
 
@@ -312,6 +317,171 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
   );
 };
 
+const SyncButton = ({ binder }) => {
+  const { saveBinderToCloud, syncStatus } = useBinderContext();
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const binderSyncStatus = syncStatus[binder?.id];
+  const syncState = binder?.sync?.status || "local";
+
+  const handleSaveToCloud = async () => {
+    if (!user) {
+      toast.error("Please sign in to save to cloud");
+      return;
+    }
+
+    if (!binder) {
+      toast.error("No binder to save");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      await saveBinderToCloud(binder.id);
+      // Success message is handled in saveBinderToCloud
+    } catch (error) {
+      console.error("Save failed:", error);
+      // Error message is handled in saveBinderToCloud unless it's a cancellation
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const getSyncIcon = () => {
+    if (isLoading || binderSyncStatus?.status === "saving") {
+      return <ArrowPathIcon className="w-5 h-5 animate-spin" />;
+    }
+
+    switch (syncState) {
+      case "synced":
+        return <CloudIcon className="w-5 h-5" />;
+      case "error":
+        return <ExclamationTriangleIcon className="w-5 h-5" />;
+      case "conflict":
+        return <ExclamationTriangleIcon className="w-5 h-5" />;
+      default:
+        return <CloudArrowUpIcon className="w-5 h-5" />;
+    }
+  };
+
+  const getSyncText = () => {
+    if (isLoading || binderSyncStatus?.status === "saving") {
+      return "Saving...";
+    }
+
+    switch (syncState) {
+      case "synced":
+        return "Saved";
+      case "error":
+        return "Save Error";
+      case "conflict":
+        return "Conflict";
+      default:
+        return "Save to Cloud";
+    }
+  };
+
+  const getSyncSubtext = () => {
+    if (isLoading || binderSyncStatus?.status === "saving") {
+      return "Please wait...";
+    }
+
+    switch (syncState) {
+      case "synced":
+        const lastSynced = binder.sync?.lastSynced;
+        if (lastSynced) {
+          const diffMs = Date.now() - new Date(lastSynced).getTime();
+          const diffMins = Math.floor(diffMs / (1000 * 60));
+          if (diffMins < 1) return "Just now";
+          if (diffMins < 60) return `${diffMins}m ago`;
+          const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+          if (diffHours < 24) return `${diffHours}h ago`;
+          const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+          return `${diffDays}d ago`;
+        }
+        return "Up to date";
+      case "error":
+        return binder.sync?.lastError || "Save failed";
+      case "conflict":
+        return binderSyncStatus?.message || "Cloud version is newer";
+      default:
+        return user ? "Backup your binder" : "Sign in to save";
+    }
+  };
+
+  const getButtonStyle = () => {
+    if (!user) {
+      return "bg-gray-100 text-gray-600 cursor-not-allowed";
+    }
+
+    if (isLoading || binderSyncStatus?.status === "saving") {
+      return "bg-blue-100 text-blue-700 cursor-wait";
+    }
+
+    switch (syncState) {
+      case "synced":
+        return "bg-green-100 text-green-700 hover:bg-green-200";
+      case "error":
+        return "bg-red-100 text-red-700 hover:bg-red-200";
+      case "conflict":
+        return "bg-orange-100 text-orange-700 hover:bg-orange-200";
+      default:
+        return "bg-blue-600 text-white hover:bg-blue-700";
+    }
+  };
+
+  const hasUnsyncedChanges = () => {
+    // Check sync status first
+    if (syncState === "local" || syncState === "error") {
+      return true;
+    }
+
+    // Check if there are pending changes
+    if (binder?.sync?.pendingChanges?.length > 0) {
+      return true;
+    }
+
+    // Check if last modified is newer than last synced
+    if (binder?.lastModified && binder?.sync?.lastSynced) {
+      const lastModified = new Date(binder.lastModified);
+      const lastSynced = new Date(binder.sync.lastSynced);
+      return lastModified > lastSynced;
+    }
+
+    // If no sync timestamp but binder was modified, it has changes
+    if (binder?.lastModified && !binder?.sync?.lastSynced) {
+      return true;
+    }
+
+    return false;
+  };
+
+  return (
+    <div className="space-y-2">
+      {/* Unsaved changes indicator */}
+      {user && hasUnsyncedChanges() && syncState !== "error" && (
+        <div className="flex items-center gap-2 text-xs text-amber-600 bg-amber-50 px-3 py-2 rounded-lg border border-amber-200">
+          <ExclamationTriangleIcon className="w-4 h-4 flex-shrink-0" />
+          <span>You have unsaved changes</span>
+        </div>
+      )}
+
+      <button
+        onClick={handleSaveToCloud}
+        disabled={!user || isLoading || binderSyncStatus?.status === "saving"}
+        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${getButtonStyle()}`}
+      >
+        <div className="flex-shrink-0">{getSyncIcon()}</div>
+        <div className="flex-1 text-left">
+          <div className="font-medium text-sm">{getSyncText()}</div>
+          <div className="text-xs opacity-75">{getSyncSubtext()}</div>
+        </div>
+      </button>
+    </div>
+  );
+};
+
 const BinderSidebar = ({
   binder,
   onGridSizeChange,
@@ -402,6 +572,11 @@ const BinderSidebar = ({
         <PageManager binder={binder} />
 
         {/* Note: Missing card tracking is now handled via hover buttons on individual cards */}
+      </div>
+
+      {/* Sync Button at the bottom */}
+      <div className="border-t border-slate-200 p-4">
+        <SyncButton binder={binder} />
       </div>
     </div>
   );

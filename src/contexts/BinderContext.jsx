@@ -554,10 +554,26 @@ export const BinderProvider = ({ children }) => {
     [currentBinder]
   );
 
-  // Set current binder
-  const selectBinder = useCallback((binder) => {
-    setCurrentBinder(binder);
-  }, []);
+  // Set current binder with security check
+  const selectBinder = useCallback(
+    (binder) => {
+      // Security check: Only allow selection of visible binders
+      const isVisible = !user
+        ? binder.ownerId === "local_user"
+        : binder.ownerId === user.uid || binder.ownerId === "local_user";
+
+      if (!isVisible) {
+        console.warn(
+          `Access denied: Binder "${binder.metadata?.name}" does not belong to current user`
+        );
+        toast.error("Access denied: This binder belongs to another user");
+        return;
+      }
+
+      setCurrentBinder(binder);
+    },
+    [user]
+  );
 
   // Add card to binder
   const addCardToBinder = useCallback(
@@ -599,6 +615,22 @@ export const BinderProvider = ({ children }) => {
           const cardEntry = {
             instanceId: generateId(), // Unique ID for this specific card instance
             cardId: card.id,
+            // Store essential card data for cloud sync (filter out undefined values)
+            cardData: {
+              id: card.id || null,
+              name: card.name || null,
+              image: card.image || null,
+              imageSmall: card.imageSmall || null,
+              set: {
+                id: card.set?.id || null,
+                name: card.set?.name || null,
+                series: card.set?.series || null,
+              },
+              number: card.number || null,
+              artist: card.artist || null,
+              rarity: card.rarity || null,
+              types: card.types || null,
+            },
             addedAt: new Date().toISOString(),
             addedBy: binder.ownerId,
             notes: metadata.notes || "",
@@ -665,13 +697,19 @@ export const BinderProvider = ({ children }) => {
               ...binder.settings,
               pageCount: newPageCount,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50), // Keep last 50 changes
           };
 
-          return updatedBinder;
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "card_added",
+            {
+              cardId: card.id,
+              position: targetPosition,
+              previousValue: null,
+            },
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -704,26 +742,22 @@ export const BinderProvider = ({ children }) => {
           const updatedCards = { ...binder.cards };
           delete updatedCards[positionKey];
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "card_removed",
-            userId: binder.ownerId,
-            data: {
+          const updatedBinder = {
+            ...binder,
+            cards: updatedCards,
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "card_removed",
+            {
               cardId: removedCard.cardId,
               position,
               previousValue: removedCard,
             },
-          };
-
-          return {
-            ...binder,
-            cards: updatedCards,
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
-          };
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -790,28 +824,24 @@ export const BinderProvider = ({ children }) => {
             delete updatedCards[fromKey];
           }
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: optimistic ? "card_moved_optimistic" : "card_moved",
-            userId: binder.ownerId,
-            data: {
+          const updatedBinder = {
+            ...binder,
+            cards: updatedCards,
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            optimistic ? "card_moved_optimistic" : "card_moved",
+            {
               cardId: cardToMove.cardId,
               fromPosition,
               toPosition,
               swappedWith: cardAtDestination?.cardId || null,
               optimistic,
             },
-          };
-
-          return {
-            ...binder,
-            cards: updatedCards,
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
-          };
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -892,6 +922,22 @@ export const BinderProvider = ({ children }) => {
               const cardEntry = {
                 instanceId: generateId(),
                 cardId: card.id,
+                // Store essential card data for cloud sync (filter out undefined values)
+                cardData: {
+                  id: card.id || null,
+                  name: card.name || null,
+                  image: card.image || null,
+                  imageSmall: card.imageSmall || null,
+                  set: {
+                    id: card.set?.id || null,
+                    name: card.set?.name || null,
+                    series: card.set?.series || null,
+                  },
+                  number: card.number || null,
+                  artist: card.artist || null,
+                  rarity: card.rarity || null,
+                  types: card.types || null,
+                },
                 addedAt: new Date().toISOString(),
                 addedBy: binder.ownerId,
                 notes: metadata.notes || "",
@@ -944,31 +990,26 @@ export const BinderProvider = ({ children }) => {
             binder.settings?.minPages || 1
           );
 
-          // Create a single batch entry for all cards added
-          const batchEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "cards_batch_added",
-            userId: binder.ownerId,
-            data: {
-              cardsAdded: addedCards,
-              count: addedCards.length,
-              startPosition: startPosition,
-            },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             cards: updatedCards,
             settings: {
               ...binder.settings,
               pageCount: newPageCount,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, batchEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "cards_batch_added",
+            {
+              cardsAdded: addedCards,
+              count: addedCards.length,
+              startPosition: startPosition,
+            },
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1015,29 +1056,25 @@ export const BinderProvider = ({ children }) => {
           const [movedPage] = newPageOrder.splice(fromIndex, 1);
           newPageOrder.splice(toIndex, 0, movedPage);
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "pages_reordered",
-            userId: binder.ownerId,
-            data: {
-              fromIndex,
-              toIndex,
-              pageOrder: newPageOrder,
-            },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             settings: {
               ...binder.settings,
               pageOrder: newPageOrder,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "pages_reordered",
+            {
+              fromIndex,
+              toIndex,
+              pageOrder: newPageOrder,
+            },
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1159,27 +1196,23 @@ export const BinderProvider = ({ children }) => {
             updatedCards[newPos.toString()] = card;
           });
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "card_pages_reordered",
-            userId: binder.ownerId,
-            data: {
+          const updatedBinder = {
+            ...binder,
+            cards: updatedCards,
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "card_pages_reordered",
+            {
               fromCardPageIndex,
               toCardPageIndex,
               sourceCardCount: Object.keys(sourceCards).length,
               targetCardCount: Object.keys(targetCards).length,
             },
-          };
-
-          return {
-            ...binder,
-            cards: updatedCards,
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
-          };
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1259,16 +1292,18 @@ export const BinderProvider = ({ children }) => {
             return binder; // No changes
           }
 
-          const batchEntry = createBatchOperation(successfulOperations, binder);
-
-          return {
+          const updatedBinder = {
             ...binder,
             cards: updatedCards,
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, batchEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "batch_move_cards",
+            { operations: successfulOperations },
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1364,12 +1399,16 @@ export const BinderProvider = ({ children }) => {
             }
           }
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "settings_updated",
-            userId: binder.ownerId,
-            data: {
+          const updatedBinder = {
+            ...binder,
+            settings: updatedSettings,
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "settings_updated",
+            {
               changes: settings,
               previousSettings: binder.settings,
               calculatedPageCount:
@@ -1377,16 +1416,8 @@ export const BinderProvider = ({ children }) => {
                   ? updatedSettings.pageCount
                   : undefined,
             },
-          };
-
-          return {
-            ...binder,
-            settings: updatedSettings,
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
-          };
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1487,28 +1518,24 @@ export const BinderProvider = ({ children }) => {
 
           const newPageCount = currentPageCount + 1;
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "page_added",
-            userId: binder.ownerId,
-            data: {
-              pageNumber: newPageCount,
-              previousPageCount: currentPageCount,
-            },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             settings: {
               ...binder.settings,
               pageCount: newPageCount,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "page_added",
+            {
+              pageNumber: newPageCount,
+              previousPageCount: currentPageCount,
+            },
+            binder.ownerId
+          );
         };
 
         // Get the current page count before updating (for the toast message)
@@ -1552,29 +1579,25 @@ export const BinderProvider = ({ children }) => {
             return binder;
           }
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "pages_batch_added",
-            userId: binder.ownerId,
-            data: {
-              pagesAdded: pageCount,
-              fromPageCount: currentPageCount,
-              toPageCount: newPageCount,
-            },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             settings: {
               ...binder.settings,
               pageCount: newPageCount,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "pages_batch_added",
+            {
+              pagesAdded: pageCount,
+              fromPageCount: currentPageCount,
+              toPageCount: newPageCount,
+            },
+            binder.ownerId
+          );
         };
 
         // Get the current page count before updating (for the toast message)
@@ -1657,28 +1680,24 @@ export const BinderProvider = ({ children }) => {
 
           const newPageCount = currentPageCount - 1;
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "page_removed",
-            userId: binder.ownerId,
-            data: {
-              pageNumber: currentPageCount,
-              newPageCount: newPageCount,
-            },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             settings: {
               ...binder.settings,
               pageCount: newPageCount,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "page_removed",
+            {
+              pageNumber: currentPageCount,
+              newPageCount: newPageCount,
+            },
+            binder.ownerId
+          );
         };
 
         // Get the page number before updating (for the toast message)
@@ -1762,25 +1781,21 @@ export const BinderProvider = ({ children }) => {
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
-          const changeEntry = {
-            id: generateChangeId(),
-            timestamp: new Date().toISOString(),
-            type: "metadata_updated",
-            userId: binder.ownerId,
-            data: { updates: metadataUpdates },
-          };
-
-          return {
+          const updatedBinder = {
             ...binder,
             metadata: {
               ...binder.metadata,
               ...metadataUpdates,
             },
-            version: binder.version + 1,
-            lastModified: new Date().toISOString(),
-            lastModifiedBy: binder.ownerId,
-            changelog: [...binder.changelog, changeEntry].slice(-50),
           };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "metadata_updated",
+            { updates: metadataUpdates },
+            binder.ownerId
+          );
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1802,11 +1817,11 @@ export const BinderProvider = ({ children }) => {
     [binders, currentBinder]
   );
 
-  // Sync functions
-  const syncBinderToCloud = useCallback(
+  // Save binder to cloud with conflict detection
+  const saveBinderToCloud = useCallback(
     async (binderId, options = {}) => {
       if (!user) {
-        throw new Error("User must be signed in to sync");
+        throw new Error("User must be signed in to save");
       }
 
       const binder = binders.find((b) => b.id === binderId);
@@ -1817,14 +1832,51 @@ export const BinderProvider = ({ children }) => {
       try {
         setSyncStatus((prev) => ({
           ...prev,
-          [binderId]: { status: "syncing", message: "Syncing to cloud..." },
+          [binderId]: { status: "saving", message: "Saving to cloud..." },
         }));
 
-        const result = await binderSyncService.syncToCloud(
-          binder,
-          user.uid,
-          options
+        // First check if there's a conflict
+        const cloudDoc = await binderSyncService.getCloudBinder(
+          binderId,
+          user.uid
         );
+
+        if (cloudDoc && !options.forceOverwrite) {
+          const localModified = new Date(binder.lastModified || 0);
+          const cloudModified = new Date(cloudDoc.lastModified || 0);
+
+          // If cloud version is newer, ask user what to do
+          if (cloudModified > localModified) {
+            const shouldOverwrite = await new Promise((resolve) => {
+              // Show conflict dialog
+              const dialog = confirm(
+                `The binder "${binder.metadata?.name}" in the cloud was modified more recently.\n\n` +
+                  `Local version: ${localModified.toLocaleString()}\n` +
+                  `Cloud version: ${cloudModified.toLocaleString()}\n\n` +
+                  `Do you want to overwrite the cloud version with your local changes?\n\n` +
+                  `Click OK to overwrite, Cancel to keep cloud version.`
+              );
+              resolve(dialog);
+            });
+
+            if (!shouldOverwrite) {
+              setSyncStatus((prev) => ({
+                ...prev,
+                [binderId]: {
+                  status: "conflict",
+                  message: "Save cancelled - cloud version is newer",
+                },
+              }));
+              throw new Error("Save cancelled - cloud version is newer");
+            }
+          }
+        }
+
+        // Save to cloud (with forceOverwrite if user confirmed)
+        const result = await binderSyncService.syncToCloud(binder, user.uid, {
+          ...options,
+          forceOverwrite: options.forceOverwrite || cloudDoc,
+        });
 
         if (result.success) {
           // Update local binder with synced version
@@ -1838,20 +1890,39 @@ export const BinderProvider = ({ children }) => {
 
           setSyncStatus((prev) => ({
             ...prev,
-            [binderId]: { status: "synced", message: "Synced successfully" },
+            [binderId]: {
+              status: "synced",
+              message: "Saved to cloud successfully",
+            },
           }));
 
+          toast.success(`"${binder.metadata?.name}" saved to cloud`);
           return result;
         }
       } catch (error) {
+        console.error("Failed to save binder to cloud:", error);
         setSyncStatus((prev) => ({
           ...prev,
           [binderId]: { status: "error", message: error.message },
         }));
+
+        if (!error.message.includes("cancelled")) {
+          toast.error(
+            `Failed to save "${binder.metadata?.name}": ${error.message}`
+          );
+        }
         throw error;
       }
     },
     [binders, currentBinder, user]
+  );
+
+  // Legacy sync function - now just calls saveBinderToCloud
+  const syncBinderToCloud = useCallback(
+    async (binderId, options = {}) => {
+      return await saveBinderToCloud(binderId, options);
+    },
+    [saveBinderToCloud]
   );
 
   const downloadBinderFromCloud = useCallback(
@@ -1941,9 +2012,267 @@ export const BinderProvider = ({ children }) => {
     [user]
   );
 
-  // Helper to mark binder as modified when any changes are made
+  // Auto-sync cloud binders when user logs in
+  const autoSyncCloudBinders = useCallback(async () => {
+    if (!user) {
+      return;
+    }
+
+    try {
+      // Get all cloud binders
+      const cloudBinders = await binderSyncService.getAllCloudBinders(user.uid);
+
+      if (cloudBinders.length === 0) {
+        return;
+      }
+
+      // Merge with local binders
+      setBinders((localBinders) => {
+        const merged = [...localBinders];
+        let addedCount = 0;
+        let updatedCount = 0;
+        const updatedBinderIds = []; // Track which binders were updated
+
+        cloudBinders.forEach((cloudBinder) => {
+          const existingIndex = merged.findIndex(
+            (b) => b.id === cloudBinder.id
+          );
+
+          if (existingIndex >= 0) {
+            // Binder exists locally, check if cloud version is newer
+            const localBinder = merged[existingIndex];
+            const cloudVersion = cloudBinder.version || 0;
+            const localVersion = localBinder.version || 0;
+            const cloudModified = new Date(cloudBinder.lastModified || 0);
+            const localModified = new Date(localBinder.lastModified || 0);
+
+            // Use cloud version if it's newer (version or timestamp)
+            if (cloudVersion > localVersion || cloudModified > localModified) {
+              console.log(
+                `Cloud binder "${cloudBinder.metadata?.name}" is newer:`,
+                {
+                  cloudVersion,
+                  localVersion,
+                  cloudModified: cloudModified.toISOString(),
+                  localModified: localModified.toISOString(),
+                }
+              );
+              const updatedCloudBinder = {
+                ...cloudBinder,
+                sync: {
+                  ...cloudBinder.sync,
+                  status: "synced",
+                  lastSynced:
+                    cloudBinder.sync?.lastSynced || new Date().toISOString(),
+                },
+              };
+              merged[existingIndex] = updatedCloudBinder;
+              updatedCount++;
+              updatedBinderIds.push(cloudBinder.id);
+
+              // Update current binder if it's the one being updated
+              setCurrentBinder((currentBinder) => {
+                if (currentBinder?.id === cloudBinder.id) {
+                  console.log(
+                    `Updating current binder "${cloudBinder.metadata?.name}" with cloud version`
+                  );
+                  return updatedCloudBinder;
+                }
+                return currentBinder;
+              });
+            }
+          } else {
+            // New binder from cloud, add it
+            const newCloudBinder = {
+              ...cloudBinder,
+              sync: {
+                ...cloudBinder.sync,
+                status: "synced",
+                lastSynced:
+                  cloudBinder.sync?.lastSynced || new Date().toISOString(),
+              },
+            };
+            merged.push(newCloudBinder);
+            addedCount++;
+          }
+        });
+
+        // Save merged binders to localStorage
+        if (addedCount > 0 || updatedCount > 0) {
+          storage.set(STORAGE_KEYS.BINDERS, merged);
+
+          // Show a toast notification
+          if (addedCount > 0 && updatedCount > 0) {
+            toast.success(
+              `Synced ${addedCount} new and ${updatedCount} updated binders from cloud`
+            );
+          } else if (addedCount > 0) {
+            toast.success(
+              `Downloaded ${addedCount} binder${
+                addedCount > 1 ? "s" : ""
+              } from cloud`
+            );
+          } else if (updatedCount > 0) {
+            toast.success(
+              `Updated ${updatedCount} binder${
+                updatedCount > 1 ? "s" : ""
+              } from cloud`
+            );
+          }
+        }
+
+        return merged;
+      });
+    } catch (error) {
+      console.error("Auto-sync failed:", error);
+      // Don't show error toast for auto-sync failures to avoid being intrusive
+    }
+  }, [user]);
+
+  // Migration function to add cardData to existing binder cards
+  const migrateBinderCardData = useCallback(async (binderId) => {
+    // Get current state inside the function to avoid dependency issues
+    setBinders((currentBinders) => {
+      const binder = currentBinders.find((b) => b.id === binderId);
+      if (!binder?.cards) return currentBinders;
+
+      let hasChanges = false;
+      const updatedCards = { ...binder.cards };
+
+      // Get card cache from localStorage
+      const getCardCache = () => {
+        try {
+          const item = localStorage.getItem("pokemon_card_cache");
+          return item ? JSON.parse(item) : {};
+        } catch (error) {
+          console.error("Error reading card cache:", error);
+          return {};
+        }
+      };
+
+      const cardCache = getCardCache();
+
+      // Check each card entry for missing cardData
+      for (const [position, cardEntry] of Object.entries(binder.cards)) {
+        if (!cardEntry.cardData && cardEntry.cardId) {
+          // Try to get card data from cache
+          const cachedCard = cardCache[cardEntry.cardId];
+          if (cachedCard) {
+            updatedCards[position] = {
+              ...cardEntry,
+              cardData: {
+                id: cachedCard.id,
+                name: cachedCard.name,
+                image: cachedCard.image,
+                imageSmall: cachedCard.imageSmall,
+                set: {
+                  id: cachedCard.set?.id,
+                  name: cachedCard.set?.name,
+                  series: cachedCard.set?.series,
+                },
+                number: cachedCard.number,
+                artist: cachedCard.artist,
+                rarity: cachedCard.rarity,
+                types: cachedCard.types,
+              },
+            };
+            hasChanges = true;
+          }
+        }
+      }
+
+      // Return updated binders if we made changes
+      if (hasChanges) {
+        const updatedBinders = currentBinders.map((b) =>
+          b.id === binderId
+            ? { ...b, cards: updatedCards, version: b.version + 1 }
+            : b
+        );
+
+        // Also update current binder if needed
+        setCurrentBinder((prevCurrent) => {
+          if (prevCurrent?.id === binderId) {
+            return {
+              ...prevCurrent,
+              cards: updatedCards,
+              version: prevCurrent.version + 1,
+            };
+          }
+          return prevCurrent;
+        });
+
+        return updatedBinders;
+      }
+
+      return currentBinders;
+    });
+  }, []);
+
+  // Filter binders based on current user context for privacy/security
+  const getVisibleBinders = useCallback(() => {
+    if (!user) {
+      // When not logged in, only show guest binders (created while not logged in)
+      return binders.filter((binder) => binder.ownerId === "local_user");
+    } else {
+      // When logged in, only show user's own binders and claimed binders
+      return binders.filter(
+        (binder) =>
+          binder.ownerId === user.uid || binder.ownerId === "local_user" // Allow guest binders to be claimed
+      );
+    }
+  }, [binders, user]);
+
+  // Get filtered binders for current user context
+  const visibleBinders = getVisibleBinders();
+
+  // Auto-sync when user changes (logs in/out)
+  useEffect(() => {
+    if (user && !isLoading) {
+      // Only sync if user is logged in and not loading
+      autoSyncCloudBinders();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.uid, isLoading]); // Only depend on user ID and loading state to avoid circular updates
+
+  // Security check: Clear current binder if it doesn't belong to current user
+  useEffect(() => {
+    if (currentBinder) {
+      const isCurrentBinderVisible = visibleBinders.some(
+        (b) => b.id === currentBinder.id
+      );
+      if (!isCurrentBinderVisible) {
+        console.log(
+          `Clearing current binder "${currentBinder.metadata?.name}" - not accessible to current user`
+        );
+        setCurrentBinder(null);
+      }
+    }
+  }, [currentBinder, visibleBinders]);
+
+  // Security helper: Check if user can access binder
+  const canAccessBinder = useCallback(
+    (binderId) => {
+      const binder = binders.find((b) => b.id === binderId);
+      if (!binder) return false;
+
+      return !user
+        ? binder.ownerId === "local_user"
+        : binder.ownerId === user.uid || binder.ownerId === "local_user";
+    },
+    [binders, user]
+  );
+
+  // Helper to mark binder as modified when any changes are made (with security check)
   const markAsModified = useCallback(
     (binderId, changeType, changeData) => {
+      // Security check
+      if (!canAccessBinder(binderId)) {
+        console.warn(
+          `Access denied: Cannot modify binder ${binderId} - not owned by current user`
+        );
+        return;
+      }
+
       setBinders((prev) =>
         prev.map((binder) => {
           if (binder.id === binderId) {
@@ -1964,12 +2293,223 @@ export const BinderProvider = ({ children }) => {
         );
       }
     },
-    [currentBinder, user]
+    [currentBinder, user, canAccessBinder]
   );
+
+  // Helper to check if a binder is local-only (not synced to current user's cloud)
+  const isLocalOnlyBinder = useCallback(
+    (binder) => {
+      if (!user) return false; // Don't show local-only warnings when not logged in
+
+      // If binder belongs to a different user, it's local-only
+      if (binder.ownerId !== user.uid && binder.ownerId !== "local_user") {
+        return true;
+      }
+
+      // If binder was created before login (ownerId: "local_user"), it's local-only
+      if (binder.ownerId === "local_user") {
+        return true;
+      }
+
+      // If binder belongs to current user, check if it has never been synced
+      if (binder.ownerId === user.uid) {
+        // Check if it has sync metadata indicating it exists in cloud
+        const hasCloudSync =
+          binder.sync &&
+          (binder.sync.status === "synced" ||
+            binder.sync.lastSynced ||
+            binder.sync.cloudVersion);
+        return !hasCloudSync;
+      }
+
+      return false;
+    },
+    [user]
+  );
+
+  // Helper to check if a binder belongs to current user
+  const isOwnedByCurrentUser = useCallback(
+    (binder) => {
+      if (!user) return false;
+      return binder.ownerId === user.uid;
+    },
+    [user]
+  );
+
+  // Get local-only binders
+  const getLocalOnlyBinders = useCallback(() => {
+    if (!user) return []; // Don't show local-only warning when not logged in
+    return binders.filter((binder) => isLocalOnlyBinder(binder));
+  }, [binders, user, isLocalOnlyBinder]);
+
+  // Claim a local binder (transfer ownership to current user)
+  const claimLocalBinder = useCallback(
+    async (binderId) => {
+      if (!user) {
+        throw new Error("Must be logged in to claim binders");
+      }
+
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const updatedBinder = {
+            ...binder,
+            ownerId: user.uid,
+            lastModifiedBy: user.uid,
+          };
+
+          // Mark as modified so it shows as needing to be saved to cloud
+          return markBinderAsModified(
+            updatedBinder,
+            "ownership_claimed",
+            {
+              previousOwner: binder.ownerId,
+              newOwner: user.uid,
+            },
+            user.uid
+          );
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being claimed
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        const binderName =
+          binders.find((b) => b.id === binderId)?.metadata?.name || "binder";
+        toast.success(`Claimed "${binderName}" - save to cloud to keep it`);
+
+        return true;
+      } catch (error) {
+        console.error("Failed to claim binder:", error);
+        toast.error("Failed to claim binder");
+        throw error;
+      }
+    },
+    [binders, currentBinder, user]
+  );
+
+  // Clear all local-only binders (for privacy when switching users)
+  const clearLocalOnlyBinders = useCallback(() => {
+    if (!user) return;
+
+    const localOnlyBinderIds = binders
+      .filter((binder) => isLocalOnlyBinder(binder))
+      .map((binder) => binder.id);
+
+    if (localOnlyBinderIds.length === 0) return;
+
+    setBinders((prev) =>
+      prev.filter((binder) => !localOnlyBinderIds.includes(binder.id))
+    );
+
+    // Clear current binder if it was local-only
+    if (currentBinder && localOnlyBinderIds.includes(currentBinder.id)) {
+      setCurrentBinder(null);
+    }
+
+    toast.success(
+      `Cleared ${localOnlyBinderIds.length} local binder${
+        localOnlyBinderIds.length > 1 ? "s" : ""
+      } from previous user`
+    );
+  }, [binders, currentBinder, user, isLocalOnlyBinder]);
+
+  // Check if a binder exists in Firebase cloud (for verification)
+  const checkBinderExistsInCloud = useCallback(
+    async (binderId) => {
+      if (!user) return false;
+
+      try {
+        const cloudBinder = await binderSyncService.getCloudBinder(
+          binderId,
+          user.uid
+        );
+        return !!cloudBinder;
+      } catch (error) {
+        // If error is "not found", that's expected for local-only binders
+        if (
+          error.message?.includes("not found") ||
+          error.message?.includes("does not exist")
+        ) {
+          return false;
+        }
+        console.error("Error checking cloud binder:", error);
+        return false;
+      }
+    },
+    [user]
+  );
+
+  // Enhanced verification against Firebase (optional, for accuracy)
+  const verifyLocalOnlyStatus = useCallback(
+    async (binderId) => {
+      const binder = binders.find((b) => b.id === binderId);
+      if (!binder || !user) return false;
+
+      // Quick local check first
+      const localCheck = isLocalOnlyBinder(binder);
+      if (!localCheck) return false; // If locally it's not local-only, no need to check cloud
+
+      // For binders that might be questionable, verify against Firebase
+      if (binder.ownerId === user.uid) {
+        const existsInCloud = await checkBinderExistsInCloud(binderId);
+        return !existsInCloud; // If doesn't exist in cloud, it's local-only
+      }
+
+      return localCheck; // For other users' binders, trust local check
+    },
+    [binders, user, isLocalOnlyBinder, checkBinderExistsInCloud]
+  );
+
+  // Check for unsaved changes when user logs out
+  const checkUnsavedChanges = useCallback(() => {
+    if (!user) return { hasUnsaved: false, binders: [] };
+
+    const unsavedBinders = binders.filter((binder) => {
+      // Only check binders owned by current user
+      if (binder.ownerId !== user.uid) return false;
+
+      // Check if binder has local changes that aren't synced
+      return (
+        binder.sync?.status === "local" ||
+        binder.sync?.pendingChanges?.length > 0 ||
+        !binder.sync?.lastSynced
+      );
+    });
+
+    return {
+      hasUnsaved: unsavedBinders.length > 0,
+      binders: unsavedBinders,
+      count: unsavedBinders.length,
+    };
+  }, [binders, user]);
+
+  // Function to warn user about logout with unsaved changes
+  const warnBeforeLogout = useCallback(() => {
+    const unsavedInfo = checkUnsavedChanges();
+
+    if (unsavedInfo.hasUnsaved) {
+      const binderNames = unsavedInfo.binders
+        .map((b) => b.metadata?.name || "Unnamed")
+        .join(", ");
+      const message = `You have ${unsavedInfo.count} binder${
+        unsavedInfo.count > 1 ? "s" : ""
+      } with unsaved changes:\n${binderNames}\n\nThese changes will not be accessible after logout. Save to cloud first?`;
+
+      return window.confirm(message);
+    }
+
+    return true; // No unsaved changes, safe to logout
+  }, [checkUnsavedChanges]);
 
   const value = {
     // State
-    binders,
+    binders: visibleBinders, // Only expose visible binders for current user context
+    allBinders: binders, // Keep reference to all binders for internal operations
     currentBinder,
     isLoading,
     syncStatus,
@@ -1989,10 +2529,13 @@ export const BinderProvider = ({ children }) => {
     updateBinderMetadata,
 
     // Sync Actions
-    syncBinderToCloud,
+    saveBinderToCloud,
+    syncBinderToCloud, // Legacy - same as saveBinderToCloud
     downloadBinderFromCloud,
     getAllCloudBinders,
     deleteBinderFromCloud,
+    autoSyncCloudBinders,
+    migrateBinderCardData,
     markAsModified,
 
     // Page Management
@@ -2009,6 +2552,21 @@ export const BinderProvider = ({ children }) => {
     clearAllData,
     exportBinderData,
     importBinderData,
+
+    // Security & access control
+    canAccessBinder,
+    getVisibleBinders,
+    checkUnsavedChanges,
+    warnBeforeLogout,
+
+    // Local binder management
+    isLocalOnlyBinder,
+    isOwnedByCurrentUser,
+    getLocalOnlyBinders,
+    claimLocalBinder,
+    clearLocalOnlyBinders,
+    checkBinderExistsInCloud,
+    verifyLocalOnlyStatus,
 
     // Validation helpers (for drag and drop)
     validatePosition,

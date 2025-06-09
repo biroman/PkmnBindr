@@ -65,11 +65,85 @@ export const RulesProvider = ({ children }) => {
     };
   }, [user]);
 
+  // Local limits for non-authenticated users
+  const enforceLocalLimits = useCallback((ruleType, resource, data = {}) => {
+    // Define generous local limits for non-authenticated users
+    const localLimits = {
+      feature_limit: {
+        binders: { limit: 10 }, // Allow up to 10 local binders
+        cards_per_binder: { limit: 500 }, // Allow up to 500 cards per binder
+        pages_per_binder: { limit: 50 }, // Allow up to 50 pages per binder
+        collaborators_per_binder: { limit: 0 }, // No collaborators for local
+      },
+      access_control: {
+        // Allow most features for local use
+        premium_grid_sizes: { allowed: true },
+        binder_sharing: { allowed: false }, // Sharing requires authentication
+      },
+      rate_limit: {
+        // No rate limits for local usage
+        binder_creation: { allowed: true },
+        card_addition: { allowed: true },
+        binder_export: { allowed: true },
+        api_calls: { allowed: true },
+        pokemon_searches: { allowed: true },
+      },
+      content_limit: {
+        // Allow reasonable content limits for local use
+        user_storage: { allowed: true },
+      },
+    };
+
+    const typeLimit = localLimits[ruleType];
+    if (!typeLimit) {
+      return { allowed: true }; // No limits for unknown types
+    }
+
+    const resourceLimit = typeLimit[resource];
+    if (!resourceLimit) {
+      return { allowed: true }; // No limits for unknown resources
+    }
+
+    // Check feature limits
+    if (ruleType === "feature_limit" && resourceLimit.limit !== undefined) {
+      const currentCount = data.currentCount || 0;
+      if (currentCount > resourceLimit.limit) {
+        return {
+          allowed: false,
+          reason: `Local limit exceeded: maximum ${resourceLimit.limit} allowed`,
+        };
+      }
+    }
+
+    // Check access control
+    if (ruleType === "access_control") {
+      return {
+        allowed: resourceLimit.allowed,
+        reason: resourceLimit.allowed
+          ? undefined
+          : "Feature requires authentication",
+      };
+    }
+
+    // Rate limits are disabled for local usage
+    if (ruleType === "rate_limit") {
+      return { allowed: true };
+    }
+
+    // Content limits are generally allowed for local usage
+    if (ruleType === "content_limit") {
+      return { allowed: resourceLimit.allowed || true };
+    }
+
+    return { allowed: true };
+  }, []);
+
   // Rule enforcement functions
   const enforceRule = useCallback(
     async (ruleType, resource, data = {}) => {
+      // For non-authenticated users, apply basic local limits
       if (!user) {
-        return { allowed: false, reason: "User not authenticated" };
+        return enforceLocalLimits(ruleType, resource, data);
       }
 
       try {
@@ -145,7 +219,7 @@ export const RulesProvider = ({ children }) => {
   // Track rule usage
   const trackUsage = useCallback(
     async (ruleType, resource, increment = 1) => {
-      if (!user) return false;
+      if (!user) return true; // No tracking needed for non-authenticated users
 
       try {
         const applicableRules = rules.filter(

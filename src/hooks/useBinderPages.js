@@ -165,16 +165,22 @@ const useBinderPages = (binder) => {
       const cardEntry = binder.cards[globalPosition.toString()];
 
       if (cardEntry) {
-        // Get full card data from cache
-        const fullCard = getCardFromCache(cardEntry.cardId);
+        // Try to get full card data from cache first
+        let fullCard = getCardFromCache(cardEntry.cardId);
 
         if (fullCard) {
           pageCards[i] = {
             ...fullCard,
             binderMetadata: cardEntry,
           };
+        } else if (cardEntry.cardData) {
+          // Use stored card data from binder (for cloud-synced cards)
+          pageCards[i] = {
+            ...cardEntry.cardData,
+            binderMetadata: cardEntry,
+          };
         } else {
-          // Card not in cache - create minimal card object
+          // Fallback for old binder format - create minimal card object
           pageCards[i] = {
             id: cardEntry.cardId,
             name: "Unknown Card",

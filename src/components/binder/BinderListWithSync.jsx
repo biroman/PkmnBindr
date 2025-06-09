@@ -23,11 +23,13 @@ const BinderListWithSync = ({ onSelectBinder, onCreateBinder }) => {
     getAllCloudBinders,
     deleteBinderFromCloud,
     deleteBinder,
+    autoSyncCloudBinders,
   } = useBinderContext();
   const { user } = useAuth();
   const [cloudBinders, setCloudBinders] = useState([]);
   const [isLoadingCloud, setIsLoadingCloud] = useState(false);
   const [showCloudBinders, setShowCloudBinders] = useState(false);
+  const [isManualSyncing, setIsManualSyncing] = useState(false);
 
   useEffect(() => {
     if (user && showCloudBinders) {
@@ -155,23 +157,59 @@ const BinderListWithSync = ({ onSelectBinder, onCreateBinder }) => {
     return binders.some((b) => b.id === binderId);
   };
 
+  const handleManualSync = async () => {
+    if (!user) {
+      toast.error("Please sign in to sync");
+      return;
+    }
+
+    try {
+      setIsManualSyncing(true);
+      await autoSyncCloudBinders();
+      toast.success("Manual sync completed!");
+
+      // Also refresh cloud binders view if it's open
+      if (showCloudBinders) {
+        await loadCloudBinders();
+      }
+    } catch (error) {
+      console.error("Manual sync failed:", error);
+      toast.error("Manual sync failed");
+    } finally {
+      setIsManualSyncing(false);
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-gray-900">My Binders</h1>
         <div className="flex gap-3">
           {user && (
-            <button
-              onClick={() => setShowCloudBinders(!showCloudBinders)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                showCloudBinders
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              <CloudIcon className="w-4 h-4" />
-              {showCloudBinders ? "Hide Cloud" : "Show Cloud"}
-            </button>
+            <>
+              <button
+                onClick={handleManualSync}
+                disabled={isManualSyncing}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors bg-green-100 text-green-700 hover:bg-green-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Sync all cloud binders to this device"
+              >
+                <ArrowPathIcon
+                  className={`w-4 h-4 ${isManualSyncing ? "animate-spin" : ""}`}
+                />
+                {isManualSyncing ? "Syncing..." : "Sync All"}
+              </button>
+              <button
+                onClick={() => setShowCloudBinders(!showCloudBinders)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                  showCloudBinders
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                <CloudIcon className="w-4 h-4" />
+                {showCloudBinders ? "Hide Cloud" : "Show Cloud"}
+              </button>
+            </>
           )}
           <button
             onClick={onCreateBinder}

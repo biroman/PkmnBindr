@@ -81,29 +81,6 @@ const BinderToolbar = ({
             title="Page Overview"
           />
 
-          {/* Search within binder */}
-          <ToolbarButton
-            icon={MagnifyingGlassIcon}
-            onClick={() => handleToolClick("search")}
-            active={activeTool === "search"}
-            title="Search Cards in Binder"
-          />
-
-          {/* Export/Share */}
-          <ToolbarButton
-            icon={ShareIcon}
-            onClick={() => handleToolClick("export", onExport)}
-            title="Export Binder"
-          />
-
-          {/* Settings */}
-          <ToolbarButton
-            icon={Cog6ToothIcon}
-            onClick={() => handleToolClick("settings", onSettings)}
-            active={activeTool === "settings"}
-            title="Binder Settings"
-          />
-
           {/* Divider */}
           <div className="h-px bg-white/20 mx-2"></div>
 

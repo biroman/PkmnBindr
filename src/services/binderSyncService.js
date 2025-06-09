@@ -106,6 +106,8 @@ export class BinderSyncService {
 
     const syncedBinder = {
       ...binder,
+      // Ensure ownerId is set correctly
+      ownerId: userId,
       // Update sync metadata
       sync: {
         ...binder.sync,
@@ -123,6 +125,13 @@ export class BinderSyncService {
       // Add server timestamp
       serverTimestamp: serverTimestamp(),
     };
+
+    console.log("Saving binder to Firebase:", {
+      docId: binderRef.id,
+      ownerId: syncedBinder.ownerId,
+      binderId: syncedBinder.id,
+      binderName: syncedBinder.metadata?.name,
+    });
 
     await setDoc(binderRef, syncedBinder);
 
@@ -162,6 +171,26 @@ export class BinderSyncService {
   }
 
   /**
+   * Get a binder from Firebase without downloading (for conflict checking)
+   */
+  async getCloudBinder(binderId, userId) {
+    if (!userId || !binderId) {
+      throw new Error("User ID and Binder ID are required");
+    }
+
+    const binderRef = doc(db, COLLECTION_NAME, `${userId}_${binderId}`);
+    const docSnap = await getDoc(binderRef);
+
+    if (!docSnap.exists()) {
+      return null; // Binder doesn't exist in cloud
+    }
+
+    const cloudBinder = docSnap.data();
+    const { serverTimestamp, ...binder } = cloudBinder;
+    return binder;
+  }
+
+  /**
    * Download a binder from Firebase
    */
   async downloadFromCloud(binderId, userId) {
@@ -196,23 +225,58 @@ export class BinderSyncService {
       throw new Error("User ID is required");
     }
 
-    const bindersQuery = query(
-      collection(db, COLLECTION_NAME),
-      where("ownerId", "==", userId),
-      where("metadata.isArchived", "==", false),
-      orderBy("metadata.createdAt", "desc")
-    );
+    try {
+      // First try a simple query to see if any documents exist
+      const allDocsQuery = query(
+        collection(db, COLLECTION_NAME),
+        where("ownerId", "==", userId)
+      );
 
-    const querySnapshot = await getDocs(bindersQuery);
-    const binders = [];
+      const allDocsSnapshot = await getDocs(allDocsQuery);
 
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      const { serverTimestamp, ...binder } = data;
-      binders.push(binder);
-    });
+      // Try the full query with fallback
+      let querySnapshot;
+      try {
+        const bindersQuery = query(
+          collection(db, COLLECTION_NAME),
+          where("ownerId", "==", userId),
+          where("metadata.isArchived", "==", false),
+          orderBy("metadata.createdAt", "desc")
+        );
+        querySnapshot = await getDocs(bindersQuery);
+      } catch (indexError) {
+        console.log(
+          "Index error, falling back to simple query:",
+          indexError.message
+        );
+        // Fall back to simple query and filter manually
+        querySnapshot = allDocsSnapshot;
+      }
 
-    return binders;
+      const binders = [];
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+        // Manual filter if we're using fallback
+        const isArchived = data.metadata?.isArchived;
+        if (isArchived === true) {
+          return;
+        }
+
+        const { serverTimestamp, ...binder } = data;
+        binders.push(binder);
+      });
+
+      return binders.sort((a, b) => {
+        const aDate = new Date(a.metadata?.createdAt || 0);
+        const bDate = new Date(b.metadata?.createdAt || 0);
+        return bDate - aDate; // desc order
+      });
+    } catch (error) {
+      console.error("Error in getAllCloudBinders:", error);
+      throw error;
+    }
   }
 
   /**
