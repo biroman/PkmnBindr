@@ -15,13 +15,14 @@ import HomePage from "./pages/HomePage";
 import BinderPage from "./pages/BinderPage";
 import BindersPage from "./pages/BindersPage";
 
-import DashboardPage from "./pages/DashboardPage";
+import DashboardHandler from "./components/auth/DashboardHandler";
 import ProfilePage from "./pages/ProfilePage";
 import AdminPage from "./pages/AdminPage";
 import RulesPage from "./pages/RulesPage";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
+import EmailVerificationPage from "./pages/auth/EmailVerificationPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Create a client for TanStack Query
@@ -64,9 +65,11 @@ const App = () => {
                     </Route>
                   </Route>
 
+                  {/* Dashboard - handles both normal access and email verification */}
+                  <Route path="dashboard" element={<DashboardHandler />} />
+
                   {/* Protected Routes - Only accessible when logged in */}
                   <Route element={<ProtectedRoute />}>
-                    <Route path="dashboard" element={<DashboardPage />} />
                     <Route path="profile" element={<ProfilePage />} />
                     <Route path="admin" element={<AdminPage />} />
                     <Route path="rules" element={<RulesPage />} />
