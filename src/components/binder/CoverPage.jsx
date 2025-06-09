@@ -16,22 +16,6 @@ const CoverPage = ({ binder }) => {
         {/* Cover Art/Logo */}
         <div className="text-8xl mb-8 opacity-80">🎴</div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-          <div className="bg-white/70 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-blue-600">
-              {binder?.stats?.totalCards || 0}
-            </div>
-            <div className="text-sm text-gray-600">Total Cards</div>
-          </div>
-          <div className="bg-white/70 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">
-              {binder?.stats?.uniqueCards || 0}
-            </div>
-            <div className="text-sm text-gray-600">Unique Cards</div>
-          </div>
-        </div>
-
         {/* Created Date */}
         <div className="mt-8 text-sm text-gray-500">
           Created{" "}
