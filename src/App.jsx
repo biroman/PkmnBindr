@@ -9,6 +9,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import PublicRoute from "./components/auth/PublicRoute";
 import RootLayout from "./components/layout/RootLayout";
 import AuthLayout from "./components/layout/AuthLayout";
+import { useUserTracking } from "./hooks/useUserTracking";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -35,6 +36,9 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
+  // Enable automatic user tracking
+  useUserTracking();
+
   return (
     <QueryClientProvider client={queryClient}>
       <RulesProvider>
