@@ -480,11 +480,14 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
                       {/* Loading indicator */}
                       {addingSetId === set.id && (
-                        <div className="absolute inset-0 bg-white/90 rounded-xl flex items-center justify-center z-30">
+                        <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center z-30">
                           <div className="text-center">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
-                            <div className="text-sm font-medium text-slate-700">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-3"></div>
+                            <div className="text-sm font-medium text-slate-700 mb-1">
                               Adding {totalCards} cards...
+                            </div>
+                            <div className="text-xs text-slate-500">
+                              Using optimized batch processing
                             </div>
                           </div>
                         </div>

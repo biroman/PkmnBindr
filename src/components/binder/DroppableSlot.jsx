@@ -35,11 +35,11 @@ const DroppableSlot = ({
 
   const handleToggleMissing = () => {
     if (card && onToggleMissing) {
-      const cardNumber = card.number;
-      const isReverseHolo = card.reverseHolo || false;
-      const missingCardId = isReverseHolo ? `${cardNumber}rh` : cardNumber;
-
-      onToggleMissing(missingCardId, !isMissing);
+      // Use unique instance ID for tracking missing cards
+      const instanceId = card.binderMetadata?.instanceId;
+      if (instanceId) {
+        onToggleMissing(instanceId, !isMissing);
+      }
     }
   };
 
@@ -111,9 +111,28 @@ const DroppableSlot = ({
           )}
         </div>
       ) : (
-        <div className="w-full h-full flex items-center justify-center">
-          {isEmptySlotHover && (
+        <div className="w-full h-full flex items-center justify-center group">
+          {isEmptySlotHover ? (
             <div className="text-blue-500 text-xs font-medium">Drop here</div>
+          ) : (
+            <div className="flex flex-col items-center justify-center text-gray-400 group-hover:text-gray-600 transition-colors duration-200">
+              <svg
+                className="w-6 h-6 mb-1 opacity-60 group-hover:opacity-80"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              <span className="text-xs font-medium opacity-60 group-hover:opacity-80">
+                Add card
+              </span>
+            </div>
           )}
         </div>
       )}

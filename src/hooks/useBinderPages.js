@@ -63,6 +63,7 @@ const useBinderPages = (binder) => {
     binder?.settings?.minPages,
     binder?.settings?.maxPages,
     binder?.settings?.pageCount,
+    binder?.settings?.pageOrder,
     binder?.settings?.autoExpand,
   ]);
 
@@ -80,9 +81,22 @@ const useBinderPages = (binder) => {
     }
   }, [totalPages, currentPageIndex]);
 
+  // Helper function to get physical page index from logical page index
+  const getPhysicalPageIndex = useMemo(() => {
+    const pageOrder = binder?.settings?.pageOrder;
+    if (!pageOrder || !Array.isArray(pageOrder)) {
+      // No custom page order, use sequential
+      return (logicalIndex) => logicalIndex;
+    }
+    return (logicalIndex) => pageOrder[logicalIndex] || logicalIndex;
+  }, [binder?.settings?.pageOrder]);
+
   // Get page configuration for current view
   const getCurrentPageConfig = useMemo(() => {
-    if (currentPageIndex === 0) {
+    // Get the physical page index for the current logical page
+    const physicalPageIndex = getPhysicalPageIndex(currentPageIndex);
+
+    if (physicalPageIndex === 0) {
       // First page: Cover + Card Page 1
       return {
         type: "cover-and-first",
@@ -95,7 +109,7 @@ const useBinderPages = (binder) => {
       };
     } else {
       // Subsequent pages: Card Page X + Card Page Y
-      const leftCardPageIndex = (currentPageIndex - 1) * 2 + 1; // -1 for cover page offset
+      const leftCardPageIndex = (physicalPageIndex - 1) * 2 + 1; // -1 for cover page offset
       const rightCardPageIndex = leftCardPageIndex + 1;
 
       return {
@@ -112,7 +126,7 @@ const useBinderPages = (binder) => {
         },
       };
     }
-  }, [currentPageIndex]);
+  }, [currentPageIndex, getPhysicalPageIndex]);
 
   // Navigation functions
   const goToNextPage = () => {
@@ -182,10 +196,13 @@ const useBinderPages = (binder) => {
 
   // Display text for current page
   const getPageDisplayText = () => {
-    if (currentPageIndex === 0) {
+    const physicalPageIndex = getPhysicalPageIndex(currentPageIndex);
+
+    if (physicalPageIndex === 0) {
       return "Cover - Page 1";
     } else {
-      return `Pages ${getCurrentPageConfig.leftPage.pageNumber}-${getCurrentPageConfig.rightPage.pageNumber}`;
+      const config = getCurrentPageConfig;
+      return `Pages ${config.leftPage.pageNumber}-${config.rightPage.pageNumber}`;
     }
   };
 

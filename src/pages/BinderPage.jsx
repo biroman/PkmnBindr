@@ -12,6 +12,7 @@ import AddCardModal from "../components/binder/AddCardModal";
 import PageManager from "../components/binder/PageManager";
 import DraggableCard from "../components/binder/DraggableCard";
 import BinderSidebar from "../components/binder/BinderSidebar";
+import BinderPageOverview from "../components/binder/BinderPageOverview";
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
 
@@ -30,10 +31,13 @@ const BinderPage = () => {
     moveCard,
     moveCardOptimistic,
     removeCardFromBinder,
+    batchAddCards,
   } = useBinderContext();
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
+  const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
   const [activeCard, setActiveCard] = useState(null); // For drag overlay
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
 
   // Edge navigation state
   const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
@@ -63,6 +67,7 @@ const BinderPage = () => {
     getCurrentPageConfig,
     goToNextPage,
     goToPrevPage,
+    goToPage,
     canGoNext,
     canGoPrev,
     getCardsForPage,
@@ -93,8 +98,8 @@ const BinderPage = () => {
   };
 
   const handleSlotClick = (slotIndex) => {
-    console.log("Empty slot clicked:", slotIndex);
-    // TODO: Open card search/add modal
+    setTargetPosition(slotIndex);
+    setIsAddCardModalOpen(true);
   };
 
   // Grid size change handler
@@ -116,6 +121,7 @@ const BinderPage = () => {
 
   // Toolbar handlers
   const handleAddCard = () => {
+    setTargetPosition(null); // No specific target, add to next available slot
     setIsAddCardModalOpen(true);
   };
 
@@ -124,86 +130,110 @@ const BinderPage = () => {
     console.log("Settings clicked");
   };
 
+  const handlePageOverview = () => {
+    setIsPageOverviewOpen(true);
+  };
+
+  const handlePageSelect = (physicalPageIndex) => {
+    // Navigate to the selected page
+    // We need to find the logical page index that corresponds to this physical page
+    const pageOrder =
+      currentBinder?.settings?.pageOrder ||
+      Array.from(
+        { length: currentBinder?.settings?.pageCount || 1 },
+        (_, i) => i
+      );
+
+    const logicalPageIndex = pageOrder.indexOf(physicalPageIndex);
+
+    if (logicalPageIndex !== -1) {
+      // Navigate to the logical page index
+      goToPage(logicalPageIndex);
+      console.log(
+        "Navigated to logical page:",
+        logicalPageIndex,
+        "showing physical page:",
+        physicalPageIndex
+      );
+    } else {
+      console.warn(
+        "Could not find logical page index for physical page:",
+        physicalPageIndex
+      );
+    }
+  };
+
   const handleExport = () => {
     exportBinderData();
   };
 
-  const handleClearBinder = () => {
+  const handleClearBinder = async () => {
+    if (!currentBinder) return;
+
     if (
       window.confirm(
         `Are you sure you want to clear all cards from "${currentBinder.metadata.name}"? This action cannot be undone.`
       )
     ) {
-      // TODO: Implement clear binder functionality
-      console.log("Clear binder");
+      try {
+        // Get all card positions in the binder
+        const cardPositions = Object.keys(currentBinder.cards || {}).map(
+          (pos) => parseInt(pos)
+        );
+
+        if (cardPositions.length === 0) {
+          toast.info("Binder is already empty");
+          return;
+        }
+
+        // Remove all cards one by one
+        for (const position of cardPositions) {
+          await removeCardFromBinder(currentBinder.id, position);
+          // Small delay to prevent overwhelming the system
+          await new Promise((resolve) => setTimeout(resolve, 5));
+        }
+
+        // Also clear any missing instances since all cards are gone
+        await updateBinderMetadata(currentBinder.id, {
+          missingInstances: [],
+        });
+
+        toast.success(
+          `Cleared all ${cardPositions.length} cards from "${currentBinder.metadata.name}"`
+        );
+      } catch (error) {
+        console.error("Failed to clear binder:", error);
+        toast.error("Failed to clear binder");
+      }
     }
   };
 
-  const handleToggleMissing = async (missingCardId, isMissing) => {
+  const handleToggleMissing = async (instanceId, isMissing) => {
     if (!currentBinder) return;
 
-    const currentMissingCards = currentBinder.metadata?.missingCards || [];
+    const currentMissingCards = currentBinder.metadata?.missingInstances || [];
     let updatedMissingCards;
 
     if (isMissing) {
       // Add to missing cards
-      updatedMissingCards = [...currentMissingCards, missingCardId].sort(
-        (a, b) => {
-          // Extract base number and reverse holo flag for sorting
-          const parseCard = (card) => {
-            const isRH = card.endsWith("rh");
-            const baseNum = isRH ? card.slice(0, -2) : card;
-            const num = parseInt(baseNum);
-            return {
-              baseNum: isNaN(num) ? baseNum : num,
-              isRH,
-              isNumeric: !isNaN(num),
-            };
-          };
-
-          const aCard = parseCard(a);
-          const bCard = parseCard(b);
-
-          // First sort by base number
-          if (aCard.isNumeric && bCard.isNumeric) {
-            if (aCard.baseNum !== bCard.baseNum) {
-              return aCard.baseNum - bCard.baseNum;
-            }
-            // Same base number: regular before reverse holo
-            return aCard.isRH - bCard.isRH;
-          } else {
-            // Alphabetical for non-numeric
-            const comparison = String(aCard.baseNum).localeCompare(
-              String(bCard.baseNum)
-            );
-            if (comparison !== 0) return comparison;
-            return aCard.isRH - bCard.isRH;
-          }
-        }
-      );
+      updatedMissingCards = [...currentMissingCards, instanceId];
     } else {
       // Remove from missing cards
       updatedMissingCards = currentMissingCards.filter(
-        (num) => num !== missingCardId
+        (id) => id !== instanceId
       );
     }
 
-    // Update binder metadata
+    // Update binder metadata (use instance-based tracking)
     await updateBinderMetadata(currentBinder.id, {
-      missingCards: updatedMissingCards,
+      missingInstances: updatedMissingCards,
     });
 
     // Show toast notification
-    const isReverseHolo = missingCardId.endsWith("rh");
-    const displayNumber = isReverseHolo
-      ? missingCardId.slice(0, -2)
-      : missingCardId;
-    const cardType = isReverseHolo ? "reverse holo" : "regular";
-
     if (isMissing) {
-      toast.success(`Card #${displayNumber} (${cardType}) marked as missing`);
+      toast.success(`Card marked as missing`);
     } else {
-      toast.success(`Card #${displayNumber} (${cardType}) marked as collected`);
+      toast.success(`Card marked as collected`);
     }
   };
 
@@ -443,8 +473,12 @@ const BinderPage = () => {
         {/* Add Card Modal */}
         <AddCardModal
           isOpen={isAddCardModalOpen}
-          onClose={() => setIsAddCardModalOpen(false)}
+          onClose={() => {
+            setIsAddCardModalOpen(false);
+            setTargetPosition(null);
+          }}
           currentBinder={currentBinder}
+          targetPosition={targetPosition}
         />
 
         <DndContext
@@ -620,7 +654,9 @@ const BinderPage = () => {
                   onSlotClick={handleSlotClick}
                   onToggleMissing={handleToggleMissing}
                   cardPageIndex={pageConfig.leftPage.cardPageIndex}
-                  missingCards={currentBinder.metadata?.missingCards || []}
+                  missingPositions={
+                    currentBinder.metadata?.missingInstances || []
+                  }
                 />
               )}
 
@@ -637,7 +673,9 @@ const BinderPage = () => {
                 onSlotClick={handleSlotClick}
                 onToggleMissing={handleToggleMissing}
                 cardPageIndex={pageConfig.rightPage.cardPageIndex}
-                missingCards={currentBinder.metadata?.missingCards || []}
+                missingPositions={
+                  currentBinder.metadata?.missingInstances || []
+                }
               />
             </div>
 
@@ -712,6 +750,32 @@ const BinderPage = () => {
               <PageManager binder={currentBinder} />
             </div>
 
+            {/* Page Overview Button */}
+            <div className="absolute top-4 left-[22rem]">
+              <button
+                onClick={handlePageOverview}
+                className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+                title="Page Overview - View and rearrange all pages"
+              >
+                <svg
+                  className="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+                <span className="text-sm font-medium text-gray-700">
+                  Overview
+                </span>
+              </button>
+            </div>
+
             {/* Sidebar Toggle Button */}
             <div className="absolute top-4 right-4">
               <button
@@ -766,6 +830,21 @@ const BinderPage = () => {
         onNameChange={handleNameChange}
         onCollapseChange={setIsSidebarCollapsed}
         isCollapsed={isSidebarCollapsed}
+      />
+
+      {/* Modals */}
+      <AddCardModal
+        isOpen={isAddCardModalOpen}
+        onClose={() => setIsAddCardModalOpen(false)}
+        currentBinder={currentBinder}
+        targetPosition={targetPosition}
+      />
+
+      <BinderPageOverview
+        isOpen={isPageOverviewOpen}
+        onClose={() => setIsPageOverviewOpen(false)}
+        currentBinder={currentBinder}
+        onCardPageSelect={handlePageSelect}
       />
     </div>
   );

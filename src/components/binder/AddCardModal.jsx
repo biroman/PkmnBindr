@@ -6,8 +6,13 @@ import { toast } from "react-hot-toast";
 import SingleCardTab from "./SingleCardTab";
 import SetTab from "./SetTab";
 
-const AddCardModal = ({ isOpen, onClose, currentBinder }) => {
-  const { addCardToBinder } = useBinderContext();
+const AddCardModal = ({
+  isOpen,
+  onClose,
+  currentBinder,
+  targetPosition = null,
+}) => {
+  const { addCardToBinder, batchAddCards } = useBinderContext();
   const [selectedCards, setSelectedCards] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
 
@@ -35,15 +40,18 @@ const AddCardModal = ({ isOpen, onClose, currentBinder }) => {
     try {
       setIsAdding(true);
 
-      // Add all selected cards to the binder
-      for (const card of selectedCards) {
-        await addCardToBinder(currentBinder.id, card);
-      }
+      // Use batch add for much better performance
+      await batchAddCards(currentBinder.id, selectedCards, targetPosition);
+
+      const positionText =
+        targetPosition !== null
+          ? ` (starting at position ${targetPosition})`
+          : "";
 
       toast.success(
         `Added ${selectedCards.length} card${
           selectedCards.length > 1 ? "s" : ""
-        } to ${currentBinder.metadata.name}`
+        } to ${currentBinder.metadata.name}${positionText}`
       );
       setSelectedCards([]);
       onClose();
@@ -55,15 +63,13 @@ const AddCardModal = ({ isOpen, onClose, currentBinder }) => {
     }
   };
 
-  // Handle adding multiple cards (from sets)
+  // Handle adding multiple cards (from sets) - now uses batch add
   const handleAddCards = async (cards) => {
     if (!currentBinder || !Array.isArray(cards) || cards.length === 0) return;
 
     try {
-      // Add all cards to the binder
-      for (const card of cards) {
-        await addCardToBinder(currentBinder.id, card);
-      }
+      // Use batch add for much better performance
+      await batchAddCards(currentBinder.id, cards, targetPosition);
     } catch (error) {
       console.error("Failed to add cards:", error);
       throw error; // Re-throw to let the caller handle the error message
@@ -109,10 +115,17 @@ const AddCardModal = ({ isOpen, onClose, currentBinder }) => {
                       className="text-lg font-medium text-slate-900"
                     >
                       Add Cards to {currentBinder?.metadata?.name}
+                      {targetPosition !== null && (
+                        <span className="text-blue-600 font-normal">
+                          {" "}
+                          - Slot {targetPosition}
+                        </span>
+                      )}
                     </Dialog.Title>
                     <p className="text-sm text-slate-500 mt-1">
-                      Search for individual cards or add entire sets to your
-                      binder
+                      {targetPosition !== null
+                        ? `First card will be placed at position ${targetPosition}. Additional cards will fill empty slots.`
+                        : "Search for individual cards or add entire sets to your binder"}
                     </p>
                   </div>
                   <button
@@ -220,9 +233,13 @@ const AddCardModal = ({ isOpen, onClose, currentBinder }) => {
                           <button
                             onClick={handleAddSelectedCards}
                             disabled={selectedCards.length === 0 || isAdding}
-                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2"
+                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2 min-w-[120px]"
                           >
-                            <PlusIcon className="w-4 h-4" />
+                            {isAdding ? (
+                              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                            ) : (
+                              <PlusIcon className="w-4 h-4" />
+                            )}
                             <span>
                               {isAdding
                                 ? "Adding..."

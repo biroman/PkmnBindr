@@ -26,6 +26,7 @@ const DEFAULT_BINDER_SETTINGS = {
   minPages: 1, // Minimum number of pages (including cover)
   maxPages: 100, // Maximum number of pages allowed
   pageCount: 1, // Actual number of pages in the binder
+  pageOrder: null, // Array specifying custom page order (null = sequential 0,1,2,...)
   autoExpand: true, // Automatically add pages when cards are added beyond current pages
   autoShrink: false, // Automatically remove empty pages at the end
 };
@@ -510,6 +511,7 @@ export const BinderProvider = ({ children }) => {
             position !== null ? position : findNextEmptyPosition(binder.cards);
 
           const cardEntry = {
+            instanceId: generateId(), // Unique ID for this specific card instance
             cardId: card.id,
             addedAt: new Date().toISOString(),
             addedBy: binder.ownerId,
@@ -751,6 +753,346 @@ export const BinderProvider = ({ children }) => {
       return moveCard(binderId, fromPosition, toPosition, { optimistic: true });
     },
     [moveCard]
+  );
+
+  // Batch add cards (much more efficient than adding one by one)
+  const batchAddCards = useCallback(
+    async (binderId, cards, startPosition = null, metadata = {}) => {
+      try {
+        if (!cards || !Array.isArray(cards) || cards.length === 0) {
+          throw new Error("Invalid cards data");
+        }
+
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const updatedCards = { ...binder.cards };
+          let currentPosition =
+            startPosition !== null
+              ? startPosition
+              : findNextEmptyPosition(binder.cards);
+
+          const addedCards = [];
+
+          // Add all cards in a single operation
+          cards.forEach((card, index) => {
+            if (card && card.id) {
+              // Find next available position
+              while (updatedCards[currentPosition.toString()]) {
+                currentPosition++;
+              }
+
+              const cardEntry = {
+                instanceId: generateId(),
+                cardId: card.id,
+                addedAt: new Date().toISOString(),
+                addedBy: binder.ownerId,
+                notes: metadata.notes || "",
+                condition: metadata.condition || "mint",
+                quantity: metadata.quantity || 1,
+                isProtected: metadata.isProtected || false,
+              };
+
+              updatedCards[currentPosition.toString()] = cardEntry;
+              addedCards.push({
+                cardId: card.id,
+                position: currentPosition,
+              });
+              currentPosition++;
+            }
+          });
+
+          if (addedCards.length === 0) {
+            return binder; // No cards were added
+          }
+
+          // Calculate required pages after adding all cards
+          const gridConfig = {
+            "3x3": { total: 9 },
+            "4x4": { total: 16 },
+            "5x5": { total: 25 },
+            "6x6": { total: 36 },
+          };
+
+          const cardsPerPage =
+            gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+          const maxPosition = Math.max(
+            ...Object.keys(updatedCards).map((pos) => parseInt(pos))
+          );
+          const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+          // Convert card pages to binder pages
+          let requiredBinderPages;
+          if (requiredCardPages <= 1) {
+            requiredBinderPages = 1;
+          } else {
+            const pairsNeeded = Math.ceil((requiredCardPages - 1) / 2);
+            requiredBinderPages = 1 + pairsNeeded;
+          }
+
+          const currentPageCount = binder.settings?.pageCount || 1;
+          const newPageCount = Math.max(
+            requiredBinderPages,
+            currentPageCount,
+            binder.settings?.minPages || 1
+          );
+
+          // Create a single batch entry for all cards added
+          const batchEntry = {
+            id: generateChangeId(),
+            timestamp: new Date().toISOString(),
+            type: "cards_batch_added",
+            userId: binder.ownerId,
+            data: {
+              cardsAdded: addedCards,
+              count: addedCards.length,
+              startPosition: startPosition,
+            },
+          };
+
+          return {
+            ...binder,
+            cards: updatedCards,
+            settings: {
+              ...binder.settings,
+              pageCount: newPageCount,
+            },
+            version: binder.version + 1,
+            lastModified: new Date().toISOString(),
+            lastModifiedBy: binder.ownerId,
+            changelog: [...binder.changelog, batchEntry].slice(-50),
+          };
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        return { success: true, count: cards.length };
+      } catch (error) {
+        console.error("Failed to batch add cards to binder:", error);
+        toast.error("Failed to add cards to binder");
+        throw error;
+      }
+    },
+    [currentBinder]
+  );
+
+  // Reorder pages within binder
+  const reorderPages = useCallback(
+    async (binderId, fromIndex, toIndex) => {
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          // Prevent moving the cover page (position 0)
+          if (fromIndex === 0 || toIndex === 0) {
+            console.warn(
+              "Cannot move cover page - it must remain at position 0"
+            );
+            return binder;
+          }
+
+          const currentPageOrder =
+            binder.settings?.pageOrder ||
+            Array.from(
+              { length: binder.settings?.pageCount || 1 },
+              (_, i) => i
+            );
+
+          // Create new page order array
+          const newPageOrder = [...currentPageOrder];
+          const [movedPage] = newPageOrder.splice(fromIndex, 1);
+          newPageOrder.splice(toIndex, 0, movedPage);
+
+          const changeEntry = {
+            id: generateChangeId(),
+            timestamp: new Date().toISOString(),
+            type: "pages_reordered",
+            userId: binder.ownerId,
+            data: {
+              fromIndex,
+              toIndex,
+              pageOrder: newPageOrder,
+            },
+          };
+
+          return {
+            ...binder,
+            settings: {
+              ...binder.settings,
+              pageOrder: newPageOrder,
+            },
+            version: binder.version + 1,
+            lastModified: new Date().toISOString(),
+            lastModifiedBy: binder.ownerId,
+            changelog: [...binder.changelog, changeEntry].slice(-50),
+          };
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        return { success: true };
+      } catch (error) {
+        console.error("Failed to reorder pages:", error);
+        toast.error("Failed to reorder pages");
+        return { success: false, error: error.message };
+      }
+    },
+    [currentBinder]
+  );
+
+  // Get logical page from physical page index (considering page order)
+  const getLogicalPageIndex = useCallback(
+    (binderId, physicalPageIndex) => {
+      const binder = binders.find((b) => b.id === binderId);
+      if (!binder) return physicalPageIndex;
+
+      const pageOrder =
+        binder.settings?.pageOrder ||
+        Array.from({ length: binder.settings?.pageCount || 1 }, (_, i) => i);
+
+      return pageOrder.indexOf(physicalPageIndex);
+    },
+    [binders]
+  );
+
+  // Get physical page from logical page index (considering page order)
+  const getPhysicalPageIndex = useCallback(
+    (binderId, logicalPageIndex) => {
+      const binder = binders.find((b) => b.id === binderId);
+      if (!binder) return logicalPageIndex;
+
+      const pageOrder =
+        binder.settings?.pageOrder ||
+        Array.from({ length: binder.settings?.pageCount || 1 }, (_, i) => i);
+
+      return pageOrder[logicalPageIndex] || logicalPageIndex;
+    },
+    [binders]
+  );
+
+  // Reorder card pages within binder
+  const reorderCardPages = useCallback(
+    async (binderId, fromCardPageIndex, toCardPageIndex) => {
+      try {
+        const binder = binders.find((b) => b.id === binderId);
+        if (!binder) {
+          throw new Error("Binder not found");
+        }
+
+        // Prevent moving cover page (card page 0)
+        if (fromCardPageIndex === 0 || toCardPageIndex === 0) {
+          toast.error("Cannot move the cover page");
+          return { success: false, error: "Cannot move cover page" };
+        }
+
+        // Get grid configuration
+        const gridConfig = {
+          "3x3": { total: 9 },
+          "4x4": { total: 16 },
+          "5x5": { total: 25 },
+          "6x6": { total: 36 },
+        };
+        const cardsPerPage =
+          gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+
+        // Calculate position ranges for each card page
+        // Card page 1 starts at position 0, card page 2 at position cardsPerPage, etc.
+        const fromStartPosition = (fromCardPageIndex - 1) * cardsPerPage;
+        const fromEndPosition = fromStartPosition + cardsPerPage - 1;
+        const toStartPosition = (toCardPageIndex - 1) * cardsPerPage;
+        const toEndPosition = toStartPosition + cardsPerPage - 1;
+
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const updatedCards = { ...binder.cards };
+
+          // Get all cards from source card page
+          const sourceCards = {};
+          const targetCards = {};
+
+          for (let pos = fromStartPosition; pos <= fromEndPosition; pos++) {
+            const posKey = pos.toString();
+            if (updatedCards[posKey]) {
+              sourceCards[pos] = updatedCards[posKey];
+              delete updatedCards[posKey];
+            }
+          }
+
+          // Get all cards from target card page
+          for (let pos = toStartPosition; pos <= toEndPosition; pos++) {
+            const posKey = pos.toString();
+            if (updatedCards[posKey]) {
+              targetCards[pos] = updatedCards[posKey];
+              delete updatedCards[posKey];
+            }
+          }
+
+          // Place source cards in target positions
+          Object.entries(sourceCards).forEach(([sourcePos, card]) => {
+            const relativePos = parseInt(sourcePos) - fromStartPosition;
+            const newPos = toStartPosition + relativePos;
+            updatedCards[newPos.toString()] = card;
+          });
+
+          // Place target cards in source positions
+          Object.entries(targetCards).forEach(([targetPos, card]) => {
+            const relativePos = parseInt(targetPos) - toStartPosition;
+            const newPos = fromStartPosition + relativePos;
+            updatedCards[newPos.toString()] = card;
+          });
+
+          const changeEntry = {
+            id: generateChangeId(),
+            timestamp: new Date().toISOString(),
+            type: "card_pages_reordered",
+            userId: binder.ownerId,
+            data: {
+              fromCardPageIndex,
+              toCardPageIndex,
+              sourceCardCount: Object.keys(sourceCards).length,
+              targetCardCount: Object.keys(targetCards).length,
+            },
+          };
+
+          return {
+            ...binder,
+            cards: updatedCards,
+            version: binder.version + 1,
+            lastModified: new Date().toISOString(),
+            lastModifiedBy: binder.ownerId,
+            changelog: [...binder.changelog, changeEntry].slice(-50),
+          };
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        toast.success(
+          `Moved card page ${fromCardPageIndex} to position ${toCardPageIndex}`
+        );
+        return { success: true };
+      } catch (error) {
+        console.error("Failed to reorder card pages:", error);
+        toast.error("Failed to reorder card pages");
+        return { success: false, error: error.message };
+      }
+    },
+    [binders, currentBinder]
   );
 
   // Batch move operations for complex drag scenarios
@@ -1333,6 +1675,7 @@ export const BinderProvider = ({ children }) => {
     deleteBinder,
     selectBinder,
     addCardToBinder,
+    batchAddCards,
     removeCardFromBinder,
     moveCard,
     moveCardOptimistic,
@@ -1345,6 +1688,10 @@ export const BinderProvider = ({ children }) => {
     batchAddPages,
     removePage,
     getPageCount,
+    reorderPages,
+    reorderCardPages,
+    getLogicalPageIndex,
+    getPhysicalPageIndex,
 
     // Utilities
     clearAllData,

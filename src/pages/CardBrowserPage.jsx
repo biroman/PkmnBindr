@@ -6,7 +6,7 @@ import { useBinderContext } from "../contexts/BinderContext";
 
 const CardBrowserPage = () => {
   const navigate = useNavigate();
-  const { currentBinder, addCardToBinder } = useBinderContext();
+  const { currentBinder, batchAddCards } = useBinderContext();
   const [selectedCards, setSelectedCards] = useState([]);
   const [showAddToBinder, setShowAddToBinder] = useState(false);
 
@@ -35,10 +35,8 @@ const CardBrowserPage = () => {
     }
 
     try {
-      // Add all selected cards to the current binder
-      for (const card of selectedCards) {
-        await addCardToBinder(currentBinder.id, card);
-      }
+      // Use batch add for much better performance
+      await batchAddCards(currentBinder.id, selectedCards);
 
       toast.success(
         `Added ${selectedCards.length} card${

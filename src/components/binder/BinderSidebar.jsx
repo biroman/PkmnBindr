@@ -135,16 +135,14 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
   );
 };
 
-const MissingCardsTracker = ({ binder, onToggleCardVisibility }) => {
+const WantListTracker = ({ binder, onToggleCardVisibility }) => {
   const [newCardNumber, setNewCardNumber] = useState("");
-  const [missingCards, setMissingCards] = useState(
-    binder?.metadata?.missingCards || []
-  );
+  const [wantList, setWantList] = useState(binder?.metadata?.wantList || []);
 
-  // Update missing cards when binder changes
+  // Update want list when binder changes
   useEffect(() => {
-    setMissingCards(binder?.metadata?.missingCards || []);
-  }, [binder?.metadata?.missingCards]);
+    setWantList(binder?.metadata?.wantList || []);
+  }, [binder?.metadata?.wantList]);
 
   const handleAddMissingCard = () => {
     const cardNumber = newCardNumber.trim();
@@ -399,11 +397,7 @@ const BinderSidebar = ({
           onSizeChange={onGridSizeChange}
         />
 
-        {/* Missing Cards Tracker */}
-        <MissingCardsTracker
-          binder={binder}
-          onToggleCardVisibility={handleToggleCardVisibility}
-        />
+        {/* Note: Missing card tracking is now handled via hover buttons on individual cards */}
       </div>
     </div>
   );
