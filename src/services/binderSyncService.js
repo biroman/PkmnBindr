@@ -3,6 +3,7 @@ import {
   setDoc,
   getDoc,
   getDocs,
+  deleteDoc,
   collection,
   query,
   where,
@@ -16,6 +17,25 @@ import { db } from "../lib/firebase";
 import { useAuth } from "../hooks/useAuth";
 
 const COLLECTION_NAME = "user_binders";
+
+// Helper function to recursively remove undefined values from an object
+const removeUndefinedValues = (obj) => {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map(removeUndefinedValues).filter((item) => item !== undefined);
+  }
+
+  const cleaned = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value !== undefined) {
+      cleaned[key] = removeUndefinedValues(value);
+    }
+  }
+  return cleaned;
+};
 
 export class BinderSyncService {
   constructor() {
@@ -126,18 +146,21 @@ export class BinderSyncService {
       serverTimestamp: serverTimestamp(),
     };
 
+    // Remove undefined values to prevent Firebase errors
+    const cleanedBinder = removeUndefinedValues(syncedBinder);
+
     console.log("Saving binder to Firebase:", {
       docId: binderRef.id,
-      ownerId: syncedBinder.ownerId,
-      binderId: syncedBinder.id,
-      binderName: syncedBinder.metadata?.name,
+      ownerId: cleanedBinder.ownerId,
+      binderId: cleanedBinder.id,
+      binderName: cleanedBinder.metadata?.name,
     });
 
-    await setDoc(binderRef, syncedBinder);
+    await setDoc(binderRef, cleanedBinder);
 
     return {
       success: true,
-      binder: syncedBinder,
+      binder: cleanedBinder,
       message: "Binder synced successfully",
     };
   }
@@ -456,24 +479,16 @@ export class BinderSyncService {
 
     const binderRef = doc(db, COLLECTION_NAME, `${userId}_${binderId}`);
 
-    // Soft delete - mark as archived
-    await runTransaction(db, async (transaction) => {
-      const doc = await transaction.get(binderRef);
+    // Check if binder exists before deleting
+    const docSnap = await getDoc(binderRef);
+    if (!docSnap.exists()) {
+      throw new Error("Binder not found in cloud");
+    }
 
-      if (!doc.exists()) {
-        throw new Error("Binder not found");
-      }
+    // Hard delete - completely remove the document
+    await deleteDoc(binderRef);
 
-      const binder = doc.data();
-      transaction.update(binderRef, {
-        "metadata.isArchived": true,
-        "metadata.archivedAt": serverTimestamp(),
-        lastModified: new Date().toISOString(),
-        version: (binder.version || 0) + 1,
-      });
-    });
-
-    return { success: true, message: "Binder archived in cloud" };
+    return { success: true, message: "Binder permanently deleted from cloud" };
   }
 
   /**

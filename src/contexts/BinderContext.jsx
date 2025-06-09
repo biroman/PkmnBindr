@@ -537,6 +537,30 @@ export const BinderProvider = ({ children }) => {
   const deleteBinder = useCallback(
     async (binderId) => {
       try {
+        // Find the binder to check if it's synced to cloud
+        const binderToDelete = binders.find((b) => b.id === binderId);
+        if (!binderToDelete) {
+          throw new Error("Binder not found");
+        }
+
+        // Check if binder is synced to cloud and user is signed in
+        const isCloudBinder =
+          binderToDelete.sync?.status === "synced" ||
+          binderToDelete.sync?.lastSynced ||
+          (binderToDelete.ownerId !== "local_user" && user);
+
+        // Delete from cloud first if it's a cloud binder
+        if (isCloudBinder && user) {
+          try {
+            await binderSyncService.deleteFromCloud(binderId, user.uid);
+          } catch (cloudError) {
+            console.error("Failed to delete from cloud:", cloudError);
+            // Continue with local deletion but warn user
+            toast.error("Failed to delete from cloud, but deleted locally");
+          }
+        }
+
+        // Delete from local state and localStorage
         setBinders((prev) => prev.filter((binder) => binder.id !== binderId));
 
         // If deleting current binder, clear it
@@ -551,7 +575,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder]
+    [currentBinder, binders, user, binderSyncService]
   );
 
   // Set current binder with security check

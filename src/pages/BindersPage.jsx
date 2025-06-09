@@ -4,6 +4,7 @@ import { useBinderContext } from "../contexts/BinderContext";
 import { useAuth } from "../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
+import DeleteBinderModal from "../components/binder/DeleteBinderModal";
 import {
   PlusIcon,
   MagnifyingGlassIcon,
@@ -51,6 +52,11 @@ const BindersPage = () => {
   const [newBinderDescription, setNewBinderDescription] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false);
+
+  // Delete confirmation modal state
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [binderToDelete, setBinderToDelete] = useState(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Filter and sort binders
   const filteredAndSortedBinders = useMemo(() => {
@@ -149,18 +155,29 @@ const BindersPage = () => {
     navigate(`/binder/${binder.id}`);
   };
 
-  const handleDeleteBinder = async (binderId, binderName) => {
-    if (
-      window.confirm(
-        `Are you sure you want to delete "${binderName}"? This action cannot be undone.`
-      )
-    ) {
-      try {
-        await deleteBinder(binderId);
-      } catch (error) {
-        // Error handled by context
-      }
+  const handleDeleteBinder = (binder) => {
+    setBinderToDelete(binder);
+    setShowDeleteModal(true);
+  };
+
+  const handleConfirmDelete = async () => {
+    if (!binderToDelete) return;
+
+    try {
+      setIsDeleting(true);
+      await deleteBinder(binderToDelete.id);
+      setShowDeleteModal(false);
+      setBinderToDelete(null);
+    } catch (error) {
+      // Error handled by context
+    } finally {
+      setIsDeleting(false);
     }
+  };
+
+  const handleCancelDelete = () => {
+    setShowDeleteModal(false);
+    setBinderToDelete(null);
   };
 
   const handleSyncFromCloud = async () => {
@@ -581,12 +598,7 @@ const BindersPage = () => {
                             </button>
                           )}
                           <button
-                            onClick={() =>
-                              handleDeleteBinder(
-                                binder.id,
-                                binder.metadata?.name
-                              )
-                            }
+                            onClick={() => handleDeleteBinder(binder)}
                             className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                           >
                             <TrashIcon className="w-4 h-4" />
@@ -738,9 +750,7 @@ const BindersPage = () => {
                           </button>
                         )}
                         <button
-                          onClick={() =>
-                            handleDeleteBinder(binder.id, binder.metadata?.name)
-                          }
+                          onClick={() => handleDeleteBinder(binder)}
                           className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                         >
                           <TrashIcon className="w-4 h-4" />
@@ -798,6 +808,18 @@ const BindersPage = () => {
           </div>
         )}
       </div>
+
+      {/* Delete Confirmation Modal */}
+      <DeleteBinderModal
+        isOpen={showDeleteModal}
+        onClose={handleCancelDelete}
+        onConfirm={handleConfirmDelete}
+        binderName={binderToDelete?.metadata?.name || "Unnamed Binder"}
+        cardCount={
+          binderToDelete ? Object.keys(binderToDelete.cards || {}).length : 0
+        }
+        isLoading={isDeleting}
+      />
     </div>
   );
 };
