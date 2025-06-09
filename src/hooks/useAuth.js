@@ -36,14 +36,18 @@ export const useAuth = () => {
     // Actions (stable references from store)
     signUp: store.signUp,
     signIn: store.signIn,
+    signInWithGoogle: store.signInWithGoogle,
+    signInWithTwitter: store.signInWithTwitter,
     logout: store.logout,
     resetPassword: store.resetPassword,
     resendEmailVerification: store.resendEmailVerification,
     changePassword: store.changePassword,
+    deleteAccount: store.deleteAccount,
     reportSuspiciousActivity: store.reportSuspiciousActivity,
     getRemainingCooldown: store.getRemainingCooldown,
     canAttemptAuth: store.canAttemptAuth,
     clearError: store.clearError,
+    getAuthProvider: store.getAuthProvider,
   };
 };
 

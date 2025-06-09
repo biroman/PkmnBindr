@@ -42,8 +42,8 @@ service cloud.firestore {
     // Users collection - allow owners to read for admin purposes
     match /users/{userId} {
       // Block operations if in emergency mode (except for owners)
-      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner(); // Owners can always access
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner(); // Owners can always access
       
       // Enhanced data validation for user profile updates
       allow update: if request.auth != null && 
@@ -67,8 +67,8 @@ service cloud.firestore {
     // User subcollections - keep private to user only with enhanced validation
     match /users/{userId}/binders/{binderId} {
       // Block operations if in emergency mode (except for owners)
-      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner();
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner();
       
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
@@ -94,8 +94,8 @@ service cloud.firestore {
     // User cards subcollection with strict validation
     match /users/{userId}/binders/{binderId}/cards/{cardId} {
       // Block operations if in emergency mode (except for owners)
-      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner();
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner();
       
       // Enhanced validation for card creation/updates
       allow create, update: if request.auth != null && 
@@ -118,17 +118,17 @@ service cloud.firestore {
                                 isValidNumberRange(request.resource.data.slotInPage, 0, 35));
     }
 
-    // User activity subcollection - read only for users, write only for system
+    // User activity subcollection - allow users to delete their own activity when deleting account
     match /users/{userId}/activity/{activityId} {
-      allow read: if request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner(); // Owners can manage activity logs
+      allow read, delete: if request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner(); // Owners can manage activity logs
       // Users cannot write to activity logs directly (only server-side operations)
     }
 
     // User collections subcollection
     match /users/{userId}/collections/{collectionId} {
-      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner();
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner();
       
       // Validate collection data
       allow create, update: if request.auth != null && 
@@ -142,10 +142,16 @@ service cloud.firestore {
                                 isValidStringLength(request.resource.data.description, 500));
     }
 
+    // User preferences subcollection (NEW - was missing)
+    match /users/{userId}/preferences/{preferenceId} {
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner();
+    }
+
     // User wishlist subcollection
     match /users/{userId}/wishlist/{wishlistId} {
-      allow read, write: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write: if isOwner();
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
+      allow read, write, delete: if isOwner();
       
       // Validate wishlist data
       allow create, update: if request.auth != null && 
@@ -164,9 +170,9 @@ service cloud.firestore {
     // User Binders collection - for the new sync service
     match /user_binders/{docId} {
       // Block operations if in emergency mode (except for owners)
-      allow read, write: if !isEmergencyMode() && request.auth != null && 
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
                            docId.matches('^' + request.auth.uid + '_.*');
-      allow read, write: if isOwner();
+      allow read, write, delete: if isOwner();
       
       // Allow collection queries where ownerId equals current user
       allow list: if !isEmergencyMode() && request.auth != null && 
