@@ -5,9 +5,8 @@ service cloud.firestore {
     // Helper function to check if user is owner
     function isOwner() {
       return request.auth != null && 
-             request.auth.uid != null &&
-             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
-             (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == "owner");
+             request.auth.token.email != null &&
+             request.auth.token.email == 'eivind-buodd@hotmail.com';
     }
 
     // Helper function to validate string length
@@ -306,6 +305,16 @@ service cloud.firestore {
       
       // Owners can read/write all bug reports (for management)
       allow read, write: if isOwner();
+    }
+
+    // Announcements/Changelog - Users can read published, owners can manage all
+    match /announcements/{announcementId} {
+      // Owners have full access to all announcements
+      allow read, write, create, update, delete, list: if isOwner();
+      
+      // All authenticated users can read and list published announcements
+      allow read, list: if request.auth != null && 
+                           (resource == null || resource.data.isPublished == true);
     }
 
     // Deny all other collections/documents

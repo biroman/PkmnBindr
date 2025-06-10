@@ -19,6 +19,7 @@ import {
   CogIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+import AnnouncementWidget from "../components/AnnouncementWidget";
 
 const DashboardPage = () => {
   const { user } = useAuth();
@@ -404,6 +405,9 @@ const DashboardPage = () => {
                 </Link>
               </div>
             </div>
+
+            {/* Announcements Widget */}
+            <AnnouncementWidget />
 
             {/* Coming Soon Features */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200">

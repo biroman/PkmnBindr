@@ -6,6 +6,7 @@ import {
   getDoc,
   getDocs,
   updateDoc,
+  deleteDoc,
   query,
   where,
   orderBy,
@@ -608,6 +609,182 @@ class ContactService {
 
     this.unsubscribes.set(`messageThread_${threadId}`, unsubscribe);
     return unsubscribe;
+  }
+
+  /**
+   * ADMIN: Delete a message thread
+   */
+  async deleteMessageThread(threadId) {
+    try {
+      if (!threadId) {
+        throw new Error("Thread ID is required");
+      }
+
+      const threadRef = doc(db, ContactService.DIRECT_MESSAGES, threadId);
+
+      // Delete all messages in the thread first
+      const messagesRef = collection(threadRef, "messages");
+      const messagesSnapshot = await getDocs(messagesRef);
+
+      const batch = writeBatch(db);
+      messagesSnapshot.docs.forEach((messageDoc) => {
+        batch.delete(messageDoc.ref);
+      });
+
+      // Delete the thread document
+      batch.delete(threadRef);
+
+      await batch.commit();
+
+      toast.success("Message thread deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting message thread:", error);
+      toast.error("Failed to delete message thread. Please try again.");
+      throw error;
+    }
+  }
+
+  /**
+   * ADMIN: Delete a feature request
+   */
+  async deleteFeatureRequest(requestId) {
+    try {
+      if (!requestId) {
+        throw new Error("Request ID is required");
+      }
+
+      const requestRef = doc(db, ContactService.FEATURE_REQUESTS, requestId);
+      await deleteDoc(requestRef);
+
+      toast.success("Feature request deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting feature request:", error);
+      toast.error("Failed to delete feature request. Please try again.");
+      throw error;
+    }
+  }
+
+  /**
+   * ADMIN: Delete a bug report
+   */
+  async deleteBugReport(reportId) {
+    try {
+      if (!reportId) {
+        throw new Error("Report ID is required");
+      }
+
+      const reportRef = doc(db, ContactService.BUG_REPORTS, reportId);
+      await deleteDoc(reportRef);
+
+      toast.success("Bug report deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting bug report:", error);
+      toast.error("Failed to delete bug report. Please try again.");
+      throw error;
+    }
+  }
+
+  /**
+   * USER: Delete own message from thread
+   */
+  async deleteUserMessage(threadId, messageId, userId) {
+    try {
+      if (!threadId || !messageId || !userId) {
+        throw new Error("Thread ID, message ID, and user ID are required");
+      }
+
+      const threadRef = doc(db, ContactService.DIRECT_MESSAGES, threadId);
+      const messageRef = doc(collection(threadRef, "messages"), messageId);
+
+      // Get the message to verify ownership
+      const messageDoc = await getDoc(messageRef);
+      if (!messageDoc.exists()) {
+        throw new Error("Message not found");
+      }
+
+      const messageData = messageDoc.data();
+      if (messageData.senderId !== userId) {
+        throw new Error("You can only delete your own messages");
+      }
+
+      await deleteDoc(messageRef);
+
+      toast.success("Message deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting user message:", error);
+      toast.error("Failed to delete message. Please try again.");
+      throw error;
+    }
+  }
+
+  /**
+   * USER: Delete own feature request
+   */
+  async deleteUserFeatureRequest(requestId, userId) {
+    try {
+      if (!requestId || !userId) {
+        throw new Error("Request ID and user ID are required");
+      }
+
+      const requestRef = doc(db, ContactService.FEATURE_REQUESTS, requestId);
+
+      // Verify ownership
+      const requestDoc = await getDoc(requestRef);
+      if (!requestDoc.exists()) {
+        throw new Error("Feature request not found");
+      }
+
+      const requestData = requestDoc.data();
+      if (requestData.userId !== userId) {
+        throw new Error("You can only delete your own feature requests");
+      }
+
+      await deleteDoc(requestRef);
+
+      toast.success("Feature request deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting user feature request:", error);
+      toast.error("Failed to delete feature request. Please try again.");
+      throw error;
+    }
+  }
+
+  /**
+   * USER: Delete own bug report
+   */
+  async deleteUserBugReport(reportId, userId) {
+    try {
+      if (!reportId || !userId) {
+        throw new Error("Report ID and user ID are required");
+      }
+
+      const reportRef = doc(db, ContactService.BUG_REPORTS, reportId);
+
+      // Verify ownership
+      const reportDoc = await getDoc(reportRef);
+      if (!reportDoc.exists()) {
+        throw new Error("Bug report not found");
+      }
+
+      const reportData = reportDoc.data();
+      if (reportData.userId !== userId) {
+        throw new Error("You can only delete your own bug reports");
+      }
+
+      await deleteDoc(reportRef);
+
+      toast.success("Bug report deleted successfully!");
+      return { success: true };
+    } catch (error) {
+      console.error("Error deleting user bug report:", error);
+      toast.error("Failed to delete bug report. Please try again.");
+      throw error;
+    }
   }
 
   /**

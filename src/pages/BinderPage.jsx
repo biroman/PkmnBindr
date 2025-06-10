@@ -196,7 +196,7 @@ const BinderPage = () => {
 
     const cardCount = Object.keys(currentBinder.cards || {}).length;
     if (cardCount === 0) {
-      toast.info("Binder is already empty");
+      toast("Binder is already empty");
       return;
     }
 
