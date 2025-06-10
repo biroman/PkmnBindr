@@ -259,7 +259,7 @@ export const checkFeatureLimit = (currentCount, rule) => {
     allowed,
     reason: allowed
       ? undefined
-      : `Feature limit exceeded. Maximum: ${rule.config.limit}`,
+      : `Binder limit exceeded. Maximum: ${rule.config.limit}`,
   };
 };
 

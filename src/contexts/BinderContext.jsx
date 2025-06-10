@@ -702,8 +702,15 @@ export const BinderProvider = ({ children }) => {
         );
 
         if (!canAdd.allowed) {
+          const currentCards = Object.keys(targetBinder.cards || {}).length;
+          const limit = canAdd.limit || 500;
           throw new Error(
-            canAdd.reason || "Cannot add more cards to this binder"
+            canAdd.reason ||
+              `Card limit reached! You have ${currentCards}/${limit} cards in this binder. ${
+                !user
+                  ? "Sign up for more storage!"
+                  : "Upgrade your plan for higher limits."
+              }`
           );
         }
 
@@ -998,8 +1005,18 @@ export const BinderProvider = ({ children }) => {
         );
 
         if (!canAdd.allowed) {
+          const currentCards = Object.keys(targetBinder.cards || {}).length;
+          const limit = canAdd.limit || 500;
+          const remainingSpace = Math.max(0, limit - currentCards);
           throw new Error(
-            canAdd.reason || `Cannot add ${cards.length} cards to this binder`
+            canAdd.reason ||
+              `Cannot add ${
+                cards.length
+              } cards! Only ${remainingSpace} slots remaining (${currentCards}/${limit} used). ${
+                !user
+                  ? "Sign up for more storage!"
+                  : "Upgrade your plan or clear some space."
+              }`
           );
         }
 
@@ -1614,7 +1631,13 @@ export const BinderProvider = ({ children }) => {
           // Check if we're within max pages limit
           if (currentPageCount >= binder.settings.maxPages) {
             toast.error(
-              `Cannot add more pages. Maximum is ${binder.settings.maxPages}`
+              `Page limit reached! Maximum is ${
+                binder.settings.maxPages
+              } pages. ${
+                !user
+                  ? "Sign up for higher limits!"
+                  : "Upgrade your plan for more pages."
+              }`
             );
             return binder;
           }
@@ -1677,7 +1700,13 @@ export const BinderProvider = ({ children }) => {
           if (newPageCount > binder.settings.maxPages) {
             const maxPossible = binder.settings.maxPages - currentPageCount;
             toast.error(
-              `Cannot add ${pageCount} pages. Maximum is ${binder.settings.maxPages}. Can only add ${maxPossible} more pages.`
+              `Cannot add ${pageCount} pages! Maximum is ${
+                binder.settings.maxPages
+              }. Can only add ${maxPossible} more pages. ${
+                !user
+                  ? "Sign up for higher limits!"
+                  : "Upgrade your plan for more pages."
+              }`
             );
             return binder;
           }
@@ -2149,7 +2178,41 @@ export const BinderProvider = ({ children }) => {
           const merged = [...localBinders];
           let addedCount = 0;
           let updatedCount = 0;
+          let deletedCount = 0;
           const updatedBinderIds = []; // Track which binders were updated
+          const cloudBinderIds = new Set(cloudBinders.map((b) => b.id));
+
+          // First, remove local binders that no longer exist in cloud
+          // Only remove binders that were previously synced (have sync status)
+          for (let i = merged.length - 1; i >= 0; i--) {
+            const localBinder = merged[i];
+            const wasCloudBinder =
+              localBinder.sync?.status === "synced" ||
+              localBinder.sync?.lastSynced ||
+              (localBinder.ownerId === user.uid &&
+                localBinder.ownerId !== "local_user");
+
+            // If this was a cloud binder but no longer exists in cloud, remove it
+            if (wasCloudBinder && !cloudBinderIds.has(localBinder.id)) {
+              console.log(
+                `Removing deleted cloud binder: "${localBinder.metadata?.name}"`
+              );
+
+              // Clear current binder if it's being deleted
+              setCurrentBinder((currentBinder) => {
+                if (currentBinder?.id === localBinder.id) {
+                  console.log(
+                    `Clearing current binder "${localBinder.metadata?.name}" - deleted from cloud`
+                  );
+                  return null;
+                }
+                return currentBinder;
+              });
+
+              merged.splice(i, 1);
+              deletedCount++;
+            }
+          }
 
           cloudBinders.forEach((cloudBinder) => {
             const existingIndex = merged.findIndex(
@@ -2222,25 +2285,18 @@ export const BinderProvider = ({ children }) => {
           storage.set(STORAGE_KEYS.BINDERS, merged);
           setCachedData(merged);
 
-          if (addedCount > 0 || updatedCount > 0) {
+          if (addedCount > 0 || updatedCount > 0 || deletedCount > 0) {
             // Show a toast notification
-            if (addedCount > 0 && updatedCount > 0) {
-              toast.success(
-                `Synced ${addedCount} new and ${updatedCount} updated binders from cloud`
-              );
-            } else if (addedCount > 0) {
-              toast.success(
-                `Downloaded ${addedCount} binder${
-                  addedCount > 1 ? "s" : ""
-                } from cloud`
-              );
-            } else if (updatedCount > 0) {
-              toast.success(
-                `Updated ${updatedCount} binder${
-                  updatedCount > 1 ? "s" : ""
-                } from cloud`
-              );
-            }
+            const messages = [];
+            if (addedCount > 0) messages.push(`${addedCount} new`);
+            if (updatedCount > 0) messages.push(`${updatedCount} updated`);
+            if (deletedCount > 0) messages.push(`${deletedCount} deleted`);
+
+            toast.success(
+              `Synced ${messages.join(", ")} binder${
+                addedCount + updatedCount + deletedCount > 1 ? "s" : ""
+              } from cloud`
+            );
           }
 
           return merged;
@@ -2258,6 +2314,14 @@ export const BinderProvider = ({ children }) => {
     console.log("Manually refreshing cache");
     await autoSyncCloudBinders(true);
   }, [autoSyncCloudBinders]);
+
+  // Force clear cache and resync (for debugging sync issues)
+  const forceClearAndSync = useCallback(async () => {
+    console.log("Force clearing cache and resyncing...");
+    invalidateCache();
+    await autoSyncCloudBinders(true);
+    toast.success("Cache cleared and resynced from cloud");
+  }, [invalidateCache, autoSyncCloudBinders]);
 
   // Initial cache refresh for logged-in users after initialization
   useEffect(() => {
@@ -2690,6 +2754,7 @@ export const BinderProvider = ({ children }) => {
     deleteBinderFromCloud,
     autoSyncCloudBinders,
     refreshCache,
+    forceClearAndSync,
     migrateBinderCardData,
     markAsModified,
 

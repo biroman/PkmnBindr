@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PlusIcon, MinusIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
+import BinderUsageStatus from "./BinderUsageStatus";
 
 const PageManager = ({ binder, className = "" }) => {
   const { addPage, removePage, getPageCount } = useBinderContext();
@@ -58,28 +59,35 @@ const PageManager = ({ binder, className = "" }) => {
 
       <div className="space-y-4">
         {/* Page Count Display */}
-        <div className="bg-gray-50 rounded-lg p-3">
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-gray-600">Binder Pages:</span>
-            <span className="font-medium text-gray-900">
-              {currentPageCount}
-            </span>
-          </div>
-          <div className="flex items-center justify-between text-sm mt-1">
-            <span className="text-gray-600">Card Pages:</span>
-            <span className="font-medium text-gray-900">{cardPages}</span>
-          </div>
-          <div className="flex items-center justify-between text-sm mt-1">
-            <span className="text-gray-600">Range:</span>
-            <span className="text-gray-700">
-              {minPages} - {maxPages}
-            </span>
-          </div>
-          {autoExpand && (
-            <div className="mt-2 text-xs text-blue-600">
-              ✓ Auto-expand is enabled
+        <div className="bg-gray-50 rounded-lg p-3 space-y-3">
+          <div>
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-gray-600">Binder Pages:</span>
+              <span className="font-medium text-gray-900">
+                {currentPageCount}
+              </span>
             </div>
-          )}
+            <div className="flex items-center justify-between text-sm mt-1">
+              <span className="text-gray-600">Card Pages:</span>
+              <span className="font-medium text-gray-900">{cardPages}</span>
+            </div>
+            <div className="flex items-center justify-between text-sm mt-1">
+              <span className="text-gray-600">Range:</span>
+              <span className="text-gray-700">
+                {minPages} - {maxPages}
+              </span>
+            </div>
+            {autoExpand && (
+              <div className="mt-2 text-xs text-blue-600">
+                ✓ Auto-expand is enabled
+              </div>
+            )}
+          </div>
+
+          {/* Usage Status */}
+          <div className="border-t border-gray-200 pt-3">
+            <BinderUsageStatus binder={binder} />
+          </div>
         </div>
 
         {/* Action Buttons */}

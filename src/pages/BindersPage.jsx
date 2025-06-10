@@ -36,8 +36,6 @@ const BindersPage = () => {
     createBinder,
     deleteBinder,
     selectBinder,
-    autoSyncCloudBinders,
-    refreshCache,
     isLocalOnlyBinder,
     isOwnedByCurrentUser,
     claimLocalBinder,
@@ -52,7 +50,6 @@ const BindersPage = () => {
   const [newBinderName, setNewBinderName] = useState("");
   const [newBinderDescription, setNewBinderDescription] = useState("");
   const [isCreating, setIsCreating] = useState(false);
-  const [isSyncing, setIsSyncing] = useState(false);
 
   // Delete confirmation modal state
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -240,23 +237,6 @@ const BindersPage = () => {
   const handleCancelDelete = () => {
     setShowDeleteModal(false);
     setBinderToDelete(null);
-  };
-
-  const handleSyncFromCloud = async () => {
-    if (!user) {
-      toast.error("Please sign in to sync from cloud");
-      return;
-    }
-
-    try {
-      setIsSyncing(true);
-      await refreshCache();
-    } catch (error) {
-      console.error("Sync failed:", error);
-      toast.error("Failed to sync from cloud");
-    } finally {
-      setIsSyncing(false);
-    }
   };
 
   // The cache system now handles loading data automatically
