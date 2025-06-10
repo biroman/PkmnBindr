@@ -934,39 +934,6 @@ const AdminPage = () => {
               )}
             </div>
           )}
-
-          {/* Implementation Status */}
-          <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4">
-            <div className="flex items-start gap-3">
-              <CheckCircleIcon className="w-5 h-5 text-green-500 mt-0.5" />
-              <div className="text-sm">
-                <h4 className="font-medium text-green-800 mb-1">
-                  Real User Management Active
-                </h4>
-                <p className="text-green-700 mb-2">
-                  This interface now displays real user data from Firestore.
-                  Features implemented:
-                </p>
-                <ul className="list-disc list-inside text-green-700 space-y-1 text-xs">
-                  <li>
-                    ✅ Real-time user data from Firestore "users" collection
-                  </li>
-                  <li>✅ Automatic user profile creation on sign-in</li>
-                  <li>✅ Live user statistics (binder/card counts)</li>
-                  <li>
-                    ✅ Real role and status management with database updates
-                  </li>
-                  <li>
-                    ✅ User activity tracking (last sign-in, creation date)
-                  </li>
-                </ul>
-                <p className="text-green-600 text-xs mt-2 italic">
-                  Note: New users will automatically appear here when they sign
-                  up and use the app.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );

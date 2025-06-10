@@ -42,6 +42,8 @@ const CardPageItem = ({
   isBinderSelectionMode = false,
   selectionMode = "cardPages",
   showHeader = true,
+  currentHoverTarget = null,
+  activeDragData = null,
 }) => {
   const { getCardFromCache } = useCardCache();
   const { active } = useDndContext();
@@ -386,7 +388,19 @@ const CardPageItem = ({
               </div>
               {highlightedPages.length > 1 && (
                 <div className="text-xs text-blue-100 mt-1">
-                  Will occupy positions: {highlightedPages.join(", ")}
+                  {(() => {
+                    const sortedHighlights = [...highlightedPages].sort(
+                      (a, b) => a - b
+                    );
+                    // Check if this is backwards placement by seeing if the hover target is the last highlighted page
+                    const isBackwards =
+                      currentHoverTarget &&
+                      sortedHighlights[sortedHighlights.length - 1] ===
+                        currentHoverTarget;
+                    return `Will occupy positions: ${sortedHighlights.join(
+                      ", "
+                    )}${isBackwards ? " (fitted backwards)" : ""}`;
+                  })()}
                 </div>
               )}
             </div>
@@ -408,20 +422,66 @@ const DeleteConfirmationModal = ({
 }) => {
   if (!isOpen) return null;
 
-  // Check which selected pages have cards
-  const pagesWithCards = selectedPages.filter((pageIndex) => {
-    if (pageIndex === 0) return false; // Cover page
-    const cardsPerPage = gridConfig.total;
-    const startPosition = (pageIndex - 1) * cardsPerPage;
-    const endPosition = startPosition + cardsPerPage - 1;
+  const selectedPagesArray = Array.from(selectedPages);
+  const cardsPerPage = gridConfig.total;
 
-    for (let pos = startPosition; pos <= endPosition; pos++) {
-      if (binder.cards[pos.toString()]) {
-        return true;
+  // Calculate affected cards based on deletion type
+  let affectedCards = [];
+  let cardsToPreserve = [];
+  let pagesWithCards = [];
+
+  if (deleteType === "binderPages") {
+    // Calculate for binder page deletion
+    const cardPageRangesToDelete = [];
+    for (const binderPageNum of selectedPagesArray) {
+      let cardPagesInBinder = [];
+      if (binderPageNum === 1) {
+        cardPagesInBinder = [1];
+      } else {
+        const firstCardPage = 2 + (binderPageNum - 2) * 2;
+        cardPagesInBinder = [firstCardPage, firstCardPage + 1];
+      }
+
+      for (const cardPageIndex of cardPagesInBinder) {
+        const startPosition = (cardPageIndex - 1) * cardsPerPage;
+        const endPosition = startPosition + cardsPerPage - 1;
+        cardPageRangesToDelete.push({ startPosition, endPosition });
       }
     }
-    return false;
-  });
+
+    // Count cards that will be deleted vs preserved
+    const allCards = Object.entries(binder.cards || {});
+    for (const [positionStr, cardData] of allCards) {
+      const position = parseInt(positionStr);
+      const isInDeletedRange = cardPageRangesToDelete.some(
+        (range) =>
+          position >= range.startPosition && position <= range.endPosition
+      );
+
+      if (isInDeletedRange) {
+        affectedCards.push(cardData);
+      } else {
+        cardsToPreserve.push(cardData);
+      }
+    }
+  } else {
+    // Regular card page deletion
+    pagesWithCards = selectedPagesArray.filter((pageIndex) => {
+      if (pageIndex === 0) return false; // Cover page
+      const startPosition = (pageIndex - 1) * cardsPerPage;
+      const endPosition = startPosition + cardsPerPage - 1;
+
+      for (let pos = startPosition; pos <= endPosition; pos++) {
+        if (binder.cards[pos.toString()]) {
+          affectedCards.push(binder.cards[pos.toString()]);
+          return true;
+        }
+      }
+      return false;
+    });
+  }
+
+  const isBinderPageDeletion = deleteType === "binderPages";
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
@@ -432,7 +492,11 @@ const DeleteConfirmationModal = ({
           </div>
           <div>
             <h3 className="text-lg font-bold text-slate-900">
-              {deleteType === "pages" ? "Delete Pages" : "Clear Cards"}
+              {isBinderPageDeletion
+                ? "Delete Binder Pages"
+                : deleteType === "pages"
+                ? "Delete Pages"
+                : "Clear Cards"}
             </h3>
             <p className="text-sm text-slate-600">
               This action cannot be undone
@@ -443,34 +507,69 @@ const DeleteConfirmationModal = ({
         <div className="mb-6">
           <p className="text-slate-700 mb-3">
             You are about to{" "}
-            {deleteType === "pages" ? "delete" : "clear cards from"}{" "}
-            <span className="font-bold">{selectedPages.length}</span> page
-            {selectedPages.length > 1 ? "s" : ""}:
+            {isBinderPageDeletion
+              ? "delete"
+              : deleteType === "pages"
+              ? "delete"
+              : "clear cards from"}{" "}
+            <span className="font-bold">{selectedPagesArray.length}</span>{" "}
+            {isBinderPageDeletion ? "binder " : ""}page
+            {selectedPagesArray.length > 1 ? "s" : ""}:
           </p>
 
           <div className="bg-slate-50 rounded-lg p-3 mb-3 max-h-32 overflow-y-auto">
-            {selectedPages.map((pageIndex) => (
+            {selectedPagesArray.map((pageIndex) => (
               <div key={pageIndex} className="text-sm text-slate-600 py-1">
-                Page {pageIndex}
+                {isBinderPageDeletion
+                  ? `Binder Page ${pageIndex}`
+                  : `Page ${pageIndex}`}
               </div>
             ))}
           </div>
 
-          {pagesWithCards.length > 0 && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+          {isBinderPageDeletion ? (
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
               <div className="flex items-center space-x-2 mb-2">
-                <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
-                <span className="font-medium text-red-800">
-                  Warning: Pages contain cards
+                <ExclamationTriangleIcon className="w-4 h-4 text-orange-600" />
+                <span className="font-medium text-orange-800">
+                  Impact Summary
                 </span>
               </div>
-              <p className="text-sm text-red-700">
-                {pagesWithCards.length} page
-                {pagesWithCards.length > 1 ? "s" : ""} contain
-                {pagesWithCards.length === 1 ? "s" : ""} cards that will be
-                permanently deleted.
-              </p>
+              <div className="text-sm text-orange-700 space-y-1">
+                <p>
+                  •{" "}
+                  <span className="font-medium text-red-600">
+                    {affectedCards.length} cards
+                  </span>{" "}
+                  will be deleted
+                </p>
+                <p>
+                  •{" "}
+                  <span className="font-medium text-green-600">
+                    {cardsToPreserve.length} cards
+                  </span>{" "}
+                  will be reorganized
+                </p>
+                <p>• Remaining pages will be renumbered automatically</p>
+              </div>
             </div>
+          ) : (
+            pagesWithCards.length > 0 && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                <div className="flex items-center space-x-2 mb-2">
+                  <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
+                  <span className="font-medium text-red-800">
+                    Warning: Pages contain cards
+                  </span>
+                </div>
+                <p className="text-sm text-red-700">
+                  {pagesWithCards.length} page
+                  {pagesWithCards.length > 1 ? "s" : ""} contain
+                  {pagesWithCards.length === 1 ? "s" : ""} cards that will be
+                  permanently deleted.
+                </p>
+              </div>
+            )
           )}
         </div>
 
@@ -484,14 +583,18 @@ const DeleteConfirmationModal = ({
           <button
             onClick={onConfirm}
             className={`flex-1 px-4 py-2 text-white rounded-lg transition-colors font-medium ${
-              deleteType === "pages"
+              isBinderPageDeletion || deleteType === "pages"
                 ? "bg-red-600 hover:bg-red-700"
                 : "bg-orange-600 hover:bg-orange-700"
             }`}
           >
-            {deleteType === "pages" ? "Delete" : "Clear"} {selectedPages.length}{" "}
-            Page
-            {selectedPages.length > 1 ? "s" : ""}
+            {isBinderPageDeletion
+              ? "Delete Binder Pages"
+              : deleteType === "pages"
+              ? "Delete"
+              : "Clear"}{" "}
+            {selectedPagesArray.length} Page
+            {selectedPagesArray.length > 1 ? "s" : ""}
           </button>
         </div>
       </div>
@@ -506,8 +609,12 @@ const BinderPageOverview = ({
   currentBinder,
   onCardPageSelect,
 }) => {
-  const { reorderCardPages, removeCardFromBinder, updateBinderSettings } =
-    useBinderContext();
+  const {
+    reorderCardPages,
+    removeCardFromBinder,
+    updateBinderSettings,
+    moveCard,
+  } = useBinderContext();
   const [isCtrlPressed, setIsCtrlPressed] = useState(false);
   const [selectedPages, setSelectedPages] = useState(new Set()); // Card pages selected
   const [selectedBinderPages, setSelectedBinderPages] = useState(new Set()); // Binder pages selected
@@ -652,19 +759,31 @@ const BinderPageOverview = ({
 
     if (hoverIndex === -1) return [];
 
-    // Calculate consecutive pages starting from hover target
+    // Check if we're dropping on the last page and would overflow
+    const availableSpaceForward = nonCoverPages.length - hoverIndex;
     const highlightPages = [];
-    for (
-      let i = 0;
-      i < numPages && hoverIndex + i < nonCoverPages.length;
-      i++
-    ) {
-      highlightPages.push(nonCoverPages[hoverIndex + i]);
+
+    if (availableSpaceForward >= numPages) {
+      // Place pages forward from hover target (normal behavior)
+      for (let i = 0; i < numPages; i++) {
+        highlightPages.push(nonCoverPages[hoverIndex + i]);
+      }
+    } else {
+      // Place pages backwards from hover target to prevent overflow
+      const startIndex = Math.max(0, hoverIndex - numPages + 1);
+      for (let i = 0; i < numPages; i++) {
+        const pageIndex = startIndex + i;
+        if (pageIndex < nonCoverPages.length) {
+          highlightPages.push(nonCoverPages[pageIndex]);
+        }
+      }
     }
 
     console.log("Global highlights calculated:", {
       currentHoverTarget,
       pagesToMove,
+      availableSpaceForward,
+      placingBackwards: availableSpaceForward < numPages,
       highlightPages,
     });
 
@@ -747,37 +866,88 @@ const BinderPageOverview = ({
         targetPageIndex
       );
 
-      // For multiple page moves, we need to place them consecutively starting from target
-      for (let i = 0; i < sortedSourcePages.length; i++) {
-        const sourcePage = sortedSourcePages[i];
-        const destinationPage = targetPageIndex + i;
+      // Find non-cover pages to calculate available space
+      const nonCoverPages = allCardPages.filter((page) => page !== 0);
+      const targetIndex = nonCoverPages.indexOf(targetPageIndex);
+      const availableSpaceForward = nonCoverPages.length - targetIndex;
+      const numPages = sortedSourcePages.length;
 
-        // Skip if source and destination are the same
-        if (sourcePage === destinationPage) continue;
+      // Determine if we need to place backwards
+      const placeBackwards = availableSpaceForward < numPages;
 
-        console.log(`Moving page ${sourcePage} to position ${destinationPage}`);
+      console.log("Move strategy:", {
+        targetPageIndex,
+        availableSpaceForward,
+        numPages,
+        placeBackwards,
+      });
 
-        const result = await reorderCardPages(
-          currentBinder.id,
-          sourcePage,
-          destinationPage
-        );
+      if (placeBackwards) {
+        // Place pages backwards from target to prevent creating new empty pages
+        const startTargetIndex = Math.max(0, targetIndex - numPages + 1);
 
-        if (!result.success) {
-          console.error("Card page reordering failed:", result.error);
-          toast.error(`Failed to move page ${sourcePage}`);
-          return; // Stop on first failure
+        for (let i = 0; i < sortedSourcePages.length; i++) {
+          const sourcePage = sortedSourcePages[i];
+          const destinationPageIndex = startTargetIndex + i;
+          const destinationPage = nonCoverPages[destinationPageIndex];
+
+          // Skip if source and destination are the same
+          if (sourcePage === destinationPage) continue;
+
+          console.log(
+            `Moving page ${sourcePage} to position ${destinationPage} (backwards placement)`
+          );
+
+          const result = await reorderCardPages(
+            currentBinder.id,
+            sourcePage,
+            destinationPage
+          );
+
+          if (!result.success) {
+            console.error("Card page reordering failed:", result.error);
+            toast.error(`Failed to move page ${sourcePage}`);
+            return; // Stop on first failure
+          }
+
+          // Small delay to prevent overwhelming the system
+          await new Promise((resolve) => setTimeout(resolve, 50));
         }
+      } else {
+        // Normal forward placement
+        for (let i = 0; i < sortedSourcePages.length; i++) {
+          const sourcePage = sortedSourcePages[i];
+          const destinationPage = targetPageIndex + i;
 
-        // Small delay to prevent overwhelming the system
-        await new Promise((resolve) => setTimeout(resolve, 50));
+          // Skip if source and destination are the same
+          if (sourcePage === destinationPage) continue;
+
+          console.log(
+            `Moving page ${sourcePage} to position ${destinationPage} (forward placement)`
+          );
+
+          const result = await reorderCardPages(
+            currentBinder.id,
+            sourcePage,
+            destinationPage
+          );
+
+          if (!result.success) {
+            console.error("Card page reordering failed:", result.error);
+            toast.error(`Failed to move page ${sourcePage}`);
+            return; // Stop on first failure
+          }
+
+          // Small delay to prevent overwhelming the system
+          await new Promise((resolve) => setTimeout(resolve, 50));
+        }
       }
 
       setSelectedPages(new Set()); // Clear selection after move
       toast.success(
         `Successfully moved ${sortedSourcePages.length} page${
           sortedSourcePages.length > 1 ? "s" : ""
-        }`
+        }${placeBackwards ? " (placed backwards to fit)" : ""}`
       );
     } catch (error) {
       console.error("Failed to reorder card pages:", error);
@@ -799,41 +969,109 @@ const BinderPageOverview = ({
       if (selectedBinderPages.size === 0) return;
 
       try {
-        const selectedBinderPagesArray = Array.from(selectedBinderPages);
+        const selectedBinderPagesArray = Array.from(selectedBinderPages).sort(
+          (a, b) => a - b
+        );
+        console.log("Deleting binder pages:", selectedBinderPagesArray);
 
-        // Remove all cards from the selected binder pages first
+        // Prevent deleting page 1 (cover page)
+        if (selectedBinderPagesArray.includes(1)) {
+          toast.error("Cannot delete the cover page (page 1)");
+          return;
+        }
+
+        const cardsPerPage = gridConfig.total;
+        const currentPageCount = currentBinder.settings?.pageCount || 1;
+
+        // Step 1: Calculate which card page ranges will be deleted
+        const cardPageRangesToDelete = [];
         for (const binderPageNum of selectedBinderPagesArray) {
-          // Calculate which card pages belong to this binder page
           let cardPagesInBinder = [];
           if (binderPageNum === 1) {
-            cardPagesInBinder = [1]; // First binder page has cover (0) and card page 1
+            cardPagesInBinder = [1]; // First binder page has card page 1 (plus cover page 0)
           } else {
             // Subsequent binder pages have 2 card pages each
+            // Formula: binder page N has card pages [2*N-2, 2*N-1]
             const firstCardPage = 2 + (binderPageNum - 2) * 2;
             cardPagesInBinder = [firstCardPage, firstCardPage + 1];
           }
 
-          // Remove cards from these card pages
           for (const cardPageIndex of cardPagesInBinder) {
-            const cardsPerPage = gridConfig.total;
             const startPosition = (cardPageIndex - 1) * cardsPerPage;
             const endPosition = startPosition + cardsPerPage - 1;
+            cardPageRangesToDelete.push({
+              startPosition,
+              endPosition,
+              cardPageIndex,
+            });
+          }
+        }
 
-            for (
-              let position = startPosition;
-              position <= endPosition;
-              position++
-            ) {
-              if (currentBinder.cards[position.toString()]) {
-                await removeCardFromBinder(currentBinder.id, position);
-                await new Promise((resolve) => setTimeout(resolve, 5));
+        // Sort ranges by position to handle them in order
+        cardPageRangesToDelete.sort(
+          (a, b) => a.startPosition - b.startPosition
+        );
+        console.log("Card page ranges to delete:", cardPageRangesToDelete);
+
+        // Step 2: Collect all cards that need to be preserved and their new positions
+        const allCards = Object.entries(currentBinder.cards || {});
+        const cardsToMove = [];
+        const cardsToDelete = [];
+
+        for (const [positionStr, cardData] of allCards) {
+          const position = parseInt(positionStr);
+
+          // Check if this card is in a range to be deleted
+          const isInDeletedRange = cardPageRangesToDelete.some(
+            (range) =>
+              position >= range.startPosition && position <= range.endPosition
+          );
+
+          if (isInDeletedRange) {
+            cardsToDelete.push({ position, cardData });
+          } else {
+            // Calculate how many positions this card needs to shift back
+            let positionsToShiftBack = 0;
+            for (const range of cardPageRangesToDelete) {
+              if (position > range.endPosition) {
+                positionsToShiftBack +=
+                  range.endPosition - range.startPosition + 1;
               }
+            }
+
+            const newPosition = position - positionsToShiftBack;
+            if (newPosition !== position) {
+              cardsToMove.push({
+                fromPosition: position,
+                toPosition: newPosition,
+                cardData,
+              });
             }
           }
         }
 
-        // Update binder page count
-        const currentPageCount = currentBinder.settings?.pageCount || 1;
+        console.log("Cards to delete:", cardsToDelete.length);
+        console.log("Cards to move:", cardsToMove.length);
+
+        // Step 3: Remove cards from deleted ranges
+        for (const { position } of cardsToDelete) {
+          await removeCardFromBinder(currentBinder.id, position);
+          await new Promise((resolve) => setTimeout(resolve, 3));
+        }
+
+        // Step 4: Move remaining cards to their new positions
+        // Sort by descending position to avoid conflicts
+        cardsToMove.sort((a, b) => b.fromPosition - a.fromPosition);
+
+        for (const { fromPosition, toPosition } of cardsToMove) {
+          console.log(
+            `Moving card from position ${fromPosition} to ${toPosition}`
+          );
+          await moveCard(currentBinder.id, fromPosition, toPosition);
+          await new Promise((resolve) => setTimeout(resolve, 3));
+        }
+
+        // Step 5: Update binder page count
         const newPageCount = Math.max(
           1,
           currentPageCount - selectedBinderPagesArray.length
@@ -846,9 +1084,9 @@ const BinderPageOverview = ({
         }
 
         toast.success(
-          `Deleted ${selectedBinderPagesArray.length} binder page${
+          `Successfully deleted ${selectedBinderPagesArray.length} binder page${
             selectedBinderPagesArray.length > 1 ? "s" : ""
-          }`
+          } and reorganized ${cardsToMove.length} cards`
         );
 
         setSelectedBinderPages(new Set());
@@ -1047,12 +1285,10 @@ const BinderPageOverview = ({
                     ? isCtrlPressed
                       ? "✨ Click cards to select them"
                       : "💡 Hold Ctrl + click cards to select"
-                    : isCtrlPressed
-                    ? "✨ Click binder sections to select pages"
-                    : "💡 Hold Ctrl + click binder sections to select"}
+                    : "✨ Click binder pages to select them"}
                 </div>
 
-                {isCtrlPressed && (
+                {(isCtrlPressed || selectionMode === "binderPages") && (
                   <div className="flex items-center gap-2 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span>Selection active</span>
@@ -1122,8 +1358,7 @@ const BinderPageOverview = ({
                   const binderPageNum = parseInt(groupNum);
                   const isBinderPageSelected =
                     selectedBinderPages.has(binderPageNum);
-                  const isBinderSelectionMode =
-                    selectionMode === "binderPages" && isCtrlPressed;
+                  const isBinderSelectionMode = selectionMode === "binderPages";
 
                   return (
                     <div key={groupNum} className="relative">
@@ -1164,14 +1399,7 @@ const BinderPageOverview = ({
                           }}
                         >
                           {/* Interactive Indicator */}
-                          {!isBinderPageSelected && !isCtrlPressed && (
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md">
-                                📦 Hold Ctrl + Click
-                              </div>
-                            </div>
-                          )}
-                          {!isBinderPageSelected && isCtrlPressed && (
+                          {!isBinderPageSelected && (
                             <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md animate-pulse">
                                 📦 Click to select
@@ -1197,6 +1425,21 @@ const BinderPageOverview = ({
                               : "border-2 border-dashed border-blue-400 bg-blue-100/50 hover:border-blue-500 hover:bg-blue-200/50 cursor-pointer"
                             : "border-2 border-dashed border-slate-200 bg-slate-50/30"
                         }`}
+                        onClick={(e) => {
+                          if (selectionMode === "binderPages") {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setSelectedBinderPages((prev) => {
+                              const newSet = new Set(prev);
+                              if (newSet.has(binderPageNum)) {
+                                newSet.delete(binderPageNum);
+                              } else {
+                                newSet.add(binderPageNum);
+                              }
+                              return newSet;
+                            });
+                          }
+                        }}
                       >
                         {groupPages.map((cardPageIndex) => (
                           <div
@@ -1274,6 +1517,8 @@ const BinderPageOverview = ({
                                   isBinderSelectionMode={isBinderSelectionMode}
                                   selectionMode={selectionMode}
                                   showHeader={false}
+                                  currentHoverTarget={currentHoverTarget}
+                                  activeDragData={activeDragData}
                                 />
                               </div>
                             </div>

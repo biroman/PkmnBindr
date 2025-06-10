@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBinderContext } from "../contexts/BinderContext";
 import { useAuth } from "../hooks/useAuth";
+import { useRules } from "../contexts/RulesContext";
 import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
 import DeleteBinderModal from "../components/binder/DeleteBinderModal";
@@ -20,6 +21,7 @@ import {
   FolderIcon,
   CalendarDaysIcon,
   PhotoIcon,
+  ExclamationTriangleIcon as ExclamationTriangleIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   CheckCircleIcon,
@@ -29,6 +31,7 @@ import {
 const BindersPage = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { canPerformAction } = useRules();
   const {
     binders,
     currentBinder,
@@ -55,6 +58,77 @@ const BindersPage = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [binderToDelete, setBinderToDelete] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Limits tracking state
+  const [limits, setLimits] = useState({
+    binders: { current: 0, limit: null, canCreate: true },
+    cardsPerBinder: { limit: 500 }, // Default fallback
+  });
+
+  // Fetch limits and current usage
+  useEffect(() => {
+    const fetchLimits = async () => {
+      try {
+        const binderCount = binders.length;
+
+        // Check binder creation limits
+        const binderCheck = await canPerformAction("create_binder", {
+          currentCount: binderCount,
+        });
+
+        // Check card per binder limits
+        const cardCheck = await canPerformAction("add_card_to_binder", {
+          currentCount: 0, // Just get the limit, not specific to any binder
+        });
+
+        setLimits({
+          binders: {
+            current: binderCount,
+            limit: binderCheck.limit || (user ? 5 : 10), // Default: 5 for users, 10 for local
+            canCreate: binderCheck.allowed !== false,
+            percentage: binderCheck.limit
+              ? (binderCount / binderCheck.limit) * 100
+              : 0,
+          },
+          cardsPerBinder: {
+            limit: cardCheck.limit || (user ? 500 : 500), // Default: 500 cards per binder
+          },
+        });
+      } catch (error) {
+        console.error("Failed to fetch limits:", error);
+        // Use fallback values
+        setLimits({
+          binders: {
+            current: binders.length,
+            limit: user ? 5 : 10,
+            canCreate: true,
+            percentage: 0,
+          },
+          cardsPerBinder: {
+            limit: 500,
+          },
+        });
+      }
+    };
+
+    fetchLimits();
+  }, [binders.length, canPerformAction, user]);
+
+  // Helper function to get binder card usage
+  const getBinderCardUsage = (binder) => {
+    const cardCount = Object.keys(binder.cards || {}).length;
+    const cardLimit = limits.cardsPerBinder.limit;
+    const percentage = (cardCount / cardLimit) * 100;
+
+    return {
+      current: cardCount,
+      limit: cardLimit,
+      percentage,
+      remaining: Math.max(0, cardLimit - cardCount),
+      isNearLimit: percentage >= 80,
+      isAtLimit: percentage >= 100,
+    };
+  };
 
   // Filter and sort binders
   const filteredAndSortedBinders = useMemo(() => {
@@ -258,24 +332,49 @@ const BindersPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             {/* Title and Stats */}
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                My Pokemon Binders
-              </h1>
+            <div className="flex-1">
+              <div className="flex items-center gap-4 mb-3">
+                <h1 className="text-3xl font-bold text-gray-900">
+                  My Pokemon Binders
+                </h1>
+                {/* Subtle Binder Usage Badge */}
+                {limits.binders.limit && (
+                  <div
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium ${
+                      limits.binders.percentage >= 100
+                        ? "bg-red-100 text-red-700"
+                        : limits.binders.percentage >= 80
+                        ? "bg-amber-100 text-amber-700"
+                        : "bg-green-100 text-green-700"
+                    }`}
+                  >
+                    <FolderIcon className="w-4 h-4" />
+                    <span>
+                      {limits.binders.current}/{limits.binders.limit}
+                    </span>
+                    {!limits.binders.canCreate && (
+                      <ExclamationTriangleIconOutline className="w-4 h-4" />
+                    )}
+                  </div>
+                )}
+              </div>
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
-                  <FolderIcon className="w-4 h-4" />
-                  <span>{stats.total} binders</span>
+                  <PhotoIcon className="w-4 h-4" />
+                  <span>{stats.totalCards} total cards</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <PhotoIcon className="w-4 h-4" />
-                  <span>{stats.totalCards} cards</span>
+                  <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+                  <span>
+                    Up to {limits.cardsPerBinder.limit} cards per binder
+                  </span>
                 </div>
                 {user && (
                   <>
@@ -308,9 +407,32 @@ const BindersPage = () => {
 
             {/* Primary Actions */}
             <div className="flex items-center gap-3">
+              {/* Limit Warning for Create Button */}
+              {!limits.binders.canCreate && (
+                <div className="text-right">
+                  <p className="text-sm text-red-600 font-medium">
+                    Binder limit reached
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {user
+                      ? "Upgrade for more space"
+                      : "Sign up for more binders"}
+                  </p>
+                </div>
+              )}
               <button
                 onClick={() => setShowCreateForm(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                disabled={!limits.binders.canCreate}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                  limits.binders.canCreate
+                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                }`}
+                title={
+                  !limits.binders.canCreate
+                    ? "Binder limit reached"
+                    : "Create new binder"
+                }
               >
                 <PlusIcon className="w-5 h-5" />
                 New Binder
@@ -323,30 +445,30 @@ const BindersPage = () => {
         <LocalBinderWarning />
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
-                <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search binders..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 />
               </div>
             </div>
 
             {/* Filters */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <FunnelIcon className="w-5 h-5 text-gray-400" />
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 >
                   <option value="all">All Binders</option>
                   {user && <option value="synced">Cloud Synced</option>}
@@ -359,7 +481,7 @@ const BindersPage = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
               >
                 <option value="modified">Last Modified</option>
                 <option value="created">Date Created</option>
@@ -367,23 +489,23 @@ const BindersPage = () => {
                 <option value="cards">Card Count</option>
               </select>
 
-              <div className="flex items-center border border-gray-300 rounded-lg p-1">
+              <div className="flex items-center bg-gray-100 rounded-xl p-1">
                 <button
                   onClick={() => setViewMode("grid")}
-                  className={`p-1.5 rounded ${
+                  className={`p-2 rounded-lg transition-all ${
                     viewMode === "grid"
-                      ? "bg-blue-600 text-white"
-                      : "text-gray-400 hover:text-gray-600"
+                      ? "bg-white text-blue-600 shadow-sm"
+                      : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
                   <Squares2X2Icon className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode("list")}
-                  className={`p-1.5 rounded ${
+                  className={`p-2 rounded-lg transition-all ${
                     viewMode === "list"
-                      ? "bg-blue-600 text-white"
-                      : "text-gray-400 hover:text-gray-600"
+                      ? "bg-white text-blue-600 shadow-sm"
+                      : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
                   <QueueListIcon className="w-4 h-4" />
@@ -537,9 +659,26 @@ const BindersPage = () => {
                             >
                               {binder.metadata?.name || "Unnamed Binder"}
                             </h3>
-                            <div className="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-full text-xs font-medium">
-                              {getStatusIcon(status)}
-                              {getStatusText(status)}
+                            <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-full text-xs font-medium">
+                                {getStatusIcon(status)}
+                                {getStatusText(status)}
+                              </div>
+                              {/* Subtle Card Count Badge */}
+                              {!isGuestBinder && (
+                                <div
+                                  className={`px-2 py-1 rounded-full text-xs font-medium ${(() => {
+                                    const usage = getBinderCardUsage(binder);
+                                    return usage.isAtLimit
+                                      ? "bg-red-100 text-red-700"
+                                      : usage.isNearLimit
+                                      ? "bg-amber-100 text-amber-700"
+                                      : "bg-gray-100 text-gray-600";
+                                  })()}`}
+                                >
+                                  {cardCount}/{limits.cardsPerBinder.limit}
+                                </div>
+                              )}
                             </div>
                           </div>
                           {binder.metadata?.description && (
@@ -626,31 +765,40 @@ const BindersPage = () => {
                   >
                     <div className="p-6">
                       {/* Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <h3
-                              className={`text-lg font-semibold truncate ${
-                                isGuestBinder
-                                  ? "text-gray-500"
-                                  : "text-gray-900"
-                              }`}
+                      <div className="mb-4">
+                        <div className="flex items-start justify-between mb-2">
+                          <h3
+                            className={`text-lg font-semibold truncate ${
+                              isGuestBinder ? "text-gray-500" : "text-gray-900"
+                            }`}
+                          >
+                            {binder.metadata?.name || "Unnamed Binder"}
+                          </h3>
+                          {/* Subtle Card Count Badge */}
+                          {!isGuestBinder && (
+                            <div
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${(() => {
+                                const usage = getBinderCardUsage(binder);
+                                return usage.isAtLimit
+                                  ? "bg-red-100 text-red-700"
+                                  : usage.isNearLimit
+                                  ? "bg-amber-100 text-amber-700"
+                                  : "bg-gray-100 text-gray-600";
+                              })()}`}
                             >
-                              {binder.metadata?.name || "Unnamed Binder"}
-                            </h3>
-                          </div>
-                          <div className="flex items-center gap-1 mb-2">
-                            {getStatusIcon(status)}
-                            <span
-                              className={`text-sm font-medium ${
-                                isGuestBinder
-                                  ? "text-gray-400"
-                                  : "text-gray-600"
-                              }`}
-                            >
-                              {getStatusText(status)}
-                            </span>
-                          </div>
+                              {cardCount}/{limits.cardsPerBinder.limit}
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          {getStatusIcon(status)}
+                          <span
+                            className={`text-sm ${
+                              isGuestBinder ? "text-gray-400" : "text-gray-600"
+                            }`}
+                          >
+                            {getStatusText(status)}
+                          </span>
                         </div>
                       </div>
 
@@ -666,45 +814,15 @@ const BindersPage = () => {
                       )}
 
                       {/* Stats */}
-                      <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div
-                          className={`text-center p-3 rounded-lg ${
-                            isGuestBinder ? "bg-gray-100" : "bg-gray-50"
-                          }`}
-                        >
-                          <div
-                            className={`text-2xl font-bold ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-900"
-                            }`}
-                          >
-                            {cardCount}
+                      <div className="mb-6">
+                        <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
+                          <div className="flex items-center gap-2">
+                            <PhotoIcon className="w-4 h-4" />
+                            <span>{cardCount} cards</span>
                           </div>
-                          <div
-                            className={`text-xs ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-600"
-                            }`}
-                          >
-                            Cards
-                          </div>
-                        </div>
-                        <div
-                          className={`text-center p-3 rounded-lg ${
-                            isGuestBinder ? "bg-gray-100" : "bg-gray-50"
-                          }`}
-                        >
-                          <div
-                            className={`text-2xl font-bold ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-900"
-                            }`}
-                          >
-                            {binder.version || 1}
-                          </div>
-                          <div
-                            className={`text-xs ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-600"
-                            }`}
-                          >
-                            Version
+                          <div className="flex items-center gap-2">
+                            <CalendarDaysIcon className="w-4 h-4" />
+                            <span>v{binder.version || 1}</span>
                           </div>
                         </div>
                       </div>
