@@ -8,6 +8,7 @@ import {
   query,
   orderBy,
   serverTimestamp,
+  where,
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
@@ -82,6 +83,10 @@ export const fetchAllUsers = async () => {
         // Convert Firestore timestamps to JavaScript dates
         createdAt: userData.createdAt?.toDate() || new Date(),
         lastSignIn: userData.lastSignIn?.toDate() || new Date(),
+        lastSeen:
+          userData.lastSeen?.toDate() ||
+          userData.lastSignIn?.toDate() ||
+          new Date(),
         updatedAt: userData.updatedAt?.toDate() || new Date(),
       });
     });
@@ -220,5 +225,269 @@ export const migrateUserData = async () => {
   } catch (error) {
     console.error("Error during user migration:", error);
     return { success: false, error: error.message };
+  }
+};
+
+/**
+ * Calculate actual binder and card counts for a specific user from Firebase collections
+ * Optimized to use proper indexes and minimize reads
+ */
+export const calculateUserStats = async (userId) => {
+  try {
+    let binderCount = 0;
+    let cardCount = 0;
+    const countedBinderIds = new Set();
+
+    // 1. Check user_binders collection first (primary location for synced binders)
+    // Uses existing index: ownerId + metadata.isArchived + metadata.createdAt
+    try {
+      const userBindersQuery = query(
+        collection(db, "user_binders"),
+        where("ownerId", "==", userId),
+        where("metadata.isArchived", "==", false)
+      );
+      const userBindersSnapshot = await getDocs(userBindersQuery);
+
+      userBindersSnapshot.forEach((doc) => {
+        const binderData = doc.data();
+        const binderId = binderData.id || doc.id;
+
+        if (!countedBinderIds.has(binderId)) {
+          binderCount++;
+          countedBinderIds.add(binderId);
+
+          // Count cards in this binder
+          if (binderData.cards && typeof binderData.cards === "object") {
+            cardCount += Object.keys(binderData.cards).length;
+          }
+        }
+      });
+    } catch (error) {
+      console.warn("Error querying user_binders collection:", error);
+      // Try without the metadata.isArchived filter if index doesn't exist
+      try {
+        const fallbackQuery = query(
+          collection(db, "user_binders"),
+          where("ownerId", "==", userId)
+        );
+        const fallbackSnapshot = await getDocs(fallbackQuery);
+
+        fallbackSnapshot.forEach((doc) => {
+          const binderData = doc.data();
+          const binderId = binderData.id || doc.id;
+
+          // Manual filter for archived binders
+          if (binderData.metadata?.isArchived === true) return;
+
+          if (!countedBinderIds.has(binderId)) {
+            binderCount++;
+            countedBinderIds.add(binderId);
+
+            if (binderData.cards && typeof binderData.cards === "object") {
+              cardCount += Object.keys(binderData.cards).length;
+            }
+          }
+        });
+      } catch (fallbackError) {
+        console.warn("Fallback query also failed:", fallbackError);
+      }
+    }
+
+    // 2. Check binders collection (alternative location)
+    // Only if we didn't find any binders in user_binders
+    if (binderCount === 0) {
+      try {
+        const bindersQuery = query(
+          collection(db, "binders"),
+          where("ownerId", "==", userId)
+        );
+        const bindersSnapshot = await getDocs(bindersQuery);
+
+        bindersSnapshot.forEach((doc) => {
+          const binderData = doc.data();
+          const binderId = binderData.id || doc.id;
+
+          // Skip archived binders
+          if (binderData.metadata?.isArchived === true) return;
+
+          if (!countedBinderIds.has(binderId)) {
+            binderCount++;
+            countedBinderIds.add(binderId);
+
+            if (binderData.cards && typeof binderData.cards === "object") {
+              cardCount += Object.keys(binderData.cards).length;
+            }
+          }
+        });
+      } catch (error) {
+        console.warn("Error querying binders collection:", error);
+      }
+    }
+
+    // 3. Check legacy users/{userId}/binders subcollection only if no modern binders found
+    if (binderCount === 0) {
+      try {
+        const legacyBindersQuery = query(
+          collection(db, "users", userId, "binders")
+        );
+        const legacyBindersSnapshot = await getDocs(legacyBindersQuery);
+
+        // Count legacy binders and their cards in parallel
+        const legacyBinderPromises = legacyBindersSnapshot.docs.map(
+          async (binderDoc) => {
+            const binderId = binderDoc.id;
+            if (countedBinderIds.has(binderId)) return { binders: 0, cards: 0 };
+
+            countedBinderIds.add(binderId);
+
+            // Count cards in this legacy binder
+            try {
+              const cardsQuery = query(
+                collection(db, "users", userId, "binders", binderId, "cards")
+              );
+              const cardsSnapshot = await getDocs(cardsQuery);
+              return { binders: 1, cards: cardsSnapshot.size };
+            } catch (cardError) {
+              console.warn(
+                `Error counting cards in legacy binder ${binderId}:`,
+                cardError
+              );
+              return { binders: 1, cards: 0 };
+            }
+          }
+        );
+
+        const legacyResults = await Promise.all(legacyBinderPromises);
+        legacyResults.forEach((result) => {
+          binderCount += result.binders;
+          cardCount += result.cards;
+        });
+      } catch (error) {
+        console.warn("Error querying legacy binders subcollection:", error);
+      }
+    }
+
+    return { binderCount, cardCount };
+  } catch (error) {
+    console.error("Error calculating user stats:", error);
+    return { binderCount: 0, cardCount: 0 };
+  }
+};
+
+/**
+ * Calculate and update stats for all users (admin only)
+ */
+export const recalculateAllUserStats = async () => {
+  try {
+    console.log("Starting user stats recalculation...");
+    const users = await fetchAllUsers();
+
+    const updates = [];
+    const results = [];
+
+    for (const user of users) {
+      try {
+        const { binderCount, cardCount } = await calculateUserStats(user.uid);
+
+        // Only update if values have changed
+        if (user.binderCount !== binderCount || user.cardCount !== cardCount) {
+          const userRef = doc(db, USERS_COLLECTION, user.uid);
+          updates.push(
+            updateDoc(userRef, {
+              binderCount,
+              cardCount,
+              updatedAt: serverTimestamp(),
+            })
+          );
+
+          results.push({
+            uid: user.uid,
+            email: user.email,
+            oldStats: {
+              binderCount: user.binderCount,
+              cardCount: user.cardCount,
+            },
+            newStats: { binderCount, cardCount },
+            updated: true,
+          });
+        } else {
+          results.push({
+            uid: user.uid,
+            email: user.email,
+            stats: { binderCount, cardCount },
+            updated: false,
+          });
+        }
+      } catch (error) {
+        console.error(`Error calculating stats for user ${user.email}:`, error);
+        results.push({
+          uid: user.uid,
+          email: user.email,
+          error: error.message,
+          updated: false,
+        });
+      }
+    }
+
+    // Batch update all changes
+    if (updates.length > 0) {
+      await Promise.all(updates);
+      console.log(`✅ Updated stats for ${updates.length} users`);
+    }
+
+    return {
+      success: true,
+      totalUsers: users.length,
+      updatedUsers: updates.length,
+      results,
+    };
+  } catch (error) {
+    console.error("Error during user stats recalculation:", error);
+    return {
+      success: false,
+      error: error.message,
+    };
+  }
+};
+
+/**
+ * Get enhanced user data with real-time calculated stats
+ */
+export const fetchAllUsersWithStats = async () => {
+  try {
+    const users = await fetchAllUsers();
+
+    // Calculate real stats for each user
+    const usersWithStats = await Promise.all(
+      users.map(async (user) => {
+        try {
+          const { binderCount, cardCount } = await calculateUserStats(user.uid);
+          return {
+            ...user,
+            // Use calculated stats instead of stored stats
+            binderCount,
+            cardCount,
+            // Keep stored stats for comparison
+            storedBinderCount: user.binderCount,
+            storedCardCount: user.cardCount,
+          };
+        } catch (error) {
+          console.error(
+            `Error calculating stats for user ${user.email}:`,
+            error
+          );
+          return {
+            ...user,
+            // Fallback to stored stats if calculation fails
+            calculationError: error.message,
+          };
+        }
+      })
+    );
+
+    return usersWithStats;
+  } catch (error) {
+    console.error("Error fetching users with stats:", error);
+    return [];
   }
 };

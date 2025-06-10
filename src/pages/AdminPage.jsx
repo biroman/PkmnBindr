@@ -11,10 +11,12 @@ import { setupDefaultBinderLimits } from "../scripts/setupDefaultBinderLimits";
 import { setupFirstOwner } from "../scripts/setupFirstOwner";
 import {
   fetchAllUsers,
+  fetchAllUsersWithStats,
   updateUserRole,
   updateUserStatus,
   updateUserStats,
   migrateUserData,
+  recalculateAllUserStats,
 } from "../utils/userManagement";
 import {
   Cog6ToothIcon,
@@ -54,15 +56,17 @@ const AdminPage = () => {
   const [usersLoading, setUsersLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("all");
+  const [recalculatingStats, setRecalculatingStats] = useState(false);
 
   // Calculate system statistics
   useEffect(() => {
     const calculateStats = () => {
-      const totalBinders = binders.length;
-      const totalCards = binders.reduce(
-        (sum, binder) => sum + Object.keys(binder.cards || {}).length,
+      // Calculate total binders and cards across all users
+      const totalBinders = users.reduce(
+        (sum, u) => sum + (u.binderCount || 0),
         0
       );
+      const totalCards = users.reduce((sum, u) => sum + (u.cardCount || 0), 0);
       const activeRules = rules.filter((rule) => rule.enabled).length;
 
       setSystemStats({
@@ -74,7 +78,7 @@ const AdminPage = () => {
     };
 
     calculateStats();
-  }, [binders, rules, users]);
+  }, [users, rules]);
 
   // Fetch users effect
   useEffect(() => {
@@ -82,46 +86,26 @@ const AdminPage = () => {
       try {
         setUsersLoading(true);
 
-        // Fetch real users from Firestore
-        const firestoreUsers = await fetchAllUsers();
+        // Fetch users with accurate stats calculated from Firebase collections
+        const usersWithStats = await fetchAllUsersWithStats();
 
         // Run migration to ensure all users have required fields
-        if (firestoreUsers.length > 0) {
+        if (usersWithStats.length > 0) {
           const migrationResult = await migrateUserData();
           if (migrationResult.success && migrationResult.migratedCount > 0) {
             console.log(`Migrated ${migrationResult.migratedCount} users`);
             // Refetch users after migration
-            const updatedUsers = await fetchAllUsers();
+            const updatedUsers = await fetchAllUsersWithStats();
             setUsers(updatedUsers);
             setUsersLoading(false);
             return;
           }
         }
 
-        // Update user stats based on current binder data
-        if (user?.uid) {
-          const userBinderCount = binders.length;
-          const userCardCount = binders.reduce(
-            (sum, binder) => sum + Object.keys(binder.cards || {}).length,
-            0
-          );
-
-          // Update current user's stats in Firestore
-          await updateUserStats(user.uid, userBinderCount, userCardCount);
-
-          // Update the user data with current stats
-          firestoreUsers.forEach((u) => {
-            if (u.uid === user.uid) {
-              u.binderCount = userBinderCount;
-              u.cardCount = userCardCount;
-            }
-          });
-        }
-
-        setUsers(firestoreUsers);
+        setUsers(usersWithStats);
 
         // If no users found (first time setup), create initial user data
-        if (firestoreUsers.length === 0 && user?.uid) {
+        if (usersWithStats.length === 0 && user?.uid) {
           console.log(
             "No users found in database. This appears to be initial setup."
           );
@@ -139,7 +123,7 @@ const AdminPage = () => {
     if (user?.uid) {
       loadUsers();
     }
-  }, [user, binders]);
+  }, [user]);
 
   const handleSetupOwnerRole = async () => {
     if (user?.uid) {
@@ -149,7 +133,7 @@ const AdminPage = () => {
           "✅ Complete owner setup finished! You now have full admin access."
         );
         // Reload users list and refresh page
-        const updatedUsers = await fetchAllUsers();
+        const updatedUsers = await fetchAllUsersWithStats();
         setUsers(updatedUsers);
         window.location.reload();
       } else {
@@ -192,7 +176,7 @@ const AdminPage = () => {
         if (result.migratedCount > 0) {
           alert(`✅ Successfully migrated ${result.migratedCount} users`);
           // Reload users after migration
-          const updatedUsers = await fetchAllUsers();
+          const updatedUsers = await fetchAllUsersWithStats();
           setUsers(updatedUsers);
         } else {
           alert("✅ All users are already up-to-date");
@@ -205,6 +189,40 @@ const AdminPage = () => {
       alert(`❌ Migration failed: ${error.message}`);
     } finally {
       setUsersLoading(false);
+    }
+  };
+
+  const handleRecalculateStats = async () => {
+    try {
+      setRecalculatingStats(true);
+      const result = await recalculateAllUserStats();
+
+      if (result.success) {
+        if (result.updatedUsers > 0) {
+          alert(
+            `✅ Successfully recalculated stats for all users\n\n` +
+              `Total Users: ${result.totalUsers}\n` +
+              `Updated: ${result.updatedUsers}\n` +
+              `Already Accurate: ${result.totalUsers - result.updatedUsers}`
+          );
+        } else {
+          alert(
+            `✅ All user stats are already accurate\n\n` +
+              `Total Users: ${result.totalUsers}`
+          );
+        }
+
+        // Reload users to show updated stats
+        const updatedUsers = await fetchAllUsersWithStats();
+        setUsers(updatedUsers);
+      } else {
+        alert(`❌ Stats recalculation failed: ${result.error}`);
+      }
+    } catch (error) {
+      console.error("Stats recalculation error:", error);
+      alert(`❌ Stats recalculation failed: ${error.message}`);
+    } finally {
+      setRecalculatingStats(false);
     }
   };
 
@@ -599,15 +617,42 @@ const AdminPage = () => {
                 User Management
               </h2>
               <p className="text-gray-600 mt-1">
-                Manage registered users and their permissions
+                Manage registered users and their permissions. Stats are
+                calculated in real-time from Firebase collections.
               </p>
             </div>
-            <div className="flex items-center gap-2 px-3 py-1 bg-blue-100 rounded-full">
-              <UserGroupIcon className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-medium text-blue-700">
-                {filteredUsers.length}{" "}
-                {filteredUsers.length === 1 ? "User" : "Users"}
-              </span>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handleRecalculateStats}
+                disabled={recalculatingStats || usersLoading}
+                className={`
+                  flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all
+                  ${
+                    recalculatingStats || usersLoading
+                      ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                      : "bg-green-100 text-green-700 hover:bg-green-200"
+                  }
+                `}
+              >
+                {recalculatingStats ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+                    <span>Recalculating...</span>
+                  </>
+                ) : (
+                  <>
+                    <ArrowTrendingUpIcon className="w-4 h-4" />
+                    <span>Recalculate Stats</span>
+                  </>
+                )}
+              </button>
+              <div className="flex items-center gap-2 px-3 py-1 bg-blue-100 rounded-full">
+                <UserGroupIcon className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-medium text-blue-700">
+                  {filteredUsers.length}{" "}
+                  {filteredUsers.length === 1 ? "User" : "Users"}
+                </span>
+              </div>
             </div>
           </div>
 
@@ -650,6 +695,22 @@ const AdminPage = () => {
             </select>
           </div>
 
+          {/* Firebase Optimization Info */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+            <div className="flex items-start gap-3">
+              <InformationCircleIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+              <div className="text-sm text-blue-800">
+                <p className="font-medium mb-1">Firebase Index Optimization</p>
+                <p>
+                  User stats are calculated in real-time from multiple Firebase
+                  collections using optimized queries. This ensures accuracy but
+                  may take a moment to load. The system uses existing indexes
+                  for optimal performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* User Statistics */}
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
             <div className="bg-blue-50 rounded-lg p-4 text-center">
@@ -675,7 +736,7 @@ const AdminPage = () => {
             </div>
             <div className="bg-orange-50 rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-orange-600">
-                {users.reduce((sum, u) => sum + u.binderCount, 0)}
+                {users.reduce((sum, u) => sum + (u.binderCount || 0), 0)}
               </div>
               <div className="text-sm text-orange-700">Total Binders</div>
             </div>
@@ -769,7 +830,7 @@ const AdminPage = () => {
                               Joined {formatDate(u.createdAt)}
                             </div>
                             <div className="text-gray-400">
-                              Last seen {getTimeAgo(u.lastSignIn)}
+                              Last seen {getTimeAgo(u.lastSeen)}
                             </div>
                           </div>
                         </td>
@@ -780,11 +841,35 @@ const AdminPage = () => {
                               <span className="font-medium">
                                 {u.binderCount} binders
                               </span>
+                              {u.storedBinderCount !== undefined &&
+                                u.storedBinderCount !== u.binderCount && (
+                                  <span
+                                    className="inline-flex px-1.5 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 border border-orange-200"
+                                    title={`Stored: ${u.storedBinderCount}, Calculated: ${u.binderCount}`}
+                                  >
+                                    Updated
+                                  </span>
+                                )}
                             </div>
                             <div className="flex items-center gap-1 text-gray-400">
                               <PhotoIcon className="w-4 h-4" />
                               <span>{u.cardCount} cards</span>
+                              {u.storedCardCount !== undefined &&
+                                u.storedCardCount !== u.cardCount && (
+                                  <span
+                                    className="inline-flex px-1.5 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 border border-orange-200"
+                                    title={`Stored: ${u.storedCardCount}, Calculated: ${u.cardCount}`}
+                                  >
+                                    Updated
+                                  </span>
+                                )}
                             </div>
+                            {u.calculationError && (
+                              <div className="flex items-center gap-1 text-red-500 mt-1">
+                                <ExclamationTriangleIcon className="w-3 h-3" />
+                                <span className="text-xs">Calc Error</span>
+                              </div>
+                            )}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">

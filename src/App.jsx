@@ -10,6 +10,7 @@ import PublicRoute from "./components/auth/PublicRoute";
 import RootLayout from "./components/layout/RootLayout";
 import AuthLayout from "./components/layout/AuthLayout";
 import { useUserTracking } from "./hooks/useUserTracking";
+import { useActivityTracking } from "./hooks/useActivityTracking";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -38,6 +39,9 @@ const queryClient = new QueryClient({
 const App = () => {
   // Enable automatic user tracking
   useUserTracking();
+
+  // Enable real activity tracking for accurate "last seen"
+  useActivityTracking();
 
   return (
     <QueryClientProvider client={queryClient}>
