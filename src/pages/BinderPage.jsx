@@ -38,6 +38,7 @@ const BinderPage = () => {
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
   const [activeCard, setActiveCard] = useState(null); // For drag overlay
+  const activeDragDataRef = useRef(null); // Store drag data persistently across re-renders
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
@@ -301,9 +302,12 @@ const BinderPage = () => {
         const currentZone = navigationZoneRef.current;
         // Only navigate if we're still in the same navigation zone
         if (currentZone === direction) {
+          console.log(`Edge navigation triggered: ${direction}`);
           if (direction === "left" && canGoPrev) {
+            console.log("Navigating to previous page while dragging");
             goToPrevPage();
           } else if (direction === "right" && canGoNext) {
+            console.log("Navigating to next page while dragging");
             goToNextPage();
           }
         }
@@ -344,6 +348,7 @@ const BinderPage = () => {
       // Check if mouse is in navigation zones
       if (mouseX >= leftZoneStart && mouseX <= leftZoneEnd && canGoPrev) {
         if (isInNavigationZone !== "left") {
+          console.log("Entering left navigation zone");
           startNavigationTimer("left");
         }
       } else if (
@@ -352,11 +357,13 @@ const BinderPage = () => {
         canGoNext
       ) {
         if (isInNavigationZone !== "right") {
+          console.log("Entering right navigation zone");
           startNavigationTimer("right");
         }
       } else {
         // Not in any navigation zone
         if (navigationZoneRef.current) {
+          console.log("Exiting navigation zone");
           clearNavigationTimer();
         }
       }
@@ -367,6 +374,7 @@ const BinderPage = () => {
       canGoNext,
       startNavigationTimer,
       clearNavigationTimer,
+      isInNavigationZone,
     ]
   );
 
@@ -378,15 +386,18 @@ const BinderPage = () => {
         document.removeEventListener("mousemove", handleMouseMove);
       };
     }
-  }, [activeCard, isInNavigationZone, canGoPrev, canGoNext]);
+  }, [activeCard, handleMouseMove]);
 
   // Drag and drop handlers
   const handleDragStart = (event) => {
     const { active } = event;
     const cardData = active.data.current;
 
+    console.log("Drag start:", cardData);
+
     if (cardData?.type === "card") {
       setActiveCard(cardData.card);
+      activeDragDataRef.current = cardData; // Store drag data persistently
       // Prevent document scrolling during drag
       document.body.style.overflow = "hidden";
       document.body.style.touchAction = "none";
@@ -396,9 +407,11 @@ const BinderPage = () => {
 
   const handleDragEnd = async (event) => {
     const { active, over } = event;
-    setActiveCard(null);
 
-    // Clear navigation timer
+    console.log("handleDragEnd - stored drag data:", activeDragDataRef.current);
+    console.log("handleDragEnd - active.data.current:", active?.data?.current);
+
+    // Clear navigation timer first (before any early returns)
     clearNavigationTimer();
 
     // Restore document scrolling
@@ -406,30 +419,72 @@ const BinderPage = () => {
     document.body.style.touchAction = "";
     document.body.style.userSelect = "";
 
-    if (!active || !over || !currentBinder) {
+    // Clear active card state
+    setActiveCard(null);
+
+    if (!active || !currentBinder) {
+      console.log("Drag ended - no active item or current binder");
+      activeDragDataRef.current = null; // Clear stored data
       return;
     }
 
-    const activeData = active.data.current;
+    if (!over) {
+      console.log("Drag ended - no drop target");
+      activeDragDataRef.current = null; // Clear stored data
+      return;
+    }
+
+    const activeData = active.data.current?.type
+      ? active.data.current
+      : activeDragDataRef.current; // Use stored data if original is empty or missing type
     const overData = over.data.current;
+
+    console.log("Drag end data:", {
+      activeType: activeData?.type,
+      activePosition: activeData?.position,
+      overType: overData?.type,
+      overPosition: overData?.position,
+      usingStoredData:
+        !active.data.current?.type && !!activeDragDataRef.current,
+      hasActiveDragData: !!activeDragDataRef.current,
+      hasActiveDataCurrent: !!active.data.current,
+      activeDataCurrentType: active.data.current?.type,
+    });
 
     // Only handle card-to-slot drops
     if (activeData?.type === "card" && overData?.type === "slot") {
       const fromPosition = activeData.position;
       const toPosition = overData.position;
 
+      console.log(
+        `Attempting to move card from position ${fromPosition} to ${toPosition}`
+      );
+
       if (fromPosition !== toPosition) {
         try {
           await moveCard(currentBinder.id, fromPosition, toPosition);
+          console.log("Card move successful");
         } catch (error) {
           console.error("Failed to move card:", error);
+          toast.error("Failed to move card");
         }
+      } else {
+        console.log("Same position - no move needed");
       }
+    } else {
+      console.log("Invalid drag/drop combination:", {
+        activeType: activeData?.type,
+        overType: overData?.type,
+      });
     }
+
+    // Clear stored drag data
+    activeDragDataRef.current = null;
   };
 
   const handleDragCancel = () => {
     setActiveCard(null);
+    activeDragDataRef.current = null; // Clear stored data
 
     // Clear navigation timer
     clearNavigationTimer();
@@ -508,6 +563,15 @@ const BinderPage = () => {
           onDragStart={handleDragStart}
           onDragEnd={handleDragEnd}
           onDragCancel={handleDragCancel}
+          onDragOver={(event) => {
+            // Debug collision detection during drag
+            if (event.over) {
+              console.log("Drag over:", {
+                overId: event.over.id,
+                overData: event.over.data.current,
+              });
+            }
+          }}
         >
           <div
             className={`flex items-center justify-center flex-1 drag-container ${

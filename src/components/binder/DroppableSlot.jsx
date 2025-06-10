@@ -23,7 +23,9 @@ const DroppableSlot = ({
   });
 
   // Check if we're dragging a card and hovering over a slot with a card (swap scenario)
-  const isDraggingCard = active?.data?.current?.type === "card";
+  const isDraggingCard =
+    active?.data?.current?.type === "card" ||
+    (active && !active.data?.current?.type);
   const isSwapHover = isOver && isDraggingCard && card;
   const isEmptySlotHover = isOver && isDraggingCard && !card;
 
