@@ -216,14 +216,96 @@ service cloud.firestore {
       // Users can read their own usage records
       allow read: if request.auth != null && request.auth.uid == resource.data.userId;
       
-      // Users can create/update their own usage records (for tracking)
-      allow create, update: if request.auth != null && request.auth.uid == resource.data.userId;
+      // Users can create their own usage records (for tracking)
+      allow create: if request.auth != null && 
+                       request.auth.uid == request.resource.data.userId &&
+                       request.resource.data.keys().hasAll(['userId', 'ruleId', 'resource']) &&
+                       isValidStringLength(request.resource.data.ruleId, 50) &&
+                       isValidStringLength(request.resource.data.resource, 50);
+      
+      // Users can update their own usage records (for tracking)
+      allow update: if request.auth != null && 
+                       request.auth.uid == resource.data.userId &&
+                       request.auth.uid == request.resource.data.userId;
       
       // Owner can read all usage records (for analytics)
       allow read: if isOwner();
       
       // Owner can write usage records (for management and cleanup)
       allow write: if isOwner();
+    }
+
+    // Contact System Collections
+    
+    // Direct Messages - Users can read/write their own threads, owners can access all
+    match /directMessages/{userId} {
+      // Users can read/write their own message thread
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Owners can read/write all message threads (for admin purposes)
+      allow read, write: if isOwner();
+      
+      // Subcollection for individual messages
+      match /messages/{messageId} {
+        // Users can read/write messages in their own thread
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+        
+        // Owners can read/write all messages (for admin replies)
+        allow read, write: if isOwner();
+        
+        // Validate message content on create/update with rate limiting
+        allow create, update: if request.auth != null && 
+                                 request.resource.data.keys().hasAll(['senderId', 'text']) &&
+                                 (request.resource.data.senderId == request.auth.uid || 
+                                  request.resource.data.senderId == 'admin') &&
+                                 isValidStringLength(request.resource.data.text, 2000) &&
+                                 // Rate limiting: allow admin messages without restriction, limit user messages
+                                 (request.resource.data.senderId == 'admin' || 
+                                  (!exists(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_direct_messages')) ||
+                                   get(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_direct_messages')).data.get('count', 0) < 5));
+      }
+    }
+    
+    // Feature Requests - Users can create and read their own, owners can access all
+    match /featureRequests/{requestId} {
+      // Users can read their own feature requests
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Users can create feature requests with rate limiting
+      allow create: if request.auth != null && 
+                       request.resource.data.userId == request.auth.uid &&
+                       request.resource.data.keys().hasAll(['userId', 'userName', 'title', 'description', 'status', 'upvotes']) &&
+                       isValidStringLength(request.resource.data.title, 100) &&
+                       isValidStringLength(request.resource.data.description, 1000) &&
+                       request.resource.data.status == 'received' &&
+                       request.resource.data.upvotes == 0 &&
+                       // Rate limiting: max 3 feature requests per day
+                       (!exists(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_feature_requests')) ||
+                        get(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_feature_requests')).data.get('count', 0) < 3);
+      
+      // Owners can read/write all feature requests (for management)
+      allow read, write: if isOwner();
+    }
+    
+    // Bug Reports - Users can create and read their own, owners can access all
+    match /bugReports/{reportId} {
+      // Users can read their own bug reports
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      
+      // Users can create bug reports with rate limiting
+      allow create: if request.auth != null && 
+                       request.resource.data.userId == request.auth.uid &&
+                       request.resource.data.keys().hasAll(['userId', 'userName', 'title', 'description', 'status', 'priority']) &&
+                       isValidStringLength(request.resource.data.title, 100) &&
+                       isValidStringLength(request.resource.data.description, 1000) &&
+                       request.resource.data.status == 'new' &&
+                       request.resource.data.priority in ['low', 'medium', 'high'] &&
+                       // Rate limiting: max 10 bug reports per day
+                       (!exists(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_bug_reports')) ||
+                        get(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_bug_reports')).data.get('count', 0) < 10);
+      
+      // Owners can read/write all bug reports (for management)
+      allow read, write: if isOwner();
     }
 
     // Deny all other collections/documents

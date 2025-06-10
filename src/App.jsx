@@ -25,6 +25,7 @@ import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Create a client for TanStack Query
@@ -63,6 +64,9 @@ const App = () => {
 
                   {/* Privacy Policy - Accessible to everyone */}
                   <Route path="privacy" element={<PrivacyPolicyPage />} />
+
+                  {/* Contact - Accessible to everyone */}
+                  <Route path="contact" element={<ContactPage />} />
 
                   {/* Auth Routes - Only accessible when not logged in */}
                   <Route element={<PublicRoute />}>

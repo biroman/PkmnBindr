@@ -7,6 +7,7 @@ import {
   ShareIcon,
   TrashIcon,
   Squares2X2Icon,
+  DocumentArrowDownIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -48,6 +49,7 @@ const BinderToolbar = ({
   onExport,
   onClearBinder,
   onPageOverview,
+  onPdfExport,
   currentBinder,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
@@ -79,6 +81,13 @@ const BinderToolbar = ({
             icon={Squares2X2Icon}
             onClick={() => handleToolClick("overview", onPageOverview)}
             title="Page Overview"
+          />
+
+          {/* PDF Export */}
+          <ToolbarButton
+            icon={DocumentArrowDownIcon}
+            onClick={() => handleToolClick("pdf", onPdfExport)}
+            title="Export as PDF"
           />
 
           {/* Divider */}

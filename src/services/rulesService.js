@@ -73,8 +73,15 @@ export class RulesService {
         updatedBy,
       };
 
-      // Validate updated rule
-      validateRule({ ...updatedRule, updatedAt: new Date().toISOString() });
+      // Validate updated rule - convert timestamps to strings for validation
+      const ruleForValidation = {
+        ...updatedRule,
+        createdAt: currentRule.createdAt?.toDate
+          ? currentRule.createdAt.toDate().toISOString()
+          : currentRule.createdAt,
+        updatedAt: new Date().toISOString(),
+      };
+      validateRule(ruleForValidation);
 
       await updateDoc(ruleRef, updatedRule);
       return true;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth, useOwner } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
@@ -6,9 +6,12 @@ import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
 import RulesExample from "../components/examples/RulesExample";
 import BinderLimitsManager from "../components/admin/BinderLimitsManager";
+import ContactLimitsManager from "../components/admin/ContactLimitsManager";
+import { contactService } from "../services/ContactService";
 import { setupOwnerRole } from "../scripts/setupOwner";
 import { setupDefaultBinderLimits } from "../scripts/setupDefaultBinderLimits";
 import { setupFirstOwner } from "../scripts/setupFirstOwner";
+import { setupDefaultContactLimits } from "../scripts/setupContactLimits";
 import {
   fetchAllUsers,
   fetchAllUsersWithStats,
@@ -57,6 +60,16 @@ const AdminPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("all");
   const [recalculatingStats, setRecalculatingStats] = useState(false);
+
+  // Contact system state
+  const [contactData, setContactData] = useState({
+    messageThreads: [],
+    featureRequests: [],
+    bugReports: [],
+  });
+  const [contactLoading, setContactLoading] = useState(true);
+  const [selectedThread, setSelectedThread] = useState(null);
+  const [replyText, setReplyText] = useState("");
 
   // Calculate system statistics
   useEffect(() => {
@@ -125,6 +138,77 @@ const AdminPage = () => {
     }
   }, [user]);
 
+  // Load contact data
+  useEffect(() => {
+    const loadContactData = async () => {
+      try {
+        setContactLoading(true);
+        const [messageThreads, featureRequests, bugReports] = await Promise.all(
+          [
+            contactService.getAllMessageThreads(),
+            contactService.getAllFeatureRequests(),
+            contactService.getAllBugReports(),
+          ]
+        );
+
+        setContactData({
+          messageThreads,
+          featureRequests,
+          bugReports,
+        });
+      } catch (error) {
+        console.error("Error loading contact data:", error);
+      } finally {
+        setContactLoading(false);
+      }
+    };
+
+    if (isOwner) {
+      loadContactData();
+    }
+  }, [isOwner]);
+
+  // Contact management functions
+  const handleReplyToMessage = async (threadId) => {
+    if (!replyText.trim()) return;
+
+    try {
+      await contactService.replyToMessage(threadId, replyText);
+      setReplyText("");
+      setSelectedThread(null);
+
+      // Reload contact data
+      const updatedThreads = await contactService.getAllMessageThreads();
+      setContactData((prev) => ({ ...prev, messageThreads: updatedThreads }));
+    } catch (error) {
+      console.error("Error replying to message:", error);
+    }
+  };
+
+  const handleUpdateFeatureStatus = async (requestId, status) => {
+    try {
+      await contactService.updateFeatureRequestStatus(requestId, status);
+
+      // Reload feature requests
+      const updatedRequests = await contactService.getAllFeatureRequests();
+      setContactData((prev) => ({ ...prev, featureRequests: updatedRequests }));
+    } catch (error) {
+      console.error("Error updating feature request:", error);
+    }
+  };
+
+  const handleUpdateBugStatus = async (reportId, status) => {
+    try {
+      await contactService.updateBugReportStatus(reportId, status);
+
+      // Reload bug reports
+      const updatedReports = await contactService.getAllBugReports();
+      setContactData((prev) => ({ ...prev, bugReports: updatedReports }));
+    } catch (error) {
+      console.error("Error updating bug report:", error);
+    }
+  };
+
   const handleSetupOwnerRole = async () => {
     if (user?.uid) {
       const result = await setupFirstOwner(user);
@@ -153,6 +237,28 @@ const AdminPage = () => {
               result.limits?.maxCardsPerBinder || 500
             }\n` +
             `Max Pages per Binder: ${result.limits?.maxPagesPerBinder || 50}`
+        );
+      } else {
+        alert(`❌ ${result.message}\n\nCheck console for details.`);
+      }
+    }
+  };
+
+  const handleSetupContactLimits = async () => {
+    if (user?.uid) {
+      const result = await setupDefaultContactLimits(user.uid);
+      if (result.success) {
+        alert(
+          `✅ ${result.message}\n\n` +
+            `Direct Messages: ${
+              result.limits?.directMessages?.limit || 5
+            } per ${result.limits?.directMessages?.window || "hour"}\n` +
+            `Feature Requests: ${
+              result.limits?.featureRequests?.limit || 3
+            } per ${result.limits?.featureRequests?.window || "day"}\n` +
+            `Bug Reports: ${result.limits?.bugReports?.limit || 10} per ${
+              result.limits?.bugReports?.window || "day"
+            }`
         );
       } else {
         alert(`❌ ${result.message}\n\nCheck console for details.`);
@@ -360,6 +466,18 @@ const AdminPage = () => {
       icon: ShieldCheckIcon,
       description: "Advanced rule management",
     },
+    {
+      id: "contact",
+      name: "Contact Management",
+      icon: BellIcon,
+      description: "Manage user messages, feature requests, and bug reports",
+    },
+    {
+      id: "contact-limits",
+      name: "Contact Limits",
+      icon: ClockIcon,
+      description: "Configure rate limits for contact features",
+    },
   ];
 
   const renderDashboard = () => (
@@ -491,6 +609,22 @@ const AdminPage = () => {
             </div>
             <p className="text-sm text-gray-600">
               Initialize default binder limits (5 binders, 500 cards)
+            </p>
+          </button>
+
+          <button
+            onClick={handleSetupContactLimits}
+            className="text-left p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:shadow-md transition-all group"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <ClockIcon className="w-6 h-6 text-orange-600" />
+              <h3 className="font-medium text-gray-900 group-hover:text-orange-600">
+                Setup Contact Limits
+              </h3>
+            </div>
+            <p className="text-sm text-gray-600">
+              Initialize default contact rate limits (5 msgs/hr, 3 features/day,
+              10 bugs/day)
             </p>
           </button>
 
@@ -1086,6 +1220,595 @@ const AdminPage = () => {
     </div>
   );
 
+  // Status color helpers for the new design
+  const getContactStatusColor = (status, type) => {
+    const colors = {
+      bugs: {
+        new: "bg-red-100 text-red-800 border-red-200",
+        investigating: "bg-yellow-100 text-yellow-800 border-yellow-200",
+        resolved: "bg-green-100 text-green-800 border-green-200",
+        "wont-fix": "bg-gray-100 text-gray-600 border-gray-200",
+      },
+      features: {
+        received: "bg-blue-100 text-blue-800 border-blue-200",
+        "in-progress": "bg-orange-100 text-orange-800 border-orange-200",
+        completed: "bg-green-100 text-green-800 border-green-200",
+        rejected: "bg-gray-100 text-gray-600 border-gray-200",
+      },
+      messages: {
+        unread: "bg-blue-50 border-blue-200",
+        read: "bg-white border-gray-200",
+      },
+    };
+    return (
+      colors[type]?.[status] || "bg-gray-100 text-gray-600 border-gray-200"
+    );
+  };
+
+  const getPriorityColor = (priority) => {
+    const colors = {
+      high: "bg-red-500 text-white",
+      medium: "bg-yellow-500 text-white",
+      low: "bg-green-500 text-white",
+    };
+    return colors[priority] || "bg-gray-500 text-white";
+  };
+
+  const formatTimeAgo = (timestamp) => {
+    if (!timestamp) return "Unknown";
+    const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 60) return `${diffMins} minutes ago`;
+    if (diffHours < 24) return `${diffHours} hours ago`;
+    if (diffDays < 7) return `${diffDays} days ago`;
+    return date.toLocaleDateString();
+  };
+
+  const [contactFilter, setContactFilter] = useState("all");
+  const [contactSort, setContactSort] = useState("newest");
+
+  const renderContactManagement = () => (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 text-white">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold mb-2">Contact Management</h1>
+            <p className="text-blue-100">
+              Manage user communications, feature requests, and bug reports
+            </p>
+          </div>
+          <div className="flex gap-2">
+            <select
+              value={contactFilter}
+              onChange={(e) => setContactFilter(e.target.value)}
+              className="px-3 py-2 rounded-lg text-gray-700 text-sm border-0 focus:ring-2 focus:ring-white/20"
+            >
+              <option value="all">All Items</option>
+              <option value="messages">Messages</option>
+              <option value="features">Features</option>
+              <option value="bugs">Bugs</option>
+              <option value="unread">Unread</option>
+            </select>
+            <select
+              value={contactSort}
+              onChange={(e) => setContactSort(e.target.value)}
+              className="px-3 py-2 rounded-lg text-gray-700 text-sm border-0 focus:ring-2 focus:ring-white/20"
+            >
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="priority">Priority</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      {contactLoading ? (
+        <div className="text-center py-12">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 font-medium">
+            Loading contact data...
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {/* Enhanced Summary Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-3 bg-blue-100 rounded-lg">
+                  <BellIcon className="w-6 h-6 text-blue-600" />
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-gray-900">
+                    {contactData.messageThreads.length}
+                  </p>
+                  <p className="text-sm text-gray-600">Messages</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Unread</span>
+                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                  {contactData.messageThreads.filter((t) => t.unread).length}
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-3 bg-green-100 rounded-lg">
+                  <InformationCircleIcon className="w-6 h-6 text-green-600" />
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-gray-900">
+                    {contactData.featureRequests.length}
+                  </p>
+                  <p className="text-sm text-gray-600">Features</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Pending</span>
+                <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+                  {
+                    contactData.featureRequests.filter(
+                      (r) => r.status === "received"
+                    ).length
+                  }
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-3 bg-red-100 rounded-lg">
+                  <ExclamationTriangleIcon className="w-6 h-6 text-red-600" />
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-gray-900">
+                    {contactData.bugReports.length}
+                  </p>
+                  <p className="text-sm text-gray-600">Bugs</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">New</span>
+                <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
+                  {
+                    contactData.bugReports.filter((r) => r.status === "new")
+                      .length
+                  }
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-3 bg-purple-100 rounded-lg">
+                  <CheckCircleIcon className="w-6 h-6 text-purple-600" />
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-gray-900">
+                    {contactData.bugReports.filter(
+                      (r) => r.status === "resolved"
+                    ).length +
+                      contactData.featureRequests.filter(
+                        (r) => r.status === "completed"
+                      ).length}
+                  </p>
+                  <p className="text-sm text-gray-600">Resolved</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">This month</span>
+                <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">
+                  Active
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Direct Messages - Chat-like Design */}
+          {(contactFilter === "all" ||
+            contactFilter === "messages" ||
+            contactFilter === "unread") && (
+            <div className="bg-white rounded-xl border border-gray-200">
+              <div className="px-6 py-4 border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                    <BellIcon className="w-5 h-5 text-blue-600" />
+                    Direct Messages
+                  </h2>
+                  <span className="text-sm text-gray-500">
+                    {contactData.messageThreads.length} conversations
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                {contactData.messageThreads.length > 0 ? (
+                  <div className="space-y-4">
+                    {contactData.messageThreads
+                      .filter((thread) =>
+                        contactFilter === "unread" ? thread.unread : true
+                      )
+                      .map((thread) => (
+                        <div
+                          key={thread.id}
+                          className={`rounded-lg border-2 transition-all hover:shadow-md ${getContactStatusColor(
+                            thread.unread ? "unread" : "read",
+                            "messages"
+                          )}`}
+                        >
+                          <div className="p-4">
+                            <div className="flex items-start gap-4">
+                              {/* User Avatar */}
+                              <div className="flex-shrink-0">
+                                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                  {thread.userName?.charAt(0)?.toUpperCase() ||
+                                    "U"}
+                                </div>
+                              </div>
+
+                              {/* Message Content */}
+                              <div className="flex-grow min-w-0">
+                                <div className="flex items-center justify-between mb-2">
+                                  <div>
+                                    <h3 className="font-semibold text-gray-900">
+                                      {thread.userName || "Anonymous User"}
+                                    </h3>
+                                    <p className="text-sm text-gray-600">
+                                      {thread.userEmail}
+                                    </p>
+                                  </div>
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm text-gray-500">
+                                      {formatTimeAgo(thread.timestamp)}
+                                    </span>
+                                    {thread.unread && (
+                                      <span className="bg-blue-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                                        New
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                <div className="bg-gray-50 rounded-lg p-3 mb-3">
+                                  <p className="text-gray-700">
+                                    {thread.lastMessage}
+                                  </p>
+                                </div>
+
+                                <div className="flex gap-2">
+                                  <Button
+                                    size="sm"
+                                    onClick={() =>
+                                      setSelectedThread(
+                                        selectedThread?.id === thread.id
+                                          ? null
+                                          : thread
+                                      )
+                                    }
+                                  >
+                                    {selectedThread?.id === thread.id
+                                      ? "Hide Reply"
+                                      : "Reply"}
+                                  </Button>
+                                  {thread.unread && (
+                                    <Button
+                                      size="sm"
+                                      variant="secondary"
+                                      onClick={() =>
+                                        contactService.markThreadAsRead(
+                                          thread.id
+                                        )
+                                      }
+                                    >
+                                      Mark as Read
+                                    </Button>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Reply Section */}
+                            {selectedThread?.id === thread.id && (
+                              <div className="mt-4 pt-4 border-t border-gray-200">
+                                <div className="flex gap-3">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                    A
+                                  </div>
+                                  <div className="flex-grow">
+                                    <textarea
+                                      value={replyText}
+                                      onChange={(e) =>
+                                        setReplyText(e.target.value)
+                                      }
+                                      rows={3}
+                                      placeholder="Type your admin reply..."
+                                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    />
+                                    <div className="flex gap-2 mt-2">
+                                      <Button
+                                        size="sm"
+                                        onClick={() =>
+                                          handleReplyToMessage(thread.id)
+                                        }
+                                        disabled={!replyText.trim()}
+                                      >
+                                        Send Reply
+                                      </Button>
+                                      <Button
+                                        size="sm"
+                                        variant="secondary"
+                                        onClick={() => {
+                                          setSelectedThread(null);
+                                          setReplyText("");
+                                        }}
+                                      >
+                                        Cancel
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8">
+                    <BellIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-500 font-medium">No messages yet</p>
+                    <p className="text-gray-400 text-sm">
+                      Messages from users will appear here
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Feature Requests - Kanban-like Design */}
+          {(contactFilter === "all" || contactFilter === "features") && (
+            <div className="bg-white rounded-xl border border-gray-200">
+              <div className="px-6 py-4 border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                    <InformationCircleIcon className="w-5 h-5 text-green-600" />
+                    Feature Requests
+                  </h2>
+                  <span className="text-sm text-gray-500">
+                    {contactData.featureRequests.length} requests
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                {contactData.featureRequests.length > 0 ? (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {contactData.featureRequests.map((request) => (
+                      <div
+                        key={request.id}
+                        className={`rounded-lg border-2 p-4 transition-all hover:shadow-lg ${getContactStatusColor(
+                          request.status,
+                          "features"
+                        )}`}
+                      >
+                        {/* Request Header */}
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex-grow">
+                            <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2">
+                              {request.title}
+                            </h3>
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                                {request.userName?.charAt(0)?.toUpperCase() ||
+                                  "U"}
+                              </div>
+                              <span className="text-sm text-gray-600">
+                                {request.userName}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-col items-end gap-1">
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getContactStatusColor(
+                                request.status,
+                                "features"
+                              )}`}
+                            >
+                              {request.status.replace("-", " ").toUpperCase()}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Request Description */}
+                        <p className="text-sm text-gray-700 mb-4 line-clamp-3">
+                          {request.description}
+                        </p>
+
+                        {/* Request Footer */}
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-xs text-gray-500">
+                            {formatTimeAgo(request.timestamp)}
+                          </span>
+                          <div className="flex items-center gap-1 text-sm text-gray-600">
+                            <span>👍</span>
+                            <span>{request.upvotes || 0}</span>
+                          </div>
+                        </div>
+
+                        {/* Status Change */}
+                        <select
+                          value={request.status}
+                          onChange={(e) =>
+                            handleUpdateFeatureStatus(
+                              request.id,
+                              e.target.value
+                            )
+                          }
+                          className="w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        >
+                          <option value="received">📥 Received</option>
+                          <option value="in-progress">🔄 In Progress</option>
+                          <option value="completed">✅ Completed</option>
+                          <option value="rejected">❌ Rejected</option>
+                        </select>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8">
+                    <InformationCircleIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-500 font-medium">
+                      No feature requests yet
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      User feature requests will appear here
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Bug Reports - Jira-like Design */}
+          {(contactFilter === "all" || contactFilter === "bugs") && (
+            <div className="bg-white rounded-xl border border-gray-200">
+              <div className="px-6 py-4 border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                    <ExclamationTriangleIcon className="w-5 h-5 text-red-600" />
+                    Bug Reports
+                  </h2>
+                  <span className="text-sm text-gray-500">
+                    {contactData.bugReports.length} reports
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                {contactData.bugReports.length > 0 ? (
+                  <div className="space-y-4">
+                    {contactData.bugReports.map((report) => (
+                      <div
+                        key={report.id}
+                        className={`rounded-lg border-2 p-4 transition-all hover:shadow-lg ${getContactStatusColor(
+                          report.status,
+                          "bugs"
+                        )}`}
+                      >
+                        <div className="flex items-start gap-4">
+                          {/* Priority Indicator */}
+                          <div
+                            className={`w-3 h-3 rounded-full mt-2 ${getPriorityColor(
+                              report.priority
+                            )}`}
+                          ></div>
+
+                          {/* Bug Content */}
+                          <div className="flex-grow">
+                            <div className="flex items-start justify-between mb-3">
+                              <div className="flex-grow">
+                                <h3 className="font-semibold text-gray-900 mb-1">
+                                  {report.title}
+                                </h3>
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                                    {report.userName
+                                      ?.charAt(0)
+                                      ?.toUpperCase() || "U"}
+                                  </div>
+                                  <span className="text-sm text-gray-600">
+                                    {report.userName}
+                                  </span>
+                                  <span className="text-xs text-gray-400">
+                                    •
+                                  </span>
+                                  <span className="text-xs text-gray-500">
+                                    {formatTimeAgo(report.timestamp)}
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center gap-2">
+                                <span
+                                  className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(
+                                    report.priority
+                                  )}`}
+                                >
+                                  {report.priority.toUpperCase()}
+                                </span>
+                                <span
+                                  className={`px-2 py-1 rounded-full text-xs font-medium ${getContactStatusColor(
+                                    report.status,
+                                    "bugs"
+                                  )}`}
+                                >
+                                  {report.status
+                                    .replace("-", " ")
+                                    .toUpperCase()}
+                                </span>
+                              </div>
+                            </div>
+
+                            <p className="text-sm text-gray-700 mb-4">
+                              {report.description}
+                            </p>
+
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs text-gray-500">
+                                  Reported {formatTimeAgo(report.timestamp)}
+                                </span>
+                              </div>
+
+                              <select
+                                value={report.status}
+                                onChange={(e) =>
+                                  handleUpdateBugStatus(
+                                    report.id,
+                                    e.target.value
+                                  )
+                                }
+                                className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+                              >
+                                <option value="new">🆕 New</option>
+                                <option value="investigating">
+                                  🔍 Investigating
+                                </option>
+                                <option value="resolved">✅ Resolved</option>
+                                <option value="wont-fix">🚫 Won't Fix</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8">
+                    <ExclamationTriangleIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-500 font-medium">
+                      No bug reports yet
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      Bug reports from users will appear here
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -1154,9 +1877,11 @@ const AdminPage = () => {
         <div className="min-h-[600px]">
           {activeTab === "dashboard" && renderDashboard()}
           {activeTab === "binder-limits" && <BinderLimitsManager />}
+          {activeTab === "contact-limits" && <ContactLimitsManager />}
           {activeTab === "users" && renderUsers()}
           {activeTab === "system" && renderSystem()}
           {activeTab === "rules" && renderAdvancedRules()}
+          {activeTab === "contact" && renderContactManagement()}
         </div>
       </div>
     </div>

@@ -16,10 +16,15 @@ import BinderPageOverview from "../components/binder/BinderPageOverview";
 import ClearBinderModal from "../components/binder/ClearBinderModal";
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
+import pdfExportService from "../services/PdfExportService";
+import { useRules } from "../contexts/RulesContext";
+import useExportTracking from "../hooks/useExportTracking";
 
 const BinderPage = () => {
   const navigate = useNavigate();
   const { id: binderId } = useParams();
+  const { checkFeatureLimitReached, canPerformAction } = useRules();
+  const { trackExport } = useExportTracking();
   const {
     currentBinder,
     binders,
@@ -196,6 +201,41 @@ const BinderPage = () => {
     }
 
     setIsClearModalOpen(true);
+  };
+
+  const handlePdfExport = async () => {
+    if (!currentBinder) return;
+
+    try {
+      // Check if user can perform PDF exports
+      const pdfExportCheck = await canPerformAction("pdf_export");
+      if (!pdfExportCheck.allowed) {
+        toast.error(
+          pdfExportCheck.reason ||
+            "PDF export is not available for your subscription tier"
+        );
+        return;
+      }
+
+      toast.loading("Generating PDF...", { id: "pdf-export" });
+
+      // Generate PDF
+      await pdfExportService.generateBinderPdf(currentBinder, {
+        quality: 0.95,
+        format: "a4",
+        includeEmptyPages: false, // Don't include completely empty pages by default
+      });
+
+      // Track the export usage
+      await trackExport("pdf");
+
+      toast.success("PDF generated successfully!", { id: "pdf-export" });
+    } catch (error) {
+      console.error("PDF export failed:", error);
+      toast.error(`Failed to generate PDF: ${error.message}`, {
+        id: "pdf-export",
+      });
+    }
   };
 
   const confirmClearBinder = async () => {
@@ -544,6 +584,7 @@ const BinderPage = () => {
           onExport={handleExport}
           onClearBinder={handleClearBinder}
           onPageOverview={handlePageOverview}
+          onPdfExport={handlePdfExport}
           currentBinder={currentBinder}
         />
 

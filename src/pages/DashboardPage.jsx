@@ -509,7 +509,7 @@ const DashboardPage = () => {
               <Link to="/binders">
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="border-white bg-transparent text-white hover:bg-white/10"
                 >
                   Learn More
                 </Button>

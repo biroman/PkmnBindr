@@ -98,6 +98,18 @@ export const BINDER_RULE_TEMPLATES = {
     },
   },
 
+  // PDF export rate limit
+  pdf_export_rate_limit: {
+    name: "PDF Export Rate Limit",
+    description: "Limit how often users can export binders as PDF",
+    type: "rate_limit",
+    config: {
+      limit: 10, // 10 PDF exports per day
+      window: "day",
+      resource: "pdf_export",
+    },
+  },
+
   // Maximum collaborators per binder
   max_collaborators_per_binder: {
     name: "Max Collaborators per Binder",
@@ -133,6 +145,7 @@ export const BINDER_ACTION_MAPPINGS = {
   create_binder_rate: { type: "rate_limit", resource: "binder_creation" },
   add_cards_rate: { type: "rate_limit", resource: "card_addition" },
   export_binder: { type: "rate_limit", resource: "binder_export" },
+  pdf_export: { type: "rate_limit", resource: "pdf_export" },
 
   // Access-controlled features
   share_binder: { type: "access_control", resource: "binder_sharing" },
@@ -205,6 +218,11 @@ export const checkBinderLimits = {
   // Check if user can export binder
   canExportBinder: async (rulesContext, userId) => {
     return await rulesContext.canPerformAction("export_binder");
+  },
+
+  // Check if user can export PDF
+  canExportPdf: async (rulesContext, userId) => {
+    return await rulesContext.canPerformAction("pdf_export");
   },
 
   // Check if user can add collaborators

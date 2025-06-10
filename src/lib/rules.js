@@ -159,6 +159,40 @@ export const RULE_TEMPLATES = {
       requiredPermissions: ["admin_access"],
     },
   },
+
+  // Contact System Rate Limits
+  contact_message_rate_limit: {
+    name: "Direct Message Rate Limit",
+    description: "Limit how often users can send direct messages",
+    type: "rate_limit",
+    config: {
+      limit: 5, // 5 messages per hour
+      window: "hour",
+      resource: "direct_messages",
+    },
+  },
+
+  feature_request_rate_limit: {
+    name: "Feature Request Rate Limit",
+    description: "Limit how often users can submit feature requests",
+    type: "rate_limit",
+    config: {
+      limit: 3, // 3 feature requests per day
+      window: "day",
+      resource: "feature_requests",
+    },
+  },
+
+  bug_report_rate_limit: {
+    name: "Bug Report Rate Limit",
+    description: "Limit how often users can submit bug reports",
+    type: "rate_limit",
+    config: {
+      limit: 10, // 10 bug reports per day
+      window: "day",
+      resource: "bug_reports",
+    },
+  },
 };
 
 // Rule type definitions for the UI

@@ -293,6 +293,17 @@ export const RulesProvider = ({ children }) => {
         upload_file: { type: "content_limit", resource: "file_upload" },
         create_text_content: { type: "content_limit", resource: "text_input" },
 
+        // Contact actions
+        send_direct_message: {
+          type: "rate_limit",
+          resource: "direct_messages",
+        },
+        submit_feature_request: {
+          type: "rate_limit",
+          resource: "feature_requests",
+        },
+        submit_bug_report: { type: "rate_limit", resource: "bug_reports" },
+
         // Binder actions
         ...BINDER_ACTION_MAPPINGS,
       };

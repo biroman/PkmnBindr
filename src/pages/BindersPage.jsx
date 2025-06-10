@@ -632,6 +632,7 @@ const BindersPage = () => {
               const status = getBinderStatus(binder);
               const isLocalOnly = status === "local";
               const isGuestBinder = status === "guest";
+              const isGuestBinderInaccessible = isGuestBinder && user; // Only inaccessible if user is logged in
               const cardCount = Object.keys(binder.cards || {}).length;
 
               if (viewMode === "list") {
@@ -641,7 +642,7 @@ const BindersPage = () => {
                     className={`bg-white rounded-lg border transition-all hover:shadow-md border-gray-200 hover:border-gray-300 ${
                       isLocalOnly ? "border-orange-200 bg-orange-50" : ""
                     } ${
-                      isGuestBinder
+                      isGuestBinderInaccessible
                         ? "opacity-60 border-gray-300 bg-gray-50"
                         : ""
                     }`}
@@ -652,7 +653,7 @@ const BindersPage = () => {
                           <div className="flex items-center gap-3 mb-2">
                             <h3
                               className={`text-lg font-semibold truncate ${
-                                isGuestBinder
+                                isGuestBinderInaccessible
                                   ? "text-gray-500"
                                   : "text-gray-900"
                               }`}
@@ -684,7 +685,7 @@ const BindersPage = () => {
                           {binder.metadata?.description && (
                             <p
                               className={`text-sm mb-2 line-clamp-1 ${
-                                isGuestBinder
+                                isGuestBinderInaccessible
                                   ? "text-gray-400"
                                   : "text-gray-600"
                               }`}
@@ -694,7 +695,9 @@ const BindersPage = () => {
                           )}
                           <div
                             className={`flex items-center gap-4 text-sm ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-500"
+                              isGuestBinderInaccessible
+                                ? "text-gray-400"
+                                : "text-gray-500"
                             }`}
                           >
                             <span>{cardCount} cards</span>
@@ -726,9 +729,9 @@ const BindersPage = () => {
                           ) : (
                             <button
                               onClick={() => handleSelectBinder(binder)}
-                              disabled={isGuestBinder}
+                              disabled={isGuestBinderInaccessible}
                               className={`flex items-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors ${
-                                isGuestBinder
+                                isGuestBinderInaccessible
                                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                                   : "bg-blue-600 hover:bg-blue-700 text-white"
                               }`}
@@ -758,7 +761,7 @@ const BindersPage = () => {
                     className={`bg-white rounded-xl shadow-sm border transition-all hover:shadow-lg hover:-translate-y-0.5 border-gray-200 hover:border-gray-300 ${
                       isLocalOnly ? "border-orange-200 bg-orange-50" : ""
                     } ${
-                      isGuestBinder
+                      isGuestBinderInaccessible
                         ? "opacity-60 border-gray-300 bg-gray-50"
                         : ""
                     }`}
@@ -769,7 +772,9 @@ const BindersPage = () => {
                         <div className="flex items-start justify-between mb-2">
                           <h3
                             className={`text-lg font-semibold truncate ${
-                              isGuestBinder ? "text-gray-500" : "text-gray-900"
+                              isGuestBinderInaccessible
+                                ? "text-gray-500"
+                                : "text-gray-900"
                             }`}
                           >
                             {binder.metadata?.name || "Unnamed Binder"}
@@ -794,7 +799,9 @@ const BindersPage = () => {
                           {getStatusIcon(status)}
                           <span
                             className={`text-sm ${
-                              isGuestBinder ? "text-gray-400" : "text-gray-600"
+                              isGuestBinderInaccessible
+                                ? "text-gray-400"
+                                : "text-gray-600"
                             }`}
                           >
                             {getStatusText(status)}
@@ -806,7 +813,9 @@ const BindersPage = () => {
                       {binder.metadata?.description && (
                         <p
                           className={`text-sm mb-4 line-clamp-2 ${
-                            isGuestBinder ? "text-gray-400" : "text-gray-600"
+                            isGuestBinderInaccessible
+                              ? "text-gray-400"
+                              : "text-gray-600"
                           }`}
                         >
                           {binder.metadata.description}
@@ -857,15 +866,17 @@ const BindersPage = () => {
                         ) : (
                           <button
                             onClick={() => handleSelectBinder(binder)}
-                            disabled={isGuestBinder}
+                            disabled={isGuestBinderInaccessible}
                             className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors ${
-                              isGuestBinder
+                              isGuestBinderInaccessible
                                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                                 : "bg-blue-600 hover:bg-blue-700 text-white"
                             }`}
                           >
                             <EyeIcon className="w-4 h-4" />
-                            {isGuestBinder ? "Claim to Access" : "Open"}
+                            {isGuestBinderInaccessible
+                              ? "Claim to Access"
+                              : "Open"}
                           </button>
                         )}
                         <button
@@ -880,7 +891,9 @@ const BindersPage = () => {
                       <div className="mt-4 pt-4 border-t border-gray-100">
                         <div
                           className={`flex items-center justify-between text-xs ${
-                            isGuestBinder ? "text-gray-400" : "text-gray-500"
+                            isGuestBinderInaccessible
+                              ? "text-gray-400"
+                              : "text-gray-500"
                           }`}
                         >
                           <span>
