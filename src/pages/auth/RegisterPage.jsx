@@ -318,10 +318,6 @@ const RegisterPage = () => {
               />
               <Label htmlFor="agreeToTerms" className="text-sm leading-relaxed">
                 I agree to the{" "}
-                <Link to="/terms" className="text-blue-600 hover:text-blue-500">
-                  Terms of Service
-                </Link>{" "}
-                and{" "}
                 <Link
                   to="/privacy"
                   className="text-blue-600 hover:text-blue-500"
