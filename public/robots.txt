@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Allow: /binders
+Allow: /dashboard
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.json$
+
+# Allow Google and Bing bots to access everything except admin
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://pkmnbindr.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 
