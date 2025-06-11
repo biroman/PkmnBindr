@@ -65,12 +65,19 @@ const AddCardModal = ({
   };
 
   // Handle adding multiple cards (from sets) - now uses batch add
-  const handleAddCards = async (cards) => {
+  const handleAddCards = async (cards, isReplacement = false) => {
     if (!currentBinder || !Array.isArray(cards) || cards.length === 0) return;
 
     try {
       // Use batch add for much better performance
-      await batchAddCards(currentBinder.id, cards, targetPosition);
+      // Pass isReplacement for complete sets to bypass existing card count in limit check
+      await batchAddCards(
+        currentBinder.id,
+        cards,
+        targetPosition,
+        {},
+        isReplacement
+      );
     } catch (error) {
       console.error("Failed to add cards:", error);
       throw error; // Re-throw to let the caller handle the error message

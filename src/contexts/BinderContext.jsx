@@ -579,27 +579,39 @@ export const BinderProvider = ({ children }) => {
   const updateBinder = useCallback(
     async (binderId, updates) => {
       try {
-        const updatedBinder = {
-          ...updates,
-          id: binderId,
-          updatedAt: new Date().toISOString(),
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const updatedBinder = {
+            ...binder,
+            ...updates,
+            id: binderId,
+            updatedAt: new Date().toISOString(),
+          };
+
+          // Use markBinderAsModified to properly track changes for sync
+          return markBinderAsModified(
+            updatedBinder,
+            "binder_updated",
+            {
+              updates,
+              timestamp: new Date().toISOString(),
+            },
+            binder.ownerId
+          );
         };
 
-        setBinders((prev) =>
-          prev.map((binder) =>
-            binder.id === binderId ? { ...binder, ...updatedBinder } : binder
-          )
-        );
+        setBinders((prev) => prev.map(updateBinder));
 
         // Update current binder if it's the one being updated
         if (currentBinder?.id === binderId) {
-          setCurrentBinder((prev) => ({ ...prev, ...updatedBinder }));
+          setCurrentBinder((prev) => updateBinder(prev));
         }
 
         // Invalidate cache since we updated a binder
         invalidateCache();
 
-        return updatedBinder;
+        return { success: true };
       } catch (error) {
         console.error("Failed to update binder:", error);
         toast.error("Failed to update binder");
@@ -983,7 +995,13 @@ export const BinderProvider = ({ children }) => {
 
   // Batch add cards (much more efficient than adding one by one)
   const batchAddCards = useCallback(
-    async (binderId, cards, startPosition = null, metadata = {}) => {
+    async (
+      binderId,
+      cards,
+      startPosition = null,
+      metadata = {},
+      isReplacement = false
+    ) => {
       try {
         if (!cards || !Array.isArray(cards) || cards.length === 0) {
           throw new Error("Invalid cards data");
@@ -997,22 +1015,27 @@ export const BinderProvider = ({ children }) => {
         }
 
         // Check if user can add this many cards to the binder
+        // For replacement operations (complete sets), don't count existing cards
+        const currentCards = isReplacement
+          ? 0
+          : Object.keys(targetBinder.cards || {}).length;
         const canAdd = await checkBinderLimits.canAddCardsToBinder(
           { canPerformAction },
           user?.uid || "local_user",
-          targetBinder,
+          { ...targetBinder, cards: isReplacement ? {} : targetBinder.cards },
           cards.length
         );
 
         if (!canAdd.allowed) {
-          const currentCards = Object.keys(targetBinder.cards || {}).length;
           const limit = canAdd.limit || 500;
           const remainingSpace = Math.max(0, limit - currentCards);
           throw new Error(
             canAdd.reason ||
-              `Cannot add ${
-                cards.length
-              } cards! Only ${remainingSpace} slots remaining (${currentCards}/${limit} used). ${
+              `Cannot add ${cards.length} cards! ${
+                isReplacement
+                  ? `This would exceed the ${limit} card limit.`
+                  : `Only ${remainingSpace} slots remaining (${currentCards}/${limit} used).`
+              } ${
                 !user
                   ? "Sign up for more storage!"
                   : "Upgrade your plan or clear some space."
@@ -1147,6 +1170,69 @@ export const BinderProvider = ({ children }) => {
       }
     },
     [currentBinder, binders, checkBinderLimits, canPerformAction]
+  );
+
+  // Clear all cards from binder (efficient batch operation for complete set replacement)
+  const clearBinderCards = useCallback(
+    async (binderId, reason = "clear_for_replacement") => {
+      try {
+        const targetBinder =
+          binders.find((b) => b.id === binderId) || currentBinder;
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        const cardCount = Object.keys(targetBinder.cards || {}).length;
+        if (cardCount === 0) {
+          return { success: true, count: 0 }; // Already empty
+        }
+
+        console.log(`Clearing ${cardCount} cards from binder ${binderId}`);
+
+        // Single atomic operation to clear all cards
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const clearedBinder = {
+            ...binder,
+            cards: {}, // Clear all cards in one operation
+            settings: {
+              ...binder.settings,
+              pageCount: binder.settings?.minPages || 1, // Reset to minimum pages
+            },
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            clearedBinder,
+            "cards_batch_cleared",
+            {
+              reason,
+              clearedCount: cardCount,
+              timestamp: new Date().toISOString(),
+            },
+            binder.ownerId
+          );
+        };
+
+        // Update all binders atomically
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being cleared
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        toast.success(`Cleared ${cardCount} cards from binder`);
+
+        return { success: true, count: cardCount };
+      } catch (error) {
+        console.error("Failed to clear binder cards:", error);
+        toast.error("Failed to clear binder cards");
+        throw error;
+      }
+    },
+    [currentBinder, binders]
   );
 
   // Reorder pages within binder
@@ -2740,6 +2826,7 @@ export const BinderProvider = ({ children }) => {
     addCardToBinder,
     batchAddCards,
     removeCardFromBinder,
+    clearBinderCards,
     moveCard,
     moveCardOptimistic,
     batchMoveCards,

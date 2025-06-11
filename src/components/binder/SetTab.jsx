@@ -30,6 +30,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
     batchAddPages,
     getPageCount,
     removeCardFromBinder,
+    clearBinderCards,
   } = useBinderContext();
 
   const [addingSetId, setAddingSetId] = useState(null);
@@ -127,7 +128,11 @@ const SetTab = ({ currentBinder, onAddCards }) => {
     const currentCapacity = currentCardPages * gridConfig.total;
     const { usedSlots } = calculateBinderCapacity(willClear);
     const currentAvailableSlots = currentCapacity - usedSlots;
-    const slotsShortfall = neededSlots - currentAvailableSlots;
+
+    // When willClear=true, neededSlots is the total cards needed, not a shortfall
+    const slotsShortfall = willClear
+      ? neededSlots - currentCapacity // Total cards needed vs total capacity
+      : neededSlots - currentAvailableSlots; // Cards needed vs available slots
 
     if (slotsShortfall > 0) {
       // Calculate how many binder pages we need to add to get enough slots
@@ -155,23 +160,25 @@ const SetTab = ({ currentBinder, onAddCards }) => {
     const cardsToAdd = calculateTotalCards(set);
     const hasExistingCards = Object.keys(currentBinder.cards || {}).length > 0;
 
-    if (hasExistingCards) {
-      // Show warning that binder will be cleared
-      setPendingSet({ set, cardsToAdd });
-      setShowClearWarningModal(true);
-      return;
-    }
+    // Always check capacity as if binder will be cleared (since sets replace all cards)
+    const capacityInfo = calculateBinderCapacity(true);
+    const { totalSlots, availableSlots } = capacityInfo;
 
-    // No existing cards, check capacity normally
-    const { availableSlots } = calculateBinderCapacity();
     if (cardsToAdd > availableSlots) {
-      // Not enough space even with empty binder - show capacity modal
+      // Not enough space even after clearing - show capacity modal
       setPendingSet({ set, cardsToAdd });
       setShowCapacityModal(true);
       return;
     }
 
-    // Enough space - proceed with adding
+    if (hasExistingCards) {
+      // Enough space after clearing, but show warning that binder will be cleared
+      setPendingSet({ set, cardsToAdd });
+      setShowClearWarningModal(true);
+      return;
+    }
+
+    // No existing cards and enough space - proceed with adding
     await executeAddSet(set);
   };
 
@@ -189,35 +196,26 @@ const SetTab = ({ currentBinder, onAddCards }) => {
     }
 
     try {
-      // Clear the binder first - get all card positions
-      const cardPositions = Object.keys(currentBinder.cards || {}).map((pos) =>
-        parseInt(pos)
+      // Use the new efficient batch clear operation
+      const result = await clearBinderCards(
+        currentBinder.id,
+        `complete_set_replacement_${pendingSet.set.id}`
       );
 
-      // Remove cards one by one using the context method
-      for (const position of cardPositions) {
-        await removeCardFromBinder(currentBinder.id, position);
-        // Small delay to prevent overwhelming the system
-        await new Promise((resolve) => setTimeout(resolve, 5));
-      }
+      console.log(`Successfully cleared ${result.count} cards from binder`);
 
-      // Reset page count to minimum since binder is now empty
-      // This ensures the new set will calculate pages correctly
-      await updateBinderSettings(currentBinder.id, {
-        pageCount: currentBinder.settings?.minPages || 1,
-      });
-
-      toast.success(
-        `Cleared binder for dedicated ${pendingSet.set.name} collection`
-      );
-
-      // Close modal and add the set
+      // Close modal and add the set immediately
+      // No need for delays since clearBinderCards is atomic
       setShowClearWarningModal(false);
       await executeAddSet(pendingSet.set);
       setPendingSet(null);
+
+      toast.success(
+        `Replaced ${result.count} cards with ${pendingSet.set.name} collection`
+      );
     } catch (error) {
       console.error("Failed to clear binder:", error);
-      toast.error("Failed to clear binder");
+      toast.error("Failed to clear binder for replacement");
     }
   };
 
@@ -254,7 +252,8 @@ const SetTab = ({ currentBinder, onAddCards }) => {
       // Cache all cards (including reverse holos) before adding to binder
       addCardsToCache(cardsToAdd);
 
-      await onAddCards(cardsToAdd);
+      // Pass isReplacement=true for complete sets to bypass existing card count in limit check
+      await onAddCards(cardsToAdd, true);
     } catch (error) {
       console.error("Failed to add set:", error);
       toast.error(`Failed to add cards from ${set.name}`);
@@ -434,7 +433,8 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                   const totalCards = calculateTotalCards(set);
                   const hasReverseHoloBonus =
                     includeReverseHolos && totalCards > set.cardCount;
-                  const canFit = totalCards <= availableSlots;
+                  // For complete sets, check against total capacity (after clearing)
+                  const canFit = totalCards <= totalSlots;
 
                   return (
                     <div
@@ -628,57 +628,65 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                     </div>
                   </div>
 
-                  {pendingSet && (
-                    <div className="mb-6">
-                      <p className="text-sm text-gray-500 mb-4">
-                        "{pendingSet.set.name}" requires{" "}
-                        <strong>{pendingSet.cardsToAdd} slots</strong>, but your
-                        binder only has{" "}
-                        <strong>{availableSlots} available slots</strong>.
-                      </p>
+                  {pendingSet &&
+                    (() => {
+                      // Calculate capacity as if binder will be cleared for sets
+                      const clearedCapacity = calculateBinderCapacity(true);
+                      return (
+                        <div className="mb-6">
+                          <p className="text-sm text-gray-500 mb-4">
+                            "{pendingSet.set.name}" requires{" "}
+                            <strong>{pendingSet.cardsToAdd} slots</strong>, but
+                            your binder only has{" "}
+                            <strong>
+                              {clearedCapacity.totalSlots} total slots
+                            </strong>
+                            .
+                          </p>
 
-                      <div className="bg-slate-50 rounded-lg p-3 mb-4">
-                        <div className="text-xs font-medium text-slate-700 mb-2">
-                          Current Capacity
-                        </div>
-                        <div className="flex items-center justify-between text-sm">
-                          <span>Used: {usedSlots} slots</span>
-                          <span>Available: {availableSlots} slots</span>
-                        </div>
-                        <div className="mt-2 w-full bg-slate-200 rounded-full h-2">
-                          <div
-                            className="bg-slate-400 h-2 rounded-full"
-                            style={{
-                              width: `${(usedSlots / totalSlots) * 100}%`,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
+                          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <ExclamationTriangleIcon className="w-4 h-4 text-amber-600" />
+                              <div className="text-xs font-medium text-amber-800">
+                                Complete Set Addition
+                              </div>
+                            </div>
+                            <div className="text-xs text-amber-700">
+                              Adding a complete set will clear all existing
+                              cards first and use your total binder capacity of{" "}
+                              <strong>
+                                {clearedCapacity.totalSlots} slots
+                              </strong>
+                              .
+                            </div>
+                          </div>
 
-                      <div className="space-y-3">
-                        <div className="text-sm font-medium text-gray-700">
-                          Choose an option to expand capacity:
+                          <div className="space-y-3">
+                            <div className="text-sm font-medium text-gray-700">
+                              Choose an option to expand capacity:
+                            </div>
+                            {calculateExpansionOptions(
+                              pendingSet.cardsToAdd,
+                              true // Pass willClear=true for sets
+                            ).map((option, index) => (
+                              <button
+                                key={index}
+                                onClick={() => handleExpandCapacity(option)}
+                                className="w-full p-3 text-left border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                              >
+                                <div className="font-medium text-sm text-gray-900">
+                                  {option.label}
+                                </div>
+                                <div className="text-xs text-gray-500 mt-1">
+                                  New capacity: {option.newCapacity} slots (+
+                                  {option.additionalSlots})
+                                </div>
+                              </button>
+                            ))}
+                          </div>
                         </div>
-                        {calculateExpansionOptions(
-                          pendingSet.cardsToAdd - availableSlots
-                        ).map((option, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleExpandCapacity(option)}
-                            className="w-full p-3 text-left border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
-                          >
-                            <div className="font-medium text-sm text-gray-900">
-                              {option.label}
-                            </div>
-                            <div className="text-xs text-gray-500 mt-1">
-                              New capacity: {option.newCapacity} slots (+
-                              {option.additionalSlots})
-                            </div>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                      );
+                    })()}
 
                   <div className="flex justify-end space-x-3 mt-6">
                     <button

@@ -67,11 +67,11 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
     setTempName(currentName);
   }, [currentName]);
 
-  const handleSave = () => {
+  const handleApply = () => {
     const trimmedName = tempName.trim();
     if (trimmedName && trimmedName !== currentName) {
       onNameChange(trimmedName);
-      toast.success("Binder name updated!");
+      // Brief visual feedback without confusing toast
     }
     setIsEditing(false);
   };
@@ -83,10 +83,15 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      handleSave();
+      handleApply();
     } else if (e.key === "Escape") {
       handleCancel();
     }
+  };
+
+  const handleBlur = () => {
+    // Auto-apply on blur (clicking away) - modern UX pattern
+    handleApply();
   };
 
   return (
@@ -95,32 +100,26 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
         Binder Name
       </label>
       {isEditing ? (
-        <div className="space-y-2">
+        <div className="relative">
           <input
             ref={inputRef}
             type="text"
             value={tempName}
             onChange={(e) => setTempName(e.target.value)}
             onKeyDown={handleKeyPress}
-            className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            onBlur={handleBlur}
+            className="w-full px-3 py-2 pr-10 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-blue-50"
             placeholder="Enter binder name..."
           />
-          <div className="flex gap-2">
-            <button
-              onClick={handleSave}
-              disabled={!tempName.trim()}
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 disabled:bg-slate-400 text-white rounded-lg transition-colors text-sm"
-            >
-              <CheckIcon className="w-4 h-4" />
-              Save
-            </button>
-            <button
-              onClick={handleCancel}
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm"
-            >
-              <XMarkIcon className="w-4 h-4" />
-              Cancel
-            </button>
+          <button
+            onClick={handleCancel}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded transition-colors"
+            title="Cancel (Esc)"
+          >
+            <XMarkIcon className="w-4 h-4" />
+          </button>
+          <div className="mt-1 text-xs text-slate-500">
+            Press Enter to apply • Esc to cancel
           </div>
         </div>
       ) : (
