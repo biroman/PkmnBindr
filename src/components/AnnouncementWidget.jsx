@@ -14,14 +14,55 @@ const AnnouncementWidget = ({ className = "" }) => {
   const [loading, setLoading] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  // Local storage helpers
+  const VIEWED_ANNOUNCEMENTS_KEY = "pokemonapi_viewed_announcements";
+
+  const getViewedAnnouncements = () => {
+    try {
+      const viewed = localStorage.getItem(VIEWED_ANNOUNCEMENTS_KEY);
+      return viewed ? JSON.parse(viewed) : [];
+    } catch (error) {
+      console.error("Error reading viewed announcements:", error);
+      return [];
+    }
+  };
+
+  const markAnnouncementsAsViewed = (announcementIds) => {
+    try {
+      const currentViewed = getViewedAnnouncements();
+      const updatedViewed = [
+        ...new Set([...currentViewed, ...announcementIds]),
+      ];
+      localStorage.setItem(
+        VIEWED_ANNOUNCEMENTS_KEY,
+        JSON.stringify(updatedViewed)
+      );
+    } catch (error) {
+      console.error("Error marking announcements as viewed:", error);
+    }
+  };
+
+  const calculateUnreadCount = (allAnnouncements) => {
+    const viewedAnnouncements = getViewedAnnouncements();
+    const unread = allAnnouncements.filter(
+      (announcement) => !viewedAnnouncements.includes(announcement.id)
+    );
+    return unread.length;
+  };
 
   useEffect(() => {
     const loadAnnouncements = async () => {
       try {
         setLoading(true);
         const publishedAnnouncements =
-          await announcementService.getPublishedAnnouncements(5);
+          await announcementService.getPublishedAnnouncements(10); // Get more to have a good pool
         setAnnouncements(publishedAnnouncements);
+
+        // Calculate unread count
+        const unread = calculateUnreadCount(publishedAnnouncements);
+        setUnreadCount(unread);
       } catch (error) {
         console.error("Error loading announcements:", error);
       } finally {
@@ -31,6 +72,35 @@ const AnnouncementWidget = ({ className = "" }) => {
 
     loadAnnouncements();
   }, []);
+
+  const handleToggleExpanded = () => {
+    const newExpanded = !isExpanded;
+    setIsExpanded(newExpanded);
+
+    // When expanding, mark visible announcements as viewed
+    if (newExpanded && announcements.length > 0) {
+      const visibleAnnouncements = announcements.slice(0, 2); // Only first 2 are visible initially
+      const announcementIds = visibleAnnouncements.map((a) => a.id);
+      markAnnouncementsAsViewed(announcementIds);
+
+      // Update unread count
+      const newUnreadCount = calculateUnreadCount(announcements);
+      setUnreadCount(newUnreadCount);
+    }
+  };
+
+  const handleShowMore = (e) => {
+    e.stopPropagation();
+    const newShowAll = !showAll;
+    setShowAll(newShowAll);
+
+    // If showing all, mark all announcements as viewed
+    if (newShowAll && announcements.length > 0) {
+      const announcementIds = announcements.map((a) => a.id);
+      markAnnouncementsAsViewed(announcementIds);
+      setUnreadCount(0);
+    }
+  };
 
   const formatTimeAgo = (timestamp) => {
     if (!timestamp) return "Unknown";
@@ -105,9 +175,10 @@ const AnnouncementWidget = ({ className = "" }) => {
     return null;
   };
 
+  // Show max 2 announcements initially, all when showAll is true
   const displayedAnnouncements = showAll
     ? announcements
-    : announcements.slice(0, 3);
+    : announcements.slice(0, 2);
 
   if (loading) {
     return (
@@ -137,14 +208,16 @@ const AnnouncementWidget = ({ className = "" }) => {
       {/* Header */}
       <div
         className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={handleToggleExpanded}
       >
         <div className="flex items-center gap-3">
           <MegaphoneIcon className="w-5 h-5 text-purple-600" />
           <h3 className="font-semibold text-gray-900">What's New</h3>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-            {announcements.length}
-          </span>
+          {unreadCount > 0 && (
+            <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full text-xs font-bold bg-red-500 text-white">
+              {unreadCount}
+            </span>
+          )}
         </div>
         {isExpanded ? (
           <ChevronUpIcon className="w-5 h-5 text-gray-400" />
@@ -200,18 +273,15 @@ const AnnouncementWidget = ({ className = "" }) => {
           </div>
 
           {/* Show More/Less Button */}
-          {announcements.length > 3 && (
+          {announcements.length > 2 && (
             <div className="mt-4 pt-3 border-t border-gray-100">
               <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowAll(!showAll);
-                }}
+                onClick={handleShowMore}
                 className="w-full text-sm text-purple-600 hover:text-purple-800 font-medium"
               >
                 {showAll
                   ? "Show Less"
-                  : `Show ${announcements.length - 3} More`}
+                  : `Show ${announcements.length - 2} More`}
               </button>
             </div>
           )}

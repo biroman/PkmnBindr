@@ -41,6 +41,7 @@ import {
   ArrowTrendingUpIcon,
   CpuChipIcon,
   MegaphoneIcon,
+  ArrowPathIcon,
 } from "@heroicons/react/24/outline";
 import {
   MessageCircle,
@@ -54,6 +55,56 @@ import {
   Clock,
   User,
 } from "lucide-react";
+
+// Cache duration: 10 minutes
+const CACHE_DURATION = 10 * 60 * 1000;
+
+// Cache keys
+const CACHE_KEYS = {
+  USERS: "admin_users_cache",
+  CONTACT: "admin_contact_cache",
+  ANNOUNCEMENTS: "admin_announcements_cache",
+};
+
+// Cache helper functions
+const getCachedData = (key) => {
+  try {
+    const cached = localStorage.getItem(key);
+    if (!cached) return null;
+
+    const { data, timestamp } = JSON.parse(cached);
+    const now = Date.now();
+
+    if (now - timestamp > CACHE_DURATION) {
+      localStorage.removeItem(key);
+      return null;
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error reading cache:", error);
+    localStorage.removeItem(key);
+    return null;
+  }
+};
+
+const setCachedData = (key, data) => {
+  try {
+    const cacheEntry = {
+      data,
+      timestamp: Date.now(),
+    };
+    localStorage.setItem(key, JSON.stringify(cacheEntry));
+  } catch (error) {
+    console.error("Error setting cache:", error);
+  }
+};
+
+const clearCache = () => {
+  Object.values(CACHE_KEYS).forEach((key) => {
+    localStorage.removeItem(key);
+  });
+};
 
 const AdminPage = () => {
   const { user } = useAuth();
@@ -109,6 +160,10 @@ const AdminPage = () => {
   const [selectedThread, setSelectedThread] = useState(null);
   const [replyText, setReplyText] = useState("");
 
+  // Cache refresh state
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [lastRefresh, setLastRefresh] = useState(null);
+
   // Calculate system statistics
   useEffect(() => {
     const calculateStats = () => {
@@ -132,13 +187,25 @@ const AdminPage = () => {
   }, [users, rules]);
 
   // Optimized fetch users with pagination
-  const loadUsers = async (page = 1, resetStats = false) => {
+  const loadUsers = async (
+    page = 1,
+    resetStats = false,
+    forceRefresh = false
+  ) => {
     try {
       setUsersLoading(true);
 
-      // For now, we'll simulate pagination by fetching all and slicing
-      // In a real app, you'd want server-side pagination
-      const allUsers = await fetchAllUsersWithStatsAsAdmin();
+      // Check cache first (unless force refresh)
+      let allUsers = null;
+      if (!forceRefresh) {
+        allUsers = getCachedData(CACHE_KEYS.USERS);
+      }
+
+      // If no cached data or force refresh, fetch from server
+      if (!allUsers) {
+        allUsers = await fetchAllUsersWithStatsAsAdmin();
+        setCachedData(CACHE_KEYS.USERS, allUsers);
+      }
 
       // Calculate user statistics
       const stats = {
@@ -246,11 +313,20 @@ const AdminPage = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [activeDropdown]);
 
-  // Load contact data
-  useEffect(() => {
-    const loadContactData = async () => {
-      try {
-        setContactLoading(true);
+  // Load contact data with caching
+  const loadContactData = async (forceRefresh = false) => {
+    try {
+      setContactLoading(true);
+
+      // Check cache first (unless force refresh)
+      let cachedContactData = null;
+      if (!forceRefresh) {
+        cachedContactData = getCachedData(CACHE_KEYS.CONTACT);
+      }
+
+      if (cachedContactData) {
+        setContactData(cachedContactData);
+      } else {
         const [messageThreads, featureRequests, bugReports] = await Promise.all(
           [
             contactService.getAllMessageThreads(),
@@ -259,38 +335,55 @@ const AdminPage = () => {
           ]
         );
 
-        setContactData({
+        const contactDataResult = {
           messageThreads,
           featureRequests,
           bugReports,
-        });
-      } catch (error) {
-        console.error("Error loading contact data:", error);
-      } finally {
-        setContactLoading(false);
-      }
-    };
+        };
 
+        setContactData(contactDataResult);
+        setCachedData(CACHE_KEYS.CONTACT, contactDataResult);
+      }
+    } catch (error) {
+      console.error("Error loading contact data:", error);
+    } finally {
+      setContactLoading(false);
+    }
+  };
+
+  useEffect(() => {
     if (isOwner) {
       loadContactData();
     }
   }, [isOwner]);
 
-  // Load announcements
-  useEffect(() => {
-    const loadAnnouncements = async () => {
-      try {
-        setAnnouncementsLoading(true);
+  // Load announcements with caching
+  const loadAnnouncements = async (forceRefresh = false) => {
+    try {
+      setAnnouncementsLoading(true);
+
+      // Check cache first (unless force refresh)
+      let cachedAnnouncements = null;
+      if (!forceRefresh) {
+        cachedAnnouncements = getCachedData(CACHE_KEYS.ANNOUNCEMENTS);
+      }
+
+      if (cachedAnnouncements) {
+        setAnnouncements(cachedAnnouncements);
+      } else {
         const allAnnouncements =
           await announcementService.getAllAnnouncements();
         setAnnouncements(allAnnouncements);
-      } catch (error) {
-        console.error("Error loading announcements:", error);
-      } finally {
-        setAnnouncementsLoading(false);
+        setCachedData(CACHE_KEYS.ANNOUNCEMENTS, allAnnouncements);
       }
-    };
+    } catch (error) {
+      console.error("Error loading announcements:", error);
+    } finally {
+      setAnnouncementsLoading(false);
+    }
+  };
 
+  useEffect(() => {
     if (isOwner) {
       loadAnnouncements();
     }
@@ -305,9 +398,8 @@ const AdminPage = () => {
       setReplyText("");
       setSelectedThread(null);
 
-      // Reload contact data
-      const updatedThreads = await contactService.getAllMessageThreads();
-      setContactData((prev) => ({ ...prev, messageThreads: updatedThreads }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error replying to message:", error);
     }
@@ -317,9 +409,8 @@ const AdminPage = () => {
     try {
       await contactService.updateFeatureRequestStatus(requestId, status);
 
-      // Reload feature requests
-      const updatedRequests = await contactService.getAllFeatureRequests();
-      setContactData((prev) => ({ ...prev, featureRequests: updatedRequests }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error updating feature request:", error);
     }
@@ -329,9 +420,8 @@ const AdminPage = () => {
     try {
       await contactService.updateBugReportStatus(reportId, status);
 
-      // Reload bug reports
-      const updatedReports = await contactService.getAllBugReports();
-      setContactData((prev) => ({ ...prev, bugReports: updatedReports }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error updating bug report:", error);
     }
@@ -350,9 +440,8 @@ const AdminPage = () => {
     try {
       await contactService.deleteMessageThread(threadId);
 
-      // Reload message threads
-      const updatedThreads = await contactService.getAllMessageThreads();
-      setContactData((prev) => ({ ...prev, messageThreads: updatedThreads }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error deleting message thread:", error);
     }
@@ -370,9 +459,8 @@ const AdminPage = () => {
     try {
       await contactService.deleteFeatureRequest(requestId);
 
-      // Reload feature requests
-      const updatedRequests = await contactService.getAllFeatureRequests();
-      setContactData((prev) => ({ ...prev, featureRequests: updatedRequests }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error deleting feature request:", error);
     }
@@ -390,9 +478,8 @@ const AdminPage = () => {
     try {
       await contactService.deleteBugReport(reportId);
 
-      // Reload bug reports
-      const updatedReports = await contactService.getAllBugReports();
-      setContactData((prev) => ({ ...prev, bugReports: updatedReports }));
+      // Force refresh contact data
+      await loadContactData(true);
     } catch (error) {
       console.error("Error deleting bug report:", error);
     }
@@ -490,8 +577,8 @@ const AdminPage = () => {
           );
         }
 
-        // Reload current page
-        await loadUsers(currentPage, true);
+        // Reload current page with force refresh
+        await loadUsers(currentPage, true, true);
       } else {
         alert(`❌ Stats recalculation failed: ${result.error}`);
       }
@@ -500,6 +587,35 @@ const AdminPage = () => {
       alert(`❌ Stats recalculation failed: ${error.message}`);
     } finally {
       setRecalculatingStats(false);
+    }
+  };
+
+  // Handle refresh all data
+  const handleRefreshData = async () => {
+    try {
+      setIsRefreshing(true);
+
+      // Clear cache first
+      clearCache();
+
+      // Force refresh all data
+      const refreshPromises = [];
+
+      if (user?.uid) {
+        refreshPromises.push(loadUsers(currentPage, true, true));
+      }
+
+      if (isOwner) {
+        refreshPromises.push(loadContactData(true));
+        refreshPromises.push(loadAnnouncements(true));
+      }
+
+      await Promise.all(refreshPromises);
+      setLastRefresh(new Date());
+    } catch (error) {
+      console.error("Error refreshing data:", error);
+    } finally {
+      setIsRefreshing(false);
     }
   };
 
@@ -598,8 +714,8 @@ const AdminPage = () => {
           console.warn("Unknown action:", action);
       }
 
-      // Reload users to reflect changes
-      await loadUsers(currentPage, true);
+      // Reload users to reflect changes with force refresh
+      await loadUsers(currentPage, true, true);
       setActiveDropdown(null);
     } catch (error) {
       console.error("User action error:", error);
@@ -652,8 +768,8 @@ const AdminPage = () => {
       const success = await updateUserRole(userId, newRole);
 
       if (success) {
-        // Reload current page to reflect changes
-        await loadUsers(currentPage, true);
+        // Reload current page to reflect changes with force refresh
+        await loadUsers(currentPage, true, true);
         alert(`User role updated to ${newRole}`);
       } else {
         alert(`Failed to update user role`);
@@ -680,8 +796,8 @@ const AdminPage = () => {
       const success = await updateUserStatus(userId, newStatus);
 
       if (success) {
-        // Reload current page to reflect changes
-        await loadUsers(currentPage, true);
+        // Reload current page to reflect changes with force refresh
+        await loadUsers(currentPage, true, true);
         alert(`User ${newStatus === "active" ? "activated" : "deactivated"}`);
       } else {
         alert(`Failed to update user status`);
@@ -712,25 +828,46 @@ const AdminPage = () => {
   };
 
   const formatDate = (date) => {
-    return new Intl.DateTimeFormat("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    }).format(date);
+    if (!date) return "Never";
+
+    try {
+      const dateObj = date instanceof Date ? date : new Date(date);
+      if (isNaN(dateObj.getTime())) return "Invalid Date";
+
+      return new Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }).format(dateObj);
+    } catch (error) {
+      console.error("Error formatting date:", error);
+      return "Invalid Date";
+    }
   };
 
   const getTimeAgo = (date) => {
-    const now = new Date();
-    const diff = now - date;
-    const minutes = Math.floor(diff / (1000 * 60));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    if (!date) return "Never";
 
-    if (minutes < 60) return `${minutes}m ago`;
-    if (hours < 24) return `${hours}h ago`;
-    return `${days}d ago`;
+    try {
+      const dateObj = date instanceof Date ? date : new Date(date);
+      if (isNaN(dateObj.getTime())) return "Never";
+
+      const now = new Date();
+      const diff = now - dateObj;
+      const minutes = Math.floor(diff / (1000 * 60));
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      if (minutes < 0) return "Just now";
+      if (minutes < 60) return `${minutes}m ago`;
+      if (hours < 24) return `${hours}h ago`;
+      return `${days}d ago`;
+    } catch (error) {
+      console.error("Error calculating time ago:", error);
+      return "Never";
+    }
   };
 
   if (!isOwner) {
@@ -799,12 +936,29 @@ const AdminPage = () => {
               Manage your Pokemon Binder application with powerful
               administrative tools
             </p>
+            {lastRefresh && (
+              <p className="text-blue-200 text-sm mt-2">
+                Last refreshed: {lastRefresh.toLocaleTimeString()}
+              </p>
+            )}
           </div>
-          <div className="text-right">
-            <div className="text-2xl font-bold">
-              {new Date().toLocaleDateString()}
+          <div className="text-right flex flex-col items-end gap-4">
+            <div>
+              <div className="text-2xl font-bold">
+                {new Date().toLocaleDateString()}
+              </div>
+              <div className="text-blue-200">System Status: Online</div>
             </div>
-            <div className="text-blue-200">System Status: Online</div>
+            <button
+              onClick={handleRefreshData}
+              disabled={isRefreshing}
+              className="flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <ArrowPathIcon
+                className={`w-4 h-4 ${isRefreshing ? "animate-spin" : ""}`}
+              />
+              {isRefreshing ? "Refreshing..." : "Refresh Data"}
+            </button>
           </div>
         </div>
       </div>
@@ -1947,17 +2101,26 @@ const AdminPage = () => {
 
   const formatTimeAgo = (timestamp) => {
     if (!timestamp) return "Unknown";
-    const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
-    const now = new Date();
-    const diffMs = now - date;
-    const diffMins = Math.floor(diffMs / 60000);
-    const diffHours = Math.floor(diffMs / 3600000);
-    const diffDays = Math.floor(diffMs / 86400000);
 
-    if (diffMins < 60) return `${diffMins} minutes ago`;
-    if (diffHours < 24) return `${diffHours} hours ago`;
-    if (diffDays < 7) return `${diffDays} days ago`;
-    return date.toLocaleDateString();
+    try {
+      const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+      if (isNaN(date.getTime())) return "Unknown";
+
+      const now = new Date();
+      const diffMs = now - date;
+      const diffMins = Math.floor(diffMs / 60000);
+      const diffHours = Math.floor(diffMs / 3600000);
+      const diffDays = Math.floor(diffMs / 86400000);
+
+      if (diffMins < 0) return "Just now";
+      if (diffMins < 60) return `${diffMins} minutes ago`;
+      if (diffHours < 24) return `${diffHours} hours ago`;
+      if (diffDays < 7) return `${diffDays} days ago`;
+      return date.toLocaleDateString();
+    } catch (error) {
+      console.error("Error formatting time ago:", error);
+      return "Unknown";
+    }
   };
 
   const [contactFilter, setContactFilter] = useState("all");
