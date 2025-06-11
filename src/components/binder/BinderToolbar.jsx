@@ -51,6 +51,7 @@ const BinderToolbar = ({
   onPageOverview,
   onPdfExport,
   currentBinder,
+  isPdfExporting = false,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
 
@@ -84,11 +85,24 @@ const BinderToolbar = ({
           />
 
           {/* PDF Export */}
-          <ToolbarButton
-            icon={DocumentArrowDownIcon}
-            onClick={() => handleToolClick("pdf", onPdfExport)}
-            title="Export as PDF"
-          />
+          <div className="relative flex items-center">
+            <ToolbarButton
+              icon={DocumentArrowDownIcon}
+              onClick={() => handleToolClick("pdf", onPdfExport)}
+              title="Export as PDF"
+              className={isPdfExporting ? "opacity-50 cursor-not-allowed" : ""}
+            />
+            {isPdfExporting && (
+              <div className="absolute left-full ml-3 flex items-center bg-slate-800/95 backdrop-blur-sm rounded-lg px-3 py-2 text-sm text-white shadow-lg border border-white/10">
+                <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2 flex-shrink-0" />
+                <span className="text-white/90 font-medium whitespace-nowrap">
+                  Generating PDF...
+                </span>
+                {/* Arrow pointing to button */}
+                <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45 border-l border-b border-white/10"></div>
+              </div>
+            )}
+          </div>
 
           {/* Divider */}
           <div className="h-px bg-white/20 mx-2"></div>

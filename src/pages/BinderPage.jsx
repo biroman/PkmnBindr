@@ -47,6 +47,7 @@ const BinderPage = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
+  const [isPdfExporting, setIsPdfExporting] = useState(false);
   const modalOpenRef = useRef(false); // Prevent duplicate modal opens
 
   // Edge navigation state
@@ -227,7 +228,7 @@ const BinderPage = () => {
   };
 
   const handlePdfExport = async () => {
-    if (!currentBinder) return;
+    if (!currentBinder || isPdfExporting) return;
 
     try {
       // Check if user can perform PDF exports
@@ -240,7 +241,7 @@ const BinderPage = () => {
         return;
       }
 
-      toast.loading("Generating PDF...", { id: "pdf-export" });
+      setIsPdfExporting(true);
 
       // Generate PDF
       await pdfExportService.generateBinderPdf(currentBinder, {
@@ -252,12 +253,12 @@ const BinderPage = () => {
       // Track the export usage
       await trackExport("pdf");
 
-      toast.success("PDF generated successfully!", { id: "pdf-export" });
+      toast.success("PDF generated successfully!");
     } catch (error) {
       console.error("PDF export failed:", error);
-      toast.error(`Failed to generate PDF: ${error.message}`, {
-        id: "pdf-export",
-      });
+      toast.error(`Failed to generate PDF: ${error.message}`);
+    } finally {
+      setIsPdfExporting(false);
     }
   };
 
@@ -609,6 +610,7 @@ const BinderPage = () => {
           onPageOverview={handlePageOverview}
           onPdfExport={handlePdfExport}
           currentBinder={currentBinder}
+          isPdfExporting={isPdfExporting}
         />
 
         <DndContext
