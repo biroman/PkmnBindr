@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useRef } from "react";
 import { Dialog, Transition, Tab } from "@headlessui/react";
 import { XMarkIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
@@ -15,6 +15,7 @@ const AddCardModal = ({
   const { addCardToBinder, batchAddCards } = useBinderContext();
   const [selectedCards, setSelectedCards] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
+  const closeButtonRef = useRef(null);
 
   // Reset selection when modal closes
   useEffect(() => {
@@ -82,7 +83,12 @@ const AddCardModal = ({
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={onClose}>
+      <Dialog
+        as="div"
+        className="relative z-50"
+        onClose={onClose}
+        initialFocus={closeButtonRef}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -129,8 +135,10 @@ const AddCardModal = ({
                     </p>
                   </div>
                   <button
+                    ref={closeButtonRef}
                     onClick={onClose}
-                    className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                    className="p-2 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label="Close modal"
                   >
                     <XMarkIcon className="w-5 h-5 text-slate-400" />
                   </button>
@@ -142,7 +150,7 @@ const AddCardModal = ({
                     <Tab as={Fragment}>
                       {({ selected }) => (
                         <button
-                          className={`px-6 py-3 text-sm font-medium transition-colors ${
+                          className={`px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
                             selected
                               ? "border-b-2 border-blue-500 text-blue-600 bg-white"
                               : "text-slate-600 hover:text-slate-800 hover:bg-slate-100"
@@ -155,7 +163,7 @@ const AddCardModal = ({
                     <Tab as={Fragment}>
                       {({ selected }) => (
                         <button
-                          className={`px-6 py-3 text-sm font-medium transition-colors ${
+                          className={`px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
                             selected
                               ? "border-b-2 border-blue-500 text-blue-600 bg-white"
                               : "text-slate-600 hover:text-slate-800 hover:bg-slate-100"
@@ -226,14 +234,14 @@ const AddCardModal = ({
                         <div className="flex space-x-3">
                           <button
                             onClick={onClose}
-                            className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors"
+                            className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                           >
                             Cancel
                           </button>
                           <button
                             onClick={handleAddSelectedCards}
                             disabled={selectedCards.length === 0 || isAdding}
-                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2 min-w-[120px]"
+                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                           >
                             {isAdding ? (
                               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -253,6 +261,16 @@ const AddCardModal = ({
                     </Tab.Panel>
                     <Tab.Panel>
                       {/* No footer for sets tab since each set has its own add button */}
+                      <div className="p-6 border-t border-slate-200 bg-slate-50">
+                        <div className="flex justify-end">
+                          <button
+                            onClick={onClose}
+                            className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
                     </Tab.Panel>
                   </Tab.Panels>
                 </Tab.Group>

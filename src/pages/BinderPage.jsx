@@ -47,6 +47,7 @@ const BinderPage = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
+  const modalOpenRef = useRef(false); // Prevent duplicate modal opens
 
   // Edge navigation state
   const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
@@ -122,8 +123,19 @@ const BinderPage = () => {
   };
 
   const handleSlotClick = (slotIndex) => {
+    // Prevent duplicate modal opens
+    if (modalOpenRef.current || isAddCardModalOpen) {
+      return;
+    }
+
+    modalOpenRef.current = true;
     setTargetPosition(slotIndex);
     setIsAddCardModalOpen(true);
+
+    // Reset the ref after a short delay
+    setTimeout(() => {
+      modalOpenRef.current = false;
+    }, 300);
   };
 
   // Grid size change handler
@@ -145,8 +157,19 @@ const BinderPage = () => {
 
   // Toolbar handlers
   const handleAddCard = () => {
+    // Prevent duplicate modal opens
+    if (modalOpenRef.current || isAddCardModalOpen) {
+      return;
+    }
+
+    modalOpenRef.current = true;
     setTargetPosition(null); // No specific target, add to next available slot
     setIsAddCardModalOpen(true);
+
+    // Reset the ref after a short delay
+    setTimeout(() => {
+      modalOpenRef.current = false;
+    }, 300);
   };
 
   const handleSettings = () => {
@@ -588,17 +611,6 @@ const BinderPage = () => {
           currentBinder={currentBinder}
         />
 
-        {/* Add Card Modal */}
-        <AddCardModal
-          isOpen={isAddCardModalOpen}
-          onClose={() => {
-            setIsAddCardModalOpen(false);
-            setTargetPosition(null);
-          }}
-          currentBinder={currentBinder}
-          targetPosition={targetPosition}
-        />
-
         <DndContext
           collisionDetection={closestCenter}
           onDragStart={handleDragStart}
@@ -931,7 +943,11 @@ const BinderPage = () => {
       {/* Modals */}
       <AddCardModal
         isOpen={isAddCardModalOpen}
-        onClose={() => setIsAddCardModalOpen(false)}
+        onClose={() => {
+          setIsAddCardModalOpen(false);
+          setTargetPosition(null);
+          modalOpenRef.current = false;
+        }}
         currentBinder={currentBinder}
         targetPosition={targetPosition}
       />
