@@ -304,14 +304,34 @@ class PdfExportService {
    */
   createCardPageElement(binder, pageIndex, cards, gridConfig) {
     // Calculate dynamic heights based on grid configuration
-    const headerHeight = 90; // Height for page header (including watermark and margins)
+    // Fixed calculation to include watermark text and proper margins
+    const watermarkHeight = 30; // Height for top watermark text + margin
+    const pageHeaderHeight = 90; // Height for page header with binder holes
+    const headerMargins = 35; // Total margins around header elements
+    const bottomMargin = 20; // Extra margin at bottom to prevent cutoff
+    const totalHeaderHeight =
+      watermarkHeight + pageHeaderHeight + headerMargins; // Total header space needed
     const padding = 60; // Total padding (30px on each side)
-    const availableHeight = 1100 - padding - headerHeight; // Available height for cards
+    const availableHeight = 1100 - padding - totalHeaderHeight - bottomMargin; // Available height for cards
     const gap = 8;
     const totalGapHeight = (gridConfig.rows - 1) * gap; // Total height taken by gaps
     const cardHeight = Math.floor(
       (availableHeight - totalGapHeight) / gridConfig.rows
     ); // Height per card row
+
+    // Debug logging to help troubleshoot layout issues
+    if (gridConfig.rows > 3) {
+      console.log(
+        `PDF Layout Debug - ${gridConfig.rows}x${gridConfig.cols} grid:`,
+        {
+          availableHeight,
+          cardHeight,
+          totalHeight: cardHeight * gridConfig.rows + totalGapHeight,
+          remainingSpace:
+            availableHeight - (cardHeight * gridConfig.rows + totalGapHeight),
+        }
+      );
+    }
 
     const pageDiv = document.createElement("div");
     pageDiv.style.cssText = `
@@ -359,7 +379,7 @@ class PdfExportService {
         pkmnbindr.com
       </div>
       
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb; height: ${headerHeight}px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb; height: ${pageHeaderHeight}px;">
         <div style="font-size: 16px; font-weight: 600; color: #374151;">
           Page ${pageIndex + 1}
         </div>
@@ -391,6 +411,8 @@ class PdfExportService {
         grid-template-rows: repeat(${gridConfig.rows}, ${cardHeight}px);
         gap: ${gap}px;
         height: ${availableHeight}px;
+        max-height: ${availableHeight}px;
+        overflow: hidden;
       ">
         ${cardSlots.join("")}
       </div>

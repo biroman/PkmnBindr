@@ -6,6 +6,7 @@ import { useRules } from "../contexts/RulesContext";
 import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
 import DeleteBinderModal from "../components/binder/DeleteBinderModal";
+import PublicBinderShowcase from "../components/binder/PublicBinderShowcase";
 import {
   PlusIcon,
   MagnifyingGlassIcon,
@@ -443,6 +444,9 @@ const BindersPage = () => {
 
         {/* Local Binder Warning */}
         <LocalBinderWarning />
+
+        {/* Featured Collections */}
+        <PublicBinderShowcase />
 
         {/* Search and Filters */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">

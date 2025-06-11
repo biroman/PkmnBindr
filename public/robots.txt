@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /binders
+Allow: /binders/*
 Allow: /dashboard
 Disallow: /admin
 Disallow: /admin/*
@@ -9,6 +10,7 @@ Disallow: /private/
 Disallow: /_next/
 Disallow: /static/
 Disallow: /*.json$
+Allow: /static-binders/*.json
 
 # Allow Google and Bing bots to access everything except admin
 User-agent: Googlebot

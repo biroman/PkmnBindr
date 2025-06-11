@@ -1,0 +1,6576 @@
+{
+  "id": "1749680003962-kdfe4unzw",
+  "slug": "destined-rivals",
+  "metadata": {
+    "name": "Destined Rivals",
+    "description": "",
+    "createdAt": "2025-06-11T22:13:23.962Z",
+    "tags": [
+      "Pokemon Binder",
+      "Custom Pokemon Binder",
+      "Pokemon Card Collection",
+      "Master Set Binder",
+      "Personalized Binder",
+      "Trading Card Binder",
+      "Pokemon TCG",
+      "Custom TCG Binder",
+      "Pokemon Card Holder",
+      "Destined Rivals"
+    ],
+    "coverImageUrl": null,
+    "isArchived": false,
+    "sortOrder": 0,
+    "featured": true,
+    "category": "collection",
+    "statistics": {
+      "cardCount": 244,
+      "uniqueSets": 0,
+      "cardTypes": [],
+      "lastUpdated": "2025-06-11T22:16:33.956Z"
+    }
+  },
+  "seo": {
+    "title": "Destined Rivals Master Set Binder | Pokemon Binder Collection",
+    "description": "Forge the ultimate home for your collection with the Destined Rivals Master Set Binder.",
+    "keywords": "pokemon cards, card collection, trading cards, Pokemon Binder, Custom Pokemon Binder, Pokemon Card Collection, Master Set Binder, Personalized Binder, Trading Card Binder, Pokemon TCG, Custom TCG Binder, Pokemon Card Holder, Destined Rivals",
+    "ogImage": "/static-binders/destined-rivals/preview.jpg",
+    "canonicalUrl": "/binders/destined-rivals"
+  },
+  "settings": {
+    "gridSize": "3x3",
+    "theme": "default",
+    "viewMode": "grid",
+    "autoSort": false,
+    "sortBy": "custom",
+    "showGridNumbers": false,
+    "cardBackUrl": null,
+    "minPages": 1,
+    "maxPages": 100,
+    "pageCount": 15,
+    "pageOrder": null,
+    "autoExpand": true,
+    "autoShrink": false
+  },
+  "cards": {
+    "0": {
+      "instanceId": "1749680014733-akzexv323",
+      "cardId": "sv10-1",
+      "cardData": {
+        "id": "sv10-1",
+        "name": "Ethan's Pinsir",
+        "image": "https://images.pokemontcg.io/sv10/1_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "1",
+        "artist": "GIDORA",
+        "rarity": "Uncommon",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "1": {
+      "instanceId": "1749680014733-sqb6r4eas",
+      "cardId": "sv10-2",
+      "cardData": {
+        "id": "sv10-2",
+        "name": "Yanma",
+        "image": "https://images.pokemontcg.io/sv10/2_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "2",
+        "artist": "svlt",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "2": {
+      "instanceId": "1749680014733-qgr1kgouk",
+      "cardId": "sv10-3",
+      "cardData": {
+        "id": "sv10-3",
+        "name": "Yanmega ex",
+        "image": "https://images.pokemontcg.io/sv10/3_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "3",
+        "artist": "takuyoa",
+        "rarity": "Double Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "3": {
+      "instanceId": "1749680014733-jkrg6wke1",
+      "cardId": "sv10-4",
+      "cardData": {
+        "id": "sv10-4",
+        "name": "Pineco",
+        "image": "https://images.pokemontcg.io/sv10/4_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "4",
+        "artist": "YASHIRO Nanaco",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "4": {
+      "instanceId": "1749680014733-dybtri850",
+      "cardId": "sv10-5",
+      "cardData": {
+        "id": "sv10-5",
+        "name": "Shroomish",
+        "image": "https://images.pokemontcg.io/sv10/5_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "5",
+        "artist": "IKEDA Saki",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "5": {
+      "instanceId": "1749680014733-y29fbq0o8",
+      "cardId": "sv10-6",
+      "cardData": {
+        "id": "sv10-6",
+        "name": "Breloom",
+        "image": "https://images.pokemontcg.io/sv10/6_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "6",
+        "artist": "nisimono",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "6": {
+      "instanceId": "1749680014733-2nqevv5ap",
+      "cardId": "sv10-7",
+      "cardData": {
+        "id": "sv10-7",
+        "name": "Cynthia's Roselia",
+        "image": "https://images.pokemontcg.io/sv10/7_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "7",
+        "artist": "nisimono",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "7": {
+      "instanceId": "1749680014733-xk2xbcy4i",
+      "cardId": "sv10-8",
+      "cardData": {
+        "id": "sv10-8",
+        "name": "Cynthia's Roserade",
+        "image": "https://images.pokemontcg.io/sv10/8_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "8",
+        "artist": "En Morikura",
+        "rarity": "Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "8": {
+      "instanceId": "1749680014733-47houa0ba",
+      "cardId": "sv10-9",
+      "cardData": {
+        "id": "sv10-9",
+        "name": "Mow Rotom",
+        "image": "https://images.pokemontcg.io/sv10/9_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "9",
+        "artist": "Rianti Hidayat",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "9": {
+      "instanceId": "1749680014733-io1p02lui",
+      "cardId": "sv10-10",
+      "cardData": {
+        "id": "sv10-10",
+        "name": "Shaymin",
+        "image": "https://images.pokemontcg.io/sv10/10_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "10",
+        "artist": "tono",
+        "rarity": "Uncommon",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "10": {
+      "instanceId": "1749680014733-ewo2nhhi7",
+      "cardId": "sv10-11",
+      "cardData": {
+        "id": "sv10-11",
+        "name": "Dwebble",
+        "image": "https://images.pokemontcg.io/sv10/11_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "11",
+        "artist": "Kanami Ogata",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "11": {
+      "instanceId": "1749680014733-55rgeih4j",
+      "cardId": "sv10-12",
+      "cardData": {
+        "id": "sv10-12",
+        "name": "Crustle",
+        "image": "https://images.pokemontcg.io/sv10/12_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "12",
+        "artist": "Po-Suzuki",
+        "rarity": "Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "12": {
+      "instanceId": "1749680014733-srd6x350w",
+      "cardId": "sv10-13",
+      "cardData": {
+        "id": "sv10-13",
+        "name": "Fomantis",
+        "image": "https://images.pokemontcg.io/sv10/13_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "13",
+        "artist": "mashu",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "13": {
+      "instanceId": "1749680014733-97ziciwg7",
+      "cardId": "sv10-14",
+      "cardData": {
+        "id": "sv10-14",
+        "name": "Lurantis",
+        "image": "https://images.pokemontcg.io/sv10/14_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "14",
+        "artist": "Masako Tomii",
+        "rarity": "Uncommon",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "14": {
+      "instanceId": "1749680014733-zbcmnkrqa",
+      "cardId": "sv10-15",
+      "cardData": {
+        "id": "sv10-15",
+        "name": "Team Rocket's Blipbug",
+        "image": "https://images.pokemontcg.io/sv10/15_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "15",
+        "artist": "buchi",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.733Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "15": {
+      "instanceId": "1749680014734-crego0t7w",
+      "cardId": "sv10-16",
+      "cardData": {
+        "id": "sv10-16",
+        "name": "Applin",
+        "image": "https://images.pokemontcg.io/sv10/16_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "16",
+        "artist": "Tetsu Kayama",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "16": {
+      "instanceId": "1749680014734-6pyfa827o",
+      "cardId": "sv10-17",
+      "cardData": {
+        "id": "sv10-17",
+        "name": "Dipplin",
+        "image": "https://images.pokemontcg.io/sv10/17_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "17",
+        "artist": "Shigenori Negishi",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "17": {
+      "instanceId": "1749680014734-7r8sk4867",
+      "cardId": "sv10-18",
+      "cardData": {
+        "id": "sv10-18",
+        "name": "Hydrapple",
+        "image": "https://images.pokemontcg.io/sv10/18_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "18",
+        "artist": "Anesaki Dynamic",
+        "rarity": "Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "18": {
+      "instanceId": "1749680014734-1s5x5gs9d",
+      "cardId": "sv10-19",
+      "cardData": {
+        "id": "sv10-19",
+        "name": "Team Rocket's Tarountula",
+        "image": "https://images.pokemontcg.io/sv10/19_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "19",
+        "artist": "Saboteri",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "19": {
+      "instanceId": "1749680014734-xozaaeyim",
+      "cardId": "sv10-20",
+      "cardData": {
+        "id": "sv10-20",
+        "name": "Team Rocket's Spidops",
+        "image": "https://images.pokemontcg.io/sv10/20_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "20",
+        "artist": "Taiga Kasai",
+        "rarity": "Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "20": {
+      "instanceId": "1749680014734-oxnbpw7fa",
+      "cardId": "sv10-21",
+      "cardData": {
+        "id": "sv10-21",
+        "name": "Smoliv",
+        "image": "https://images.pokemontcg.io/sv10/21_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "21",
+        "artist": "Yuka Morii",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "21": {
+      "instanceId": "1749680014734-xfchh09y7",
+      "cardId": "sv10-22",
+      "cardData": {
+        "id": "sv10-22",
+        "name": "Dolliv",
+        "image": "https://images.pokemontcg.io/sv10/22_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "22",
+        "artist": "Felicia Chen",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "22": {
+      "instanceId": "1749680014734-8nlpn3fq5",
+      "cardId": "sv10-23",
+      "cardData": {
+        "id": "sv10-23",
+        "name": "Arboliva ex",
+        "image": "https://images.pokemontcg.io/sv10/23_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "23",
+        "artist": "PLANETA Tsuji",
+        "rarity": "Double Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "23": {
+      "instanceId": "1749680014734-9zekgqwjl",
+      "cardId": "sv10-24",
+      "cardData": {
+        "id": "sv10-24",
+        "name": "Rellor",
+        "image": "https://images.pokemontcg.io/sv10/24_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "24",
+        "artist": "Toshinao Aoki",
+        "rarity": "Common",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "24": {
+      "instanceId": "1749680014734-7qv71grsh",
+      "cardId": "sv10-25",
+      "cardData": {
+        "id": "sv10-25",
+        "name": "Rabsca ex",
+        "image": "https://images.pokemontcg.io/sv10/25_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "25",
+        "artist": "N-DESIGN Inc.",
+        "rarity": "Double Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "25": {
+      "instanceId": "1749680014734-zrjvjx0ut",
+      "cardId": "sv10-26",
+      "cardData": {
+        "id": "sv10-26",
+        "name": "Teal Mask Ogerpon",
+        "image": "https://images.pokemontcg.io/sv10/26_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "26",
+        "artist": "Tomomi Ozaki",
+        "rarity": "Uncommon",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "26": {
+      "instanceId": "1749680014734-pld244fc9",
+      "cardId": "sv10-27",
+      "cardData": {
+        "id": "sv10-27",
+        "name": "Growlithe",
+        "image": "https://images.pokemontcg.io/sv10/27_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "27",
+        "artist": "ryoma uratsuka",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "27": {
+      "instanceId": "1749680014734-7pkiur5vp",
+      "cardId": "sv10-28",
+      "cardData": {
+        "id": "sv10-28",
+        "name": "Arcanine",
+        "image": "https://images.pokemontcg.io/sv10/28_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "28",
+        "artist": "Nisota Niso",
+        "rarity": "Uncommon",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "28": {
+      "instanceId": "1749680014734-rxtzizez8",
+      "cardId": "sv10-29",
+      "cardData": {
+        "id": "sv10-29",
+        "name": "Ponyta",
+        "image": "https://images.pokemontcg.io/sv10/29_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "29",
+        "artist": "Ayako Ozaki",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "29": {
+      "instanceId": "1749680014734-799wxehg5",
+      "cardId": "sv10-30",
+      "cardData": {
+        "id": "sv10-30",
+        "name": "Rapidash",
+        "image": "https://images.pokemontcg.io/sv10/30_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "30",
+        "artist": "SIE NANAHARA",
+        "rarity": "Uncommon",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "30": {
+      "instanceId": "1749680014734-j2u5dy9n0",
+      "cardId": "sv10-31",
+      "cardData": {
+        "id": "sv10-31",
+        "name": "Team Rocket's Moltres ex",
+        "image": "https://images.pokemontcg.io/sv10/31_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "31",
+        "artist": "5ban Graphics",
+        "rarity": "Double Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "31": {
+      "instanceId": "1749680014734-9q2ihkd21",
+      "cardId": "sv10-32",
+      "cardData": {
+        "id": "sv10-32",
+        "name": "Ethan's Cyndaquil",
+        "image": "https://images.pokemontcg.io/sv10/32_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "32",
+        "artist": "Susumu Maeya",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "32": {
+      "instanceId": "1749680014734-ox8j46zry",
+      "cardId": "sv10-33",
+      "cardData": {
+        "id": "sv10-33",
+        "name": "Ethan's Quilava",
+        "image": "https://images.pokemontcg.io/sv10/33_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "33",
+        "artist": "Souichirou Gunjima",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "33": {
+      "instanceId": "1749680014734-4y7jtwlef",
+      "cardId": "sv10-34",
+      "cardData": {
+        "id": "sv10-34",
+        "name": "Ethan's Typhlosion",
+        "image": "https://images.pokemontcg.io/sv10/34_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "34",
+        "artist": "danciao",
+        "rarity": "Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "34": {
+      "instanceId": "1749680014734-gdkhph5w2",
+      "cardId": "sv10-35",
+      "cardData": {
+        "id": "sv10-35",
+        "name": "Ethan's Slugma",
+        "image": "https://images.pokemontcg.io/sv10/35_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "35",
+        "artist": "Sanosuke Sakuma",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "35": {
+      "instanceId": "1749680014734-fb9ubmqqw",
+      "cardId": "sv10-36",
+      "cardData": {
+        "id": "sv10-36",
+        "name": "Ethan's Magcargo",
+        "image": "https://images.pokemontcg.io/sv10/36_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "36",
+        "artist": "kodama",
+        "rarity": "Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "36": {
+      "instanceId": "1749680014734-ji4n3v2ec",
+      "cardId": "sv10-37",
+      "cardData": {
+        "id": "sv10-37",
+        "name": "Team Rocket's Houndour",
+        "image": "https://images.pokemontcg.io/sv10/37_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "37",
+        "artist": "Krgc",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "37": {
+      "instanceId": "1749680014734-nv23oghjm",
+      "cardId": "sv10-38",
+      "cardData": {
+        "id": "sv10-38",
+        "name": "Team Rocket's Houndoom",
+        "image": "https://images.pokemontcg.io/sv10/38_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "38",
+        "artist": "Anesaki Dynamic",
+        "rarity": "Uncommon",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "38": {
+      "instanceId": "1749680014734-1nnk7fmq7",
+      "cardId": "sv10-39",
+      "cardData": {
+        "id": "sv10-39",
+        "name": "Ethan's Ho-Oh ex",
+        "image": "https://images.pokemontcg.io/sv10/39_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "39",
+        "artist": "aky CG Works",
+        "rarity": "Double Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "39": {
+      "instanceId": "1749680014734-gxs2iqbkl",
+      "cardId": "sv10-40",
+      "cardData": {
+        "id": "sv10-40",
+        "name": "Torchic",
+        "image": "https://images.pokemontcg.io/sv10/40_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "40",
+        "artist": "Tika Matsuno",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "40": {
+      "instanceId": "1749680014734-dq20daq3w",
+      "cardId": "sv10-41",
+      "cardData": {
+        "id": "sv10-41",
+        "name": "Combusken",
+        "image": "https://images.pokemontcg.io/sv10/41_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "41",
+        "artist": "yuu",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "41": {
+      "instanceId": "1749680014734-yorpvq7sr",
+      "cardId": "sv10-42",
+      "cardData": {
+        "id": "sv10-42",
+        "name": "Blaziken",
+        "image": "https://images.pokemontcg.io/sv10/42_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "42",
+        "artist": "Kazumasa Yasukuni",
+        "rarity": "Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "42": {
+      "instanceId": "1749680014734-hqw6u78ox",
+      "cardId": "sv10-43",
+      "cardData": {
+        "id": "sv10-43",
+        "name": "Heat Rotom",
+        "image": "https://images.pokemontcg.io/sv10/43_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "43",
+        "artist": "Dsuke",
+        "rarity": "Common",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "43": {
+      "instanceId": "1749680014734-zyqiu8xdz",
+      "cardId": "sv10-44",
+      "cardData": {
+        "id": "sv10-44",
+        "name": "Hearthflame Mask Ogerpon",
+        "image": "https://images.pokemontcg.io/sv10/44_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "44",
+        "artist": "HYOGONOSUKE",
+        "rarity": "Uncommon",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "44": {
+      "instanceId": "1749680014734-r8njoid6t",
+      "cardId": "sv10-45",
+      "cardData": {
+        "id": "sv10-45",
+        "name": "Misty's Psyduck",
+        "image": "https://images.pokemontcg.io/sv10/45_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "45",
+        "artist": "Yuu Nishida",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "45": {
+      "instanceId": "1749680014734-tsvzahbtt",
+      "cardId": "sv10-46",
+      "cardData": {
+        "id": "sv10-46",
+        "name": "Misty's Staryu",
+        "image": "https://images.pokemontcg.io/sv10/46_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "46",
+        "artist": "Shinya Komatsu",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "46": {
+      "instanceId": "1749680014734-7x5ullubs",
+      "cardId": "sv10-47",
+      "cardData": {
+        "id": "sv10-47",
+        "name": "Misty's Starmie",
+        "image": "https://images.pokemontcg.io/sv10/47_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "47",
+        "artist": "Natsumi Yoshida",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "47": {
+      "instanceId": "1749680014734-8kdwmdoxp",
+      "cardId": "sv10-48",
+      "cardData": {
+        "id": "sv10-48",
+        "name": "Misty's Magikarp",
+        "image": "https://images.pokemontcg.io/sv10/48_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "48",
+        "artist": "Shimaris Yukichi",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "48": {
+      "instanceId": "1749680014734-lw9uhj7pf",
+      "cardId": "sv10-49",
+      "cardData": {
+        "id": "sv10-49",
+        "name": "Misty's Gyarados",
+        "image": "https://images.pokemontcg.io/sv10/49_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "49",
+        "artist": "GOSSAN",
+        "rarity": "Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "49": {
+      "instanceId": "1749680014734-l25hw2tvt",
+      "cardId": "sv10-50",
+      "cardData": {
+        "id": "sv10-50",
+        "name": "Misty's Lapras",
+        "image": "https://images.pokemontcg.io/sv10/50_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "50",
+        "artist": "En Morikura",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "50": {
+      "instanceId": "1749680014734-92ad2khle",
+      "cardId": "sv10-51",
+      "cardData": {
+        "id": "sv10-51",
+        "name": "Team Rocket's Articuno",
+        "image": "https://images.pokemontcg.io/sv10/51_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "51",
+        "artist": "Mitsuhiro Arita",
+        "rarity": "Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "51": {
+      "instanceId": "1749680014734-rflcg206e",
+      "cardId": "sv10-52",
+      "cardData": {
+        "id": "sv10-52",
+        "name": "Cynthia's Feebas",
+        "image": "https://images.pokemontcg.io/sv10/52_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "52",
+        "artist": "kamonabe",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "52": {
+      "instanceId": "1749680014734-vt7ydfytq",
+      "cardId": "sv10-53",
+      "cardData": {
+        "id": "sv10-53",
+        "name": "Cynthia's Milotic",
+        "image": "https://images.pokemontcg.io/sv10/53_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "53",
+        "artist": "You Iribi",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "53": {
+      "instanceId": "1749680014734-vzmxcpmgc",
+      "cardId": "sv10-54",
+      "cardData": {
+        "id": "sv10-54",
+        "name": "Clamperl",
+        "image": "https://images.pokemontcg.io/sv10/54_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "54",
+        "artist": "Miki Tanaka",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "54": {
+      "instanceId": "1749680014734-wuy39jkpx",
+      "cardId": "sv10-55",
+      "cardData": {
+        "id": "sv10-55",
+        "name": "Huntail",
+        "image": "https://images.pokemontcg.io/sv10/55_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "55",
+        "artist": "Scav",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "55": {
+      "instanceId": "1749680014734-vqg6vhfrw",
+      "cardId": "sv10-56",
+      "cardData": {
+        "id": "sv10-56",
+        "name": "Gorebyss",
+        "image": "https://images.pokemontcg.io/sv10/56_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "56",
+        "artist": "Naoyo Kimura",
+        "rarity": "Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "56": {
+      "instanceId": "1749680014734-4iz44t819",
+      "cardId": "sv10-57",
+      "cardData": {
+        "id": "sv10-57",
+        "name": "Buizel",
+        "image": "https://images.pokemontcg.io/sv10/57_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "57",
+        "artist": "Ayako Ozaki",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "57": {
+      "instanceId": "1749680014734-vb5v14itc",
+      "cardId": "sv10-58",
+      "cardData": {
+        "id": "sv10-58",
+        "name": "Floatzel",
+        "image": "https://images.pokemontcg.io/sv10/58_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "58",
+        "artist": "Shibuzoh.",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "58": {
+      "instanceId": "1749680014734-7wsx6mw7g",
+      "cardId": "sv10-59",
+      "cardData": {
+        "id": "sv10-59",
+        "name": "Snover",
+        "image": "https://images.pokemontcg.io/sv10/59_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "59",
+        "artist": "Tomokazu Komiya",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "59": {
+      "instanceId": "1749680014734-81ppn6v6q",
+      "cardId": "sv10-60",
+      "cardData": {
+        "id": "sv10-60",
+        "name": "Abomasnow",
+        "image": "https://images.pokemontcg.io/sv10/60_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "60",
+        "artist": "kamonabe",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "60": {
+      "instanceId": "1749680014734-14x8tmeap",
+      "cardId": "sv10-61",
+      "cardData": {
+        "id": "sv10-61",
+        "name": "Wash Rotom",
+        "image": "https://images.pokemontcg.io/sv10/61_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "61",
+        "artist": "miki kudo",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "61": {
+      "instanceId": "1749680014734-lx7yi20bn",
+      "cardId": "sv10-62",
+      "cardData": {
+        "id": "sv10-62",
+        "name": "Arrokuda",
+        "image": "https://images.pokemontcg.io/sv10/62_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "62",
+        "artist": "OKUBO",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "62": {
+      "instanceId": "1749680014734-jjmwkmt8n",
+      "cardId": "sv10-63",
+      "cardData": {
+        "id": "sv10-63",
+        "name": "Barraskewda",
+        "image": "https://images.pokemontcg.io/sv10/63_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "63",
+        "artist": "Kyoko Umemoto",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "63": {
+      "instanceId": "1749680014734-kg37n3exd",
+      "cardId": "sv10-64",
+      "cardData": {
+        "id": "sv10-64",
+        "name": "Cetoddle",
+        "image": "https://images.pokemontcg.io/sv10/64_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "64",
+        "artist": "sui",
+        "rarity": "Common",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "64": {
+      "instanceId": "1749680014734-sad8ybedc",
+      "cardId": "sv10-65",
+      "cardData": {
+        "id": "sv10-65",
+        "name": "Cetitan ex",
+        "image": "https://images.pokemontcg.io/sv10/65_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "65",
+        "artist": "kawayoo",
+        "rarity": "Double Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "65": {
+      "instanceId": "1749680014734-tpjh7ixdl",
+      "cardId": "sv10-66",
+      "cardData": {
+        "id": "sv10-66",
+        "name": "Dondozo ex",
+        "image": "https://images.pokemontcg.io/sv10/66_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "66",
+        "artist": "N-DESIGN Inc.",
+        "rarity": "Double Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "66": {
+      "instanceId": "1749680014734-x8pqh64ae",
+      "cardId": "sv10-67",
+      "cardData": {
+        "id": "sv10-67",
+        "name": "Wellspring Mask Ogerpon",
+        "image": "https://images.pokemontcg.io/sv10/67_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "67",
+        "artist": "rika",
+        "rarity": "Uncommon",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "67": {
+      "instanceId": "1749680014734-ti1wnue1m",
+      "cardId": "sv10-68",
+      "cardData": {
+        "id": "sv10-68",
+        "name": "Electabuzz",
+        "image": "https://images.pokemontcg.io/sv10/68_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "68",
+        "artist": "Amelicart",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "68": {
+      "instanceId": "1749680014734-zno59kmqz",
+      "cardId": "sv10-69",
+      "cardData": {
+        "id": "sv10-69",
+        "name": "Electivire ex",
+        "image": "https://images.pokemontcg.io/sv10/69_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "69",
+        "artist": "PLANETA Mochizuki",
+        "rarity": "Double Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "69": {
+      "instanceId": "1749680014734-u83zhkgn8",
+      "cardId": "sv10-70",
+      "cardData": {
+        "id": "sv10-70",
+        "name": "Team Rocket's Zapdos",
+        "image": "https://images.pokemontcg.io/sv10/70_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "70",
+        "artist": "Nurikabe",
+        "rarity": "Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "70": {
+      "instanceId": "1749680014734-b5yb4g0x1",
+      "cardId": "sv10-71",
+      "cardData": {
+        "id": "sv10-71",
+        "name": "Ethan's Pichu",
+        "image": "https://images.pokemontcg.io/sv10/71_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "71",
+        "artist": "Narumi Sato",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "71": {
+      "instanceId": "1749680014734-atfkuha80",
+      "cardId": "sv10-72",
+      "cardData": {
+        "id": "sv10-72",
+        "name": "Team Rocket's Mareep",
+        "image": "https://images.pokemontcg.io/sv10/72_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "72",
+        "artist": "Teeziro",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "72": {
+      "instanceId": "1749680014734-vmli0it9n",
+      "cardId": "sv10-73",
+      "cardData": {
+        "id": "sv10-73",
+        "name": "Team Rocket's Flaaffy",
+        "image": "https://images.pokemontcg.io/sv10/73_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "73",
+        "artist": "Jerky",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "73": {
+      "instanceId": "1749680014734-ksrbtcmle",
+      "cardId": "sv10-74",
+      "cardData": {
+        "id": "sv10-74",
+        "name": "Team Rocket's Ampharos",
+        "image": "https://images.pokemontcg.io/sv10/74_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "74",
+        "artist": "Shiburingaru",
+        "rarity": "Uncommon",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "74": {
+      "instanceId": "1749680014734-5zxc0f3il",
+      "cardId": "sv10-75",
+      "cardData": {
+        "id": "sv10-75",
+        "name": "Electrike",
+        "image": "https://images.pokemontcg.io/sv10/75_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "75",
+        "artist": "Narano",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "75": {
+      "instanceId": "1749680014734-bawjjl3la",
+      "cardId": "sv10-76",
+      "cardData": {
+        "id": "sv10-76",
+        "name": "Manectric",
+        "image": "https://images.pokemontcg.io/sv10/76_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "76",
+        "artist": "Izucch",
+        "rarity": "Uncommon",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "76": {
+      "instanceId": "1749680014734-umm5pv58w",
+      "cardId": "sv10-77",
+      "cardData": {
+        "id": "sv10-77",
+        "name": "Rotom",
+        "image": "https://images.pokemontcg.io/sv10/77_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "77",
+        "artist": "Yoshimi Miyoshi",
+        "rarity": "Common",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "77": {
+      "instanceId": "1749680014734-b6s08885p",
+      "cardId": "sv10-78",
+      "cardData": {
+        "id": "sv10-78",
+        "name": "Zeraora",
+        "image": "https://images.pokemontcg.io/sv10/78_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "78",
+        "artist": "Ryuta Fuse",
+        "rarity": "Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "78": {
+      "instanceId": "1749680014734-hprngg89l",
+      "cardId": "sv10-79",
+      "cardData": {
+        "id": "sv10-79",
+        "name": "Team Rocket's Drowzee",
+        "image": "https://images.pokemontcg.io/sv10/79_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "79",
+        "artist": "matazo",
+        "rarity": "Common",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "79": {
+      "instanceId": "1749680014734-rfyz08n09",
+      "cardId": "sv10-80",
+      "cardData": {
+        "id": "sv10-80",
+        "name": "Team Rocket's Hypno",
+        "image": "https://images.pokemontcg.io/sv10/80_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "80",
+        "artist": "Yuya Oka",
+        "rarity": "Uncommon",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "80": {
+      "instanceId": "1749680014734-loyx16ny9",
+      "cardId": "sv10-81",
+      "cardData": {
+        "id": "sv10-81",
+        "name": "Team Rocket's Mewtwo ex",
+        "image": "https://images.pokemontcg.io/sv10/81_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "81",
+        "artist": "aky CG Works",
+        "rarity": "Double Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "81": {
+      "instanceId": "1749680014734-j2wqed9cn",
+      "cardId": "sv10-82",
+      "cardData": {
+        "id": "sv10-82",
+        "name": "Team Rocket's Wobbuffet",
+        "image": "https://images.pokemontcg.io/sv10/82_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "82",
+        "artist": "Kazumasa Yasukuni",
+        "rarity": "Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "82": {
+      "instanceId": "1749680014734-rfthxot17",
+      "cardId": "sv10-83",
+      "cardData": {
+        "id": "sv10-83",
+        "name": "Steven's Baltoy",
+        "image": "https://images.pokemontcg.io/sv10/83_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "83",
+        "artist": "Tonji Matsuno",
+        "rarity": "Common",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "83": {
+      "instanceId": "1749680014734-3ydeaxyif",
+      "cardId": "sv10-84",
+      "cardData": {
+        "id": "sv10-84",
+        "name": "Steven's Claydol",
+        "image": "https://images.pokemontcg.io/sv10/84_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "84",
+        "artist": "nagimiso",
+        "rarity": "Uncommon",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "84": {
+      "instanceId": "1749680014734-5m3l3yezn",
+      "cardId": "sv10-85",
+      "cardData": {
+        "id": "sv10-85",
+        "name": "Team Rocket's Chingling",
+        "image": "https://images.pokemontcg.io/sv10/85_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "85",
+        "artist": "Mina Nakai",
+        "rarity": "Common",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "85": {
+      "instanceId": "1749680014734-26pxghnm1",
+      "cardId": "sv10-86",
+      "cardData": {
+        "id": "sv10-86",
+        "name": "Steven's Carbink",
+        "image": "https://images.pokemontcg.io/sv10/86_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "86",
+        "artist": "Ligton",
+        "rarity": "Common",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "86": {
+      "instanceId": "1749680014734-fb8ttn7oj",
+      "cardId": "sv10-87",
+      "cardData": {
+        "id": "sv10-87",
+        "name": "Team Rocket's Mimikyu",
+        "image": "https://images.pokemontcg.io/sv10/87_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "87",
+        "artist": "DOM",
+        "rarity": "Uncommon",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "87": {
+      "instanceId": "1749680014734-b2arpkyck",
+      "cardId": "sv10-88",
+      "cardData": {
+        "id": "sv10-88",
+        "name": "Team Rocket's Dottler",
+        "image": "https://images.pokemontcg.io/sv10/88_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "88",
+        "artist": "Scav",
+        "rarity": "Common",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "88": {
+      "instanceId": "1749680014734-mj8zr7azr",
+      "cardId": "sv10-89",
+      "cardData": {
+        "id": "sv10-89",
+        "name": "Team Rocket's Orbeetle",
+        "image": "https://images.pokemontcg.io/sv10/89_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "89",
+        "artist": "Shin Nagasawa",
+        "rarity": "Uncommon",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "89": {
+      "instanceId": "1749680014734-shy8l79n8",
+      "cardId": "sv10-90",
+      "cardData": {
+        "id": "sv10-90",
+        "name": "Mankey",
+        "image": "https://images.pokemontcg.io/sv10/90_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "90",
+        "artist": "Ayako Ozaki",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "90": {
+      "instanceId": "1749680014734-iyq8tu71r",
+      "cardId": "sv10-91",
+      "cardData": {
+        "id": "sv10-91",
+        "name": "Primeape",
+        "image": "https://images.pokemontcg.io/sv10/91_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "91",
+        "artist": "GOTO minori",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "91": {
+      "instanceId": "1749680014734-47ujc6dls",
+      "cardId": "sv10-92",
+      "cardData": {
+        "id": "sv10-92",
+        "name": "Annihilape",
+        "image": "https://images.pokemontcg.io/sv10/92_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "92",
+        "artist": "Shiburingaru",
+        "rarity": "Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "92": {
+      "instanceId": "1749680014734-13llr3eol",
+      "cardId": "sv10-93",
+      "cardData": {
+        "id": "sv10-93",
+        "name": "Ethan's Sudowoodo",
+        "image": "https://images.pokemontcg.io/sv10/93_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "93",
+        "artist": "OKACHEKE",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "93": {
+      "instanceId": "1749680014734-18u2mbo0o",
+      "cardId": "sv10-94",
+      "cardData": {
+        "id": "sv10-94",
+        "name": "Team Rocket's Larvitar",
+        "image": "https://images.pokemontcg.io/sv10/94_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "94",
+        "artist": "Kuroimori",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "94": {
+      "instanceId": "1749680014734-puxkq14nt",
+      "cardId": "sv10-95",
+      "cardData": {
+        "id": "sv10-95",
+        "name": "Team Rocket's Pupitar",
+        "image": "https://images.pokemontcg.io/sv10/95_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "95",
+        "artist": "Izucch",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "95": {
+      "instanceId": "1749680014734-bx79tsvmb",
+      "cardId": "sv10-96",
+      "cardData": {
+        "id": "sv10-96",
+        "name": "Team Rocket's Tyranitar",
+        "image": "https://images.pokemontcg.io/sv10/96_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "96",
+        "artist": "Ryuta Fuse",
+        "rarity": "Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "96": {
+      "instanceId": "1749680014734-d8mtpolrn",
+      "cardId": "sv10-97",
+      "cardData": {
+        "id": "sv10-97",
+        "name": "Nosepass",
+        "image": "https://images.pokemontcg.io/sv10/97_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "97",
+        "artist": "Oku",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "97": {
+      "instanceId": "1749680014734-a91a4br07",
+      "cardId": "sv10-98",
+      "cardData": {
+        "id": "sv10-98",
+        "name": "Probopass",
+        "image": "https://images.pokemontcg.io/sv10/98_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "98",
+        "artist": "sowsow",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "98": {
+      "instanceId": "1749680014734-w31gjxlvo",
+      "cardId": "sv10-99",
+      "cardData": {
+        "id": "sv10-99",
+        "name": "Meditite",
+        "image": "https://images.pokemontcg.io/sv10/99_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "99",
+        "artist": "MINAMINAMI Take",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "99": {
+      "instanceId": "1749680014734-k3ccjc5dm",
+      "cardId": "sv10-100",
+      "cardData": {
+        "id": "sv10-100",
+        "name": "Medicham",
+        "image": "https://images.pokemontcg.io/sv10/100_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "100",
+        "artist": "Whisker",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "100": {
+      "instanceId": "1749680014734-o9jl8jv88",
+      "cardId": "sv10-101",
+      "cardData": {
+        "id": "sv10-101",
+        "name": "Regirock ex",
+        "image": "https://images.pokemontcg.io/sv10/101_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "101",
+        "artist": "Nisota Niso",
+        "rarity": "Double Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "101": {
+      "instanceId": "1749680014734-ru4rt8ofl",
+      "cardId": "sv10-102",
+      "cardData": {
+        "id": "sv10-102",
+        "name": "Cynthia's Gible",
+        "image": "https://images.pokemontcg.io/sv10/102_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "102",
+        "artist": "Tomomi Ozaki",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "102": {
+      "instanceId": "1749680014734-vecxts8vd",
+      "cardId": "sv10-103",
+      "cardData": {
+        "id": "sv10-103",
+        "name": "Cynthia's Gabite",
+        "image": "https://images.pokemontcg.io/sv10/103_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "103",
+        "artist": "Taira Akitsu",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "103": {
+      "instanceId": "1749680014734-b05i575vo",
+      "cardId": "sv10-104",
+      "cardData": {
+        "id": "sv10-104",
+        "name": "Cynthia's Garchomp ex",
+        "image": "https://images.pokemontcg.io/sv10/104_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "104",
+        "artist": "5ban Graphics",
+        "rarity": "Double Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "104": {
+      "instanceId": "1749680014734-o2b70ys3x",
+      "cardId": "sv10-105",
+      "cardData": {
+        "id": "sv10-105",
+        "name": "Hippopotas",
+        "image": "https://images.pokemontcg.io/sv10/105_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "105",
+        "artist": "Minahamu",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "105": {
+      "instanceId": "1749680014734-hnflvxt1h",
+      "cardId": "sv10-106",
+      "cardData": {
+        "id": "sv10-106",
+        "name": "Hippowdon",
+        "image": "https://images.pokemontcg.io/sv10/106_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "106",
+        "artist": "Minahamu",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "106": {
+      "instanceId": "1749680014734-8rwklxwtw",
+      "cardId": "sv10-107",
+      "cardData": {
+        "id": "sv10-107",
+        "name": "Mudbray",
+        "image": "https://images.pokemontcg.io/sv10/107_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "107",
+        "artist": "Aliya Chen",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "107": {
+      "instanceId": "1749680014734-ywl7er1q0",
+      "cardId": "sv10-108",
+      "cardData": {
+        "id": "sv10-108",
+        "name": "Mudsdale",
+        "image": "https://images.pokemontcg.io/sv10/108_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "108",
+        "artist": "Uta",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "108": {
+      "instanceId": "1749680014734-im3gklsf7",
+      "cardId": "sv10-109",
+      "cardData": {
+        "id": "sv10-109",
+        "name": "Arven's Toedscool",
+        "image": "https://images.pokemontcg.io/sv10/109_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "109",
+        "artist": "Fujimoto Gold",
+        "rarity": "Common",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "109": {
+      "instanceId": "1749680014734-demffho2g",
+      "cardId": "sv10-110",
+      "cardData": {
+        "id": "sv10-110",
+        "name": "Arven's Toedscruel",
+        "image": "https://images.pokemontcg.io/sv10/110_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "110",
+        "artist": "Yuya Oka",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "110": {
+      "instanceId": "1749680014734-8p0hvg32d",
+      "cardId": "sv10-111",
+      "cardData": {
+        "id": "sv10-111",
+        "name": "Cornerstone Mask Ogerpon",
+        "image": "https://images.pokemontcg.io/sv10/111_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "111",
+        "artist": "Kazumasa Yasukuni",
+        "rarity": "Uncommon",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "111": {
+      "instanceId": "1749680014734-1a3ceqm0p",
+      "cardId": "sv10-112",
+      "cardData": {
+        "id": "sv10-112",
+        "name": "Team Rocket's Ekans",
+        "image": "https://images.pokemontcg.io/sv10/112_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "112",
+        "artist": "KEIICHIRO ITO",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "112": {
+      "instanceId": "1749680014734-0jgpewegh",
+      "cardId": "sv10-113",
+      "cardData": {
+        "id": "sv10-113",
+        "name": "Team Rocket's Arbok",
+        "image": "https://images.pokemontcg.io/sv10/113_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "113",
+        "artist": "Teeziro",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "113": {
+      "instanceId": "1749680014734-rp4kvsyjb",
+      "cardId": "sv10-114",
+      "cardData": {
+        "id": "sv10-114",
+        "name": "Team Rocket's Nidoran♀",
+        "image": "https://images.pokemontcg.io/sv10/114_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "114",
+        "artist": "REND",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "114": {
+      "instanceId": "1749680014734-yacw9ihqm",
+      "cardId": "sv10-115",
+      "cardData": {
+        "id": "sv10-115",
+        "name": "Team Rocket's Nidorina",
+        "image": "https://images.pokemontcg.io/sv10/115_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "115",
+        "artist": "Taiga Kasai",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "115": {
+      "instanceId": "1749680014734-yrdlfmt2g",
+      "cardId": "sv10-116",
+      "cardData": {
+        "id": "sv10-116",
+        "name": "Team Rocket's Nidoqueen",
+        "image": "https://images.pokemontcg.io/sv10/116_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "116",
+        "artist": "hncl",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "116": {
+      "instanceId": "1749680014734-uo7k2352p",
+      "cardId": "sv10-117",
+      "cardData": {
+        "id": "sv10-117",
+        "name": "Team Rocket's Nidoran♂",
+        "image": "https://images.pokemontcg.io/sv10/117_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "117",
+        "artist": "buchi",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "117": {
+      "instanceId": "1749680014734-6cqno5ehg",
+      "cardId": "sv10-118",
+      "cardData": {
+        "id": "sv10-118",
+        "name": "Team Rocket's Nidorino",
+        "image": "https://images.pokemontcg.io/sv10/118_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "118",
+        "artist": "KEIICHIRO ITO",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "118": {
+      "instanceId": "1749680014734-fdhjeohk2",
+      "cardId": "sv10-119",
+      "cardData": {
+        "id": "sv10-119",
+        "name": "Team Rocket's Nidoking ex",
+        "image": "https://images.pokemontcg.io/sv10/119_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "119",
+        "artist": "5ban Graphics",
+        "rarity": "Double Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "119": {
+      "instanceId": "1749680014734-f42gw0szq",
+      "cardId": "sv10-120",
+      "cardData": {
+        "id": "sv10-120",
+        "name": "Team Rocket's Zubat",
+        "image": "https://images.pokemontcg.io/sv10/120_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "120",
+        "artist": "toi8",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "120": {
+      "instanceId": "1749680014734-wn81h1m1i",
+      "cardId": "sv10-121",
+      "cardData": {
+        "id": "sv10-121",
+        "name": "Team Rocket's Golbat",
+        "image": "https://images.pokemontcg.io/sv10/121_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "121",
+        "artist": "AKIRA EGAWA",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "121": {
+      "instanceId": "1749680014734-6yp4l04zn",
+      "cardId": "sv10-122",
+      "cardData": {
+        "id": "sv10-122",
+        "name": "Team Rocket's Crobat ex",
+        "image": "https://images.pokemontcg.io/sv10/122_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "122",
+        "artist": "5ban Graphics",
+        "rarity": "Double Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "122": {
+      "instanceId": "1749680014734-gtlexcq4y",
+      "cardId": "sv10-123",
+      "cardData": {
+        "id": "sv10-123",
+        "name": "Team Rocket's Grimer",
+        "image": "https://images.pokemontcg.io/sv10/123_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "123",
+        "artist": "Mousho",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "123": {
+      "instanceId": "1749680014734-hg96x8694",
+      "cardId": "sv10-124",
+      "cardData": {
+        "id": "sv10-124",
+        "name": "Team Rocket's Muk",
+        "image": "https://images.pokemontcg.io/sv10/124_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "124",
+        "artist": "Uta",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "124": {
+      "instanceId": "1749680014734-ldjronbnd",
+      "cardId": "sv10-125",
+      "cardData": {
+        "id": "sv10-125",
+        "name": "Team Rocket's Koffing",
+        "image": "https://images.pokemontcg.io/sv10/125_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "125",
+        "artist": "kodama",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "125": {
+      "instanceId": "1749680014734-bh87jwn27",
+      "cardId": "sv10-126",
+      "cardData": {
+        "id": "sv10-126",
+        "name": "Team Rocket's Weezing",
+        "image": "https://images.pokemontcg.io/sv10/126_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "126",
+        "artist": "matazo",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "126": {
+      "instanceId": "1749680014734-rzvll7w12",
+      "cardId": "sv10-127",
+      "cardData": {
+        "id": "sv10-127",
+        "name": "Team Rocket's Murkrow",
+        "image": "https://images.pokemontcg.io/sv10/127_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "127",
+        "artist": "Mugi Hamada",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "127": {
+      "instanceId": "1749680014734-cfddjbrfh",
+      "cardId": "sv10-128",
+      "cardData": {
+        "id": "sv10-128",
+        "name": "Team Rocket's Sneasel",
+        "image": "https://images.pokemontcg.io/sv10/128_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "128",
+        "artist": "GIDORA",
+        "rarity": "Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "128": {
+      "instanceId": "1749680014734-bu49sfrnb",
+      "cardId": "sv10-129",
+      "cardData": {
+        "id": "sv10-129",
+        "name": "Cynthia's Spiritomb",
+        "image": "https://images.pokemontcg.io/sv10/129_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "129",
+        "artist": "satoma",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "129": {
+      "instanceId": "1749680014734-xfei5b9x3",
+      "cardId": "sv10-130",
+      "cardData": {
+        "id": "sv10-130",
+        "name": "Marnie's Purrloin",
+        "image": "https://images.pokemontcg.io/sv10/130_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "130",
+        "artist": "REND",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "130": {
+      "instanceId": "1749680014734-zs46h5h2y",
+      "cardId": "sv10-131",
+      "cardData": {
+        "id": "sv10-131",
+        "name": "Marnie's Liepard",
+        "image": "https://images.pokemontcg.io/sv10/131_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "131",
+        "artist": "Hasuno",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "131": {
+      "instanceId": "1749680014734-k0dskxi86",
+      "cardId": "sv10-132",
+      "cardData": {
+        "id": "sv10-132",
+        "name": "Marnie's Scraggy",
+        "image": "https://images.pokemontcg.io/sv10/132_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "132",
+        "artist": "Teeziro",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "132": {
+      "instanceId": "1749680014734-k1spzg87e",
+      "cardId": "sv10-133",
+      "cardData": {
+        "id": "sv10-133",
+        "name": "Marnie's Scrafty",
+        "image": "https://images.pokemontcg.io/sv10/133_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "133",
+        "artist": "Kazumasa Yasukuni",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "133": {
+      "instanceId": "1749680014734-8ll773dyc",
+      "cardId": "sv10-134",
+      "cardData": {
+        "id": "sv10-134",
+        "name": "Marnie's Impidimp",
+        "image": "https://images.pokemontcg.io/sv10/134_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "134",
+        "artist": "KEIICHIRO ITO",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "134": {
+      "instanceId": "1749680014734-8rmqiers8",
+      "cardId": "sv10-135",
+      "cardData": {
+        "id": "sv10-135",
+        "name": "Marnie's Morgrem",
+        "image": "https://images.pokemontcg.io/sv10/135_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "135",
+        "artist": "NC Empire",
+        "rarity": "Uncommon",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "135": {
+      "instanceId": "1749680014734-st5f9tsbg",
+      "cardId": "sv10-136",
+      "cardData": {
+        "id": "sv10-136",
+        "name": "Marnie's Grimmsnarl ex",
+        "image": "https://images.pokemontcg.io/sv10/136_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "136",
+        "artist": "PLANETA Mochizuki",
+        "rarity": "Double Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "136": {
+      "instanceId": "1749680014734-er914c8iv",
+      "cardId": "sv10-137",
+      "cardData": {
+        "id": "sv10-137",
+        "name": "Marnie's Morpeko",
+        "image": "https://images.pokemontcg.io/sv10/137_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "137",
+        "artist": "Mina Nakai",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "137": {
+      "instanceId": "1749680014734-gx4affbsg",
+      "cardId": "sv10-138",
+      "cardData": {
+        "id": "sv10-138",
+        "name": "Arven's Maschiff",
+        "image": "https://images.pokemontcg.io/sv10/138_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "138",
+        "artist": "Mina Nakai",
+        "rarity": "Common",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "138": {
+      "instanceId": "1749680014734-xi79pwnqz",
+      "cardId": "sv10-139",
+      "cardData": {
+        "id": "sv10-139",
+        "name": "Arven's Mabosstiff ex",
+        "image": "https://images.pokemontcg.io/sv10/139_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "139",
+        "artist": "akagi",
+        "rarity": "Double Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "139": {
+      "instanceId": "1749680014734-9r453zp56",
+      "cardId": "sv10-140",
+      "cardData": {
+        "id": "sv10-140",
+        "name": "Forretress",
+        "image": "https://images.pokemontcg.io/sv10/140_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "140",
+        "artist": "Wintr Wandr",
+        "rarity": "Uncommon",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "140": {
+      "instanceId": "1749680014734-znyvn5zmh",
+      "cardId": "sv10-141",
+      "cardData": {
+        "id": "sv10-141",
+        "name": "Skarmory",
+        "image": "https://images.pokemontcg.io/sv10/141_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "141",
+        "artist": "Shin Nagasawa",
+        "rarity": "Common",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "141": {
+      "instanceId": "1749680014734-bpasa8m51",
+      "cardId": "sv10-142",
+      "cardData": {
+        "id": "sv10-142",
+        "name": "Steven's Skarmory",
+        "image": "https://images.pokemontcg.io/sv10/142_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "142",
+        "artist": "Nisota Niso",
+        "rarity": "Common",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "142": {
+      "instanceId": "1749680014734-h96503vs8",
+      "cardId": "sv10-143",
+      "cardData": {
+        "id": "sv10-143",
+        "name": "Steven's Beldum",
+        "image": "https://images.pokemontcg.io/sv10/143_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "143",
+        "artist": "Takeshi Nakamura",
+        "rarity": "Common",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "143": {
+      "instanceId": "1749680014734-tvi09i5ee",
+      "cardId": "sv10-144",
+      "cardData": {
+        "id": "sv10-144",
+        "name": "Steven's Metang",
+        "image": "https://images.pokemontcg.io/sv10/144_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "144",
+        "artist": "Anesaki Dynamic",
+        "rarity": "Uncommon",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "144": {
+      "instanceId": "1749680014734-gfael211l",
+      "cardId": "sv10-145",
+      "cardData": {
+        "id": "sv10-145",
+        "name": "Steven's Metagross ex",
+        "image": "https://images.pokemontcg.io/sv10/145_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "145",
+        "artist": "PLANETA Mochizuki",
+        "rarity": "Double Rare",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "145": {
+      "instanceId": "1749680014734-qzffohxwe",
+      "cardId": "sv10-146",
+      "cardData": {
+        "id": "sv10-146",
+        "name": "Zamazenta",
+        "image": "https://images.pokemontcg.io/sv10/146_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "146",
+        "artist": "Mitsuhiro Arita",
+        "rarity": "Rare",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "146": {
+      "instanceId": "1749680014734-wacabk12d",
+      "cardId": "sv10-147",
+      "cardData": {
+        "id": "sv10-147",
+        "name": "Team Rocket's Rattata",
+        "image": "https://images.pokemontcg.io/sv10/147_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "147",
+        "artist": "Dsuke",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "147": {
+      "instanceId": "1749680014734-sbeuuxa2a",
+      "cardId": "sv10-148",
+      "cardData": {
+        "id": "sv10-148",
+        "name": "Team Rocket's Raticate",
+        "image": "https://images.pokemontcg.io/sv10/148_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "148",
+        "artist": "Uninori",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "148": {
+      "instanceId": "1749680014734-cw023m0rz",
+      "cardId": "sv10-149",
+      "cardData": {
+        "id": "sv10-149",
+        "name": "Team Rocket's Meowth",
+        "image": "https://images.pokemontcg.io/sv10/149_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "149",
+        "artist": "Megumi Mizutani",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "149": {
+      "instanceId": "1749680014734-sdyveqy1a",
+      "cardId": "sv10-150",
+      "cardData": {
+        "id": "sv10-150",
+        "name": "Team Rocket's Persian ex",
+        "image": "https://images.pokemontcg.io/sv10/150_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "150",
+        "artist": "5ban Graphics",
+        "rarity": "Double Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "150": {
+      "instanceId": "1749680014734-5aghg5srr",
+      "cardId": "sv10-151",
+      "cardData": {
+        "id": "sv10-151",
+        "name": "Kangaskhan",
+        "image": "https://images.pokemontcg.io/sv10/151_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "151",
+        "artist": "Sanosuke Sakuma",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "151": {
+      "instanceId": "1749680014734-y93usxurj",
+      "cardId": "sv10-152",
+      "cardData": {
+        "id": "sv10-152",
+        "name": "Tauros",
+        "image": "https://images.pokemontcg.io/sv10/152_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "152",
+        "artist": "yuu",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "152": {
+      "instanceId": "1749680014734-jxiamt1mp",
+      "cardId": "sv10-153",
+      "cardData": {
+        "id": "sv10-153",
+        "name": "Team Rocket's Porygon",
+        "image": "https://images.pokemontcg.io/sv10/153_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "153",
+        "artist": "Oswaldo KATO",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "153": {
+      "instanceId": "1749680014734-vzc8lgoti",
+      "cardId": "sv10-154",
+      "cardData": {
+        "id": "sv10-154",
+        "name": "Team Rocket's Porygon2",
+        "image": "https://images.pokemontcg.io/sv10/154_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "154",
+        "artist": "Takeshi Nakamura",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "154": {
+      "instanceId": "1749680014734-fmn1ua2i6",
+      "cardId": "sv10-155",
+      "cardData": {
+        "id": "sv10-155",
+        "name": "Team Rocket's Porygon-Z",
+        "image": "https://images.pokemontcg.io/sv10/155_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "155",
+        "artist": "Anesaki Dynamic",
+        "rarity": "Uncommon",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "155": {
+      "instanceId": "1749680014734-ayula8yz7",
+      "cardId": "sv10-156",
+      "cardData": {
+        "id": "sv10-156",
+        "name": "Taillow",
+        "image": "https://images.pokemontcg.io/sv10/156_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "156",
+        "artist": "Ayako Ozaki",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "156": {
+      "instanceId": "1749680014734-xm4s04tt3",
+      "cardId": "sv10-157",
+      "cardData": {
+        "id": "sv10-157",
+        "name": "Swellow",
+        "image": "https://images.pokemontcg.io/sv10/157_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "157",
+        "artist": "Souichirou Gunjima",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "157": {
+      "instanceId": "1749680014734-zp0oka45e",
+      "cardId": "sv10-158",
+      "cardData": {
+        "id": "sv10-158",
+        "name": "Arven's Skwovet",
+        "image": "https://images.pokemontcg.io/sv10/158_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "158",
+        "artist": "Oswaldo KATO",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "158": {
+      "instanceId": "1749680014734-gmdssfrpl",
+      "cardId": "sv10-159",
+      "cardData": {
+        "id": "sv10-159",
+        "name": "Arven's Greedent",
+        "image": "https://images.pokemontcg.io/sv10/159_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "159",
+        "artist": "Akira Komayama",
+        "rarity": "Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "159": {
+      "instanceId": "1749680014734-epsau8drt",
+      "cardId": "sv10-160",
+      "cardData": {
+        "id": "sv10-160",
+        "name": "Squawkabilly",
+        "image": "https://images.pokemontcg.io/sv10/160_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "160",
+        "artist": "Julie Hang",
+        "rarity": "Common",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "160": {
+      "instanceId": "1749680014734-9p7myhcnh",
+      "cardId": "sv10-161",
+      "cardData": {
+        "id": "sv10-161",
+        "name": "Arven's Sandwich",
+        "image": "https://images.pokemontcg.io/sv10/161_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "161",
+        "artist": "AYUMI ODASHIMA",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "161": {
+      "instanceId": "1749680014734-jrujvxncf",
+      "cardId": "sv10-162",
+      "cardData": {
+        "id": "sv10-162",
+        "name": "Cynthia's Power Weight",
+        "image": "https://images.pokemontcg.io/sv10/162_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "162",
+        "artist": "Studio Bora Inc.",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "162": {
+      "instanceId": "1749680014734-qrumchppz",
+      "cardId": "sv10-163",
+      "cardData": {
+        "id": "sv10-163",
+        "name": "Emcee's Hype",
+        "image": "https://images.pokemontcg.io/sv10/163_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "163",
+        "artist": "Cona Nitanda",
+        "rarity": "Common",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "163": {
+      "instanceId": "1749680014734-uzae9fnoi",
+      "cardId": "sv10-164",
+      "cardData": {
+        "id": "sv10-164",
+        "name": "Energy Recycler",
+        "image": "https://images.pokemontcg.io/sv10/164_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "164",
+        "artist": "Toyste Beach",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "164": {
+      "instanceId": "1749680014734-akd9v4zj9",
+      "cardId": "sv10-165",
+      "cardData": {
+        "id": "sv10-165",
+        "name": "Ethan's Adventure",
+        "image": "https://images.pokemontcg.io/sv10/165_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "165",
+        "artist": "Iori Suzuki",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "165": {
+      "instanceId": "1749680014734-ho9pwstfm",
+      "cardId": "sv10-166",
+      "cardData": {
+        "id": "sv10-166",
+        "name": "Granite Cave",
+        "image": "https://images.pokemontcg.io/sv10/166_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "166",
+        "artist": "AYUMI ODASHIMA",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "166": {
+      "instanceId": "1749680014734-ux0zmil7a",
+      "cardId": "sv10-167",
+      "cardData": {
+        "id": "sv10-167",
+        "name": "Judge",
+        "image": "https://images.pokemontcg.io/sv10/167_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "167",
+        "artist": "kantaro",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "167": {
+      "instanceId": "1749680014734-vzzy5xuag",
+      "cardId": "sv10-168",
+      "cardData": {
+        "id": "sv10-168",
+        "name": "Sacred Ash",
+        "image": "https://images.pokemontcg.io/sv10/168_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "168",
+        "artist": "Eske Yoshinob",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "168": {
+      "instanceId": "1749680014734-m3k8m3px2",
+      "cardId": "sv10-169",
+      "cardData": {
+        "id": "sv10-169",
+        "name": "Spikemuth Gym",
+        "image": "https://images.pokemontcg.io/sv10/169_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "169",
+        "artist": "AYUMI ODASHIMA",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "169": {
+      "instanceId": "1749680014734-p127xq4i8",
+      "cardId": "sv10-170",
+      "cardData": {
+        "id": "sv10-170",
+        "name": "Team Rocket's Archer",
+        "image": "https://images.pokemontcg.io/sv10/170_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "170",
+        "artist": "Hideki Ishikawa",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "170": {
+      "instanceId": "1749680014734-o6mu8zxx0",
+      "cardId": "sv10-171",
+      "cardData": {
+        "id": "sv10-171",
+        "name": "Team Rocket's Ariana",
+        "image": "https://images.pokemontcg.io/sv10/171_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "171",
+        "artist": "hncl",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "171": {
+      "instanceId": "1749680014734-6wx5gq7fc",
+      "cardId": "sv10-172",
+      "cardData": {
+        "id": "sv10-172",
+        "name": "Team Rocket's Bother-Bot",
+        "image": "https://images.pokemontcg.io/sv10/172_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "172",
+        "artist": "Toyste Beach",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "172": {
+      "instanceId": "1749680014734-o965brgza",
+      "cardId": "sv10-173",
+      "cardData": {
+        "id": "sv10-173",
+        "name": "Team Rocket's Factory",
+        "image": "https://images.pokemontcg.io/sv10/173_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "173",
+        "artist": "imoniii",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "173": {
+      "instanceId": "1749680014734-nvru8ozj9",
+      "cardId": "sv10-174",
+      "cardData": {
+        "id": "sv10-174",
+        "name": "Team Rocket's Giovanni",
+        "image": "https://images.pokemontcg.io/sv10/174_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "174",
+        "artist": "akagi",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "174": {
+      "instanceId": "1749680014734-3sgokavl3",
+      "cardId": "sv10-175",
+      "cardData": {
+        "id": "sv10-175",
+        "name": "Team Rocket's Great Ball",
+        "image": "https://images.pokemontcg.io/sv10/175_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "175",
+        "artist": "Toyste Beach",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "175": {
+      "instanceId": "1749680014734-vn4h1bv28",
+      "cardId": "sv10-176",
+      "cardData": {
+        "id": "sv10-176",
+        "name": "Team Rocket's Petrel",
+        "image": "https://images.pokemontcg.io/sv10/176_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "176",
+        "artist": "GOSSAN",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "176": {
+      "instanceId": "1749680014734-c10sd0fk9",
+      "cardId": "sv10-177",
+      "cardData": {
+        "id": "sv10-177",
+        "name": "Team Rocket's Proton",
+        "image": "https://images.pokemontcg.io/sv10/177_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "177",
+        "artist": "Naoki Saito",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "177": {
+      "instanceId": "1749680014734-tfx5oosub",
+      "cardId": "sv10-178",
+      "cardData": {
+        "id": "sv10-178",
+        "name": "Team Rocket's Transceiver",
+        "image": "https://images.pokemontcg.io/sv10/178_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "178",
+        "artist": "inose yukie",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "178": {
+      "instanceId": "1749680014734-gyge5878x",
+      "cardId": "sv10-179",
+      "cardData": {
+        "id": "sv10-179",
+        "name": "Team Rocket's Venture Bomb",
+        "image": "https://images.pokemontcg.io/sv10/179_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "179",
+        "artist": "Toyste Beach",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "179": {
+      "instanceId": "1749680014734-hpckdze4j",
+      "cardId": "sv10-180",
+      "cardData": {
+        "id": "sv10-180",
+        "name": "Team Rocket's Watchtower",
+        "image": "https://images.pokemontcg.io/sv10/180_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "180",
+        "artist": "AYUMI ODASHIMA",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "180": {
+      "instanceId": "1749680014734-wojh3irn6",
+      "cardId": "sv10-181",
+      "cardData": {
+        "id": "sv10-181",
+        "name": "TM Machine",
+        "image": "https://images.pokemontcg.io/sv10/181_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "181",
+        "artist": "Studio Bora Inc.",
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "181": {
+      "instanceId": "1749680014734-oxnoflrt2",
+      "cardId": "sv10-182",
+      "cardData": {
+        "id": "sv10-182",
+        "name": "Team Rocket's Energy",
+        "image": "https://images.pokemontcg.io/sv10/182_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "182",
+        "artist": null,
+        "rarity": "Uncommon",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "182": {
+      "instanceId": "1749680014734-3b8syl3ce",
+      "cardId": "sv10-183",
+      "cardData": {
+        "id": "sv10-183",
+        "name": "Yanma",
+        "image": "https://images.pokemontcg.io/sv10/183_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "183",
+        "artist": "Ayako Ozaki",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "183": {
+      "instanceId": "1749680014734-wxdg20b95",
+      "cardId": "sv10-184",
+      "cardData": {
+        "id": "sv10-184",
+        "name": "Cynthia's Roserade",
+        "image": "https://images.pokemontcg.io/sv10/184_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "184",
+        "artist": "rika",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "184": {
+      "instanceId": "1749680014734-la28dvfz4",
+      "cardId": "sv10-185",
+      "cardData": {
+        "id": "sv10-185",
+        "name": "Shaymin",
+        "image": "https://images.pokemontcg.io/sv10/185_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "185",
+        "artist": "Heisuke Kitazawa",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "185": {
+      "instanceId": "1749680014734-qnpl96gsq",
+      "cardId": "sv10-186",
+      "cardData": {
+        "id": "sv10-186",
+        "name": "Crustle",
+        "image": "https://images.pokemontcg.io/sv10/186_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "186",
+        "artist": "Takumi Wada",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "186": {
+      "instanceId": "1749680014734-3wzfrflkm",
+      "cardId": "sv10-187",
+      "cardData": {
+        "id": "sv10-187",
+        "name": "Team Rocket's Spidops",
+        "image": "https://images.pokemontcg.io/sv10/187_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "187",
+        "artist": "NC Empire",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "187": {
+      "instanceId": "1749680014734-k8ug4dmu5",
+      "cardId": "sv10-188",
+      "cardData": {
+        "id": "sv10-188",
+        "name": "Hydrapple",
+        "image": "https://images.pokemontcg.io/sv10/188_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "188",
+        "artist": "Jerky",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "188": {
+      "instanceId": "1749680014734-1moa5ld7y",
+      "cardId": "sv10-189",
+      "cardData": {
+        "id": "sv10-189",
+        "name": "Rapidash",
+        "image": "https://images.pokemontcg.io/sv10/189_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "189",
+        "artist": "Rond",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "189": {
+      "instanceId": "1749680014734-qnnojvqzm",
+      "cardId": "sv10-190",
+      "cardData": {
+        "id": "sv10-190",
+        "name": "Ethan's Typhlosion",
+        "image": "https://images.pokemontcg.io/sv10/190_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "190",
+        "artist": "GIDORA",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "190": {
+      "instanceId": "1749680014734-pl0ipw55v",
+      "cardId": "sv10-191",
+      "cardData": {
+        "id": "sv10-191",
+        "name": "Team Rocket's Houndoom",
+        "image": "https://images.pokemontcg.io/sv10/191_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "191",
+        "artist": "nagimiso",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "191": {
+      "instanceId": "1749680014734-y2bhncbsb",
+      "cardId": "sv10-192",
+      "cardData": {
+        "id": "sv10-192",
+        "name": "Blaziken",
+        "image": "https://images.pokemontcg.io/sv10/192_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "192",
+        "artist": "kodama",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "192": {
+      "instanceId": "1749680014734-0age16j6p",
+      "cardId": "sv10-193",
+      "cardData": {
+        "id": "sv10-193",
+        "name": "Misty's Psyduck",
+        "image": "https://images.pokemontcg.io/sv10/193_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "193",
+        "artist": "OKACHEKE",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "193": {
+      "instanceId": "1749680014734-jmwjf2wa3",
+      "cardId": "sv10-194",
+      "cardData": {
+        "id": "sv10-194",
+        "name": "Misty's Lapras",
+        "image": "https://images.pokemontcg.io/sv10/194_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "194",
+        "artist": "Orca",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "194": {
+      "instanceId": "1749680014734-shusmfeny",
+      "cardId": "sv10-195",
+      "cardData": {
+        "id": "sv10-195",
+        "name": "Clamperl",
+        "image": "https://images.pokemontcg.io/sv10/195_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "195",
+        "artist": "Mori Yuu",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "195": {
+      "instanceId": "1749680014734-n0v5ksevv",
+      "cardId": "sv10-196",
+      "cardData": {
+        "id": "sv10-196",
+        "name": "Electrike",
+        "image": "https://images.pokemontcg.io/sv10/196_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "196",
+        "artist": "Nakamura Ippan",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "196": {
+      "instanceId": "1749680014734-c6jcddw4g",
+      "cardId": "sv10-197",
+      "cardData": {
+        "id": "sv10-197",
+        "name": "Rotom",
+        "image": "https://images.pokemontcg.io/sv10/197_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "197",
+        "artist": "Taiga Kayama",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "197": {
+      "instanceId": "1749680014734-ojtu1adn6",
+      "cardId": "sv10-198",
+      "cardData": {
+        "id": "sv10-198",
+        "name": "Team Rocket's Orbeetle",
+        "image": "https://images.pokemontcg.io/sv10/198_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "198",
+        "artist": "HYOGONOSUKE",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "198": {
+      "instanceId": "1749680014734-3jrfns5t4",
+      "cardId": "sv10-199",
+      "cardData": {
+        "id": "sv10-199",
+        "name": "Team Rocket's Weezing",
+        "image": "https://images.pokemontcg.io/sv10/199_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "199",
+        "artist": "Yukihiro Tada",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "199": {
+      "instanceId": "1749680014734-vk0gt7lo5",
+      "cardId": "sv10-200",
+      "cardData": {
+        "id": "sv10-200",
+        "name": "Team Rocket's Murkrow",
+        "image": "https://images.pokemontcg.io/sv10/200_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "200",
+        "artist": "Akira Komayama",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "200": {
+      "instanceId": "1749680014734-80gi43jpn",
+      "cardId": "sv10-201",
+      "cardData": {
+        "id": "sv10-201",
+        "name": "Zamazenta",
+        "image": "https://images.pokemontcg.io/sv10/201_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "201",
+        "artist": "Takumi Wada",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Metal"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "201": {
+      "instanceId": "1749680014734-0l65shfd0",
+      "cardId": "sv10-202",
+      "cardData": {
+        "id": "sv10-202",
+        "name": "Team Rocket's Raticate",
+        "image": "https://images.pokemontcg.io/sv10/202_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "202",
+        "artist": "Mékayu",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "202": {
+      "instanceId": "1749680014734-dbmjadng0",
+      "cardId": "sv10-203",
+      "cardData": {
+        "id": "sv10-203",
+        "name": "Team Rocket's Meowth",
+        "image": "https://images.pokemontcg.io/sv10/203_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "203",
+        "artist": "Shimaris Yukichi",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "203": {
+      "instanceId": "1749680014734-l7gy85bwl",
+      "cardId": "sv10-204",
+      "cardData": {
+        "id": "sv10-204",
+        "name": "Kangaskhan",
+        "image": "https://images.pokemontcg.io/sv10/204_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "204",
+        "artist": "Mékayu",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "204": {
+      "instanceId": "1749680014734-9fv5t9sfn",
+      "cardId": "sv10-205",
+      "cardData": {
+        "id": "sv10-205",
+        "name": "Arven's Greedent",
+        "image": "https://images.pokemontcg.io/sv10/205_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "205",
+        "artist": "Natsumi Yoshida",
+        "rarity": "Illustration Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "205": {
+      "instanceId": "1749680014734-zqjgq12qc",
+      "cardId": "sv10-206",
+      "cardData": {
+        "id": "sv10-206",
+        "name": "Yanmega ex",
+        "image": "https://images.pokemontcg.io/sv10/206_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "206",
+        "artist": "takuyoa",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "206": {
+      "instanceId": "1749680014734-livgsbaau",
+      "cardId": "sv10-207",
+      "cardData": {
+        "id": "sv10-207",
+        "name": "Arboliva ex",
+        "image": "https://images.pokemontcg.io/sv10/207_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "207",
+        "artist": "PLANETA Tsuji",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "207": {
+      "instanceId": "1749680014734-v51rtfnge",
+      "cardId": "sv10-208",
+      "cardData": {
+        "id": "sv10-208",
+        "name": "Team Rocket's Moltres ex",
+        "image": "https://images.pokemontcg.io/sv10/208_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "208",
+        "artist": "5ban Graphics",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "208": {
+      "instanceId": "1749680014734-wxgwtn0ju",
+      "cardId": "sv10-209",
+      "cardData": {
+        "id": "sv10-209",
+        "name": "Ethan's Ho-Oh ex",
+        "image": "https://images.pokemontcg.io/sv10/209_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "209",
+        "artist": "aky CG Works",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "209": {
+      "instanceId": "1749680014734-ra5hsa3bf",
+      "cardId": "sv10-210",
+      "cardData": {
+        "id": "sv10-210",
+        "name": "Cetitan ex",
+        "image": "https://images.pokemontcg.io/sv10/210_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "210",
+        "artist": "PLANETA Tsuji",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "210": {
+      "instanceId": "1749680014734-wqkrp3vv5",
+      "cardId": "sv10-211",
+      "cardData": {
+        "id": "sv10-211",
+        "name": "Dondozo ex",
+        "image": "https://images.pokemontcg.io/sv10/211_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "211",
+        "artist": "N-DESIGN Inc.",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Water"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "211": {
+      "instanceId": "1749680014734-miubk788i",
+      "cardId": "sv10-212",
+      "cardData": {
+        "id": "sv10-212",
+        "name": "Electivire ex",
+        "image": "https://images.pokemontcg.io/sv10/212_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "212",
+        "artist": "PLANETA Mochizuki",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Lightning"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "212": {
+      "instanceId": "1749680014734-sevtie2r7",
+      "cardId": "sv10-213",
+      "cardData": {
+        "id": "sv10-213",
+        "name": "Team Rocket's Mewtwo ex",
+        "image": "https://images.pokemontcg.io/sv10/213_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "213",
+        "artist": "aky CG Works",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "213": {
+      "instanceId": "1749680014734-ye0kxn12r",
+      "cardId": "sv10-214",
+      "cardData": {
+        "id": "sv10-214",
+        "name": "Regirock ex",
+        "image": "https://images.pokemontcg.io/sv10/214_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "214",
+        "artist": "PLANETA Mochizuki",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "214": {
+      "instanceId": "1749680014734-mpyxfigvm",
+      "cardId": "sv10-215",
+      "cardData": {
+        "id": "sv10-215",
+        "name": "Cynthia's Garchomp ex",
+        "image": "https://images.pokemontcg.io/sv10/215_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "215",
+        "artist": "5ban Graphics",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "215": {
+      "instanceId": "1749680014734-07d7n0wr2",
+      "cardId": "sv10-216",
+      "cardData": {
+        "id": "sv10-216",
+        "name": "Team Rocket's Nidoking ex",
+        "image": "https://images.pokemontcg.io/sv10/216_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "216",
+        "artist": "5ban Graphics",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "216": {
+      "instanceId": "1749680014734-gkg62sepb",
+      "cardId": "sv10-217",
+      "cardData": {
+        "id": "sv10-217",
+        "name": "Team Rocket's Crobat ex",
+        "image": "https://images.pokemontcg.io/sv10/217_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "217",
+        "artist": "5ban Graphics",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "217": {
+      "instanceId": "1749680014734-32sr554ev",
+      "cardId": "sv10-218",
+      "cardData": {
+        "id": "sv10-218",
+        "name": "Arven's Mabosstiff ex",
+        "image": "https://images.pokemontcg.io/sv10/218_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "218",
+        "artist": "PLANETA Igarashi",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "218": {
+      "instanceId": "1749680014734-5ey6vb6eh",
+      "cardId": "sv10-219",
+      "cardData": {
+        "id": "sv10-219",
+        "name": "Team Rocket's Persian ex",
+        "image": "https://images.pokemontcg.io/sv10/219_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "219",
+        "artist": "5ban Graphics",
+        "rarity": "Ultra Rare",
+        "types": [
+          "Colorless"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "219": {
+      "instanceId": "1749680014734-8tp7q9ctn",
+      "cardId": "sv10-220",
+      "cardData": {
+        "id": "sv10-220",
+        "name": "Emcee's Hype",
+        "image": "https://images.pokemontcg.io/sv10/220_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "220",
+        "artist": "Cona Nitanda",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "220": {
+      "instanceId": "1749680014734-k13muawlt",
+      "cardId": "sv10-221",
+      "cardData": {
+        "id": "sv10-221",
+        "name": "Ethan's Adventure",
+        "image": "https://images.pokemontcg.io/sv10/221_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "221",
+        "artist": "Iori Suzuki",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "221": {
+      "instanceId": "1749680014734-hvbyxtt0w",
+      "cardId": "sv10-222",
+      "cardData": {
+        "id": "sv10-222",
+        "name": "Judge",
+        "image": "https://images.pokemontcg.io/sv10/222_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "222",
+        "artist": "kantaro",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "222": {
+      "instanceId": "1749680014734-078zm493j",
+      "cardId": "sv10-223",
+      "cardData": {
+        "id": "sv10-223",
+        "name": "Team Rocket's Archer",
+        "image": "https://images.pokemontcg.io/sv10/223_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "223",
+        "artist": "Hideki Ishikawa",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "223": {
+      "instanceId": "1749680014734-podsqkhga",
+      "cardId": "sv10-224",
+      "cardData": {
+        "id": "sv10-224",
+        "name": "Team Rocket's Ariana",
+        "image": "https://images.pokemontcg.io/sv10/224_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "224",
+        "artist": "hncl",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "224": {
+      "instanceId": "1749680014734-nwzrvmp2h",
+      "cardId": "sv10-225",
+      "cardData": {
+        "id": "sv10-225",
+        "name": "Team Rocket's Giovanni",
+        "image": "https://images.pokemontcg.io/sv10/225_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "225",
+        "artist": "akagi",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "225": {
+      "instanceId": "1749680014734-dqbmu2rj6",
+      "cardId": "sv10-226",
+      "cardData": {
+        "id": "sv10-226",
+        "name": "Team Rocket's Petrel",
+        "image": "https://images.pokemontcg.io/sv10/226_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "226",
+        "artist": "GOSSAN",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "226": {
+      "instanceId": "1749680014734-9flsnq298",
+      "cardId": "sv10-227",
+      "cardData": {
+        "id": "sv10-227",
+        "name": "Team Rocket's Proton",
+        "image": "https://images.pokemontcg.io/sv10/227_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "227",
+        "artist": "Naoki Saito",
+        "rarity": "Ultra Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "227": {
+      "instanceId": "1749680014734-zcq6m54p0",
+      "cardId": "sv10-228",
+      "cardData": {
+        "id": "sv10-228",
+        "name": "Yanmega ex",
+        "image": "https://images.pokemontcg.io/sv10/228_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "228",
+        "artist": "Tonji Matsuno",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Grass"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "228": {
+      "instanceId": "1749680014734-gcbv4pfrk",
+      "cardId": "sv10-229",
+      "cardData": {
+        "id": "sv10-229",
+        "name": "Team Rocket's Moltres ex",
+        "image": "https://images.pokemontcg.io/sv10/229_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "229",
+        "artist": "AKIRA EGAWA",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "229": {
+      "instanceId": "1749680014734-9mkin0wab",
+      "cardId": "sv10-230",
+      "cardData": {
+        "id": "sv10-230",
+        "name": "Ethan's Ho-Oh ex",
+        "image": "https://images.pokemontcg.io/sv10/230_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "230",
+        "artist": "Atsushi Furusawa",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "230": {
+      "instanceId": "1749680014734-l7xe7b8xa",
+      "cardId": "sv10-231",
+      "cardData": {
+        "id": "sv10-231",
+        "name": "Team Rocket's Mewtwo ex",
+        "image": "https://images.pokemontcg.io/sv10/231_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "231",
+        "artist": "Iwamoto05",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "231": {
+      "instanceId": "1749680014734-1oufmk100",
+      "cardId": "sv10-232",
+      "cardData": {
+        "id": "sv10-232",
+        "name": "Cynthia's Garchomp ex",
+        "image": "https://images.pokemontcg.io/sv10/232_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "232",
+        "artist": "HICO KIM",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "232": {
+      "instanceId": "1749680014734-ozs3r6o59",
+      "cardId": "sv10-233",
+      "cardData": {
+        "id": "sv10-233",
+        "name": "Team Rocket's Nidoking ex",
+        "image": "https://images.pokemontcg.io/sv10/233_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "233",
+        "artist": "Uninori",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "233": {
+      "instanceId": "1749680014734-3hwj81cro",
+      "cardId": "sv10-234",
+      "cardData": {
+        "id": "sv10-234",
+        "name": "Team Rocket's Crobat ex",
+        "image": "https://images.pokemontcg.io/sv10/234_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "234",
+        "artist": "cochi8i",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "234": {
+      "instanceId": "1749680014734-z7lwrjhqr",
+      "cardId": "sv10-235",
+      "cardData": {
+        "id": "sv10-235",
+        "name": "Arven's Mabosstiff ex",
+        "image": "https://images.pokemontcg.io/sv10/235_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "235",
+        "artist": "Yuriko Akase",
+        "rarity": "Special Illustration Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "235": {
+      "instanceId": "1749680014734-t794781kq",
+      "cardId": "sv10-236",
+      "cardData": {
+        "id": "sv10-236",
+        "name": "Ethan's Adventure",
+        "image": "https://images.pokemontcg.io/sv10/236_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "236",
+        "artist": "Kariya",
+        "rarity": "Special Illustration Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "236": {
+      "instanceId": "1749680014734-i5wwx562q",
+      "cardId": "sv10-237",
+      "cardData": {
+        "id": "sv10-237",
+        "name": "Team Rocket's Ariana",
+        "image": "https://images.pokemontcg.io/sv10/237_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "237",
+        "artist": "Yoshioka",
+        "rarity": "Special Illustration Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "237": {
+      "instanceId": "1749680014734-wmdw2tp81",
+      "cardId": "sv10-238",
+      "cardData": {
+        "id": "sv10-238",
+        "name": "Team Rocket's Giovanni",
+        "image": "https://images.pokemontcg.io/sv10/238_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "238",
+        "artist": "Krgc",
+        "rarity": "Special Illustration Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "238": {
+      "instanceId": "1749680014734-s0av6yaeg",
+      "cardId": "sv10-239",
+      "cardData": {
+        "id": "sv10-239",
+        "name": "Ethan's Ho-Oh ex",
+        "image": "https://images.pokemontcg.io/sv10/239_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "239",
+        "artist": "aky CG Works",
+        "rarity": "Hyper Rare",
+        "types": [
+          "Fire"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "239": {
+      "instanceId": "1749680014734-8476f8w03",
+      "cardId": "sv10-240",
+      "cardData": {
+        "id": "sv10-240",
+        "name": "Team Rocket's Mewtwo ex",
+        "image": "https://images.pokemontcg.io/sv10/240_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "240",
+        "artist": "aky CG Works",
+        "rarity": "Hyper Rare",
+        "types": [
+          "Psychic"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "240": {
+      "instanceId": "1749680014734-d73dnlhoy",
+      "cardId": "sv10-241",
+      "cardData": {
+        "id": "sv10-241",
+        "name": "Cynthia's Garchomp ex",
+        "image": "https://images.pokemontcg.io/sv10/241_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "241",
+        "artist": "5ban Graphics",
+        "rarity": "Hyper Rare",
+        "types": [
+          "Fighting"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "241": {
+      "instanceId": "1749680014734-ofmpw0tvk",
+      "cardId": "sv10-242",
+      "cardData": {
+        "id": "sv10-242",
+        "name": "Team Rocket's Crobat ex",
+        "image": "https://images.pokemontcg.io/sv10/242_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "242",
+        "artist": "5ban Graphics",
+        "rarity": "Hyper Rare",
+        "types": [
+          "Darkness"
+        ]
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "242": {
+      "instanceId": "1749680014734-o7es6ph9d",
+      "cardId": "sv10-243",
+      "cardData": {
+        "id": "sv10-243",
+        "name": "Jamming Tower",
+        "image": "https://images.pokemontcg.io/sv10/243_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "243",
+        "artist": "AYUMI ODASHIMA",
+        "rarity": "Hyper Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    },
+    "243": {
+      "instanceId": "1749680014734-jlnvec8k2",
+      "cardId": "sv10-244",
+      "cardData": {
+        "id": "sv10-244",
+        "name": "Levincia",
+        "image": "https://images.pokemontcg.io/sv10/244_hires.png",
+        "imageSmall": null,
+        "set": {
+          "id": "sv10",
+          "name": "Destined Rivals",
+          "series": "Scarlet & Violet"
+        },
+        "number": "244",
+        "artist": "MARINA Chikazawa",
+        "rarity": "Hyper Rare",
+        "types": []
+      },
+      "addedAt": "2025-06-11T22:13:34.734Z",
+      "addedBy": "TbONzSrtdiRJTbHxxA47TM7lat12",
+      "notes": "",
+      "condition": "mint",
+      "quantity": 1,
+      "isProtected": false
+    }
+  },
+  "generatedAt": "2025-06-11T22:16:33.956Z",
+  "version": "1.0"
+}

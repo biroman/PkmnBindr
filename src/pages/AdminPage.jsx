@@ -10,6 +10,7 @@ import ContactLimitsManager from "../components/admin/ContactLimitsManager";
 import { contactService } from "../services/ContactService";
 import { announcementService } from "../services/AnnouncementService";
 import AnnouncementManagement from "../components/admin/AnnouncementManagement";
+import StaticBinderGenerator from "../components/admin/StaticBinderGenerator";
 import { setupDefaultBinderLimits } from "../scripts/setupDefaultBinderLimits";
 import { setupDefaultContactLimits } from "../scripts/setupContactLimits";
 import {
@@ -42,6 +43,7 @@ import {
   CpuChipIcon,
   MegaphoneIcon,
   ArrowPathIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 import {
   MessageCircle,
@@ -923,6 +925,12 @@ const AdminPage = () => {
       icon: MegaphoneIcon,
       description: "Manage changelog and user announcements",
     },
+    {
+      id: "static-binders",
+      name: "SEO Binders",
+      icon: GlobeAltIcon,
+      description: "Generate static binder pages for SEO",
+    },
   ];
 
   const renderDashboard = () => (
@@ -1102,6 +1110,21 @@ const AdminPage = () => {
             </div>
             <p className="text-sm text-gray-600">
               Configure system settings and maintenance
+            </p>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("static-binders")}
+            className="text-left p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all group"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <GlobeAltIcon className="w-6 h-6 text-green-600" />
+              <h3 className="font-medium text-gray-900 group-hover:text-green-600">
+                Generate SEO Binders
+              </h3>
+            </div>
+            <p className="text-sm text-gray-600">
+              Create static binder pages for search engine optimization
             </p>
           </button>
         </div>
@@ -2832,6 +2855,7 @@ const AdminPage = () => {
               announcementsLoading={announcementsLoading}
             />
           )}
+          {activeTab === "static-binders" && <StaticBinderGenerator />}
         </div>
       </div>
     </div>

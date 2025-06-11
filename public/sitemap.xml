@@ -47,9 +47,28 @@
     <lastmod>2025-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>    <!-- Static Binder Collections - SEO-optimized public pages -->
+  <url>
+    <loc>https://pkmnbindr.com/binders/151</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pkmnbindr.com/binders/journey-together</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pkmnbindr.com/binders/destined-rivals</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Note: Individual binder pages (/binder/:id) are excluded as they contain user-specific content -->
+  <!-- Note: Individual user binder pages (/binder/:id) are excluded as they contain user-specific content -->
   <!-- Note: Protected pages (/profile, /admin, /rules) are excluded as they require authentication -->
+  <!-- Note: Additional static binder pages will be added here as they are created -->
 
 </urlset> 

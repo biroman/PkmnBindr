@@ -1,13 +1,13 @@
 import { useState } from "react";
 import ContactModal from "./ContactModal";
 
-const CoverPage = ({ binder, isReadOnly = false }) => {
+const CoverPage = ({ binder, isReadOnly = false, isPublicView = false }) => {
   const [contactModal, setContactModal] = useState({
     isOpen: false,
     type: "message",
   });
 
-  // If in read-only mode (admin view), show blank cover
+  // If in read-only mode, show different content based on context
   if (isReadOnly) {
     return (
       <div className="flex-1 bg-white rounded-lg shadow-2xl relative overflow-hidden">
@@ -20,13 +20,58 @@ const CoverPage = ({ binder, isReadOnly = false }) => {
           </div>
         </div>
 
-        {/* Empty cover content */}
-        <div className="relative h-full p-3 sm:p-4 md:p-6 flex items-center justify-center">
-          <div className="text-center text-slate-400">
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
-              {binder?.metadata?.name || "Binder Cover"}
+        {/* Cover content */}
+        <div className="relative h-full p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
+              {binder?.metadata?.name || "Pokemon Card Collection"}
             </h1>
-            <p className="text-sm opacity-60">Admin View</p>
+
+            {isPublicView ? (
+              <div className="space-y-3 sm:space-y-4">
+                <p className="text-sm sm:text-base text-gray-600 font-medium">
+                  🎯 Complete Pokemon Card Collection Showcase
+                </p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-3 sm:p-4 border border-blue-100">
+                  <div className="space-y-2 text-xs sm:text-sm text-gray-700">
+                    <p className="flex items-center justify-center gap-2">
+                      <span>📊</span>
+                      <strong>
+                        {binder?.metadata?.statistics?.cardCount || 0}
+                      </strong>{" "}
+                      Premium Trading Cards
+                    </p>
+                    <p className="flex items-center justify-center gap-2">
+                      <span>⭐</span>
+                      Rare Holos, First Editions & Special Cards
+                    </p>
+                    <p className="flex items-center justify-center gap-2">
+                      <span>🔍</span>
+                      Professionally Organized & Catalogued
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-xs text-gray-500 space-y-1">
+                  <p>
+                    🎮 Browse this collection to discover rare Pokemon cards
+                  </p>
+                  <p>
+                    💎 Perfect for collectors, traders, and Pokemon enthusiasts
+                  </p>
+                  <p>📱 Use arrow buttons to navigate through pages</p>
+                </div>
+
+                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-2 sm:p-3 border border-yellow-200">
+                  <p className="text-xs sm:text-sm text-yellow-800 font-medium">
+                    ✨ Start your own Pokemon card collection today!
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <p className="text-sm opacity-60 text-slate-400">Admin View</p>
+            )}
           </div>
         </div>
       </div>

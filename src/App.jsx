@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import { HelmetProvider } from "react-helmet-async";
 
 import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
@@ -16,6 +17,7 @@ import { useActivityTracking } from "./hooks/useActivityTracking";
 import HomePage from "./pages/HomePage";
 import BinderPage from "./pages/BinderPage";
 import BindersPage from "./pages/BindersPage";
+import StaticBinderPage from "./pages/StaticBinderPage";
 
 import DashboardHandler from "./components/auth/DashboardHandler";
 import ProfilePage from "./pages/ProfilePage";
@@ -47,64 +49,70 @@ const App = () => {
   useActivityTracking();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <RulesProvider>
-        <CardCacheProvider>
-          <BinderProvider>
-            <BrowserRouter>
-              <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<RootLayout />}>
-                  <Route index element={<HomePage />} />
-                  <Route path="binders" element={<BindersPage />} />
-                  <Route path="binder/:id" element={<BinderPage />} />
-                  <Route
-                    path="binder"
-                    element={<Navigate to="/binders" replace />}
-                  />
-
-                  {/* Privacy Policy - Accessible to everyone */}
-                  <Route path="privacy" element={<PrivacyPolicyPage />} />
-
-                  {/* Contact - Accessible to everyone */}
-                  <Route path="contact" element={<ContactPage />} />
-
-                  {/* Auth Routes - Only accessible when not logged in */}
-                  <Route element={<PublicRoute />}>
-                    <Route path="auth" element={<AuthLayout />}>
-                      <Route path="login" element={<LoginPage />} />
-                      <Route path="register" element={<RegisterPage />} />
-                      <Route
-                        path="forgot-password"
-                        element={<ForgotPasswordPage />}
-                      />
-                    </Route>
-                  </Route>
-
-                  {/* Dashboard - handles both normal access and email verification */}
-                  <Route path="dashboard" element={<DashboardHandler />} />
-
-                  {/* Protected Routes - Only accessible when logged in */}
-                  <Route element={<ProtectedRoute />}>
-                    <Route path="profile" element={<ProfilePage />} />
-                    <Route path="admin" element={<AdminPage />} />
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <RulesProvider>
+          <CardCacheProvider>
+            <BinderProvider>
+              <BrowserRouter>
+                <Routes>
+                  {/* Public Routes */}
+                  <Route path="/" element={<RootLayout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="binders" element={<BindersPage />} />
                     <Route
-                      path="admin/binder/:userId/:binderId/:source"
-                      element={<BinderViewer />}
+                      path="binders/:slug"
+                      element={<StaticBinderPage />}
                     />
-                    <Route path="rules" element={<RulesPage />} />
-                  </Route>
+                    <Route path="binder/:id" element={<BinderPage />} />
+                    <Route
+                      path="binder"
+                      element={<Navigate to="/binders" replace />}
+                    />
 
-                  {/* Fallback route */}
-                  <Route path="*" element={<NotFoundPage />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
-            <Toaster position="top-right" />
-          </BinderProvider>
-        </CardCacheProvider>
-      </RulesProvider>
-    </QueryClientProvider>
+                    {/* Privacy Policy - Accessible to everyone */}
+                    <Route path="privacy" element={<PrivacyPolicyPage />} />
+
+                    {/* Contact - Accessible to everyone */}
+                    <Route path="contact" element={<ContactPage />} />
+
+                    {/* Auth Routes - Only accessible when not logged in */}
+                    <Route element={<PublicRoute />}>
+                      <Route path="auth" element={<AuthLayout />}>
+                        <Route path="login" element={<LoginPage />} />
+                        <Route path="register" element={<RegisterPage />} />
+                        <Route
+                          path="forgot-password"
+                          element={<ForgotPasswordPage />}
+                        />
+                      </Route>
+                    </Route>
+
+                    {/* Dashboard - handles both normal access and email verification */}
+                    <Route path="dashboard" element={<DashboardHandler />} />
+
+                    {/* Protected Routes - Only accessible when logged in */}
+                    <Route element={<ProtectedRoute />}>
+                      <Route path="profile" element={<ProfilePage />} />
+                      <Route path="admin" element={<AdminPage />} />
+                      <Route
+                        path="admin/binder/:userId/:binderId/:source"
+                        element={<BinderViewer />}
+                      />
+                      <Route path="rules" element={<RulesPage />} />
+                    </Route>
+
+                    {/* Fallback route */}
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Route>
+                </Routes>
+              </BrowserRouter>
+              <Toaster position="top-right" />
+            </BinderProvider>
+          </CardCacheProvider>
+        </RulesProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 };
 

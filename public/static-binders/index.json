@@ -1,0 +1,104 @@
+{
+  "binders": [
+    {
+      "id": "1749680405014-kmclbd00i",
+      "slug": "151",
+      "name": "151",
+      "description": "",
+      "featured": true,
+      "category": "collection",
+      "tags": [
+        "Pokémon 151 Binder",
+        "Master Set Binder",
+        "Pokémon Card Binder",
+        "Pokémon TCG Binder",
+        "151 Pokémon Collection",
+        "Custom Pokémon Binder",
+        "Trading Card Binder",
+        "Pokémon Binder Collection",
+        "Collector's Pokémon Binder",
+        "Pokémon Card Holder"
+      ],
+      "statistics": {
+        "cardCount": 207,
+        "uniqueSets": 0,
+        "cardTypes": [],
+        "lastUpdated": "2025-06-11T22:22:47.548Z"
+      },
+      "seo": {
+        "title": "151 Master Set Binder | Pokemon Binder Collection",
+        "description": "Keep your Pokémon 151 cards safe and organized with this premium Master Set Binder.",
+        "keywords": "pokemon cards, card collection, trading cards, Pokémon 151 Binder, Master Set Binder, Pokémon Card Binder, Pokémon TCG Binder, 151 Pokémon Collection, Custom Pokémon Binder, Trading Card Binder, Pokémon Binder Collection, Collector's Pokémon Binder, Pokémon Card Holder",
+        "ogImage": "/static-binders/151/preview.jpg",
+        "canonicalUrl": "/binders/151"
+      },
+      "lastUpdated": "2025-06-11T22:22:47.548Z"
+    },
+    {
+      "id": "1749675465318-ablwxil6a",
+      "slug": "journey-together",
+      "name": "Journey Together",
+      "description": "Aaated",
+      "featured": true,
+      "category": "collection",
+      "tags": [
+        "Pokemon",
+        "binder",
+        "collection",
+        "master set",
+        "cards",
+        "showcase"
+      ],
+      "statistics": {
+        "cardCount": 333,
+        "uniqueSets": 0,
+        "cardTypes": [],
+        "lastUpdated": "2025-06-11T21:50:59.907Z"
+      },
+      "seo": {
+        "title": "Journey Together Master Set Binder | Pokemon Binder Collection",
+        "description": "Complete Journey Together Pokemon Master Set binder collection featuring trading cards, rare holos, and exclusive artwork. Explore our organized showcase.",
+        "keywords": "pokemon cards, card collection, trading cards, Pokemon, binder, collection, master set, cards, showcase",
+        "ogImage": "/static-binders/journey-together/preview.jpg",
+        "canonicalUrl": "/binders/journey-together"
+      },
+      "lastUpdated": "2025-06-11T21:50:59.907Z"
+    },
+    {
+      "id": "1749680003962-kdfe4unzw",
+      "slug": "destined-rivals",
+      "name": "Destined Rivals",
+      "description": "",
+      "featured": true,
+      "category": "collection",
+      "tags": [
+        "Pokemon Binder",
+        "Custom Pokemon Binder",
+        "Pokemon Card Collection",
+        "Master Set Binder",
+        "Personalized Binder",
+        "Trading Card Binder",
+        "Pokemon TCG",
+        "Custom TCG Binder",
+        "Pokemon Card Holder",
+        "Destined Rivals"
+      ],
+      "statistics": {
+        "cardCount": 244,
+        "uniqueSets": 0,
+        "cardTypes": [],
+        "lastUpdated": "2025-06-11T22:16:33.956Z"
+      },
+      "seo": {
+        "title": "Destined Rivals Master Set Binder | Pokemon Binder Collection",
+        "description": "Forge the ultimate home for your collection with the Destined Rivals Master Set Binder.",
+        "keywords": "pokemon cards, card collection, trading cards, Pokemon Binder, Custom Pokemon Binder, Pokemon Card Collection, Master Set Binder, Personalized Binder, Trading Card Binder, Pokemon TCG, Custom TCG Binder, Pokemon Card Holder, Destined Rivals",
+        "ogImage": "/static-binders/destined-rivals/preview.jpg",
+        "canonicalUrl": "/binders/destined-rivals"
+      },
+      "lastUpdated": "2025-06-11T22:16:33.956Z"
+    }
+  ],
+  "lastUpdated": "2025-06-11T22:30:00.000Z",
+  "count": 3
+}
