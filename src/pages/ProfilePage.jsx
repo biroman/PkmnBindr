@@ -238,7 +238,7 @@ const ProfilePage = () => {
                 {/* Profile Customization */}
                 <div className="bg-white rounded-lg shadow-sm">
                   <div className="p-6">
-                    <h2 className="text-xl font-semibold text-slate-900">
+                    <h2 className="text-xl font-semibold text-slate-400">
                       Customize Profile
                     </h2>
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 opacity-50">
