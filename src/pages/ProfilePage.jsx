@@ -215,7 +215,7 @@ const ProfilePage = () => {
                         About Me
                       </h5>
                       <p className="text-sm text-slate-700 mt-1 italic">
-                        No status set yet. Click to edit.
+                        No status set yet.
                       </p>
                     </div>
 
@@ -241,41 +241,61 @@ const ProfilePage = () => {
                     <h2 className="text-xl font-semibold text-slate-900">
                       Customize Profile
                     </h2>
-                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 opacity-50">
                       <div>
-                        <Label htmlFor="displayName">Display Name</Label>
+                        <Label htmlFor="displayName" className="text-slate-400">
+                          Display Name
+                        </Label>
                         <Input
                           id="displayName"
                           type="text"
                           defaultValue={user?.displayName || ""}
                           className="mt-2"
+                          disabled
                         />
                       </div>
                       <div>
-                        <Label htmlFor="customStatus">Custom Status</Label>
+                        <Label
+                          htmlFor="customStatus"
+                          className="text-slate-400"
+                        >
+                          Custom Status
+                        </Label>
                         <Input
                           id="customStatus"
                           type="text"
                           placeholder="Set a status..."
                           className="mt-2"
+                          disabled
                         />
                       </div>
                       <div>
-                        <Label>Banner</Label>
+                        <Label className="text-slate-400">Banner</Label>
                         <div className="mt-2 flex items-center gap-2">
-                          <Button variant="outline">Upload Image</Button>
-                          <Button variant="ghost">Remove</Button>
+                          <Button variant="outline" disabled>
+                            Upload Image
+                          </Button>
+                          <Button variant="ghost" disabled>
+                            Remove
+                          </Button>
                         </div>
                       </div>
                       <div>
-                        <Label>Avatar</Label>
+                        <Label className="text-slate-400">Avatar</Label>
                         <div className="mt-2 flex items-center gap-2">
-                          <Button variant="outline">Upload Image</Button>
+                          <Button variant="outline" disabled>
+                            Upload Image
+                          </Button>
                         </div>
                       </div>
                     </div>
-                    <div className="mt-6 pt-6 border-t border-slate-200 flex justify-end">
-                      <Button>Save Changes</Button>
+                    <div className="mt-6 pt-6 border-t border-slate-200 flex justify-between items-center">
+                      <p className="text-sm text-slate-500 italic">
+                        Profile customization coming soon!
+                      </p>
+                      <Button disabled className="opacity-50">
+                        Save Changes
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -301,7 +321,12 @@ const ProfilePage = () => {
                           Verified
                         </span>
                       ) : (
-                        <Button variant="outline" size="sm">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled
+                          className="opacity-50"
+                        >
                           Resend Verification
                         </Button>
                       )}
@@ -314,7 +339,8 @@ const ProfilePage = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        disabled={isOAuthUser}
+                        disabled
+                        className={isOAuthUser ? "" : "opacity-50"}
                       >
                         {isOAuthUser
                           ? `Managed by ${getProviderLabel(authProvider)}`
@@ -465,7 +491,9 @@ const ProfilePage = () => {
                         Decide if your profile is public or private.
                       </p>
                     </div>
-                    <Button variant="outline">Manage</Button>
+                    <Button variant="outline" disabled className="opacity-50">
+                      Manage
+                    </Button>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
@@ -476,7 +504,15 @@ const ProfilePage = () => {
                         Set default visibility for new binders you create.
                       </p>
                     </div>
-                    <Button variant="outline">Manage</Button>
+                    <Button variant="outline" disabled className="opacity-50">
+                      Manage
+                    </Button>
+                  </div>
+
+                  <div className="mt-6 p-4 bg-slate-50 rounded-lg">
+                    <p className="text-sm text-slate-500 italic text-center">
+                      Privacy settings will be available in a future update
+                    </p>
                   </div>
                 </div>
               </div>
