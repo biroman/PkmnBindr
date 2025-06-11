@@ -12,6 +12,7 @@ const DraggableCard = ({
   isMissing = false,
   className = "",
   isDragging = false,
+  isReadOnly = false,
   ...props
 }) => {
   const {
@@ -27,12 +28,13 @@ const DraggableCard = ({
       card,
       position,
     },
+    disabled: isReadOnly, // Disable dragging in read-only mode
   });
 
   const style = {
     transform: CSS.Translate.toString(transform),
     opacity: isCurrentlyDragging ? 0.5 : 1,
-    cursor: isCurrentlyDragging ? "grabbing" : "grab",
+    cursor: isReadOnly ? "default" : isCurrentlyDragging ? "grabbing" : "grab",
     // Ensure drag doesn't go off-screen
     zIndex: isCurrentlyDragging ? 1000 : 1,
   };
@@ -57,7 +59,10 @@ const DraggableCard = ({
         showDeleteButton={!!onCardDelete && !isCurrentlyDragging}
         showMissingButton={!!onToggleMissing && !isCurrentlyDragging}
         isMissing={isMissing}
-        dragHandleProps={{ ...attributes, ...listeners }}
+        isReadOnly={isReadOnly}
+        dragHandleProps={
+          isReadOnly ? undefined : { ...attributes, ...listeners }
+        }
         className={`
           touch-none select-none ${
             isCurrentlyDragging ? "pointer-events-none" : ""

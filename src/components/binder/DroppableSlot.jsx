@@ -11,6 +11,7 @@ const DroppableSlot = ({
   onToggleMissing, // New prop to handle missing/collected toggle
   className = "",
   isMissing = false,
+  isReadOnly = false, // Extract isReadOnly to prevent it from passing to DOM
   ...props
 }) => {
   const { isOver, setNodeRef, active } = useDroppable({
@@ -79,6 +80,7 @@ const DroppableSlot = ({
             onCardDelete={onCardDelete}
             onToggleMissing={onToggleMissing ? handleToggleMissing : undefined}
             isMissing={isMissing}
+            isReadOnly={isReadOnly}
             className={`w-full h-full transition-all duration-200 ${
               isSwapHover ? "scale-95 opacity-75" : ""
             } ${isMissing ? "opacity-50 grayscale" : ""}`}

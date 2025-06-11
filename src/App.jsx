@@ -21,6 +21,7 @@ import DashboardHandler from "./components/auth/DashboardHandler";
 import ProfilePage from "./pages/ProfilePage";
 import AdminPage from "./pages/AdminPage";
 import RulesPage from "./pages/RulesPage";
+import BinderViewer from "./components/admin/BinderViewer";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
@@ -87,6 +88,10 @@ const App = () => {
                   <Route element={<ProtectedRoute />}>
                     <Route path="profile" element={<ProfilePage />} />
                     <Route path="admin" element={<AdminPage />} />
+                    <Route
+                      path="admin/binder/:userId/:binderId/:source"
+                      element={<BinderViewer />}
+                    />
                     <Route path="rules" element={<RulesPage />} />
                   </Route>
 

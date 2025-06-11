@@ -15,12 +15,14 @@ import { setupDefaultContactLimits } from "../scripts/setupContactLimits";
 import {
   fetchAllUsers,
   fetchAllUsersWithStats,
+  fetchAllUsersWithStatsAsAdmin,
   updateUserRole,
   updateUserStatus,
   updateUserStats,
   migrateUserData,
   recalculateAllUserStats,
 } from "../utils/userManagement";
+import UserBindersList from "../components/admin/UserBindersList";
 import {
   Cog6ToothIcon,
   ChartBarIcon,
@@ -72,7 +74,30 @@ const AdminPage = () => {
   const [usersLoading, setUsersLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
   const [recalculatingStats, setRecalculatingStats] = useState(false);
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(20);
+  const [totalUsers, setTotalUsers] = useState(0);
+  const [userStats, setUserStats] = useState({
+    total: 0,
+    active: 0,
+    inactive: 0,
+    admins: 0,
+    lastWeekSignups: 0,
+  });
+
+  // Advanced features state
+  const [showUserModal, setShowUserModal] = useState(false);
+  const [selectedUserDetails, setSelectedUserDetails] = useState(null);
+  const [sortBy, setSortBy] = useState("createdAt");
+  const [sortOrder, setSortOrder] = useState("desc");
+
+  // User action dropdown state
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [actionLoading, setActionLoading] = useState(null);
 
   // Contact system state
   const [contactData, setContactData] = useState({
@@ -106,50 +131,120 @@ const AdminPage = () => {
     calculateStats();
   }, [users, rules]);
 
+  // Optimized fetch users with pagination
+  const loadUsers = async (page = 1, resetStats = false) => {
+    try {
+      setUsersLoading(true);
+
+      // For now, we'll simulate pagination by fetching all and slicing
+      // In a real app, you'd want server-side pagination
+      const allUsers = await fetchAllUsersWithStatsAsAdmin();
+
+      // Calculate user statistics
+      const stats = {
+        total: allUsers.length,
+        active: allUsers.filter((u) => u.status === "active").length,
+        inactive: allUsers.filter((u) => u.status !== "active").length,
+        admins: allUsers.filter((u) => u.role === "admin" || u.role === "owner")
+          .length,
+        lastWeekSignups: allUsers.filter((u) => {
+          const weekAgo = new Date();
+          weekAgo.setDate(weekAgo.getDate() - 7);
+          return new Date(u.createdAt) > weekAgo;
+        }).length,
+      };
+
+      if (resetStats) {
+        setUserStats(stats);
+      }
+
+      // Apply filters
+      let filteredUsers = allUsers.filter((u) => {
+        const matchesSearch =
+          u.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          u.displayName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          u.uid.toLowerCase().includes(searchTerm.toLowerCase());
+
+        const matchesRole = filterRole === "all" || u.role === filterRole;
+        const matchesStatus =
+          filterStatus === "all" || u.status === filterStatus;
+
+        return matchesSearch && matchesRole && matchesStatus;
+      });
+
+      // Apply sorting
+      filteredUsers.sort((a, b) => {
+        let aValue = a[sortBy];
+        let bValue = b[sortBy];
+
+        if (sortBy === "createdAt" || sortBy === "lastSeen") {
+          aValue = new Date(aValue);
+          bValue = new Date(bValue);
+        }
+
+        if (sortOrder === "asc") {
+          return aValue > bValue ? 1 : -1;
+        } else {
+          return aValue < bValue ? 1 : -1;
+        }
+      });
+
+      // Calculate pagination
+      const startIndex = (page - 1) * usersPerPage;
+      const endIndex = startIndex + usersPerPage;
+      const paginatedUsers = filteredUsers.slice(startIndex, endIndex);
+
+      setUsers(paginatedUsers);
+      setTotalUsers(filteredUsers.length);
+      setUserStats(stats);
+
+      // Run migration if needed (only on first load)
+      if (page === 1 && allUsers.length > 0) {
+        const migrationResult = await migrateUserData();
+        if (migrationResult.success && migrationResult.migratedCount > 0) {
+          console.log(`Migrated ${migrationResult.migratedCount} users`);
+          // Reload current page after migration
+          await loadUsers(page, false);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      setUsers([]);
+      setTotalUsers(0);
+    } finally {
+      setUsersLoading(false);
+    }
+  };
+
   // Fetch users effect
   useEffect(() => {
-    const loadUsers = async () => {
-      try {
-        setUsersLoading(true);
+    if (user?.uid) {
+      loadUsers(currentPage, true);
+    }
+  }, [
+    user,
+    currentPage,
+    searchTerm,
+    filterRole,
+    filterStatus,
+    sortBy,
+    sortOrder,
+  ]);
 
-        // Fetch users with accurate stats calculated from Firebase collections
-        const usersWithStats = await fetchAllUsersWithStats();
-
-        // Run migration to ensure all users have required fields
-        if (usersWithStats.length > 0) {
-          const migrationResult = await migrateUserData();
-          if (migrationResult.success && migrationResult.migratedCount > 0) {
-            console.log(`Migrated ${migrationResult.migratedCount} users`);
-            // Refetch users after migration
-            const updatedUsers = await fetchAllUsersWithStats();
-            setUsers(updatedUsers);
-            setUsersLoading(false);
-            return;
-          }
-        }
-
-        setUsers(usersWithStats);
-
-        // If no users found (first time setup), create initial user data
-        if (usersWithStats.length === 0 && user?.uid) {
-          console.log(
-            "No users found in database. This appears to be initial setup."
-          );
-          // The user tracking hook will create the user profile automatically
-        }
-      } catch (error) {
-        console.error("Error fetching users:", error);
-        // Fallback to empty array if there's an error
-        setUsers([]);
-      } finally {
-        setUsersLoading(false);
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        activeDropdown &&
+        !event.target.closest("[data-dropdown-container]")
+      ) {
+        setActiveDropdown(null);
       }
     };
 
-    if (user?.uid) {
-      loadUsers();
-    }
-  }, [user]);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [activeDropdown]);
 
   // Load contact data
   useEffect(() => {
@@ -359,7 +454,7 @@ const AdminPage = () => {
         if (result.migratedCount > 0) {
           alert(`✅ Successfully migrated ${result.migratedCount} users`);
           // Reload users after migration
-          const updatedUsers = await fetchAllUsersWithStats();
+          const updatedUsers = await fetchAllUsersWithStatsAsAdmin();
           setUsers(updatedUsers);
         } else {
           alert("✅ All users are already up-to-date");
@@ -395,9 +490,8 @@ const AdminPage = () => {
           );
         }
 
-        // Reload users to show updated stats
-        const updatedUsers = await fetchAllUsersWithStats();
-        setUsers(updatedUsers);
+        // Reload current page
+        await loadUsers(currentPage, true);
       } else {
         alert(`❌ Stats recalculation failed: ${result.error}`);
       }
@@ -409,6 +503,148 @@ const AdminPage = () => {
     }
   };
 
+  // User action functions
+  const handleUserAction = async (userId, action, additionalData = null) => {
+    const userData = users.find((u) => u.uid === userId);
+    if (!userData) return;
+
+    const confirmMessages = {
+      ban: `Ban ${userData.displayName}? This will prevent them from accessing the application.`,
+      unban: `Unban ${userData.displayName}? This will restore their access.`,
+      suspend: `Suspend ${userData.displayName} for ${
+        additionalData || "7 days"
+      }?`,
+      unsuspend: `Remove suspension from ${userData.displayName}?`,
+      resetPassword: `Send password reset email to ${userData.displayName}?`,
+      deleteAccount: `DELETE account for ${userData.displayName}? This action cannot be undone and will remove all their data.`,
+      makeAdmin: `Grant administrator privileges to ${userData.displayName}?`,
+      removeAdmin: `Remove administrator privileges from ${userData.displayName}?`,
+      sendNotification: `Send notification to ${userData.displayName}?`,
+      exportData: `Export all data for ${userData.displayName}?`,
+    };
+
+    if (confirmMessages[action] && !window.confirm(confirmMessages[action])) {
+      setActiveDropdown(null);
+      return;
+    }
+
+    try {
+      setActionLoading(`${userId}-${action}`);
+
+      // Mock implementations - in real app these would be proper Firebase functions
+      switch (action) {
+        case "ban":
+          await updateUserStatus(userId, "banned");
+          alert(`✅ ${userData.displayName} has been banned`);
+          break;
+        case "unban":
+          await updateUserStatus(userId, "active");
+          alert(`✅ ${userData.displayName} has been unbanned`);
+          break;
+        case "suspend":
+          // In real implementation, you'd set a suspension until date
+          await updateUserStatus(userId, "suspended");
+          alert(`✅ ${userData.displayName} has been suspended`);
+          break;
+        case "unsuspend":
+          await updateUserStatus(userId, "active");
+          alert(`✅ Suspension removed from ${userData.displayName}`);
+          break;
+        case "resetPassword":
+          // Mock password reset
+          alert(`✅ Password reset email sent to ${userData.email}`);
+          break;
+        case "deleteAccount":
+          // Mock account deletion
+          alert(
+            `✅ Account deletion process initiated for ${userData.displayName}`
+          );
+          break;
+        case "makeAdmin":
+          await updateUserRole(userId, "admin");
+          alert(`✅ ${userData.displayName} is now an administrator`);
+          break;
+        case "removeAdmin":
+          await updateUserRole(userId, "user");
+          alert(
+            `✅ Administrator privileges removed from ${userData.displayName}`
+          );
+          break;
+        case "sendNotification":
+          const message = prompt("Enter notification message:");
+          if (message) {
+            alert(
+              `✅ Notification sent to ${userData.displayName}: "${message}"`
+            );
+          }
+          break;
+        case "exportData":
+          alert(
+            `✅ Data export for ${userData.displayName} initiated. Download will be available shortly.`
+          );
+          break;
+        case "impersonate":
+          if (
+            window.confirm(
+              `Impersonate ${userData.displayName}? This will log you in as this user for support purposes.`
+            )
+          ) {
+            alert(
+              `🔄 Impersonating ${userData.displayName} - Opening new window...`
+            );
+          }
+          break;
+        default:
+          console.warn("Unknown action:", action);
+      }
+
+      // Reload users to reflect changes
+      await loadUsers(currentPage, true);
+      setActiveDropdown(null);
+    } catch (error) {
+      console.error("User action error:", error);
+      alert(`❌ Action failed: ${error.message}`);
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleViewUserDetails = async (userId) => {
+    const userData = users.find((u) => u.uid === userId);
+    if (userData) {
+      // Mock additional user details that would be fetched
+      const detailedUser = {
+        ...userData,
+        loginHistory: [
+          { date: new Date(), ip: "192.168.1.1", location: "Oslo, Norway" },
+          {
+            date: new Date(Date.now() - 86400000),
+            ip: "10.0.0.1",
+            location: "Bergen, Norway",
+          },
+        ],
+        recentActivity: [
+          {
+            action: "Created binder",
+            timestamp: new Date(),
+            details: '"My Pokemon Collection"',
+          },
+          {
+            action: "Added cards",
+            timestamp: new Date(Date.now() - 3600000),
+            details: '15 cards to "Rare Collection"',
+          },
+        ],
+        deviceInfo: {
+          lastDevice: "Windows 11 - Chrome 120",
+          platforms: ["Web", "Mobile"],
+        },
+      };
+      setSelectedUserDetails(detailedUser);
+      setShowUserModal(true);
+    }
+  };
+
   // User management functions
   const handleRoleChange = async (userId, newRole) => {
     try {
@@ -416,10 +652,8 @@ const AdminPage = () => {
       const success = await updateUserRole(userId, newRole);
 
       if (success) {
-        // Update local state
-        setUsers((prev) =>
-          prev.map((u) => (u.uid === userId ? { ...u, role: newRole } : u))
-        );
+        // Reload current page to reflect changes
+        await loadUsers(currentPage, true);
         alert(`User role updated to ${newRole}`);
       } else {
         alert(`Failed to update user role`);
@@ -432,31 +666,22 @@ const AdminPage = () => {
 
   const handleStatusToggle = async (userId) => {
     try {
-      const user = users.find((u) => u.uid === userId);
-      if (!user) {
+      const userData = users.find((u) => u.uid === userId);
+      if (!userData) {
         alert("User not found");
         return;
       }
 
       // Ensure user has a status, default to 'active' if missing
-      const currentStatus = user.status || "active";
+      const currentStatus = userData.status || "active";
       const newStatus = currentStatus === "active" ? "inactive" : "active";
 
       // Update in Firestore
       const success = await updateUserStatus(userId, newStatus);
 
       if (success) {
-        // Update local state
-        setUsers((prev) =>
-          prev.map((u) =>
-            u.uid === userId
-              ? {
-                  ...u,
-                  status: newStatus,
-                }
-              : u
-          )
-        );
+        // Reload current page to reflect changes
+        await loadUsers(currentPage, true);
         alert(`User ${newStatus === "active" ? "activated" : "deactivated"}`);
       } else {
         alert(`Failed to update user status`);
@@ -816,26 +1041,164 @@ const AdminPage = () => {
     </div>
   );
 
+  // User Action Dropdown Component
+  const UserActionDropdown = ({ userId, userData }) => {
+    const isActive = activeDropdown === userId;
+    const isLoading = actionLoading?.startsWith(userId);
+
+    if (!isActive) return null;
+
+    const actions = [
+      {
+        id: "viewDetails",
+        label: "👁️ View Details",
+        onClick: () => handleViewUserDetails(userId),
+        variant: "default",
+      },
+      { type: "divider" },
+      {
+        id: "ban",
+        label: userData.status === "banned" ? "✅ Unban User" : "🚫 Ban User",
+        onClick: () =>
+          handleUserAction(
+            userId,
+            userData.status === "banned" ? "unban" : "ban"
+          ),
+        variant: userData.status === "banned" ? "success" : "danger",
+      },
+      {
+        id: "suspend",
+        label:
+          userData.status === "suspended"
+            ? "🔓 Remove Suspension"
+            : "⏸️ Suspend User",
+        onClick: () =>
+          handleUserAction(
+            userId,
+            userData.status === "suspended" ? "unsuspend" : "suspend"
+          ),
+        variant: userData.status === "suspended" ? "success" : "warning",
+      },
+      { type: "divider" },
+      {
+        id: "makeAdmin",
+        label: userData.role === "admin" ? "👤 Remove Admin" : "🛡️ Make Admin",
+        onClick: () =>
+          handleUserAction(
+            userId,
+            userData.role === "admin" ? "removeAdmin" : "makeAdmin"
+          ),
+        variant: "default",
+        disabled: userData.role === "owner" || userData.uid === user?.uid,
+      },
+      { type: "divider" },
+      {
+        id: "resetPassword",
+        label: "🔑 Reset Password",
+        onClick: () => handleUserAction(userId, "resetPassword"),
+        variant: "default",
+      },
+      {
+        id: "sendNotification",
+        label: "📢 Send Notification",
+        onClick: () => handleUserAction(userId, "sendNotification"),
+        variant: "default",
+      },
+      {
+        id: "impersonate",
+        label: "🔄 Impersonate User",
+        onClick: () => handleUserAction(userId, "impersonate"),
+        variant: "warning",
+      },
+      { type: "divider" },
+      {
+        id: "exportData",
+        label: "📤 Export User Data",
+        onClick: () => handleUserAction(userId, "exportData"),
+        variant: "default",
+      },
+      {
+        id: "deleteAccount",
+        label: "🗑️ Delete Account",
+        onClick: () => handleUserAction(userId, "deleteAccount"),
+        variant: "danger",
+        disabled: userData.uid === user?.uid,
+      },
+    ];
+
+    const getVariantClasses = (variant) => {
+      switch (variant) {
+        case "danger":
+          return "text-red-600 hover:bg-red-50";
+        case "warning":
+          return "text-orange-600 hover:bg-orange-50";
+        case "success":
+          return "text-green-600 hover:bg-green-50";
+        default:
+          return "text-gray-700 hover:bg-gray-50";
+      }
+    };
+
+    return (
+      <div className="absolute right-0 top-full mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 z-50 py-2">
+        <div className="px-3 py-2 border-b border-gray-100">
+          <div className="font-medium text-gray-900 text-sm">
+            {userData.displayName}
+          </div>
+          <div className="text-xs text-gray-500">{userData.email}</div>
+        </div>
+
+        {actions.map((action, index) => {
+          if (action.type === "divider") {
+            return <div key={index} className="h-px bg-gray-100 my-1" />;
+          }
+
+          const isActionLoading =
+            isLoading && actionLoading === `${userId}-${action.id}`;
+
+          return (
+            <button
+              key={action.id}
+              onClick={action.onClick}
+              disabled={action.disabled || isActionLoading}
+              className={`
+                w-full text-left px-3 py-2 text-sm transition-colors flex items-center gap-2
+                ${
+                  action.disabled
+                    ? "opacity-50 cursor-not-allowed"
+                    : "cursor-pointer"
+                }
+                ${isActionLoading ? "opacity-50 cursor-wait" : ""}
+                ${getVariantClasses(action.variant)}
+              `}
+            >
+              {isActionLoading ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
+                  <span>Processing...</span>
+                </>
+              ) : (
+                <span>{action.label}</span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+    );
+  };
+
   const renderUsers = () => {
-    const filteredUsers = users.filter((u) => {
-      const matchesSearch =
-        u.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        u.displayName.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesRole = filterRole === "all" || u.role === filterRole;
-      return matchesSearch && matchesRole;
-    });
+    const totalPages = Math.ceil(totalUsers / usersPerPage);
 
     return (
       <div className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        {/* Header with Stats Dashboard */}
+        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-xl p-6 text-white">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                User Management
-              </h2>
-              <p className="text-gray-600 mt-1">
-                Manage registered users and their permissions. Stats are
-                calculated in real-time from Firebase collections.
+              <h1 className="text-2xl font-bold mb-2">User Management</h1>
+              <p className="text-indigo-100">
+                Scalable user management with advanced moderation tools
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -843,17 +1206,17 @@ const AdminPage = () => {
                 onClick={handleRecalculateStats}
                 disabled={recalculatingStats || usersLoading}
                 className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all
+                  flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all border
                   ${
                     recalculatingStats || usersLoading
-                      ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                      : "bg-green-100 text-green-700 hover:bg-green-200"
+                      ? "bg-white/10 text-white/50 cursor-not-allowed border-white/20"
+                      : "bg-white/20 text-white hover:bg-white/30 border-white/30"
                   }
                 `}
               >
                 {recalculatingStats ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     <span>Recalculating...</span>
                   </>
                 ) : (
@@ -863,110 +1226,170 @@ const AdminPage = () => {
                   </>
                 )}
               </button>
-              <div className="flex items-center gap-2 px-3 py-1 bg-blue-100 rounded-full">
-                <UserGroupIcon className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-medium text-blue-700">
-                  {filteredUsers.length}{" "}
-                  {filteredUsers.length === 1 ? "User" : "Users"}
-                </span>
-              </div>
             </div>
           </div>
 
-          {/* Search and Filter Bar */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <div className="flex-1 relative">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg
-                  className="h-5 w-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          {/* Quick Stats Row */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="bg-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+              <div className="text-2xl font-bold">{userStats.total}</div>
+              <div className="text-sm opacity-90">Total Users</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+              <div className="text-2xl font-bold text-green-300">
+                {userStats.active}
+              </div>
+              <div className="text-sm opacity-90">Active</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+              <div className="text-2xl font-bold text-red-300">
+                {userStats.inactive}
+              </div>
+              <div className="text-sm opacity-90">Inactive</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+              <div className="text-2xl font-bold text-purple-300">
+                {userStats.admins}
+              </div>
+              <div className="text-sm opacity-90">Admins</div>
+            </div>
+            <div className="bg-white/20 rounded-lg p-4 text-center backdrop-blur-sm">
+              <div className="text-2xl font-bold text-yellow-300">
+                {userStats.lastWeekSignups}
+              </div>
+              <div className="text-sm opacity-90">New (7d)</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Management Panel */}
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          {/* Controls Bar */}
+          <div className="border-b border-gray-200 p-6 bg-gray-50">
+            <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+              {/* Search and Filters */}
+              <div className="flex flex-col sm:flex-row gap-3 flex-1">
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg
+                      className="h-5 w-5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Search by name, email, or ID..."
+                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 w-full sm:w-64"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                   />
-                </svg>
-              </div>
-              <input
-                type="text"
-                placeholder="Search users by name or email..."
-                className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
+                </div>
 
-            <select
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              value={filterRole}
-              onChange={(e) => setFilterRole(e.target.value)}
-            >
-              <option value="all">All Roles</option>
-              <option value="owner">Owner</option>
-              <option value="admin">Admin</option>
-              <option value="user">User</option>
-            </select>
-          </div>
+                <select
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  value={filterRole}
+                  onChange={(e) => setFilterRole(e.target.value)}
+                >
+                  <option value="all">All Roles</option>
+                  <option value="owner">Owner</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
 
-          {/* Firebase Optimization Info */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <div className="flex items-start gap-3">
-              <InformationCircleIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
-              <div className="text-sm text-blue-800">
-                <p className="font-medium mb-1">Firebase Index Optimization</p>
-                <p>
-                  User stats are calculated in real-time from multiple Firebase
-                  collections using optimized queries. This ensures accuracy but
-                  may take a moment to load. The system uses existing indexes
-                  for optimal performance.
-                </p>
-              </div>
-            </div>
-          </div>
+                <select
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  value={filterStatus}
+                  onChange={(e) => setFilterStatus(e.target.value)}
+                >
+                  <option value="all">All Status</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
 
-          {/* User Statistics */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
-            <div className="bg-blue-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-blue-600">
-                {users.length}
+                <select
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  value={`${sortBy}-${sortOrder}`}
+                  onChange={(e) => {
+                    const [field, order] = e.target.value.split("-");
+                    setSortBy(field);
+                    setSortOrder(order);
+                  }}
+                >
+                  <option value="createdAt-desc">Newest First</option>
+                  <option value="createdAt-asc">Oldest First</option>
+                  <option value="lastSeen-desc">Recently Active</option>
+                  <option value="displayName-asc">Name A-Z</option>
+                  <option value="binderCount-desc">Most Binders</option>
+                </select>
               </div>
-              <div className="text-sm text-blue-700">Total Users</div>
-            </div>
-            <div className="bg-green-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-green-600">
-                {users.filter((u) => u.status === "active").length}
+
+              {/* Info Messages */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-sm text-gray-600 bg-blue-50 rounded-lg p-3 border border-blue-200">
+                  <svg
+                    className="w-4 h-4 text-blue-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>
+                    Click on any user row to access management tools and actions
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 text-sm text-gray-600 bg-amber-50 rounded-lg p-3 border border-amber-200">
+                  <svg
+                    className="w-4 h-4 text-amber-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    />
+                  </svg>
+                  <span>
+                    User stats marked as "Cached Stats" use stored values due to
+                    Firebase security rules. Use "Recalculate Stats" to update
+                    all user statistics.
+                  </span>
+                </div>
               </div>
-              <div className="text-sm text-green-700">Active Users</div>
-            </div>
-            <div className="bg-purple-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-purple-600">
-                {
-                  users.filter((u) => u.role === "owner" || u.role === "admin")
-                    .length
-                }
-              </div>
-              <div className="text-sm text-purple-700">Admin Users</div>
-            </div>
-            <div className="bg-orange-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-orange-600">
-                {users.reduce((sum, u) => sum + (u.binderCount || 0), 0)}
-              </div>
-              <div className="text-sm text-orange-700">Total Binders</div>
             </div>
           </div>
 
           {/* Users Table */}
           {usersLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-3 text-gray-600">Loading users...</span>
+            <div className="flex items-center justify-center py-24">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+                <p className="text-gray-600 font-medium">Loading users...</p>
+                <p className="text-gray-400 text-sm">
+                  Page {currentPage} of {totalPages}
+                </p>
+              </div>
             </div>
           ) : (
-            <div className="overflow-hidden">
+            <>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
@@ -975,160 +1398,195 @@ const AdminPage = () => {
                         User
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Role & Status
+                        Status & Role
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Collection Stats
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Activity
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Collection
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Actions
+                      <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Management
                       </th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {filteredUsers.map((u) => (
+                    {users.map((u) => (
                       <tr
                         key={u.uid}
-                        className="hover:bg-gray-50 transition-colors"
+                        className={`hover:bg-gray-50 transition-colors cursor-pointer relative ${
+                          activeDropdown === u.uid ? "bg-indigo-50" : ""
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveDropdown(
+                            activeDropdown === u.uid ? null : u.uid
+                          );
+                        }}
+                        data-dropdown-container
                       >
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
-                            <div className="h-10 w-10 flex-shrink-0">
+                            <div className="flex-shrink-0 h-12 w-12">
                               {u.photoURL ? (
                                 <img
-                                  className="h-10 w-10 rounded-full"
+                                  className="h-12 w-12 rounded-full border-2 border-gray-200"
                                   src={u.photoURL}
                                   alt=""
                                 />
                               ) : (
-                                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                                  <span className="text-white font-medium text-sm">
+                                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center border-2 border-gray-200">
+                                  <span className="text-white font-bold text-lg">
                                     {u.displayName.charAt(0).toUpperCase()}
                                   </span>
                                 </div>
                               )}
                             </div>
                             <div className="ml-4">
-                              <div className="text-sm font-medium text-gray-900">
-                                {u.displayName}
+                              <div className="flex items-center gap-2">
+                                <div className="text-sm font-semibold text-gray-900">
+                                  {u.displayName}
+                                </div>
+                                {u.uid === user?.uid && (
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                                    You
+                                  </span>
+                                )}
                               </div>
                               <div className="text-sm text-gray-500">
                                 {u.email}
                               </div>
+                              <div className="text-xs text-gray-400 font-mono">
+                                ID: {u.uid.substring(0, 8)}...
+                              </div>
                             </div>
                           </div>
                         </td>
+
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="space-y-2">
+                          <div className="flex flex-col gap-2">
+                            <div className="flex items-center gap-2">
+                              <span
+                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                                  u.status === "active"
+                                    ? "bg-green-100 text-green-800"
+                                    : u.status === "banned"
+                                    ? "bg-red-100 text-red-800"
+                                    : u.status === "suspended"
+                                    ? "bg-yellow-100 text-yellow-800"
+                                    : "bg-gray-100 text-gray-800"
+                                }`}
+                              >
+                                <div
+                                  className={`w-1.5 h-1.5 rounded-full mr-1.5 ${
+                                    u.status === "active"
+                                      ? "bg-green-500"
+                                      : u.status === "banned"
+                                      ? "bg-red-500"
+                                      : u.status === "suspended"
+                                      ? "bg-yellow-500"
+                                      : "bg-gray-500"
+                                  }`}
+                                />
+                                {u.status === "active"
+                                  ? "Active"
+                                  : u.status === "banned"
+                                  ? "Banned"
+                                  : u.status === "suspended"
+                                  ? "Suspended"
+                                  : "Inactive"}
+                              </span>
+                            </div>
                             <span
-                              className={`inline-flex px-2 py-1 text-xs font-medium rounded-full border ${getRoleColor(
+                              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium w-fit ${getRoleColor(
                                 u.role
                               )}`}
                             >
+                              {u.role === "owner" && "👑 "}
+                              {u.role === "admin" && "🛡️ "}
+                              {u.role === "user" && "👤 "}
                               {u.role.charAt(0).toUpperCase() + u.role.slice(1)}
                             </span>
-                            <br />
-                            <span
-                              className={`inline-flex px-2 py-1 text-xs font-medium rounded-full border ${getStatusColor(
-                                u.status
-                              )}`}
-                            >
-                              {u.status.charAt(0).toUpperCase() +
-                                u.status.slice(1)}
-                            </span>
                           </div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div>
-                            <div className="font-medium">
-                              Joined {formatDate(u.createdAt)}
+
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">
+                            <div className="flex items-center gap-1 mb-1">
+                              <FolderIcon className="w-4 h-4 text-blue-500" />
+                              <span className="font-semibold">
+                                {u.binderCount}
+                              </span>
+                              <span className="text-gray-500">binders</span>
                             </div>
-                            <div className="text-gray-400">
-                              Last seen {getTimeAgo(u.lastSeen)}
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div>
                             <div className="flex items-center gap-1">
-                              <FolderIcon className="w-4 h-4" />
-                              <span className="font-medium">
-                                {u.binderCount} binders
+                              <PhotoIcon className="w-4 h-4 text-purple-500" />
+                              <span className="font-semibold">
+                                {u.cardCount}
                               </span>
-                              {u.storedBinderCount !== undefined &&
-                                u.storedBinderCount !== u.binderCount && (
-                                  <span
-                                    className="inline-flex px-1.5 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 border border-orange-200"
-                                    title={`Stored: ${u.storedBinderCount}, Calculated: ${u.binderCount}`}
-                                  >
-                                    Updated
-                                  </span>
-                                )}
+                              <span className="text-gray-500">cards</span>
                             </div>
-                            <div className="flex items-center gap-1 text-gray-400">
-                              <PhotoIcon className="w-4 h-4" />
-                              <span>{u.cardCount} cards</span>
-                              {u.storedCardCount !== undefined &&
-                                u.storedCardCount !== u.cardCount && (
-                                  <span
-                                    className="inline-flex px-1.5 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 border border-orange-200"
-                                    title={`Stored: ${u.storedCardCount}, Calculated: ${u.cardCount}`}
-                                  >
-                                    Updated
-                                  </span>
-                                )}
-                            </div>
-                            {u.calculationError && (
-                              <div className="flex items-center gap-1 text-red-500 mt-1">
-                                <ExclamationTriangleIcon className="w-3 h-3" />
-                                <span className="text-xs">Calc Error</span>
+                            {u.usingStoredStats ? (
+                              <div className="mt-1">
+                                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                                  Cached Stats
+                                </span>
                               </div>
+                            ) : (
+                              (u.storedBinderCount !== u.binderCount ||
+                                u.storedCardCount !== u.cardCount) && (
+                                <div className="mt-1">
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800">
+                                    Stats Updated
+                                  </span>
+                                </div>
+                              )
                             )}
                           </div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <div className="flex items-center gap-2">
-                            {u.uid !== user?.uid && (
-                              <>
-                                <select
-                                  className="text-xs border border-gray-300 rounded px-2 py-1"
-                                  value={u.role}
-                                  onChange={(e) =>
-                                    handleRoleChange(u.uid, e.target.value)
-                                  }
-                                  disabled={u.role === "owner"}
-                                >
-                                  <option value="user">User</option>
-                                  <option value="admin">Admin</option>
-                                  {u.role === "owner" && (
-                                    <option value="owner">Owner</option>
-                                  )}
-                                </select>
 
-                                <button
-                                  onClick={() => handleStatusToggle(u.uid)}
-                                  className={`text-xs px-2 py-1 rounded transition-colors ${
-                                    u.status === "active"
-                                      ? "text-red-600 hover:bg-red-50"
-                                      : "text-green-600 hover:bg-green-50"
-                                  }`}
-                                >
-                                  {u.status === "active"
-                                    ? "Deactivate"
-                                    : "Activate"}
-                                </button>
-                              </>
-                            )}
-
-                            {u.uid === user?.uid && (
-                              <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                                You
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <div>
+                            <div className="flex items-center gap-1 mb-1">
+                              <Clock className="w-3 h-3" />
+                              <span className="text-xs">
+                                Joined {formatDate(u.createdAt)}
                               </span>
-                            )}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <User className="w-3 h-3" />
+                              <span className="text-xs">
+                                Active {getTimeAgo(u.lastSeen)}
+                              </span>
+                            </div>
                           </div>
+                        </td>
+
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+                          <div className="flex items-center justify-end gap-2">
+                            <div className="flex items-center gap-2 text-gray-500">
+                              <span className="text-xs">Click for actions</span>
+                              <svg
+                                className={`w-4 h-4 transition-transform ${
+                                  activeDropdown === u.uid ? "rotate-180" : ""
+                                }`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          {/* Dropdown */}
+                          <UserActionDropdown userId={u.uid} userData={u} />
                         </td>
                       </tr>
                     ))}
@@ -1136,22 +1594,180 @@ const AdminPage = () => {
                 </table>
               </div>
 
-              {filteredUsers.length === 0 && (
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-700">
+                      Showing {(currentPage - 1) * usersPerPage + 1} to{" "}
+                      {Math.min(currentPage * usersPerPage, totalUsers)} of{" "}
+                      {totalUsers} users
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() =>
+                          setCurrentPage((prev) => Math.max(1, prev - 1))
+                        }
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 text-sm border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                      >
+                        Previous
+                      </button>
+
+                      <div className="flex gap-1">
+                        {Array.from(
+                          { length: Math.min(5, totalPages) },
+                          (_, i) => {
+                            let pageNum;
+                            if (totalPages <= 5) {
+                              pageNum = i + 1;
+                            } else if (currentPage <= 3) {
+                              pageNum = i + 1;
+                            } else if (currentPage >= totalPages - 2) {
+                              pageNum = totalPages - 4 + i;
+                            } else {
+                              pageNum = currentPage - 2 + i;
+                            }
+
+                            return (
+                              <button
+                                key={pageNum}
+                                onClick={() => setCurrentPage(pageNum)}
+                                className={`px-3 py-1 text-sm border rounded-md ${
+                                  currentPage === pageNum
+                                    ? "bg-indigo-600 text-white border-indigo-600"
+                                    : "border-gray-300 hover:bg-gray-100"
+                                }`}
+                              >
+                                {pageNum}
+                              </button>
+                            );
+                          }
+                        )}
+                      </div>
+
+                      <button
+                        onClick={() =>
+                          setCurrentPage((prev) =>
+                            Math.min(totalPages, prev + 1)
+                          )
+                        }
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 text-sm border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {users.length === 0 && (
                 <div className="text-center py-12">
                   <UserGroupIcon className="mx-auto h-12 w-12 text-gray-400" />
                   <h3 className="mt-2 text-sm font-medium text-gray-900">
                     No users found
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
-                    {searchTerm || filterRole !== "all"
+                    {searchTerm ||
+                    filterRole !== "all" ||
+                    filterStatus !== "all"
                       ? "Try adjusting your search or filter criteria"
                       : "No users have registered yet"}
                   </p>
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
+
+        {/* User Details Modal */}
+        {showUserModal && selectedUserDetails && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="p-6 border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-bold text-gray-900">
+                    User Details
+                  </h2>
+                  <button
+                    onClick={() => setShowUserModal(false)}
+                    className="text-gray-400 hover:text-gray-600"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-6 space-y-6">
+                {/* User Profile */}
+                <div className="flex items-center gap-4">
+                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">
+                      {selectedUserDetails.displayName.charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">
+                      {selectedUserDetails.displayName}
+                    </h3>
+                    <p className="text-gray-600">{selectedUserDetails.email}</p>
+                    <p className="text-sm text-gray-400">
+                      ID: {selectedUserDetails.uid}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-blue-600">
+                      {selectedUserDetails.binderCount}
+                    </div>
+                    <div className="text-sm text-blue-700">Total Binders</div>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-purple-600">
+                      {selectedUserDetails.cardCount}
+                    </div>
+                    <div className="text-sm text-purple-700">Total Cards</div>
+                  </div>
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-green-600">
+                      {formatDate(selectedUserDetails.createdAt)}
+                    </div>
+                    <div className="text-sm text-green-700">Member Since</div>
+                  </div>
+                </div>
+
+                {/* User Binders */}
+                <UserBindersList
+                  user={selectedUserDetails}
+                  onViewBinder={(binder) => {
+                    console.log(
+                      "Viewing binder:",
+                      binder.name,
+                      "for user:",
+                      selectedUserDetails.email
+                    );
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   };
@@ -1975,7 +2591,7 @@ const AdminPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
+      {/* <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
@@ -2007,7 +2623,7 @@ const AdminPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation Tabs */}

@@ -230,7 +230,7 @@ export const migrateUserData = async () => {
 
 /**
  * Calculate actual binder and card counts for a specific user from Firebase collections
- * Optimized to use proper indexes and minimize reads
+ * Optimized to use proper indexes and minimize reads (regular user version)
  */
 export const calculateUserStats = async (userId) => {
   try {
@@ -239,12 +239,10 @@ export const calculateUserStats = async (userId) => {
     const countedBinderIds = new Set();
 
     // 1. Check user_binders collection first (primary location for synced binders)
-    // Uses existing index: ownerId + metadata.isArchived + metadata.createdAt
     try {
       const userBindersQuery = query(
         collection(db, "user_binders"),
-        where("ownerId", "==", userId),
-        where("metadata.isArchived", "==", false)
+        where("ownerId", "==", userId)
       );
       const userBindersSnapshot = await getDocs(userBindersQuery);
 
@@ -252,11 +250,13 @@ export const calculateUserStats = async (userId) => {
         const binderData = doc.data();
         const binderId = binderData.id || doc.id;
 
+        // Skip archived binders
+        if (binderData.metadata?.isArchived === true) return;
+
         if (!countedBinderIds.has(binderId)) {
           binderCount++;
           countedBinderIds.add(binderId);
 
-          // Count cards in this binder
           if (binderData.cards && typeof binderData.cards === "object") {
             cardCount += Object.keys(binderData.cards).length;
           }
@@ -264,33 +264,6 @@ export const calculateUserStats = async (userId) => {
       });
     } catch (error) {
       console.warn("Error querying user_binders collection:", error);
-      // Try without the metadata.isArchived filter if index doesn't exist
-      try {
-        const fallbackQuery = query(
-          collection(db, "user_binders"),
-          where("ownerId", "==", userId)
-        );
-        const fallbackSnapshot = await getDocs(fallbackQuery);
-
-        fallbackSnapshot.forEach((doc) => {
-          const binderData = doc.data();
-          const binderId = binderData.id || doc.id;
-
-          // Manual filter for archived binders
-          if (binderData.metadata?.isArchived === true) return;
-
-          if (!countedBinderIds.has(binderId)) {
-            binderCount++;
-            countedBinderIds.add(binderId);
-
-            if (binderData.cards && typeof binderData.cards === "object") {
-              cardCount += Object.keys(binderData.cards).length;
-            }
-          }
-        });
-      } catch (fallbackError) {
-        console.warn("Fallback query also failed:", fallbackError);
-      }
     }
 
     // 2. Check binders collection (alternative location)
@@ -320,6 +293,11 @@ export const calculateUserStats = async (userId) => {
           }
         });
       } catch (error) {
+        // Silently handle permission errors to prevent console spam
+        if (error.code === "permission-denied") {
+          // For permission errors, fall back to stored stats
+          return null; // Will be handled by caller
+        }
         console.warn("Error querying binders collection:", error);
       }
     }
@@ -369,7 +347,152 @@ export const calculateUserStats = async (userId) => {
 
     return { binderCount, cardCount };
   } catch (error) {
+    // Return null for permission errors to signal that stored stats should be used
+    if (error.code === "permission-denied") {
+      return null;
+    }
     console.error("Error calculating user stats:", error);
+    return { binderCount: 0, cardCount: 0 };
+  }
+};
+
+/**
+ * Calculate user stats with admin privileges (owner only)
+ * This version has full access to all user data
+ */
+export const calculateUserStatsAsAdmin = async (userId) => {
+  try {
+    let binderCount = 0;
+    let cardCount = 0;
+    const countedBinderIds = new Set();
+
+    console.log(`[Admin] Calculating stats for user: ${userId}`);
+
+    // 1. Check user_binders collection first (modern approach)
+    try {
+      const userBindersQuery = query(
+        collection(db, "user_binders"),
+        where("ownerId", "==", userId)
+      );
+      const userBindersSnapshot = await getDocs(userBindersQuery);
+
+      userBindersSnapshot.forEach((doc) => {
+        const binderData = doc.data();
+        const binderId = binderData.id;
+
+        // Skip archived binders
+        if (binderData.metadata?.isArchived === true) return;
+
+        if (!countedBinderIds.has(binderId)) {
+          binderCount++;
+          countedBinderIds.add(binderId);
+
+          if (binderData.cards && typeof binderData.cards === "object") {
+            cardCount += Object.keys(binderData.cards).length;
+          }
+        }
+      });
+
+      console.log(
+        `[Admin] Found ${binderCount} binders in user_binders collection`
+      );
+    } catch (error) {
+      console.warn("[Admin] Error querying user_binders collection:", error);
+    }
+
+    // 2. Check global binders collection (with admin privileges)
+    if (binderCount === 0) {
+      try {
+        const bindersQuery = query(
+          collection(db, "binders"),
+          where("ownerId", "==", userId)
+        );
+        const bindersSnapshot = await getDocs(bindersQuery);
+
+        bindersSnapshot.forEach((doc) => {
+          const binderData = doc.data();
+          const binderId = binderData.id || doc.id;
+
+          // Skip archived binders
+          if (binderData.metadata?.isArchived === true) return;
+
+          if (!countedBinderIds.has(binderId)) {
+            binderCount++;
+            countedBinderIds.add(binderId);
+
+            if (binderData.cards && typeof binderData.cards === "object") {
+              cardCount += Object.keys(binderData.cards).length;
+            }
+          }
+        });
+
+        console.log(
+          `[Admin] Found additional ${binderCount} binders in global binders collection`
+        );
+      } catch (error) {
+        console.warn(
+          "[Admin] Error querying global binders collection:",
+          error
+        );
+      }
+    }
+
+    // 3. Check legacy users/{userId}/binders subcollection
+    if (binderCount === 0) {
+      try {
+        const legacyBindersQuery = query(
+          collection(db, "users", userId, "binders")
+        );
+        const legacyBindersSnapshot = await getDocs(legacyBindersQuery);
+
+        // Count legacy binders and their cards in parallel
+        const legacyBinderPromises = legacyBindersSnapshot.docs.map(
+          async (binderDoc) => {
+            const binderId = binderDoc.id;
+            if (countedBinderIds.has(binderId)) return { binders: 0, cards: 0 };
+
+            countedBinderIds.add(binderId);
+
+            // Count cards in this legacy binder
+            try {
+              const cardsQuery = query(
+                collection(db, "users", userId, "binders", binderId, "cards")
+              );
+              const cardsSnapshot = await getDocs(cardsQuery);
+              return { binders: 1, cards: cardsSnapshot.size };
+            } catch (cardError) {
+              console.warn(
+                `[Admin] Error counting cards in legacy binder ${binderId}:`,
+                cardError
+              );
+              return { binders: 1, cards: 0 };
+            }
+          }
+        );
+
+        const legacyResults = await Promise.all(legacyBinderPromises);
+        legacyResults.forEach((result) => {
+          binderCount += result.binders;
+          cardCount += result.cards;
+        });
+
+        console.log(
+          `[Admin] Found additional ${binderCount} binders in legacy collection`
+        );
+      } catch (error) {
+        console.warn(
+          "[Admin] Error querying legacy binders subcollection:",
+          error
+        );
+      }
+    }
+
+    console.log(
+      `[Admin] Final stats for ${userId}: ${binderCount} binders, ${cardCount} cards`
+    );
+    return { binderCount, cardCount };
+  } catch (error) {
+    console.error("[Admin] Error calculating user stats:", error);
     return { binderCount: 0, cardCount: 0 };
   }
 };
@@ -387,7 +510,9 @@ export const recalculateAllUserStats = async () => {
 
     for (const user of users) {
       try {
-        const { binderCount, cardCount } = await calculateUserStats(user.uid);
+        const { binderCount, cardCount } = await calculateUserStatsAsAdmin(
+          user.uid
+        );
 
         // Only update if values have changed
         if (user.binderCount !== binderCount || user.cardCount !== cardCount) {
@@ -451,7 +576,58 @@ export const recalculateAllUserStats = async () => {
 };
 
 /**
- * Get enhanced user data with real-time calculated stats
+ * Get enhanced user data with real-time calculated stats (admin version)
+ */
+export const fetchAllUsersWithStatsAsAdmin = async () => {
+  try {
+    const users = await fetchAllUsers();
+
+    // Calculate real stats for each user using admin privileges
+    const usersWithStats = await Promise.all(
+      users.map(async (user) => {
+        try {
+          const { binderCount, cardCount } = await calculateUserStatsAsAdmin(
+            user.uid
+          );
+
+          return {
+            ...user,
+            // Use calculated stats
+            binderCount,
+            cardCount,
+            // Keep stored stats for comparison
+            storedBinderCount: user.binderCount,
+            storedCardCount: user.cardCount,
+            usingStoredStats: false,
+            calculatedWithAdminAccess: true,
+          };
+        } catch (error) {
+          console.error(
+            `[Admin] Error calculating stats for user ${user.email}:`,
+            error
+          );
+          return {
+            ...user,
+            // Fallback to stored stats if calculation fails
+            binderCount: user.binderCount || 0,
+            cardCount: user.cardCount || 0,
+            calculationError: error.message,
+            usingStoredStats: true,
+            calculatedWithAdminAccess: false,
+          };
+        }
+      })
+    );
+
+    return usersWithStats;
+  } catch (error) {
+    console.error("[Admin] Error fetching users with stats:", error);
+    return [];
+  }
+};
+
+/**
+ * Get enhanced user data with real-time calculated stats (regular version)
  */
 export const fetchAllUsersWithStats = async () => {
   try {
@@ -461,7 +637,21 @@ export const fetchAllUsersWithStats = async () => {
     const usersWithStats = await Promise.all(
       users.map(async (user) => {
         try {
-          const { binderCount, cardCount } = await calculateUserStats(user.uid);
+          const calculatedStats = await calculateUserStats(user.uid);
+
+          // If calculation returned null (permission denied), use stored stats
+          if (calculatedStats === null) {
+            return {
+              ...user,
+              // Use stored stats when calculation is not permitted
+              binderCount: user.binderCount || 0,
+              cardCount: user.cardCount || 0,
+              // Mark as using stored stats
+              usingStoredStats: true,
+            };
+          }
+
+          const { binderCount, cardCount } = calculatedStats;
           return {
             ...user,
             // Use calculated stats instead of stored stats
@@ -470,8 +660,19 @@ export const fetchAllUsersWithStats = async () => {
             // Keep stored stats for comparison
             storedBinderCount: user.binderCount,
             storedCardCount: user.cardCount,
+            usingStoredStats: false,
           };
         } catch (error) {
+          // For permission errors, silently use stored stats
+          if (error.code === "permission-denied") {
+            return {
+              ...user,
+              binderCount: user.binderCount || 0,
+              cardCount: user.cardCount || 0,
+              usingStoredStats: true,
+            };
+          }
+
           console.error(
             `Error calculating stats for user ${user.email}:`,
             error
@@ -479,7 +680,10 @@ export const fetchAllUsersWithStats = async () => {
           return {
             ...user,
             // Fallback to stored stats if calculation fails
+            binderCount: user.binderCount || 0,
+            cardCount: user.cardCount || 0,
             calculationError: error.message,
+            usingStoredStats: true,
           };
         }
       })
@@ -489,5 +693,326 @@ export const fetchAllUsersWithStats = async () => {
   } catch (error) {
     console.error("Error fetching users with stats:", error);
     return [];
+  }
+};
+
+/**
+ * Fetch all binders for a specific user (admin privileges)
+ */
+export const fetchUserBindersAsAdmin = async (userId) => {
+  try {
+    console.log(`[Admin] Fetching binders for user: ${userId}`);
+    const userBinders = [];
+    const countedBinderIds = new Set();
+
+    // 1. Check user_binders collection (modern approach)
+    try {
+      const userBindersQuery = query(
+        collection(db, "user_binders"),
+        where("ownerId", "==", userId)
+      );
+      const userBindersSnapshot = await getDocs(userBindersQuery);
+
+      userBindersSnapshot.forEach((doc) => {
+        const binderData = doc.data();
+        const binderId = binderData.id;
+
+        if (!countedBinderIds.has(binderId)) {
+          countedBinderIds.add(binderId);
+
+          const cardCount = binderData.cards
+            ? Object.keys(binderData.cards).length
+            : 0;
+
+          userBinders.push({
+            id: binderId,
+            docId: doc.id, // For accessing the full document
+            name: binderData.metadata?.name || "Unnamed Binder",
+            description: binderData.metadata?.description || "",
+            cardCount,
+            createdAt: binderData.metadata?.createdAt,
+            lastModified: binderData.metadata?.lastModified,
+            isArchived: binderData.metadata?.isArchived || false,
+            gridSize: binderData.settings?.gridSize || "3x3",
+            pageCount: binderData.settings?.pageCount || 1,
+            source: "user_binders",
+            rawData: binderData, // Include full data
+          });
+        }
+      });
+
+      console.log(
+        `[Admin] Found ${userBinders.length} binders in user_binders collection for user ${userId}`
+      );
+    } catch (error) {
+      console.warn("[Admin] Error querying user_binders collection:", error);
+    }
+
+    // 2. Check global binders collection (with admin privileges)
+    try {
+      const bindersQuery = query(
+        collection(db, "binders"),
+        where("ownerId", "==", userId)
+      );
+      const bindersSnapshot = await getDocs(bindersQuery);
+
+      bindersSnapshot.forEach((doc) => {
+        const binderData = doc.data();
+        const binderId = binderData.id || doc.id;
+
+        if (!countedBinderIds.has(binderId)) {
+          countedBinderIds.add(binderId);
+
+          const cardCount = binderData.cards
+            ? Object.keys(binderData.cards).length
+            : 0;
+
+          userBinders.push({
+            id: binderId,
+            docId: doc.id,
+            name: binderData.metadata?.name || "Unnamed Binder",
+            description: binderData.metadata?.description || "",
+            cardCount,
+            createdAt: binderData.metadata?.createdAt,
+            lastModified: binderData.metadata?.lastModified,
+            isArchived: binderData.metadata?.isArchived || false,
+            gridSize: binderData.settings?.gridSize || "3x3",
+            pageCount: binderData.settings?.pageCount || 1,
+            source: "binders",
+            rawData: binderData,
+          });
+        }
+      });
+
+      console.log(
+        `[Admin] Found additional ${bindersSnapshot.size} binders in global binders collection for user ${userId}`
+      );
+    } catch (error) {
+      console.warn("[Admin] Error querying global binders collection:", error);
+    }
+
+    // 3. Check legacy users/{userId}/binders subcollection
+    try {
+      const legacyBindersQuery = query(
+        collection(db, "users", userId, "binders")
+      );
+      const legacyBindersSnapshot = await getDocs(legacyBindersQuery);
+
+      const legacyBinderPromises = legacyBindersSnapshot.docs.map(
+        async (binderDoc) => {
+          const binderId = binderDoc.id;
+          if (countedBinderIds.has(binderId)) return null;
+
+          countedBinderIds.add(binderId);
+          const binderData = binderDoc.data();
+
+          // Count cards in this legacy binder
+          let cardCount = 0;
+          try {
+            const cardsQuery = query(
+              collection(db, "users", userId, "binders", binderId, "cards")
+            );
+            const cardsSnapshot = await getDocs(cardsQuery);
+            cardCount = cardsSnapshot.size;
+          } catch (cardError) {
+            console.warn(
+              `[Admin] Error counting cards in legacy binder ${binderId}:`,
+              cardError
+            );
+          }
+
+          return {
+            id: binderId,
+            docId: binderDoc.id,
+            name: binderData.binderName || binderData.name || "Unnamed Binder",
+            description: binderData.description || "",
+            cardCount,
+            createdAt: binderData.createdAt,
+            lastModified: binderData.lastModified,
+            isArchived: binderData.isArchived || false,
+            gridSize: binderData.gridSize || "3x3",
+            pageCount: binderData.pageCount || 1,
+            source: "legacy",
+            rawData: binderData,
+          };
+        }
+      );
+
+      const legacyResults = await Promise.all(legacyBinderPromises);
+      legacyResults.forEach((result) => {
+        if (result) userBinders.push(result);
+      });
+
+      console.log(
+        `[Admin] Found additional ${legacyBindersSnapshot.size} legacy binders for user ${userId}`
+      );
+    } catch (error) {
+      console.warn(
+        "[Admin] Error querying legacy binders subcollection:",
+        error
+      );
+    }
+
+    console.log(
+      `[Admin] Total binders found for ${userId}: ${userBinders.length}`
+    );
+
+    // Sort by last modified (most recent first)
+    userBinders.sort((a, b) => {
+      const aDate = new Date(a.lastModified || a.createdAt || 0);
+      const bDate = new Date(b.lastModified || b.createdAt || 0);
+      return bDate - aDate;
+    });
+
+    return userBinders;
+  } catch (error) {
+    console.error("[Admin] Error fetching user binders:", error);
+    return [];
+  }
+};
+
+/**
+ * Fetch complete binder data for admin viewing (read-only)
+ */
+export const fetchBinderForAdminView = async (
+  binderId,
+  userId,
+  source = "user_binders"
+) => {
+  try {
+    console.log(
+      `[Admin] Fetching binder ${binderId} from ${source} for user ${userId}`
+    );
+
+    let binderData = null;
+
+    // Fetch binder based on source
+    if (source === "user_binders") {
+      const userBindersQuery = query(
+        collection(db, "user_binders"),
+        where("id", "==", binderId),
+        where("ownerId", "==", userId)
+      );
+      const snapshot = await getDocs(userBindersQuery);
+
+      if (!snapshot.empty) {
+        binderData = snapshot.docs[0].data();
+      }
+    } else if (source === "binders") {
+      const binderDoc = await getDoc(doc(db, "binders", binderId));
+      if (binderDoc.exists() && binderDoc.data().ownerId === userId) {
+        binderData = binderDoc.data();
+      }
+    } else if (source === "legacy") {
+      const binderDoc = await getDoc(
+        doc(db, "users", userId, "binders", binderId)
+      );
+      if (binderDoc.exists()) {
+        binderData = binderDoc.data();
+
+        // For legacy binders, we need to fetch cards separately
+        const cardsQuery = query(
+          collection(db, "users", userId, "binders", binderId, "cards")
+        );
+        const cardsSnapshot = await getDocs(cardsQuery);
+
+        const cards = {};
+        cardsSnapshot.forEach((cardDoc) => {
+          const cardData = cardDoc.data();
+          // Convert legacy card format to modern format if needed
+          const position =
+            cardData.pageNumber && cardData.slotInPage
+              ? (cardData.pageNumber - 1) * 9 + cardData.slotInPage // Assuming legacy used 3x3 grid
+              : Object.keys(cards).length;
+
+          cards[position] = {
+            id: cardDoc.id,
+            cardApiId: cardData.cardApiId,
+            name: cardData.name,
+            image: cardData.image,
+            rarity: cardData.rarity,
+            set: cardData.set,
+            value: cardData.value,
+            addedAt: cardData.addedAt,
+            pageNumber: cardData.pageNumber,
+            slotInPage: cardData.slotInPage,
+          };
+        });
+
+        binderData.cards = cards;
+      }
+    }
+
+    if (!binderData) {
+      throw new Error(`Binder ${binderId} not found or access denied`);
+    }
+
+    // Normalize the card data structure
+    const normalizedCards = {};
+    if (binderData.cards && typeof binderData.cards === "object") {
+      Object.entries(binderData.cards).forEach(([position, cardData]) => {
+        if (cardData) {
+          // Check if this is modern card format (with nested cardData)
+          if (cardData.cardData && typeof cardData.cardData === "object") {
+            // Flatten the structure for modern cards
+            normalizedCards[position] = {
+              ...cardData.cardData, // Spread the actual card data
+              // Keep some metadata from the wrapper
+              binderMetadata: {
+                instanceId: cardData.instanceId,
+                addedAt: cardData.addedAt,
+                addedBy: cardData.addedBy,
+                condition: cardData.condition,
+                notes: cardData.notes,
+                quantity: cardData.quantity,
+                isProtected: cardData.isProtected,
+              },
+            };
+          } else {
+            // Legacy format - already flat
+            normalizedCards[position] = cardData;
+          }
+        }
+      });
+    }
+
+    // Normalize the data structure
+    const normalizedBinder = {
+      id: binderData.id || binderId,
+      ownerId: binderData.ownerId || userId,
+      metadata: {
+        name:
+          binderData.metadata?.name ||
+          binderData.binderName ||
+          binderData.name ||
+          "Unnamed Binder",
+        description:
+          binderData.metadata?.description || binderData.description || "",
+        createdAt: binderData.metadata?.createdAt || binderData.createdAt,
+        lastModified:
+          binderData.metadata?.lastModified || binderData.lastModified,
+        isArchived:
+          binderData.metadata?.isArchived || binderData.isArchived || false,
+      },
+      settings: {
+        gridSize: binderData.settings?.gridSize || binderData.gridSize || "3x3",
+        pageCount: binderData.settings?.pageCount || binderData.pageCount || 1,
+        maxPages: binderData.settings?.maxPages || binderData.maxPages || 10,
+        pageOrder: binderData.settings?.pageOrder || null,
+      },
+      cards: normalizedCards,
+      source,
+      isAdminView: true, // Flag to indicate this is an admin view
+    };
+
+    console.log(
+      `[Admin] Successfully fetched binder with ${
+        Object.keys(normalizedBinder.cards).length
+      } cards`
+    );
+    return normalizedBinder;
+  } catch (error) {
+    console.error("[Admin] Error fetching binder for admin view:", error);
+    throw error;
   }
 };

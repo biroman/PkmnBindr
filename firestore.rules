@@ -166,6 +166,15 @@ service cloud.firestore {
                                 isValidNumberRange(request.resource.data.maxPrice, 0, 999999));
     }
 
+    // Binders collection - Global binder collection (for admin queries)
+    match /binders/{binderId} {
+      // Users can only access their own binders
+      allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
+                                   resource.data.ownerId == request.auth.uid;
+      // Owners can access all binders (for admin purposes)
+      allow read, write, delete: if isOwner();
+    }
+
     // User Binders collection - for the new sync service
     match /user_binders/{docId} {
       // Block operations if in emergency mode (except for owners)

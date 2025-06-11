@@ -11,6 +11,7 @@ const CardPage = ({
   onToggleMissing, // New prop for toggling missing status
   cardPageIndex = 0, // For calculating global positions
   missingPositions = [], // Array of missing instance IDs
+  isReadOnly = false, // New prop for read-only mode
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
@@ -61,12 +62,13 @@ const CardPage = ({
                 card={card}
                 position={globalPosition}
                 gridSize={gridSize}
-                onCardClick={onCardClick}
-                onCardDelete={onCardDelete}
-                onSlotClick={onSlotClick}
-                onToggleMissing={onToggleMissing}
+                onCardClick={isReadOnly ? undefined : onCardClick}
+                onCardDelete={isReadOnly ? undefined : onCardDelete}
+                onSlotClick={isReadOnly ? undefined : onSlotClick}
+                onToggleMissing={isReadOnly ? undefined : onToggleMissing}
                 className="w-full h-full"
                 isMissing={isMissing}
+                isReadOnly={isReadOnly}
               />
             );
           })}

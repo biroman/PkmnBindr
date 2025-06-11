@@ -84,6 +84,7 @@ const PokemonCard = forwardRef(
       showMissingButton = false,
       isMissing = false,
       dragHandleProps,
+      isReadOnly = false,
       className = "",
       style = {},
       children,
@@ -144,7 +145,7 @@ const PokemonCard = forwardRef(
         className={`
         group relative aspect-[5/7] bg-white rounded-lg shadow-md overflow-hidden
         transition-all duration-200 hover:shadow-lg hover:scale-105
-        ${onClick ? "cursor-pointer" : ""}
+        ${onClick && !isReadOnly ? "cursor-pointer" : ""}
         ${draggable ? "draggable" : ""}
         ${isReverseHolo ? "ring-2 ring-gradient-to-r ring-purple-400" : ""}
         ${className}
