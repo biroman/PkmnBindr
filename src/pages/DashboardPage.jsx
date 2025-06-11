@@ -375,37 +375,6 @@ const DashboardPage = () => {
 
           {/* Quick Actions & Coming Soon */}
           <div className="space-y-6">
-            {/* Quick Actions */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200">
-              <div className="p-6 border-b border-gray-200">
-                <h2 className="text-lg font-semibold text-gray-900">
-                  Quick Actions
-                </h2>
-              </div>
-              <div className="p-6 space-y-3">
-                <Link to="/binders" className="block">
-                  <Button variant="outline" className="w-full justify-start">
-                    <FolderIcon className="w-4 h-4 mr-2" />
-                    Manage Binders
-                  </Button>
-                </Link>
-                {currentBinder && (
-                  <Link to={`/binder/${currentBinder.id}`} className="block">
-                    <Button variant="outline" className="w-full justify-start">
-                      <EyeIcon className="w-4 h-4 mr-2" />
-                      Open Current Binder
-                    </Button>
-                  </Link>
-                )}
-                <Link to="/profile" className="block">
-                  <Button variant="outline" className="w-full justify-start">
-                    <UserGroupIcon className="w-4 h-4 mr-2" />
-                    Edit Profile
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
             {/* Announcements Widget */}
             <AnnouncementWidget />
 
