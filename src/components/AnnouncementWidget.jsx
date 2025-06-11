@@ -187,7 +187,7 @@ const AnnouncementWidget = ({ className = "" }) => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">
+                  <p className="text-gray-600 text-sm mb-2 line-clamp-4">
                     {announcement.content}
                   </p>
 
