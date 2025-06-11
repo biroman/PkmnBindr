@@ -401,7 +401,7 @@ const BinderListWithSync = ({ onSelectBinder, onCreateBinder }) => {
             your collection.
           </p>
           <a
-            href="/login"
+            href="/auth/login"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             Sign In

@@ -296,7 +296,7 @@ const SyncStatus = ({
         {!user && (
           <div className="bg-blue-50 border border-blue-200 rounded p-3 mt-3">
             <p className="text-sm text-blue-800">
-              <a href="/login" className="font-medium hover:underline">
+              <a href="/auth/login" className="font-medium hover:underline">
                 Sign in
               </a>{" "}
               to sync your binders to the cloud and access them anywhere.
