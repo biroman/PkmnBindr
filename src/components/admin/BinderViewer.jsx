@@ -5,6 +5,7 @@ import { Button } from "../ui/Button";
 import CoverPage from "../binder/CoverPage";
 import CardPage from "../binder/CardPage";
 import CardRepairTool from "./CardRepairTool";
+import ImageUpdateTool from "./ImageUpdateTool";
 import { fetchBinderForAdminView } from "../../utils/userManagement";
 import useBinderDimensions, {
   getGridConfig,
@@ -19,6 +20,7 @@ import {
   DocumentTextIcon,
   Squares2X2Icon,
   WrenchScrewdriverIcon,
+  PhotoIcon,
 } from "@heroicons/react/24/outline";
 
 const BinderViewer = () => {
@@ -30,6 +32,7 @@ const BinderViewer = () => {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showRepairTool, setShowRepairTool] = useState(false);
+  const [showImageUpdateTool, setShowImageUpdateTool] = useState(false);
 
   // Custom hook for binder dimensions (same as BinderPage)
   const binderDimensions = useBinderDimensions(
@@ -215,6 +218,25 @@ const BinderViewer = () => {
         toast.success("Binder refreshed with repaired cards!");
       } catch (error) {
         console.error("Error reloading binder after repair:", error);
+        toast.error("Failed to reload binder");
+      }
+    }
+  };
+
+  // Handle image update completion - reload the binder
+  const handleImageUpdateComplete = async (results) => {
+    if (results.updated > 0) {
+      // Reload the binder to show the updated cards
+      try {
+        const binderData = await fetchBinderForAdminView(
+          binderId,
+          userId,
+          source
+        );
+        setCurrentBinder(binderData);
+        toast.success("Binder refreshed with updated images!");
+      } catch (error) {
+        console.error("Error reloading binder after image update:", error);
         toast.error("Failed to reload binder");
       }
     }
@@ -408,8 +430,12 @@ const BinderViewer = () => {
               )}
             </div>
 
-            {/* Repair Tool Button */}
-            <div className="mt-6 pt-4 border-t border-gray-200">
+            {/* Admin Tools */}
+            <div className="mt-6 pt-4 border-t border-gray-200 space-y-3">
+              <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+                Admin Tools
+              </h4>
+
               <Button
                 onClick={() => setShowRepairTool(!showRepairTool)}
                 variant="outline"
@@ -418,6 +444,16 @@ const BinderViewer = () => {
               >
                 <WrenchScrewdriverIcon className="w-4 h-4 mr-2" />
                 {showRepairTool ? "Hide" : "Show"} Card Repair Tool
+              </Button>
+
+              <Button
+                onClick={() => setShowImageUpdateTool(!showImageUpdateTool)}
+                variant="outline"
+                size="sm"
+                className="w-full"
+              >
+                <PhotoIcon className="w-4 h-4 mr-2" />
+                {showImageUpdateTool ? "Hide" : "Show"} Image Update Tool
               </Button>
             </div>
           </div>
@@ -552,6 +588,18 @@ const BinderViewer = () => {
               binderId={binderId}
               source={source}
               onRepairComplete={handleRepairComplete}
+            />
+          </div>
+        )}
+
+        {/* Image Update Tool Panel */}
+        {showImageUpdateTool && (
+          <div className="mt-6">
+            <ImageUpdateTool
+              userId={userId}
+              binderId={binderId}
+              source={source}
+              onUpdateComplete={handleImageUpdateComplete}
             />
           </div>
         )}

@@ -420,7 +420,7 @@ export function normalizeCardData(card) {
     name: card.name,
 
     // Images (essential for display)
-    image: card.images?.large || card.images?.small || "",
+    image: card.images?.small || card.images?.large || "",
 
     // Card classification
     supertype: card.supertype,

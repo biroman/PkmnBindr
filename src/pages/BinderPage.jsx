@@ -37,6 +37,7 @@ const BinderPage = () => {
     moveCard,
     moveCardOptimistic,
     removeCardFromBinder,
+    clearBinderCards,
     batchAddCards,
     canAccessBinder,
   } = useBinderContext();
@@ -266,27 +267,18 @@ const BinderPage = () => {
     if (!currentBinder) return;
 
     try {
-      // Get all card positions in the binder
-      const cardPositions = Object.keys(currentBinder.cards || {}).map((pos) =>
-        parseInt(pos)
-      );
+      // Get card count before clearing
+      const cardCount = Object.keys(currentBinder.cards || {}).length;
 
-      // Remove all cards one by one
-      for (const position of cardPositions) {
-        await removeCardFromBinder(currentBinder.id, position);
-        // Small delay to prevent overwhelming the system
-        await new Promise((resolve) => setTimeout(resolve, 5));
-      }
+      // Use the optimized clearBinderCards function - single atomic operation
+      const result = await clearBinderCards(currentBinder.id, "user_clear_all");
 
       // Also clear any missing instances since all cards are gone
       await updateBinderMetadata(currentBinder.id, {
         missingInstances: [],
       });
 
-      toast.success(
-        `Cleared all ${cardPositions.length} cards from "${currentBinder.metadata.name}"`
-      );
-
+      // Success message is already shown by clearBinderCards
       setIsClearModalOpen(false);
     } catch (error) {
       console.error("Failed to clear binder:", error);

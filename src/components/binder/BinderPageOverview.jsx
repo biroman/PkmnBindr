@@ -612,6 +612,7 @@ const BinderPageOverview = ({
   const {
     reorderCardPages,
     removeCardFromBinder,
+    updateBinder,
     updateBinderSettings,
     moveCard,
   } = useBinderContext();
@@ -1053,10 +1054,18 @@ const BinderPageOverview = ({
         console.log("Cards to delete:", cardsToDelete.length);
         console.log("Cards to move:", cardsToMove.length);
 
-        // Step 3: Remove cards from deleted ranges
-        for (const { position } of cardsToDelete) {
-          await removeCardFromBinder(currentBinder.id, position);
-          await new Promise((resolve) => setTimeout(resolve, 3));
+        // Step 3: Remove cards from deleted ranges (optimized batch deletion)
+        if (cardsToDelete.length > 0) {
+          console.log(`Batch deleting ${cardsToDelete.length} cards...`);
+
+          // Create a new cards object without the deleted cards
+          const updatedCards = { ...currentBinder.cards };
+          for (const { position } of cardsToDelete) {
+            delete updatedCards[position.toString()];
+          }
+
+          // Update the binder with the new cards object in one operation
+          await updateBinder(currentBinder.id, { cards: updatedCards });
         }
 
         // Step 4: Move remaining cards to their new positions
@@ -1107,7 +1116,9 @@ const BinderPageOverview = ({
       const cardsPerPage = gridConfig.total;
       let totalCardsRemoved = 0;
 
-      // Remove all cards from selected pages
+      // Remove all cards from selected pages (optimized batch deletion)
+      const updatedCards = { ...currentBinder.cards };
+
       for (const pageIndex of selectedPagesArray) {
         if (pageIndex === 0) continue; // Skip cover page
 
@@ -1121,13 +1132,20 @@ const BinderPageOverview = ({
           position <= endPosition;
           position++
         ) {
-          if (currentBinder.cards[position.toString()]) {
-            await removeCardFromBinder(currentBinder.id, position);
+          const positionKey = position.toString();
+          if (updatedCards[positionKey]) {
+            delete updatedCards[positionKey];
             totalCardsRemoved++;
-            // Small delay to prevent overwhelming the system
-            await new Promise((resolve) => setTimeout(resolve, 5));
           }
         }
+      }
+
+      // Apply all deletions in one operation if any cards were removed
+      if (totalCardsRemoved > 0) {
+        console.log(
+          `Batch deleting ${totalCardsRemoved} cards from selected pages...`
+        );
+        await updateBinder(currentBinder.id, { cards: updatedCards });
       }
 
       // Handle page deletion vs cards-only deletion
