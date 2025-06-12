@@ -414,11 +414,6 @@ const BindersPage = () => {
                   <p className="text-sm text-red-600 font-medium">
                     Binder limit reached
                   </p>
-                  <p className="text-xs text-gray-500">
-                    {user
-                      ? "Upgrade for more space"
-                      : "Sign up for more binders"}
-                  </p>
                 </div>
               )}
               <button

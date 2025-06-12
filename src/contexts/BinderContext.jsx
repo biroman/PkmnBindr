@@ -718,11 +718,7 @@ export const BinderProvider = ({ children }) => {
           const limit = canAdd.limit || 500;
           throw new Error(
             canAdd.reason ||
-              `Card limit reached! You have ${currentCards}/${limit} cards in this binder. ${
-                !user
-                  ? "Sign up for more storage!"
-                  : "Upgrade your plan for higher limits."
-              }`
+              `Card limit reached! You have ${currentCards}/${limit} cards in this binder.`
           );
         }
 
@@ -1035,11 +1031,7 @@ export const BinderProvider = ({ children }) => {
                 isReplacement
                   ? `This would exceed the ${limit} card limit.`
                   : `Only ${remainingSpace} slots remaining (${currentCards}/${limit} used).`
-              } ${
-                !user
-                  ? "Sign up for more storage!"
-                  : "Upgrade your plan or clear some space."
-              }`
+              } `
           );
         }
 
@@ -1708,32 +1700,42 @@ export const BinderProvider = ({ children }) => {
   const addPage = useCallback(
     async (binderId) => {
       try {
-        const updateBinder = (binder) => {
-          if (binder.id !== binderId) return binder;
+        // Get the binder to check
+        const binder = binders.find((b) => b.id === binderId);
+        if (!binder) {
+          toast.error("Binder not found");
+          return;
+        }
 
-          // Get current page count from settings
-          const currentPageCount = binder.settings?.pageCount || 1;
+        // Get current page count from settings (ensure settings exist)
+        const settings = binder.settings || DEFAULT_BINDER_SETTINGS;
+        const currentPageCount = settings.pageCount || 1;
 
-          // Check if we're within max pages limit
-          if (currentPageCount >= binder.settings.maxPages) {
-            toast.error(
-              `Page limit reached! Maximum is ${
-                binder.settings.maxPages
-              } pages. ${
-                !user
-                  ? "Sign up for higher limits!"
-                  : "Upgrade your plan for more pages."
-              }`
-            );
-            return binder;
-          }
+        // Check if we're within max pages limit using rules system
+        const pageCheck = await canPerformAction("add_page_to_binder", {
+          currentCount: currentPageCount,
+        });
 
-          const newPageCount = currentPageCount + 1;
+        if (!pageCheck.allowed) {
+          toast.error(
+            `Page limit reached! Maximum is ${pageCheck.limit || 50} pages. ${
+              !user
+                ? "Increase grid size to fit more cards."
+                : "Increase grid size to fit more cards."
+            }`
+          );
+          return;
+        }
+
+        const newPageCount = currentPageCount + 1;
+
+        const updateBinder = (binderToUpdate) => {
+          if (binderToUpdate.id !== binderId) return binderToUpdate;
 
           const updatedBinder = {
-            ...binder,
+            ...binderToUpdate,
             settings: {
-              ...binder.settings,
+              ...(binderToUpdate.settings || DEFAULT_BINDER_SETTINGS),
               pageCount: newPageCount,
             },
           };
@@ -1746,13 +1748,9 @@ export const BinderProvider = ({ children }) => {
               pageNumber: newPageCount,
               previousPageCount: currentPageCount,
             },
-            binder.ownerId
+            binderToUpdate.ownerId
           );
         };
-
-        // Get the current page count before updating (for the toast message)
-        const binder = binders.find((b) => b.id === binderId);
-        const newPageNumber = (binder?.settings?.pageCount || 1) + 1;
 
         setBinders((prev) => prev.map(updateBinder));
 
@@ -1761,46 +1759,63 @@ export const BinderProvider = ({ children }) => {
           setCurrentBinder((prev) => updateBinder(prev));
         }
 
-        // Show success message only once
-        toast.success(`Added page ${newPageNumber}`);
+        // Show success message
+        toast.success(`Added page ${newPageCount}`);
       } catch (error) {
         console.error("Failed to add page:", error);
         toast.error("Failed to add page");
         throw error;
       }
     },
-    [currentBinder, binders]
+    [currentBinder, binders, canPerformAction, user]
   );
 
   const batchAddPages = useCallback(
     async (binderId, pageCount) => {
       try {
-        const updateBinder = (binder) => {
-          if (binder.id !== binderId) return binder;
+        // Get the binder to check
+        const binder = binders.find((b) => b.id === binderId);
+        if (!binder) {
+          toast.error("Binder not found");
+          return;
+        }
 
-          // Get current page count from settings
-          const currentPageCount = binder.settings?.pageCount || 1;
+        // Get current page count from settings (ensure settings exist)
+        const settings = binder.settings || DEFAULT_BINDER_SETTINGS;
+        const currentPageCount = settings.pageCount || 1;
 
-          // Check if we're within max pages limit
-          const newPageCount = currentPageCount + pageCount;
-          if (newPageCount > binder.settings.maxPages) {
-            const maxPossible = binder.settings.maxPages - currentPageCount;
-            toast.error(
-              `Cannot add ${pageCount} pages! Maximum is ${
-                binder.settings.maxPages
-              }. Can only add ${maxPossible} more pages. ${
-                !user
-                  ? "Sign up for higher limits!"
-                  : "Upgrade your plan for more pages."
-              }`
-            );
-            return binder;
-          }
+        // Check if we're within max pages limit using rules system
+        const pageCheck = await canPerformAction("add_page_to_binder", {
+          currentCount: currentPageCount,
+        });
+
+        const newPageCount = currentPageCount + pageCount;
+        if (
+          !pageCheck.allowed ||
+          (pageCheck.limit && newPageCount > pageCheck.limit)
+        ) {
+          const maxPossible = pageCheck.limit
+            ? pageCheck.limit - currentPageCount
+            : 0;
+          toast.error(
+            `Cannot add ${pageCount} pages! Maximum is ${
+              pageCheck.limit || 50
+            }. Can only add ${maxPossible} more pages. ${
+              !user
+                ? "Increase grid size to fit more cards."
+                : "Increase grid size to fit more cards."
+            }`
+          );
+          return;
+        }
+
+        const updateBinder = (binderToUpdate) => {
+          if (binderToUpdate.id !== binderId) return binderToUpdate;
 
           const updatedBinder = {
-            ...binder,
+            ...binderToUpdate,
             settings: {
-              ...binder.settings,
+              ...(binderToUpdate.settings || DEFAULT_BINDER_SETTINGS),
               pageCount: newPageCount,
             },
           };
@@ -1814,14 +1829,9 @@ export const BinderProvider = ({ children }) => {
               fromPageCount: currentPageCount,
               toPageCount: newPageCount,
             },
-            binder.ownerId
+            binderToUpdate.ownerId
           );
         };
-
-        // Get the current page count before updating (for the toast message)
-        const binder = binders.find((b) => b.id === binderId);
-        const currentPageCount = binder?.settings?.pageCount || 1;
-        const newPageCount = currentPageCount + pageCount;
 
         setBinders((prev) => prev.map(updateBinder));
 
@@ -1830,7 +1840,7 @@ export const BinderProvider = ({ children }) => {
           setCurrentBinder((prev) => updateBinder(prev));
         }
 
-        // Show success message only once
+        // Show success message
         toast.success(
           `Added ${pageCount} page${pageCount > 1 ? "s" : ""} (${
             currentPageCount + 1
@@ -1842,7 +1852,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder, binders]
+    [currentBinder, binders, canPerformAction, user]
   );
 
   const removePage = useCallback(
