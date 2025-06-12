@@ -119,9 +119,9 @@ const AddCardModal = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col max-h-[90vh]">
+              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col max-h-[95vh]">
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-slate-200">
+                <div className="flex items-center justify-between p-6 border-b border-slate-200 flex-shrink-0">
                   <div>
                     <Dialog.Title
                       as="h3"
@@ -153,7 +153,7 @@ const AddCardModal = ({
 
                 {/* Tabs */}
                 <Tab.Group>
-                  <Tab.List className="flex border-b border-slate-200 bg-slate-50">
+                  <Tab.List className="flex border-b border-slate-200 bg-slate-50 flex-shrink-0">
                     <Tab as={Fragment}>
                       {({ selected }) => (
                         <button
@@ -182,28 +182,15 @@ const AddCardModal = ({
                     </Tab>
                   </Tab.List>
 
-                  <Tab.Panels className="flex-1 overflow-hidden">
-                    <Tab.Panel className="h-full">
+                  <Tab.Panels className="flex-1 overflow-hidden min-h-0">
+                    <Tab.Panel className="h-full flex flex-col">
                       <SingleCardTab
                         selectedCards={selectedCards}
                         onCardSelect={handleCardSelect}
                         isCardSelected={isCardSelected}
                       />
-                    </Tab.Panel>
-                    <Tab.Panel className="h-full">
-                      <SetTab
-                        currentBinder={currentBinder}
-                        onAddCards={handleAddCards}
-                      />
-                    </Tab.Panel>
-                  </Tab.Panels>
-                </Tab.Group>
-
-                {/* Footer - only show for single cards tab */}
-                <Tab.Group>
-                  <Tab.Panels>
-                    <Tab.Panel>
-                      <div className="flex items-center justify-between p-6 border-t border-slate-200 bg-slate-50">
+                      {/* Footer for single cards tab */}
+                      <div className="flex items-center justify-between p-6 border-t border-slate-200 bg-slate-50 flex-shrink-0">
                         <div className="flex items-center space-x-2">
                           {selectedCards.length > 0 && (
                             <>
@@ -266,9 +253,13 @@ const AddCardModal = ({
                         </div>
                       </div>
                     </Tab.Panel>
-                    <Tab.Panel>
-                      {/* No footer for sets tab since each set has its own add button */}
-                      <div className="p-6 border-t border-slate-200 bg-slate-50">
+                    <Tab.Panel className="h-full flex flex-col">
+                      <SetTab
+                        currentBinder={currentBinder}
+                        onAddCards={handleAddCards}
+                      />
+                      {/* Footer for sets tab */}
+                      <div className="p-6 border-t border-slate-200 bg-slate-50 flex-shrink-0">
                         <div className="flex justify-end">
                           <button
                             onClick={onClose}

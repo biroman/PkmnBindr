@@ -949,13 +949,15 @@ export const fetchBinderForAdminView = async (
 
     // Normalize the card data structure
     const normalizedCards = {};
+    console.log(`[Admin] Starting card normalization for binder ${binderId}`);
+
     if (binderData.cards && typeof binderData.cards === "object") {
       Object.entries(binderData.cards).forEach(([position, cardData]) => {
         if (cardData) {
           // Check if this is modern card format (with nested cardData)
           if (cardData.cardData && typeof cardData.cardData === "object") {
             // Flatten the structure for modern cards
-            normalizedCards[position] = {
+            const normalizedCard = {
               ...cardData.cardData, // Spread the actual card data
               // Keep some metadata from the wrapper
               binderMetadata: {
@@ -968,12 +970,92 @@ export const fetchBinderForAdminView = async (
                 isProtected: cardData.isProtected,
               },
             };
+
+            // Log if image is missing for this card
+            if (!normalizedCard.image && !normalizedCard.imageSmall) {
+              console.warn(
+                `[Admin] Card at position ${position} missing image:`,
+                {
+                  position,
+                  cardName: normalizedCard.name,
+                  cardId: normalizedCard.id,
+                  originalCardData: cardData.cardData,
+                  normalizedCard,
+                }
+              );
+            }
+
+            normalizedCards[position] = normalizedCard;
+          } else if (cardData.cardId && !cardData.name && !cardData.image) {
+            // This is an incomplete card - has metadata but missing cardData
+            console.error(
+              `[Admin] INCOMPLETE CARD at position ${position} - has metadata but missing cardData:`,
+              {
+                position,
+                cardId: cardData.cardId,
+                metadata: cardData,
+                issue:
+                  "Missing nested cardData object with Pokemon card information",
+              }
+            );
+
+            // Create a placeholder card that shows the issue
+            normalizedCards[position] = {
+              id: cardData.cardId,
+              name: `INCOMPLETE: ${cardData.cardId}`,
+              image: null,
+              imageSmall: null,
+              types: ["Unknown"],
+              rarity: "Unknown",
+              set: { name: "Unknown Set", id: "unknown" },
+              artist: "Unknown",
+              number: "?",
+              // Mark this as an incomplete card for repair
+              isIncompleteCard: true,
+              originalCardId: cardData.cardId,
+              binderMetadata: {
+                instanceId: cardData.instanceId,
+                addedAt: cardData.addedAt,
+                addedBy: cardData.addedBy,
+                condition: cardData.condition || "unknown",
+                notes: cardData.notes || "",
+                quantity: cardData.quantity || 1,
+                isProtected: cardData.isProtected || false,
+              },
+            };
           } else {
             // Legacy format - already flat
+            if (!cardData.image && !cardData.imageSmall) {
+              console.warn(
+                `[Admin] Legacy card at position ${position} missing image:`,
+                {
+                  position,
+                  cardName: cardData.name,
+                  cardId: cardData.id || cardData.cardApiId,
+                  cardData,
+                }
+              );
+            }
+
             normalizedCards[position] = cardData;
           }
         }
       });
+    }
+
+    console.log(
+      `[Admin] Normalized ${
+        Object.keys(normalizedCards).length
+      } cards for binder ${binderId}`
+    );
+    const cardsWithoutImages = Object.values(normalizedCards).filter(
+      (card) => card && !card.image && !card.imageSmall
+    );
+    if (cardsWithoutImages.length > 0) {
+      console.warn(
+        `[Admin] Total cards without images: ${cardsWithoutImages.length}`,
+        cardsWithoutImages
+      );
     }
 
     // Normalize the data structure

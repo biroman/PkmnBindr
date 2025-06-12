@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import { Button } from "../ui/Button";
 import CoverPage from "../binder/CoverPage";
 import CardPage from "../binder/CardPage";
+import CardRepairTool from "./CardRepairTool";
 import { fetchBinderForAdminView } from "../../utils/userManagement";
 import useBinderDimensions, {
   getGridConfig,
@@ -17,6 +18,7 @@ import {
   CalendarIcon,
   DocumentTextIcon,
   Squares2X2Icon,
+  WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
 
 const BinderViewer = () => {
@@ -27,6 +29,7 @@ const BinderViewer = () => {
   const [error, setError] = useState(null);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [showRepairTool, setShowRepairTool] = useState(false);
 
   // Custom hook for binder dimensions (same as BinderPage)
   const binderDimensions = useBinderDimensions(
@@ -141,6 +144,46 @@ const BinderViewer = () => {
         );
 
         setCurrentBinder(binderData);
+
+        // Debug logging for card data
+        console.log(`[BinderViewer] Loaded binder:`, binderData);
+        console.log(`[BinderViewer] Cards data:`, binderData.cards);
+
+        // Log cards without images
+        const cardsWithoutImages = Object.entries(
+          binderData.cards || {}
+        ).filter(([pos, card]) => {
+          return card && !card.image && !card.imageSmall;
+        });
+
+        if (cardsWithoutImages.length > 0) {
+          console.warn(
+            `[BinderViewer] Found ${cardsWithoutImages.length} cards without images:`,
+            cardsWithoutImages
+          );
+        }
+
+        // Log cards with broken/invalid image URLs
+        const cardsWithPotentialImageIssues = Object.entries(
+          binderData.cards || {}
+        ).filter(([pos, card]) => {
+          if (!card) return false;
+          const imageUrl = card.imageSmall || card.image;
+          return (
+            imageUrl &&
+            (!imageUrl.startsWith("http") ||
+              imageUrl.includes("undefined") ||
+              imageUrl.includes("null"))
+          );
+        });
+
+        if (cardsWithPotentialImageIssues.length > 0) {
+          console.warn(
+            `[BinderViewer] Found ${cardsWithPotentialImageIssues.length} cards with potential image URL issues:`,
+            cardsWithPotentialImageIssues
+          );
+        }
+
         toast.success(
           `Loaded ${binderData.metadata.name} (${
             Object.keys(binderData.cards || {}).length
@@ -157,6 +200,25 @@ const BinderViewer = () => {
 
     loadBinder();
   }, [userId, binderId, source]);
+
+  // Handle repair completion - reload the binder
+  const handleRepairComplete = async (results) => {
+    if (results.repaired > 0) {
+      // Reload the binder to show the repaired cards
+      try {
+        const binderData = await fetchBinderForAdminView(
+          binderId,
+          userId,
+          source
+        );
+        setCurrentBinder(binderData);
+        toast.success("Binder refreshed with repaired cards!");
+      } catch (error) {
+        console.error("Error reloading binder after repair:", error);
+        toast.error("Failed to reload binder");
+      }
+    }
+  };
 
   // Navigation handlers (same as BinderPage)
   const goToNextPage = () => {
@@ -345,6 +407,19 @@ const BinderViewer = () => {
                 </div>
               )}
             </div>
+
+            {/* Repair Tool Button */}
+            <div className="mt-6 pt-4 border-t border-gray-200">
+              <Button
+                onClick={() => setShowRepairTool(!showRepairTool)}
+                variant="outline"
+                size="sm"
+                className="w-full"
+              >
+                <WrenchScrewdriverIcon className="w-4 h-4 mr-2" />
+                {showRepairTool ? "Hide" : "Show"} Card Repair Tool
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -468,6 +543,18 @@ const BinderViewer = () => {
             </button>
           </div>
         </div>
+
+        {/* Card Repair Tool Panel */}
+        {showRepairTool && (
+          <div className="mt-6">
+            <CardRepairTool
+              userId={userId}
+              binderId={binderId}
+              source={source}
+              onRepairComplete={handleRepairComplete}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

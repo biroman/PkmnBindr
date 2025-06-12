@@ -124,11 +124,29 @@ const PokemonCard = forwardRef(
 
     const handleImageLoad = () => {
       setImageLoaded(true);
+      console.log(
+        `[PokemonCard] Image loaded successfully for card: ${card.name}`,
+        {
+          cardId: card.id,
+          imageUrl: card.imageSmall || card.image,
+          card,
+        }
+      );
       onImageLoad?.(card);
     };
 
     const handleImageError = () => {
       setImageError(true);
+      console.error(
+        `[PokemonCard] Image failed to load for card: ${card.name}`,
+        {
+          cardId: card.id,
+          imageUrl: card.imageSmall || card.image,
+          imageSmall: card.imageSmall,
+          image: card.image,
+          card,
+        }
+      );
       onImageError?.(card);
     };
 
@@ -167,7 +185,7 @@ const PokemonCard = forwardRef(
 
         {/* Card Image */}
         <div className="relative w-full h-full" {...(dragHandleProps || {})}>
-          {card.image && !imageError ? (
+          {(card.image || card.imageSmall) && !imageError ? (
             <>
               <img
                 src={card.imageSmall || card.image}
@@ -204,6 +222,22 @@ const PokemonCard = forwardRef(
                 {card.types && (
                   <div className="text-xs opacity-90">
                     {card.types.join(" • ")}
+                  </div>
+                )}
+                {/* Debug indicator for missing image */}
+                {!card.image && !card.imageSmall && (
+                  <div className="mt-2 text-xs bg-red-500/80 px-2 py-1 rounded">
+                    NO IMAGE
+                  </div>
+                )}
+                {imageError && (
+                  <div className="mt-2 text-xs bg-orange-500/80 px-2 py-1 rounded">
+                    IMG ERROR
+                  </div>
+                )}
+                {card.isIncompleteCard && (
+                  <div className="mt-2 text-xs bg-purple-500/80 px-2 py-1 rounded">
+                    INCOMPLETE
                   </div>
                 )}
               </div>
