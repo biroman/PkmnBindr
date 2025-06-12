@@ -58,7 +58,9 @@ const AddCardModal = ({
       onClose();
     } catch (error) {
       console.error("Failed to add cards:", error);
-      toast.error("Failed to add cards to binder");
+      toast.error(
+        "Failed to add cards to binder, you might have reached your limit as a guest user."
+      );
     } finally {
       setIsAdding(false);
     }

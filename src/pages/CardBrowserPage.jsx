@@ -50,7 +50,9 @@ const CardBrowserPage = () => {
       // navigate('/binder');
     } catch (error) {
       console.error("Failed to add cards to binder:", error);
-      toast.error("Failed to add cards to binder");
+      toast.error(
+        "Failed to add cards to binder, you might have reached your limit as a guest user."
+      );
     }
   };
 

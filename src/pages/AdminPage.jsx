@@ -4,7 +4,6 @@ import { useAuth, useOwner } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
 import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
-import RulesExample from "../components/examples/RulesExample";
 import BinderLimitsManager from "../components/admin/BinderLimitsManager";
 import ContactLimitsManager from "../components/admin/ContactLimitsManager";
 import { contactService } from "../services/ContactService";
@@ -900,12 +899,6 @@ const AdminPage = () => {
       name: "System",
       icon: ServerIcon,
       description: "System settings and maintenance",
-    },
-    {
-      id: "rules",
-      name: "Advanced Rules",
-      icon: ShieldCheckIcon,
-      description: "Advanced rule management",
     },
     {
       id: "contact",
@@ -2065,29 +2058,6 @@ const AdminPage = () => {
     </div>
   );
 
-  const renderAdvancedRules = () => (
-    <div className="space-y-6">
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Advanced Rules Management
-        </h2>
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
-          <div className="flex items-center gap-2 mb-2">
-            <ExclamationTriangleIcon className="w-5 h-5 text-amber-500" />
-            <span className="font-medium text-amber-800">
-              Advanced Configuration
-            </span>
-          </div>
-          <p className="text-amber-700 text-sm">
-            This section provides low-level rule management. For basic binder
-            limits, use the "Binder Limits" tab.
-          </p>
-        </div>
-        <RulesExample />
-      </div>
-    </div>
-  );
-
   // Status color helpers for the new design
   const getContactStatusColor = (status, type) => {
     const colors = {
@@ -2776,41 +2746,6 @@ const AdminPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      {/* <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-600 rounded-lg">
-                  <Cog6ToothIcon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900">
-                    Admin Panel
-                  </h1>
-                  <p className="text-sm text-gray-600">
-                    Pokemon Binder Management
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 px-3 py-1 bg-green-100 rounded-full">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium text-green-700">
-                  Owner Access
-                </span>
-              </div>
-              <div className="text-sm text-gray-600">
-                {user?.email || user?.uid?.substring(0, 8)}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation Tabs */}
         <div className="mb-8">
@@ -2845,7 +2780,6 @@ const AdminPage = () => {
           {activeTab === "contact-limits" && <ContactLimitsManager />}
           {activeTab === "users" && renderUsers()}
           {activeTab === "system" && renderSystem()}
-          {activeTab === "rules" && renderAdvancedRules()}
           {activeTab === "contact" && renderContactManagement()}
           {activeTab === "announcements" && (
             <AnnouncementManagement
