@@ -213,7 +213,7 @@ const Navbar = () => {
             {/* Logo and Brand */}
             <div className="flex items-center">
               <Link
-                to="/binders"
+                to="/"
                 className="flex items-center space-x-2 text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
                 <img src="/logo.png" alt="PokemonBindr" className="w-20 h-15" />
