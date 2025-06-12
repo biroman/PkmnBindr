@@ -13,7 +13,6 @@ import { useUserTracking } from "./hooks/useUserTracking";
 import { useActivityTracking } from "./hooks/useActivityTracking";
 
 // Pages
-import HomePage from "./pages/HomePage";
 import BinderPage from "./pages/BinderPage";
 import BindersPage from "./pages/BindersPage";
 import StaticBinderPage from "./pages/StaticBinderPage";
@@ -56,7 +55,7 @@ const App = () => {
               <Routes>
                 {/* Public Routes */}
                 <Route path="/" element={<RootLayout />}>
-                  <Route index element={<HomePage />} />
+                  <Route index element={<Navigate to="/binders" replace />} />
                   <Route path="binders" element={<BindersPage />} />
                   <Route path="binders/:slug" element={<StaticBinderPage />} />
                   <Route path="binder/:id" element={<BinderPage />} />
