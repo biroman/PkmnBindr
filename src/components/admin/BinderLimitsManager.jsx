@@ -544,35 +544,6 @@ const BinderLimitsManager = () => {
         </div>
       </div>
 
-      {/* Status and Information */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-        <div className="flex items-start gap-3">
-          <InformationCircleIcon className="w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5" />
-          <div>
-            <h3 className="font-medium text-blue-800 mb-2">
-              Binder Limits Information
-            </h3>
-            <div className="text-blue-700 text-sm space-y-1">
-              <p>
-                • <strong>Max Binders:</strong> Total number of binders a user
-                can create
-              </p>
-              <p>
-                • <strong>Max Cards:</strong> Maximum cards that can be stored
-                in a single binder
-              </p>
-              <p>
-                • <strong>Max Pages:</strong> Maximum pages allowed per binder
-              </p>
-              <p>• Changes take effect immediately for new operations</p>
-              <p>
-                • Existing binders above limits are not affected (grandfathered)
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Current Rule Status */}
       {Object.values(currentRules).some(Boolean) && (
         <div className="bg-white rounded-lg border border-gray-200 p-6">
