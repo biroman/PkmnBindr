@@ -57,6 +57,16 @@ service cloud.firestore {
                         !('email' in request.resource.data) ||
                         (isValidStringLength(request.resource.data.email, 100) && 
                          request.resource.data.email.matches('.*@.*\\..*'))) &&
+                       // Validate banner color (max 200 chars, must be valid CSS color/gradient)
+                       (!('bannerColor' in request.resource.data) ||
+                        (isValidStringLength(request.resource.data.bannerColor, 200) &&
+                         (request.resource.data.bannerColor.matches('^#[0-9a-fA-F]{3,8}$') ||
+                          request.resource.data.bannerColor.matches('^linear-gradient\\(.*\\)$') ||
+                          request.resource.data.bannerColor.matches('^radial-gradient\\(.*\\)$') ||
+                          request.resource.data.bannerColor.matches('^rgb\\(.*\\)$') ||
+                          request.resource.data.bannerColor.matches('^rgba\\(.*\\)$') ||
+                          request.resource.data.bannerColor.matches('^hsl\\(.*\\)$') ||
+                          request.resource.data.bannerColor.matches('^hsla\\(.*\\)$')))) &&
                        // Validate role cannot be changed by user (unless they don't have one yet)
                        (!('role' in resource.data) || 
                         !('role' in request.resource.data) ||
@@ -324,6 +334,25 @@ service cloud.firestore {
       // All authenticated users can read and list published announcements
       allow read, list: if request.auth != null && 
                            (resource == null || resource.data.isPublished == true);
+    }
+
+    // User upload rate limiting - for profile picture uploads
+    match /userUploadLimits/{userId} {
+      // Users can read their own upload limits
+      allow read: if request.auth != null && request.auth.uid == userId;
+      
+      // Users can create/update their own upload tracking (managed by client)
+      allow write: if request.auth != null && 
+                      request.auth.uid == userId &&
+                      request.resource.data.keys().hasAll(['uploads', 'lastReset', 'canUpload']) &&
+                      request.resource.data.uploads is number &&
+                      request.resource.data.uploads >= 0 &&
+                      request.resource.data.uploads <= 10 && // Max 10 for safety buffer
+                      request.resource.data.lastReset is timestamp &&
+                      request.resource.data.canUpload is bool;
+      
+      // Owners can read/write all upload limits (for management)
+      allow read, write: if isOwner();
     }
 
     // Deny all other collections/documents

@@ -4,6 +4,7 @@ import { useAuth, useOwner } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
 import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
+import UserAvatar from "../components/ui/UserAvatar";
 import BinderLimitsManager from "../components/admin/BinderLimitsManager";
 import ContactLimitsManager from "../components/admin/ContactLimitsManager";
 import { contactService } from "../services/ContactService";
@@ -1624,21 +1625,7 @@ const AdminPage = () => {
       {/* User Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3 flex-1 min-w-0">
-          <div className="flex-shrink-0">
-            {u.photoURL ? (
-              <img
-                className="h-10 w-10 rounded-full border-2 border-gray-200"
-                src={u.photoURL}
-                alt=""
-              />
-            ) : (
-              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center border-2 border-gray-200">
-                <span className="text-white font-bold text-sm">
-                  {u.displayName.charAt(0).toUpperCase()}
-                </span>
-              </div>
-            )}
-          </div>
+          <UserAvatar user={u} size="md" />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <div className="text-sm font-semibold text-gray-900 truncate">
@@ -1651,6 +1638,11 @@ const AdminPage = () => {
               )}
             </div>
             <div className="text-xs text-gray-500 truncate">{u.email}</div>
+            {u.customStatus && (
+              <div className="text-xs text-gray-400 italic truncate mt-1">
+                {u.customStatus}
+              </div>
+            )}
           </div>
         </div>
 
@@ -1980,21 +1972,7 @@ const AdminPage = () => {
                       >
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
-                            <div className="flex-shrink-0 h-12 w-12">
-                              {u.photoURL ? (
-                                <img
-                                  className="h-12 w-12 rounded-full border-2 border-gray-200"
-                                  src={u.photoURL}
-                                  alt=""
-                                />
-                              ) : (
-                                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center border-2 border-gray-200">
-                                  <span className="text-white font-bold text-lg">
-                                    {u.displayName.charAt(0).toUpperCase()}
-                                  </span>
-                                </div>
-                              )}
-                            </div>
+                            <UserAvatar user={u} size="lg" />
                             <div className="ml-4">
                               <div className="flex items-center gap-2">
                                 <div className="text-sm font-semibold text-gray-900">
@@ -2009,6 +1987,11 @@ const AdminPage = () => {
                               <div className="text-sm text-gray-500">
                                 {u.email}
                               </div>
+                              {u.customStatus && (
+                                <div className="text-xs text-gray-400 italic truncate">
+                                  {u.customStatus}
+                                </div>
+                              )}
                               <div className="text-xs text-gray-400 font-mono">
                                 ID: {u.uid.substring(0, 8)}...
                               </div>
@@ -2277,11 +2260,7 @@ const AdminPage = () => {
               <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 {/* User Profile */}
                 <div className="flex items-center gap-4">
-                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">
-                      {selectedUserDetails.displayName.charAt(0).toUpperCase()}
-                    </span>
-                  </div>
+                  <UserAvatar user={selectedUserDetails} size="xl" />
                   <div>
                     <h3 className="text-lg font-semibold">
                       {selectedUserDetails.displayName}

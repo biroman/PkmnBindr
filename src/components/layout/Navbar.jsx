@@ -1,10 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import { useAuth, useOwner } from "../../hooks/useAuth";
 import { useRules } from "../../contexts/RulesContext";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useNavigation } from "../../hooks/useNavigation";
 import { Button } from "../ui/Button";
-import LogoutButton from "../auth/LogoutButton";
+import UserAvatar from "../ui/UserAvatar";
+import StatusEditor from "../ui/StatusEditor";
+import useUserProfile from "../../hooks/useUserProfile";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -14,6 +17,8 @@ import {
   UserCircleIcon,
   Cog6ToothIcon,
   DocumentTextIcon,
+  ChevronDownIcon,
+  ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 import {
   HomeIcon as HomeSolid,
@@ -25,13 +30,44 @@ import {
 } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
+  const { userProfile, updateUserProfile } = useUserProfile(user);
   const isOwner = useOwner();
   const { isOwner: isRulesOwner } = useRules();
   const { currentBinder } = useBinderContext();
   const location = useLocation();
   const { isMobileMenuOpen, isScrolled, toggleMobileMenu, closeMobileMenu } =
     useNavigation();
+
+  // User dropdown state
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsUserDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleLogout = async () => {
+    setIsUserDropdownOpen(false);
+    await logout();
+  };
+
+  const handleStatusUpdate = (newStatus) => {
+    // Update the local user profile state
+    if (userProfile) {
+      updateUserProfile({ customStatus: newStatus });
+    }
+  };
 
   const isActive = (path) => location.pathname === path;
   const isPathActive = (path) => location.pathname.startsWith(path);
@@ -163,39 +199,119 @@ const Navbar = () => {
       );
     }
 
-    return (
-      <div
-        className={`flex ${
-          mobile ? "flex-col space-y-4" : "items-center space-x-4"
-        }`}
-      >
-        <div
-          className={`flex items-center ${
-            mobile ? "px-4 py-3 bg-gray-50 rounded-lg" : "space-x-3"
-          }`}
-        >
-          <div className="flex-shrink-0">
-            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-              <span className="text-sm font-medium text-blue-700">
-                {user.displayName
-                  ? user.displayName.charAt(0).toUpperCase()
-                  : user.email.charAt(0).toUpperCase()}
-              </span>
+    if (mobile) {
+      // Mobile version - simple layout without dropdown
+      return (
+        <div className="flex flex-col space-y-4">
+          <div className="flex items-center px-4 py-3 bg-gray-50 rounded-lg">
+            <UserAvatar
+              user={userProfile || user}
+              size="sm"
+              className="flex-shrink-0"
+            />
+            <div className="flex-1 min-w-0 ml-3">
+              <p className="text-sm font-medium text-gray-900 truncate">
+                {userProfile?.displayName || user?.displayName || user?.email}
+              </p>
+              {isOwner && (
+                <p className="text-xs text-yellow-600 font-medium">Owner</p>
+              )}
             </div>
           </div>
-          <div className={mobile ? "flex-1 min-w-0" : "hidden md:block"}>
-            <p className="text-sm font-medium text-gray-900 truncate">
-              {user.displayName || user.email}
+
+          {/* Mobile menu items */}
+          <div className="space-y-2">
+            <Link
+              to="/profile"
+              className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              onClick={closeMobileMenu}
+            >
+              <UserCircleIcon className="w-4 h-4 mr-3" />
+              Profile
+            </Link>
+            <button
+              onClick={handleLogout}
+              className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors text-left"
+            >
+              <ArrowRightOnRectangleIcon className="w-4 h-4 mr-3" />
+              Sign Out
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Desktop version with dropdown
+    return (
+      <div className="relative" ref={dropdownRef}>
+        <button
+          onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
+          className="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          <UserAvatar
+            user={userProfile || user}
+            size="sm"
+            className="flex-shrink-0"
+          />
+          <div className="hidden md:block text-left">
+            <p className="text-sm font-medium text-gray-900 truncate max-w-32">
+              {userProfile?.displayName || user?.displayName || user?.email}
             </p>
             {isOwner && (
               <p className="text-xs text-yellow-600 font-medium">Owner</p>
             )}
           </div>
-        </div>
-        <LogoutButton
-          className={`text-sm ${mobile ? "w-full justify-center" : ""}`}
-          variant={mobile ? "outline" : "ghost"}
-        />
+          <ChevronDownIcon
+            className={`w-4 h-4 text-gray-500 transition-transform ${
+              isUserDropdownOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        {/* Dropdown Menu */}
+        {isUserDropdownOpen && (
+          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+            {/* User Info Header */}
+            <div className="px-4 py-3 border-b border-gray-100">
+              <p className="text-sm font-medium text-gray-900 truncate">
+                {userProfile?.displayName || user?.displayName || user?.email}
+              </p>
+              <p className="text-xs text-gray-500 truncate">{user?.email}</p>
+              {userProfile?.customStatus && (
+                <p className="text-xs text-gray-600 mt-1 italic truncate">
+                  {userProfile.customStatus}
+                </p>
+              )}
+              {isOwner && (
+                <p className="text-xs text-yellow-600 font-medium mt-1">
+                  Owner
+                </p>
+              )}
+            </div>
+
+            {/* Menu Items */}
+            <div className="py-1 border-t border-gray-100">
+              <Link
+                to="/profile"
+                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                onClick={() => setIsUserDropdownOpen(false)}
+              >
+                <UserCircleIcon className="w-4 h-4 mr-3" />
+                Profile
+              </Link>
+
+              <div className="border-t border-gray-100 my-1"></div>
+
+              <button
+                onClick={handleLogout}
+                className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors text-left"
+              >
+                <ArrowRightOnRectangleIcon className="w-4 h-4 mr-3" />
+                Sign Out
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     );
   };

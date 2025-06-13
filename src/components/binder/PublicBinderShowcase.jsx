@@ -95,7 +95,7 @@ const PublicBinderShowcase = () => {
       <div className="flex items-center justify-between mb-3">
         <div>
           <h2 className="text-lg font-semibold text-gray-900">
-            Featured Collections
+            Binder Examples
           </h2>
           <p className="text-sm text-gray-600">
             Explore Pokemon card collections

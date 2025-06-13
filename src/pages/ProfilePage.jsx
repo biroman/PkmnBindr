@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import useUserProfile from "../hooks/useUserProfile";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 import { Label } from "../components/ui/Label";
 import { Alert, AlertDescription } from "../components/ui/Alert";
+import UserProfileCard from "../components/ui/UserProfileCard";
 import {
   ExclamationTriangleIcon,
   ShieldExclamationIcon,
   TrashIcon,
   XMarkIcon,
   UserCircleIcon,
-  CheckBadgeIcon,
   XCircleIcon,
   CogIcon,
   EyeIcon,
@@ -19,11 +20,11 @@ import {
   UserIcon,
   ShieldCheckIcon,
   PencilIcon,
-  CameraIcon,
 } from "@heroicons/react/24/outline";
 
 const ProfilePage = () => {
   const { user, deleteAccount, getAuthProvider, logout } = useAuth();
+  const { userProfile, updateUserProfile } = useUserProfile(user);
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("profile");
 
@@ -101,6 +102,18 @@ const ProfilePage = () => {
     navigate("/auth/login");
   };
 
+  const handleImageUpdate = (newImageUrl) => {
+    updateUserProfile({ photoURL: newImageUrl });
+  };
+
+  const handleStatusUpdate = (newStatus) => {
+    updateUserProfile({ customStatus: newStatus });
+  };
+
+  const handleBannerUpdate = (newBannerColor) => {
+    updateUserProfile({ bannerColor: newBannerColor });
+  };
+
   const NavItem = ({ icon, label, tabName }) => (
     <button
       onClick={() => setActiveTab(tabName)}
@@ -156,84 +169,14 @@ const ProfilePage = () => {
             {activeTab === "profile" && (
               <div className="space-y-6">
                 {/* Public Profile Preview */}
-                <div className="bg-white rounded-lg p-4 shadow-lg border border-slate-200">
-                  <div className="relative">
-                    {/* Banner */}
-                    <div className="h-24 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-lg relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-                      <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/50 text-white text-xs font-semibold px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                        <CameraIcon className="w-3 h-3" /> Change Banner
-                      </button>
-                    </div>
-
-                    {/* Profile Info */}
-                    <div className="relative -mt-10 ml-4 flex items-end gap-4">
-                      {/* Profile Picture */}
-                      <div className="relative group">
-                        <div className="w-24 h-24 rounded-full bg-slate-100 p-1 shadow-md">
-                          {user?.photoURL ? (
-                            <img
-                              src={user.photoURL}
-                              alt="Profile"
-                              className="w-full h-full rounded-full object-cover"
-                            />
-                          ) : (
-                            <div className="w-full h-full rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-                              {getUserInitials(user?.displayName, user?.email)}
-                            </div>
-                          )}
-                        </div>
-                        <div className="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                          <CameraIcon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="absolute bottom-1 right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* User Details */}
-                  <div className="mt-4 pt-8 border-t border-slate-200 p-4 rounded-b-lg bg-slate-50 -m-4">
-                    <div className="flex items-center gap-2">
-                      <h4 className="font-bold text-slate-800 text-xl">
-                        {user?.displayName || "User"}
-                      </h4>
-                      {user?.emailVerified && (
-                        <CheckBadgeIcon
-                          className="w-5 h-5 text-blue-500"
-                          title="Verified"
-                        />
-                      )}
-                    </div>
-                    <p className="text-sm text-slate-500">
-                      @
-                      {user?.displayName?.toLowerCase().replace(/\s+/g, "") ||
-                        user?.email?.split("@")[0] ||
-                        "user"}
-                    </p>
-
-                    <div className="mt-4">
-                      <h5 className="text-xs text-slate-400 font-bold uppercase">
-                        About Me
-                      </h5>
-                      <p className="text-sm text-slate-700 mt-1 italic">
-                        No status set yet.
-                      </p>
-                    </div>
-
-                    <div className="mt-4 flex items-center gap-2 flex-wrap">
-                      <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded bg-slate-200 text-slate-700">
-                        <img
-                          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-                          alt="Pikachu"
-                          className="w-4 h-4"
-                        />
-                        Pokemon Master
-                      </span>
-                      <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded bg-slate-200 text-slate-700">
-                        Early Supporter
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <UserProfileCard
+                  user={userProfile}
+                  onImageUpdate={handleImageUpdate}
+                  onStatusUpdate={handleStatusUpdate}
+                  onBannerUpdate={handleBannerUpdate}
+                  size="medium"
+                  editable={true}
+                />
 
                 {/* Profile Customization */}
                 <div className="bg-white rounded-lg shadow-sm">
@@ -249,7 +192,7 @@ const ProfilePage = () => {
                         <Input
                           id="displayName"
                           type="text"
-                          defaultValue={user?.displayName || ""}
+                          defaultValue={userProfile?.displayName || ""}
                           className="mt-2"
                           disabled
                         />
@@ -314,9 +257,11 @@ const ProfilePage = () => {
                         <h3 className="font-medium text-slate-800">
                           Email Address
                         </h3>
-                        <p className="text-sm text-slate-600">{user?.email}</p>
+                        <p className="text-sm text-slate-600">
+                          {userProfile?.email}
+                        </p>
                       </div>
-                      {user?.emailVerified ? (
+                      {userProfile?.emailVerified ? (
                         <span className="text-sm font-medium text-green-600">
                           Verified
                         </span>
