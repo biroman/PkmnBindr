@@ -15,7 +15,7 @@ const BlogIndexPage = () => {
       excerpt:
         "Master the art of Pokemon card organization with professional techniques that protect your investment and enhance your collecting experience. Learn the four key methods for organizing your collection.",
       readTime: "15 min read",
-      date: "January 15, 2025",
+      date: "June 14, 2025",
       category: "Organization",
       featured: true,
       tags: ["Organization", "Digital", "Collection Management", "Binders"],
@@ -27,7 +27,7 @@ const BlogIndexPage = () => {
       excerpt:
         "Not all binders are created equal. Discover the anatomy of a perfect binder, compare top brands like Vault X vs Ultra PRO vs Dragon Shield, and find the ideal Fort Knox for your treasured collection.",
       readTime: "12 min read",
-      date: "January 12, 2025",
+      date: "June 14, 2025",
       category: "Equipment",
       featured: false,
       tags: ["Binders", "Protection", "Equipment", "Reviews"],
@@ -40,7 +40,7 @@ const BlogIndexPage = () => {
       excerpt:
         "The ultimate collector's guide to choosing between ringless, D-Ring, and O-Ring binders. Discover which type protects your collection best and why most Pokemon binders on Amazon aren't safe for valuable cards.",
       readTime: "18 min read",
-      date: "January 10, 2025",
+      date: "June 14, 2025",
       category: "Comparison",
       featured: false,
       tags: ["Binders", "Comparison", "Protection", "Safety", "Investment"],
@@ -52,7 +52,7 @@ const BlogIndexPage = () => {
       excerpt:
         "An exhaustive, expert-level comparison of the three biggest binder brands. Feature-by-feature analysis, collector persona matching, and definitive recommendations for your perfect card sanctuary.",
       readTime: "22 min read",
-      date: "January 15, 2025",
+      date: "June 14, 2025",
       category: "Comparison",
       featured: false,
       tags: [
@@ -70,7 +70,7 @@ const BlogIndexPage = () => {
       excerpt:
         "Master the art of authentication with this comprehensive guide. From instant red flags to advanced forensic techniques, learn to protect your collection from sophisticated counterfeits that could fool even experienced collectors.",
       readTime: "25 min read",
-      date: "January 18, 2025",
+      date: "June 14, 2025",
       category: "Authentication",
       featured: false,
       tags: [
@@ -89,7 +89,7 @@ const BlogIndexPage = () => {
       excerpt:
         "Discover the top digital tools that will transform your chaotic card collection into an organized, valuable, and accessible portfolio. In-depth reviews of Collectr, Dex, Pokécardex, and more with expert recommendations for every collector type.",
       readTime: "20 min read",
-      date: "January 20, 2025",
+      date: "June 14, 2025",
       category: "Digital",
       featured: false,
       tags: [

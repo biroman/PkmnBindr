@@ -16,7 +16,7 @@ const BlogPost5 = () => {
               ← Back to Blog
             </Link>
             <div className="flex items-center space-x-4 text-sm text-red-200">
-              <span>📅 January 18, 2025</span>
+              <span>📅 June 14, 2025</span>
               <span>⏱️ 25 min read</span>
               <span className="bg-red-500 px-2 py-1 rounded text-xs">
                 Authentication
