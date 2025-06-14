@@ -1,7 +1,12 @@
 import { useState } from "react";
 import ContactModal from "./ContactModal";
 
-const CoverPage = ({ binder, isReadOnly = false, isPublicView = false }) => {
+const CoverPage = ({
+  binder,
+  isReadOnly = false,
+  isPublicView = false,
+  backgroundColor = "#ffffff",
+}) => {
   const [contactModal, setContactModal] = useState({
     isOpen: false,
     type: "message",
@@ -10,7 +15,10 @@ const CoverPage = ({ binder, isReadOnly = false, isPublicView = false }) => {
   // If in read-only mode, show different content based on context
   if (isReadOnly) {
     return (
-      <div className="flex-1 bg-white rounded-lg shadow-2xl relative overflow-hidden">
+      <div
+        className="flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300"
+        style={{ backgroundColor }}
+      >
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="grid grid-cols-6 grid-rows-8 h-full gap-1 p-2 rotate-12 scale-110">
@@ -131,7 +139,10 @@ const CoverPage = ({ binder, isReadOnly = false, isPublicView = false }) => {
   ];
 
   return (
-    <div className="flex-1 bg-white rounded-lg shadow-2xl relative overflow-hidden">
+    <div
+      className="flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300"
+      style={{ backgroundColor }}
+    >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="grid grid-cols-6 grid-rows-8 h-full gap-1 p-2 rotate-12 scale-110">

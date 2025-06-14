@@ -25,6 +25,7 @@ const DEFAULT_BINDER_SETTINGS = {
   sortBy: "custom",
   showGridNumbers: false,
   cardBackUrl: null,
+  binderColor: "#ffffff", // Default white color
   // Page management
   minPages: 1, // Minimum number of pages (including cover)
   maxPages: 100, // Maximum number of pages allowed

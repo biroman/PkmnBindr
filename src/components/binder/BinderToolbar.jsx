@@ -8,6 +8,7 @@ import {
   TrashIcon,
   Squares2X2Icon,
   DocumentArrowDownIcon,
+  SwatchIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -50,6 +51,7 @@ const BinderToolbar = ({
   onClearBinder,
   onPageOverview,
   onPdfExport,
+  onColorPicker,
   currentBinder,
   isPdfExporting = false,
 }) => {
@@ -82,6 +84,13 @@ const BinderToolbar = ({
             icon={Squares2X2Icon}
             onClick={() => handleToolClick("overview", onPageOverview)}
             title="Page Overview"
+          />
+
+          {/* Color Picker */}
+          <ToolbarButton
+            icon={SwatchIcon}
+            onClick={() => handleToolClick("color", onColorPicker)}
+            title="Customize Binder Color"
           />
 
           {/* PDF Export */}

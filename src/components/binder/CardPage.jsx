@@ -12,12 +12,16 @@ const CardPage = ({
   cardPageIndex = 0, // For calculating global positions
   missingPositions = [], // Array of missing instance IDs
   isReadOnly = false, // New prop for read-only mode
+  backgroundColor = "#ffffff", // New prop for background color
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
 
   return (
-    <div className="flex-1 bg-white rounded-lg shadow-2xl relative">
+    <div
+      className="flex-1 rounded-lg shadow-2xl relative transition-colors duration-300"
+      style={{ backgroundColor }}
+    >
       {/* Page Header */}
       <div className="absolute top-2 left-4 right-4 flex items-center justify-between z-10">
         <div className="text-sm font-medium text-gray-500">

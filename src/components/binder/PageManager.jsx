@@ -136,14 +136,6 @@ const PageManager = ({ binder, className = "" }) => {
             <span>Remove Page</span>
           </button>
         </div>
-
-        {/* Help Text */}
-        <div className="text-xs text-slate-500 space-y-1">
-          <p>• Binder pages are physical spreads you flip through</p>
-          <p>• Card pages hold individual cards</p>
-          <p>• Pages auto-expand when cards exceed space</p>
-          <p>• Can only remove empty pages from end</p>
-        </div>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import DraggableCard from "../components/binder/DraggableCard";
 import BinderSidebar from "../components/binder/BinderSidebar";
 import BinderPageOverview from "../components/binder/BinderPageOverview";
 import ClearBinderModal from "../components/binder/ClearBinderModal";
+import BinderColorPicker from "../components/binder/BinderColorPicker";
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
 import pdfExportService from "../services/PdfExportService";
@@ -49,6 +50,8 @@ const BinderPage = () => {
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
   const [isPdfExporting, setIsPdfExporting] = useState(false);
+  const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
+  const [previewColor, setPreviewColor] = useState(null); // For live preview
   const modalOpenRef = useRef(false); // Prevent duplicate modal opens
 
   // Edge navigation state
@@ -181,6 +184,29 @@ const BinderPage = () => {
 
   const handlePageOverview = () => {
     setIsPageOverviewOpen(true);
+  };
+
+  const handleColorPicker = () => {
+    setPreviewColor(null); // Reset preview
+    setIsColorPickerOpen(true);
+  };
+
+  const handleColorPreview = (color) => {
+    setPreviewColor(color);
+  };
+
+  const handleColorChange = (color) => {
+    if (!currentBinder) return;
+    updateBinderSettings(currentBinder.id, {
+      ...currentBinder.settings,
+      binderColor: color,
+    });
+    setPreviewColor(null); // Clear preview after saving
+  };
+
+  const handleColorPickerClose = () => {
+    setPreviewColor(null); // Clear preview on close
+    setIsColorPickerOpen(false);
   };
 
   const handlePageSelect = (physicalPageIndex) => {
@@ -586,6 +612,10 @@ const BinderPage = () => {
   // Buttons should shift left by the full sidebar width to stick with the binder
   const navigationAdjustment = sidebarWidth;
 
+  // Get the current binder color (preview or saved)
+  const currentDisplayColor =
+    previewColor || currentBinder?.settings?.binderColor || "#ffffff";
+
   return (
     <div
       className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden"
@@ -601,6 +631,7 @@ const BinderPage = () => {
           onClearBinder={handleClearBinder}
           onPageOverview={handlePageOverview}
           onPdfExport={handlePdfExport}
+          onColorPicker={handleColorPicker}
           currentBinder={currentBinder}
           isPdfExporting={isPdfExporting}
         />
@@ -776,7 +807,10 @@ const BinderPage = () => {
             >
               {/* Left Page */}
               {pageConfig.leftPage.type === "cover" ? (
-                <CoverPage binder={currentBinder} />
+                <CoverPage
+                  binder={currentBinder}
+                  backgroundColor={currentDisplayColor}
+                />
               ) : (
                 <CardPage
                   pageNumber={pageConfig.leftPage.pageNumber}
@@ -790,6 +824,7 @@ const BinderPage = () => {
                   missingPositions={
                     currentBinder.metadata?.missingInstances || []
                   }
+                  backgroundColor={currentDisplayColor}
                 />
               )}
 
@@ -809,6 +844,7 @@ const BinderPage = () => {
                 missingPositions={
                   currentBinder.metadata?.missingInstances || []
                 }
+                backgroundColor={currentDisplayColor}
               />
             </div>
 
@@ -959,6 +995,14 @@ const BinderPage = () => {
         onConfirm={confirmClearBinder}
         binderName={currentBinder?.metadata?.name || ""}
         cardCount={Object.keys(currentBinder?.cards || {}).length}
+      />
+
+      <BinderColorPicker
+        isOpen={isColorPickerOpen}
+        onClose={handleColorPickerClose}
+        currentColor={currentBinder?.settings?.binderColor || "#ffffff"}
+        onColorChange={handleColorChange}
+        onPreviewChange={handleColorPreview}
       />
     </div>
   );
