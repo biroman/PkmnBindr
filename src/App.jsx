@@ -28,6 +28,13 @@ import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import ContactPage from "./pages/ContactPage";
+import BlogIndexPage from "./pages/BlogIndexPage";
+import BlogPost1 from "./pages/BlogPage";
+import BlogPost2 from "./pages/BlogPost2";
+import BlogPost3 from "./pages/BlogPost3";
+import BlogPost4 from "./pages/BlogPost4";
+import BlogPost5 from "./pages/BlogPost5";
+import BlogPost6 from "./pages/BlogPost6";
 import NotFoundPage from "./pages/NotFoundPage";
 
 // Create a client for TanStack Query
@@ -70,6 +77,33 @@ const App = () => {
 
                   {/* Contact - Accessible to everyone */}
                   <Route path="contact" element={<ContactPage />} />
+
+                  {/* Blog - Accessible to everyone */}
+                  <Route path="blog" element={<BlogIndexPage />} />
+                  <Route
+                    path="blog/ultimate-guide-organizing-pokemon-cards"
+                    element={<BlogPost1 />}
+                  />
+                  <Route
+                    path="blog/fort-knox-pokemon-card-binder-guide-2025"
+                    element={<BlogPost2 />}
+                  />
+                  <Route
+                    path="blog/best-pokemon-card-binders-2025-complete-guide"
+                    element={<BlogPost3 />}
+                  />
+                  <Route
+                    path="blog/ultimate-pokemon-binder-showdown-2025"
+                    element={<BlogPost4 />}
+                  />
+                  <Route
+                    path="blog/how-to-spot-fake-pokemon-cards-protect-collection"
+                    element={<BlogPost5 />}
+                  />
+                  <Route
+                    path="blog/best-pokemon-tcg-tracking-apps-2025-guide"
+                    element={<BlogPost6 />}
+                  />
 
                   {/* Auth Routes - Only accessible when not logged in */}
                   <Route element={<PublicRoute />}>

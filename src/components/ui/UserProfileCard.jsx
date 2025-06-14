@@ -104,7 +104,7 @@ const UserProfileCard = ({
     >
       {/* Banner Section */}
       {showBanner && (
-        <div className="relative">
+        <div className="relative mb-2">
           <div
             className={`${config.banner} relative overflow-hidden group ${
               editable ? "cursor-pointer" : ""

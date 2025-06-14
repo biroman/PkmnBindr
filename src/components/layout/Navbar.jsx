@@ -82,6 +82,13 @@ const Navbar = () => {
       active: isPathActive("/binders") && !isPathActive("/binder/"),
       prominent: true, // Make this button stand out
     },
+    {
+      name: "Blog",
+      href: "/blog",
+      icon: BookOpenIcon,
+      solidIcon: BookOpenSolid,
+      active: isActive("/blog"),
+    },
   ];
 
   const userNavItems = user

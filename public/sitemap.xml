@@ -67,6 +67,62 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Blog Section - Expert guides and educational content -->
+  <url>
+    <loc>https://pkmnbindr.com/blog</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post 1: Digital Collection Management -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/fort-knox-pokemon-card-binder-guide-2025</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 2: Binder Organization Guide -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/ultimate-guide-organizing-pokemon-cards</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 3: Binder Types Comparison -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/best-pokemon-card-binders-2025-complete-guide</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 4: Brand Comparison -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/ultimate-pokemon-binder-showdown-2025</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 5: Authentication Guide -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/how-to-spot-fake-pokemon-cards-protect-collection</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 6: TCG Tracking Apps -->
+  <url>
+    <loc>https://pkmnbindr.com/blog/best-pokemon-tcg-tracking-apps-2025-guide</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Note: Individual user binder pages (/binder/:id) are excluded as they contain user-specific content -->
   <!-- Note: Protected pages (/profile, /admin, /rules) are excluded as they require authentication -->
   <!-- Note: Additional static binder pages will be added here as they are created -->
