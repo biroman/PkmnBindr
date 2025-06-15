@@ -42,6 +42,7 @@ export const useAuth = () => {
     resetPassword: store.resetPassword,
     resendEmailVerification: store.resendEmailVerification,
     changePassword: store.changePassword,
+    updateDisplayName: store.updateDisplayName,
     deleteAccount: store.deleteAccount,
     reportSuspiciousActivity: store.reportSuspiciousActivity,
     getRemainingCooldown: store.getRemainingCooldown,

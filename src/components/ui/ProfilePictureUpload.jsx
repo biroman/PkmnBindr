@@ -10,6 +10,7 @@ const ProfilePictureUpload = ({
   onImageUpdate,
   className = "",
   size = "large",
+  editable = true,
 }) => {
   const [isUploading, setIsUploading] = useState(false);
   const [showCropModal, setShowCropModal] = useState(false);
@@ -17,17 +18,20 @@ const ProfilePictureUpload = ({
   const [rateLimitInfo, setRateLimitInfo] = useState(null);
   const fileInputRef = useRef(null);
 
-  // Check rate limit on component mount and after uploads
+  // Check rate limit on component mount and after uploads - only if editable
   useEffect(() => {
     const checkRateLimit = async () => {
-      if (user?.uid) {
+      if (user?.uid && editable) {
         const info = await UploadRateLimitService.checkUploadLimit(user.uid);
         setRateLimitInfo(info);
       }
     };
 
-    checkRateLimit();
-  }, [user?.uid, isUploading]); // Re-check after upload completes
+    // Only check rate limit if the component is editable
+    if (editable) {
+      checkRateLimit();
+    }
+  }, [user?.uid, isUploading, editable]); // Re-check after upload completes
 
   const getUserInitials = (name, email) => {
     if (name)
@@ -45,7 +49,7 @@ const ProfilePictureUpload = ({
     const file = event.target.files?.[0];
     if (!file) return;
 
-    // Check rate limit first
+    // Check rate limit first - only if we have rate limit info
     if (rateLimitInfo && !rateLimitInfo.canUpload) {
       toast.error(rateLimitInfo.error || "Upload limit exceeded");
       event.target.value = "";
@@ -98,9 +102,9 @@ const ProfilePictureUpload = ({
   };
 
   const handleClick = () => {
-    if (isUploading) return;
+    if (isUploading || !editable) return;
 
-    // Check rate limit before allowing file selection
+    // Check rate limit before allowing file selection - only if we have rate limit info
     if (rateLimitInfo && !rateLimitInfo.canUpload) {
       toast.error(rateLimitInfo.error || "Upload limit exceeded");
       return;
@@ -143,7 +147,9 @@ const ProfilePictureUpload = ({
   return (
     <>
       <div
-        className={`relative group cursor-pointer ${className}`}
+        className={`relative group ${
+          editable ? "cursor-pointer" : "cursor-default"
+        } ${className}`}
         onClick={handleClick}
       >
         {/* Profile Picture */}
@@ -165,35 +171,37 @@ const ProfilePictureUpload = ({
           )}
         </div>
 
-        {/* Upload Overlay */}
-        <div className="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-          {isUploading ? (
-            <div
-              className={`${iconSizeClasses[size]} border-2 border-white border-t-transparent rounded-full animate-spin`}
-            />
-          ) : rateLimitInfo && !rateLimitInfo.canUpload ? (
-            <ClockIcon className={`${iconSizeClasses[size]} text-red-400`} />
-          ) : (
-            <CameraIcon className={`${iconSizeClasses[size]} text-white`} />
-          )}
-        </div>
+        {/* Upload Overlay - Only show if editable */}
+        {editable && (
+          <div className="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            {isUploading ? (
+              <div
+                className={`${iconSizeClasses[size]} border-2 border-white border-t-transparent rounded-full animate-spin`}
+              />
+            ) : rateLimitInfo && !rateLimitInfo.canUpload ? (
+              <ClockIcon className={`${iconSizeClasses[size]} text-red-400`} />
+            ) : (
+              <CameraIcon className={`${iconSizeClasses[size]} text-white`} />
+            )}
+          </div>
+        )}
 
-        {/* Status Indicator */}
-        <div
-          className={`absolute ${
-            statusSizeClasses[size]
-          } rounded-full border-2 border-white ${
-            rateLimitInfo && !rateLimitInfo.canUpload
-              ? "bg-red-500"
-              : "bg-green-500"
-          }`}
-        >
-          {rateLimitInfo && !rateLimitInfo.canUpload && (
-            <ClockIcon
-              className={`${statusIconSizeClasses[size]} text-white m-auto`}
-            />
-          )}
-        </div>
+        {/* Status Indicator - Only show if editable and rate limit info is available */}
+        {editable && rateLimitInfo && (
+          <div
+            className={`absolute ${
+              statusSizeClasses[size]
+            } rounded-full border-2 border-white ${
+              !rateLimitInfo.canUpload ? "bg-red-500" : "bg-green-500"
+            }`}
+          >
+            {!rateLimitInfo.canUpload && (
+              <ClockIcon
+                className={`${statusIconSizeClasses[size]} text-white m-auto`}
+              />
+            )}
+          </div>
+        )}
 
         {/* Hidden File Input */}
         <input
@@ -202,20 +210,22 @@ const ProfilePictureUpload = ({
           accept="image/jpeg,image/png,image/webp"
           onChange={handleFileSelect}
           className="hidden"
-          disabled={isUploading}
+          disabled={isUploading || !editable}
         />
       </div>
 
-      {/* Crop Modal */}
-      <ImageCropModal
-        isOpen={showCropModal}
-        onClose={() => {
-          setShowCropModal(false);
-          setSelectedImage(null);
-        }}
-        imageSrc={selectedImage}
-        onCropComplete={handleCropComplete}
-      />
+      {/* Crop Modal - Only show if editable */}
+      {editable && (
+        <ImageCropModal
+          isOpen={showCropModal}
+          onClose={() => {
+            setShowCropModal(false);
+            setSelectedImage(null);
+          }}
+          imageSrc={selectedImage}
+          onCropComplete={handleCropComplete}
+        />
+      )}
     </>
   );
 };

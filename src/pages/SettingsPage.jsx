@@ -7,6 +7,9 @@ import { Input } from "../components/ui/Input";
 import { Label } from "../components/ui/Label";
 import { Alert, AlertDescription } from "../components/ui/Alert";
 import UserProfileCard from "../components/ui/UserProfileCard";
+import ChangePasswordForm from "../components/auth/ChangePasswordForm";
+import ChangeDisplayNameForm from "../components/auth/ChangeDisplayNameForm";
+import SecuritySettings from "../components/auth/SecuritySettings";
 import {
   ExclamationTriangleIcon,
   ShieldExclamationIcon,
@@ -20,9 +23,10 @@ import {
   UserIcon,
   ShieldCheckIcon,
   PencilIcon,
+  KeyIcon,
 } from "@heroicons/react/24/outline";
 
-const ProfilePage = () => {
+const SettingsPage = () => {
   const { user, deleteAccount, getAuthProvider, logout } = useAuth();
   const { userProfile, updateUserProfile } = useUserProfile(user);
   const navigate = useNavigate();
@@ -36,8 +40,16 @@ const ProfilePage = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState("");
 
+  // Password change state
+  const [showChangePassword, setShowChangePassword] = useState(false);
+
+  // Display name change state
+  const [showChangeDisplayName, setShowChangeDisplayName] = useState(false);
+
   const authProvider = getAuthProvider(user);
-  const isOAuthUser = authProvider === "google" || authProvider === "twitter";
+  const isOAuthUser = ["google", "twitter", "facebook", "github"].includes(
+    authProvider
+  );
   const requiredConfirmationText = "DELETE MY ACCOUNT";
 
   const handleDeleteAccount = async () => {
@@ -92,6 +104,10 @@ const ProfilePage = () => {
         return "Google";
       case "twitter":
         return "Twitter";
+      case "facebook":
+        return "Facebook";
+      case "github":
+        return "GitHub";
       default:
         return "Email";
     }
@@ -136,7 +152,7 @@ const ProfilePage = () => {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg p-3 space-y-1">
               <h3 className="px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                User Settings
+                Account Settings
               </h3>
               <NavItem
                 icon={<UserIcon className="w-5 h-5" />}
@@ -150,6 +166,11 @@ const ProfilePage = () => {
               />
               <NavItem
                 icon={<ShieldCheckIcon className="w-5 h-5" />}
+                label="Security"
+                tabName="security"
+              />
+              <NavItem
+                icon={<EyeIcon className="w-5 h-5" />}
                 label="Privacy & Safety"
                 tabName="privacy"
               />
@@ -177,71 +198,6 @@ const ProfilePage = () => {
                   size="medium"
                   editable={true}
                 />
-
-                {/* Profile Customization */}
-                <div className="bg-white rounded-lg shadow-sm">
-                  <div className="p-6">
-                    <h2 className="text-xl font-semibold text-slate-400">
-                      Customize Profile
-                    </h2>
-                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 opacity-50">
-                      <div>
-                        <Label htmlFor="displayName" className="text-slate-400">
-                          Display Name
-                        </Label>
-                        <Input
-                          id="displayName"
-                          type="text"
-                          defaultValue={userProfile?.displayName || ""}
-                          className="mt-2"
-                          disabled
-                        />
-                      </div>
-                      <div>
-                        <Label
-                          htmlFor="customStatus"
-                          className="text-slate-400"
-                        >
-                          Custom Status
-                        </Label>
-                        <Input
-                          id="customStatus"
-                          type="text"
-                          placeholder="Set a status..."
-                          className="mt-2"
-                          disabled
-                        />
-                      </div>
-                      <div>
-                        <Label className="text-slate-400">Banner</Label>
-                        <div className="mt-2 flex items-center gap-2">
-                          <Button variant="outline" disabled>
-                            Upload Image
-                          </Button>
-                          <Button variant="ghost" disabled>
-                            Remove
-                          </Button>
-                        </div>
-                      </div>
-                      <div>
-                        <Label className="text-slate-400">Avatar</Label>
-                        <div className="mt-2 flex items-center gap-2">
-                          <Button variant="outline" disabled>
-                            Upload Image
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-6 pt-6 border-t border-slate-200 flex justify-between items-center">
-                      <p className="text-sm text-slate-500 italic">
-                        Profile customization coming soon!
-                      </p>
-                      <Button disabled className="opacity-50">
-                        Save Changes
-                      </Button>
-                    </div>
-                  </div>
-                </div>
               </div>
             )}
 
@@ -252,6 +208,30 @@ const ProfilePage = () => {
                     My Account
                   </h2>
                   <div className="mt-6 space-y-4">
+                    {/* Display Name */}
+                    <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                      <div>
+                        <h3 className="font-medium text-slate-800">
+                          Display Name
+                        </h3>
+                        <p className="text-sm text-slate-600">
+                          {userProfile?.displayName ||
+                            user?.displayName ||
+                            "Not set"}
+                        </p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setShowChangeDisplayName(true)}
+                        className="flex items-center gap-2"
+                      >
+                        <PencilIcon className="w-4 h-4" />
+                        Edit
+                      </Button>
+                    </div>
+
+                    {/* Email Address */}
                     <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
                       <div>
                         <h3 className="font-medium text-slate-800">
@@ -279,17 +259,20 @@ const ProfilePage = () => {
                     <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
                       <div>
                         <h3 className="font-medium text-slate-800">Password</h3>
-                        <p className="text-sm text-slate-600">••••••••</p>
+                        <p className="text-sm text-slate-600">
+                          {isOAuthUser
+                            ? `Managed by ${getProviderLabel(authProvider)}`
+                            : "••••••••"}
+                        </p>
                       </div>
                       <Button
                         variant="outline"
                         size="sm"
-                        disabled
-                        className={isOAuthUser ? "" : "opacity-50"}
+                        onClick={() => setShowChangePassword(true)}
+                        className="flex items-center gap-2"
                       >
-                        {isOAuthUser
-                          ? `Managed by ${getProviderLabel(authProvider)}`
-                          : "Change Password"}
+                        <KeyIcon className="w-4 h-4" />
+                        {isOAuthUser ? "View Settings" : "Change Password"}
                       </Button>
                     </div>
                   </div>
@@ -417,6 +400,48 @@ const ProfilePage = () => {
               </div>
             )}
 
+            {/* Change Password Modal/Form */}
+            {showChangePassword && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                  <div className="p-6">
+                    <ChangePasswordForm
+                      onSuccess={() => {
+                        setShowChangePassword(false);
+                      }}
+                      onCancel={() => {
+                        setShowChangePassword(false);
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Change Display Name Modal/Form */}
+            {showChangeDisplayName && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                  <div className="p-6">
+                    <ChangeDisplayNameForm
+                      currentDisplayName={
+                        userProfile?.displayName || user?.displayName
+                      }
+                      onSuccess={(newDisplayName) => {
+                        setShowChangeDisplayName(false);
+                        // Optionally trigger a refresh or update the local state
+                      }}
+                      onCancel={() => {
+                        setShowChangeDisplayName(false);
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "security" && <SecuritySettings />}
+
             {activeTab === "privacy" && (
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h2 className="text-xl font-semibold text-slate-900">
@@ -469,4 +494,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default SettingsPage;

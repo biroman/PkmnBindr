@@ -203,7 +203,7 @@ export const useAuthStore = create()(
 
             // Send email verification
             await sendEmailVerification(user, {
-              url: `${window.location.origin}/dashboard`,
+              url: `${window.location.origin}/home`,
               handleCodeInApp: true,
             });
 
@@ -458,22 +458,37 @@ export const useAuthStore = create()(
 
         changePassword: async (currentPassword, newPassword) => {
           try {
+            set({ error: null, loading: true });
+
             if (!auth.currentUser) {
               throw new Error("No user logged in");
             }
 
-            // Re-authenticate user
+            const currentUser = auth.currentUser;
+            const { user } = get();
+            const authProvider = get().getAuthProvider(user);
+
+            // Check if user is OAuth - they can't change password
+            const oauthProviders = ["google", "twitter", "facebook", "github"];
+            if (oauthProviders.includes(authProvider)) {
+              const providerName =
+                authProvider.charAt(0).toUpperCase() + authProvider.slice(1);
+              throw new Error(
+                `Password is managed by ${providerName}. Please visit your ${providerName} account settings to change your password.`
+              );
+            }
+
+            // Re-authenticate user with current password
             const credential = EmailAuthProvider.credential(
-              auth.currentUser.email,
+              currentUser.email,
               currentPassword
             );
-            await reauthenticateWithCredential(auth.currentUser, credential);
+            await reauthenticateWithCredential(currentUser, credential);
 
             // Update password
-            await updatePassword(auth.currentUser, newPassword);
+            await updatePassword(currentUser, newPassword);
 
             // Update security info in Firestore
-            const { user } = get();
             if (user?.uid) {
               await updateDoc(doc(db, "users", user.uid), {
                 "securityFlags.lastPasswordChange": new Date().toISOString(),
@@ -481,10 +496,96 @@ export const useAuthStore = create()(
               });
             }
 
+            set({ loading: false });
             return true;
           } catch (error) {
             console.error("Error changing password:", error);
-            throw error;
+
+            // Enhanced error handling for password changes
+            let errorMessage = "Failed to change password. Please try again.";
+
+            if (error.code === "auth/wrong-password") {
+              errorMessage = "Current password is incorrect. Please try again.";
+            } else if (error.code === "auth/weak-password") {
+              errorMessage =
+                "New password is too weak. Please choose a stronger password.";
+            } else if (error.code === "auth/requires-recent-login") {
+              errorMessage =
+                "For security reasons, please log out and log back in before changing your password.";
+            } else if (error.code === "auth/too-many-requests") {
+              errorMessage = "Too many attempts. Please try again later.";
+            } else if (error.code === "auth/user-disabled") {
+              errorMessage =
+                "This account has been disabled. Please contact support.";
+            } else if (error.code === "auth/user-not-found") {
+              errorMessage = "User account not found. Please log in again.";
+            } else if (error.code === "auth/invalid-credential") {
+              errorMessage = "Current password is incorrect. Please try again.";
+            } else if (error.message) {
+              errorMessage = error.message;
+            }
+
+            set({ error: errorMessage, loading: false });
+            throw new Error(errorMessage);
+          }
+        },
+
+        // Update display name
+        updateDisplayName: async (newDisplayName) => {
+          try {
+            set({ error: null, loading: true });
+
+            if (!auth.currentUser) {
+              throw new Error("No user logged in");
+            }
+
+            const currentUser = auth.currentUser;
+            const { user } = get();
+
+            // Validate display name
+            if (!newDisplayName || typeof newDisplayName !== "string") {
+              throw new Error("Display name is required");
+            }
+
+            const trimmedName = newDisplayName.trim();
+            if (trimmedName.length < 2 || trimmedName.length > 50) {
+              throw new Error(
+                "Display name must be between 2 and 50 characters"
+              );
+            }
+
+            // Update Firebase Auth profile
+            await updateProfile(currentUser, {
+              displayName: trimmedName,
+            });
+
+            // Update Firestore user document
+            if (user?.uid) {
+              await updateDoc(doc(db, "users", user.uid), {
+                displayName: trimmedName,
+                updatedAt: serverTimestamp(),
+              });
+            }
+
+            set({ loading: false });
+            return true;
+          } catch (error) {
+            console.error("Error updating display name:", error);
+
+            let errorMessage =
+              "Failed to update display name. Please try again.";
+
+            if (error.code === "auth/requires-recent-login") {
+              errorMessage =
+                "Please log out and log back in before updating your display name.";
+            } else if (error.code === "auth/user-not-found") {
+              errorMessage = "User account not found. Please log in again.";
+            } else if (error.message) {
+              errorMessage = error.message;
+            }
+
+            set({ error: errorMessage, loading: false });
+            throw new Error(errorMessage);
           }
         },
 
@@ -522,10 +623,19 @@ export const useAuthStore = create()(
               return "google";
             } else if (provider.providerId === "twitter.com") {
               return "twitter";
+            } else if (provider.providerId === "facebook.com") {
+              return "facebook";
+            } else if (provider.providerId === "github.com") {
+              return "github";
             }
           }
 
-          return "email";
+          // Check if user has password provider (email/password)
+          const hasPasswordProvider = user.providerData.some(
+            (provider) => provider.providerId === "password"
+          );
+
+          return hasPasswordProvider ? "email" : "unknown";
         },
 
         // Delete account permanently

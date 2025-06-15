@@ -51,9 +51,9 @@ const EmailVerificationPage = () => {
           "Email verified successfully! You can now access all features."
         );
 
-        // Redirect to dashboard after 5 seconds
+        // Redirect to home after 5 seconds
         setTimeout(() => {
-          navigate("/dashboard", { replace: true });
+          navigate("/home", { replace: true });
         }, 5000);
       } catch (error) {
         console.error("Email verification failed:", error);
@@ -128,7 +128,7 @@ const EmailVerificationPage = () => {
                   <AlertDescription>{message}</AlertDescription>
                 </Alert>
                 <p className="text-gray-600 text-sm">
-                  Redirecting to dashboard in 5 seconds...
+                  Redirecting to home in 5 seconds...
                 </p>
               </>
             )}

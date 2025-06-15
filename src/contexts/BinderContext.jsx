@@ -9,6 +9,17 @@ import { toast } from "react-hot-toast";
 import { useRules } from "./RulesContext";
 import { useAuth } from "../hooks/useAuth";
 import { binderSyncService } from "../services/binderSyncService";
+import { db } from "../lib/firebase";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  getDoc,
+  doc,
+  updateDoc,
+  orderBy,
+} from "firebase/firestore";
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -264,7 +275,8 @@ const migrateBinder = (oldBinder) => {
   // Check if already migrated to current schema
   if (
     oldBinder.schemaVersion === "2.0" &&
-    oldBinder.settings?.pageCount !== undefined
+    oldBinder.settings?.pageCount !== undefined &&
+    oldBinder.permissions !== undefined
   ) {
     return oldBinder;
   }
@@ -609,6 +621,44 @@ export const BinderProvider = ({ children }) => {
           setCurrentBinder((prev) => updateBinder(prev));
         }
 
+        // If updating permissions (public/private), sync to Firebase immediately
+        if (updates.permissions && user) {
+          const binder = binders.find((b) => b.id === binderId);
+          if (binder) {
+            const updatedBinder = updateBinder(binder);
+
+            // Sync to Firebase for permission changes
+            try {
+              await binderSyncService.syncToCloud(updatedBinder, user.uid, {
+                forceOverwrite: true,
+                priority: "high", // High priority for permission changes
+              });
+
+              console.log(
+                `Binder ${binderId} permissions synced to Firebase:`,
+                updates.permissions
+              );
+
+              // Show success message
+              if (updates.permissions.public !== undefined) {
+                toast.success(
+                  updates.permissions.public
+                    ? "Binder is now public and visible on your profile"
+                    : "Binder is now private"
+                );
+              }
+            } catch (error) {
+              console.error(
+                "Failed to sync binder permissions to Firebase:",
+                error
+              );
+              toast.error(
+                "Failed to sync binder permissions. Changes saved locally."
+              );
+            }
+          }
+        }
+
         // Invalidate cache since we updated a binder
         invalidateCache();
 
@@ -619,7 +669,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder, invalidateCache]
+    [currentBinder, invalidateCache, binders, user]
   );
 
   // Delete binder
@@ -2821,6 +2871,176 @@ export const BinderProvider = ({ children }) => {
     return true; // No unsaved changes, safe to logout
   }, [checkUnsavedChanges]);
 
+  // Fetch public binders for a specific user (for profile viewing)
+  const fetchUserPublicBinders = useCallback(async (userId) => {
+    try {
+      if (!userId) {
+        throw new Error("User ID is required");
+      }
+
+      // Query Firebase for public binders by this user
+      const publicBindersQuery = query(
+        collection(db, "user_binders"),
+        where("ownerId", "==", userId),
+        where("permissions.public", "==", true),
+        where("metadata.isArchived", "==", false),
+        orderBy("metadata.createdAt", "desc")
+      );
+
+      const snapshot = await getDocs(publicBindersQuery);
+      const publicBinders = [];
+
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        // Remove server timestamp before adding to array
+        const { serverTimestamp, ...binderData } = data;
+        publicBinders.push(binderData);
+      });
+
+      console.log(
+        `Found ${publicBinders.length} public binders for user ${userId}`
+      );
+      return publicBinders;
+    } catch (error) {
+      console.error("Error fetching user public binders:", error);
+
+      // If Firebase query fails, return empty array instead of throwing
+      if (
+        error.code === "failed-precondition" ||
+        error.code === "permission-denied"
+      ) {
+        console.warn("Firebase query failed, returning empty array");
+        return [];
+      }
+
+      throw error;
+    }
+  }, []);
+
+  // Get public binder by ID (for viewing other users' public binders)
+  const getPublicBinder = useCallback(async (binderId, ownerId) => {
+    try {
+      if (!binderId || !ownerId) {
+        throw new Error("Binder ID and Owner ID are required");
+      }
+
+      // Try to get the binder from Firebase
+      const binderRef = doc(db, "user_binders", `${ownerId}_${binderId}`);
+      const binderSnap = await getDoc(binderRef);
+
+      if (!binderSnap.exists()) {
+        throw new Error("Binder not found");
+      }
+
+      const binderData = binderSnap.data();
+
+      // Check if binder is public
+      if (!binderData.permissions?.public) {
+        throw new Error("Binder is private");
+      }
+
+      // Remove server timestamp before returning
+      const { serverTimestamp, ...binder } = binderData;
+      return binder;
+    } catch (error) {
+      console.error("Error fetching public binder:", error);
+      throw error;
+    }
+  }, []);
+
+  // Update binder privacy without triggering "unsaved changes" state
+  const updateBinderPrivacy = useCallback(
+    async (binderId, isPublic) => {
+      try {
+        const now = new Date().toISOString();
+        const targetBinder = binders.find((b) => b.id === binderId);
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        const newVersion = (targetBinder.version || 0) + 1;
+
+        // Update function that bypasses markAsModified
+        const updateBinderDirectly = (binderToUpdate) => {
+          if (binderToUpdate.id !== binderId) return binderToUpdate;
+
+          return {
+            ...binderToUpdate,
+            permissions: {
+              ...binderToUpdate.permissions,
+              public: isPublic,
+            },
+            version: newVersion,
+            lastModified: now,
+            lastModifiedBy: user?.uid || binderToUpdate.ownerId,
+            sync: {
+              ...binderToUpdate.sync,
+              status: "synced",
+              lastSynced: now,
+              pendingChanges: [],
+              conflictData: null,
+              retryCount: 0,
+              lastError: null,
+            },
+          };
+        };
+
+        // Update local state directly
+        setBinders((prev) => prev.map(updateBinderDirectly));
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinderDirectly(prev));
+        }
+
+        // If user is logged in, sync to Firebase
+        if (user) {
+          try {
+            const binderRef = doc(
+              db,
+              "user_binders",
+              `${user.uid}_${binderId}`
+            );
+            await updateDoc(binderRef, {
+              "permissions.public": isPublic,
+              lastModified: now,
+              lastModifiedBy: user.uid,
+              version: newVersion,
+            });
+
+            return { success: true };
+          } catch (syncError) {
+            console.error("Failed to sync privacy change to cloud:", syncError);
+
+            // Revert local sync status on error
+            const revertSyncStatus = (binderToUpdate) => {
+              if (binderToUpdate.id !== binderId) return binderToUpdate;
+              return {
+                ...binderToUpdate,
+                sync: {
+                  ...binderToUpdate.sync,
+                  status: "local",
+                  lastError: syncError.message,
+                },
+              };
+            };
+
+            setBinders((prev) => prev.map(revertSyncStatus));
+            if (currentBinder?.id === binderId) {
+              setCurrentBinder((prev) => revertSyncStatus(prev));
+            }
+
+            throw syncError;
+          }
+        }
+
+        return { success: true };
+      } catch (error) {
+        console.error("Failed to update binder privacy:", error);
+        throw error;
+      }
+    },
+    [binders, currentBinder, user]
+  );
+
   const value = {
     // State
     binders: visibleBinders, // Only expose visible binders for current user context
@@ -2889,6 +3109,11 @@ export const BinderProvider = ({ children }) => {
     // Validation helpers (for drag and drop)
     validatePosition,
     validateCardMove,
+
+    // Firebase functions
+    fetchUserPublicBinders,
+    getPublicBinder,
+    updateBinderPrivacy,
   };
 
   return (
@@ -2904,3 +3129,6 @@ export const useBinderContext = () => {
   }
   return context;
 };
+
+// Alias for backward compatibility
+export const useBinder = useBinderContext;

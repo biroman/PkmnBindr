@@ -45,9 +45,30 @@ export const createOrUpdateUserProfile = async (user) => {
       });
       console.log("New user profile created:", user.uid);
     } else {
-      // Existing user - update last sign in and profile info
-      await updateDoc(userRef, userData);
-      console.log("User profile updated:", user.uid);
+      // Existing user - only update sign-in tracking, don't overwrite custom data
+      const existingData = userSnap.data();
+      const updateData = {
+        lastSignIn: serverTimestamp(),
+        updatedAt: serverTimestamp(),
+      };
+
+      // Only update email if it actually changed
+      if (user.email && user.email !== existingData.email) {
+        updateData.email = user.email;
+      }
+
+      // Only update displayName if it's not already set or if Auth has a better value
+      if (user.displayName && !existingData.displayName) {
+        updateData.displayName = user.displayName;
+      }
+
+      // Only update photoURL if it's not already set or if Auth has a better value
+      if (user.photoURL && !existingData.photoURL) {
+        updateData.photoURL = user.photoURL;
+      }
+
+      await updateDoc(userRef, updateData);
+      console.log("User sign-in tracked:", user.uid);
     }
 
     return true;
@@ -169,6 +190,9 @@ export const getUserProfile = async (userId) => {
         photoURL: userData.photoURL || null,
         role: userData.role || "user",
         status: userData.status || "active",
+        customStatus: userData.customStatus || null,
+        bannerColor: userData.bannerColor || null,
+        emailVerified: userData.emailVerified || false,
         binderCount: userData.binderCount || 0,
         cardCount: userData.cardCount || 0,
         createdAt: userData.createdAt?.toDate() || new Date(),
@@ -176,10 +200,49 @@ export const getUserProfile = async (userId) => {
         updatedAt: userData.updatedAt?.toDate() || new Date(),
       };
     }
-    return null;
+
+    // User document doesn't exist - return minimal profile
+    console.warn(`User profile not found for userId: ${userId}`);
+    return {
+      uid: userId,
+      email: "Unknown",
+      displayName: "Unknown User",
+      photoURL: null,
+      role: "user",
+      status: "active",
+      customStatus: null,
+      bannerColor: null,
+      emailVerified: false,
+      binderCount: 0,
+      cardCount: 0,
+      createdAt: new Date(),
+      lastSignIn: new Date(),
+      updatedAt: new Date(),
+    };
   } catch (error) {
     console.error("Error fetching user profile:", error);
-    return null;
+
+    // For permission errors or other Firebase errors, return minimal profile
+    if (error.code === "permission-denied") {
+      console.warn(`Permission denied accessing profile for userId: ${userId}`);
+    }
+
+    return {
+      uid: userId,
+      email: "Unknown",
+      displayName: "Unknown User",
+      photoURL: null,
+      role: "user",
+      status: "active",
+      customStatus: null,
+      bannerColor: null,
+      emailVerified: false,
+      binderCount: 0,
+      cardCount: 0,
+      createdAt: new Date(),
+      lastSignIn: new Date(),
+      updatedAt: new Date(),
+    };
   }
 };
 

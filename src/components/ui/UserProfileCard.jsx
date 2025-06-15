@@ -18,6 +18,7 @@ const UserProfileCard = ({
   showBadges = true,
   editable = false,
   badges = [],
+  isOwnProfile = false,
 }) => {
   // Status editing state
   const [statusEditTrigger, setStatusEditTrigger] = useState(0);
@@ -59,9 +60,9 @@ const UserProfileCard = ({
       titleSize: "text-xl",
     },
     large: {
-      container: "max-w-md",
-      banner: "h-24",
-      profileOffset: "-mt-12",
+      container: "max-w-lg",
+      banner: "h-28",
+      profileOffset: "-mt-14",
       profileSize: "large",
       padding: "p-6",
       titleSize: "text-2xl",
@@ -134,6 +135,7 @@ const UserProfileCard = ({
                   user={user}
                   onImageUpdate={onImageUpdate}
                   size={config.profileSize}
+                  editable={editable}
                 />
               </div>
             </div>
@@ -149,10 +151,28 @@ const UserProfileCard = ({
             <h3 className={`font-bold text-gray-900 ${config.titleSize}`}>
               {user?.displayName || "User"}
             </h3>
+            {user?.emailVerified && (
+              <CheckBadgeIcon
+                className="w-5 h-5 text-blue-500"
+                title="Verified"
+              />
+            )}
           </div>
           <p className="text-sm text-gray-500 font-medium">
             @{getUsername(user)}
           </p>
+          {!isOwnProfile && (
+            <p className="text-xs text-gray-400">
+              Joined{" "}
+              {user?.createdAt
+                ? new Date(user.createdAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "Unknown"}
+            </p>
+          )}
         </div>
 
         {/* Status Section */}
@@ -177,8 +197,12 @@ const UserProfileCard = ({
               <StatusEditor
                 user={user}
                 onStatusUpdate={onStatusUpdate}
-                placeholder="Share something about yourself..."
-                showEditButton={!editable}
+                placeholder={
+                  editable
+                    ? "Share something about yourself..."
+                    : "No status set"
+                }
+                showEditButton={editable}
                 editTrigger={editable ? statusEditTrigger : undefined}
               />
             </div>
@@ -198,16 +222,18 @@ const UserProfileCard = ({
               {displayBadges.map((badge) => (
                 <div
                   key={badge.id}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-full text-xs font-medium text-gray-700 hover:shadow-sm transition-shadow"
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
+                    badge.color || "bg-gray-100 text-gray-700 border-gray-200"
+                  }`}
                 >
                   {badge.icon && (
                     <img
                       src={badge.icon}
-                      alt={badge.label}
-                      className="w-4 h-4 rounded-full"
+                      alt=""
+                      className="w-3 h-3 rounded-full"
                     />
                   )}
-                  <span>{badge.label}</span>
+                  {badge.label}
                 </div>
               ))}
             </div>
@@ -216,13 +242,13 @@ const UserProfileCard = ({
       </div>
 
       {/* Banner Color Picker Modal */}
-      <BannerColorPicker
-        isOpen={showBannerPicker}
-        onClose={() => setShowBannerPicker(false)}
-        currentColor={user?.bannerColor}
-        onColorChange={handleBannerColorChange}
-        user={user}
-      />
+      {editable && showBannerPicker && (
+        <BannerColorPicker
+          currentColor={user?.bannerColor}
+          onColorChange={handleBannerColorChange}
+          onClose={() => setShowBannerPicker(false)}
+        />
+      )}
     </div>
   );
 };

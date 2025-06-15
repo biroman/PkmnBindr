@@ -7,6 +7,8 @@ import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
 import DeleteBinderModal from "../components/binder/DeleteBinderModal";
 import PublicBinderShowcase from "../components/binder/PublicBinderShowcase";
+import BinderCard from "../components/binder/BinderCard";
+import BinderCustomizationModal from "../components/binder/BinderCustomizationModal";
 import {
   PlusIcon,
   MagnifyingGlassIcon,
@@ -23,6 +25,8 @@ import {
   CalendarDaysIcon,
   PhotoIcon,
   ExclamationTriangleIcon as ExclamationTriangleIconOutline,
+  GlobeAltIcon,
+  LockClosedIcon,
 } from "@heroicons/react/24/outline";
 import {
   CheckCircleIcon,
@@ -43,6 +47,9 @@ const BindersPage = () => {
     isLocalOnlyBinder,
     isOwnedByCurrentUser,
     claimLocalBinder,
+    updateBinder,
+    saveBinderToCloud,
+    updateBinderPrivacy,
   } = useBinderContext();
 
   // UI State
@@ -59,6 +66,10 @@ const BindersPage = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [binderToDelete, setBinderToDelete] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Customization modal state
+  const [showCustomizationModal, setShowCustomizationModal] = useState(false);
+  const [binderToCustomize, setBinderToCustomize] = useState(null);
 
   // Limits tracking state
   const [limits, setLimits] = useState({
@@ -312,6 +323,32 @@ const BindersPage = () => {
   const handleCancelDelete = () => {
     setShowDeleteModal(false);
     setBinderToDelete(null);
+  };
+
+  const handleTogglePublic = async (binder, isPublic) => {
+    try {
+      await updateBinderPrivacy(binder.id, isPublic);
+      toast.success(isPublic ? "Binder made public!" : "Binder made private!");
+    } catch (error) {
+      console.error("Failed to update binder visibility:", error);
+      toast.success(
+        isPublic
+          ? "Binder made public locally! Will sync when online."
+          : "Binder made private locally! Will sync when online."
+      );
+    }
+  };
+
+  const handleCustomizeBinder = (binder) => {
+    setBinderToCustomize(binder);
+    setShowCustomizationModal(true);
+  };
+
+  const handleSaveCustomization = async (updatedBinder) => {
+    // This function is no longer needed since customization is handled independently
+    // by the BinderCardCustomizationContext, but we keep it for compatibility
+    setShowCustomizationModal(false);
+    setBinderToCustomize(null);
   };
 
   // The cache system now handles loading data automatically
@@ -623,7 +660,7 @@ const BindersPage = () => {
           <div
             className={
               viewMode === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"
                 : "space-y-4"
             }
           >
@@ -710,6 +747,41 @@ const BindersPage = () => {
                         </div>
 
                         <div className="flex items-center gap-2 ml-4">
+                          {/* Public/Private Toggle for List View */}
+                          {isOwnedByCurrentUser(binder) && !isGuestBinder && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleTogglePublic(
+                                  binder,
+                                  !binder.permissions?.public
+                                );
+                              }}
+                              className={`flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-all ${
+                                binder.permissions?.public
+                                  ? "bg-green-100 text-green-700 hover:bg-green-200"
+                                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                              }`}
+                              title={
+                                binder.permissions?.public
+                                  ? "Make private"
+                                  : "Make public to logged-in users"
+                              }
+                            >
+                              {binder.permissions?.public ? (
+                                <>
+                                  <GlobeAltIcon className="w-3 h-3" />
+                                  Public
+                                </>
+                              ) : (
+                                <>
+                                  <LockClosedIcon className="w-3 h-3" />
+                                  Private
+                                </>
+                              )}
+                            </button>
+                          )}
+
                           {isLocalOnly && user && (
                             <button
                               onClick={() => claimLocalBinder(binder.id)}
@@ -754,167 +826,28 @@ const BindersPage = () => {
 
               // Grid view
               return (
-                <div key={binder.id} className="relative">
-                  {/* Main Card */}
-                  <div
-                    className={`bg-white rounded-xl shadow-sm border transition-all hover:shadow-lg hover:-translate-y-0.5 border-gray-200 hover:border-gray-300 ${
-                      isLocalOnly ? "border-orange-200 bg-orange-50" : ""
-                    } ${
-                      isGuestBinderInaccessible
-                        ? "opacity-60 border-gray-300 bg-gray-50"
-                        : ""
-                    }`}
-                  >
-                    <div className="p-6">
-                      {/* Header */}
-                      <div className="mb-4">
-                        <div className="flex items-start justify-between mb-2">
-                          <h3
-                            className={`text-lg font-semibold truncate ${
-                              isGuestBinderInaccessible
-                                ? "text-gray-500"
-                                : "text-gray-900"
-                            }`}
-                          >
-                            {binder.metadata?.name || "Unnamed Binder"}
-                          </h3>
-                          {/* Subtle Card Count Badge */}
-                          {!isGuestBinder && (
-                            <div
-                              className={`px-2 py-1 rounded-full text-xs font-medium ${(() => {
-                                const usage = getBinderCardUsage(binder);
-                                return usage.isAtLimit
-                                  ? "bg-red-100 text-red-700"
-                                  : usage.isNearLimit
-                                  ? "bg-amber-100 text-amber-700"
-                                  : "bg-gray-100 text-gray-600";
-                              })()}`}
-                            >
-                              {cardCount}/{limits.cardsPerBinder.limit}
-                            </div>
-                          )}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          {getStatusIcon(status)}
-                          <span
-                            className={`text-sm ${
-                              isGuestBinderInaccessible
-                                ? "text-gray-400"
-                                : "text-gray-600"
-                            }`}
-                          >
-                            {getStatusText(status)}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      {binder.metadata?.description && (
-                        <p
-                          className={`text-sm mb-4 line-clamp-2 ${
-                            isGuestBinderInaccessible
-                              ? "text-gray-400"
-                              : "text-gray-600"
-                          }`}
-                        >
-                          {binder.metadata.description}
-                        </p>
-                      )}
-
-                      {/* Stats */}
-                      <div className="mb-6">
-                        <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
-                          <div className="flex items-center gap-2">
-                            <PhotoIcon className="w-4 h-4" />
-                            <span>{cardCount} cards</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <CalendarDaysIcon className="w-4 h-4" />
-                            <span>v{binder.version || 1}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Local-only claim option */}
-                      {isLocalOnly && user && (
-                        <div className="mb-4 p-3 bg-orange-100 border border-orange-200 rounded-lg">
-                          <p className="text-xs text-orange-700 mb-2">
-                            This binder belongs to another user. Claim it to
-                            save to your account.
-                          </p>
-                          <button
-                            onClick={() => claimLocalBinder(binder.id)}
-                            className="w-full flex items-center justify-center gap-1.5 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded-lg font-medium transition-colors"
-                          >
-                            <CloudIcon className="w-4 h-4" />
-                            Claim Binder
-                          </button>
-                        </div>
-                      )}
-
-                      {/* Actions */}
-                      <div className="flex gap-2">
-                        {isGuestBinder && user ? (
-                          <button
-                            onClick={() => claimLocalBinder(binder.id)}
-                            className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-                          >
-                            <CloudIcon className="w-4 h-4" />
-                            Claim to Access
-                          </button>
-                        ) : (
-                          <button
-                            onClick={() => handleSelectBinder(binder)}
-                            disabled={isGuestBinderInaccessible}
-                            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors ${
-                              isGuestBinderInaccessible
-                                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                                : "bg-blue-600 hover:bg-blue-700 text-white"
-                            }`}
-                          >
-                            <EyeIcon className="w-4 h-4" />
-                            {isGuestBinderInaccessible
-                              ? "Claim to Access"
-                              : "Open"}
-                          </button>
-                        )}
-                        <button
-                          onClick={() => handleDeleteBinder(binder)}
-                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                        >
-                          <TrashIcon className="w-4 h-4" />
-                        </button>
-                      </div>
-
-                      {/* Footer */}
-                      <div className="mt-4 pt-4 border-t border-gray-100">
-                        <div
-                          className={`flex items-center justify-between text-xs ${
-                            isGuestBinderInaccessible
-                              ? "text-gray-400"
-                              : "text-gray-500"
-                          }`}
-                        >
-                          <span>
-                            Created{" "}
-                            {new Date(
-                              binder.metadata?.createdAt
-                            ).toLocaleDateString()}
-                          </span>
-                          {binder.lastModified !==
-                            binder.metadata?.createdAt && (
-                            <span>
-                              Updated{" "}
-                              {new Date(
-                                binder.lastModified
-                              ).toLocaleDateString()}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <BinderCard
+                  key={binder.id}
+                  binder={binder}
+                  showSyncStatus={true}
+                  showActions={true}
+                  showDeleteButton={true}
+                  showPublicToggle={true}
+                  showClaimButton={true}
+                  onSelect={handleSelectBinder}
+                  onDelete={handleDeleteBinder}
+                  onTogglePublic={handleTogglePublic}
+                  onClaim={claimLocalBinder}
+                  getBinderStatus={getBinderStatus}
+                  getStatusIcon={getStatusIcon}
+                  getStatusText={getStatusText}
+                  isOwnedByCurrentUser={isOwnedByCurrentUser}
+                  isLocalOnlyBinder={isLocalOnlyBinder}
+                  getBinderCardUsage={getBinderCardUsage}
+                  limits={limits}
+                  user={user}
+                  onCustomize={handleCustomizeBinder}
+                />
               );
             })}
           </div>
@@ -932,6 +865,17 @@ const BindersPage = () => {
         }
         isLoading={isDeleting}
       />
+
+      {/* Customization Modal */}
+      {showCustomizationModal && (
+        <BinderCustomizationModal
+          isOpen={showCustomizationModal}
+          onClose={() => setShowCustomizationModal(false)}
+          binder={binderToCustomize}
+          onSave={handleSaveCustomization}
+          isPremium={false}
+        />
+      )}
     </div>
   );
 };

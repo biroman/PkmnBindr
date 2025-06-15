@@ -163,21 +163,67 @@ export const changePasswordSchema = z
 export const validatePasswordStrength = (password) => {
   const checks = {
     length: password.length >= 8,
+    minLength: password.length >= 12, // Bonus for longer passwords
     uppercase: /[A-Z]/.test(password),
     lowercase: /[a-z]/.test(password),
     number: /[0-9]/.test(password),
     special: /[^A-Za-z0-9]/.test(password),
     noRepeating: !/(.)\1{2,}/.test(password),
     notCommon: !commonPasswords.includes(password.toLowerCase()),
+    noSequential:
+      !/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|123|234|345|456|567|678|789|890)/i.test(
+        password
+      ),
+    noKeyboard:
+      !/(?:qwe|wer|ert|rty|tyu|yui|uio|iop|asd|sdf|dfg|fgh|ghj|hjk|jkl|zxc|xcv|cvb|vbn|bnm)/i.test(
+        password
+      ),
   };
 
-  const score = Object.values(checks).filter(Boolean).length;
+  // Calculate score with weights for more important checks
+  let score = 0;
+  if (checks.length) score += 1;
+  if (checks.minLength) score += 0.5; // Bonus for 12+ chars
+  if (checks.uppercase) score += 1;
+  if (checks.lowercase) score += 1;
+  if (checks.number) score += 1;
+  if (checks.special) score += 1;
+  if (checks.noRepeating) score += 1;
+  if (checks.notCommon) score += 1.5; // Important check
+  if (checks.noSequential) score += 0.5;
+  if (checks.noKeyboard) score += 0.5;
+
+  const maxScore = 9;
+  const normalizedScore = Math.min(score / maxScore, 1);
+
+  // Generate helpful suggestions
+  const suggestions = [];
+  if (!checks.length) suggestions.push("Use at least 8 characters");
+  if (!checks.minLength && checks.length)
+    suggestions.push("Consider using 12+ characters for better security");
+  if (!checks.uppercase) suggestions.push("Include uppercase letters (A-Z)");
+  if (!checks.lowercase) suggestions.push("Include lowercase letters (a-z)");
+  if (!checks.number) suggestions.push("Include numbers (0-9)");
+  if (!checks.special)
+    suggestions.push("Include special characters (!@#$%^&*)");
+  if (!checks.noRepeating)
+    suggestions.push("Avoid repeating characters more than twice");
+  if (!checks.notCommon) suggestions.push("Avoid common passwords");
+  if (!checks.noSequential)
+    suggestions.push("Avoid sequential patterns (abc, 123)");
+  if (!checks.noKeyboard)
+    suggestions.push("Avoid keyboard patterns (qwerty, asdf)");
+
+  let strength = "weak";
+  if (normalizedScore >= 0.8) strength = "strong";
+  else if (normalizedScore >= 0.6) strength = "medium";
 
   return {
-    score,
-    maxScore: Object.keys(checks).length,
+    score: Math.round(normalizedScore * 100),
+    maxScore: 100,
     checks,
-    strength: score < 4 ? "weak" : score < 6 ? "medium" : "strong",
-    isValid: score === Object.keys(checks).length,
+    strength,
+    suggestions,
+    isValid: Object.values(checks).every(Boolean),
   };
 };

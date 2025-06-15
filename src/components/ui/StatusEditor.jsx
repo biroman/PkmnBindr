@@ -232,7 +232,9 @@ const StatusEditor = ({
                   {currentStatus}
                 </p>
               ) : (
-                <p className="text-sm text-gray-500 italic">{placeholder}</p>
+                <p className="text-sm text-gray-500 italic">
+                  {placeholder || "No status set"}
+                </p>
               )}
             </div>
             {showEditButton && (

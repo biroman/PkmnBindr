@@ -80,8 +80,8 @@ const RegisterPage = () => {
 
       await signInWithGoogle();
 
-      // OAuth signup successful - redirect to dashboard
-      navigate("/dashboard", { replace: true });
+      // OAuth signup successful - redirect to home
+      navigate("/home", { replace: true });
     } catch (error) {
       console.error("Google signup failed:", error);
 
@@ -106,8 +106,8 @@ const RegisterPage = () => {
 
       await signInWithTwitter();
 
-      // OAuth signup successful - redirect to dashboard
-      navigate("/dashboard", { replace: true });
+      // OAuth signup successful - redirect to home
+      navigate("/home", { replace: true });
     } catch (error) {
       console.error("Twitter signup failed:", error);
 

@@ -52,7 +52,7 @@ const BlogPost2 = () => {
             <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
               <div className="flex items-center space-x-2">
                 <UserIcon className="w-4 h-4" />
-                <span>PokemonBindr Team</span>
+                <span>PkmnBindr Team</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CalendarIcon className="w-4 h-4" />

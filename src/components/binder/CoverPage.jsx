@@ -1,16 +1,57 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  GlobeAltIcon,
+  LockClosedIcon,
+  ArrowPathIcon,
+} from "@heroicons/react/24/outline";
+import { useBinderContext } from "../../contexts/BinderContext";
+import { toast } from "react-hot-toast";
 import ContactModal from "./ContactModal";
+import UserProfileCard from "../ui/UserProfileCard";
+import BinderInteractionButtons from "../ui/BinderInteractionButtons";
 
 const CoverPage = ({
   binder,
+  owner = null,
   isReadOnly = false,
   isPublicView = false,
   backgroundColor = "#ffffff",
 }) => {
+  const navigate = useNavigate();
+  const { updateBinderPrivacy } = useBinderContext();
   const [contactModal, setContactModal] = useState({
     isOpen: false,
     type: "message",
   });
+  const [isUpdatingPrivacy, setIsUpdatingPrivacy] = useState(false);
+
+  const handleProfileClick = () => {
+    if (owner?.uid) {
+      navigate(`/profile/${owner.uid}`);
+    }
+  };
+
+  const handleTogglePrivacy = async () => {
+    if (!binder || isUpdatingPrivacy) return;
+
+    const isPublic = binder?.permissions?.public || false;
+    setIsUpdatingPrivacy(true);
+
+    try {
+      await updateBinderPrivacy(binder.id, !isPublic);
+      toast.success(
+        !isPublic
+          ? "Binder is now public! Others can view and interact with it."
+          : "Binder is now private. Only you can access it."
+      );
+    } catch (error) {
+      console.error("Error updating binder privacy:", error);
+      toast.error("Failed to update binder privacy. Please try again.");
+    } finally {
+      setIsUpdatingPrivacy(false);
+    }
+  };
 
   // If in read-only mode, show different content based on context
   if (isReadOnly) {
@@ -30,57 +71,89 @@ const CoverPage = ({
 
         {/* Cover content */}
         <div className="relative h-full p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
-              {binder?.metadata?.name || "Pokemon Card Collection"}
-            </h1>
+          {isPublicView && owner ? (
+            <div className="w-full max-w-lg mx-auto space-y-4">
+              {/* Binder Title */}
+              <div className="text-center mb-6">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
+                  {binder?.metadata?.name || "Pokemon Card Collection"}
+                </h1>
+              </div>
 
-            {isPublicView ? (
-              <div className="space-y-3 sm:space-y-4">
-                <p className="text-sm sm:text-base text-gray-600 font-medium">
-                  🎯 Complete Pokemon Card Collection Showcase
-                </p>
-
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-3 sm:p-4 border border-blue-100">
-                  <div className="space-y-2 text-xs sm:text-sm text-gray-700">
-                    <p className="flex items-center justify-center gap-2">
-                      <span>📊</span>
-                      <strong>
-                        {binder?.metadata?.statistics?.cardCount || 0}
-                      </strong>{" "}
-                      Premium Trading Cards
-                    </p>
-                    <p className="flex items-center justify-center gap-2">
-                      <span>⭐</span>
-                      Rare Holos, First Editions & Special Cards
-                    </p>
-                    <p className="flex items-center justify-center gap-2">
-                      <span>🔍</span>
-                      Professionally Organized & Catalogued
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-xs text-gray-500 space-y-1">
-                  <p>
-                    🎮 Browse this collection to discover rare Pokemon cards
-                  </p>
-                  <p>
-                    💎 Perfect for collectors, traders, and Pokemon enthusiasts
-                  </p>
-                  <p>📱 Use arrow buttons to navigate through pages</p>
-                </div>
-
-                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-2 sm:p-3 border border-yellow-200">
-                  <p className="text-xs sm:text-sm text-yellow-800 font-medium">
-                    ✨ Start your own Pokemon card collection today!
-                  </p>
+              {/* Owner Profile Card */}
+              <div className="flex justify-center">
+                <div
+                  onClick={handleProfileClick}
+                  className="w-full cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                  title={`Visit ${owner?.displayName || "User"}'s profile`}
+                >
+                  <UserProfileCard
+                    user={owner}
+                    size="large"
+                    editable={false}
+                    showBanner={true}
+                    showStatus={true}
+                    showBadges={true}
+                    isOwnProfile={false}
+                    className="w-full"
+                  />
                 </div>
               </div>
-            ) : (
-              <p className="text-sm opacity-60 text-slate-400">Admin View</p>
-            )}
-          </div>
+
+              {/* Collection Stats */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-3 sm:p-4 border border-blue-100">
+                <div className="space-y-2 text-xs sm:text-sm text-gray-700 text-center">
+                  <p className="flex items-center justify-center gap-2">
+                    <span>📊</span>
+                    <strong>
+                      {Object.keys(binder?.cards || {}).length}
+                    </strong>{" "}
+                    Cards in Collection
+                  </p>
+                  <p className="flex items-center justify-center gap-2">
+                    <span>📅</span>
+                    Created{" "}
+                    {binder?.metadata?.createdAt
+                      ? new Date(binder.metadata.createdAt).toLocaleDateString()
+                      : "Recently"}
+                  </p>
+                  {binder?.metadata?.description && (
+                    <p className="text-center mt-3 text-gray-600 italic">
+                      "{binder.metadata.description}"
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              {/* Interaction Buttons */}
+              <div className="flex justify-center">
+                <BinderInteractionButtons
+                  binderId={binder?.id}
+                  ownerId={owner?.uid}
+                  binderMetadata={{
+                    name: binder?.metadata?.name,
+                    ownerName: owner?.displayName,
+                    ownerId: owner?.uid,
+                    cardCount: Object.keys(binder?.cards || {}).length,
+                  }}
+                  size="default"
+                  showLabels={true}
+                  showCounts={true}
+                  layout="horizontal"
+                  className="w-full max-w-xs"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="text-center">
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
+                {binder?.metadata?.name || "Pokemon Card Collection"}
+              </h1>
+              <p className="text-sm opacity-60 text-slate-400">
+                {isPublicView ? "Public Collection" : "Admin View"}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -164,6 +237,65 @@ const CoverPage = ({
           <p className="text-xs sm:text-sm text-gray-600 font-medium">
             Tips & Shortcuts for {binder?.metadata?.name || "Your Collection"}
           </p>
+
+          {/* Public/Private Toggle - Only show when not in read-only mode */}
+          {!isReadOnly && (
+            <div className="mt-3 sm:mt-4 flex justify-center">
+              <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-200 shadow-sm">
+                {/* Status Indicator */}
+                <div className="flex items-center gap-2">
+                  {binder?.permissions?.public ? (
+                    <GlobeAltIcon className="w-4 h-4 text-green-600" />
+                  ) : (
+                    <LockClosedIcon className="w-4 h-4 text-gray-600" />
+                  )}
+                  <span
+                    className={`text-sm font-medium ${
+                      binder?.permissions?.public
+                        ? "text-green-800"
+                        : "text-gray-800"
+                    }`}
+                  >
+                    {binder?.permissions?.public ? "Public" : "Private"}
+                  </span>
+                </div>
+
+                {/* Toggle Button */}
+                <button
+                  onClick={handleTogglePrivacy}
+                  disabled={isUpdatingPrivacy}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                    isUpdatingPrivacy
+                      ? "bg-gray-100 text-gray-500 cursor-not-allowed"
+                      : binder?.permissions?.public
+                      ? "bg-gray-600 hover:bg-gray-700 text-white"
+                      : "bg-green-600 hover:bg-green-700 text-white"
+                  }`}
+                >
+                  {isUpdatingPrivacy ? (
+                    <>
+                      <ArrowPathIcon className="w-3.5 h-3.5 animate-spin" />
+                      Updating...
+                    </>
+                  ) : (
+                    <>
+                      {binder?.permissions?.public ? (
+                        <>
+                          <LockClosedIcon className="w-3.5 h-3.5" />
+                          Make Private
+                        </>
+                      ) : (
+                        <>
+                          <GlobeAltIcon className="w-3.5 h-3.5" />
+                          Make Public
+                        </>
+                      )}
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Main tips - responsive grid */}

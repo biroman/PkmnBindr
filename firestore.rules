@@ -44,6 +44,9 @@ service cloud.firestore {
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
       allow read, write, delete: if isOwner(); // Owners can always access
       
+      // PUBLIC PROFILE ACCESS: Allow any authenticated user to read basic profile info
+      allow read: if !isEmergencyMode() && request.auth != null;
+      
       // Enhanced data validation for user profile updates
       allow update: if request.auth != null && 
                        request.auth.uid == userId &&
@@ -67,6 +70,10 @@ service cloud.firestore {
                           request.resource.data.bannerColor.matches('^rgba\\(.*\\)$') ||
                           request.resource.data.bannerColor.matches('^hsl\\(.*\\)$') ||
                           request.resource.data.bannerColor.matches('^hsla\\(.*\\)$')))) &&
+                       // Validate favoriteBinders array (max 100 favorites)
+                       (!('favoriteBinders' in request.resource.data) ||
+                        (request.resource.data.favoriteBinders is list &&
+                         request.resource.data.favoriteBinders.size() <= 100)) &&
                        // Validate role cannot be changed by user (unless they don't have one yet)
                        (!('role' in resource.data) || 
                         !('role' in request.resource.data) ||
@@ -183,6 +190,9 @@ service cloud.firestore {
                                    resource.data.ownerId == request.auth.uid;
       // Owners can access all binders (for admin purposes)
       allow read, write, delete: if isOwner();
+      
+      // Allow reading public binders
+      allow read: if resource.data.permissions.public == true;
     }
 
     // User Binders collection - for the new sync service
@@ -195,6 +205,40 @@ service cloud.firestore {
       // Allow collection queries where ownerId equals current user
       allow list: if !isEmergencyMode() && request.auth != null && 
                      resource.data.ownerId == request.auth.uid;
+      
+      // PUBLIC BINDER ACCESS: Allow reading public binders by any authenticated user
+      allow read: if !isEmergencyMode() && request.auth != null && 
+                     resource.data.permissions.public == true;
+      
+      // Allow querying public binders by any authenticated user
+      allow list: if !isEmergencyMode() && request.auth != null && 
+                     request.query.filters.hasAny([
+                       ['permissions.public', '==', true]
+                     ]);
+      
+      // BINDER INTERACTIONS: Allow authenticated users to like and favorite public binders
+      allow update: if !isEmergencyMode() && request.auth != null && 
+                       resource.data.permissions.public == true &&
+                       // Only allow updating interaction fields
+                       request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes', 'likeCount', 'favoriteUsers', 'favoriteCount', 'lastInteraction', 'updatedAt']) &&
+                       // Validate likes array contains only user IDs (strings)
+                       (!('likes' in request.resource.data) ||
+                        (request.resource.data.likes is list &&
+                         request.resource.data.likes.size() <= 1000)) && // Reasonable limit
+                       // Validate likeCount is a non-negative number
+                       (!('likeCount' in request.resource.data) ||
+                        (request.resource.data.likeCount is number &&
+                         request.resource.data.likeCount >= 0 &&
+                         request.resource.data.likeCount <= 1000)) &&
+                       // Validate favoriteUsers array contains only user IDs (strings)
+                       (!('favoriteUsers' in request.resource.data) ||
+                        (request.resource.data.favoriteUsers is list &&
+                         request.resource.data.favoriteUsers.size() <= 1000)) &&
+                       // Validate favoriteCount is a non-negative number
+                       (!('favoriteCount' in request.resource.data) ||
+                        (request.resource.data.favoriteCount is number &&
+                         request.resource.data.favoriteCount >= 0 &&
+                         request.resource.data.favoriteCount <= 1000));
       
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
@@ -217,7 +261,11 @@ service cloud.firestore {
                                // Validate grid size (specific values only)
                                (!('settings' in request.resource.data) ||
                                 !('gridSize' in request.resource.data.settings) ||
-                                request.resource.data.settings.gridSize in ['2x2', '3x3', '4x3', '4x4']);
+                                request.resource.data.settings.gridSize in ['2x2', '3x3', '4x3', '4x4']) &&
+                               // Validate permissions structure
+                               (!('permissions' in request.resource.data) ||
+                                (request.resource.data.permissions.keys().hasAll(['public']) &&
+                                 request.resource.data.permissions.public is bool));
     }
 
     // Global Rules collection - Owner can manage, users can read
@@ -353,6 +401,77 @@ service cloud.firestore {
       
       // Owners can read/write all upload limits (for management)
       allow read, write: if isOwner();
+    }
+
+    // Conversations - Direct messaging system between admin and users
+    match /conversations/{conversationId} {
+      // Allow all authenticated users to read/write conversations for now
+      allow read, write, create, update, delete, list: if request.auth != null;
+      
+      // Messages within conversations
+      match /messages/{messageId} {
+        // Allow all authenticated users to access messages for now
+        allow read, write, list, create, update, delete: if request.auth != null;
+      }
+    }
+
+    // Binder interactions collection - for likes and favorites
+    match /binderInteractions/{interactionId} {
+      // Users can read/write their own interactions
+      allow read, write: if request.auth != null && 
+        request.auth.uid == resource.data.userId;
+      
+      // Allow reading interactions for public binders (for stats)
+      allow read: if request.auth != null;
+    }
+
+    // Binder card customizations collection - separate from binder content
+    match /binderCardCustomizations/{customizationId} {
+      // Users can read their own customizations
+      allow read: if request.auth != null && 
+        request.auth.uid == resource.data.userId;
+      
+      // Users can create their own customizations
+      allow create: if request.auth != null && 
+        request.auth.uid == request.resource.data.userId &&
+        request.resource.data.keys().hasAll(['binderId', 'userId']) &&
+        customizationId == (request.resource.data.userId + '_' + request.resource.data.binderId);
+      
+      // Users can update their own customizations
+      allow update: if request.auth != null && 
+        request.auth.uid == resource.data.userId &&
+        request.auth.uid == request.resource.data.userId;
+      
+      // Users can delete their own customizations
+      allow delete: if request.auth != null && 
+        request.auth.uid == resource.data.userId;
+      
+      // Allow reading customizations for public binders (so others can see the card design)
+      allow read: if request.auth != null;
+    }
+
+    // Messages collection - users can read/write their own messages
+    match /messages/{messageId} {
+      allow read, write: if request.auth != null && 
+        (request.auth.uid == resource.data.senderId || 
+         request.auth.uid == resource.data.recipientId);
+    }
+
+    // Admin collection - only admins can access
+    match /admin/{document=**} {
+      allow read, write: if request.auth != null && 
+        request.auth.token.admin == true;
+    }
+
+    // User activity tracking
+    match /userActivity/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Public profiles - readable by authenticated users
+    match /publicProfiles/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
     }
 
     // Deny all other collections/documents
