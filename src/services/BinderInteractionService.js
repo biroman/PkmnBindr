@@ -268,7 +268,84 @@ export class BinderInteractionService {
   }
 
   /**
-   * Get binder interaction data for a user
+   * Track a view for a binder (unique per user)
+   * @param {string} binderId - The binder ID
+   * @param {string} userId - The current user's ID
+   * @param {string} ownerId - The binder owner's ID
+   * @returns {Promise<boolean>} - Whether the view was counted (true) or already existed (false)
+   */
+  static async trackView(binderId, userId, ownerId) {
+    const operationKey = `view_${binderId}_${userId}`;
+
+    try {
+      // Prevent spam tracking
+      if (this.pendingOperations.has(operationKey)) {
+        return false;
+      }
+
+      // Check cooldown (shorter for views since they're less frequent)
+      const lastOperation = this.lastOperationTime.get(operationKey);
+      const now = Date.now();
+      if (lastOperation && now - lastOperation < 5000) {
+        // 5 second cooldown
+        return false;
+      }
+
+      this.pendingOperations.add(operationKey);
+      this.lastOperationTime.set(operationKey, now);
+
+      const wasNewView = await runTransaction(db, async (transaction) => {
+        // Get current binder data
+        const binderDocId = `${ownerId}_${binderId}`;
+        const binderRef = doc(db, "user_binders", binderDocId);
+        const binderDoc = await transaction.get(binderRef);
+
+        if (!binderDoc.exists()) {
+          throw new Error("Binder not found");
+        }
+
+        const binderData = binderDoc.data();
+        const currentViews = binderData.views || [];
+        const currentViewCount = binderData.viewCount || 0;
+
+        // Check if user has already viewed this binder
+        if (currentViews.includes(userId)) {
+          // User has already viewed, don't increment
+          return false;
+        }
+
+        // Add user to views array and increment count
+        const newViews = [...currentViews, userId];
+        const newViewCount = currentViewCount + 1;
+
+        // Update binder document
+        transaction.update(binderRef, {
+          views: newViews,
+          viewCount: newViewCount,
+          lastViewed: serverTimestamp(),
+          lastInteraction: serverTimestamp(),
+          updatedAt: serverTimestamp(),
+        });
+
+        return true;
+      });
+
+      return wasNewView;
+    } catch (error) {
+      console.error("Error tracking view:", error);
+      if (error.code === "permission-denied") {
+      } else if (error.message === "Binder not found") {
+      } else if (error.code === "unavailable") {
+      }
+
+      return false; // Fail silently for views
+    } finally {
+      this.pendingOperations.delete(operationKey);
+    }
+  }
+
+  /**
+   * Get binder interaction data for a user (including views)
    * @param {string} binderId - The binder ID
    * @param {string} userId - The current user's ID
    * @param {string} ownerId - The binder owner's ID
@@ -295,13 +372,20 @@ export class BinderInteractionService {
         (fav) => fav.binderId === binderId
       );
 
+      const views = binderData.views || [];
+      const viewCount = binderData.viewCount || 0;
+      const hasViewed = views.includes(userId);
+
       return {
         isLiked,
         isFavorited,
+        hasViewed,
         likeCount,
         favoriteCount,
+        viewCount,
         totalLikes: likeCount,
         totalFavorites: favoriteCount,
+        totalViews: viewCount,
       };
     } catch (error) {
       console.error("Error getting binder interactions:", error);
@@ -310,16 +394,19 @@ export class BinderInteractionService {
       return {
         isLiked: false,
         isFavorited: false,
+        hasViewed: false,
         likeCount: 0,
         favoriteCount: 0,
+        viewCount: 0,
         totalLikes: 0,
         totalFavorites: 0,
+        totalViews: 0,
       };
     }
   }
 
   /**
-   * Get binder stats (likes and favorites count) without user context
+   * Get binder stats (likes, favorites, and views count) without user context
    * @param {string} binderId - The binder ID
    * @param {string} ownerId - The binder owner's ID
    * @returns {Promise<Object>} - Binder stats
@@ -334,31 +421,39 @@ export class BinderInteractionService {
         return {
           likeCount: 0,
           favoriteCount: 0,
+          viewCount: 0,
           totalLikes: 0,
           totalFavorites: 0,
+          totalViews: 0,
         };
       }
 
       const binderData = binderDoc.data();
       const likeCount = binderData.likeCount || 0;
       const favoriteCount = binderData.favoriteCount || 0;
+      const viewCount = binderData.viewCount || 0;
 
       console.log(`getBinderStats for ${binderId}:`, {
         likeCount,
         favoriteCount,
+        viewCount,
         rawData: {
           likeCount: binderData.likeCount,
           favoriteCount: binderData.favoriteCount,
+          viewCount: binderData.viewCount,
           likes: binderData.likes,
           favoriteUsers: binderData.favoriteUsers,
+          views: binderData.views,
         },
       });
 
       return {
         likeCount,
         favoriteCount,
+        viewCount,
         totalLikes: likeCount,
         totalFavorites: favoriteCount,
+        totalViews: viewCount,
       };
     } catch (error) {
       console.error("Error getting binder stats:", error);
@@ -367,8 +462,10 @@ export class BinderInteractionService {
       return {
         likeCount: 0,
         favoriteCount: 0,
+        viewCount: 0,
         totalLikes: 0,
         totalFavorites: 0,
+        totalViews: 0,
       };
     }
   }

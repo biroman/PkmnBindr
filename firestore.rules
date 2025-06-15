@@ -217,28 +217,17 @@ service cloud.firestore {
                      ]);
       
       // BINDER INTERACTIONS: Allow authenticated users to like and favorite public binders
-      allow update: if !isEmergencyMode() && request.auth != null && 
+      // Allow interaction updates (likes, favorites, views) on public binders
+      allow update: if !isEmergencyMode() && 
+                       request.auth != null && 
                        resource.data.permissions.public == true &&
                        // Only allow updating interaction fields
-                       request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes', 'likeCount', 'favoriteUsers', 'favoriteCount', 'lastInteraction', 'updatedAt']) &&
-                       // Validate likes array contains only user IDs (strings)
-                       (!('likes' in request.resource.data) ||
-                        (request.resource.data.likes is list &&
-                         request.resource.data.likes.size() <= 1000)) && // Reasonable limit
-                       // Validate likeCount is a non-negative number
-                       (!('likeCount' in request.resource.data) ||
-                        (request.resource.data.likeCount is number &&
-                         request.resource.data.likeCount >= 0 &&
-                         request.resource.data.likeCount <= 1000)) &&
-                       // Validate favoriteUsers array contains only user IDs (strings)
-                       (!('favoriteUsers' in request.resource.data) ||
-                        (request.resource.data.favoriteUsers is list &&
-                         request.resource.data.favoriteUsers.size() <= 1000)) &&
-                       // Validate favoriteCount is a non-negative number
-                       (!('favoriteCount' in request.resource.data) ||
-                        (request.resource.data.favoriteCount is number &&
-                         request.resource.data.favoriteCount >= 0 &&
-                         request.resource.data.favoriteCount <= 1000));
+                       request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+                         'likes', 'likeCount', 
+                         'favoriteUsers', 'favoriteCount', 
+                         'views', 'viewCount', 
+                         'lastViewed', 'lastInteraction', 'updatedAt'
+                       ]);
       
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 

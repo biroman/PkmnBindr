@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "react-hot-toast";
+import { Crown } from "lucide-react";
 
 // Validation schemas
 const directMessageSchema = z.object({
@@ -603,9 +604,22 @@ const ContactPage = () => {
                             }`}
                           >
                             <div className="flex justify-between items-start mb-1">
-                              <span className="text-sm font-medium text-gray-900">
-                                {message.senderId === "admin" ? "Admin" : "You"}
-                              </span>
+                              <div className="flex items-center gap-1.5">
+                                <span
+                                  className={`text-sm font-medium ${
+                                    message.senderId === "admin"
+                                      ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
+                                      : "text-gray-900"
+                                  }`}
+                                >
+                                  {message.senderId === "admin"
+                                    ? "Admin"
+                                    : "You"}
+                                </span>
+                                {message.senderId === "admin" && (
+                                  <Crown className="w-3 h-3 text-yellow-500 animate-pulse" />
+                                )}
+                              </div>
                               <span className="text-xs text-gray-500">
                                 {message.timestamp
                                   ?.toDate?.()

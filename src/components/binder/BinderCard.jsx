@@ -49,6 +49,7 @@ const BinderCard = ({
   const [interactionStats, setInteractionStats] = useState({
     likeCount: 0,
     favoriteCount: 0,
+    viewCount: 0,
     loading: true,
   });
 
@@ -62,6 +63,25 @@ const BinderCard = ({
   if (!binder) return null;
 
   const status = getBinderStatus ? getBinderStatus(binder) : "synced";
+
+  // Declare variables before useEffects to avoid lexical declaration errors
+  const isLocalOnly = status === "local";
+  const isGuestBinder = status === "guest";
+  const isGuestBinderInaccessible = isGuestBinder && user;
+  const cardCount = Object.keys(binder.cards || {}).length;
+
+  // Generate gradient colors based on binder ID
+  const colorIndex =
+    Math.abs(binder.id.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) % 6;
+
+  const gradientColors = {
+    start: ["#3B82F6", "#8B5CF6", "#10B981", "#F59E0B", "#EF4444", "#6366F1"][
+      colorIndex
+    ],
+    end: ["#1E40AF", "#7C3AED", "#059669", "#D97706", "#DC2626", "#4F46E5"][
+      colorIndex
+    ],
+  };
 
   // Load interaction stats for public binders
   useEffect(() => {
@@ -84,6 +104,7 @@ const BinderCard = ({
         setInteractionStats({
           likeCount: stats.likeCount,
           favoriteCount: stats.favoriteCount,
+          viewCount: stats.viewCount,
           loading: false,
         });
       } catch (error) {
@@ -91,6 +112,7 @@ const BinderCard = ({
         setInteractionStats({
           likeCount: 0,
           favoriteCount: 0,
+          viewCount: 0,
           loading: false,
         });
       }
@@ -138,23 +160,6 @@ const BinderCard = ({
 
     loadCustomization();
   }, [binder.id, binder.ownerId, getHeaderColor, loadBinderCustomization]);
-  const isLocalOnly = status === "local";
-  const isGuestBinder = status === "guest";
-  const isGuestBinderInaccessible = isGuestBinder && user;
-  const cardCount = Object.keys(binder.cards || {}).length;
-
-  // Generate gradient colors based on binder ID
-  const colorIndex =
-    Math.abs(binder.id.split("").reduce((a, b) => a + b.charCodeAt(0), 0)) % 6;
-
-  const gradientColors = {
-    start: ["#3B82F6", "#8B5CF6", "#10B981", "#F59E0B", "#EF4444", "#6366F1"][
-      colorIndex
-    ],
-    end: ["#1E40AF", "#7C3AED", "#059669", "#D97706", "#DC2626", "#4F46E5"][
-      colorIndex
-    ],
-  };
 
   const handleCardClick = (e) => {
     // Don't trigger card click if clicking on dropdown or its trigger
@@ -162,6 +167,42 @@ const BinderCard = ({
       return;
     }
     e.preventDefault();
+
+    // Track view when user actually clicks to open the binder
+    const trackViewOnClick = async () => {
+      // Only track views for public binders when user is logged in and it's not their own binder
+      if (
+        user?.uid &&
+        binder.permissions?.public &&
+        binder.ownerId &&
+        binder.ownerId !== user.uid && // Don't track views for own binders
+        !isLocalOnly &&
+        !isGuestBinder
+      ) {
+        try {
+          const wasNewView = await BinderInteractionService.trackView(
+            binder.id,
+            user.uid,
+            binder.ownerId
+          );
+
+          // If it was a new view, update the local stats
+          if (wasNewView && showInteractionStats) {
+            setInteractionStats((prev) => ({
+              ...prev,
+              viewCount: prev.viewCount + 1,
+            }));
+          }
+        } catch (error) {
+          // Fail silently for view tracking - don't show error to user
+        }
+      }
+    };
+
+    // Track the view (fire and forget)
+    trackViewOnClick();
+
+    // Continue with normal card selection
     if (onSelect && !isGuestBinderInaccessible) {
       onSelect(binder);
     }
@@ -456,11 +497,28 @@ const BinderCard = ({
                       <div className="w-4 h-4 bg-gray-200 rounded animate-pulse"></div>
                       <div className="w-6 h-3 bg-gray-200 rounded animate-pulse"></div>
                     </div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-4 h-4 bg-gray-200 rounded animate-pulse"></div>
+                      <div className="w-6 h-3 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
                   </div>
                 ) : (
                   <>
                     {/* Always show interaction stats for public binders */}
                     <div className="flex items-center gap-4">
+                      {/* Views */}
+                      <div className="flex items-center gap-1 text-xs text-gray-600">
+                        <EyeIcon className="w-4 h-4 text-blue-500" />
+                        <span className="font-medium">
+                          {interactionStats.viewCount || 0}
+                        </span>
+                        <span className="text-gray-500">
+                          {(interactionStats.viewCount || 0) === 1
+                            ? "view"
+                            : "views"}
+                        </span>
+                      </div>
+
                       {/* Likes */}
                       <div className="flex items-center gap-1 text-xs text-gray-600">
                         <HeartIcon className="w-4 h-4 text-red-500" />

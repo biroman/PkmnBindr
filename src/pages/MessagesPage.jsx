@@ -4,13 +4,14 @@ import { useMessages, useConversationMessages } from "../hooks/useMessages";
 import { useAuth, useOwner } from "../hooks/useAuth";
 import UserAvatar from "../components/ui/UserAvatar";
 import { Button } from "../components/ui/Button";
+import { getUserProfile } from "../utils/getUserProfile";
+import { Crown } from "lucide-react";
 import {
   InboxIcon,
   ChatBubbleLeftRightIcon,
   PaperAirplaneIcon,
   EllipsisVerticalIcon,
   TrashIcon,
-  ArchiveBoxIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -40,6 +41,7 @@ const MessagesPage = () => {
   const [showNewConversationModal, setShowNewConversationModal] =
     useState(false);
   const [preSelectedUser, setPreSelectedUser] = useState(null);
+  const [userProfiles, setUserProfiles] = useState({});
   const messagesEndRef = useRef(null);
 
   const { messages, loading: messagesLoading } = useConversationMessages(
@@ -52,8 +54,6 @@ const MessagesPage = () => {
       const selectedUser = location.state.selectedUser;
       setPreSelectedUser(selectedUser);
       setShowNewConversationModal(true);
-
-      // Clear the navigation state to prevent re-triggering
       window.history.replaceState({}, document.title);
     }
   }, [location.state, isOwner]);
@@ -130,8 +130,6 @@ const MessagesPage = () => {
       if (result.success) {
         setShowNewConversationModal(false);
         setPreSelectedUser(null);
-        // The new conversation should appear in the list automatically
-        // and we can select it if needed
       }
     } catch (error) {
       console.error("Error starting conversation:", error);
@@ -156,7 +154,6 @@ const MessagesPage = () => {
           minute: "2-digit",
         });
       } else if (diffInHours < 168) {
-        // 7 days
         return date.toLocaleDateString([], {
           weekday: "short",
           hour: "2-digit",
@@ -171,6 +168,7 @@ const MessagesPage = () => {
   };
 
   const ConversationItem = ({ conversation }) => {
+    const [otherUserProfile, setOtherUserProfile] = useState(null);
     const unreadCount = isOwner
       ? conversation.unreadByAdmin || 0
       : conversation.unreadByUser || 0;
@@ -179,6 +177,49 @@ const MessagesPage = () => {
     const otherUserName = isOwner
       ? conversation.userName
       : conversation.adminName;
+    const isOtherUserOwner = !isOwner && conversation.adminName;
+
+    // Fetch the other user's profile data
+    useEffect(() => {
+      const fetchProfile = async () => {
+        const otherUserId = isOwner
+          ? conversation.userId
+          : conversation.adminId;
+
+        // Check if we already have this profile cached
+        if (userProfiles[otherUserId]) {
+          setOtherUserProfile(userProfiles[otherUserId]);
+          return;
+        }
+
+        try {
+          // Add timeout to prevent hanging
+          const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("Profile fetch timeout")), 5000)
+          );
+
+          const profile = await Promise.race([
+            getUserProfile(otherUserId),
+            timeoutPromise,
+          ]);
+
+          setOtherUserProfile(profile);
+          setUserProfiles((prev) => ({ ...prev, [otherUserId]: profile }));
+        } catch (error) {
+          console.error("Error fetching profile:", error);
+          // Set fallback profile data
+          setOtherUserProfile({
+            displayName: otherUserName,
+            uid: otherUserId,
+            photoURL: null,
+          });
+        }
+      };
+
+      if (conversation?.id) {
+        fetchProfile();
+      }
+    }, [conversation?.id, isOwner, userProfiles, otherUserName]);
 
     return (
       <div
@@ -190,12 +231,12 @@ const MessagesPage = () => {
         <div className="flex items-center space-x-3">
           <div className="relative">
             <UserAvatar
-              user={{
-                displayName: otherUserName,
-                email: isOwner
-                  ? conversation.userEmail
-                  : "admin@pokemonbindr.com",
-              }}
+              user={
+                otherUserProfile || {
+                  displayName: otherUserName,
+                  uid: isOwner ? conversation.userId : conversation.adminId,
+                }
+              }
               size="md"
             />
             {unreadCount > 0 && (
@@ -207,14 +248,23 @@ const MessagesPage = () => {
 
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between">
-              <h3
-                className={`text-sm font-medium text-gray-900 truncate ${
-                  unreadCount > 0 ? "font-semibold" : ""
-                }`}
-              >
-                {otherUserName}
-              </h3>
-              <span className="text-xs text-gray-500">
+              <div className="flex items-center gap-1.5">
+                <h3
+                  className={`text-sm font-medium truncate ${
+                    unreadCount > 0 ? "font-semibold" : ""
+                  } ${
+                    isOtherUserOwner
+                      ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
+                      : "text-gray-900"
+                  }`}
+                >
+                  {otherUserName}
+                </h3>
+                {isOtherUserOwner && (
+                  <Crown className="w-3 h-3 text-yellow-500 animate-pulse flex-shrink-0" />
+                )}
+              </div>
+              <span className="text-xs text-gray-500 flex-shrink-0">
                 {formatTimestamp(conversation.lastMessageAt)}
               </span>
             </div>
@@ -228,12 +278,6 @@ const MessagesPage = () => {
                 {conversation.lastMessage}
               </p>
             )}
-
-            {isOwner && (
-              <p className="text-xs text-gray-400 truncate">
-                {conversation.userEmail}
-              </p>
-            )}
           </div>
         </div>
       </div>
@@ -241,7 +285,73 @@ const MessagesPage = () => {
   };
 
   const MessageItem = ({ message }) => {
+    const [messageUserProfile, setMessageUserProfile] = useState(null);
     const isFromCurrentUser = message.senderId === user?.uid;
+    const isFromOwner = message.isAdmin && isOwner && isFromCurrentUser;
+    const isOwnerMessage = message.isAdmin && !isFromCurrentUser;
+
+    // Fetch user profile for the message sender
+    useEffect(() => {
+      const fetchProfile = async () => {
+        if (isFromCurrentUser) {
+          setMessageUserProfile({
+            displayName: user?.displayName,
+            photoURL: user?.photoURL,
+            uid: user?.uid,
+          });
+        } else {
+          const otherUserId = isOwner
+            ? selectedConversation?.userId
+            : selectedConversation?.adminId;
+
+          // Check cache first
+          if (userProfiles[otherUserId]) {
+            setMessageUserProfile(userProfiles[otherUserId]);
+            return;
+          }
+
+          try {
+            // Add timeout to prevent hanging
+            const timeoutPromise = new Promise((_, reject) =>
+              setTimeout(() => reject(new Error("Profile fetch timeout")), 5000)
+            );
+
+            const profile = await Promise.race([
+              getUserProfile(otherUserId),
+              timeoutPromise,
+            ]);
+
+            setMessageUserProfile(profile);
+          } catch (error) {
+            setMessageUserProfile({
+              displayName: isOwner
+                ? selectedConversation?.userName
+                : selectedConversation?.adminName,
+              uid: otherUserId,
+              photoURL: null,
+            });
+          }
+        }
+      };
+
+      if (message?.id) {
+        fetchProfile();
+      }
+    }, [
+      message?.id,
+      isFromCurrentUser,
+      selectedConversation?.id,
+      user?.uid,
+      isOwner,
+    ]);
+
+    if (!messageUserProfile) {
+      return (
+        <div className="flex justify-center mb-4">
+          <div className="animate-pulse bg-gray-200 w-8 h-8 rounded-full"></div>
+        </div>
+      );
+    }
 
     return (
       <div
@@ -250,20 +360,71 @@ const MessagesPage = () => {
         } mb-4`}
       >
         <div
-          className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-            isFromCurrentUser
-              ? "bg-blue-600 text-white"
-              : "bg-gray-100 text-gray-900"
+          className={`flex items-start gap-2 max-w-xs lg:max-w-md ${
+            isFromCurrentUser ? "flex-row-reverse" : "flex-row"
           }`}
         >
-          <p className="text-sm">{message.message}</p>
-          <p
-            className={`text-xs mt-1 ${
-              isFromCurrentUser ? "text-blue-100" : "text-gray-500"
+          <div className="relative flex-shrink-0 mt-1">
+            <UserAvatar user={messageUserProfile} size="sm" />
+          </div>
+
+          <div
+            className={`flex flex-col ${
+              isFromCurrentUser ? "items-end" : "items-start"
             }`}
           >
-            {formatTimestamp(message.timestamp)}
-          </p>
+            {!isFromCurrentUser && (
+              <div className="flex items-center gap-1.5 mb-1 ml-2">
+                <span
+                  className={`text-xs font-semibold ${
+                    isOwnerMessage
+                      ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
+                      : "text-gray-600"
+                  }`}
+                >
+                  {messageUserProfile?.displayName || "User"}
+                </span>
+                {isOwnerMessage && (
+                  <Crown className="w-3 h-3 text-yellow-500 animate-pulse" />
+                )}
+              </div>
+            )}
+
+            <div
+              className={`px-4 py-2 rounded-lg ${
+                isFromCurrentUser
+                  ? isFromOwner
+                    ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-white border border-yellow-400 shadow-lg"
+                    : "bg-blue-600 text-white"
+                  : isOwnerMessage
+                  ? "bg-gradient-to-r from-yellow-50 to-yellow-100 text-yellow-900 border border-yellow-200 shadow-md"
+                  : "bg-gray-100 text-gray-900"
+              }`}
+            >
+              {isFromOwner && (
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span className="text-xs font-semibold text-yellow-200">
+                    You
+                  </span>
+                </div>
+              )}
+
+              <p className="text-sm">{message.message}</p>
+              <p
+                className={`text-xs mt-1 ${
+                  isFromCurrentUser
+                    ? isFromOwner
+                      ? "text-yellow-100"
+                      : "text-blue-100"
+                    : isOwnerMessage
+                    ? "text-yellow-600"
+                    : "text-gray-500"
+                }`}
+              >
+                {formatTimestamp(message.timestamp)}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -282,6 +443,22 @@ const MessagesPage = () => {
           <Link to="/auth/login">
             <Button>Sign In</Button>
           </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-red-600 mb-4">
+            Error Loading Messages
+          </h1>
+          <p className="text-gray-600 mb-6">
+            {error.message || "Failed to load conversations"}
+          </p>
+          <Button onClick={() => window.location.reload()}>Retry</Button>
         </div>
       </div>
     );
@@ -345,6 +522,7 @@ const MessagesPage = () => {
                     </p>
                   </div>
                 ) : (
+                  conversations?.length > 0 &&
                   conversations.map((conversation) => (
                     <ConversationItem
                       key={conversation.id}
@@ -364,27 +542,41 @@ const MessagesPage = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <UserAvatar
-                          user={{
-                            displayName: isOwner
-                              ? selectedConversation.userName
-                              : selectedConversation.adminName,
-                            email: isOwner
-                              ? selectedConversation.userEmail
-                              : "admin@pokemonbindr.com",
-                          }}
+                          user={
+                            userProfiles[
+                              isOwner
+                                ? selectedConversation?.userId
+                                : selectedConversation?.adminId
+                            ] || {
+                              displayName: isOwner
+                                ? selectedConversation.userName
+                                : selectedConversation.adminName,
+                              photoURL: null,
+                            }
+                          }
                           size="sm"
                         />
                         <div>
-                          <h3 className="text-lg font-semibold text-gray-900">
-                            {isOwner
-                              ? selectedConversation.userName
-                              : selectedConversation.adminName}
-                          </h3>
-                          {isOwner && (
-                            <p className="text-sm text-gray-500">
-                              {selectedConversation.userEmail}
-                            </p>
-                          )}
+                          <div className="flex items-center gap-2">
+                            <h3
+                              className={`text-lg font-semibold ${
+                                !isOwner && selectedConversation.adminName
+                                  ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
+                                  : "text-gray-900"
+                              }`}
+                            >
+                              {isOwner
+                                ? selectedConversation.userName
+                                : selectedConversation.adminName}
+                            </h3>
+                            {!isOwner && selectedConversation.adminName && (
+                              <div className="flex items-center gap-1">
+                                <span className="text-xs font-semibold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded-full border border-yellow-200">
+                                  Site Owner
+                                </span>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
 

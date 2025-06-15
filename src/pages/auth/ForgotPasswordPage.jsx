@@ -34,8 +34,7 @@ const ForgotPasswordPage = () => {
       await resetPassword(data.email);
       setSuccess(true);
     } catch (error) {
-      console.error("Password reset failed:", error);
-
+      console.error("Forgot password error:", error);
       // Handle specific errors with user-friendly messages
       let errorMessage = "Failed to send reset email. Please try again.";
 

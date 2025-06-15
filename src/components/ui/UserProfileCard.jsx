@@ -1,10 +1,16 @@
 import { useState } from "react";
-import { CheckBadgeIcon, CameraIcon } from "@heroicons/react/24/outline";
+import {
+  CheckBadgeIcon,
+  CameraIcon,
+  StarIcon,
+} from "@heroicons/react/24/outline";
+import { Crown } from "lucide-react";
 import ProfilePictureUpload from "./ProfilePictureUpload";
 import StatusEditor from "./StatusEditor";
 import EditButton from "./EditButton";
 import BannerColorPicker from "./BannerColorPicker";
 import { BannerColorService } from "../../services/BannerColorService";
+import { UserRoleService } from "../../services/UserRoleService";
 
 const UserProfileCard = ({
   user,
@@ -20,6 +26,10 @@ const UserProfileCard = ({
   badges = [],
   isOwnProfile = false,
 }) => {
+  // Automatically determine if this user is the owner
+  const isOwner = UserRoleService.isOwner(user);
+  const roleInfo = UserRoleService.getRoleDisplayInfo(user);
+
   // Status editing state
   const [statusEditTrigger, setStatusEditTrigger] = useState(0);
   // Banner color picker state
@@ -97,7 +107,22 @@ const UserProfileCard = ({
     },
   ];
 
-  const displayBadges = badges.length > 0 ? badges : defaultBadges;
+  // Create role badge based on user's role
+  const roleBadge = isOwner
+    ? {
+        id: "owner",
+        label: roleInfo.label,
+        icon: null, // We'll use a crown icon instead
+        color: roleInfo.color + " shadow-lg",
+      }
+    : null;
+
+  let displayBadges = badges.length > 0 ? badges : defaultBadges;
+
+  // Add role badge to the beginning if user has special role
+  if (roleBadge) {
+    displayBadges = [roleBadge, ...displayBadges];
+  }
 
   return (
     <div
@@ -148,9 +173,28 @@ const UserProfileCard = ({
         {/* User Info Header */}
         <div className="space-y-1 mb-4">
           <div className="flex items-center gap-2">
-            <h3 className={`font-bold text-gray-900 ${config.titleSize}`}>
+            <h3
+              className={`font-bold ${config.titleSize} ${
+                isOwner
+                  ? `${roleInfo.textColor} drop-shadow-sm`
+                  : "text-gray-900"
+              }`}
+            >
               {user?.displayName || "User"}
             </h3>
+
+            {/* Owner Crown Icon */}
+            {isOwner && (
+              <div className="relative">
+                <Crown
+                  className="w-5 h-5 text-yellow-500 drop-shadow-sm animate-pulse"
+                  title="App Owner"
+                />
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 w-5 h-5 bg-yellow-400 rounded-full opacity-20 blur-sm -z-10"></div>
+              </div>
+            )}
+
             {user?.emailVerified && (
               <CheckBadgeIcon
                 className="w-5 h-5 text-blue-500"
@@ -158,7 +202,11 @@ const UserProfileCard = ({
               />
             )}
           </div>
-          <p className="text-sm text-gray-500 font-medium">
+          <p
+            className={`text-sm font-medium ${
+              isOwner ? roleInfo.textColor : "text-gray-500"
+            }`}
+          >
             @{getUsername(user)}
           </p>
           {!isOwnProfile && (
@@ -224,15 +272,17 @@ const UserProfileCard = ({
                   key={badge.id}
                   className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
                     badge.color || "bg-gray-100 text-gray-700 border-gray-200"
-                  }`}
+                  } ${badge.id === "owner" ? "ring-2 ring-yellow-300/50" : ""}`}
                 >
-                  {badge.icon && (
+                  {badge.id === "owner" ? (
+                    <Crown className="w-3 h-3 text-white drop-shadow-sm" />
+                  ) : badge.icon ? (
                     <img
                       src={badge.icon}
                       alt=""
                       className="w-3 h-3 rounded-full"
                     />
-                  )}
+                  ) : null}
                   {badge.label}
                 </div>
               ))}

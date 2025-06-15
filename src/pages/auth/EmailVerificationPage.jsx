@@ -56,8 +56,7 @@ const EmailVerificationPage = () => {
           navigate("/home", { replace: true });
         }, 5000);
       } catch (error) {
-        console.error("Email verification failed:", error);
-
+        console.error("Email verification error:", error);
         let errorMessage = "Email verification failed. ";
 
         switch (error.code) {

@@ -69,6 +69,7 @@ import {
   ChevronDown,
   Clock,
   User,
+  Crown,
 } from "lucide-react";
 
 /**
@@ -3052,9 +3053,17 @@ const AdminPage = () => {
                                 <p className="text-sm text-gray-700 bg-white p-3 rounded border">
                                   {item.data.lastMessage}
                                 </p>
-                                <div className="mt-2 text-xs text-gray-500">
-                                  From: {item.data.userEmail} • Messages:{" "}
-                                  {item.data.messageCount}
+                                <div className="mt-2 text-xs text-gray-500 flex items-center justify-between">
+                                  <span>
+                                    From: {item.data.userEmail} • Messages:{" "}
+                                    {item.data.messageCount}
+                                  </span>
+                                  <div className="flex items-center gap-1">
+                                    <Crown className="w-3 h-3 text-yellow-500" />
+                                    <span className="text-yellow-600 font-medium">
+                                      Your reply will show as Owner
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                               <div className="flex gap-2">

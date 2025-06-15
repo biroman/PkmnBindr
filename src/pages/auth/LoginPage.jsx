@@ -97,8 +97,7 @@ const LoginPage = () => {
       const from = location.state?.from?.pathname || "/home";
       navigate(from, { replace: true });
     } catch (error) {
-      console.error("Login failed:", error);
-
+      console.error("Login error:", error);
       // Handle specific Firebase auth errors with user-friendly messages
       let errorMessage = "Login failed. Please try again.";
       let fieldError = null;
@@ -163,8 +162,7 @@ const LoginPage = () => {
       const from = location.state?.from?.pathname || "/home";
       navigate(from, { replace: true });
     } catch (error) {
-      console.error("Google login failed:", error);
-
+      console.error("Google login error:", error);
       let errorMessage = "Google login failed. Please try again.";
       if (error.code === "auth/popup-closed-by-user") {
         errorMessage =
@@ -190,8 +188,7 @@ const LoginPage = () => {
       const from = location.state?.from?.pathname || "/home";
       navigate(from, { replace: true });
     } catch (error) {
-      console.error("Twitter login failed:", error);
-
+      console.error("Twitter login error:", error);
       let errorMessage = "Twitter login failed. Please try again.";
       if (error.code === "auth/popup-closed-by-user") {
         errorMessage =
