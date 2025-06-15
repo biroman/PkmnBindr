@@ -2335,12 +2335,18 @@ export const BinderProvider = ({ children }) => {
             const localBinder = merged[i];
             const wasCloudBinder =
               localBinder.sync?.status === "synced" ||
-              localBinder.sync?.lastSynced ||
-              (localBinder.ownerId === user.uid &&
-                localBinder.ownerId !== "local_user");
+              localBinder.sync?.lastSynced;
+
+            // Never remove binders with "local" status - these are newly created and not yet saved
+            const isNewLocalBinder = localBinder.sync?.status === "local";
 
             // If this was a cloud binder but no longer exists in cloud, remove it
-            if (wasCloudBinder && !cloudBinderIds.has(localBinder.id)) {
+            // But don't remove local-only binders that were never synced
+            if (
+              wasCloudBinder &&
+              !isNewLocalBinder &&
+              !cloudBinderIds.has(localBinder.id)
+            ) {
               console.log(
                 `Removing deleted cloud binder: "${localBinder.metadata?.name}"`
               );
