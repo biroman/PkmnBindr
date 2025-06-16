@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
 import { contactService } from "../services/ContactService";
@@ -52,12 +53,6 @@ const ContactPage = () => {
     featureRequests: { allowed: true, remaining: null, resetTime: null },
     bugReports: { allowed: true, remaining: null, resetTime: null },
   });
-  const [userHistory, setUserHistory] = useState({
-    messages: null,
-    featureRequests: [],
-    bugReports: [],
-    indexBuilding: false,
-  });
 
   // Form setups for each type
   const messageForm = useForm({
@@ -80,13 +75,6 @@ const ContactPage = () => {
     }
   }, [user, rules]);
 
-  // Load user's previous messages/requests on mount
-  useEffect(() => {
-    if (user) {
-      loadUserHistory();
-    }
-  }, [user]);
-
   const checkAllRateLimits = async () => {
     try {
       const [messageLimit, featureLimit, bugLimit] = await Promise.all([
@@ -105,33 +93,6 @@ const ContactPage = () => {
     }
   };
 
-  const loadUserHistory = async () => {
-    try {
-      const [messageThread, featureRequests, bugReports] = await Promise.all([
-        contactService.getUserMessageThread(user.uid),
-        contactService.getUserFeatureRequests(user.uid),
-        contactService.getUserBugReports(user.uid),
-      ]);
-
-      setUserHistory({
-        messages: messageThread,
-        featureRequests: featureRequests.indexBuilding ? [] : featureRequests,
-        bugReports: bugReports.indexBuilding ? [] : bugReports,
-        indexBuilding:
-          featureRequests.indexBuilding || bugReports.indexBuilding,
-      });
-    } catch (error) {
-      console.error("Error loading user history:", error);
-      // Set empty state if there's an error
-      setUserHistory({
-        messages: null,
-        featureRequests: [],
-        bugReports: [],
-        indexBuilding: false,
-      });
-    }
-  };
-
   // Submit handlers
   const handleDirectMessage = async (data) => {
     setIsSubmitting(true);
@@ -144,7 +105,7 @@ const ContactPage = () => {
         rules
       );
       messageForm.reset();
-      await Promise.all([loadUserHistory(), checkAllRateLimits()]);
+      await checkAllRateLimits();
     } catch (error) {
       console.error("Error sending message:", error);
     } finally {
@@ -163,7 +124,7 @@ const ContactPage = () => {
         rules
       );
       featureForm.reset();
-      await Promise.all([loadUserHistory(), checkAllRateLimits()]);
+      await checkAllRateLimits();
     } catch (error) {
       console.error("Error submitting feature request:", error);
     } finally {
@@ -183,7 +144,7 @@ const ContactPage = () => {
         rules
       );
       bugForm.reset({ priority: "medium" });
-      await Promise.all([loadUserHistory(), checkAllRateLimits()]);
+      await checkAllRateLimits();
     } catch (error) {
       console.error("Error submitting bug report:", error);
     } finally {
@@ -271,10 +232,23 @@ const ContactPage = () => {
               <h1 className="text-3xl font-bold text-gray-900 mb-4">
                 Contact Us
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 mb-4">
                 We'd love to hear from you! Get in touch with questions, feature
                 ideas, or report issues.
               </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-md mx-auto">
+                <p className="text-sm text-blue-700">
+                  💡 <strong>Tip:</strong> Track your requests and see their
+                  status in the{" "}
+                  <Link
+                    to="/dashboard"
+                    className="font-medium underline hover:text-blue-800"
+                  >
+                    My Requests
+                  </Link>{" "}
+                  section on your Dashboard
+                </p>
+              </div>
             </div>
 
             {/* Tab Navigation */}
@@ -323,16 +297,6 @@ const ContactPage = () => {
                     Limited
                   </span>
                 )}
-              </button>
-              <button
-                onClick={() => setActiveTab("history")}
-                className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === "history"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700"
-                }`}
-              >
-                📋 My History
               </button>
             </div>
 
@@ -550,207 +514,6 @@ const ContactPage = () => {
                     {isSubmitting ? "Submitting..." : "Submit Bug Report"}
                   </Button>
                 </form>
-              </div>
-            )}
-
-            {activeTab === "history" && (
-              <div className="space-y-8">
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Your Contact History
-                  </h3>
-                  <p className="text-gray-600">
-                    Here's a summary of your previous messages and requests.
-                  </p>
-                  {userHistory.indexBuilding && (
-                    <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <div className="flex items-center justify-center gap-2 text-blue-700">
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-                        <span className="text-sm font-medium">
-                          Setting up your history... This may take a few
-                          minutes.
-                        </span>
-                      </div>
-                      <p className="text-xs text-blue-600 mt-1">
-                        You can still submit new messages and reports!
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Message History */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-gray-900 flex items-center gap-2">
-                    💬 Messages
-                    {userHistory.messages &&
-                      userHistory.messages.messageCount > 0 && (
-                        <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                          {userHistory.messages.messageCount}
-                        </span>
-                      )}
-                  </h4>
-                  {userHistory.messages &&
-                  userHistory.messages.messages?.length > 0 ? (
-                    <div className="bg-gray-50 rounded-lg p-4 space-y-3">
-                      {userHistory.messages.messages
-                        .slice(-3)
-                        .map((message, index) => (
-                          <div
-                            key={message.id}
-                            className={`p-3 rounded-lg ${
-                              message.senderId === "admin"
-                                ? "bg-blue-100 ml-8"
-                                : "bg-white mr-8 border"
-                            }`}
-                          >
-                            <div className="flex justify-between items-start mb-1">
-                              <div className="flex items-center gap-1.5">
-                                <span
-                                  className={`text-sm font-medium ${
-                                    message.senderId === "admin"
-                                      ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
-                                      : "text-gray-900"
-                                  }`}
-                                >
-                                  {message.senderId === "admin"
-                                    ? "Admin"
-                                    : "You"}
-                                </span>
-                                {message.senderId === "admin" && (
-                                  <Crown className="w-3 h-3 text-yellow-500 animate-pulse" />
-                                )}
-                              </div>
-                              <span className="text-xs text-gray-500">
-                                {message.timestamp
-                                  ?.toDate?.()
-                                  ?.toLocaleDateString?.() || "Recent"}
-                              </span>
-                            </div>
-                            <p className="text-sm text-gray-700">
-                              {message.text}
-                            </p>
-                          </div>
-                        ))}
-                      {userHistory.messages.messageCount > 3 && (
-                        <p className="text-center text-sm text-gray-500">
-                          ... and {userHistory.messages.messageCount - 3} more
-                          messages
-                        </p>
-                      )}
-                    </div>
-                  ) : (
-                    <p className="text-gray-500 text-center py-4">
-                      No messages yet.
-                    </p>
-                  )}
-                </div>
-
-                {/* Feature Requests History */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-gray-900 flex items-center gap-2">
-                    💡 Feature Requests
-                    {userHistory.featureRequests.length > 0 && (
-                      <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                        {userHistory.featureRequests.length}
-                      </span>
-                    )}
-                  </h4>
-                  {userHistory.featureRequests.length > 0 ? (
-                    <div className="space-y-3">
-                      {userHistory.featureRequests
-                        .slice(0, 3)
-                        .map((request) => (
-                          <div
-                            key={request.id}
-                            className="bg-green-50 border border-green-200 rounded-lg p-4"
-                          >
-                            <div className="flex justify-between items-start mb-2">
-                              <h5 className="font-medium text-green-900">
-                                {request.title}
-                              </h5>
-                              <span
-                                className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                  request.status === "completed"
-                                    ? "bg-green-100 text-green-800"
-                                    : request.status === "in-progress"
-                                    ? "bg-yellow-100 text-yellow-800"
-                                    : "bg-gray-100 text-gray-800"
-                                }`}
-                              >
-                                {request.status}
-                              </span>
-                            </div>
-                            <p className="text-sm text-green-700 line-clamp-2">
-                              {request.description}
-                            </p>
-                          </div>
-                        ))}
-                    </div>
-                  ) : (
-                    <p className="text-gray-500 text-center py-4">
-                      No feature requests yet.
-                    </p>
-                  )}
-                </div>
-
-                {/* Bug Reports History */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-gray-900 flex items-center gap-2">
-                    🐛 Bug Reports
-                    {userHistory.bugReports.length > 0 && (
-                      <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                        {userHistory.bugReports.length}
-                      </span>
-                    )}
-                  </h4>
-                  {userHistory.bugReports.length > 0 ? (
-                    <div className="space-y-3">
-                      {userHistory.bugReports.slice(0, 3).map((report) => (
-                        <div
-                          key={report.id}
-                          className="bg-red-50 border border-red-200 rounded-lg p-4"
-                        >
-                          <div className="flex justify-between items-start mb-2">
-                            <h5 className="font-medium text-red-900">
-                              {report.title}
-                            </h5>
-                            <div className="flex gap-2">
-                              <span
-                                className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                  report.priority === "high"
-                                    ? "bg-red-100 text-red-800"
-                                    : report.priority === "medium"
-                                    ? "bg-yellow-100 text-yellow-800"
-                                    : "bg-gray-100 text-gray-800"
-                                }`}
-                              >
-                                {report.priority}
-                              </span>
-                              <span
-                                className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                  report.status === "resolved"
-                                    ? "bg-green-100 text-green-800"
-                                    : report.status === "investigating"
-                                    ? "bg-blue-100 text-blue-800"
-                                    : "bg-gray-100 text-gray-800"
-                                }`}
-                              >
-                                {report.status}
-                              </span>
-                            </div>
-                          </div>
-                          <p className="text-sm text-red-700 line-clamp-2">
-                            {report.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <p className="text-gray-500 text-center py-4">
-                      No bug reports yet.
-                    </p>
-                  )}
-                </div>
               </div>
             )}
           </div>

@@ -20,6 +20,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 import AnnouncementWidget from "../components/AnnouncementWidget";
+import RequestCenter from "../components/RequestCenter";
 
 const DashboardPage = () => {
   const { user } = useAuth();
@@ -270,7 +271,11 @@ const DashboardPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Recent Activity */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-8">
+            {/* My Requests Section */}
+            <RequestCenter />
+
+            {/* Recent Binders Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200">
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
