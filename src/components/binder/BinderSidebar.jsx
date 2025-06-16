@@ -12,11 +12,13 @@ import {
   CloudIcon,
   ArrowPathIcon,
   ExclamationTriangleIcon,
+  ArrowUturnLeftIcon,
 } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import PageManager from "./PageManager";
+import RevertConfirmationModal from "./RevertConfirmationModal";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
   const gridSizes = [
@@ -316,7 +318,7 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
   );
 };
 
-const SyncButton = ({ binder }) => {
+const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
   const { saveBinderToCloud, syncStatus } = useBinderContext();
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -345,6 +347,51 @@ const SyncButton = ({ binder }) => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleRevertToLastSave = () => {
+    // Validate user authentication
+    if (!user) {
+      toast.error("Please sign in to revert changes");
+      return;
+    }
+
+    // Validate binder exists
+    if (!binder?.id) {
+      toast.error("No binder available to revert");
+      return;
+    }
+
+    // Check if there's actually a cloud version to revert to
+    if (!binder.sync?.lastSynced) {
+      toast.error(
+        "No cloud save found. This binder has never been saved to the cloud."
+      );
+      return;
+    }
+
+    // Additional check for purely local binders
+    if (syncState === "local" && !binder.sync?.lastSynced) {
+      toast.error(
+        "This binder exists only locally. Save it to the cloud first."
+      );
+      return;
+    }
+
+    // Check if there are actually changes to revert
+    if (!hasUnsyncedChanges()) {
+      toast.info("No unsaved changes to revert");
+      return;
+    }
+
+    // Prevent revert during other operations
+    if (isReverting) {
+      toast.info("Revert operation already in progress");
+      return;
+    }
+
+    // Show the confirmation modal via callback
+    onShowRevertModal();
   };
 
   const getSyncIcon = () => {
@@ -456,6 +503,26 @@ const SyncButton = ({ binder }) => {
     return false;
   };
 
+  const canRevert = () => {
+    // Can only revert if:
+    // 1. User is signed in
+    if (!user) return false;
+
+    // 2. There are unsaved changes to revert
+    if (!hasUnsyncedChanges()) return false;
+
+    // 3. There's a cloud version to revert to
+    // This means the binder has been synced at least once
+    const hasCloudVersion =
+      binder?.sync?.lastSynced &&
+      (syncState === "synced" ||
+        syncState === "error" ||
+        syncState === "conflict" ||
+        (syncState === "local" && binder.sync.lastSynced));
+
+    return hasCloudVersion;
+  };
+
   return (
     <div className="space-y-2">
       {/* Unsaved changes indicator */}
@@ -466,6 +533,7 @@ const SyncButton = ({ binder }) => {
         </div>
       )}
 
+      {/* Save Button */}
       <button
         onClick={handleSaveToCloud}
         disabled={!user || isLoading || binderSyncStatus?.status === "saving"}
@@ -477,6 +545,37 @@ const SyncButton = ({ binder }) => {
           <div className="text-xs opacity-75">{getSyncSubtext()}</div>
         </div>
       </button>
+
+      {/* Revert Button */}
+      {canRevert() && (
+        <button
+          onClick={handleRevertToLastSave}
+          disabled={
+            isReverting ||
+            isLoading ||
+            binderSyncStatus?.status === "saving" ||
+            binderSyncStatus?.status === "downloading" ||
+            !binder?.sync?.lastSynced
+          }
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <div className="flex-shrink-0">
+            {isReverting ? (
+              <ArrowPathIcon className="w-5 h-5 animate-spin" />
+            ) : (
+              <ArrowUturnLeftIcon className="w-5 h-5" />
+            )}
+          </div>
+          <div className="flex-1 text-left">
+            <div className="font-medium text-sm">
+              {isReverting ? "Reverting..." : "Revert to Last Save"}
+            </div>
+            <div className="text-xs opacity-75">
+              {isReverting ? "Please wait..." : "Discard unsaved changes"}
+            </div>
+          </div>
+        </button>
+      )}
     </div>
   );
 };
@@ -488,7 +587,9 @@ const BinderSidebar = ({
   onCollapseChange,
   isCollapsed = false,
 }) => {
-  const { updateBinderMetadata } = useBinderContext();
+  const { updateBinderMetadata, downloadBinderFromCloud } = useBinderContext();
+  const [showRevertModal, setShowRevertModal] = useState(false);
+  const [isReverting, setIsReverting] = useState(false);
 
   const handleToggleCollapse = () => {
     if (onCollapseChange) {
@@ -518,66 +619,129 @@ const BinderSidebar = ({
     });
   };
 
+  const handleConfirmRevert = async () => {
+    if (!binder?.id) {
+      toast.error("No binder ID found");
+      return;
+    }
+
+    // Prevent multiple simultaneous revert operations
+    if (isReverting) {
+      return;
+    }
+
+    setIsReverting(true);
+    setShowRevertModal(false);
+
+    try {
+      const result = await downloadBinderFromCloud(binder.id);
+
+      // Check if the download was successful
+      if (result?.success) {
+        toast.success("Successfully reverted to last saved version");
+      } else {
+        toast.success("Reverted to last saved version");
+      }
+    } catch (error) {
+      console.error("Revert failed:", error);
+
+      // Provide more specific error messages
+      if (error.message?.includes("not found")) {
+        toast.error("Cloud save not found. The binder may have been deleted.");
+      } else if (error.message?.includes("permission")) {
+        toast.error(
+          "Permission denied. You may not have access to this binder."
+        );
+      } else if (
+        error.message?.includes("network") ||
+        error.message?.includes("offline")
+      ) {
+        toast.error(
+          "Network error. Please check your connection and try again."
+        );
+      } else {
+        toast.error("Failed to revert: " + (error.message || "Unknown error"));
+      }
+    } finally {
+      setIsReverting(false);
+    }
+  };
+
   if (!binder) return null;
 
   return (
-    <div
-      className={`fixed top-16 bottom-0 bg-white border-l border-slate-200 transition-all duration-300 z-30 w-80 flex flex-col shadow-lg ${
-        isCollapsed ? "translate-x-full" : "translate-x-0"
-      }`}
-      style={{ right: 0 }}
-    >
-      {/* Sidebar Header */}
-      <div className="p-4 border-b border-slate-200 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Cog6ToothIcon className="w-5 h-5 text-slate-600" />
-          <h3 className="font-semibold text-slate-800">Binder Settings</h3>
-        </div>
-        <button
-          onClick={handleToggleCollapse}
-          className="p-2 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
-          title="Close sidebar"
-        >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+    <>
+      <div
+        className={`fixed top-16 bottom-0 bg-white border-l border-slate-200 transition-all duration-300 z-30 w-80 flex flex-col shadow-lg ${
+          isCollapsed ? "translate-x-full" : "translate-x-0"
+        }`}
+        style={{ right: 0 }}
+      >
+        {/* Sidebar Header */}
+        <div className="p-4 border-b border-slate-200 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Cog6ToothIcon className="w-5 h-5 text-slate-600" />
+            <h3 className="font-semibold text-slate-800">Binder Settings</h3>
+          </div>
+          <button
+            onClick={handleToggleCollapse}
+            className="p-2 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
+            title="Close sidebar"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto p-4 space-y-6">
+          {/* Binder Name Editor */}
+          <BinderNameEditor
+            currentName={binder.metadata.name}
+            onNameChange={onNameChange}
+          />
+
+          {/* Grid Size Selector */}
+          <GridSizeSelector
+            currentSize={binder.settings.gridSize}
+            onSizeChange={onGridSizeChange}
+          />
+
+          {/* Page Manager */}
+          <PageManager binder={binder} />
+
+          {/* Note: Missing card tracking is now handled via hover buttons on individual cards */}
+        </div>
+
+        {/* Sync Button at the bottom */}
+        <div className="border-t border-slate-200 p-4">
+          <SyncButton
+            binder={binder}
+            onShowRevertModal={() => setShowRevertModal(true)}
+            isReverting={isReverting}
+          />
+        </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-6">
-        {/* Binder Name Editor */}
-        <BinderNameEditor
-          currentName={binder.metadata.name}
-          onNameChange={onNameChange}
-        />
-
-        {/* Grid Size Selector */}
-        <GridSizeSelector
-          currentSize={binder.settings.gridSize}
-          onSizeChange={onGridSizeChange}
-        />
-
-        {/* Page Manager */}
-        <PageManager binder={binder} />
-
-        {/* Note: Missing card tracking is now handled via hover buttons on individual cards */}
-      </div>
-
-      {/* Sync Button at the bottom */}
-      <div className="border-t border-slate-200 p-4">
-        <SyncButton binder={binder} />
-      </div>
-    </div>
+      {/* Revert Confirmation Modal - rendered outside sidebar */}
+      <RevertConfirmationModal
+        isOpen={showRevertModal}
+        onClose={() => setShowRevertModal(false)}
+        onConfirm={handleConfirmRevert}
+        binderName={binder?.metadata?.name || "Unnamed Binder"}
+        isLoading={isReverting}
+      />
+    </>
   );
 };
 
