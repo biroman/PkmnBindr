@@ -696,7 +696,7 @@ export const BinderProvider = ({ children }) => {
           } catch (cloudError) {
             console.error("Failed to delete from cloud:", cloudError);
             // Continue with local deletion but warn user
-            toast.error("Failed to delete from cloud, but deleted locally");
+            toast.error("Deleted locally");
           }
         }
 
