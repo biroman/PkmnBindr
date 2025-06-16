@@ -41,6 +41,8 @@ const BinderPage = () => {
     clearBinderCards,
     batchAddCards,
     canAccessBinder,
+    sortBinder,
+    updateAutoSort,
   } = useBinderContext();
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
@@ -338,6 +340,27 @@ const BinderPage = () => {
       toast.success(`Card marked as missing`);
     } else {
       toast.success(`Card marked as collected`);
+    }
+  };
+
+  // Sorting handlers
+  const handleSortChange = async (sortBy) => {
+    if (!currentBinder) return;
+
+    try {
+      await sortBinder(currentBinder.id, sortBy);
+    } catch (error) {
+      console.error("Failed to sort binder:", error);
+    }
+  };
+
+  const handleAutoSortChange = (autoSort) => {
+    if (!currentBinder) return;
+
+    try {
+      updateAutoSort(currentBinder.id, autoSort);
+    } catch (error) {
+      console.error("Failed to update auto-sort:", error);
     }
   };
 
@@ -967,6 +990,8 @@ const BinderPage = () => {
         onGridSizeChange={handleGridSizeChange}
         onNameChange={handleNameChange}
         onCollapseChange={setIsSidebarCollapsed}
+        onSortChange={handleSortChange}
+        onAutoSortChange={handleAutoSortChange}
         isCollapsed={isSidebarCollapsed}
       />
 

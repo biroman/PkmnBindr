@@ -19,6 +19,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import PageManager from "./PageManager";
 import RevertConfirmationModal from "./RevertConfirmationModal";
+import SortControls from "./SortControls";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
   const gridSizes = [
@@ -585,6 +586,8 @@ const BinderSidebar = ({
   onGridSizeChange,
   onNameChange,
   onCollapseChange,
+  onSortChange,
+  onAutoSortChange,
   isCollapsed = false,
 }) => {
   const { updateBinderMetadata, downloadBinderFromCloud } = useBinderContext();
@@ -716,6 +719,20 @@ const BinderSidebar = ({
             currentSize={binder.settings.gridSize}
             onSizeChange={onGridSizeChange}
           />
+
+          {/* Sort Controls */}
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-slate-700">
+              Card Sorting
+            </label>
+            <SortControls
+              currentSortBy={binder.settings?.sortBy || "custom"}
+              autoSort={binder.settings?.autoSort || false}
+              onSortChange={onSortChange}
+              onAutoSortChange={onAutoSortChange}
+              className="w-full"
+            />
+          </div>
 
           {/* Page Manager */}
           <PageManager binder={binder} />

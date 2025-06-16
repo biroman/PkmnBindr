@@ -260,10 +260,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
       />
 
       {/* Results */}
-      <div
-        className="flex-1 overflow-y-auto"
-        style={{ maxHeight: "calc(90vh - 420px)" }}
-      >
+      <div className="flex-1 overflow-y-auto min-h-0">
         <div className="p-6">
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">

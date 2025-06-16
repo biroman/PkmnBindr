@@ -20,6 +20,7 @@ import {
   updateDoc,
   orderBy,
 } from "firebase/firestore";
+import { sortCards } from "../utils/binderSorting";
 
 // Storage keys
 const STORAGE_KEYS = {
@@ -868,8 +869,8 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
-          // Use markBinderAsModified to properly track changes and sync status
-          return markBinderAsModified(
+          // Mark binder as modified
+          let finalBinder = markBinderAsModified(
             updatedBinder,
             "card_added",
             {
@@ -879,6 +880,31 @@ export const BinderProvider = ({ children }) => {
             },
             binder.ownerId
           );
+
+          // Apply auto-sort if enabled and not using custom sorting
+          if (
+            binder.settings?.autoSort &&
+            binder.settings?.sortBy &&
+            binder.settings.sortBy !== "custom"
+          ) {
+            try {
+              const sortedCards = sortCards(
+                finalBinder.cards,
+                binder.settings.sortBy
+              );
+              finalBinder = {
+                ...finalBinder,
+                cards: sortedCards,
+              };
+            } catch (sortError) {
+              console.warn(
+                "Auto-sort failed, card added without sorting:",
+                sortError
+              );
+            }
+          }
+
+          return finalBinder;
         };
 
         setBinders((prev) => prev.map(updateBinder));
@@ -1185,8 +1211,8 @@ export const BinderProvider = ({ children }) => {
             },
           };
 
-          // Use markBinderAsModified to properly track changes and sync status
-          return markBinderAsModified(
+          // Mark binder as modified
+          let finalBinder = markBinderAsModified(
             updatedBinder,
             "cards_batch_added",
             {
@@ -1196,13 +1222,71 @@ export const BinderProvider = ({ children }) => {
             },
             binder.ownerId
           );
+
+          // Apply auto-sort if enabled and not using custom sorting
+          // However, automatically disable auto-sort for complete sets to preserve their intended order
+          const isLikelyCompleteSet = isReplacement || addedCards.length >= 15; // 15+ cards likely indicates a set
+
+          if (
+            binder.settings?.autoSort &&
+            binder.settings?.sortBy &&
+            binder.settings.sortBy !== "custom" &&
+            !isLikelyCompleteSet
+          ) {
+            try {
+              const sortedCards = sortCards(
+                finalBinder.cards,
+                binder.settings.sortBy
+              );
+              finalBinder = {
+                ...finalBinder,
+                cards: sortedCards,
+              };
+            } catch (sortError) {
+              console.warn(
+                "Auto-sort failed, cards added without sorting:",
+                sortError
+              );
+            }
+          } else if (isLikelyCompleteSet && binder.settings?.autoSort) {
+            // Automatically turn off auto-sort when adding complete sets
+            finalBinder = {
+              ...finalBinder,
+              settings: {
+                ...finalBinder.settings,
+                autoSort: false,
+                sortBy: "custom", // Switch to custom order to preserve set order
+              },
+            };
+
+            console.log("Auto-sort disabled: Complete set detected");
+          }
+
+          return finalBinder;
         };
+
+        // Check if auto-sort was disabled before updating binders
+        const binderToCheck =
+          binders.find((b) => b.id === binderId) || currentBinder;
+        const isLikelyCompleteSet = isReplacement || cards.length >= 15;
+        const wasAutoSortDisabled =
+          isLikelyCompleteSet && binderToCheck?.settings?.autoSort;
 
         setBinders((prev) => prev.map(updateBinder));
 
         // Update current binder if it's the one being updated
         if (currentBinder?.id === binderId) {
           setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        // Show notification only once after all updates are complete
+        if (wasAutoSortDisabled && isReplacement) {
+          setTimeout(() => {
+            toast.success("Auto-sort turned off to preserve set order", {
+              duration: 3000,
+              icon: "🎯",
+            });
+          }, 500);
         }
 
         return { success: true, count: cards.length };
@@ -2211,6 +2295,9 @@ export const BinderProvider = ({ children }) => {
       }
 
       try {
+        // Invalidate cache before downloading to ensure fresh data
+        invalidateCache();
+
         setSyncStatus((prev) => ({
           ...prev,
           [binderId]: {
@@ -2226,19 +2313,27 @@ export const BinderProvider = ({ children }) => {
 
         if (result.success) {
           // Update or add binder to local storage
+          let updatedBinders;
           setBinders((prev) => {
             const existingIndex = prev.findIndex((b) => b.id === binderId);
             if (existingIndex >= 0) {
               const updated = [...prev];
               updated[existingIndex] = result.binder;
+              updatedBinders = updated;
               return updated;
             } else {
-              return [...prev, result.binder];
+              updatedBinders = [...prev, result.binder];
+              return updatedBinders;
             }
           });
 
           if (currentBinder?.id === binderId) {
             setCurrentBinder(result.binder);
+          }
+
+          // Update cache with the fresh binder data after state update
+          if (updatedBinders) {
+            setCachedData(updatedBinders);
           }
 
           setSyncStatus((prev) => ({
@@ -2259,7 +2354,7 @@ export const BinderProvider = ({ children }) => {
         throw error;
       }
     },
-    [currentBinder, user]
+    [currentBinder, user, setCachedData, invalidateCache]
   );
 
   const getAllCloudBinders = useCallback(async () => {
@@ -3047,6 +3142,156 @@ export const BinderProvider = ({ children }) => {
     [binders, currentBinder, user]
   );
 
+  // Sorting functionality
+  const sortBinder = useCallback(
+    async (binderId, sortBy) => {
+      if (!binderId) {
+        throw new Error("Binder ID is required");
+      }
+
+      const { sortCards, isValidSortOption } = await import(
+        "../utils/binderSorting"
+      );
+
+      if (!isValidSortOption(sortBy)) {
+        throw new Error(`Invalid sort option: ${sortBy}`);
+      }
+
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          // If sorting to custom, no need to rearrange cards
+          if (sortBy === "custom") {
+            return markBinderAsModified(
+              {
+                ...binder,
+                settings: {
+                  ...binder.settings,
+                  sortBy: "custom",
+                },
+              },
+              "settings_updated",
+              { sortBy: "custom" },
+              user?.uid || binder.ownerId
+            );
+          }
+
+          // Sort the cards
+          const sortedCards = sortCards(binder.cards || {}, sortBy);
+
+          // Update the binder with sorted cards and new setting
+          const updatedBinder = {
+            ...binder,
+            cards: sortedCards,
+            settings: {
+              ...binder.settings,
+              sortBy,
+            },
+          };
+
+          return markBinderAsModified(
+            updatedBinder,
+            "cards_sorted",
+            {
+              sortBy,
+              cardCount: Object.keys(sortedCards).length,
+            },
+            user?.uid || binder.ownerId
+          );
+        };
+
+        // Update binders state and ensure currentBinder is synchronized
+        setBinders((prev) => {
+          const updatedBinders = prev.map(updateBinder);
+
+          // If the current binder is being sorted, update it synchronously
+          if (currentBinder?.id === binderId) {
+            const updatedCurrentBinder = updatedBinders.find(
+              (b) => b.id === binderId
+            );
+            if (updatedCurrentBinder) {
+              setCurrentBinder(updatedCurrentBinder);
+            }
+          }
+
+          return updatedBinders;
+        });
+
+        // Invalidate cache since we modified binder data
+        invalidateCache();
+
+        // Show success message
+        const { getSortDisplayInfo } = await import("../utils/binderSorting");
+        const sortInfo = getSortDisplayInfo(sortBy);
+        toast.success(`Cards sorted by ${sortInfo.label.toLowerCase()}`);
+
+        return true;
+      } catch (error) {
+        console.error("Failed to sort binder:", error);
+        toast.error("Failed to sort cards");
+        throw error;
+      }
+    },
+    [binders, currentBinder, user, invalidateCache]
+  );
+
+  // Update auto-sort setting
+  const updateAutoSort = useCallback(
+    (binderId, autoSort) => {
+      if (!binderId) {
+        throw new Error("Binder ID is required");
+      }
+
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          return markBinderAsModified(
+            {
+              ...binder,
+              settings: {
+                ...binder.settings,
+                autoSort,
+              },
+            },
+            "settings_updated",
+            { autoSort },
+            user?.uid || binder.ownerId
+          );
+        };
+
+        // Update binders state and ensure currentBinder is synchronized
+        setBinders((prev) => {
+          const updatedBinders = prev.map(updateBinder);
+
+          // If the current binder is being updated, update it synchronously
+          if (currentBinder?.id === binderId) {
+            const updatedCurrentBinder = updatedBinders.find(
+              (b) => b.id === binderId
+            );
+            if (updatedCurrentBinder) {
+              setCurrentBinder(updatedCurrentBinder);
+            }
+          }
+
+          return updatedBinders;
+        });
+
+        // Invalidate cache since we modified binder settings
+        invalidateCache();
+
+        toast.success(`Auto-sort ${autoSort ? "enabled" : "disabled"}`);
+        return true;
+      } catch (error) {
+        console.error("Failed to update auto-sort:", error);
+        toast.error("Failed to update auto-sort setting");
+        throw error;
+      }
+    },
+    [binders, currentBinder, user, invalidateCache]
+  );
+
   const value = {
     // State
     binders: visibleBinders, // Only expose visible binders for current user context
@@ -3069,6 +3314,10 @@ export const BinderProvider = ({ children }) => {
     batchMoveCards,
     updateBinderSettings,
     updateBinderMetadata,
+
+    // Sorting Actions
+    sortBinder,
+    updateAutoSort,
 
     // Sync Actions
     saveBinderToCloud,

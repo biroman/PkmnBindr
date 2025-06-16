@@ -15,6 +15,7 @@ const AddCardModal = ({
   const { addCardToBinder, batchAddCards } = useBinderContext();
   const [selectedCards, setSelectedCards] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
   const closeButtonRef = useRef(null);
 
   // Reset selection when modal closes
@@ -121,7 +122,7 @@ const AddCardModal = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col max-h-[95vh]">
+              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col h-[95vh]">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-slate-200 flex-shrink-0">
                   <div>
@@ -154,7 +155,12 @@ const AddCardModal = ({
                 </div>
 
                 {/* Tabs */}
-                <Tab.Group>
+                <Tab.Group
+                  selectedIndex={activeTab}
+                  onChange={setActiveTab}
+                  as="div"
+                  className="flex flex-col flex-1 min-h-0"
+                >
                   <Tab.List className="flex border-b border-slate-200 bg-slate-50 flex-shrink-0">
                     <Tab as={Fragment}>
                       {({ selected }) => (
@@ -185,95 +191,108 @@ const AddCardModal = ({
                   </Tab.List>
 
                   <Tab.Panels className="flex-1 overflow-hidden min-h-0">
-                    <Tab.Panel className="h-full flex flex-col">
-                      <SingleCardTab
-                        selectedCards={selectedCards}
-                        onCardSelect={handleCardSelect}
-                        isCardSelected={isCardSelected}
-                      />
-                      {/* Footer for single cards tab */}
-                      <div className="flex items-center justify-between p-6 border-t border-slate-200 bg-slate-50 flex-shrink-0">
-                        <div className="flex items-center space-x-2">
-                          {selectedCards.length > 0 && (
-                            <>
-                              <span className="text-sm text-slate-600">
-                                {selectedCards.length} card
-                                {selectedCards.length > 1 ? "s" : ""} selected
-                              </span>
-                              <div className="flex -space-x-2">
-                                {selectedCards.slice(0, 3).map((card) => (
-                                  <div
-                                    key={card.id}
-                                    className="w-8 h-10 bg-slate-200 rounded border-2 border-white shadow-sm overflow-hidden"
-                                  >
-                                    {card.image && (
-                                      <img
-                                        src={card.image}
-                                        alt={card.name}
-                                        className="w-full h-full object-cover"
-                                      />
-                                    )}
-                                  </div>
-                                ))}
-                                {selectedCards.length > 3 && (
-                                  <div className="w-8 h-10 bg-slate-300 rounded border-2 border-white shadow-sm flex items-center justify-center">
-                                    <span className="text-slate-600 text-xs">
-                                      +{selectedCards.length - 3}
-                                    </span>
-                                  </div>
-                                )}
-                              </div>
-                            </>
-                          )}
-                        </div>
-
-                        <div className="flex space-x-3">
-                          <button
-                            onClick={onClose}
-                            className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                          >
-                            Cancel
-                          </button>
-                          <button
-                            onClick={handleAddSelectedCards}
-                            disabled={selectedCards.length === 0 || isAdding}
-                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                          >
-                            {isAdding ? (
-                              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                            ) : (
-                              <PlusIcon className="w-4 h-4" />
-                            )}
-                            <span>
-                              {isAdding
-                                ? "Adding..."
-                                : `Add ${selectedCards.length || ""} Card${
-                                    selectedCards.length !== 1 ? "s" : ""
-                                  }`}
-                            </span>
-                          </button>
-                        </div>
+                    <Tab.Panel className="h-full">
+                      <div className="h-full overflow-hidden">
+                        <SingleCardTab
+                          selectedCards={selectedCards}
+                          onCardSelect={handleCardSelect}
+                          isCardSelected={isCardSelected}
+                        />
                       </div>
                     </Tab.Panel>
-                    <Tab.Panel className="h-full flex flex-col">
-                      <SetTab
-                        currentBinder={currentBinder}
-                        onAddCards={handleAddCards}
-                      />
-                      {/* Footer for sets tab */}
-                      <div className="p-6 border-t border-slate-200 bg-slate-50 flex-shrink-0">
-                        <div className="flex justify-end">
-                          <button
-                            onClick={onClose}
-                            className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                          >
-                            Close
-                          </button>
-                        </div>
+                    <Tab.Panel className="h-full">
+                      <div className="h-full overflow-hidden">
+                        <SetTab
+                          currentBinder={currentBinder}
+                          onAddCards={handleAddCards}
+                        />
                       </div>
                     </Tab.Panel>
                   </Tab.Panels>
                 </Tab.Group>
+
+                {/* Sticky Footer - Always visible */}
+                <div className="flex-shrink-0 border-t border-slate-200 bg-slate-50">
+                  {activeTab === 0 && (
+                    /* Footer for single cards tab */
+                    <div className="flex items-center justify-between p-6">
+                      <div className="flex items-center space-x-2">
+                        {selectedCards.length > 0 && (
+                          <>
+                            <span className="text-sm text-slate-600">
+                              {selectedCards.length} card
+                              {selectedCards.length > 1 ? "s" : ""} selected
+                            </span>
+                            <div className="flex -space-x-2">
+                              {selectedCards.slice(0, 3).map((card) => (
+                                <div
+                                  key={card.id}
+                                  className="w-8 h-10 bg-slate-200 rounded border-2 border-white shadow-sm overflow-hidden"
+                                >
+                                  {card.image && (
+                                    <img
+                                      src={card.image}
+                                      alt={card.name}
+                                      className="w-full h-full object-cover"
+                                    />
+                                  )}
+                                </div>
+                              ))}
+                              {selectedCards.length > 3 && (
+                                <div className="w-8 h-10 bg-slate-300 rounded border-2 border-white shadow-sm flex items-center justify-center">
+                                  <span className="text-slate-600 text-xs">
+                                    +{selectedCards.length - 3}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </>
+                        )}
+                      </div>
+
+                      <div className="flex space-x-3">
+                        <button
+                          onClick={onClose}
+                          className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          onClick={handleAddSelectedCards}
+                          disabled={selectedCards.length === 0 || isAdding}
+                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        >
+                          {isAdding ? (
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                          ) : (
+                            <PlusIcon className="w-4 h-4" />
+                          )}
+                          <span>
+                            {isAdding
+                              ? "Adding..."
+                              : `Add ${selectedCards.length || ""} Card${
+                                  selectedCards.length !== 1 ? "s" : ""
+                                }`}
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {activeTab === 1 && (
+                    /* Footer for sets tab */
+                    <div className="p-6">
+                      <div className="flex justify-end">
+                        <button
+                          onClick={onClose}
+                          className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
