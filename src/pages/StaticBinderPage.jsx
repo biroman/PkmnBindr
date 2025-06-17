@@ -220,7 +220,7 @@ const StaticBinderPage = () => {
   // Share functionality
   const handleShare = async () => {
     // Use production domain for sharing, not localhost
-    const productionUrl = `https://pkmnbindr.com/binders/${slug}`;
+    const productionUrl = `https://www.pkmnbindr.com/binders/${slug}`;
 
     const shareData = {
       title: binderData.seo.title,
@@ -254,7 +254,7 @@ const StaticBinderPage = () => {
     ogTitle: binderData?.seo?.title,
     ogDescription: binderData?.seo?.description,
     ogImage: binderData?.seo?.ogImage,
-    ogUrl: `https://pkmnbindr.com/binders/${slug}`,
+    ogUrl: `https://www.pkmnbindr.com/binders/${slug}`,
     canonicalUrl: binderData?.seo?.canonicalUrl,
     structuredData: binderData
       ? {
@@ -262,7 +262,7 @@ const StaticBinderPage = () => {
           "@type": "Collection",
           name: binderData.metadata.name,
           description: binderData.metadata.description,
-          url: `https://pkmnbindr.com/binders/${slug}`,
+          url: `https://www.pkmnbindr.com/binders/${slug}`,
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: binderData.metadata.statistics.cardCount,

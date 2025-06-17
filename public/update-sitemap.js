@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 
 const SITEMAP_PATH = path.join(__dirname, "sitemap.xml");
 const INDEX_PATH = path.join(__dirname, "static-binders", "index.json");
-const DOMAIN = "https://pkmnbindr.com";
+const DOMAIN = "https://www.pkmnbindr.com";
 
 async function updateSitemap() {
   try {

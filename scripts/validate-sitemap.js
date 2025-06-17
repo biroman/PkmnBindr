@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITEMAP_PATH = path.join(__dirname, "../public/sitemap.xml");
-const BASE_URL = "https://pkmnbindr.com";
+const BASE_URL = "https://www.pkmnbindr.com";
 
 function validateSitemap() {
   console.log("🔍 Validating sitemap.xml...\n");

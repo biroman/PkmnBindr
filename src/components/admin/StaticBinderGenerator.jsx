@@ -201,7 +201,7 @@ const StaticBinderGenerator = () => {
       const sitemapEntries = staticBinders
         .map(
           (binder) => `  <url>
-    <loc>https://pkmnbindr.com/binders/${binder.slug}</loc>
+            <loc>https://www.pkmnbindr.com/binders/${binder.slug}</loc>
     <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

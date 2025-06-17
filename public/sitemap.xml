@@ -6,7 +6,7 @@
 
   <!-- Homepage - Main landing page -->
   <url>
-    <loc>https://pkmnbindr.com/</loc>
+    <loc>https://www.pkmnbindr.com/</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,14 +14,14 @@
 
   <!-- Main Application Pages -->
   <url>
-    <loc>https://pkmnbindr.com/binders</loc>
+    <loc>https://www.pkmnbindr.com/binders</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://pkmnbindr.com/dashboard</loc>
+    <loc>https://www.pkmnbindr.com/dashboard</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -29,39 +29,39 @@
 
   <!-- Authentication Pages -->
   <url>
-    <loc>https://pkmnbindr.com/auth/login</loc>
+    <loc>https://www.pkmnbindr.com/auth/login</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://pkmnbindr.com/auth/register</loc>
+    <loc>https://www.pkmnbindr.com/auth/register</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://pkmnbindr.com/auth/forgot-password</loc>
+    <loc>https://www.pkmnbindr.com/auth/forgot-password</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>    <!-- Static Binder Collections - SEO-optimized public pages -->
   <url>
-    <loc>https://pkmnbindr.com/binders/151</loc>
+    <loc>https://www.pkmnbindr.com/binders/151</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pkmnbindr.com/binders/journey-together</loc>
+    <loc>https://www.pkmnbindr.com/binders/journey-together</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pkmnbindr.com/binders/destined-rivals</loc>
+    <loc>https://www.pkmnbindr.com/binders/destined-rivals</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -69,7 +69,7 @@
 
   <!-- Blog Section - Expert guides and educational content -->
   <url>
-    <loc>https://pkmnbindr.com/blog</loc>
+    <loc>https://www.pkmnbindr.com/blog</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -77,7 +77,7 @@
 
   <!-- Blog Post 1: Digital Collection Management -->
   <url>
-    <loc>https://pkmnbindr.com/blog/fort-knox-pokemon-card-binder-guide-2025</loc>
+    <loc>https://www.pkmnbindr.com/blog/fort-knox-pokemon-card-binder-guide-2025</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -85,7 +85,7 @@
 
   <!-- Blog Post 2: Binder Organization Guide -->
   <url>
-    <loc>https://pkmnbindr.com/blog/ultimate-guide-organizing-pokemon-cards</loc>
+    <loc>https://www.pkmnbindr.com/blog/ultimate-guide-organizing-pokemon-cards</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -93,7 +93,7 @@
 
   <!-- Blog Post 3: Binder Types Comparison -->
   <url>
-    <loc>https://pkmnbindr.com/blog/best-pokemon-card-binders-2025-complete-guide</loc>
+    <loc>https://www.pkmnbindr.com/blog/best-pokemon-card-binders-2025-complete-guide</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -101,7 +101,7 @@
 
   <!-- Blog Post 4: Brand Comparison -->
   <url>
-    <loc>https://pkmnbindr.com/blog/ultimate-pokemon-binder-showdown-2025</loc>
+    <loc>https://www.pkmnbindr.com/blog/ultimate-pokemon-binder-showdown-2025</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -109,7 +109,7 @@
 
   <!-- Blog Post 5: Authentication Guide -->
   <url>
-    <loc>https://pkmnbindr.com/blog/how-to-spot-fake-pokemon-cards-protect-collection</loc>
+    <loc>https://www.pkmnbindr.com/blog/how-to-spot-fake-pokemon-cards-protect-collection</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -117,7 +117,7 @@
 
   <!-- Blog Post 6: TCG Tracking Apps -->
   <url>
-    <loc>https://pkmnbindr.com/blog/best-pokemon-tcg-tracking-apps-2025-guide</loc>
+    <loc>https://www.pkmnbindr.com/blog/best-pokemon-tcg-tracking-apps-2025-guide</loc>
     <lastmod>2025-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
