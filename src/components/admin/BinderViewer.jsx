@@ -497,7 +497,13 @@ const BinderViewer = () => {
           >
             {/* Left Page */}
             {pageConfig.leftPage.type === "cover" ? (
-              <CoverPage binder={currentBinder} isReadOnly={true} />
+              <CoverPage
+                binder={currentBinder}
+                isReadOnly={true}
+                backgroundColor={
+                  currentBinder?.settings?.binderColor || "#ffffff"
+                }
+              />
             ) : (
               <CardPage
                 pageNumber={pageConfig.leftPage.pageNumber}
@@ -505,6 +511,9 @@ const BinderViewer = () => {
                 gridSize={currentBinder.settings.gridSize}
                 cardPageIndex={pageConfig.leftPage.cardPageIndex}
                 isReadOnly={true}
+                backgroundColor={
+                  currentBinder?.settings?.binderColor || "#ffffff"
+                }
               />
             )}
 
@@ -518,6 +527,9 @@ const BinderViewer = () => {
               gridSize={currentBinder.settings.gridSize}
               cardPageIndex={pageConfig.rightPage.cardPageIndex}
               isReadOnly={true}
+              backgroundColor={
+                currentBinder?.settings?.binderColor || "#ffffff"
+              }
             />
           </div>
 

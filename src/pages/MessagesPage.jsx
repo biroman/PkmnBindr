@@ -19,161 +19,51 @@ import {
   ChatBubbleLeftRightIcon as ChatSolid,
 } from "@heroicons/react/24/solid";
 
-const MessagesPage = () => {
-  const { user } = useAuth();
-  const isOwner = useOwner();
-  const location = useLocation();
-  const {
-    conversations,
-    unreadCount,
-    loading,
-    error,
-    sendMessage,
-    markAsRead,
-    deleteConversation,
-    startConversation,
-  } = useMessages();
+// Helper function for formatting timestamps
+const formatTimestamp = (timestamp) => {
+  if (!timestamp) return "";
 
-  const [selectedConversation, setSelectedConversation] = useState(null);
-  const [newMessage, setNewMessage] = useState("");
-  const [sendingMessage, setSendingMessage] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
-  const [showNewConversationModal, setShowNewConversationModal] =
-    useState(false);
-  const [preSelectedUser, setPreSelectedUser] = useState(null);
-  const [userProfiles, setUserProfiles] = useState({});
-  const messagesEndRef = useRef(null);
+  try {
+    const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+    const now = new Date();
+    const diffInHours = (now - date) / (1000 * 60 * 60);
 
-  const { messages, loading: messagesLoading } = useConversationMessages(
-    selectedConversation?.id
-  );
-
-  // Handle pre-selected user from navigation state (from admin page)
-  useEffect(() => {
-    if (location.state?.selectedUser && isOwner) {
-      const selectedUser = location.state.selectedUser;
-      setPreSelectedUser(selectedUser);
-      setShowNewConversationModal(true);
-      window.history.replaceState({}, document.title);
+    if (diffInHours < 1) {
+      return "Just now";
+    } else if (diffInHours < 24) {
+      return date.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } else if (diffInHours < 168) {
+      return date.toLocaleDateString([], {
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } else {
+      return date.toLocaleDateString([], { month: "short", day: "numeric" });
     }
-  }, [location.state, isOwner]);
+  } catch (error) {
+    return "";
+  }
+};
 
-  // Auto-scroll to bottom when new messages arrive
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages]);
-
-  // Mark conversation as read when selected
-  useEffect(() => {
-    if (selectedConversation) {
-      const unreadCount = isOwner
-        ? selectedConversation.unreadByAdmin
-        : selectedConversation.unreadByUser;
-
-      if (unreadCount > 0) {
-        markAsRead(selectedConversation.id);
-      }
-    }
-  }, [selectedConversation, markAsRead, isOwner]);
-
-  const handleSendMessage = async (e) => {
-    e.preventDefault();
-    if (!newMessage.trim() || !selectedConversation || sendingMessage) return;
-
-    setSendingMessage(true);
-    try {
-      const result = await sendMessage(selectedConversation.id, newMessage);
-      if (result.success) {
-        setNewMessage("");
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-    } finally {
-      setSendingMessage(false);
-    }
-  };
-
-  const handleDeleteConversation = async (conversationId) => {
-    if (
-      !window.confirm(
-        "Are you sure you want to delete this conversation? This action cannot be undone."
-      )
-    ) {
-      return;
-    }
-
-    try {
-      await deleteConversation(conversationId);
-      if (selectedConversation?.id === conversationId) {
-        setSelectedConversation(null);
-      }
-      setDropdownOpen(null);
-    } catch (error) {
-      console.error("Error deleting conversation:", error);
-    }
-  };
-
-  const handleStartNewConversation = async (message) => {
-    if (!preSelectedUser || !message.trim()) return;
-
-    setSendingMessage(true);
-    try {
-      const result = await startConversation(
-        preSelectedUser.uid,
-        preSelectedUser.displayName || preSelectedUser.email,
-        preSelectedUser.email,
-        message
-      );
-
-      if (result.success) {
-        setShowNewConversationModal(false);
-        setPreSelectedUser(null);
-      }
-    } catch (error) {
-      console.error("Error starting conversation:", error);
-    } finally {
-      setSendingMessage(false);
-    }
-  };
-
-  const formatTimestamp = (timestamp) => {
-    if (!timestamp) return "";
-
-    try {
-      const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
-      const now = new Date();
-      const diffInHours = (now - date) / (1000 * 60 * 60);
-
-      if (diffInHours < 1) {
-        return "Just now";
-      } else if (diffInHours < 24) {
-        return date.toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-        });
-      } else if (diffInHours < 168) {
-        return date.toLocaleDateString([], {
-          weekday: "short",
-          hour: "2-digit",
-          minute: "2-digit",
-        });
-      } else {
-        return date.toLocaleDateString([], { month: "short", day: "numeric" });
-      }
-    } catch (error) {
-      return "";
-    }
-  };
-
-  const ConversationItem = ({ conversation }) => {
+// Memoized ConversationItem component
+const ConversationItem = React.memo(
+  ({
+    conversation,
+    isOwner,
+    isSelected,
+    userProfiles,
+    setUserProfiles,
+    onSelect,
+  }) => {
     const [otherUserProfile, setOtherUserProfile] = useState(null);
     const unreadCount = isOwner
       ? conversation.unreadByAdmin || 0
       : conversation.unreadByUser || 0;
 
-    const isSelected = selectedConversation?.id === conversation.id;
     const otherUserName = isOwner
       ? conversation.userName
       : conversation.adminName;
@@ -219,14 +109,20 @@ const MessagesPage = () => {
       if (conversation?.id) {
         fetchProfile();
       }
-    }, [conversation?.id, isOwner, userProfiles, otherUserName]);
+    }, [
+      conversation?.id,
+      isOwner,
+      userProfiles,
+      otherUserName,
+      setUserProfiles,
+    ]);
 
     return (
       <div
         className={`p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors ${
           isSelected ? "bg-blue-50 border-blue-200" : ""
         }`}
-        onClick={() => setSelectedConversation(conversation)}
+        onClick={() => onSelect(conversation)}
       >
         <div className="flex items-center space-x-3">
           <div className="relative">
@@ -282,9 +178,14 @@ const MessagesPage = () => {
         </div>
       </div>
     );
-  };
+  }
+);
 
-  const MessageItem = ({ message }) => {
+ConversationItem.displayName = "ConversationItem";
+
+// Memoized MessageItem component
+const MessageItem = React.memo(
+  ({ message, user, isOwner, selectedConversation, userProfiles }) => {
     const [messageUserProfile, setMessageUserProfile] = useState(null);
     const isFromCurrentUser = message.senderId === user?.uid;
     const isFromOwner = message.isAdmin && isOwner && isFromCurrentUser;
@@ -343,6 +244,11 @@ const MessagesPage = () => {
       selectedConversation?.id,
       user?.uid,
       isOwner,
+      selectedConversation?.userId,
+      selectedConversation?.adminId,
+      selectedConversation?.userName,
+      selectedConversation?.adminName,
+      userProfiles,
     ]);
 
     if (!messageUserProfile) {
@@ -409,7 +315,7 @@ const MessagesPage = () => {
                 </div>
               )}
 
-              <p className="text-sm">{message.message}</p>
+              <p className="text-sm whitespace-pre-wrap">{message.message}</p>
               <p
                 className={`text-xs mt-1 ${
                   isFromCurrentUser
@@ -428,6 +334,164 @@ const MessagesPage = () => {
         </div>
       </div>
     );
+  }
+);
+
+MessageItem.displayName = "MessageItem";
+
+const MessagesPage = () => {
+  const { user } = useAuth();
+  const isOwner = useOwner();
+  const location = useLocation();
+  const {
+    conversations,
+    unreadCount,
+    loading,
+    error,
+    sendMessage,
+    markAsRead,
+    deleteConversation,
+    startConversation,
+  } = useMessages();
+
+  const [selectedConversation, setSelectedConversation] = useState(null);
+  const [newMessage, setNewMessage] = useState("");
+  const [sendingMessage, setSendingMessage] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [showNewConversationModal, setShowNewConversationModal] =
+    useState(false);
+  const [preSelectedUser, setPreSelectedUser] = useState(null);
+  const [userProfiles, setUserProfiles] = useState({});
+  const messagesEndRef = useRef(null);
+
+  const { messages, loading: messagesLoading } = useConversationMessages(
+    selectedConversation?.id
+  );
+
+  // Handle pre-selected user from navigation state (from admin page)
+  useEffect(() => {
+    if (location.state?.selectedUser && isOwner) {
+      const selectedUser = location.state.selectedUser;
+      setPreSelectedUser(selectedUser);
+      setShowNewConversationModal(true);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state, isOwner]);
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
+
+  // Auto-scroll to bottom when entering a conversation
+  useEffect(() => {
+    if (
+      selectedConversation &&
+      !messagesLoading &&
+      messages.length > 0 &&
+      messagesEndRef.current
+    ) {
+      // Use a small timeout to ensure DOM has rendered
+      setTimeout(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "instant" });
+      }, 100);
+    }
+  }, [selectedConversation?.id, messagesLoading, messages.length]);
+
+  // Mark conversation as read when selected
+  useEffect(() => {
+    if (selectedConversation) {
+      const unreadCount = isOwner
+        ? selectedConversation.unreadByAdmin
+        : selectedConversation.unreadByUser;
+
+      if (unreadCount > 0) {
+        markAsRead(selectedConversation.id);
+      }
+    }
+  }, [selectedConversation, markAsRead, isOwner]);
+
+  const handleSendMessage = async (e) => {
+    e.preventDefault();
+    if (!newMessage.trim() || !selectedConversation || sendingMessage) return;
+
+    setSendingMessage(true);
+    try {
+      const result = await sendMessage(selectedConversation.id, newMessage);
+      if (result.success) {
+        setNewMessage("");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+    } finally {
+      setSendingMessage(false);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage(e);
+    }
+  };
+
+  const handleDeleteConversation = async (conversationId) => {
+    if (
+      !window.confirm(
+        "Are you sure you want to delete this conversation? This action cannot be undone."
+      )
+    ) {
+      return;
+    }
+
+    try {
+      await deleteConversation(conversationId);
+      if (selectedConversation?.id === conversationId) {
+        setSelectedConversation(null);
+      }
+      setDropdownOpen(null);
+    } catch (error) {
+      console.error("Error deleting conversation:", error);
+    }
+  };
+
+  const handleStartNewConversation = async (message) => {
+    if (!preSelectedUser || !message.trim()) return;
+
+    setSendingMessage(true);
+    try {
+      const result = await startConversation(
+        preSelectedUser.uid,
+        preSelectedUser.displayName || preSelectedUser.email,
+        preSelectedUser.email,
+        message
+      );
+
+      if (result.success) {
+        setShowNewConversationModal(false);
+        setPreSelectedUser(null);
+      }
+    } catch (error) {
+      console.error("Error starting conversation:", error);
+    } finally {
+      setSendingMessage(false);
+    }
+  };
+
+  const handleNewConversationKeyDown = (e) => {
+    if (e.key === "Enter" && e.ctrlKey) {
+      e.preventDefault();
+      const form = e.target.closest("form");
+      if (form) {
+        const formData = new FormData(form);
+        const message = formData.get("message");
+        if (message.trim()) {
+          handleStartNewConversation(message);
+        }
+      }
+    }
   };
 
   if (!user) {
@@ -527,6 +591,11 @@ const MessagesPage = () => {
                     <ConversationItem
                       key={conversation.id}
                       conversation={conversation}
+                      isOwner={isOwner}
+                      isSelected={selectedConversation?.id === conversation.id}
+                      userProfiles={userProfiles}
+                      setUserProfiles={setUserProfiles}
+                      onSelect={setSelectedConversation}
                     />
                   ))
                 )}
@@ -629,7 +698,14 @@ const MessagesPage = () => {
                       </div>
                     ) : (
                       messages.map((message) => (
-                        <MessageItem key={message.id} message={message} />
+                        <MessageItem
+                          key={message.id}
+                          message={message}
+                          user={user}
+                          isOwner={isOwner}
+                          selectedConversation={selectedConversation}
+                          userProfiles={userProfiles}
+                        />
                       ))
                     )}
                     <div ref={messagesEndRef} />
@@ -639,20 +715,31 @@ const MessagesPage = () => {
                   <div className="p-4 border-t border-gray-200 bg-gray-50">
                     <form
                       onSubmit={handleSendMessage}
-                      className="flex space-x-3"
+                      className="flex space-x-3 items-end"
                     >
-                      <input
-                        type="text"
+                      <textarea
                         value={newMessage}
                         onChange={(e) => setNewMessage(e.target.value)}
+                        onKeyDown={handleKeyDown}
                         placeholder="Type your message..."
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none min-h-[2.5rem] max-h-32 overflow-y-auto"
                         disabled={sendingMessage}
+                        rows={1}
+                        style={{
+                          height: "auto",
+                          minHeight: "2.5rem",
+                        }}
+                        onInput={(e) => {
+                          // Auto-resize textarea
+                          e.target.style.height = "auto";
+                          e.target.style.height =
+                            Math.min(e.target.scrollHeight, 128) + "px";
+                        }}
                       />
                       <Button
                         type="submit"
                         disabled={!newMessage.trim() || sendingMessage}
-                        className="px-4 py-2"
+                        className="px-4 py-2 flex-shrink-0"
                       >
                         {sendingMessage ? (
                           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -661,6 +748,17 @@ const MessagesPage = () => {
                         )}
                       </Button>
                     </form>
+                    <p className="text-xs text-gray-500 mt-2">
+                      Press{" "}
+                      <kbd className="px-1 py-0.5 bg-gray-200 rounded text-xs">
+                        Shift + Enter
+                      </kbd>{" "}
+                      for new line,{" "}
+                      <kbd className="px-1 py-0.5 bg-gray-200 rounded text-xs">
+                        Enter
+                      </kbd>{" "}
+                      to send
+                    </p>
                   </div>
                 </>
               ) : (
@@ -745,10 +843,15 @@ const MessagesPage = () => {
                     rows={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                     disabled={sendingMessage}
+                    onKeyDown={handleNewConversationKeyDown}
                     required
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    This will start a new conversation with the user.
+                    This will start a new conversation with the user. Press{" "}
+                    <kbd className="px-1 py-0.5 bg-gray-200 rounded text-xs">
+                      Ctrl + Enter
+                    </kbd>{" "}
+                    to send quickly.
                   </p>
                 </div>
 

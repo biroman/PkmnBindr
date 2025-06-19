@@ -41,10 +41,29 @@ export class AdminOptimizedService {
       );
 
       const usersSnapshot = await getDocs(usersQuery);
-      const users = usersSnapshot.docs.map((doc) => ({
-        uid: doc.id,
-        ...doc.data(),
-      }));
+      const users = usersSnapshot.docs.map((doc) => {
+        const userData = doc.data();
+        return {
+          // Ensure all required fields have default values and convert timestamps properly
+          uid: userData.uid || doc.id,
+          email: userData.email || "Unknown",
+          displayName:
+            userData.displayName || userData.email?.split("@")[0] || "User",
+          photoURL: userData.photoURL || null,
+          role: userData.role || "user",
+          status: userData.status || "active",
+          binderCount: userData.binderCount || 0,
+          cardCount: userData.cardCount || 0,
+          // Convert Firestore timestamps to JavaScript dates
+          createdAt: userData.createdAt?.toDate() || new Date(),
+          lastSignIn: userData.lastSignIn?.toDate() || new Date(),
+          lastSeen:
+            userData.lastSeen?.toDate() ||
+            userData.lastSignIn?.toDate() ||
+            new Date(),
+          updatedAt: userData.updatedAt?.toDate() || new Date(),
+        };
+      });
 
       // If we need stats and aggregation is available, use it
       if (useAggregation && includeBatchStats) {
@@ -78,6 +97,10 @@ export class AdminOptimizedService {
 
       // For user stats, if we have all users, calculate locally to avoid extra requests
       if (includeBatchStats) {
+        const now = new Date();
+        const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+        const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+
         const stats = {
           total: users.length,
           active: users.filter((u) => u.status === "active").length,
@@ -85,10 +108,13 @@ export class AdminOptimizedService {
           admins: users.filter((u) => u.role === "admin" || u.role === "owner")
             .length,
           lastWeekSignups: users.filter((u) => {
-            const weekAgo = new Date();
-            weekAgo.setDate(weekAgo.getDate() - 7);
-            return new Date(u.createdAt?.toDate?.() || u.createdAt) > weekAgo;
+            return u.createdAt > weekAgo; // dates are already converted
           }).length,
+          lastMonthSignups: users.filter((u) => {
+            return u.createdAt > monthAgo;
+          }).length,
+          totalBinders: users.reduce((sum, u) => sum + (u.binderCount || 0), 0),
+          totalCards: users.reduce((sum, u) => sum + (u.cardCount || 0), 0),
         };
 
         return { users, stats };
@@ -111,28 +137,28 @@ export class AdminOptimizedService {
 
       // Use Promise.all to make parallel requests instead of sequential
       const [messageThreads, featureRequests, bugReports] = await Promise.all([
-        // Messages query
+        // Messages query - using correct collection path
         getDocs(
           query(
-            collection(db, "contact", "global", "messages"),
+            collection(db, "directMessages"),
             orderBy("timestamp", "desc"),
             limit(messageLimit)
           )
         ),
 
-        // Feature requests query
+        // Feature requests query - using correct collection path
         getDocs(
           query(
-            collection(db, "contact", "global", "feature-requests"),
+            collection(db, "featureRequests"),
             orderBy("timestamp", "desc"),
             limit(featureLimit)
           )
         ),
 
-        // Bug reports query
+        // Bug reports query - using correct collection path
         getDocs(
           query(
-            collection(db, "contact", "global", "bug-reports"),
+            collection(db, "bugReports"),
             orderBy("timestamp", "desc"),
             limit(bugLimit)
           )

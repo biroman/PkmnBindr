@@ -5,8 +5,25 @@ service cloud.firestore {
     // Helper function to check if user is owner
     function isOwner() {
       return request.auth != null && 
-             request.auth.token.email != null &&
-             request.auth.token.email == 'eivind-buodd@hotmail.com';
+             getUserRole(request.auth.uid) == 'owner';
+    }
+
+    // Helper function to check if user is admin or owner
+    function isAdmin() {
+      return request.auth != null && 
+             (getUserRole(request.auth.uid) == 'admin' || isOwner());
+    }
+
+    // Helper function to check if user is moderator or higher
+    function isModerator() {
+      return request.auth != null && 
+             (getUserRole(request.auth.uid) in ['moderator', 'admin', 'owner']);
+    }
+
+    // Helper function to get user role
+    function getUserRole(userId) {
+      return exists(/databases/$(database)/documents/users/$(userId)) ?
+             get(/databases/$(database)/documents/users/$(userId)).data.get('role', 'user') : 'user';
     }
 
     // Helper function to validate string length

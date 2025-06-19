@@ -1,5 +1,58 @@
 import { z } from "zod";
 
+// =====================================
+// ROLE SYSTEM (What you can DO)
+// =====================================
+
+export const USER_ROLES = {
+  USER: "user",
+  MODERATOR: "moderator",
+  ADMIN: "admin",
+  OWNER: "owner",
+};
+
+// Role-based permissions (what features each role can access)
+export const ROLE_PERMISSIONS = {
+  [USER_ROLES.USER]: {
+    canModerateContent: false,
+    canViewAllBinders: false,
+    canManageUsers: false,
+    canManageSystem: false,
+    canViewAnalytics: false,
+    maxSupportPriority: "normal",
+  },
+  [USER_ROLES.MODERATOR]: {
+    canModerateContent: true,
+    canViewAllBinders: false, // Can see reported content only
+    canManageUsers: false,
+    canManageSystem: false,
+    canViewAnalytics: false,
+    maxSupportPriority: "high",
+  },
+  [USER_ROLES.ADMIN]: {
+    canModerateContent: true,
+    canViewAllBinders: true,
+    canManageUsers: true,
+    canManageSystem: true,
+    canViewAnalytics: true,
+    maxSupportPriority: "urgent",
+  },
+  [USER_ROLES.OWNER]: {
+    canModerateContent: true,
+    canViewAllBinders: true,
+    canManageUsers: true,
+    canManageSystem: true,
+    canViewAnalytics: true,
+    canManageRoles: true,
+    canEmergencyControls: true,
+    maxSupportPriority: "critical",
+  },
+};
+
+// =====================================
+// SUBSCRIPTION SYSTEM (What LIMITS you have)
+// =====================================
+
 // Simple subscription tiers focused on covering Firebase costs
 export const SUBSCRIPTION_TIERS = {
   free: {
@@ -145,6 +198,40 @@ export const SUBSCRIPTION_TIERS = {
     badges: ["🚀", "Power User"],
     highlight: false,
   },
+};
+
+// =====================================
+// COMBINED ROLE + SUBSCRIPTION UTILITIES
+// =====================================
+
+/**
+ * Get effective user permissions combining role + subscription
+ * @param {Object} user - User object with role and subscription info
+ * @returns {Object} - Combined permissions and limits
+ */
+export const getUserEffectivePermissions = (user) => {
+  const role = user?.role || USER_ROLES.USER;
+  const subscriptionTier = user?.subscriptionTier || "free";
+
+  const rolePermissions =
+    ROLE_PERMISSIONS[role] || ROLE_PERMISSIONS[USER_ROLES.USER];
+  const subscriptionLimits =
+    SUBSCRIPTION_TIERS[subscriptionTier] || SUBSCRIPTION_TIERS.free;
+
+  return {
+    // Role-based permissions (what you can do)
+    role: role,
+    permissions: rolePermissions,
+
+    // Subscription-based limits (how much you can do)
+    subscription: subscriptionTier,
+    limits: subscriptionLimits.features,
+    restrictions: subscriptionLimits.restrictions,
+
+    // Special overrides for staff
+    isStaff: role !== USER_ROLES.USER,
+    hasUnlimitedLimits: role === USER_ROLES.ADMIN || role === USER_ROLES.OWNER,
+  };
 };
 
 // Subscription status definitions
