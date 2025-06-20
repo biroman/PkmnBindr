@@ -4,6 +4,7 @@ Allow: /binders
 Allow: /binders/*
 Allow: /blog
 Allow: /blog/*
+Allow: /faq
 Allow: /dashboard
 Disallow: /admin
 Disallow: /admin/*
@@ -20,6 +21,7 @@ User-agent: Googlebot
 Allow: /
 Allow: /blog
 Allow: /blog/*
+Allow: /faq
 Disallow: /admin
 Disallow: /admin/*
 Disallow: /api/
@@ -28,6 +30,7 @@ User-agent: Bingbot
 Allow: /
 Allow: /blog
 Allow: /blog/*
+Allow: /faq
 Disallow: /admin
 Disallow: /admin/*
 Disallow: /api/

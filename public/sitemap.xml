@@ -123,6 +123,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- FAQ Page - Comprehensive answers about Pokemon card organization -->
+  <url>
+    <loc>https://www.pkmnbindr.com/faq</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Note: Individual user binder pages (/binder/:id) are excluded as they contain user-specific content -->
   <!-- Note: Protected pages (/profile, /admin, /rules) are excluded as they require authentication -->
   <!-- Note: Additional static binder pages will be added here as they are created -->

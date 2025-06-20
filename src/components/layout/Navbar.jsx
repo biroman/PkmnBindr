@@ -25,6 +25,7 @@ import {
   InboxIcon,
   ChartBarIcon,
   ShieldCheckIcon,
+  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import {
   HomeIcon as HomeSolid,
@@ -36,6 +37,7 @@ import {
   InboxIcon as InboxSolid,
   ChartBarIcon as ChartBarSolid,
   ShieldCheckIcon as ShieldCheckSolid,
+  QuestionMarkCircleIcon as QuestionMarkCircleSolid,
 } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
@@ -124,6 +126,13 @@ const Navbar = () => {
           icon: BookOpenIcon,
           solidIcon: BookOpenSolid,
           active: isActive("/blog"),
+        },
+        {
+          name: "FAQ",
+          href: "/faq",
+          icon: QuestionMarkCircleIcon,
+          solidIcon: QuestionMarkCircleSolid,
+          active: isActive("/faq"),
         },
       ]
     : [];

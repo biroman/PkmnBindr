@@ -39,6 +39,7 @@ import BlogPost3 from "./pages/BlogPost3";
 import BlogPost4 from "./pages/BlogPost4";
 import BlogPost5 from "./pages/BlogPost5";
 import BlogPost6 from "./pages/BlogPost6";
+import FAQPage from "./pages/FAQPage";
 import MessagesPage from "./pages/MessagesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -114,6 +115,9 @@ const App = () => {
                       path="blog/best-pokemon-tcg-tracking-apps-2025-guide"
                       element={<BlogPost6 />}
                     />
+
+                    {/* FAQ - Accessible to everyone */}
+                    <Route path="faq" element={<FAQPage />} />
 
                     {/* Auth Routes - Only accessible when not logged in */}
                     <Route element={<PublicRoute />}>
