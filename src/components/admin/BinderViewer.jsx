@@ -10,6 +10,8 @@ import { fetchBinderForAdminView } from "../../utils/userManagement";
 import useBinderDimensions, {
   getGridConfig,
 } from "../../hooks/useBinderDimensions";
+import { useAuth } from "../../hooks/useAuth";
+import { useRole } from "../../contexts/RoleContext";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -22,9 +24,12 @@ import {
   WrenchScrewdriverIcon,
   PhotoIcon,
 } from "@heroicons/react/24/outline";
+import { Navigate } from "react-router-dom";
 
 const BinderViewer = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const { isOwner, isAdmin, loading: roleLoading } = useRole();
   const { userId, binderId, source } = useParams();
   const [currentBinder, setCurrentBinder] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +38,27 @@ const BinderViewer = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showRepairTool, setShowRepairTool] = useState(false);
   const [showImageUpdateTool, setShowImageUpdateTool] = useState(false);
+
+  // Early authentication and authorization check
+  if (!user) {
+    return <Navigate to="/auth/login" replace />;
+  }
+
+  if (roleLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Checking permissions...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // CRITICAL: Only owners and admins can access binder viewer
+  if (!isOwner && !isAdmin) {
+    return <Navigate to="/dashboard" replace />;
+  }
 
   // Custom hook for binder dimensions (same as BinderPage)
   const binderDimensions = useBinderDimensions(
@@ -143,7 +169,8 @@ const BinderViewer = () => {
         const binderData = await fetchBinderForAdminView(
           binderId,
           userId,
-          source
+          source,
+          user.uid // Pass requesting user ID for security check
         );
 
         setCurrentBinder(binderData);
@@ -212,7 +239,8 @@ const BinderViewer = () => {
         const binderData = await fetchBinderForAdminView(
           binderId,
           userId,
-          source
+          source,
+          user.uid // Pass requesting user ID for security check
         );
         setCurrentBinder(binderData);
         toast.success("Binder refreshed with repaired cards!");
@@ -231,7 +259,8 @@ const BinderViewer = () => {
         const binderData = await fetchBinderForAdminView(
           binderId,
           userId,
-          source
+          source,
+          user.uid // Pass requesting user ID for security check
         );
         setCurrentBinder(binderData);
         toast.success("Binder refreshed with updated images!");

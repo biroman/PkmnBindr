@@ -6,6 +6,7 @@ import {
   useCallback,
 } from "react";
 import { useAuth } from "../hooks/useAuth";
+import { useRole } from "./RoleContext";
 import { rulesService } from "../services/rulesService";
 import {
   checkRateLimit,
@@ -27,6 +28,7 @@ export const useRules = () => {
 
 export const RulesProvider = ({ children }) => {
   const { user } = useAuth();
+  const { isOwner: isRoleOwner } = useRole();
   const [rules, setRules] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -320,11 +322,11 @@ export const RulesProvider = ({ children }) => {
   );
 
   // Admin functions (only for owner)
-  const isOwner = user && rulesService.isOwner(user);
+  // isOwner is now provided by RoleContext
 
   const createRule = useCallback(
     async (ruleData) => {
-      if (!isOwner) {
+      if (!isRoleOwner) {
         throw new Error("Only owner can create rules");
       }
 
@@ -335,12 +337,12 @@ export const RulesProvider = ({ children }) => {
         throw error;
       }
     },
-    [user, isOwner]
+    [user, isRoleOwner]
   );
 
   const updateRule = useCallback(
     async (ruleId, updates) => {
-      if (!isOwner) {
+      if (!isRoleOwner) {
         throw new Error("Only owner can update rules");
       }
 
@@ -351,12 +353,12 @@ export const RulesProvider = ({ children }) => {
         throw error;
       }
     },
-    [user, isOwner]
+    [user, isRoleOwner]
   );
 
   const deleteRule = useCallback(
     async (ruleId) => {
-      if (!isOwner) {
+      if (!isRoleOwner) {
         throw new Error("Only owner can delete rules");
       }
 
@@ -367,12 +369,12 @@ export const RulesProvider = ({ children }) => {
         throw error;
       }
     },
-    [isOwner]
+    [isRoleOwner]
   );
 
   const toggleRule = useCallback(
     async (ruleId, enabled) => {
-      if (!isOwner) {
+      if (!isRoleOwner) {
         throw new Error("Only owner can toggle rules");
       }
 
@@ -383,12 +385,12 @@ export const RulesProvider = ({ children }) => {
         throw error;
       }
     },
-    [isOwner]
+    [isRoleOwner]
   );
 
   const getRuleStats = useCallback(
     async (ruleId) => {
-      if (!isOwner) {
+      if (!isRoleOwner) {
         throw new Error("Only owner can view rule stats");
       }
 
@@ -399,7 +401,7 @@ export const RulesProvider = ({ children }) => {
         return null;
       }
     },
-    [isOwner]
+    [isRoleOwner]
   );
 
   // Helper functions for specific rule types
@@ -419,7 +421,7 @@ export const RulesProvider = ({ children }) => {
     rules,
     loading,
     error,
-    isOwner,
+    isOwner: isRoleOwner,
 
     // Rule enforcement
     enforceRule,

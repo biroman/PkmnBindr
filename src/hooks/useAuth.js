@@ -52,8 +52,29 @@ export const useAuth = () => {
   };
 };
 
+// Deprecated: Use useRole hook from RoleContext instead
 export const useOwner = () => {
   const user = useAuthStore((state) => state.user);
-  const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-  return user?.email === ownerEmail;
+  return user?.role === "owner";
+};
+
+// New role-based hooks (recommended)
+export const useRole = () => {
+  const user = useAuthStore((state) => state.user);
+  return user?.role || "user";
+};
+
+export const useIsOwner = () => {
+  const user = useAuthStore((state) => state.user);
+  return user?.role === "owner";
+};
+
+export const useIsAdmin = () => {
+  const user = useAuthStore((state) => state.user);
+  return ["admin", "owner"].includes(user?.role);
+};
+
+export const useIsModerator = () => {
+  const user = useAuthStore((state) => state.user);
+  return ["moderator", "admin", "owner"].includes(user?.role);
 };

@@ -59,6 +59,9 @@ class FirebaseBinderService {
         }
       }
 
+      // Get current document data to preserve interaction fields
+      const currentData = serverDoc.exists() ? serverDoc.data() : {};
+
       // Prepare data for Firebase (add server timestamp)
       const firebaseData = {
         ...binder,
@@ -70,6 +73,15 @@ class FirebaseBinderService {
           pendingChanges: [],
           lastError: null,
         },
+        // CRITICAL: Preserve interaction data from current document
+        likes: currentData.likes || [],
+        likeCount: currentData.likeCount || 0,
+        views: currentData.views || [],
+        viewCount: currentData.viewCount || 0,
+        favoriteUsers: currentData.favoriteUsers || [],
+        favoriteCount: currentData.favoriteCount || 0,
+        lastInteraction: currentData.lastInteraction || null,
+        lastViewed: currentData.lastViewed || null,
       };
 
       await setDoc(binderRef, firebaseData);
@@ -90,9 +102,26 @@ class FirebaseBinderService {
     const batch = writeBatch(db);
     const results = [];
 
+    // First, get current documents to preserve interaction data
+    const currentDocs = new Map();
     for (const binder of binders) {
       try {
         const binderRef = this.getBinderRef(binder.id);
+        const currentDoc = await getDoc(binderRef);
+        currentDocs.set(
+          binder.id,
+          currentDoc.exists() ? currentDoc.data() : {}
+        );
+      } catch (error) {
+        currentDocs.set(binder.id, {});
+      }
+    }
+
+    for (const binder of binders) {
+      try {
+        const binderRef = this.getBinderRef(binder.id);
+        const currentData = currentDocs.get(binder.id) || {};
+
         const firebaseData = {
           ...binder,
           lastModified: serverTimestamp(),
@@ -102,6 +131,15 @@ class FirebaseBinderService {
             lastSynced: serverTimestamp(),
             pendingChanges: [],
           },
+          // CRITICAL: Preserve interaction data from current document
+          likes: currentData.likes || [],
+          likeCount: currentData.likeCount || 0,
+          views: currentData.views || [],
+          viewCount: currentData.viewCount || 0,
+          favoriteUsers: currentData.favoriteUsers || [],
+          favoriteCount: currentData.favoriteCount || 0,
+          lastInteraction: currentData.lastInteraction || null,
+          lastViewed: currentData.lastViewed || null,
         };
 
         batch.set(binderRef, firebaseData);
@@ -250,6 +288,15 @@ class FirebaseBinderService {
         pendingChanges: [],
         conflictData: null,
       },
+      // CRITICAL: Always preserve interaction data from server (most up-to-date)
+      likes: serverBinder.likes || [],
+      likeCount: serverBinder.likeCount || 0,
+      views: serverBinder.views || [],
+      viewCount: serverBinder.viewCount || 0,
+      favoriteUsers: serverBinder.favoriteUsers || [],
+      favoriteCount: serverBinder.favoriteCount || 0,
+      lastInteraction: serverBinder.lastInteraction || null,
+      lastViewed: serverBinder.lastViewed || null,
     };
   }
 

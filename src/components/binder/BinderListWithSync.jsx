@@ -8,6 +8,7 @@ import {
   TrashIcon,
   ArrowPathIcon,
 } from "@heroicons/react/24/outline";
+import ShareButton from "./ShareButton";
 import { toast } from "react-hot-toast";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useAuth } from "../../hooks/useAuth";
@@ -357,6 +358,13 @@ const BinderListWithSync = ({ onSelectBinder, onCreateBinder }) => {
                   </div>
 
                   <div className="flex gap-2">
+                    {/* Share Button for Public Binders */}
+                    <ShareButton
+                      currentBinder={binder}
+                      variant="card"
+                      className="flex items-center justify-center"
+                    />
+
                     {isLocalBinder(binder.id) ? (
                       <button
                         onClick={() => handleDownloadFromCloud(binder.id)}

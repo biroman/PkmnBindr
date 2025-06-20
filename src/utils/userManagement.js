@@ -18,6 +18,7 @@ export const USERS_COLLECTION = "users";
 /**
  * Create or update user profile in Firestore
  * Call this when a user signs up or signs in for the first time
+ * SECURITY: Preserves existing role and custom data during updates
  */
 export const createOrUpdateUserProfile = async (user) => {
   try {
@@ -37,7 +38,7 @@ export const createOrUpdateUserProfile = async (user) => {
       // New user - set initial data
       await setDoc(userRef, {
         ...userData,
-        role: "user", // Default role
+        role: "user", // Default role for new users only
         status: "active",
         createdAt: serverTimestamp(),
         binderCount: 0,
@@ -45,7 +46,7 @@ export const createOrUpdateUserProfile = async (user) => {
       });
       console.log("New user profile created:", user.uid);
     } else {
-      // Existing user - only update sign-in tracking, don't overwrite custom data
+      // 🔒 CRITICAL FIX: Existing user - PRESERVE all custom data, only update auth-related fields
       const existingData = userSnap.data();
       const updateData = {
         lastSignIn: serverTimestamp(),
@@ -67,8 +68,11 @@ export const createOrUpdateUserProfile = async (user) => {
         updateData.photoURL = user.photoURL;
       }
 
+      // 🛡️ SECURITY: NEVER overwrite role, status, or other custom fields
+      // These should only be updated through dedicated admin functions
+
       await updateDoc(userRef, updateData);
-      console.log("User sign-in tracked:", user.uid);
+      console.log("User sign-in tracked (custom data preserved):", user.uid);
     }
 
     return true;
@@ -936,13 +940,48 @@ export const fetchUserBindersAsAdmin = async (userId) => {
 
 /**
  * Fetch complete binder data for admin viewing (read-only)
+ * SECURITY: This function should only be called by authenticated admin/owner users
  */
 export const fetchBinderForAdminView = async (
   binderId,
   userId,
-  source = "user_binders"
+  source = "user_binders",
+  requestingUserId = null
 ) => {
   try {
+    // SECURITY CHECK: Verify the requesting user has admin permissions
+    if (requestingUserId) {
+      try {
+        const { UserRoleService } = await import("../services/UserRoleService");
+        const requestingUserDoc = await getDoc(
+          doc(db, "users", requestingUserId)
+        );
+
+        if (!requestingUserDoc.exists()) {
+          throw new Error("Requesting user not found");
+        }
+
+        const requestingUserData = requestingUserDoc.data();
+        const hasAdminAccess = UserRoleService.hasPermission(
+          requestingUserData,
+          "access_admin_panel"
+        );
+
+        if (!hasAdminAccess) {
+          throw new Error(
+            "Insufficient permissions to access admin binder view"
+          );
+        }
+
+        console.log(
+          `[Admin] Access granted to ${requestingUserId} for binder ${binderId}`
+        );
+      } catch (securityError) {
+        console.error("[Admin] Security check failed:", securityError);
+        throw new Error("Access denied: " + securityError.message);
+      }
+    }
+
     console.log(
       `[Admin] Fetching binder ${binderId} from ${source} for user ${userId}`
     );

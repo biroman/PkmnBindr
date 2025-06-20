@@ -27,18 +27,6 @@ const CardPage = ({
         <div className="text-sm font-medium text-gray-500">
           Page {pageNumber}
         </div>
-        <div className="flex items-center gap-2">
-          {/* Binding holes decoration */}
-          <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-          </div>
-          <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-          </div>
-          <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-          </div>
-        </div>
       </div>
 
       {/* Card Grid */}
@@ -66,7 +54,7 @@ const CardPage = ({
                 card={card}
                 position={globalPosition}
                 gridSize={gridSize}
-                onCardClick={isReadOnly ? undefined : onCardClick}
+                onCardClick={onCardClick}
                 onCardDelete={isReadOnly ? undefined : onCardDelete}
                 onSlotClick={isReadOnly ? undefined : onSlotClick}
                 onToggleMissing={isReadOnly ? undefined : onToggleMissing}

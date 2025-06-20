@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useAuth, useOwner } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
+import { useRole } from "../contexts/RoleContext";
 import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
 import { useMemo } from "react";
@@ -24,7 +25,7 @@ import RequestCenter from "../components/RequestCenter";
 
 const DashboardPage = () => {
   const { user } = useAuth();
-  const isOwner = useOwner();
+  const { isOwner } = useRole();
   const {
     binders,
     currentBinder,

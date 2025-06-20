@@ -408,8 +408,8 @@ export class RulesService {
 
   // Utility method to check if user is owner
   isOwner(user) {
-    const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-    return user?.email === ownerEmail;
+    // Use role-based owner detection instead of email
+    return user?.role === "owner";
   }
 
   // Cleanup on destruction

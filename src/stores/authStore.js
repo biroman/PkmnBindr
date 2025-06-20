@@ -82,8 +82,22 @@ export const useAuthStore = create()(
         isAuthenticated: () => Boolean(get().user),
         isOwner: () => {
           const { user } = get();
-          const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-          return user?.email === ownerEmail;
+          return user?.role === "owner";
+        },
+        isAdmin: () => {
+          const { user } = get();
+          return user?.role === "admin" || user?.role === "owner";
+        },
+        isModerator: () => {
+          const { user } = get();
+          return ["moderator", "admin", "owner"].includes(user?.role);
+        },
+        hasRole: (requiredRole) => {
+          const { user } = get();
+          const roleHierarchy = { user: 1, moderator: 2, admin: 3, owner: 4 };
+          const userLevel = roleHierarchy[user?.role] || 1;
+          const requiredLevel = roleHierarchy[requiredRole] || 1;
+          return userLevel >= requiredLevel;
         },
 
         // Actions
@@ -277,7 +291,7 @@ export const useAuthStore = create()(
                 email: user.email,
                 emailVerified: user.emailVerified,
                 photoURL: user.photoURL,
-                role: "user",
+                role: "user", // Default role for new users
                 agreeToTerms: true, // OAuth users implicitly agree
                 agreeToTermsAt: new Date().toISOString(),
                 createdAt: serverTimestamp(),
@@ -291,13 +305,30 @@ export const useAuthStore = create()(
                 },
               });
             } else {
-              // Existing user - update last login
-              await updateDoc(doc(db, "users", user.uid), {
+              // 🔒 CRITICAL FIX: Preserve existing custom data during Google OAuth login
+              const existingData = userDoc.data();
+              const updateFields = {
                 lastLoginAt: serverTimestamp(),
-                loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified, // Update verification status
-                photoURL: user.photoURL, // Update photo in case it changed
-              });
+                loginCount: (existingData.loginCount || 0) + 1,
+                emailVerified: user.emailVerified,
+                updatedAt: serverTimestamp(),
+              };
+
+              // Only update photoURL if user doesn't have one already (preserve custom photos)
+              if (!existingData.photoURL && user.photoURL) {
+                updateFields.photoURL = user.photoURL;
+              }
+
+              // 🛡️ SECURITY: NEVER overwrite role, status, customStatus, bannerColor, or other custom fields
+              // These should only be updated through dedicated admin functions
+              // The role system is now completely separate from authentication
+
+              console.log(
+                `🔐 OAuth login: Preserving existing role '${existingData.role}' for user ${user.email}`
+              );
+
+              // ⚠️ PRESERVE: customStatus, bannerColor, role, and all other custom fields
+              await updateDoc(doc(db, "users", user.uid), updateFields);
             }
 
             return user;
@@ -332,7 +363,7 @@ export const useAuthStore = create()(
                 email: user.email,
                 emailVerified: user.emailVerified,
                 photoURL: user.photoURL,
-                role: "user",
+                role: "user", // Default role for new users
                 agreeToTerms: true, // OAuth users implicitly agree
                 agreeToTermsAt: new Date().toISOString(),
                 createdAt: serverTimestamp(),
@@ -346,13 +377,30 @@ export const useAuthStore = create()(
                 },
               });
             } else {
-              // Existing user - update last login
-              await updateDoc(doc(db, "users", user.uid), {
+              // 🔒 CRITICAL FIX: Preserve existing custom data during Twitter OAuth login
+              const existingData = userDoc.data();
+              const updateFields = {
                 lastLoginAt: serverTimestamp(),
-                loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified, // Update verification status
-                photoURL: user.photoURL, // Update photo in case it changed
-              });
+                loginCount: (existingData.loginCount || 0) + 1,
+                emailVerified: user.emailVerified,
+                updatedAt: serverTimestamp(),
+              };
+
+              // Only update photoURL if user doesn't have one already (preserve custom photos)
+              if (!existingData.photoURL && user.photoURL) {
+                updateFields.photoURL = user.photoURL;
+              }
+
+              // 🛡️ SECURITY: NEVER overwrite role, status, customStatus, bannerColor, or other custom fields
+              // These should only be updated through dedicated admin functions
+              // The role system is now completely separate from authentication
+
+              console.log(
+                `🔐 OAuth login: Preserving existing role '${existingData.role}' for user ${user.email}`
+              );
+
+              // ⚠️ PRESERVE: customStatus, bannerColor, role, and all other custom fields
+              await updateDoc(doc(db, "users", user.uid), updateFields);
             }
 
             return user;

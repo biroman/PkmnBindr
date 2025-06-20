@@ -10,6 +10,7 @@ import {
   DocumentArrowDownIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline";
+import ShareButton from "./ShareButton";
 
 const ToolbarButton = ({
   icon: Icon,
@@ -92,6 +93,9 @@ const BinderToolbar = ({
             onClick={() => handleToolClick("color", onColorPicker)}
             title="Customize Binder Color"
           />
+
+          {/* Share Button - Only show for public binders */}
+          <ShareButton currentBinder={currentBinder} variant="toolbar" />
 
           {/* PDF Export */}
           <div className="relative flex items-center">

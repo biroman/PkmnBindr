@@ -1,11 +1,11 @@
-import { doc, updateDoc, getDoc } from "firebase/firestore";
-import { db } from "../lib/firebase"; // Correct path to your Firebase config
+import { doc, updateDoc, getDoc, onSnapshot } from "firebase/firestore";
+import { db } from "../lib/firebase";
 
 export class UserRoleService {
   // Available roles in the system
   static ROLES = {
     USER: "user",
-    MODERATOR: "moderator", // New role for community management
+    MODERATOR: "moderator",
     ADMIN: "admin",
     OWNER: "owner",
   };
@@ -25,49 +25,109 @@ export class UserRoleService {
       "create_binder",
       "view_public_binders",
       "contact_support",
+      "basic_features",
     ],
     [this.ROLES.MODERATOR]: [
       "manage_own_binders",
       "create_binder",
       "view_public_binders",
       "contact_support",
+      "basic_features",
       "moderate_content",
       "view_user_reports",
       "manage_announcements",
+      "moderate_comments",
+      "temporary_user_actions",
     ],
     [this.ROLES.ADMIN]: [
       "manage_own_binders",
       "create_binder",
       "view_public_binders",
       "contact_support",
+      "basic_features",
       "moderate_content",
       "view_user_reports",
       "manage_announcements",
+      "moderate_comments",
+      "temporary_user_actions",
       "view_all_binders",
       "manage_users",
       "view_analytics",
       "manage_system_config",
       "manage_rules",
+      "access_admin_panel",
+      "manage_subscription_limits",
     ],
     [this.ROLES.OWNER]: [
       "manage_own_binders",
       "create_binder",
       "view_public_binders",
       "contact_support",
+      "basic_features",
       "moderate_content",
       "view_user_reports",
       "manage_announcements",
+      "moderate_comments",
+      "temporary_user_actions",
       "view_all_binders",
       "manage_users",
       "view_analytics",
       "manage_system_config",
       "manage_rules",
+      "access_admin_panel",
+      "manage_subscription_limits",
       "manage_roles",
       "system_administration",
       "emergency_controls",
       "billing_management",
+      "database_access",
+      "security_settings",
     ],
   };
+
+  /**
+   * Get the role level for hierarchy comparisons
+   * @param {Object} user - User object with role property
+   * @returns {number} - Role level (higher = more permissions)
+   */
+  static getRoleLevel(user) {
+    if (!user || !user.role) return this.ROLE_HIERARCHY[this.ROLES.USER];
+    return (
+      this.ROLE_HIERARCHY[user.role] || this.ROLE_HIERARCHY[this.ROLES.USER]
+    );
+  }
+
+  /**
+   * Check if a user has a specific role or higher
+   * @param {Object} user - User object from Firebase
+   * @param {string} requiredRole - Required role level
+   * @returns {boolean} - True if user has required role or higher
+   */
+  static hasRole(user, requiredRole) {
+    if (!user) return false;
+    return this.getRoleLevel(user) >= this.getRoleLevel({ role: requiredRole });
+  }
+
+  /**
+   * Check if a user has a specific permission
+   * @param {Object} user - User object from Firebase
+   * @param {string} permission - Permission to check
+   * @returns {boolean} - True if user has permission
+   */
+  static hasPermission(user, permission) {
+    const userPermissions = this.getUserPermissions(user);
+    return userPermissions.includes(permission);
+  }
+
+  /**
+   * Get all permissions for a user's role
+   * @param {Object} user - User object from Firebase
+   * @returns {Array} - Array of permission strings
+   */
+  static getUserPermissions(user) {
+    if (!user || !user.role) return this.PERMISSIONS[this.ROLES.USER];
+    return this.PERMISSIONS[user.role] || this.PERMISSIONS[this.ROLES.USER];
+  }
 
   /**
    * Check if a user is the app owner
@@ -75,8 +135,7 @@ export class UserRoleService {
    * @returns {boolean} - True if user is owner
    */
   static isOwner(user) {
-    if (!user) return false;
-    return user.role === this.ROLES.OWNER;
+    return this.hasRole(user, this.ROLES.OWNER);
   }
 
   /**
@@ -85,8 +144,7 @@ export class UserRoleService {
    * @returns {boolean} - True if user is admin or owner
    */
   static isAdmin(user) {
-    if (!user) return false;
-    return user.role === this.ROLES.ADMIN || this.isOwner(user);
+    return this.hasRole(user, this.ROLES.ADMIN);
   }
 
   /**
@@ -95,8 +153,7 @@ export class UserRoleService {
    * @returns {boolean} - True if user is moderator, admin, or owner
    */
   static isModerator(user) {
-    if (!user) return false;
-    return user.role === this.ROLES.MODERATOR || this.isAdmin(user);
+    return this.hasRole(user, this.ROLES.MODERATOR);
   }
 
   /**
@@ -214,6 +271,96 @@ export class UserRoleService {
       console.error("Error getting user role:", error);
       return this.ROLES.USER;
     }
+  }
+
+  /**
+   * Get user role information with metadata
+   * @param {Object} user - User object from Firebase
+   * @returns {Object} - Role information with metadata
+   */
+  static getUserRoleInfo(user) {
+    const role = user?.role || this.ROLES.USER;
+    const level = this.getRoleLevel(user);
+    const permissions = this.getUserPermissions(user);
+
+    return {
+      role,
+      level,
+      permissions,
+      isOwner: this.isOwner(user),
+      isAdmin: this.isAdmin(user),
+      isModerator: this.isModerator(user),
+      isStaff: role !== this.ROLES.USER,
+      canManageUsers: this.hasPermission(user, "manage_users"),
+      canModerateContent: this.hasPermission(user, "moderate_content"),
+    };
+  }
+
+  /**
+   * Subscribe to real-time role updates for a user
+   * @param {string} userId - User ID to monitor
+   * @param {Function} callback - Callback function for role updates
+   * @returns {Function} - Unsubscribe function
+   */
+  static subscribeToUserRole(userId, callback) {
+    if (!userId) return () => {};
+
+    const userRef = doc(db, "users", userId);
+    return onSnapshot(userRef, (doc) => {
+      if (doc.exists()) {
+        const userData = doc.data();
+        callback({
+          uid: userId,
+          role: userData.role || this.ROLES.USER,
+          permissions: this.getUserPermissions(userData),
+          ...userData,
+        });
+      } else {
+        callback({
+          uid: userId,
+          role: this.ROLES.USER,
+          permissions: this.PERMISSIONS[this.ROLES.USER],
+        });
+      }
+    });
+  }
+
+  /**
+   * Validate role assignment permissions
+   * @param {Object} adminUser - User performing the action
+   * @param {string} targetUserId - ID of user being modified
+   * @param {string} newRole - New role to assign
+   * @returns {Object} - Validation result
+   */
+  static validateRoleAssignment(adminUser, targetUserId, newRole) {
+    const errors = [];
+    const warnings = [];
+
+    // Check if admin has permission to manage roles
+    if (!this.hasPermission(adminUser, "manage_roles")) {
+      errors.push("Insufficient permissions to manage roles");
+    }
+
+    // Check if the role being assigned is valid
+    if (!Object.values(this.ROLES).includes(newRole)) {
+      errors.push("Invalid role specified");
+    }
+
+    // Prevent non-owners from creating owners
+    if (newRole === this.ROLES.OWNER && !this.isOwner(adminUser)) {
+      errors.push("Only owners can assign owner role");
+    }
+
+    // Warn about self-modification
+    if (adminUser.uid === targetUserId) {
+      warnings.push("Modifying your own role may affect your permissions");
+    }
+
+    return {
+      isValid: errors.length === 0,
+      errors,
+      warnings,
+    };
   }
 
   /**

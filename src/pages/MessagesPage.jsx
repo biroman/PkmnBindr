@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useMessages, useConversationMessages } from "../hooks/useMessages";
-import { useAuth, useOwner } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
+import { useRole } from "../contexts/RoleContext";
 import UserAvatar from "../components/ui/UserAvatar";
 import { Button } from "../components/ui/Button";
 import { getUserProfile } from "../utils/getUserProfile";
@@ -341,7 +342,7 @@ MessageItem.displayName = "MessageItem";
 
 const MessagesPage = () => {
   const { user } = useAuth();
-  const isOwner = useOwner();
+  const { isOwner } = useRole();
   const location = useLocation();
   const {
     conversations,

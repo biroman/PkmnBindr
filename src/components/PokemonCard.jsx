@@ -151,6 +151,10 @@ const PokemonCard = forwardRef(
     };
 
     const handleCardClick = (e) => {
+      console.log("PokemonCard clicked:", card?.name, {
+        onClick: !!onClick,
+        card,
+      });
       onClick?.(card, e);
     };
 
@@ -163,7 +167,7 @@ const PokemonCard = forwardRef(
         className={`
         group relative aspect-[5/7] bg-white rounded-lg shadow-md overflow-hidden
         transition-all duration-200 hover:shadow-lg hover:scale-105
-        ${onClick && !isReadOnly ? "cursor-pointer" : ""}
+        ${onClick ? "cursor-pointer" : ""}
         ${draggable ? "draggable" : ""}
         ${isReverseHolo ? "ring-2 ring-gradient-to-r ring-purple-400" : ""}
         ${className}

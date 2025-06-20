@@ -3100,6 +3100,9 @@ export const BinderProvider = ({ children }) => {
               "user_binders",
               `${user.uid}_${binderId}`
             );
+
+            // Use updateDoc to preserve existing interaction data
+            // This will only update the specified fields, leaving likes/views/favorites intact
             await updateDoc(binderRef, {
               "permissions.public": isPublic,
               lastModified: now,
@@ -3140,6 +3143,107 @@ export const BinderProvider = ({ children }) => {
       }
     },
     [binders, currentBinder, user]
+  );
+
+  // Create a share link for a binder
+  const createShareLink = useCallback(
+    async (binderId, options = {}) => {
+      try {
+        if (!user) {
+          throw new Error("Must be logged in to create share links");
+        }
+
+        const targetBinder = binders.find((b) => b.id === binderId);
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        if (!targetBinder.permissions?.public) {
+          throw new Error("Binder must be public to create share links");
+        }
+
+        if (targetBinder.ownerId !== user.uid) {
+          throw new Error("Can only create share links for your own binders");
+        }
+
+        // Import and use the ShareLinkService
+        const { shareLinkService } = await import(
+          "../services/ShareLinkService"
+        );
+        const shareLink = await shareLinkService.createShareLink(
+          binderId,
+          user.uid,
+          options
+        );
+
+        return shareLink;
+      } catch (error) {
+        console.error("Failed to create share link:", error);
+        throw error;
+      }
+    },
+    [binders, user]
+  );
+
+  // Get all share links for a binder
+  const getBinderShares = useCallback(
+    async (binderId) => {
+      try {
+        if (!user) {
+          throw new Error("Must be logged in to view share links");
+        }
+
+        const targetBinder = binders.find((b) => b.id === binderId);
+        if (!targetBinder) {
+          throw new Error("Binder not found");
+        }
+
+        if (targetBinder.ownerId !== user.uid) {
+          throw new Error("Can only view share links for your own binders");
+        }
+
+        // Import and use the ShareLinkService
+        const { shareLinkService } = await import(
+          "../services/ShareLinkService"
+        );
+        const shares = await shareLinkService.getBinderShares(
+          binderId,
+          user.uid
+        );
+
+        return shares;
+      } catch (error) {
+        console.error("Failed to get binder shares:", error);
+        throw error;
+      }
+    },
+    [binders, user]
+  );
+
+  // Deactivate a share link
+  const deactivateShareLink = useCallback(
+    async (shareId) => {
+      try {
+        if (!user) {
+          throw new Error("Must be logged in to deactivate share links");
+        }
+
+        // Import and use the ShareLinkService
+        const { shareLinkService } = await import(
+          "../services/ShareLinkService"
+        );
+        const success = await shareLinkService.deactivateShareLink(
+          shareId,
+          user.uid
+        );
+
+        return success;
+      } catch (error) {
+        console.error("Failed to deactivate share link:", error);
+        throw error;
+      }
+    },
+    [user]
   );
 
   // Sorting functionality
@@ -3369,6 +3473,11 @@ export const BinderProvider = ({ children }) => {
     fetchUserPublicBinders,
     getPublicBinder,
     updateBinderPrivacy,
+
+    // Share functions
+    createShareLink,
+    getBinderShares,
+    deactivateShareLink,
   };
 
   return (

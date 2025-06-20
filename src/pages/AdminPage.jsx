@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { useAuth, useOwner } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
+import { useRole } from "../contexts/RoleContext";
 import { useRules } from "../contexts/RulesContext";
 import BinderLimitsManager from "../components/admin/BinderLimitsManager";
 import ContactLimitsManager from "../components/admin/ContactLimitsManager";
@@ -34,7 +35,28 @@ const CACHE_KEYS = SERVICE_CACHE_KEYS;
 
 const AdminPage = () => {
   const { user } = useAuth();
-  const isOwner = useOwner();
+  const { isOwner, loading: roleLoading } = useRole();
+
+  // Early authentication and authorization check
+  if (!user) {
+    return <Navigate to="/auth/login" replace />;
+  }
+
+  if (roleLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Checking permissions...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isOwner) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
   const {
     rules,
     loading: rulesLoading,
@@ -732,10 +754,6 @@ const AdminPage = () => {
   useEffect(() => {
     loadRuleStats();
   }, [rules, isRulesOwner]);
-
-  if (!isOwner) {
-    return <Navigate to="/dashboard" replace />;
-  }
 
   const renderDashboard = () => (
     <DashboardOverview

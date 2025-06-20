@@ -2,28 +2,56 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Helper function to check if user is owner
-    function isOwner() {
-      return request.auth != null && 
-             getUserRole(request.auth.uid) == 'owner';
-    }
-
-    // Helper function to check if user is admin or owner
-    function isAdmin() {
-      return request.auth != null && 
-             (getUserRole(request.auth.uid) == 'admin' || isOwner());
-    }
-
-    // Helper function to check if user is moderator or higher
-    function isModerator() {
-      return request.auth != null && 
-             (getUserRole(request.auth.uid) in ['moderator', 'admin', 'owner']);
-    }
-
-    // Helper function to get user role
+    // Enhanced role checking functions
     function getUserRole(userId) {
       return exists(/databases/$(database)/documents/users/$(userId)) ?
              get(/databases/$(database)/documents/users/$(userId)).data.get('role', 'user') : 'user';
+    }
+
+    // Role hierarchy helper
+    function getRoleLevel(role) {
+      return role == 'owner' ? 4 :
+             role == 'admin' ? 3 :
+             role == 'moderator' ? 2 :
+             1; // user
+    }
+
+    // Check if user has a specific role or higher
+    function hasRole(userId, requiredRole) {
+      let userRole = getUserRole(userId);
+      return getRoleLevel(userRole) >= getRoleLevel(requiredRole);
+    }
+
+    // Helper function to check if user is owner
+    function isOwner(userId) {
+      return hasRole(userId, 'owner');
+    }
+
+    // Helper function to check if user is admin or owner  
+    function isAdmin(userId) {
+      return hasRole(userId, 'admin');
+    }
+
+    // Helper function to check if user is moderator or higher
+    function isModerator(userId) {
+      return hasRole(userId, 'moderator');
+    }
+
+    // Check if user has specific permission (simplified - could be expanded)
+    function hasPermission(userId, permission) {
+      let userRole = getUserRole(userId);
+      // Owner has all permissions
+      if (userRole == 'owner') return true;
+      // Admin permissions
+      if (userRole == 'admin') {
+        return permission in ['manage_users', 'view_all_binders', 'manage_system_config', 'view_analytics', 'manage_rules'];
+      }
+      // Moderator permissions  
+      if (userRole == 'moderator') {
+        return permission in ['moderate_content', 'view_user_reports', 'manage_announcements'];
+      }
+      // User permissions
+      return permission in ['manage_own_binders', 'create_binder', 'view_public_binders', 'contact_support'];
     }
 
     // Helper function to validate string length
@@ -45,21 +73,21 @@ service cloud.firestore {
 
     // System Monitoring - only owners can write, read restricted
     match /systemMonitoring/{docId} {
-      allow read: if isOwner();
-      allow write: if isOwner();
+      allow read: if request.auth != null && isOwner(request.auth.uid);
+      allow write: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // System Configuration - only owners can write, anyone can read
     match /systemConfiguration/{configId} {
       allow read: if true;  // Everyone needs to read limits
-      allow write: if isOwner();
+      allow write: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // Users collection - allow owners to read for admin purposes
     match /users/{userId} {
       // Block operations if in emergency mode (except for owners)
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner(); // Owners can always access
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid); // Owners can always access
       
       // PUBLIC PROFILE ACCESS: Allow any authenticated user to read basic profile info
       allow read: if !isEmergencyMode() && request.auth != null;
@@ -101,7 +129,7 @@ service cloud.firestore {
     match /users/{userId}/binders/{binderId} {
       // Block operations if in emergency mode (except for owners)
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
@@ -128,7 +156,7 @@ service cloud.firestore {
     match /users/{userId}/binders/{binderId}/cards/{cardId} {
       // Block operations if in emergency mode (except for owners)
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Enhanced validation for card creation/updates
       allow create, update: if request.auth != null && 
@@ -154,14 +182,14 @@ service cloud.firestore {
     // User activity subcollection - allow users to delete their own activity when deleting account
     match /users/{userId}/activity/{activityId} {
       allow read, delete: if request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner(); // Owners can manage activity logs
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid); // Owners can manage activity logs
       // Users cannot write to activity logs directly (only server-side operations)
     }
 
     // User collections subcollection
     match /users/{userId}/collections/{collectionId} {
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Validate collection data
       allow create, update: if request.auth != null && 
@@ -178,13 +206,13 @@ service cloud.firestore {
     // User preferences subcollection (NEW - was missing)
     match /users/{userId}/preferences/{preferenceId} {
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // User wishlist subcollection
     match /users/{userId}/wishlist/{wishlistId} {
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Validate wishlist data
       allow create, update: if request.auth != null && 
@@ -206,7 +234,7 @@ service cloud.firestore {
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
                                    resource.data.ownerId == request.auth.uid;
       // Owners can access all binders (for admin purposes)
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Allow reading public binders
       allow read: if resource.data.permissions.public == true;
@@ -217,7 +245,7 @@ service cloud.firestore {
       // Block operations if in emergency mode (except for owners)
       allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
                            docId.matches('^' + request.auth.uid + '_.*');
-      allow read, write, delete: if isOwner();
+      allow read, write, delete: if request.auth != null && isOwner(request.auth.uid);
       
       // Allow collection queries where ownerId equals current user
       allow list: if !isEmergencyMode() && request.auth != null && 
@@ -226,6 +254,12 @@ service cloud.firestore {
       // PUBLIC BINDER ACCESS: Allow reading public binders by any authenticated user
       allow read: if !isEmergencyMode() && request.auth != null && 
                      resource.data.permissions.public == true;
+      
+      // ANONYMOUS SHARE ACCESS: Allow anonymous reading of public binders via valid share links
+      allow read: if resource.data.permissions.public == true &&
+                     exists(/databases/$(database)/documents/shared_binders/$(request.query.shareId)) &&
+                     get(/databases/$(database)/documents/shared_binders/$(request.query.shareId)).data.isActive == true &&
+                     get(/databases/$(database)/documents/shared_binders/$(request.query.shareId)).data.binderId == resource.data.id;
       
       // Allow querying public binders by any authenticated user
       allow list: if !isEmergencyMode() && request.auth != null && 
@@ -277,7 +311,7 @@ service cloud.firestore {
     // Global Rules collection - Owner can manage, users can read
     match /globalRules/{ruleId} {
       // Owner has full access to create, read, update, delete rules
-      allow read, write: if isOwner();
+      allow read, write: if request.auth != null && isOwner(request.auth.uid);
       
       // All authenticated users can read rules (needed to check what rules apply to them)
       allow read: if request.auth != null;
@@ -301,10 +335,10 @@ service cloud.firestore {
                        request.auth.uid == request.resource.data.userId;
       
       // Owner can read all usage records (for analytics)
-      allow read: if isOwner();
+      allow read: if request.auth != null && isOwner(request.auth.uid);
       
       // Owner can write usage records (for management and cleanup)
-      allow write: if isOwner();
+      allow write: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // Contact System Collections
@@ -315,7 +349,7 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == userId;
       
       // Owners can read/write all message threads (for admin purposes)
-      allow read, write: if isOwner();
+      allow read, write: if request.auth != null && isOwner(request.auth.uid);
       
       // Subcollection for individual messages
       match /messages/{messageId} {
@@ -323,7 +357,7 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == userId;
         
         // Owners can read/write all messages (for admin replies)
-        allow read, write: if isOwner();
+        allow read, write: if request.auth != null && isOwner(request.auth.uid);
         
         // Validate message content on create/update with rate limiting
         allow create, update: if request.auth != null && 
@@ -356,7 +390,7 @@ service cloud.firestore {
                         get(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_feature_requests')).data.get('count', 0) < 3);
       
       // Owners can read/write all feature requests (for management)
-      allow read, write: if isOwner();
+      allow read, write: if request.auth != null && isOwner(request.auth.uid);
     }
     
     // Bug Reports - Users can create and read their own, owners can access all
@@ -377,13 +411,13 @@ service cloud.firestore {
                         get(/databases/$(database)/documents/ruleUsage/$(request.auth.uid + '_bug_reports')).data.get('count', 0) < 10);
       
       // Owners can read/write all bug reports (for management)
-      allow read, write: if isOwner();
+      allow read, write: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // Announcements/Changelog - Users can read published, owners can manage all
     match /announcements/{announcementId} {
       // Owners have full access to all announcements
-      allow read, write, create, update, delete, list: if isOwner();
+      allow read, write, create, update, delete, list: if request.auth != null && isOwner(request.auth.uid);
       
       // All authenticated users can read and list published announcements
       allow read, list: if request.auth != null && 
@@ -406,18 +440,67 @@ service cloud.firestore {
                       request.resource.data.canUpload is bool;
       
       // Owners can read/write all upload limits (for management)
-      allow read, write: if isOwner();
+      allow read, write: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // Conversations - Direct messaging system between admin and users
+    // SECURITY: Role-based access control for conversations
     match /conversations/{conversationId} {
-      // Allow all authenticated users to read/write conversations for now
-      allow read, write, create, update, delete, list: if request.auth != null;
+      // Users can read conversations they participate in
+      allow read: if request.auth != null && 
+        (resource.data.userId == request.auth.uid || 
+         (resource.data.adminId == request.auth.uid && isAdmin(request.auth.uid)));
       
-      // Messages within conversations
+      // Only admins can create conversations
+      allow create: if request.auth != null && 
+        isAdmin(request.auth.uid) && 
+        request.resource.data.adminId == request.auth.uid &&
+        request.resource.data.keys().hasAll(['id', 'adminId', 'userId', 'adminName', 'userName', 'participants']);
+      
+      // Participants can update conversation metadata (like read status)
+      allow update: if request.auth != null && 
+        (resource.data.userId == request.auth.uid || 
+         (resource.data.adminId == request.auth.uid && isAdmin(request.auth.uid))) &&
+        // Prevent changing core conversation structure
+        resource.data.id == request.resource.data.id &&
+        resource.data.adminId == request.resource.data.adminId &&
+        resource.data.userId == request.resource.data.userId;
+      
+      // Only admins can delete conversations
+      allow delete: if request.auth != null && 
+        isAdmin(request.auth.uid) && 
+        resource.data.adminId == request.auth.uid;
+      
+      // Admins can list all their conversations, users can list theirs
+      allow list: if request.auth != null && 
+        (isAdmin(request.auth.uid) || 
+         // This will be filtered server-side for users
+         request.auth != null);
+      
+      // Messages within conversations - strict access control
       match /messages/{messageId} {
-        // Allow all authenticated users to access messages for now
-        allow read, write, list, create, update, delete: if request.auth != null;
+        // Only conversation participants can read messages
+        allow read: if request.auth != null && 
+          (get(/databases/$(database)/documents/conversations/$(conversationId)).data.userId == request.auth.uid ||
+           (get(/databases/$(database)/documents/conversations/$(conversationId)).data.adminId == request.auth.uid && 
+            isAdmin(request.auth.uid)));
+        
+        // Only conversation participants can create messages
+        allow create: if request.auth != null && 
+          (get(/databases/$(database)/documents/conversations/$(conversationId)).data.userId == request.auth.uid ||
+           (get(/databases/$(database)/documents/conversations/$(conversationId)).data.adminId == request.auth.uid && 
+            isAdmin(request.auth.uid))) &&
+          request.resource.data.senderId == request.auth.uid &&
+          request.resource.data.keys().hasAll(['senderId', 'message', 'isAdmin']);
+        
+        // Messages cannot be modified or deleted after creation (audit trail)
+        allow update, delete: if false;
+        
+        // Participants can list messages in their conversations
+        allow list: if request.auth != null && 
+          (get(/databases/$(database)/documents/conversations/$(conversationId)).data.userId == request.auth.uid ||
+           (get(/databases/$(database)/documents/conversations/$(conversationId)).data.adminId == request.auth.uid && 
+            isAdmin(request.auth.uid)));
       }
     }
 
@@ -463,10 +546,9 @@ service cloud.firestore {
          request.auth.uid == resource.data.recipientId);
     }
 
-    // Admin collection - only admins can access
+    // Admin collection - only owners and admins can access
     match /admin/{document=**} {
-      allow read, write: if request.auth != null && 
-        request.auth.token.admin == true;
+      allow read, write: if request.auth != null && isAdmin(request.auth.uid);
     }
 
     // User activity tracking
@@ -478,6 +560,64 @@ service cloud.firestore {
     match /publicProfiles/{userId} {
       allow read: if request.auth != null;
       allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Shared Binders collection - for shareable links
+    match /shared_binders/{shareId} {
+      // ANONYMOUS READ ACCESS: Allow anonymous users to read active shares
+      allow read: if resource.data.isActive == true;
+      
+      // AUTHENTICATED READ ACCESS: Allow authenticated users to read active shares
+      allow read: if request.auth != null && resource.data.isActive == true;
+      
+      // CREATE: Only authenticated users can create shares for their own binders
+      allow create: if request.auth != null && 
+                       request.auth.uid == request.resource.data.ownerId &&
+                       !isEmergencyMode() &&
+                       // Validate required fields
+                       request.resource.data.keys().hasAll(['shareId', 'binderId', 'ownerId', 'isActive']) &&
+                       request.resource.data.shareId == shareId &&
+                       isValidStringLength(request.resource.data.shareId, 20) &&
+                       isValidStringLength(request.resource.data.binderId, 50) &&
+                       request.resource.data.isActive == true &&
+                       // Validate settings if present
+                       (!('settings' in request.resource.data) ||
+                        (request.resource.data.settings.keys().hasAll(['allowAnonymous']) &&
+                         request.resource.data.settings.allowAnonymous is bool)) &&
+                       // Validate customSlug if present (must be unique and valid format)
+                       (!('settings' in request.resource.data) ||
+                        !('customSlug' in request.resource.data.settings) ||
+                        (request.resource.data.settings.customSlug == null ||
+                         (isValidStringLength(request.resource.data.settings.customSlug, 50) &&
+                          request.resource.data.settings.customSlug.matches('^[a-z0-9-]{3,50}$')))) &&
+                       // Validate analytics structure
+                       (!('analytics' in request.resource.data) ||
+                        (request.resource.data.analytics.keys().hasAll(['totalViews', 'uniqueVisitors']) &&
+                         request.resource.data.analytics.totalViews == 0 &&
+                         request.resource.data.analytics.uniqueVisitors is list &&
+                         request.resource.data.analytics.uniqueVisitors.size() == 0));
+      
+      // UPDATE: Only owner can update their shares (for analytics and deactivation)
+      allow update: if request.auth != null && 
+                       request.auth.uid == resource.data.ownerId &&
+                       request.auth.uid == request.resource.data.ownerId &&
+                       !isEmergencyMode() &&
+                       // Prevent changing core identifiers
+                       resource.data.shareId == request.resource.data.shareId &&
+                       resource.data.binderId == request.resource.data.binderId &&
+                       resource.data.ownerId == request.resource.data.ownerId;
+      
+      // DELETE: Only owner can delete their shares
+      allow delete: if request.auth != null && 
+                       request.auth.uid == resource.data.ownerId &&
+                       !isEmergencyMode();
+      
+      // LIST: Allow listing for owners (to manage their shares)
+      allow list: if request.auth != null && 
+                     resource.data.ownerId == request.auth.uid;
+      
+      // LIST: Allow admins to list all shares
+      allow list: if request.auth != null && isOwner(request.auth.uid);
     }
 
     // Deny all other collections/documents

@@ -124,6 +124,10 @@ export class BinderSyncService {
   async _saveBinder(binderRef, binder, userId) {
     const now = new Date().toISOString();
 
+    // First, get the current document to preserve interaction data
+    const currentDoc = await getDoc(binderRef);
+    const currentData = currentDoc.exists() ? currentDoc.data() : {};
+
     const syncedBinder = {
       ...binder,
       // Ensure ownerId is set correctly
@@ -144,6 +148,17 @@ export class BinderSyncService {
       lastModifiedBy: userId,
       // Add server timestamp
       serverTimestamp: serverTimestamp(),
+
+      // CRITICAL: Preserve interaction data from current document
+      // These fields should never be overwritten by user binder updates
+      likes: currentData.likes || [],
+      likeCount: currentData.likeCount || 0,
+      views: currentData.views || [],
+      viewCount: currentData.viewCount || 0,
+      favoriteUsers: currentData.favoriteUsers || [],
+      favoriteCount: currentData.favoriteCount || 0,
+      lastInteraction: currentData.lastInteraction || null,
+      lastViewed: currentData.lastViewed || null,
     };
 
     // Remove undefined values to prevent Firebase errors
@@ -154,6 +169,11 @@ export class BinderSyncService {
       ownerId: cleanedBinder.ownerId,
       binderId: cleanedBinder.id,
       binderName: cleanedBinder.metadata?.name,
+      preservedInteractions: {
+        likes: cleanedBinder.likes.length,
+        views: cleanedBinder.views.length,
+        favorites: cleanedBinder.favoriteUsers.length,
+      },
     });
 
     await setDoc(binderRef, cleanedBinder);

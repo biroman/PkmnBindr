@@ -6,11 +6,12 @@ rules_version = '2';
 
 service firebase.storage {
   match /b/{bucket}/o {
-    // Helper function to check if user is owner
+    // Helper function to check if user is owner (role-based)
     function isOwner() {
       return request.auth != null && 
-             request.auth.token.email != null &&
-             request.auth.token.email == 'eivind-buodd@hotmail.com';
+             request.auth.uid != null &&
+             firestore.exists(/databases/(default)/documents/users/$(request.auth.uid)) &&
+             firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'owner';
     }
 
     // Profile images - users can upload and manage their own profile pictures

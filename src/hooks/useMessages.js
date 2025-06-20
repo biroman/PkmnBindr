@@ -1,14 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { messageService } from "../services/MessageService";
-import { useAuth, useOwner } from "./useAuth";
+import { useAuth } from "./useAuth";
+import { useRole } from "../contexts/RoleContext";
 
 export const useMessages = () => {
   const { user } = useAuth();
-  const isOwner = useOwner();
+  const { isOwner, isAdmin } = useRole();
   const [conversations, setConversations] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // Determine if user has admin privileges (owner or admin role)
+  const hasAdminPrivileges = isOwner || isAdmin;
 
   // Subscribe to conversations and unread count
   useEffect(() => {
@@ -30,7 +34,7 @@ export const useMessages = () => {
       // Subscribe to conversations
       const unsubscribeConversations = messageService.subscribeToConversations(
         user.uid,
-        isOwner,
+        hasAdminPrivileges,
         (updatedConversations) => {
           console.log("Conversations updated:", updatedConversations);
           setConversations(updatedConversations);
@@ -44,7 +48,7 @@ export const useMessages = () => {
       // Subscribe to unread count
       const unsubscribeUnread = messageService.subscribeToUnreadCount(
         user.uid,
-        isOwner,
+        hasAdminPrivileges,
         (count) => {
           setUnreadCount(count);
         }
@@ -60,7 +64,7 @@ export const useMessages = () => {
       setError(error.message);
       setLoading(false);
     }
-  }, [user?.uid, isOwner]);
+  }, [user?.uid, hasAdminPrivileges]);
 
   // Clean up subscriptions on unmount
   useEffect(() => {
@@ -79,7 +83,7 @@ export const useMessages = () => {
           conversationId,
           user.uid,
           message,
-          isOwner
+          hasAdminPrivileges
         );
         return { success: true };
       } catch (error) {
@@ -88,13 +92,13 @@ export const useMessages = () => {
         return { success: false, error: error.message };
       }
     },
-    [user?.uid, isOwner]
+    [user?.uid, hasAdminPrivileges]
   );
 
   // Start a new conversation (admin only)
   const startConversation = useCallback(
     async (targetUserId, targetUserName, targetUserEmail, initialMessage) => {
-      if (!isOwner) {
+      if (!hasAdminPrivileges) {
         throw new Error("Only admins can start conversations");
       }
 
@@ -114,7 +118,7 @@ export const useMessages = () => {
         throw error;
       }
     },
-    [user?.uid, user?.displayName, isOwner]
+    [user?.uid, user?.displayName, hasAdminPrivileges]
   );
 
   // Mark conversation as read
@@ -124,7 +128,7 @@ export const useMessages = () => {
         await messageService.markConversationAsRead(
           conversationId,
           user?.uid,
-          isOwner
+          hasAdminPrivileges
         );
         return { success: true };
       } catch (error) {
@@ -133,13 +137,13 @@ export const useMessages = () => {
         return { success: false, error: error.message };
       }
     },
-    [user?.uid, isOwner]
+    [user?.uid, hasAdminPrivileges]
   );
 
   // Delete conversation (admin only)
   const deleteConversation = useCallback(
     async (conversationId) => {
-      if (!isOwner) {
+      if (!hasAdminPrivileges) {
         throw new Error("Only admins can delete conversations");
       }
 
@@ -152,7 +156,7 @@ export const useMessages = () => {
         throw error;
       }
     },
-    [user?.uid, isOwner]
+    [user?.uid, hasAdminPrivileges]
   );
 
   return {
@@ -164,32 +168,39 @@ export const useMessages = () => {
     startConversation,
     markAsRead,
     deleteConversation,
-    isAdmin: isOwner,
+    isAdmin: hasAdminPrivileges,
   };
 };
 
 export const useConversationMessages = (conversationId) => {
+  const { user } = useAuth();
+  const { isOwner, isAdmin } = useRole();
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Determine if user has admin privileges
+  const hasAdminPrivileges = isOwner || isAdmin;
+
   useEffect(() => {
-    if (!conversationId) return;
+    if (!conversationId || !user?.uid) return;
 
     setLoading(true);
 
-    // Subscribe to messages in this conversation
+    // Subscribe to messages in this conversation with security parameters
     const unsubscribe = messageService.subscribeToMessages(
       conversationId,
       (updatedMessages) => {
         setMessages(updatedMessages);
         setLoading(false);
-      }
+      },
+      user.uid, // requestingUserId for security validation
+      hasAdminPrivileges // isAdmin for permission check
     );
 
     return () => {
       if (unsubscribe) unsubscribe();
     };
-  }, [conversationId]);
+  }, [conversationId, user?.uid, hasAdminPrivileges]);
 
   return { messages, loading };
 };

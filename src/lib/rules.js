@@ -357,13 +357,14 @@ const getNextResetTime = (now, window) => {
 };
 
 const getUserRole = (user) => {
-  const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-  if (user.email === ownerEmail) return "owner";
+  // Use role-based system instead of email
   return user.role || "user";
 };
 
 const getUserPermissions = (user) => {
-  const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-  if (user.email === ownerEmail) return ["admin_access", "all_permissions"];
+  // Use role-based permissions instead of email check
+  if (user.role === "owner") return ["admin_access", "all_permissions"];
+  if (user.role === "admin") return ["admin_access", "user_management"];
+  if (user.role === "moderator") return ["content_moderation"];
   return user.permissions || [];
 };

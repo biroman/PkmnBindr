@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import { useAuth, useOwner } from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
+import { useRole } from "../../contexts/RoleContext";
 import { useRules } from "../../contexts/RulesContext";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useNavigation } from "../../hooks/useNavigation";
@@ -41,7 +42,7 @@ import {
 const Navbar = () => {
   const { user, logout } = useAuth();
   const { userProfile, updateUserProfile } = useUserProfile(user);
-  const isOwner = useOwner();
+  const { isOwner } = useRole();
   const { isOwner: isRulesOwner } = useRules();
   const { currentBinder } = useBinderContext();
   const location = useLocation();

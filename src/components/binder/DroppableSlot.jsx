@@ -118,6 +118,9 @@ const DroppableSlot = ({
         <div className="w-full h-full flex items-center justify-center group">
           {isEmptySlotHover ? (
             <div className="text-blue-500 text-xs font-medium">Drop here</div>
+          ) : isReadOnly ? (
+            /* Read-only empty slot - just dotted border */
+            <div className="w-full h-full border-2 border-dashed border-gray-300 rounded-lg"></div>
           ) : (
             <div className="flex flex-col items-center justify-center text-gray-400 group-hover:text-gray-600 transition-colors duration-200">
               <svg
