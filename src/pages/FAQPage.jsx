@@ -14,9 +14,9 @@ const FAQPage = () => {
   // SEO meta tags
   useDocumentHead({
     title:
-      "Pokemon Card Organizer FAQ - Digital Binder Questions Answered | PokemonBindr",
+      "Pokemon Card Organizer FAQ - Digital Binder Questions Answered | PkmnBindr",
     description:
-      "Get answers about organizing Pokemon cards digitally. Learn how to create digital binders, sync collections, and track Pokemon TCG cards with PokemonBindr's comprehensive FAQ.",
+      "Get answers about organizing Pokemon cards digitally. Learn how to create digital binders, sync collections, and track Pokemon TCG cards with PkmnBindr's comprehensive FAQ.",
     keywords:
       "pokemon card organizer FAQ, digital pokemon binder questions, pokemon collection tracker help, pokemon TCG database questions, how to organize pokemon cards online",
     canonicalUrl: "https://www.pkmnbindr.com/faq",
@@ -35,12 +35,12 @@ const FAQPage = () => {
       title: "Getting Started",
       questions: [
         {
-          id: "what-is-pokemonbindr",
-          question: "What is PokemonBindr and how does it work?",
+          id: "what-is-PkmnBindr",
+          question: "What is PkmnBindr and how does it work?",
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr is the ultimate digital Pokemon card organizer that
+                PkmnBindr is the ultimate digital Pokemon card organizer that
                 lets you create beautiful, customizable binders for your Pokemon
                 TCG collection. Unlike physical binders, you can organize
                 thousands of cards digitally, search instantly, and access your
@@ -53,9 +53,9 @@ const FAQPage = () => {
               </p>
               <p>
                 Whether you're a casual collector or managing massive
-                collections, PokemonBindr provides the tools you need to
-                organize, showcase, and track your Pokemon cards efficiently.
-                Learn more about
+                collections, PkmnBindr provides the tools you need to organize,
+                showcase, and track your Pokemon cards efficiently. Learn more
+                about
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
                   className="text-blue-600 hover:text-blue-800 font-medium"
@@ -74,16 +74,15 @@ const FAQPage = () => {
         },
         {
           id: "guest-vs-account",
-          question:
-            "Should I use PokemonBindr as a guest or create an account?",
+          question: "Should I use PkmnBindr as a guest or create an account?",
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Guest Mode:</strong> Perfect for trying out
-                PokemonBindr. You can create binders, add cards, and use all
-                features instantly. Your data is stored locally in your browser,
-                so it works completely offline. However, your collection won't
-                sync between devices.
+                <strong>Guest Mode:</strong> Perfect for trying out PkmnBindr.
+                You can create binders, add cards, and use all features
+                instantly. Your data is stored locally in your browser, so it
+                works completely offline. However, your collection won't sync
+                between devices.
               </p>
               <p className="mb-3">
                 <strong>Registered Account:</strong> Recommended for serious
@@ -203,8 +202,8 @@ const FAQPage = () => {
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr offers multiple organization methods to suit
-                different collecting styles:
+                PkmnBindr offers multiple organization methods to suit different
+                collecting styles:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -254,7 +253,7 @@ const FAQPage = () => {
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr offers extensive customization options:
+                PkmnBindr offers extensive customization options:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -454,8 +453,8 @@ const FAQPage = () => {
                   collection
                 </li>
                 <li>
-                  <strong>Start Digital First:</strong> Use PokemonBindr to
-                  track what you want before buying physical cards
+                  <strong>Start Digital First:</strong> Use PkmnBindr to track
+                  what you want before buying physical cards
                 </li>
                 <li>
                   <strong>Set Completion:</strong> Focus on completing modern
@@ -471,7 +470,7 @@ const FAQPage = () => {
                 </li>
               </ul>
               <p>
-                PokemonBindr helps new collectors avoid common mistakes by
+                PkmnBindr helps new collectors avoid common mistakes by
                 providing a clear overview of set completion and allowing you to
                 plan purchases strategically. Check out our{" "}
                 <Link
@@ -525,10 +524,10 @@ const FAQPage = () => {
                 </li>
               </ul>
               <p>
-                Use PokemonBindr to track these valuable cards in your
-                collection and plan your collecting strategy. Our database helps
-                you identify authentic versions and avoid counterfeits. Learn
-                more about{" "}
+                Use PkmnBindr to track these valuable cards in your collection
+                and plan your collecting strategy. Our database helps you
+                identify authentic versions and avoid counterfeits. Learn more
+                about{" "}
                 <Link
                   to="/blog/how-to-spot-fake-pokemon-cards-protect-collection"
                   className="text-blue-600 hover:text-blue-800 font-medium"
@@ -576,10 +575,10 @@ const FAQPage = () => {
                 </li>
               </ul>
               <p>
-                PokemonBindr supports all these organization methods with
-                powerful sorting and filtering tools. You can easily switch
-                between different views and create multiple binders for
-                different purposes. Read our detailed guide on{" "}
+                PkmnBindr supports all these organization methods with powerful
+                sorting and filtering tools. You can easily switch between
+                different views and create multiple binders for different
+                purposes. Read our detailed guide on{" "}
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
                   className="text-blue-600 hover:text-blue-800 font-medium"
@@ -723,12 +722,12 @@ const FAQPage = () => {
       title: "Troubleshooting & Alternatives",
       questions: [
         {
-          id: "pokemon-live-vs-pokemonbindr",
-          question: "How does PokemonBindr compare to Pokemon Live app?",
+          id: "pokemon-live-vs-PkmnBindr",
+          question: "How does PkmnBindr compare to Pokemon Live app?",
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr and Pokemon Live serve different purposes for
+                PkmnBindr and Pokemon Live serve different purposes for
                 collectors:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
@@ -737,48 +736,48 @@ const FAQPage = () => {
                   collection tracking
                 </li>
                 <li>
-                  <strong>PokemonBindr:</strong> Comprehensive collection
-                  organizer for physical and digital cards
+                  <strong>PkmnBindr:</strong> Comprehensive collection organizer
+                  for physical and digital cards
                 </li>
                 <li>
                   <strong>Scope:</strong> Pokemon Live focuses on gameplay,
-                  PokemonBindr on organization
+                  PkmnBindr on organization
                 </li>
                 <li>
-                  <strong>Card Coverage:</strong> PokemonBindr includes every
-                  TCG card ever released
+                  <strong>Card Coverage:</strong> PkmnBindr includes every TCG
+                  card ever released
                 </li>
                 <li>
-                  <strong>Customization:</strong> PokemonBindr offers unlimited
+                  <strong>Customization:</strong> PkmnBindr offers unlimited
                   binder customization options
                 </li>
                 <li>
-                  <strong>Offline Access:</strong> PokemonBindr works completely
+                  <strong>Offline Access:</strong> PkmnBindr works completely
                   offline in guest mode
                 </li>
               </ul>
               <p>
                 Many collectors use both - Pokemon Live for playing the TCG
-                digitally and PokemonBindr for organizing their complete
-                collection. PokemonBindr is ideal for tracking which physical
-                cards you own and planning future purchases.
+                digitally and PkmnBindr for organizing their complete
+                collection. PkmnBindr is ideal for tracking which physical cards
+                you own and planning future purchases.
               </p>
             </div>
           ),
           keywords: [
-            "pokemon live vs pokemonbindr",
+            "pokemon live vs PkmnBindr",
             "pokemon live alternative",
             "better than pokemon live",
           ],
         },
         {
-          id: "tcgplayer-vs-pokemonbindr",
+          id: "tcgplayer-vs-PkmnBindr",
           question:
-            "Is PokemonBindr better than TCGPlayer for collection tracking?",
+            "Is PkmnBindr better than TCGPlayer for collection tracking?",
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr and TCGPlayer serve different primary functions:
+                PkmnBindr and TCGPlayer serve different primary functions:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -786,11 +785,11 @@ const FAQPage = () => {
                   cards with basic collection features
                 </li>
                 <li>
-                  <strong>PokemonBindr:</strong> Dedicated collection organizer
+                  <strong>PkmnBindr:</strong> Dedicated collection organizer
                   with advanced binder creation
                 </li>
                 <li>
-                  <strong>Organization:</strong> PokemonBindr offers superior
+                  <strong>Organization:</strong> PkmnBindr offers superior
                   visual organization and customization
                 </li>
                 <li>
@@ -798,25 +797,25 @@ const FAQPage = () => {
                   digital binders vs. simple lists
                 </li>
                 <li>
-                  <strong>Free Access:</strong> PokemonBindr's core features are
+                  <strong>Free Access:</strong> PkmnBindr's core features are
                   completely free
                 </li>
                 <li>
-                  <strong>Focus:</strong> TCGPlayer for transactions,
-                  PokemonBindr for organization and display
+                  <strong>Focus:</strong> TCGPlayer for transactions, PkmnBindr
+                  for organization and display
                 </li>
               </ul>
               <p>
                 For serious collectors who want more than basic tracking,
-                PokemonBindr provides the visual organization and customization
+                PkmnBindr provides the visual organization and customization
                 that TCGPlayer lacks. Use TCGPlayer for market research and
-                purchasing, PokemonBindr for showcasing and organizing your
+                purchasing, PkmnBindr for showcasing and organizing your
                 collection.
               </p>
             </div>
           ),
           keywords: [
-            "tcgplayer vs pokemonbindr",
+            "tcgplayer vs PkmnBindr",
             "better than tcgplayer",
             "pokemon collection organizer vs tcgplayer",
           ],
@@ -865,7 +864,7 @@ const FAQPage = () => {
           ),
           keywords: [
             "pokemon collection not saving",
-            "pokemonbindr not syncing",
+            "PkmnBindr not syncing",
             "collection disappeared",
           ],
         },
@@ -932,11 +931,11 @@ const FAQPage = () => {
       questions: [
         {
           id: "browser-support",
-          question: "What browsers and devices support PokemonBindr?",
+          question: "What browsers and devices support PkmnBindr?",
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr works on all modern browsers and devices:
+                PkmnBindr works on all modern browsers and devices:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -980,7 +979,7 @@ const FAQPage = () => {
           answer: (
             <div>
               <p className="mb-3">
-                Yes, PokemonBindr provides multiple export options:
+                Yes, PkmnBindr provides multiple export options:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -1023,7 +1022,7 @@ const FAQPage = () => {
           answer: (
             <div>
               <p className="mb-3">
-                PokemonBindr is optimized for collections of all sizes:
+                PkmnBindr is optimized for collections of all sizes:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
                 <li>
@@ -1063,7 +1062,7 @@ const FAQPage = () => {
           answer: (
             <div>
               <p className="mb-3">
-                No, PokemonBindr only includes authentic, officially released
+                No, PkmnBindr only includes authentic, officially released
                 Pokemon TCG cards:
               </p>
               <ul className="list-disc list-inside mb-3 space-y-2">
@@ -1085,7 +1084,7 @@ const FAQPage = () => {
                 </li>
               </ul>
               <p>
-                This makes PokemonBindr an excellent tool for authentication -
+                This makes PkmnBindr an excellent tool for authentication -
                 compare your physical cards to our verified database entries.
                 For detailed authentication guidance, read our comprehensive
                 guide on
@@ -1156,7 +1155,7 @@ const FAQPage = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Pokemon Card Organizer FAQ
+                Pokemon Binder Planner FAQ
               </h1>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
                 Everything you need to know about organizing your Pokemon TCG

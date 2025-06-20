@@ -34,7 +34,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Welcome back to PokemonBindr
+              Welcome back to PkmnBindr
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Welcome back,{" "}
@@ -119,7 +119,7 @@ const HomePage = () => {
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                   Free Pokemon Card Binder Organizer{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    PokemonBindr
+                    PkmnBindr
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-4">
@@ -176,7 +176,7 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-4">
-                  See PokemonBindr in Action
+                  See PkmnBindr in Action
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Experience the beautiful interface and powerful features that
@@ -617,7 +617,7 @@ const HomePage = () => {
                   Built with ❤️ by a Solo Developer
                 </h3>
                 <p className="text-amber-800 mb-4 max-w-2xl mx-auto text-lg">
-                  Hey there! PokemonBindr is a passion project I'm actively
+                  Hey there! PkmnBindr is a passion project I'm actively
                   developing. You might encounter some bugs, missing features,
                   or changes as I continue to improve the experience for fellow
                   collectors.
@@ -633,7 +633,7 @@ const HomePage = () => {
           <div className="bg-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
-                Why Choose PokemonBindr?
+                Why Choose PkmnBindr?
               </h2>
               <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
                 Built by an active Pokemon collector for the community. I
@@ -699,10 +699,10 @@ const HomePage = () => {
               <div className="space-y-6">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    Is PokemonBindr really free to use?
+                    Is PkmnBindr really free to use?
                   </h3>
                   <p className="text-gray-600">
-                    Yes! PokemonBindr is completely free forever. Create digital
+                    Yes! PkmnBindr is completely free forever. Create digital
                     Pokemon binders, add thousands of cards, and sync across
                     devices at no cost.
                   </p>
@@ -744,11 +744,10 @@ const HomePage = () => {
 
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    What makes PokemonBindr different from other virtual
-                    binders?
+                    What makes PkmnBindr different from other virtual binders?
                   </h3>
                   <p className="text-gray-600">
-                    PokemonBindr focuses specifically on the visual binder
+                    PkmnBindr focuses specifically on the visual binder
                     experience that Pokemon collectors love. Beautiful card
                     layouts and completely free access to all binder features.
                   </p>
@@ -764,7 +763,7 @@ const HomePage = () => {
                 Ready to Start Your Digital Pokemon Collection?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Join thousands of Pokemon trainers who trust PokemonBindr to
+                Join thousands of Pokemon trainers who trust PkmnBindr to
                 organize their TCG collections. Start building your digital
                 binders today!
               </p>

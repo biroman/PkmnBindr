@@ -397,7 +397,7 @@ const Navbar = () => {
                 to={user ? "/home" : "/"}
                 className="flex items-center space-x-2 text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
-                <img src="/logo.png" alt="PokemonBindr" className="w-20 h-15" />
+                <img src="/logo.png" alt="PkmnBindr" className="w-20 h-15" />
               </Link>
             </div>
 

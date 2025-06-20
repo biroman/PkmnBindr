@@ -68,7 +68,7 @@ const BlogPost1 = () => {
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
                 <p className="text-xs text-gray-500 mt-2 text-center">
-                  Digital collection management from PokemonBindr.com
+                  Digital collection management from PkmnBindr.com
                 </p>
               </div>
             </div>
