@@ -453,7 +453,7 @@ export const BinderContainer = ({
           }
           activeCard={binderDragDrop.activeCard}
           disabled={!features.dragDrop}
-          className="flex-1"
+          className="flex-1 flex items-center justify-center"
         >
           <BinderCore
             binder={binder}
@@ -479,7 +479,7 @@ export const BinderContainer = ({
                 : {}
             }
             activeCard={binderDragDrop.activeCard}
-            className={`drag-container ${
+            className={`drag-container relative ${
               binderDragDrop.activeCard ? "dragging-active" : ""
             }`}
           >

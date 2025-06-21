@@ -26,10 +26,7 @@ const BinderCore = ({
   const isDragDropEnabled = mode === "edit" && !isReadOnly;
 
   return (
-    <div
-      className={`flex items-center justify-center flex-1 ${className}`}
-      style={style}
-    >
+    <div className={`relative ${className}`} style={style}>
       <BinderDisplay
         binder={binder}
         currentPageConfig={currentPageConfig}
