@@ -179,6 +179,9 @@ const useBinderPages = (binder) => {
             ...cardEntry.cardData,
             binderMetadata: cardEntry,
           };
+        } else if (cardEntry.name && cardEntry.image) {
+          // Direct card data (admin normalized format)
+          pageCards[i] = cardEntry;
         } else {
           // Fallback for old binder format - create minimal card object
           pageCards[i] = {
