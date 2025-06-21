@@ -16,8 +16,14 @@ import BinderSidebar from "../components/binder/BinderSidebar";
 import BinderPageOverview from "../components/binder/BinderPageOverview";
 import ClearBinderModal from "../components/binder/ClearBinderModal";
 import BinderColorPicker from "../components/binder/BinderColorPicker";
+import BinderCore from "../components/binder/BinderCore";
+import {
+  BinderNavigation,
+  EdgeNavigation,
+} from "../components/binder/navigation";
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
+import useBinderNavigation from "../hooks/useBinderNavigation";
 import pdfExportService from "../services/PdfExportService";
 import { useRules } from "../contexts/RulesContext";
 import useExportTracking from "../hooks/useExportTracking";
@@ -57,13 +63,6 @@ const BinderPage = () => {
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
   const [previewColor, setPreviewColor] = useState(null); // For live preview
   const modalOpenRef = useRef(false); // Prevent duplicate modal opens
-
-  // Edge navigation state
-  const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
-  const [isInNavigationZone, setIsInNavigationZone] = useState(null);
-  const [navigationProgress, setNavigationProgress] = useState(0);
-  const [progressAnimationId, setProgressAnimationId] = useState(null); // 'left' | 'right' | null
-  const navigationZoneRef = useRef(null); // Ref to track current navigation zone without closure issues
 
   // Auto-select binder based on URL parameter with security check
   useEffect(() => {
@@ -107,6 +106,27 @@ const BinderPage = () => {
     getCardsForPage,
     getPageDisplayText,
   } = useBinderPages(currentBinder);
+
+  // Navigation state managed by hook (must come after useBinderPages)
+  const binderNavigation = useBinderNavigation({
+    binder: currentBinder,
+    navigation: {
+      canGoNext,
+      canGoPrev,
+      goToNextPage,
+      goToPrevPage,
+      goToPage,
+    },
+    activeCard,
+    dimensions: binderDimensions,
+    isModalsOpen:
+      isAddCardModalOpen ||
+      isPageOverviewOpen ||
+      isClearModalOpen ||
+      isColorPickerOpen,
+    enableKeyboard: true,
+    enableEdgeNavigation: true,
+  });
 
   // Use the robust binder dimensions hook (call before any conditional returns)
   const binderDimensions = useBinderDimensions(
@@ -381,189 +401,6 @@ const BinderPage = () => {
     }
   };
 
-  // Edge navigation helper functions
-  const clearNavigationTimer = useCallback(() => {
-    if (edgeNavigationTimer) {
-      clearTimeout(edgeNavigationTimer);
-      setEdgeNavigationTimer(null);
-    }
-    if (progressAnimationId) {
-      cancelAnimationFrame(progressAnimationId);
-      setProgressAnimationId(null);
-    }
-    setIsInNavigationZone(null);
-    navigationZoneRef.current = null;
-    setNavigationProgress(0);
-  }, [edgeNavigationTimer, progressAnimationId]);
-
-  const startNavigationTimer = useCallback(
-    (direction) => {
-      // Clear any existing timer
-      clearNavigationTimer();
-
-      setIsInNavigationZone(direction);
-      navigationZoneRef.current = direction;
-
-      // Start progress animation
-      const startTime = Date.now();
-      const animateProgress = () => {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min((elapsed / 1000) * 100, 100);
-        setNavigationProgress(progress);
-
-        if (progress < 100) {
-          const animId = requestAnimationFrame(animateProgress);
-          setProgressAnimationId(animId);
-        }
-      };
-      const initialAnimId = requestAnimationFrame(animateProgress);
-      setProgressAnimationId(initialAnimId);
-
-      // Start new timer
-      const timer = setTimeout(() => {
-        const currentZone = navigationZoneRef.current;
-        // Only navigate if we're still in the same navigation zone
-        if (currentZone === direction) {
-          console.log(`Edge navigation triggered: ${direction}`);
-          if (direction === "left" && canGoPrev) {
-            console.log("Navigating to previous page while dragging");
-            goToPrevPage();
-          } else if (direction === "right" && canGoNext) {
-            console.log("Navigating to next page while dragging");
-            goToNextPage();
-          }
-        }
-        clearNavigationTimer();
-      }, 1000); // 1 second delay
-
-      setEdgeNavigationTimer(timer);
-    },
-    [
-      clearNavigationTimer,
-      isInNavigationZone,
-      canGoPrev,
-      canGoNext,
-      goToPrevPage,
-      goToNextPage,
-    ]
-  );
-
-  // Mouse move handler for edge navigation
-  const handleMouseMove = useCallback(
-    (event) => {
-      if (!activeCard) return;
-
-      const mouseX = event.clientX;
-
-      // Get binder container bounds
-      const binderContainer = document.querySelector(".binder-container");
-      if (!binderContainer) return;
-
-      const rect = binderContainer.getBoundingClientRect();
-
-      // Define edge zones (100px zones immediately adjacent to binder edges)
-      const leftZoneStart = rect.left - 100;
-      const leftZoneEnd = rect.left;
-      const rightZoneStart = rect.right;
-      const rightZoneEnd = rect.right + 100;
-
-      // Check if mouse is in navigation zones
-      if (mouseX >= leftZoneStart && mouseX <= leftZoneEnd && canGoPrev) {
-        if (isInNavigationZone !== "left") {
-          console.log("Entering left navigation zone");
-          startNavigationTimer("left");
-        }
-      } else if (
-        mouseX >= rightZoneStart &&
-        mouseX <= rightZoneEnd &&
-        canGoNext
-      ) {
-        if (isInNavigationZone !== "right") {
-          console.log("Entering right navigation zone");
-          startNavigationTimer("right");
-        }
-      } else {
-        // Not in any navigation zone
-        if (navigationZoneRef.current) {
-          console.log("Exiting navigation zone");
-          clearNavigationTimer();
-        }
-      }
-    },
-    [
-      activeCard,
-      canGoPrev,
-      canGoNext,
-      startNavigationTimer,
-      clearNavigationTimer,
-      isInNavigationZone,
-    ]
-  );
-
-  // Add/remove mouse move listener when dragging
-  useEffect(() => {
-    if (activeCard) {
-      document.addEventListener("mousemove", handleMouseMove);
-      return () => {
-        document.removeEventListener("mousemove", handleMouseMove);
-      };
-    }
-  }, [activeCard, handleMouseMove]);
-
-  // Keyboard navigation with arrow keys
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      // Only handle arrow keys when no modals are open and we have a current binder
-      if (
-        !currentBinder ||
-        isAddCardModalOpen ||
-        isPageOverviewOpen ||
-        isClearModalOpen ||
-        isColorPickerOpen
-      ) {
-        return;
-      }
-
-      // Prevent default behavior for arrow keys to avoid page scrolling
-      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-        event.preventDefault();
-      }
-
-      switch (event.key) {
-        case "ArrowLeft":
-          if (canGoPrev) {
-            goToPrevPage();
-          }
-          break;
-        case "ArrowRight":
-          if (canGoNext) {
-            goToNextPage();
-          }
-          break;
-        default:
-          break;
-      }
-    };
-
-    // Add event listener
-    document.addEventListener("keydown", handleKeyDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [
-    currentBinder,
-    isAddCardModalOpen,
-    isPageOverviewOpen,
-    isClearModalOpen,
-    isColorPickerOpen,
-    canGoPrev,
-    canGoNext,
-    goToPrevPage,
-    goToNextPage,
-  ]);
-
   // Drag and drop handlers
   const handleDragStart = (event) => {
     const { active } = event;
@@ -588,7 +425,7 @@ const BinderPage = () => {
     console.log("handleDragEnd - active.data.current:", active?.data?.current);
 
     // Clear navigation timer first (before any early returns)
-    clearNavigationTimer();
+    binderNavigation.clearNavigationTimer();
 
     // Restore document scrolling
     document.body.style.overflow = "";
@@ -663,7 +500,7 @@ const BinderPage = () => {
     activeDragDataRef.current = null; // Clear stored data
 
     // Clear navigation timer
-    clearNavigationTimer();
+    binderNavigation.clearNavigationTimer();
 
     // Restore document scrolling on cancel
     document.body.style.overflow = "";
@@ -730,336 +567,89 @@ const BinderPage = () => {
           isPdfExporting={isPdfExporting}
         />
 
-        <DndContext
-          collisionDetection={closestCenter}
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          onDragCancel={handleDragCancel}
-          onDragOver={(event) => {
-            // Debug collision detection during drag
-            if (event.over) {
-              console.log("Drag over:", {
-                overId: event.over.id,
-                overData: event.over.data.current,
-              });
-            }
+        <BinderCore
+          binder={currentBinder}
+          currentPageConfig={pageConfig}
+          dimensions={binderDimensions}
+          mode="edit"
+          backgroundColor={currentDisplayColor}
+          getCardsForPage={getCardsForPage}
+          onCardInteraction={{
+            onCardClick: handleCardClick,
+            onCardDelete: handleCardDelete,
+            onSlotClick: handleSlotClick,
+            onToggleMissing: handleToggleMissing,
           }}
+          dragHandlers={{
+            onDragStart: handleDragStart,
+            onDragEnd: handleDragEnd,
+            onDragCancel: handleDragCancel,
+            onDragOver: (event) => {
+              // Debug collision detection during drag
+              if (event.over) {
+                console.log("Drag over:", {
+                  overId: event.over.id,
+                  overData: event.over.data.current,
+                });
+              }
+            },
+          }}
+          activeCard={activeCard}
+          className={`drag-container ${activeCard ? "dragging-active" : ""}`}
         >
-          <div
-            className={`flex items-center justify-center flex-1 drag-container ${
-              activeCard ? "dragging-active" : ""
-            }`}
-          >
-            {/* Edge Navigation Zones - positioned relative to binder container */}
-            {activeCard && (
-              <>
-                {/* Left Edge Zone */}
-                <div
-                  className={`fixed top-16 bottom-0 w-24 transition-all duration-200 z-20 ${
-                    isInNavigationZone === "left"
-                      ? "bg-blue-500/30 border-r-4 border-blue-500"
-                      : "bg-blue-500/10 border-r-2 border-blue-300"
-                  } ${canGoPrev ? "opacity-100" : "opacity-50"}`}
-                  style={{
-                    left: `calc(50% - ${navigationAdjustment / 2}px - ${
-                      binderDimensions.width / 2 + 124
-                    }px)`,
-                  }}
-                >
-                  <div className="flex items-center justify-center h-full">
-                    <div className="text-white text-center">
-                      <div className="relative inline-block">
-                        <svg
-                          className="w-8 h-8 mx-auto mb-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 19l-7-7 7-7"
-                          />
-                        </svg>
-                        {isInNavigationZone === "left" && (
-                          <svg
-                            className="absolute inset-0 w-8 h-8 -rotate-90"
-                            viewBox="0 0 32 32"
-                          >
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="14"
-                              fill="none"
-                              stroke="rgba(255,255,255,0.3)"
-                              strokeWidth="2"
-                            />
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="14"
-                              fill="none"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeDasharray="87.96"
-                              strokeDashoffset={
-                                87.96 - (87.96 * navigationProgress) / 100
-                              }
-                              className="transition-all duration-75 ease-linear"
-                            />
-                          </svg>
-                        )}
-                      </div>
-                      <div className="text-xs font-medium">
-                        {isInNavigationZone === "left"
-                          ? "Switching..."
-                          : "Hold to go back"}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          {/* Edge Navigation Zones */}
+          <EdgeNavigation
+            isActive={!!activeCard}
+            navigation={binderNavigation}
+            positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
+            dragState={{
+              isInNavigationZone: binderNavigation.isInNavigationZone,
+              navigationProgress: binderNavigation.navigationProgress,
+            }}
+          />
 
-                {/* Right Edge Zone */}
-                <div
-                  className={`fixed top-16 bottom-0 w-24 transition-all duration-200 z-20 ${
-                    isInNavigationZone === "right"
-                      ? "bg-blue-500/30 border-l-4 border-blue-500"
-                      : "bg-blue-500/10 border-l-2 border-blue-300"
-                  } ${canGoNext ? "opacity-100" : "opacity-50"}`}
-                  style={{
-                    left: `calc(50% - ${navigationAdjustment / 2}px + ${
-                      binderDimensions.width / 2 + 26
-                    }px)`,
-                  }}
-                >
-                  <div className="flex items-center justify-center h-full">
-                    <div className="text-white text-center">
-                      <div className="relative inline-block">
-                        <svg
-                          className="w-8 h-8 mx-auto mb-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                        {isInNavigationZone === "right" && (
-                          <svg
-                            className="absolute inset-0 w-8 h-8 -rotate-90"
-                            viewBox="0 0 32 32"
-                          >
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="14"
-                              fill="none"
-                              stroke="rgba(255,255,255,0.3)"
-                              strokeWidth="2"
-                            />
-                            <circle
-                              cx="16"
-                              cy="16"
-                              r="14"
-                              fill="none"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeDasharray="87.96"
-                              strokeDashoffset={
-                                87.96 - (87.96 * navigationProgress) / 100
-                              }
-                              className="transition-all duration-75 ease-linear"
-                            />
-                          </svg>
-                        )}
-                      </div>
-                      <div className="text-xs font-medium">
-                        {isInNavigationZone === "right"
-                          ? "Switching..."
-                          : "Hold to go forward"}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
+          {/* Page Navigation Controls */}
+          <BinderNavigation
+            navigation={binderNavigation}
+            positions={binderNavigation.getNavigationPositions(sidebarWidth)}
+            onAddPage={handleAddPage}
+            isReadOnly={false}
+            mode="edit"
+            activeCard={activeCard}
+          />
 
-            {/* Binder Container - Dynamic sizing based on grid */}
-            <div
-              className="relative flex gap-4 binder-container"
-              style={{
-                width: `${binderDimensions.width}px`,
-                height: `${binderDimensions.height}px`,
-              }}
+          {/* Sidebar Toggle Button */}
+          <div className="absolute top-4 right-4">
+            <button
+              onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+              className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+              title={isSidebarCollapsed ? "Open sidebar" : "Close sidebar"}
             >
-              {/* Left Page */}
-              {pageConfig.leftPage.type === "cover" ? (
-                <CoverPage
-                  binder={currentBinder}
-                  backgroundColor={currentDisplayColor}
-                />
-              ) : (
-                <CardPage
-                  pageNumber={pageConfig.leftPage.pageNumber}
-                  cards={getCardsForPage(pageConfig.leftPage.cardPageIndex)}
-                  gridSize={currentBinder.settings.gridSize}
-                  onCardClick={handleCardClick}
-                  onCardDelete={handleCardDelete}
-                  onSlotClick={handleSlotClick}
-                  onToggleMissing={handleToggleMissing}
-                  cardPageIndex={pageConfig.leftPage.cardPageIndex}
-                  missingPositions={
-                    currentBinder.metadata?.missingInstances || []
-                  }
-                  backgroundColor={currentDisplayColor}
-                />
-              )}
-
-              {/* Center Spine */}
-              <div className="w-2 bg-gray-400 rounded-full shadow-lg"></div>
-
-              {/* Right Page */}
-              <CardPage
-                pageNumber={pageConfig.rightPage.pageNumber}
-                cards={getCardsForPage(pageConfig.rightPage.cardPageIndex)}
-                gridSize={currentBinder.settings.gridSize}
-                onCardClick={handleCardClick}
-                onCardDelete={handleCardDelete}
-                onSlotClick={handleSlotClick}
-                onToggleMissing={handleToggleMissing}
-                cardPageIndex={pageConfig.rightPage.cardPageIndex}
-                missingPositions={
-                  currentBinder.metadata?.missingInstances || []
-                }
-                backgroundColor={currentDisplayColor}
-              />
-            </div>
-
-            {/* Left Navigation - positioned next to binder */}
-            {!activeCard && (
-              <div
-                className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-300"
-                style={{
-                  left: `calc((50% - ${navigationAdjustment / 2}px) - ${
-                    binderDimensions.width / 2 + 64
-                  }px)`,
-                }}
+              <svg
+                className="w-5 h-5 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <button
-                  onClick={goToPrevPage}
-                  disabled={!canGoPrev}
-                  className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  title="Previous Page"
-                >
-                  <svg
-                    className="w-6 h-6 text-gray-700"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </button>
-              </div>
-            )}
-
-            {/* Right Navigation - positioned next to binder */}
-            {!activeCard && (
-              <div
-                className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-300"
-                style={{
-                  right: `calc((50% + ${navigationAdjustment / 2}px) - ${
-                    binderDimensions.width / 2 + 64
-                  }px)`,
-                }}
-              >
-                <button
-                  onClick={!canGoNext ? handleAddPage : goToNextPage}
-                  className={`w-12 h-12 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center ${
-                    !canGoNext
-                      ? "bg-blue-500 hover:bg-blue-600 text-white"
-                      : "bg-white/90 hover:bg-white text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                  }`}
-                  title={!canGoNext ? "Add New Page" : "Next Page"}
-                >
-                  {!canGoNext ? (
-                    <PlusIcon className="w-6 h-6" />
-                  ) : (
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  )}
-                </button>
-              </div>
-            )}
-
-            {/* Sidebar Toggle Button */}
-            <div className="absolute top-4 right-4">
-              <button
-                onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-                className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
-                title={isSidebarCollapsed ? "Open sidebar" : "Close sidebar"}
-              >
-                <svg
-                  className="w-5 h-5 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span className="text-sm font-medium text-gray-700">
-                  {isSidebarCollapsed ? "Settings" : "Hide"}
-                </span>
-              </button>
-            </div>
-
-            {/* Drag Overlay */}
-            <DragOverlay>
-              {activeCard ? (
-                <DraggableCard
-                  card={activeCard}
-                  position={-1} // Special position for overlay
-                  gridSize={currentBinder.settings.gridSize}
-                  isDragging={true}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
                 />
-              ) : null}
-            </DragOverlay>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <span className="text-sm font-medium text-gray-700">
+                {isSidebarCollapsed ? "Settings" : "Hide"}
+              </span>
+            </button>
           </div>
-        </DndContext>
+        </BinderCore>
       </div>
 
       {/* Sidebar */}
