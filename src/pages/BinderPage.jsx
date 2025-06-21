@@ -493,6 +493,60 @@ const BinderPage = () => {
     }
   }, [activeCard, handleMouseMove]);
 
+  // Keyboard navigation with arrow keys
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Only handle arrow keys when no modals are open and we have a current binder
+      if (
+        !currentBinder ||
+        isAddCardModalOpen ||
+        isPageOverviewOpen ||
+        isClearModalOpen ||
+        isColorPickerOpen
+      ) {
+        return;
+      }
+
+      // Prevent default behavior for arrow keys to avoid page scrolling
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+      }
+
+      switch (event.key) {
+        case "ArrowLeft":
+          if (canGoPrev) {
+            goToPrevPage();
+          }
+          break;
+        case "ArrowRight":
+          if (canGoNext) {
+            goToNextPage();
+          }
+          break;
+        default:
+          break;
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [
+    currentBinder,
+    isAddCardModalOpen,
+    isPageOverviewOpen,
+    isClearModalOpen,
+    isColorPickerOpen,
+    canGoPrev,
+    canGoNext,
+    goToPrevPage,
+    goToNextPage,
+  ]);
+
   // Drag and drop handlers
   const handleDragStart = (event) => {
     const { active } = event;
