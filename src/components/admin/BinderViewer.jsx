@@ -6,6 +6,7 @@ import AdminBinderSidebar from "./AdminBinderSidebar";
 import CardRepairTool from "./CardRepairTool";
 import ImageUpdateTool from "./ImageUpdateTool";
 import { fetchBinderForAdminView } from "../../utils/userManagement";
+import { CardRepairService } from "../../utils/cardRepairService";
 
 const BinderViewer = () => {
   const navigate = useNavigate();
@@ -16,6 +17,9 @@ const BinderViewer = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showRepairTool, setShowRepairTool] = useState(false);
   const [showImageUpdateTool, setShowImageUpdateTool] = useState(false);
+  const [incompleteCardsCount, setIncompleteCardsCount] = useState(0);
+  const [showAutoRepairPrompt, setShowAutoRepairPrompt] = useState(false);
+  const [isAutoRepairing, setIsAutoRepairing] = useState(false);
 
   // Load binder data
   useEffect(() => {
@@ -44,6 +48,26 @@ const BinderViewer = () => {
         // Debug logging for card data
         console.log(`[BinderViewer] Loaded binder:`, binderData);
         console.log(`[BinderViewer] Cards data:`, binderData.cards);
+
+        // Count incomplete cards
+        const incompleteCards = Object.entries(binderData.cards || {}).filter(
+          ([pos, card]) => {
+            return card && card.isIncompleteCard;
+          }
+        );
+
+        setIncompleteCardsCount(incompleteCards.length);
+
+        // Show auto-repair prompt if incomplete cards found
+        if (incompleteCards.length > 0) {
+          setShowAutoRepairPrompt(true);
+          toast.error(
+            `Found ${incompleteCards.length} incomplete cards that need repair`,
+            {
+              duration: 5000,
+            }
+          );
+        }
 
         // Log cards without images
         const cardsWithoutImages = Object.entries(
@@ -97,6 +121,78 @@ const BinderViewer = () => {
     loadBinder();
   }, [userId, binderId, source]);
 
+  // Auto-repair incomplete cards
+  const handleAutoRepair = async () => {
+    try {
+      setIsAutoRepairing(true);
+      setShowAutoRepairPrompt(false);
+
+      toast.loading("Auto-repairing incomplete cards...", {
+        id: "auto-repair",
+      });
+
+      // Step 1: Find incomplete cards
+      const incompleteCards =
+        await CardRepairService.findIncompleteCardsInBinder(
+          binderId,
+          userId,
+          source
+        );
+
+      if (incompleteCards.length === 0) {
+        toast.success("No incomplete cards found!", { id: "auto-repair" });
+        return;
+      }
+
+      // Step 2: Preview repairs (fetch card data)
+      const previewResults = await CardRepairService.previewCardRepairs(
+        incompleteCards
+      );
+
+      if (previewResults.successful === 0) {
+        toast.error("Failed to fetch card data for repair", {
+          id: "auto-repair",
+        });
+        return;
+      }
+
+      // Step 3: Commit successful repairs
+      const successfulPreviews = previewResults.previews.filter(
+        (p) => p.success
+      );
+      const commitResults = await CardRepairService.commitRepairs(
+        successfulPreviews
+      );
+
+      if (commitResults.committed > 0) {
+        toast.success(
+          `Successfully repaired ${commitResults.committed} cards!`,
+          { id: "auto-repair" }
+        );
+
+        // Reload binder to show repaired cards
+        const binderData = await fetchBinderForAdminView(
+          binderId,
+          userId,
+          source
+        );
+        setCurrentBinder(binderData);
+        setIncompleteCardsCount(0);
+      } else {
+        toast.error("Failed to commit repairs to database", {
+          id: "auto-repair",
+        });
+      }
+    } catch (error) {
+      console.error("Auto-repair failed:", error);
+      toast.error(`Auto-repair failed: ${error.message}`, {
+        id: "auto-repair",
+      });
+    } finally {
+      setIsAutoRepairing(false);
+    }
+  };
+
   // Admin tool handlers
   const handleRepairComplete = async (results) => {
     console.log("Card repair completed:", results);
@@ -110,6 +206,7 @@ const BinderViewer = () => {
           source
         );
         setCurrentBinder(binderData);
+        setIncompleteCardsCount(0);
       } catch (err) {
         console.error("Error reloading binder after repair:", err);
         toast.error("Failed to reload binder data");
@@ -207,8 +304,57 @@ const BinderViewer = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Auto-Repair Prompt Banner */}
+      {showAutoRepairPrompt && incompleteCardsCount > 0 && (
+        <div className="bg-red-50 border-l-4 border-red-400 p-4 fixed top-0 left-0 right-0 z-50">
+          <div className="flex items-center justify-between">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg
+                  className="h-5 w-5 text-red-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-red-700">
+                  <strong>
+                    {incompleteCardsCount} incomplete cards found!
+                  </strong>{" "}
+                  These cards have metadata but are missing Pokemon card data
+                  (images, names, etc.)
+                </p>
+              </div>
+            </div>
+            <div className="flex space-x-2">
+              <button
+                onClick={handleAutoRepair}
+                disabled={isAutoRepairing}
+                className="bg-red-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isAutoRepairing ? "Repairing..." : "Auto-Repair All"}
+              </button>
+              <button
+                onClick={() => setShowAutoRepairPrompt(false)}
+                className="text-red-700 hover:text-red-900 px-2 py-2 text-sm"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Main Content Layout - Full screen with proper background handling */}
-      <div className="flex min-h-screen">
+      <div
+        className={`flex min-h-screen ${showAutoRepairPrompt ? "pt-16" : ""}`}
+      >
         {/* Admin Sidebar */}
         <AdminBinderSidebar
           binder={currentBinder}
@@ -223,6 +369,7 @@ const BinderViewer = () => {
           }
           isVisible={isSidebarVisible}
           onToggleVisibility={() => setIsSidebarVisible(!isSidebarVisible)}
+          incompleteCardsCount={incompleteCardsCount}
         />
 
         {/* Main Binder Area using BinderContainer */}
