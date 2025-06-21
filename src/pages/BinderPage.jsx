@@ -24,6 +24,7 @@ import {
 import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
 import useBinderNavigation from "../hooks/useBinderNavigation";
+import useBinderDragDrop from "../hooks/useBinderDragDrop";
 import pdfExportService from "../services/PdfExportService";
 import { useRules } from "../contexts/RulesContext";
 import useExportTracking from "../hooks/useExportTracking";
@@ -54,8 +55,7 @@ const BinderPage = () => {
   } = useBinderContext();
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
-  const [activeCard, setActiveCard] = useState(null); // For drag overlay
-  const activeDragDataRef = useRef(null); // Store drag data persistently across re-renders
+
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
@@ -122,7 +122,7 @@ const BinderPage = () => {
       goToPrevPage,
       goToPage,
     },
-    activeCard,
+    activeCard: null, // Will be updated after drag hook is initialized
     dimensions: binderDimensions,
     isModalsOpen:
       isAddCardModalOpen ||
@@ -131,6 +131,18 @@ const BinderPage = () => {
       isColorPickerOpen,
     enableKeyboard: true,
     enableEdgeNavigation: true,
+  });
+
+  // Drag and drop functionality (must come after navigation hook)
+  const binderDragDrop = useBinderDragDrop({
+    binder: currentBinder,
+    moveCard,
+    navigation: binderNavigation,
+    onDragStateChange: (isDragging) => {
+      // Optional: Add any side effects when drag state changes
+      console.log("Drag state changed:", isDragging);
+    },
+    enableDrag: true,
   });
 
   // No need for local state management - handled by context
@@ -401,113 +413,6 @@ const BinderPage = () => {
     }
   };
 
-  // Drag and drop handlers
-  const handleDragStart = (event) => {
-    const { active } = event;
-    const cardData = active.data.current;
-
-    console.log("Drag start:", cardData);
-
-    if (cardData?.type === "card") {
-      setActiveCard(cardData.card);
-      activeDragDataRef.current = cardData; // Store drag data persistently
-      // Prevent document scrolling during drag
-      document.body.style.overflow = "hidden";
-      document.body.style.touchAction = "none";
-      document.body.style.userSelect = "none";
-    }
-  };
-
-  const handleDragEnd = async (event) => {
-    const { active, over } = event;
-
-    console.log("handleDragEnd - stored drag data:", activeDragDataRef.current);
-    console.log("handleDragEnd - active.data.current:", active?.data?.current);
-
-    // Clear navigation timer first (before any early returns)
-    binderNavigation.clearNavigationTimer();
-
-    // Restore document scrolling
-    document.body.style.overflow = "";
-    document.body.style.touchAction = "";
-    document.body.style.userSelect = "";
-
-    // Clear active card state
-    setActiveCard(null);
-
-    if (!active || !currentBinder) {
-      console.log("Drag ended - no active item or current binder");
-      activeDragDataRef.current = null; // Clear stored data
-      return;
-    }
-
-    if (!over) {
-      console.log("Drag ended - no drop target");
-      activeDragDataRef.current = null; // Clear stored data
-      return;
-    }
-
-    const activeData = active.data.current?.type
-      ? active.data.current
-      : activeDragDataRef.current; // Use stored data if original is empty or missing type
-    const overData = over.data.current;
-
-    console.log("Drag end data:", {
-      activeType: activeData?.type,
-      activePosition: activeData?.position,
-      overType: overData?.type,
-      overPosition: overData?.position,
-      usingStoredData:
-        !active.data.current?.type && !!activeDragDataRef.current,
-      hasActiveDragData: !!activeDragDataRef.current,
-      hasActiveDataCurrent: !!active.data.current,
-      activeDataCurrentType: active.data.current?.type,
-    });
-
-    // Only handle card-to-slot drops
-    if (activeData?.type === "card" && overData?.type === "slot") {
-      const fromPosition = activeData.position;
-      const toPosition = overData.position;
-
-      console.log(
-        `Attempting to move card from position ${fromPosition} to ${toPosition}`
-      );
-
-      if (fromPosition !== toPosition) {
-        try {
-          await moveCard(currentBinder.id, fromPosition, toPosition);
-          console.log("Card move successful");
-        } catch (error) {
-          console.error("Failed to move card:", error);
-          toast.error("Failed to move card");
-        }
-      } else {
-        console.log("Same position - no move needed");
-      }
-    } else {
-      console.log("Invalid drag/drop combination:", {
-        activeType: activeData?.type,
-        overType: overData?.type,
-      });
-    }
-
-    // Clear stored drag data
-    activeDragDataRef.current = null;
-  };
-
-  const handleDragCancel = () => {
-    setActiveCard(null);
-    activeDragDataRef.current = null; // Clear stored data
-
-    // Clear navigation timer
-    binderNavigation.clearNavigationTimer();
-
-    // Restore document scrolling on cancel
-    document.body.style.overflow = "";
-    document.body.style.touchAction = "";
-    document.body.style.userSelect = "";
-  };
-
   // Don't render if no binder selected
   if (!currentBinder) {
     return (
@@ -581,25 +486,19 @@ const BinderPage = () => {
             onToggleMissing: handleToggleMissing,
           }}
           dragHandlers={{
-            onDragStart: handleDragStart,
-            onDragEnd: handleDragEnd,
-            onDragCancel: handleDragCancel,
-            onDragOver: (event) => {
-              // Debug collision detection during drag
-              if (event.over) {
-                console.log("Drag over:", {
-                  overId: event.over.id,
-                  overData: event.over.data.current,
-                });
-              }
-            },
+            onDragStart: binderDragDrop.handleDragStart,
+            onDragEnd: binderDragDrop.handleDragEnd,
+            onDragCancel: binderDragDrop.handleDragCancel,
+            onDragOver: binderDragDrop.handleDragOver,
           }}
-          activeCard={activeCard}
-          className={`drag-container ${activeCard ? "dragging-active" : ""}`}
+          activeCard={binderDragDrop.activeCard}
+          className={`drag-container ${
+            binderDragDrop.activeCard ? "dragging-active" : ""
+          }`}
         >
           {/* Edge Navigation Zones */}
           <EdgeNavigation
-            isActive={!!activeCard}
+            isActive={!!binderDragDrop.activeCard}
             navigation={binderNavigation}
             positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
             dragState={{
@@ -615,7 +514,7 @@ const BinderPage = () => {
             onAddPage={handleAddPage}
             isReadOnly={false}
             mode="edit"
-            activeCard={activeCard}
+            activeCard={binderDragDrop.activeCard}
           />
 
           {/* Sidebar Toggle Button */}

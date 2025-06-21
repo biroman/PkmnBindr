@@ -1,7 +1,6 @@
-import { DndContext, DragOverlay, closestCenter } from "@dnd-kit/core";
 import PropTypes from "prop-types";
 import BinderDisplay from "./BinderDisplay";
-import DraggableCard from "./DraggableCard";
+import DragProvider from "./DragProvider";
 
 const BinderCore = ({
   binder,
@@ -34,71 +33,29 @@ const BinderCore = ({
   const isReadOnly = mode === "readonly" || mode === "admin";
   const isDragDropEnabled = mode === "edit" && !isReadOnly;
 
-  // If drag and drop is disabled, render without DndContext
-  if (!isDragDropEnabled) {
-    return (
-      <div
-        className={`flex items-center justify-center flex-1 ${className}`}
-        style={style}
-      >
+  return (
+    <DragProvider
+      dragHandlers={isDragDropEnabled ? dragHandlers : {}}
+      activeCard={activeCard}
+      disabled={!isDragDropEnabled}
+      className={`flex items-center justify-center flex-1 ${className}`}
+    >
+      <div style={style}>
         <BinderDisplay
           binder={binder}
           currentPageConfig={currentPageConfig}
           dimensions={dimensions}
           backgroundColor={backgroundColor}
-          isReadOnly={true}
+          isReadOnly={isReadOnly}
           onCardClick={onCardClick}
-          onCardDelete={undefined}
-          onSlotClick={undefined}
+          onCardDelete={isDragDropEnabled ? onCardDelete : undefined}
+          onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
           onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
           getCardsForPage={getCardsForPage}
         />
         {children}
       </div>
-    );
-  }
-
-  // Full interactive mode with drag and drop
-  return (
-    <DndContext
-      collisionDetection={closestCenter}
-      onDragStart={onDragStart}
-      onDragEnd={onDragEnd}
-      onDragCancel={onDragCancel}
-      onDragOver={onDragOver}
-    >
-      <div
-        className={`flex items-center justify-center flex-1 ${className}`}
-        style={style}
-      >
-        <BinderDisplay
-          binder={binder}
-          currentPageConfig={currentPageConfig}
-          dimensions={dimensions}
-          backgroundColor={backgroundColor}
-          isReadOnly={false}
-          onCardClick={onCardClick}
-          onCardDelete={onCardDelete}
-          onSlotClick={onSlotClick}
-          onToggleMissing={onToggleMissing}
-          getCardsForPage={getCardsForPage}
-        />
-
-        {/* Drag Overlay */}
-        <DragOverlay>
-          {activeCard ? (
-            <DraggableCard
-              card={activeCard}
-              position={-1} // Special position for overlay
-              gridSize={binder.settings?.gridSize || "3x3"}
-              isDragging={true}
-            />
-          ) : null}
-        </DragOverlay>
-
-        {children}
-      </div>
-    </DndContext>
+    </DragProvider>
   );
 };
 
