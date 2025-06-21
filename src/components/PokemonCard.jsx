@@ -164,7 +164,7 @@ const PokemonCard = forwardRef(
       <div
         ref={ref}
         className={`
-        group relative aspect-[5/7] bg-white rounded-lg shadow-md overflow-hidden
+        group relative aspect-[5/7] rounded-lg shadow-md overflow-hidden
         transition-all duration-200 hover:shadow-lg hover:scale-105
         ${onClick ? "cursor-pointer" : ""}
         ${draggable ? "draggable" : ""}
