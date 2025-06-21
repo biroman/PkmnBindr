@@ -107,7 +107,12 @@ const BinderPage = () => {
     getPageDisplayText,
   } = useBinderPages(currentBinder);
 
-  // Navigation state managed by hook (must come after useBinderPages)
+  // Use the robust binder dimensions hook (call before any conditional returns)
+  const binderDimensions = useBinderDimensions(
+    currentBinder?.settings?.gridSize || "3x3"
+  );
+
+  // Navigation state managed by hook (must come after useBinderPages and useBinderDimensions)
   const binderNavigation = useBinderNavigation({
     binder: currentBinder,
     navigation: {
@@ -127,11 +132,6 @@ const BinderPage = () => {
     enableKeyboard: true,
     enableEdgeNavigation: true,
   });
-
-  // Use the robust binder dimensions hook (call before any conditional returns)
-  const binderDimensions = useBinderDimensions(
-    currentBinder?.settings?.gridSize || "3x3"
-  );
 
   // No need for local state management - handled by context
 
