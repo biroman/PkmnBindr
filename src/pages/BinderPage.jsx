@@ -9,13 +9,8 @@ import CoverPage from "../components/binder/CoverPage";
 import CardPage from "../components/binder/CardPage";
 import GridSizeSelector from "../components/binder/GridSizeSelector";
 import BinderToolbar from "../components/binder/BinderToolbar";
-import AddCardModal from "../components/binder/AddCardModal";
-
 import DraggableCard from "../components/binder/DraggableCard";
 import BinderSidebar from "../components/binder/BinderSidebar";
-import BinderPageOverview from "../components/binder/BinderPageOverview";
-import ClearBinderModal from "../components/binder/ClearBinderModal";
-import BinderColorPicker from "../components/binder/BinderColorPicker";
 import BinderCore from "../components/binder/BinderCore";
 import {
   BinderNavigation,
@@ -25,6 +20,8 @@ import useBinderPages from "../hooks/useBinderPages";
 import useBinderDimensions from "../hooks/useBinderDimensions";
 import useBinderNavigation from "../hooks/useBinderNavigation";
 import useBinderDragDrop from "../hooks/useBinderDragDrop";
+import useBinderModals from "../hooks/useBinderModals";
+import ModalProvider from "../components/binder/ModalProvider";
 import pdfExportService from "../services/PdfExportService";
 import { useRules } from "../contexts/RulesContext";
 import useExportTracking from "../hooks/useExportTracking";
@@ -53,16 +50,8 @@ const BinderPage = () => {
     updateAutoSort,
     addPage,
   } = useBinderContext();
-  const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
-  const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
-
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
-  const [isClearModalOpen, setIsClearModalOpen] = useState(false);
   const [isPdfExporting, setIsPdfExporting] = useState(false);
-  const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
-  const [previewColor, setPreviewColor] = useState(null); // For live preview
-  const modalOpenRef = useRef(false); // Prevent duplicate modal opens
 
   // Auto-select binder based on URL parameter with security check
   useEffect(() => {
@@ -112,6 +101,54 @@ const BinderPage = () => {
     currentBinder?.settings?.gridSize || "3x3"
   );
 
+  // Modal management functionality (must come before navigation hook)
+  const binderModals = useBinderModals({
+    binder: currentBinder,
+    onCardAdd: (binder, position) => {
+      // Card addition is handled by AddCardModal itself
+      console.log("Card add request:", binder, position);
+    },
+    onBinderClear: clearBinderCards,
+    onPageSelect: (physicalPageIndex) => {
+      // Navigate to the selected page
+      // We need to find the logical page index that corresponds to this physical page
+      const pageOrder =
+        currentBinder?.settings?.pageOrder ||
+        Array.from(
+          { length: currentBinder?.settings?.pageCount || 1 },
+          (_, i) => i
+        );
+
+      const logicalPageIndex = pageOrder.indexOf(physicalPageIndex);
+
+      if (logicalPageIndex !== -1) {
+        // Navigate to the logical page index
+        goToPage(logicalPageIndex);
+        console.log(
+          "Navigated to logical page:",
+          logicalPageIndex,
+          "showing physical page:",
+          physicalPageIndex
+        );
+      } else {
+        console.warn(
+          "Could not find logical page index for physical page:",
+          physicalPageIndex
+        );
+      }
+    },
+    onColorChange: (binderId, color) => {
+      updateBinderSettings(binderId, {
+        ...currentBinder.settings,
+        binderColor: color,
+      });
+    },
+    onColorPreview: (color) => {
+      // Color preview handled by modalData
+    },
+    enableModals: true,
+  });
+
   // Navigation state managed by hook (must come after useBinderPages and useBinderDimensions)
   const binderNavigation = useBinderNavigation({
     binder: currentBinder,
@@ -124,11 +161,7 @@ const BinderPage = () => {
     },
     activeCard: null, // Will be updated after drag hook is initialized
     dimensions: binderDimensions,
-    isModalsOpen:
-      isAddCardModalOpen ||
-      isPageOverviewOpen ||
-      isClearModalOpen ||
-      isColorPickerOpen,
+    isModalsOpen: binderModals.modals.isAnyModalOpen,
     enableKeyboard: true,
     enableEdgeNavigation: true,
   });
@@ -164,19 +197,7 @@ const BinderPage = () => {
   };
 
   const handleSlotClick = (slotIndex) => {
-    // Prevent duplicate modal opens
-    if (modalOpenRef.current || isAddCardModalOpen) {
-      return;
-    }
-
-    modalOpenRef.current = true;
-    setTargetPosition(slotIndex);
-    setIsAddCardModalOpen(true);
-
-    // Reset the ref after a short delay
-    setTimeout(() => {
-      modalOpenRef.current = false;
-    }, 300);
+    binderModals.handlers.openAddCardModal(slotIndex);
   };
 
   // Grid size change handler
@@ -198,19 +219,7 @@ const BinderPage = () => {
 
   // Toolbar handlers
   const handleAddCard = () => {
-    // Prevent duplicate modal opens
-    if (modalOpenRef.current || isAddCardModalOpen) {
-      return;
-    }
-
-    modalOpenRef.current = true;
-    setTargetPosition(null); // No specific target, add to next available slot
-    setIsAddCardModalOpen(true);
-
-    // Reset the ref after a short delay
-    setTimeout(() => {
-      modalOpenRef.current = false;
-    }, 300);
+    binderModals.handlers.openAddCardModal(null); // No specific target, add to next available slot
   };
 
   const handleSettings = () => {
@@ -219,60 +228,14 @@ const BinderPage = () => {
   };
 
   const handlePageOverview = () => {
-    setIsPageOverviewOpen(true);
+    binderModals.handlers.openPageOverview();
   };
 
   const handleColorPicker = () => {
-    setPreviewColor(null); // Reset preview
-    setIsColorPickerOpen(true);
+    binderModals.handlers.openColorPicker();
   };
 
-  const handleColorPreview = (color) => {
-    setPreviewColor(color);
-  };
-
-  const handleColorChange = (color) => {
-    if (!currentBinder) return;
-    updateBinderSettings(currentBinder.id, {
-      ...currentBinder.settings,
-      binderColor: color,
-    });
-    setPreviewColor(null); // Clear preview after saving
-  };
-
-  const handleColorPickerClose = () => {
-    setPreviewColor(null); // Clear preview on close
-    setIsColorPickerOpen(false);
-  };
-
-  const handlePageSelect = (physicalPageIndex) => {
-    // Navigate to the selected page
-    // We need to find the logical page index that corresponds to this physical page
-    const pageOrder =
-      currentBinder?.settings?.pageOrder ||
-      Array.from(
-        { length: currentBinder?.settings?.pageCount || 1 },
-        (_, i) => i
-      );
-
-    const logicalPageIndex = pageOrder.indexOf(physicalPageIndex);
-
-    if (logicalPageIndex !== -1) {
-      // Navigate to the logical page index
-      goToPage(logicalPageIndex);
-      console.log(
-        "Navigated to logical page:",
-        logicalPageIndex,
-        "showing physical page:",
-        physicalPageIndex
-      );
-    } else {
-      console.warn(
-        "Could not find logical page index for physical page:",
-        physicalPageIndex
-      );
-    }
-  };
+  // Page selection is handled by the modal hook
 
   const handleExport = () => {
     exportBinderData();
@@ -281,13 +244,10 @@ const BinderPage = () => {
   const handleClearBinder = () => {
     if (!currentBinder) return;
 
-    const cardCount = Object.keys(currentBinder.cards || {}).length;
-    if (cardCount === 0) {
+    const opened = binderModals.handlers.openClearModal();
+    if (!opened) {
       toast("Binder is already empty");
-      return;
     }
-
-    setIsClearModalOpen(true);
   };
 
   const handlePdfExport = async () => {
@@ -325,28 +285,7 @@ const BinderPage = () => {
     }
   };
 
-  const confirmClearBinder = async () => {
-    if (!currentBinder) return;
-
-    try {
-      // Get card count before clearing
-      const cardCount = Object.keys(currentBinder.cards || {}).length;
-
-      // Use the optimized clearBinderCards function - single atomic operation
-      const result = await clearBinderCards(currentBinder.id, "user_clear_all");
-
-      // Also clear any missing instances since all cards are gone
-      await updateBinderMetadata(currentBinder.id, {
-        missingInstances: [],
-      });
-
-      // Success message is already shown by clearBinderCards
-      setIsClearModalOpen(false);
-    } catch (error) {
-      console.error("Failed to clear binder:", error);
-      toast.error("Failed to clear binder");
-    }
-  };
+  // Clear binder confirmation is handled by the modal hook
 
   const handleToggleMissing = async (instanceId, isMissing) => {
     if (!currentBinder) return;
@@ -450,7 +389,9 @@ const BinderPage = () => {
 
   // Get the current binder color (preview or saved)
   const currentDisplayColor =
-    previewColor || currentBinder?.settings?.binderColor || "#ffffff";
+    binderModals.modalData.previewColor ||
+    currentBinder?.settings?.binderColor ||
+    "#ffffff";
 
   return (
     <div
@@ -563,38 +504,11 @@ const BinderPage = () => {
       />
 
       {/* Modals */}
-      <AddCardModal
-        isOpen={isAddCardModalOpen}
-        onClose={() => {
-          setIsAddCardModalOpen(false);
-          setTargetPosition(null);
-          modalOpenRef.current = false;
-        }}
-        currentBinder={currentBinder}
-        targetPosition={targetPosition}
-      />
-
-      <BinderPageOverview
-        isOpen={isPageOverviewOpen}
-        onClose={() => setIsPageOverviewOpen(false)}
-        currentBinder={currentBinder}
-        onCardPageSelect={handlePageSelect}
-      />
-
-      <ClearBinderModal
-        isOpen={isClearModalOpen}
-        onClose={() => setIsClearModalOpen(false)}
-        onConfirm={confirmClearBinder}
-        binderName={currentBinder?.metadata?.name || ""}
-        cardCount={Object.keys(currentBinder?.cards || {}).length}
-      />
-
-      <BinderColorPicker
-        isOpen={isColorPickerOpen}
-        onClose={handleColorPickerClose}
-        currentColor={currentBinder?.settings?.binderColor || "#ffffff"}
-        onColorChange={handleColorChange}
-        onPreviewChange={handleColorPreview}
+      <ModalProvider
+        binder={currentBinder}
+        modals={binderModals.modals}
+        modalData={binderModals.modalData}
+        handlers={binderModals.handlers}
       />
     </div>
   );
