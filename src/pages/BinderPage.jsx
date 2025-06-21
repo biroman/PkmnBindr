@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DndContext, DragOverlay, closestCenter } from "@dnd-kit/core";
 import { toast } from "react-hot-toast";
+import { PlusIcon } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
 import CoverPage from "../components/binder/CoverPage";
@@ -43,6 +44,7 @@ const BinderPage = () => {
     canAccessBinder,
     sortBinder,
     updateAutoSort,
+    addPage,
   } = useBinderContext();
   const [isAddCardModalOpen, setIsAddCardModalOpen] = useState(false);
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
@@ -361,6 +363,21 @@ const BinderPage = () => {
       updateAutoSort(currentBinder.id, autoSort);
     } catch (error) {
       console.error("Failed to update auto-sort:", error);
+    }
+  };
+
+  const handleAddPage = async () => {
+    if (!currentBinder) return;
+
+    try {
+      await addPage(currentBinder.id);
+      // Navigate to the new page after adding it
+      setTimeout(() => {
+        goToPage(totalPages); // totalPages will be updated after addPage
+      }, 100);
+    } catch (error) {
+      console.error("Failed to add page:", error);
+      // Error is already handled by the addPage function with toast
     }
   };
 
@@ -969,24 +986,31 @@ const BinderPage = () => {
                 }}
               >
                 <button
-                  onClick={goToNextPage}
-                  disabled={!canGoNext}
-                  className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  title="Next Page"
+                  onClick={!canGoNext ? handleAddPage : goToNextPage}
+                  className={`w-12 h-12 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center ${
+                    !canGoNext
+                      ? "bg-blue-500 hover:bg-blue-600 text-white"
+                      : "bg-white/90 hover:bg-white text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  }`}
+                  title={!canGoNext ? "Add New Page" : "Next Page"}
                 >
-                  <svg
-                    className="w-6 h-6 text-gray-700"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  {!canGoNext ? (
+                    <PlusIcon className="w-6 h-6" />
+                  ) : (
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  )}
                 </button>
               </div>
             )}
