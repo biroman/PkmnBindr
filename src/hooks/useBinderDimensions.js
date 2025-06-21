@@ -103,10 +103,16 @@ const useBinderDimensions = (gridSize) => {
       grid.cols;
 
     // Use the smaller constraint to ensure everything fits
-    const cardWidth = Math.min(
+    let cardWidth = Math.min(
       heightConstrainedCardWidth,
       widthConstrainedCardWidth
     );
+
+    // Scale down 4x3 layout to make it more compact
+    if (gridSize === "4x3") {
+      cardWidth = cardWidth * 0.85; // Scale down by 15%
+    }
+
     const cardHeight = cardWidth / BINDER_CONFIG.CARD_ASPECT_RATIO;
 
     // Calculate final binder dimensions

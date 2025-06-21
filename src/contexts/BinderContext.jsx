@@ -22,6 +22,15 @@ import {
 } from "firebase/firestore";
 import { sortCards } from "../utils/binderSorting";
 
+// Grid configuration - centralized to avoid inconsistencies
+const GRID_CONFIGS = {
+  "1x1": { total: 1 },
+  "2x2": { total: 4 },
+  "3x3": { total: 9 },
+  "4x3": { total: 12 },
+  "4x4": { total: 16 },
+};
+
 // Storage keys
 const STORAGE_KEYS = {
   BINDERS: "pokemon_binders",
@@ -319,10 +328,11 @@ const migrateBinder = (oldBinder) => {
     const maxPosition = Math.max(...positions);
     const gridSize = oldBinder.settings?.gridSize || "3x3";
     const gridConfig = {
+      "1x1": { total: 1 },
+      "2x2": { total: 4 },
       "3x3": { total: 9 },
+      "4x3": { total: 12 },
       "4x4": { total: 16 },
-      "5x5": { total: 25 },
-      "6x6": { total: 36 },
     };
     const cardsPerPage = gridConfig[gridSize]?.total || 9;
     calculatedPageCount = Math.ceil((maxPosition + 1) / cardsPerPage);
@@ -828,10 +838,11 @@ export const BinderProvider = ({ children }) => {
 
           // Calculate required pages after adding this card
           const gridConfig = {
+            "1x1": { total: 1 },
+            "2x2": { total: 4 },
             "3x3": { total: 9 },
+            "4x3": { total: 12 },
             "4x4": { total: 16 },
-            "5x5": { total: 25 },
-            "6x6": { total: 36 },
           };
 
           const cardsPerPage =
@@ -1173,10 +1184,11 @@ export const BinderProvider = ({ children }) => {
 
           // Calculate required pages after adding all cards
           const gridConfig = {
+            "1x1": { total: 1 },
+            "2x2": { total: 4 },
             "3x3": { total: 9 },
+            "4x3": { total: 12 },
             "4x4": { total: 16 },
-            "5x5": { total: 25 },
-            "6x6": { total: 36 },
           };
 
           const cardsPerPage =
@@ -1472,15 +1484,9 @@ export const BinderProvider = ({ children }) => {
           return { success: false, error: "Cannot move cover page" };
         }
 
-        // Get grid configuration
-        const gridConfig = {
-          "3x3": { total: 9 },
-          "4x4": { total: 16 },
-          "5x5": { total: 25 },
-          "6x6": { total: 36 },
-        };
+        // Get grid configuration - using centralized constant
         const cardsPerPage =
-          gridConfig[binder.settings?.gridSize || "3x3"]?.total || 9;
+          GRID_CONFIGS[binder.settings?.gridSize || "3x3"]?.total || 9;
 
         // Calculate position ranges for each card page
         // Card page 1 starts at position 0, card page 2 at position cardsPerPage, etc.
@@ -1672,6 +1678,7 @@ export const BinderProvider = ({ children }) => {
           ) {
             // Get grid configuration for new size
             const gridConfig = {
+              "1x1": { total: 1 },
               "2x2": { total: 4 },
               "3x3": { total: 9 },
               "4x3": { total: 12 },
@@ -2009,10 +2016,11 @@ export const BinderProvider = ({ children }) => {
 
           // Get grid configuration to check if last page has cards
           const gridConfig = {
+            "1x1": { total: 1 },
+            "2x2": { total: 4 },
             "3x3": { total: 9 },
+            "4x3": { total: 12 },
             "4x4": { total: 16 },
-            "5x5": { total: 25 },
-            "6x6": { total: 36 },
           };
 
           const cardsPerPage = gridConfig[binder.settings.gridSize]?.total || 9;
@@ -2103,10 +2111,11 @@ export const BinderProvider = ({ children }) => {
         if (positions.length > 0) {
           // Get grid configuration
           const gridConfig = {
+            "1x1": { total: 1 },
+            "2x2": { total: 4 },
             "3x3": { total: 9 },
+            "4x3": { total: 12 },
             "4x4": { total: 16 },
-            "5x5": { total: 25 },
-            "6x6": { total: 36 },
           };
 
           const cardsPerPage =
