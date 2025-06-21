@@ -229,13 +229,28 @@ export class BinderSyncService {
     }
 
     const cloudBinder = docSnap.data();
+    const now = new Date().toISOString();
 
     // Remove server timestamp before returning
     const { serverTimestamp, ...binder } = cloudBinder;
 
+    // Ensure the downloaded binder has clean sync status (no pending changes)
+    const cleanBinder = {
+      ...binder,
+      sync: {
+        ...binder.sync,
+        status: "synced",
+        lastSynced: now,
+        pendingChanges: [],
+        conflictData: null,
+        retryCount: 0,
+        lastError: null,
+      },
+    };
+
     return {
       success: true,
-      binder,
+      binder: cleanBinder,
       message: "Binder downloaded successfully",
     };
   }

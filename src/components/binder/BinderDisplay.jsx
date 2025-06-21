@@ -16,6 +16,9 @@ const BinderDisplay = ({
   getCardsForPage = () => [],
   className = "",
   style = {},
+  // Public view specific props
+  isPublicView = false,
+  binderOwner = null,
 }) => {
   if (!binder || !currentPageConfig) {
     return null;
@@ -27,6 +30,47 @@ const BinderDisplay = ({
     ...style,
   };
 
+  // Mobile single-page layout
+  if (dimensions.isMobile) {
+    return (
+      <div
+        className={`relative flex justify-center items-center binder-container mobile-binder ${className}`}
+        style={containerStyle}
+      >
+        {/* Single Page - cover or card page based on mobile navigation */}
+        {currentPageConfig.type === "cover-single" ? (
+          <CoverPage
+            binder={binder}
+            owner={binderOwner}
+            backgroundColor={backgroundColor}
+            isReadOnly={isReadOnly}
+            isPublicView={isPublicView}
+            isMobile={dimensions.isMobile}
+            dimensions={dimensions}
+          />
+        ) : (
+          <CardPage
+            pageNumber={currentPageConfig.leftPage.pageNumber}
+            cards={getCardsForPage(currentPageConfig.leftPage.cardPageIndex)}
+            gridSize={binder.settings?.gridSize || "3x3"}
+            onCardClick={
+              isPublicView ? onCardClick : isReadOnly ? undefined : onCardClick
+            }
+            onCardDelete={isReadOnly ? undefined : onCardDelete}
+            onSlotClick={isReadOnly ? undefined : onSlotClick}
+            onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+            cardPageIndex={currentPageConfig.leftPage.cardPageIndex}
+            missingPositions={binder.metadata?.missingInstances || []}
+            backgroundColor={backgroundColor}
+            isReadOnly={isReadOnly}
+            isMobile={true}
+          />
+        )}
+      </div>
+    );
+  }
+
+  // Desktop two-page layout (existing logic)
   return (
     <div
       className={`relative flex gap-4 binder-container ${className}`}
@@ -36,15 +80,21 @@ const BinderDisplay = ({
       {currentPageConfig.leftPage.type === "cover" ? (
         <CoverPage
           binder={binder}
+          owner={binderOwner}
           backgroundColor={backgroundColor}
           isReadOnly={isReadOnly}
+          isPublicView={isPublicView}
+          isMobile={false}
+          dimensions={dimensions}
         />
       ) : (
         <CardPage
           pageNumber={currentPageConfig.leftPage.pageNumber}
           cards={getCardsForPage(currentPageConfig.leftPage.cardPageIndex)}
           gridSize={binder.settings?.gridSize || "3x3"}
-          onCardClick={isReadOnly ? undefined : onCardClick}
+          onCardClick={
+            isPublicView ? onCardClick : isReadOnly ? undefined : onCardClick
+          }
           onCardDelete={isReadOnly ? undefined : onCardDelete}
           onSlotClick={isReadOnly ? undefined : onSlotClick}
           onToggleMissing={isReadOnly ? undefined : onToggleMissing}
@@ -63,7 +113,9 @@ const BinderDisplay = ({
         pageNumber={currentPageConfig.rightPage.pageNumber}
         cards={getCardsForPage(currentPageConfig.rightPage.cardPageIndex)}
         gridSize={binder.settings?.gridSize || "3x3"}
-        onCardClick={isReadOnly ? undefined : onCardClick}
+        onCardClick={
+          isPublicView ? onCardClick : isReadOnly ? undefined : onCardClick
+        }
         onCardDelete={isReadOnly ? undefined : onCardDelete}
         onSlotClick={isReadOnly ? undefined : onSlotClick}
         onToggleMissing={isReadOnly ? undefined : onToggleMissing}
@@ -88,11 +140,12 @@ BinderDisplay.propTypes = {
       type: PropTypes.string.isRequired,
       pageNumber: PropTypes.number.isRequired,
       cardPageIndex: PropTypes.number.isRequired,
-    }).isRequired,
+    }),
   }).isRequired,
   dimensions: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
+    isMobile: PropTypes.bool,
   }).isRequired,
   backgroundColor: PropTypes.string,
   isReadOnly: PropTypes.bool,
@@ -103,6 +156,9 @@ BinderDisplay.propTypes = {
   getCardsForPage: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
+  // Public view specific props
+  isPublicView: PropTypes.bool,
+  binderOwner: PropTypes.object,
 };
 
 export default BinderDisplay;

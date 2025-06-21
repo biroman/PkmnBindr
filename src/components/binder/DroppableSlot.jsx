@@ -12,6 +12,7 @@ const DroppableSlot = ({
   className = "",
   isMissing = false,
   isReadOnly = false, // Extract isReadOnly to prevent it from passing to DOM
+  isMobile = false, // Extract isMobile to prevent it from passing to DOM
   ...props
 }) => {
   const { isOver, setNodeRef, active } = useDroppable({
@@ -61,7 +62,7 @@ const DroppableSlot = ({
             : "border-gray-200 border-dashed bg-gray-50/50"
         }
         ${
-          !card
+          !card && !isReadOnly
             ? "cursor-pointer hover:border-gray-300 hover:bg-gray-100/50"
             : ""
         }
@@ -118,7 +119,7 @@ const DroppableSlot = ({
         <div className="w-full h-full flex items-center justify-center group">
           {isEmptySlotHover ? (
             <div className="text-blue-500 text-xs font-medium">Drop here</div>
-          ) : (
+          ) : !isReadOnly ? (
             <div className="flex flex-col items-center justify-center text-gray-400 group-hover:text-gray-600 transition-colors duration-200">
               <svg
                 className="w-6 h-6 mb-1 opacity-60 group-hover:opacity-80"
@@ -137,7 +138,7 @@ const DroppableSlot = ({
                 Add card
               </span>
             </div>
-          )}
+          ) : null}
         </div>
       )}
 

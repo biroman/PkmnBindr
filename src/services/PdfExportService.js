@@ -32,6 +32,16 @@ class PdfExportService {
       console.warn("Binder missing name, using default");
     }
 
+    // Validate and log binder structure for debugging
+    console.log("PDF Export - Binder structure:", {
+      hasCards: !!binder.cards,
+      cardsType: typeof binder.cards,
+      cardCount: binder.cards ? Object.keys(binder.cards).length : 0,
+      firstCardStructure: binder.cards ? Object.values(binder.cards)[0] : null,
+      gridSize: binder.settings?.gridSize,
+      binderName: binder.metadata?.name,
+    });
+
     try {
       // Initialize PDF document
       this.pdf = new jsPDF({
@@ -52,15 +62,21 @@ class PdfExportService {
       });
 
       // Generate cover page
+      console.log("PDF Export - Adding cover page...");
       await this.addCoverPage(binder);
 
       // Generate all card pages
+      console.log("PDF Export - Adding card pages...");
       await this.addCardPages(binder, includeEmptyPages);
 
       // Ensure we have at least one page
       if (this.pdf.getNumberOfPages() === 0) {
         throw new Error("PDF generation failed: No pages generated");
       }
+
+      console.log(
+        `PDF Export - Generated ${this.pdf.getNumberOfPages()} pages`
+      );
 
       // Get the PDF blob
       const pdfBlob = this.pdf.output("blob");
@@ -69,6 +85,14 @@ class PdfExportService {
       if (pdfBlob.size === 0) {
         throw new Error("PDF generation failed: Empty PDF generated");
       }
+
+      console.log(
+        `PDF Export - Generated blob size: ${(
+          pdfBlob.size /
+          1024 /
+          1024
+        ).toFixed(2)}MB`
+      );
 
       // Download the PDF
       const downloadFilename = filename || this.generateFilename(binder);
@@ -156,30 +180,59 @@ class PdfExportService {
     document.body.appendChild(pageElement);
 
     try {
-      // Convert to canvas
+      // Wait a moment for images to load
+      await new Promise((resolve) => setTimeout(resolve, 100));
+
+      // Convert to canvas with improved settings
       const canvas = await html2canvas(pageElement, {
         scale: 2,
         useCORS: true,
         allowTaint: true,
         backgroundColor: "#ffffff",
+        logging: false, // Disable logging for cleaner output
+        imageTimeout: 15000, // 15 second timeout for images
+        removeContainer: false, // Don't remove the container
+        foreignObjectRendering: false, // Disable for better compatibility
       });
+
+      // Validate canvas
+      if (!canvas || canvas.width === 0 || canvas.height === 0) {
+        throw new Error(`Failed to render page ${pageIndex + 1} to canvas`);
+      }
 
       // Add to PDF
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const imgWidth = this.pageWidth - 2 * this.margin;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
+      // Ensure the image fits on the page
+      const maxHeight = this.pageHeight - 2 * this.margin;
+      const finalHeight = Math.min(imgHeight, maxHeight);
+      const finalWidth = (canvas.width * finalHeight) / canvas.height;
+
       this.pdf.addImage(
         imgData,
         "JPEG",
         this.margin,
         this.margin,
-        imgWidth,
-        imgHeight
+        finalWidth,
+        finalHeight
       );
+
+      console.log(
+        `PDF Export - Added page ${
+          pageIndex + 1
+        } (${finalWidth}x${finalHeight}mm)`
+      );
+    } catch (error) {
+      console.error(`Error rendering page ${pageIndex + 1}:`, error);
+      // Add an error page instead of failing completely
+      this.addErrorPage(pageIndex + 1, error.message);
     } finally {
       // Clean up
-      document.body.removeChild(pageElement);
+      if (document.body.contains(pageElement)) {
+        document.body.removeChild(pageElement);
+      }
     }
   }
 
@@ -438,10 +491,11 @@ class PdfExportService {
     const cardAspectRatio = 2.5 / 3.5; // width / height
     const slotPadding = 8; // padding inside the slot
 
-    if (card && card.image) {
+    if (card && (card.image || card.imageSmall)) {
       // Try to use imageSmall for better PDF performance, fallback to image
       const imageUrl = card.imageSmall || card.image;
       const cardName = this.escapeHtml(card.name || "Pokemon Card");
+      const setName = this.escapeHtml(card.set?.name || "Unknown Set");
 
       return `
         <div style="
@@ -480,13 +534,59 @@ class PdfExportService {
             color: #6b7280;
             text-align: center;
             flex-direction: column;
+            padding: 8px;
           ">
-            <div>🃏</div>
-            <div style="margin-top: 4px; max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+            <div style="font-size: 18px; margin-bottom: 4px;">🃏</div>
+            <div style="font-weight: bold; margin-bottom: 2px; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
               ${cardName}
             </div>
+            <div style="font-size: 8px; color: #9ca3af; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${setName}
+            </div>
+            ${
+              card.number
+                ? `<div style="font-size: 8px; color: #9ca3af;">#${card.number}</div>`
+                : ""
+            }
           </div>
+        </div>
+      `;
+    } else if (card) {
+      // Card exists but no image - show card info
+      const cardName = this.escapeHtml(card.name || "Pokemon Card");
+      const setName = this.escapeHtml(card.set?.name || "Unknown Set");
 
+      return `
+        <div style="
+          background: #f8fafc;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          padding: ${slotPadding}px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          box-sizing: border-box;
+        ">
+          <div style="
+            text-align: center;
+            color: #64748b;
+            font-size: 10px;
+            padding: 8px;
+          ">
+            <div style="font-size: 18px; margin-bottom: 4px;">🃏</div>
+            <div style="font-weight: bold; margin-bottom: 2px; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${cardName}
+            </div>
+            <div style="font-size: 8px; color: #94a3b8; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              ${setName}
+            </div>
+            ${
+              card.number
+                ? `<div style="font-size: 8px; color: #94a3b8;">#${card.number}</div>`
+                : ""
+            }
+          </div>
         </div>
       `;
     } else {
@@ -521,8 +621,32 @@ class PdfExportService {
       const globalPosition = startPosition + i;
       const cardEntry = cards[globalPosition.toString()];
 
-      if (cardEntry && cardEntry.cardData) {
-        pageCards[i] = cardEntry.cardData;
+      if (cardEntry) {
+        // Handle different card data structures after binder optimization
+        if (cardEntry.cardData && typeof cardEntry.cardData === "object") {
+          // Modern structure: { cardData: {card info}, metadata }
+          pageCards[i] = cardEntry.cardData;
+        } else if (
+          cardEntry.name &&
+          (cardEntry.image || cardEntry.imageSmall)
+        ) {
+          // Direct card data or admin normalized format
+          pageCards[i] = cardEntry;
+        } else if (cardEntry.cardId) {
+          // Legacy format or partial data - create minimal card object
+          pageCards[i] = {
+            id: cardEntry.cardId,
+            name: cardEntry.name || "Unknown Card",
+            image: cardEntry.image || "",
+            imageSmall: cardEntry.imageSmall || "",
+            set: cardEntry.set || { name: "Unknown Set" },
+            number: cardEntry.number || "",
+            rarity: cardEntry.rarity || "Unknown",
+            types: cardEntry.types || [],
+          };
+        } else {
+          pageCards[i] = null;
+        }
       } else {
         pageCards[i] = null;
       }
@@ -563,6 +687,31 @@ class PdfExportService {
     const div = document.createElement("div");
     div.textContent = text;
     return div.innerHTML;
+  }
+
+  /**
+   * Add an error page when page rendering fails
+   */
+  addErrorPage(pageNumber, errorMessage) {
+    // Add basic text-based error page
+    this.pdf.setFontSize(16);
+    this.pdf.setTextColor(220, 38, 38); // Red color
+    this.pdf.text(
+      `Error rendering page ${pageNumber}`,
+      this.margin,
+      this.margin + 20
+    );
+
+    this.pdf.setFontSize(12);
+    this.pdf.setTextColor(75, 85, 99); // Gray color
+    this.pdf.text(
+      "The page could not be rendered properly.",
+      this.margin,
+      this.margin + 35
+    );
+    this.pdf.text(`Error: ${errorMessage}`, this.margin, this.margin + 50);
+
+    console.warn(`Added error page for page ${pageNumber}: ${errorMessage}`);
   }
 
   /**

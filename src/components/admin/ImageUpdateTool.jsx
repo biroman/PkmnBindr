@@ -25,19 +25,19 @@ import { db } from "../../lib/firebase";
 const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
   const [isScanning, setIsScanning] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
-  const [cardsWithHiresImages, setCardsWithHiresImages] = useState([]);
+  const [cardsWithStandardImages, setCardsWithStandardImages] = useState([]);
   const [updateResults, setUpdateResults] = useState(null);
   const [scanCompleted, setScanCompleted] = useState(false);
   const [currentStep, setCurrentStep] = useState("scan");
 
-  const scanForHiresImages = async () => {
+  const scanForStandardImages = async () => {
     try {
       setIsScanning(true);
       setUpdateResults(null);
       setCurrentStep("scan");
 
       console.log(
-        `[ImageUpdate] Scanning binder ${binderId} for _hires images...`
+        `[ImageUpdate] Scanning binder ${binderId} for standard images...`
       );
 
       let binderDoc;
@@ -61,7 +61,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
       }
 
       const binderData = binderDoc.data();
-      const hiresCards = [];
+      const standardCards = [];
 
       if (binderData.cards && typeof binderData.cards === "object") {
         Object.entries(binderData.cards).forEach(([position, cardData]) => {
@@ -71,16 +71,28 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
             hasCardData: !!cardData?.cardData,
             hasImage: !!cardData?.cardData?.image,
             imageUrl: cardData?.cardData?.image,
-            isHires: cardData?.cardData?.image?.includes("_hires"),
+            isStandard: !cardData?.cardData?.image?.includes("_hires"),
           });
 
           if (cardData && cardData.cardData && cardData.cardData.image) {
-            if (cardData.cardData.image.includes("_hires")) {
-              hiresCards.push({
+            // Look for cards that DON'T have _hires in their URL
+            if (!cardData.cardData.image.includes("_hires")) {
+              // Create the high-res URL by adding _hires before the file extension
+              const imageUrl = cardData.cardData.image;
+              const lastDotIndex = imageUrl.lastIndexOf(".");
+              const newImageUrl =
+                lastDotIndex !== -1
+                  ? `${imageUrl.substring(
+                      0,
+                      lastDotIndex
+                    )}_hires${imageUrl.substring(lastDotIndex)}`
+                  : `${imageUrl}_hires`;
+
+              standardCards.push({
                 position,
                 cardId: cardData.cardId,
                 currentImageUrl: cardData.cardData.image,
-                newImageUrl: cardData.cardData.image.replace("_hires", ""),
+                newImageUrl: newImageUrl,
                 cardData: cardData,
                 binderDocId: binderDoc.id,
                 binderSource: source,
@@ -90,17 +102,17 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
         });
       }
 
-      setCardsWithHiresImages(hiresCards);
+      setCardsWithStandardImages(standardCards);
       setScanCompleted(true);
 
-      if (hiresCards.length === 0) {
+      if (standardCards.length === 0) {
         toast.success(
-          "No _hires images found! All cards are already using standard resolution."
+          "No standard images found! All cards are already using high-resolution versions."
         );
         setCurrentStep("complete");
       } else {
         toast(
-          `📸 Found ${hiresCards.length} cards with _hires images that can be updated`,
+          `📸 Found ${standardCards.length} cards with standard images that can be upgraded to high-resolution`,
           {
             icon: "📸",
             style: {
@@ -112,7 +124,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
         setCurrentStep("update");
       }
     } catch (error) {
-      console.error("Error scanning for _hires images:", error);
+      console.error("Error scanning for standard images:", error);
       toast.error(`Scan failed: ${error.message}`);
     } finally {
       setIsScanning(false);
@@ -124,7 +136,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
       setIsUpdating(true);
 
       console.log(
-        `[ImageUpdate] Updating ${cardsWithHiresImages.length} images...`
+        `[ImageUpdate] Updating ${cardsWithStandardImages.length} images to high-resolution...`
       );
 
       let successCount = 0;
@@ -158,7 +170,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
       const currentBinderData = currentBinderDoc.data();
       const updatedCards = { ...currentBinderData.cards };
 
-      for (const cardInfo of cardsWithHiresImages) {
+      for (const cardInfo of cardsWithStandardImages) {
         try {
           console.log(
             `[ImageUpdate] Updating position ${cardInfo.position}: ${cardInfo.currentImageUrl} → ${cardInfo.newImageUrl}`
@@ -211,7 +223,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
 
       if (successCount > 0) {
         toast.success(
-          `Successfully updated ${successCount} card images to standard resolution!`
+          `Successfully updated ${successCount} card images to high-resolution!`
         );
         setCurrentStep("complete");
 
@@ -236,7 +248,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
   };
 
   const resetTool = () => {
-    setCardsWithHiresImages([]);
+    setCardsWithStandardImages([]);
     setUpdateResults(null);
     setScanCompleted(false);
     setCurrentStep("scan");
@@ -253,7 +265,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
             Image Update Tool
           </h3>
           <p className="text-sm text-gray-600">
-            Replace _hires images with standard resolution versions
+            Upgrade standard images to high-resolution versions
           </p>
         </div>
       </div>
@@ -281,7 +293,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
             >
               1
             </div>
-            <span>Scan for _hires</span>
+            <span>Scan for standard</span>
           </div>
           <div
             className={`flex items-center gap-2 ${
@@ -303,7 +315,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
             >
               2
             </div>
-            <span>Update Images</span>
+            <span>Upgrade Images</span>
           </div>
           <div
             className={`flex items-center gap-2 ${
@@ -334,41 +346,41 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
               <InformationCircleIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h4 className="font-medium text-blue-900 mb-1">
-                  Image Resolution Update
+                  Image Resolution Upgrade
                 </h4>
                 <p className="text-sm text-blue-800">
-                  This tool will scan the binder for cards using high-resolution
-                  images (URLs containing "_hires") and replace them with
-                  standard resolution versions.
+                  This tool will scan the binder for cards using standard
+                  resolution images and upgrade them to high-resolution versions
+                  by adding "_hires" to the filename.
                 </p>
               </div>
             </div>
           </div>
 
           <Button
-            onClick={scanForHiresImages}
+            onClick={scanForStandardImages}
             disabled={isScanning}
             className="w-full"
           >
             {isScanning ? (
               <>
                 <ArrowPathIcon className="w-4 h-4 mr-2 animate-spin" />
-                Scanning for _hires images...
+                Scanning for standard images...
               </>
             ) : (
               <>
                 <PhotoIcon className="w-4 h-4 mr-2" />
-                Scan for High-Resolution Images
+                Scan for Standard Resolution Images
               </>
             )}
           </Button>
 
-          {scanCompleted && cardsWithHiresImages.length === 0 && (
+          {scanCompleted && cardsWithStandardImages.length === 0 && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <div className="flex items-center gap-2 text-green-800">
                 <CheckCircleIcon className="w-5 h-5" />
                 <span className="font-medium">
-                  All images are already optimized!
+                  All images are already high-resolution!
                 </span>
               </div>
             </div>
@@ -377,25 +389,25 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
       )}
 
       {/* Step 2: Preview Cards to Update */}
-      {currentStep === "update" && cardsWithHiresImages.length > 0 && (
+      {currentStep === "update" && cardsWithStandardImages.length > 0 && (
         <div className="space-y-4">
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <div className="flex items-start gap-3">
               <ExclamationTriangleIcon className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
               <div>
                 <h4 className="font-medium text-yellow-900 mb-1">
-                  Ready to Update {cardsWithHiresImages.length} Cards
+                  Ready to Upgrade {cardsWithStandardImages.length} Cards
                 </h4>
                 <p className="text-sm text-yellow-800">
                   The following cards will have their image URLs updated to use
-                  standard resolution.
+                  high-resolution versions.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-h-96 overflow-y-auto">
-            {cardsWithHiresImages.slice(0, 24).map((cardInfo) => (
+            {cardsWithStandardImages.slice(0, 24).map((cardInfo) => (
               <div key={cardInfo.position} className="relative">
                 <div className="aspect-[2/3] bg-gray-100 rounded-lg overflow-hidden">
                   <PokemonCard
@@ -409,8 +421,8 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
                     className="w-full h-full"
                   />
                 </div>
-                <div className="absolute top-1 right-1 bg-yellow-500 text-white text-xs px-1.5 py-0.5 rounded">
-                  _hires
+                <div className="absolute top-1 right-1 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded">
+                  standard
                 </div>
                 <div className="text-xs text-gray-600 mt-1 text-center">
                   Position {cardInfo.position}
@@ -419,10 +431,10 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
             ))}
           </div>
 
-          {cardsWithHiresImages.length > 24 && (
+          {cardsWithStandardImages.length > 24 && (
             <p className="text-sm text-gray-600 text-center">
-              Showing first 24 cards. {cardsWithHiresImages.length - 24} more
-              will be updated.
+              Showing first 24 cards. {cardsWithStandardImages.length - 24} more
+              will be upgraded.
             </p>
           )}
 
@@ -435,12 +447,12 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
               {isUpdating ? (
                 <>
                   <ArrowPathIcon className="w-4 h-4 mr-2 animate-spin" />
-                  Updating {cardsWithHiresImages.length} images...
+                  Upgrading {cardsWithStandardImages.length} images...
                 </>
               ) : (
                 <>
                   <CloudArrowUpIcon className="w-4 h-4 mr-2" />
-                  Update to Standard Resolution
+                  Upgrade to High-Resolution
                 </>
               )}
             </Button>
@@ -457,11 +469,11 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
             <div className="flex items-center gap-2 text-green-800 mb-2">
               <CheckCircleIcon className="w-5 h-5" />
-              <span className="font-medium">Update Complete!</span>
+              <span className="font-medium">Upgrade Complete!</span>
             </div>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
-                <span className="text-green-700">Successfully updated:</span>
+                <span className="text-green-700">Successfully upgraded:</span>
                 <span className="font-semibold ml-2">
                   {updateResults.successful} cards
                 </span>
@@ -480,7 +492,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
           {updateResults.results && updateResults.results.length > 0 && (
             <div className="max-h-48 overflow-y-auto">
               <h4 className="font-medium text-gray-900 mb-2">
-                Update Details:
+                Upgrade Details:
               </h4>
               <div className="space-y-1 text-sm">
                 {updateResults.results.map((result, index) => (
@@ -497,7 +509,7 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
                     )}
                     <span>
                       Position {result.position}:{" "}
-                      {result.success ? "Updated" : result.error}
+                      {result.success ? "Upgraded" : result.error}
                     </span>
                   </div>
                 ))}
@@ -506,12 +518,12 @@ const ImageUpdateTool = ({ userId, binderId, source, onUpdateComplete }) => {
           )}
 
           <Button onClick={resetTool} variant="outline" className="w-full">
-            Run Another Update
+            Run Another Upgrade
           </Button>
         </div>
       )}
 
-      {/* Complete state for no hires images */}
+      {/* Complete state for no standard images */}
       {currentStep === "complete" && !updateResults && (
         <div className="text-center py-4">
           <Button onClick={resetTool} variant="outline">

@@ -166,7 +166,7 @@ const PokemonCard = forwardRef(
         className={`
         group relative aspect-[5/7] bg-white rounded-lg shadow-md overflow-hidden
         transition-all duration-200 hover:shadow-lg hover:scale-105
-        ${onClick && !isReadOnly ? "cursor-pointer" : ""}
+        ${onClick ? "cursor-pointer" : ""}
         ${draggable ? "draggable" : ""}
         ${isReverseHolo ? "ring-2 ring-gradient-to-r ring-purple-400" : ""}
         ${className}
@@ -360,18 +360,6 @@ const PokemonCard = forwardRef(
                 </button>
               )}
             </div>
-          </div>
-        )}
-
-        {/* Set info */}
-        {card.set?.symbol && showDetails && imageLoaded && (
-          <div className="absolute top-1 left-1">
-            <img
-              src={card.set.symbol}
-              alt={card.set.name}
-              className="w-4 h-4 opacity-80"
-              title={`${card.set.name} (${card.number})`}
-            />
           </div>
         )}
 

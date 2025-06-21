@@ -54,3 +54,13 @@ export { default as PublicBinderShowcase } from "./PublicBinderShowcase";
 // === SPECIALIZED ===
 export { default as BinderListWithSync } from "./BinderListWithSync";
 export { default as BinderCoreDemo } from "./BinderCoreDemo";
+
+// === NEW COMPONENTS ===
+export { default as BinderNavigation } from "./BinderNavigation";
+export { default as EdgeNavigation } from "./EdgeNavigation";
+export { default as StaticBinderSidebar } from "./StaticBinderSidebar";
+export { default as BinderSpine } from "./BinderSpine";
+
+// === HOOKS ===
+export * from "./core";
+export * from "./navigation";

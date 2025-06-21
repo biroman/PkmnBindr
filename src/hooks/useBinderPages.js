@@ -2,8 +2,9 @@ import { useState, useMemo, useEffect } from "react";
 import { getGridConfig } from "./useBinderDimensions";
 import { useCardCache } from "../contexts/CardCacheContext";
 
-const useBinderPages = (binder) => {
+const useBinderPages = (binder, isMobile = false) => {
   const [currentPageIndex, setCurrentPageIndex] = useState(0); // 0-based index
+  const [currentMobilePageIndex, setCurrentMobilePageIndex] = useState(0); // For mobile single-page navigation
   const { getCardFromCache } = useCardCache();
 
   // Calculate total pages needed
@@ -67,19 +68,50 @@ const useBinderPages = (binder) => {
     binder?.settings?.autoExpand,
   ]);
 
+  // Calculate total individual pages for mobile (cover + all card pages)
+  const totalMobilePages = useMemo(() => {
+    if (!binder?.cards || typeof binder.cards !== "object") {
+      return 1; // Just cover page
+    }
+
+    const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
+    if (positions.length === 0) {
+      return 1; // Just cover page
+    }
+
+    const gridConfig = getGridConfig(binder.settings?.gridSize || "3x3");
+    const cardsPerPage = gridConfig.total;
+    const maxPosition = Math.max(...positions);
+    const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+    // Total individual pages = cover + card pages
+    return 1 + requiredCardPages;
+  }, [binder?.cards, binder?.settings?.gridSize]);
+
   // Auto-adjust current page when total pages changes
   useEffect(() => {
-    if (currentPageIndex >= totalPages) {
-      // Current page is beyond the new total, move to the last available page
-      const newPageIndex = Math.max(0, totalPages - 1);
-
-      // Use setTimeout to defer the state update until after the current render cycle
-      // This prevents the "Cannot update a component while rendering a different component" error
-      setTimeout(() => {
-        setCurrentPageIndex(newPageIndex);
-      }, 0);
+    if (isMobile) {
+      if (currentMobilePageIndex >= totalMobilePages) {
+        const newPageIndex = Math.max(0, totalMobilePages - 1);
+        setTimeout(() => {
+          setCurrentMobilePageIndex(newPageIndex);
+        }, 0);
+      }
+    } else {
+      if (currentPageIndex >= totalPages) {
+        const newPageIndex = Math.max(0, totalPages - 1);
+        setTimeout(() => {
+          setCurrentPageIndex(newPageIndex);
+        }, 0);
+      }
     }
-  }, [totalPages, currentPageIndex]);
+  }, [
+    totalPages,
+    totalMobilePages,
+    currentPageIndex,
+    currentMobilePageIndex,
+    isMobile,
+  ]);
 
   // Helper function to get physical page index from logical page index
   const getPhysicalPageIndex = useMemo(() => {
@@ -93,7 +125,31 @@ const useBinderPages = (binder) => {
 
   // Get page configuration for current view
   const getCurrentPageConfig = useMemo(() => {
-    // Get the physical page index for the current logical page
+    if (isMobile) {
+      // Mobile single-page logic
+      if (currentMobilePageIndex === 0) {
+        // Cover page
+        return {
+          type: "cover-single",
+          leftPage: { type: "cover", pageNumber: null },
+          rightPage: null, // Not used in mobile
+        };
+      } else {
+        // Card pages (index 1 = card page 0, index 2 = card page 1, etc.)
+        const cardPageIndex = currentMobilePageIndex - 1;
+        return {
+          type: "cards-single",
+          leftPage: {
+            type: "cards",
+            pageNumber: currentMobilePageIndex,
+            cardPageIndex: cardPageIndex,
+          },
+          rightPage: null, // Not used in mobile
+        };
+      }
+    }
+
+    // Desktop two-page logic (existing)
     const physicalPageIndex = getPhysicalPageIndex(currentPageIndex);
 
     if (physicalPageIndex === 0) {
@@ -126,24 +182,47 @@ const useBinderPages = (binder) => {
         },
       };
     }
-  }, [currentPageIndex, getPhysicalPageIndex]);
+  }, [
+    currentPageIndex,
+    currentMobilePageIndex,
+    getPhysicalPageIndex,
+    isMobile,
+  ]);
 
   // Navigation functions
   const goToNextPage = () => {
-    if (currentPageIndex < totalPages - 1) {
-      setCurrentPageIndex((prev) => prev + 1);
+    if (isMobile) {
+      if (currentMobilePageIndex < totalMobilePages - 1) {
+        setCurrentMobilePageIndex((prev) => prev + 1);
+      }
+    } else {
+      if (currentPageIndex < totalPages - 1) {
+        setCurrentPageIndex((prev) => prev + 1);
+      }
     }
   };
 
   const goToPrevPage = () => {
-    if (currentPageIndex > 0) {
-      setCurrentPageIndex((prev) => prev - 1);
+    if (isMobile) {
+      if (currentMobilePageIndex > 0) {
+        setCurrentMobilePageIndex((prev) => prev - 1);
+      }
+    } else {
+      if (currentPageIndex > 0) {
+        setCurrentPageIndex((prev) => prev - 1);
+      }
     }
   };
 
   const goToPage = (pageIndex) => {
-    if (pageIndex >= 0 && pageIndex < totalPages) {
-      setCurrentPageIndex(pageIndex);
+    if (isMobile) {
+      if (pageIndex >= 0 && pageIndex < totalMobilePages) {
+        setCurrentMobilePageIndex(pageIndex);
+      }
+    } else {
+      if (pageIndex >= 0 && pageIndex < totalPages) {
+        setCurrentPageIndex(pageIndex);
+      }
     }
   };
 
@@ -200,11 +279,24 @@ const useBinderPages = (binder) => {
   };
 
   // Navigation state
-  const canGoNext = currentPageIndex < totalPages - 1;
-  const canGoPrev = currentPageIndex > 0;
+  const canGoNext = isMobile
+    ? currentMobilePageIndex < totalMobilePages - 1
+    : currentPageIndex < totalPages - 1;
+
+  const canGoPrev = isMobile
+    ? currentMobilePageIndex > 0
+    : currentPageIndex > 0;
 
   // Display text for current page
   const getPageDisplayText = () => {
+    if (isMobile) {
+      if (currentMobilePageIndex === 0) {
+        return "Cover";
+      } else {
+        return `Page ${currentMobilePageIndex}`;
+      }
+    }
+
     const physicalPageIndex = getPhysicalPageIndex(currentPageIndex);
 
     if (physicalPageIndex === 0) {
@@ -217,8 +309,8 @@ const useBinderPages = (binder) => {
 
   return {
     // State
-    currentPageIndex,
-    totalPages,
+    currentPageIndex: isMobile ? currentMobilePageIndex : currentPageIndex,
+    totalPages: isMobile ? totalMobilePages : totalPages,
     getCurrentPageConfig,
 
     // Navigation

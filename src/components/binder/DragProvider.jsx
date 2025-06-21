@@ -1,6 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { DndContext, DragOverlay, closestCenter } from "@dnd-kit/core";
+import {
+  DndContext,
+  DragOverlay,
+  pointerWithin,
+  rectIntersection,
+} from "@dnd-kit/core";
 import PokemonCard from "../PokemonCard";
 
 /**
@@ -40,7 +45,7 @@ export const DragProvider = ({
 
   return (
     <DndContext
-      collisionDetection={closestCenter}
+      collisionDetection={pointerWithin}
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
       onDragCancel={onDragCancel}

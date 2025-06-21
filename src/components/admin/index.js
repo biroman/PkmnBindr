@@ -21,3 +21,7 @@ export { SystemControlPanel } from "./system";
 
 // Rules Components
 export { RulesManagementPanel } from "./rules";
+
+// Binder Components
+export { default as AdminBinderSidebar } from "./AdminBinderSidebar";
+export { default as BinderViewer } from "./BinderViewer";

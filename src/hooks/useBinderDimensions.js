@@ -10,6 +10,11 @@ const BINDER_CONFIG = {
   CARD_GAP: 8,
   HEADER_SPACE: 32,
   SPINE_WIDTH: 16,
+  // Mobile specific constants
+  MOBILE_BREAKPOINT: 768, // px
+  MOBILE_TOOLBAR_HEIGHT: 60,
+  MOBILE_NAVIGATION_HEIGHT: 80,
+  MOBILE_VERTICAL_PADDING: 120, // Space for mobile toolbar + navigation
   GRID_CONFIGS: {
     "1x1": { cols: 1, rows: 1, total: 1 },
     "2x2": { cols: 2, rows: 2, total: 4 },
@@ -65,13 +70,20 @@ const useBinderDimensions = (gridSize) => {
 
   const dimensions = useMemo(() => {
     const grid = getGridConfig(gridSize);
+    const isMobile = windowWidth < BINDER_CONFIG.MOBILE_BREAKPOINT;
 
-    // Calculate available space
-    const availableHeight =
-      windowHeight -
-      BINDER_CONFIG.NAVBAR_HEIGHT -
-      BINDER_CONFIG.VERTICAL_PADDING;
-    const availableWidth = windowWidth - BINDER_CONFIG.NAVIGATION_SPACE;
+    // Calculate available space - different for mobile vs desktop
+    const availableHeight = isMobile
+      ? windowHeight -
+        BINDER_CONFIG.NAVBAR_HEIGHT -
+        BINDER_CONFIG.MOBILE_VERTICAL_PADDING
+      : windowHeight -
+        BINDER_CONFIG.NAVBAR_HEIGHT -
+        BINDER_CONFIG.VERTICAL_PADDING;
+
+    const availableWidth = isMobile
+      ? windowWidth - 40 // Just some padding on mobile
+      : windowWidth - BINDER_CONFIG.NAVIGATION_SPACE;
 
     // Validate minimum dimensions
     if (availableHeight < 200 || availableWidth < 300) {
@@ -80,11 +92,72 @@ const useBinderDimensions = (gridSize) => {
         height: Math.max(200, availableHeight),
         cardWidth: 50,
         cardHeight: 70,
+        isMobile,
         isMinimal: true,
+        pageWidth: Math.max(300, availableWidth),
+        pageHeight: Math.max(200, availableHeight),
+        grid,
       };
     }
 
-    // Calculate optimal card size based on constraints
+    // For mobile, calculate single page dimensions
+    if (isMobile) {
+      const singlePageWidth = availableWidth;
+      const widthConstrainedCardWidth =
+        (singlePageWidth -
+          BINDER_CONFIG.PAGE_PADDING -
+          BINDER_CONFIG.CARD_GAP * (grid.cols - 1)) /
+        grid.cols;
+
+      const heightConstrainedCardHeight =
+        (availableHeight -
+          BINDER_CONFIG.PAGE_PADDING -
+          BINDER_CONFIG.HEADER_SPACE -
+          BINDER_CONFIG.CARD_GAP * (grid.rows - 1)) /
+        grid.rows;
+
+      const heightConstrainedCardWidth =
+        heightConstrainedCardHeight * BINDER_CONFIG.CARD_ASPECT_RATIO;
+
+      // Use the smaller constraint to ensure everything fits
+      let cardWidth = Math.min(
+        heightConstrainedCardWidth,
+        widthConstrainedCardWidth
+      );
+
+      // Scale down 4x3 layout to make it more compact on mobile
+      if (gridSize === "4x3") {
+        cardWidth = cardWidth * 0.8; // Scale down by 20% on mobile
+      }
+
+      const cardHeight = cardWidth / BINDER_CONFIG.CARD_ASPECT_RATIO;
+
+      // Calculate final single page dimensions for mobile
+      const pageWidth =
+        cardWidth * grid.cols +
+        BINDER_CONFIG.PAGE_PADDING +
+        BINDER_CONFIG.CARD_GAP * (grid.cols - 1);
+
+      const pageHeight =
+        cardHeight * grid.rows +
+        BINDER_CONFIG.PAGE_PADDING +
+        BINDER_CONFIG.HEADER_SPACE +
+        BINDER_CONFIG.CARD_GAP * (grid.rows - 1);
+
+      return {
+        width: Math.min(pageWidth, availableWidth),
+        height: Math.min(pageHeight, availableHeight),
+        cardWidth: Math.max(cardWidth, 40), // Minimum card size
+        cardHeight: Math.max(cardHeight, 56), // Minimum card size (40 * 7/5)
+        pageWidth,
+        pageHeight,
+        grid,
+        isMobile: true,
+        isMinimal: false,
+      };
+    }
+
+    // Desktop calculations (existing logic)
     const heightConstrainedCardHeight =
       (availableHeight -
         BINDER_CONFIG.PAGE_PADDING -
@@ -138,18 +211,29 @@ const useBinderDimensions = (gridSize) => {
       pageWidth,
       pageHeight,
       grid,
+      isMobile: false,
       isMinimal: false,
     };
   }, [gridSize, windowWidth, windowHeight]);
 
-  // Navigation button positioning
-  const navigationPositions = useMemo(
-    () => ({
+  // Navigation button positioning - different for mobile vs desktop
+  const navigationPositions = useMemo(() => {
+    if (dimensions.isMobile) {
+      // Mobile: navigation will be at bottom, return mobile-specific positions
+      return {
+        left: "20px",
+        right: "20px",
+        isMobile: true,
+      };
+    }
+
+    // Desktop: existing logic
+    return {
       left: `calc(50% - ${dimensions.width / 2 + 64}px)`,
       right: `calc(50% - ${dimensions.width / 2 + 64}px)`,
-    }),
-    [dimensions.width]
-  );
+      isMobile: false,
+    };
+  }, [dimensions.width, dimensions.isMobile]);
 
   return {
     ...dimensions,

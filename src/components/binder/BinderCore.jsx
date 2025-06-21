@@ -14,6 +14,9 @@ const BinderCore = ({
   className = "",
   style = {},
   children,
+  // Public view specific props
+  isPublicView = false,
+  binderOwner = null,
 }) => {
   const {
     onCardClick = () => {},
@@ -38,6 +41,9 @@ const BinderCore = ({
         onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
         onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
         getCardsForPage={getCardsForPage}
+        // Public view specific props
+        isPublicView={isPublicView}
+        binderOwner={binderOwner}
       />
       {children}
     </div>
@@ -81,6 +87,9 @@ BinderCore.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   children: PropTypes.node,
+  // Public view specific props
+  isPublicView: PropTypes.bool,
+  binderOwner: PropTypes.object,
 };
 
 export default BinderCore;

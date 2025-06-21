@@ -125,7 +125,8 @@ export const getTypeDisplayInfo = (typeName) => {
   const firebaseIcons = {
     Fire: "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Ffire.png?alt=media&token=119c7ac9-4d47-45d1-bad8-3b3a47f820a1",
     Water:
-      "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fmetal.png?alt=media&token=9f790698-dd2b-418b-ab89-17f583fcb7af",
+      "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fwater.png?alt=media&token=8f7807c0-9bfa-4a81-babd-efb20e4d3249",
+
     Grass:
       "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fgrass.png?alt=media&token=f4544519-c71c-4402-9e5a-7237c7cc4b05",
     Lightning:
@@ -137,7 +138,7 @@ export const getTypeDisplayInfo = (typeName) => {
     Darkness:
       "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fdarkness.png?alt=media&token=593e48ed-2605-4dfe-81b2-77b013bfde41",
     Metal:
-      "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fwater.png?alt=media&token=8f7807c0-9bfa-4a81-babd-efb20e4d3249",
+      "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Fmetal.png?alt=media&token=9f790698-dd2b-418b-ab89-17f583fcb7af",
     Fairy:
       "https://firebasestorage.googleapis.com/v0/b/pkmnbindr.firebasestorage.app/o/binder-sort-type-icons%2Ffairy.png?alt=media&token=efb79e77-8ad4-4cee-ac53-6ba79b3257eb",
     Dragon:

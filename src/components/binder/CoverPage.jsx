@@ -17,6 +17,8 @@ const CoverPage = ({
   isReadOnly = false,
   isPublicView = false,
   backgroundColor = "#ffffff",
+  isMobile = false,
+  dimensions = null,
 }) => {
   const navigate = useNavigate();
   const { updateBinderPrivacy } = useBinderContext();
@@ -53,12 +55,25 @@ const CoverPage = ({
     }
   };
 
+  // Calculate mobile-specific styling
+  const mobileStyles =
+    isMobile && dimensions
+      ? {
+          height: `${dimensions.height}px`,
+          maxHeight: `${dimensions.height}px`,
+          width: `${dimensions.width}px`,
+          maxWidth: `${dimensions.width}px`,
+        }
+      : {};
+
   // If in read-only mode, show different content based on context
   if (isReadOnly) {
     return (
       <div
-        className="flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300"
-        style={{ backgroundColor }}
+        className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
+          isMobile ? "mobile-cover-page" : ""
+        }`}
+        style={{ backgroundColor, ...mobileStyles }}
       >
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]">
@@ -70,12 +85,24 @@ const CoverPage = ({
         </div>
 
         {/* Cover content */}
-        <div className="relative h-full p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center">
+        <div
+          className={`relative h-full ${
+            isMobile ? "p-2" : "p-3 sm:p-4 md:p-6"
+          } flex flex-col items-center justify-center overflow-y-auto`}
+        >
           {isPublicView && owner ? (
-            <div className="w-full max-w-lg mx-auto space-y-4">
+            <div
+              className={`w-full ${
+                isMobile ? "max-w-full" : "max-w-lg"
+              } mx-auto space-y-${isMobile ? "2" : "4"}`}
+            >
               {/* Binder Title */}
-              <div className="text-center mb-6">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
+              <div className={`text-center ${isMobile ? "mb-3" : "mb-6"}`}>
+                <h1
+                  className={`${
+                    isMobile ? "text-sm" : "text-lg sm:text-xl md:text-2xl"
+                  } font-bold mb-2 text-gray-800`}
+                >
                   {binder?.metadata?.name || "Pokemon Card Collection"}
                 </h1>
               </div>
@@ -89,7 +116,7 @@ const CoverPage = ({
                 >
                   <UserProfileCard
                     user={owner}
-                    size="large"
+                    size={isMobile ? "small" : "large"}
                     editable={false}
                     showBanner={true}
                     showStatus={true}
@@ -101,8 +128,16 @@ const CoverPage = ({
               </div>
 
               {/* Collection Stats */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-3 sm:p-4 border border-blue-100">
-                <div className="space-y-2 text-xs sm:text-sm text-gray-700 text-center">
+              <div
+                className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg ${
+                  isMobile ? "p-2" : "p-3 sm:p-4"
+                } border border-blue-100`}
+              >
+                <div
+                  className={`space-y-${isMobile ? "1" : "2"} text-xs ${
+                    isMobile ? "" : "sm:text-sm"
+                  } text-gray-700 text-center`}
+                >
                   <p className="flex items-center justify-center gap-2">
                     <span>📊</span>
                     <strong>
@@ -118,7 +153,11 @@ const CoverPage = ({
                       : "Recently"}
                   </p>
                   {binder?.metadata?.description && (
-                    <p className="text-center mt-3 text-gray-600 italic">
+                    <p
+                      className={`text-center ${
+                        isMobile ? "mt-2" : "mt-3"
+                      } text-gray-600 italic`}
+                    >
                       "{binder.metadata.description}"
                     </p>
                   )}
@@ -136,20 +175,24 @@ const CoverPage = ({
                     ownerId: owner?.uid,
                     cardCount: Object.keys(binder?.cards || {}).length,
                   }}
-                  size="default"
+                  size={isMobile ? "small" : "default"}
                   showLabels={true}
                   showCounts={true}
                   layout="horizontal"
-                  className="w-full max-w-xs"
+                  className={`w-full ${isMobile ? "max-w-full" : "max-w-xs"}`}
                 />
               </div>
             </div>
           ) : (
             <div className="text-center">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-gray-800">
+              <h1
+                className={`${
+                  isMobile ? "text-sm" : "text-lg sm:text-xl md:text-2xl"
+                } font-bold mb-2 text-gray-800`}
+              >
                 {binder?.metadata?.name || "Pokemon Card Collection"}
               </h1>
-              <p className="text-sm opacity-60 text-slate-400">
+              <p className="text-xs opacity-60 text-slate-400">
                 {isPublicView ? "Public Collection" : "Admin View"}
               </p>
             </div>
@@ -213,8 +256,10 @@ const CoverPage = ({
 
   return (
     <div
-      className="flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300"
-      style={{ backgroundColor }}
+      className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
+        isMobile ? "mobile-cover-page" : ""
+      }`}
+      style={{ backgroundColor, ...mobileStyles }}
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
@@ -226,15 +271,35 @@ const CoverPage = ({
       </div>
 
       {/* Main content - scales with container */}
-      <div className="relative h-full p-3 sm:p-4 md:p-6 overflow-y-auto">
+      <div
+        className={`relative h-full ${
+          isMobile ? "p-2 text-xs" : "p-3 sm:p-4 md:p-6"
+        } overflow-y-auto`}
+      >
         {/* Header - responsive text sizes */}
-        <div className="text-center mb-3 sm:mb-4 md:mb-6">
-          <div className="inline-flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-            <h1 className="text-base sm:text-xl md:text-2xl font-bold text-gray-800 leading-tight">
+        <div
+          className={`text-center ${
+            isMobile ? "mb-2" : "mb-3 sm:mb-4 md:mb-6"
+          }`}
+        >
+          <div
+            className={`inline-flex items-center ${
+              isMobile ? "gap-1 mb-1" : "gap-2 sm:gap-3 mb-2 sm:mb-3"
+            }`}
+          >
+            <h1
+              className={`${
+                isMobile ? "text-xs" : "text-base sm:text-xl md:text-2xl"
+              } font-bold text-gray-800 leading-tight`}
+            >
               Binder Quick Guide
             </h1>
           </div>
-          <p className="text-xs sm:text-sm text-gray-600 font-medium">
+          <p
+            className={`${
+              isMobile ? "text-xs" : "text-xs sm:text-sm"
+            } text-gray-600 font-medium`}
+          >
             Tips & Shortcuts for {binder?.metadata?.name || "Your Collection"}
           </p>
 
@@ -299,21 +364,47 @@ const CoverPage = ({
         </div>
 
         {/* Main tips - responsive grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6">
+        <div
+          className={`grid ${
+            isMobile
+              ? "grid-cols-1 gap-1 mb-2"
+              : "grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-6"
+          }`}
+        >
           {appTips.map((tip, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-md sm:rounded-lg p-2 sm:p-3 border border-blue-100 hover:shadow-sm sm:hover:shadow-md transition-shadow duration-200"
+              className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-md ${
+                isMobile ? "p-1.5" : "sm:rounded-lg p-2 sm:p-3"
+              } border border-blue-100 ${
+                isMobile ? "" : "hover:shadow-sm sm:hover:shadow-md"
+              } transition-shadow duration-200`}
             >
-              <div className="flex items-start gap-2">
-                <div className="text-sm sm:text-base md:text-lg flex-shrink-0 mt-0.5">
+              <div
+                className={`flex items-start ${isMobile ? "gap-1" : "gap-2"}`}
+              >
+                <div
+                  className={`${
+                    isMobile ? "text-xs" : "text-sm sm:text-base md:text-lg"
+                  } flex-shrink-0 mt-0.5`}
+                >
                   {tip.icon}
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-semibold text-gray-800 text-xs sm:text-sm mb-1">
+                  <h3
+                    className={`font-semibold text-gray-800 ${
+                      isMobile ? "text-xs mb-0.5" : "text-xs sm:text-sm mb-1"
+                    }`}
+                  >
                     {tip.title}
                   </h3>
-                  <p className="text-gray-600 text-xs leading-relaxed">
+                  <p
+                    className={`text-gray-600 ${
+                      isMobile
+                        ? "text-xs leading-tight"
+                        : "text-xs leading-relaxed"
+                    }`}
+                  >
                     {tip.description}
                   </p>
                 </div>

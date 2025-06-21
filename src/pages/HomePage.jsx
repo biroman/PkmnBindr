@@ -73,13 +73,14 @@ const HomePage = () => {
     "Everything in Guest Mode",
     "Unlimited storage*",
     "Cloud sync across devices",
+    "Browse public community binders",
     "All upcoming features",
   ];
 
   const upcomingFeatures = [
-    "Share binder with a link to friends",
-    "Browse public community binders",
+    "Share binder with just a link to friends",
     "Top lists and leaderboards",
+    "Add labels to cards for example, 'For sale' '50$' etc.",
     "And more!",
   ];
 

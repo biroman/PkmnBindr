@@ -23,6 +23,24 @@ import { useCardCache } from "../../contexts/CardCacheContext";
 import { getGridConfig } from "../../hooks/useBinderDimensions";
 import { toast } from "react-hot-toast";
 
+// Helper function to get low-quality image URL for thumbnails
+// This significantly improves performance by using standard quality images
+// instead of _hires versions for tiny thumbnail previews
+const getLowQualityImageUrl = (card) => {
+  if (!card) return "";
+
+  // Get the image URL (prefer imageSmall, fallback to image)
+  let imageUrl = card.imageSmall || card.image || "";
+
+  if (imageUrl) {
+    // Remove _hires from the URL to get standard quality
+    // e.g., "10_hires.png" becomes "10.png"
+    imageUrl = imageUrl.replace(/_hires\.png$/, ".png");
+  }
+
+  return imageUrl;
+};
+
 const ITEM_TYPE = "CARD_PAGE";
 
 // Individual Card Page Component
@@ -96,18 +114,52 @@ const CardPageItem = ({
     const startPosition = (cardPageIndex - 1) * cardsPerPage;
     const pageCards = [];
 
+    // Debug: uncomment for troubleshooting
+    // console.log(`[PageOverview] Getting cards for page ${cardPageIndex}, startPos: ${startPosition}, cardsPerPage: ${cardsPerPage}`);
+    // console.log(`[PageOverview] Binder has cards:`, Object.keys(binder.cards || {}).length);
+
     for (let i = 0; i < cardsPerPage; i++) {
       const globalPosition = startPosition + i;
       const cardData = binder.cards[globalPosition.toString()];
 
+      // Debug: uncomment for troubleshooting
+      // console.log(`[PageOverview] Position ${globalPosition}: cardData exists = ${!!cardData}`);
+
       if (cardData) {
-        const fullCard = getCardFromCache(cardData.cardId);
-        pageCards.push(fullCard);
+        // Try to get full card data from cache first
+        let fullCard = getCardFromCache(cardData.cardId);
+
+        if (fullCard) {
+          // Use cached card data
+          pageCards.push({
+            ...fullCard,
+            binderMetadata: cardData,
+          });
+        } else if (cardData.cardData) {
+          // Use stored card data from binder (for cloud-synced cards)
+          pageCards.push({
+            ...cardData.cardData,
+            binderMetadata: cardData,
+          });
+        } else if (cardData.name && cardData.image) {
+          // Direct card data (admin normalized format)
+          pageCards.push(cardData);
+        } else {
+          // Fallback for old binder format - create minimal card object
+          pageCards.push({
+            id: cardData.cardId,
+            name: "Unknown Card",
+            image: "",
+            binderMetadata: cardData,
+          });
+        }
       } else {
         pageCards.push(null);
       }
     }
 
+    // Debug: uncomment for troubleshooting
+    // console.log(`[PageOverview] Page ${cardPageIndex} final pageCards:`, pageCards);
     return pageCards;
   };
 
@@ -333,12 +385,18 @@ const CardPageItem = ({
                   }
                 `}
               >
-                {card && card.image && (
+                {card && getLowQualityImageUrl(card) && (
                   <img
-                    src={card.image}
+                    src={getLowQualityImageUrl(card)}
                     alt={card.name}
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    decoding="async"
+                    style={{
+                      imageRendering: "auto",
+                      maxWidth: "24px",
+                      maxHeight: "32px",
+                    }}
                   />
                 )}
               </div>

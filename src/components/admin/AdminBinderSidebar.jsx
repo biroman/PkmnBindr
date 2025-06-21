@@ -9,7 +9,6 @@ import {
   CalendarIcon,
   WrenchScrewdriverIcon,
   PhotoIcon,
-  ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 
 const AdminBinderSidebar = ({
@@ -23,7 +22,6 @@ const AdminBinderSidebar = ({
   onToggleImageUpdateTool,
   isVisible,
   onToggleVisibility,
-  incompleteCardsCount = 0,
 }) => {
   const navigate = useNavigate();
 
@@ -54,12 +52,6 @@ const AdminBinderSidebar = ({
           <span className="text-sm font-medium text-gray-700">
             {isVisible ? "Hide Info" : "Show Info"}
           </span>
-          {/* Incomplete cards badge */}
-          {incompleteCardsCount > 0 && (
-            <span className="ml-1 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-              {incompleteCardsCount}
-            </span>
-          )}
         </button>
       </div>
 
@@ -102,24 +94,6 @@ const AdminBinderSidebar = ({
               <p className="text-sm text-gray-500">Admin View</p>
             </div>
           </div>
-
-          {/* Incomplete Cards Alert */}
-          {incompleteCardsCount > 0 && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-4">
-              <div className="flex items-center gap-2">
-                <ExclamationTriangleIcon className="w-5 h-5 text-red-500" />
-                <div>
-                  <p className="text-sm font-medium text-red-800">
-                    {incompleteCardsCount} Incomplete Card
-                    {incompleteCardsCount !== 1 ? "s" : ""}
-                  </p>
-                  <p className="text-xs text-red-600">
-                    Missing Pokemon card data
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Binder Information */}
@@ -153,16 +127,6 @@ const AdminBinderSidebar = ({
               </span>
             </div>
 
-            {incompleteCardsCount > 0 && (
-              <div className="flex items-center gap-3 text-sm">
-                <ExclamationTriangleIcon className="w-4 h-4 text-red-500" />
-                <span className="text-gray-600">Incomplete:</span>
-                <span className="font-medium text-red-600">
-                  {incompleteCardsCount}
-                </span>
-              </div>
-            )}
-
             {binder.metadata.createdAt && (
               <div className="flex items-center gap-3 text-sm">
                 <CalendarIcon className="w-4 h-4 text-gray-400" />
@@ -184,19 +148,10 @@ const AdminBinderSidebar = ({
               onClick={onToggleRepairTool}
               variant="outline"
               size="sm"
-              className={`w-full ${
-                incompleteCardsCount > 0
-                  ? "border-red-300 text-red-700 hover:bg-red-50"
-                  : ""
-              }`}
+              className="w-full"
             >
               <WrenchScrewdriverIcon className="w-4 h-4 mr-2" />
               {showRepairTool ? "Hide" : "Show"} Card Repair Tool
-              {incompleteCardsCount > 0 && (
-                <span className="ml-auto bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                  {incompleteCardsCount}
-                </span>
-              )}
             </Button>
 
             <Button

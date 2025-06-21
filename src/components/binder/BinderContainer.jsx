@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import BinderCore from "./BinderCore";
 import BinderToolbar from "./BinderToolbar";
 import BinderSidebar from "./BinderSidebar";
+import MobileSettingsModal from "./MobileSettingsModal";
 import ModalProvider from "./ModalProvider";
 import DragProvider from "./DragProvider";
 import { BinderNavigation, EdgeNavigation } from "./navigation";
@@ -14,6 +15,7 @@ import useBinderDragDrop from "../../hooks/useBinderDragDrop";
 import useBinderModals from "../../hooks/useBinderModals";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { Button } from "../ui/Button";
+import { pdfExportService } from "../../services/PdfExportService";
 
 /**
  * Default feature configuration for different modes
@@ -123,6 +125,9 @@ export const BinderContainer = ({
   className = "",
   style = {},
   showNoBinderMessage = true,
+  // Public view specific props
+  isPublicView = false,
+  binderOwner = null,
 }) => {
   // Merge default features with overrides
   const features = { ...DEFAULT_FEATURES[mode], ...featureOverrides };
@@ -132,6 +137,7 @@ export const BinderContainer = ({
     !features.sidebar
   );
   const [isPdfExporting, setIsPdfExporting] = useState(false);
+  const [isMobileSettingsOpen, setIsMobileSettingsOpen] = useState(false);
 
   // Use external binder context or internal hook
   const contextValue = binderContext || useBinderContext();
@@ -148,6 +154,10 @@ export const BinderContainer = ({
     addPage,
   } = contextValue;
 
+  const binderDimensions = useBinderDimensions(
+    binder?.settings?.gridSize || "3x3"
+  );
+
   // Core binder hooks
   const {
     getCurrentPageConfig,
@@ -157,11 +167,7 @@ export const BinderContainer = ({
     canGoNext,
     canGoPrev,
     getCardsForPage,
-  } = useBinderPages(binder);
-
-  const binderDimensions = useBinderDimensions(
-    binder?.settings?.gridSize || "3x3"
-  );
+  } = useBinderPages(binder, binderDimensions.isMobile);
 
   // Modal management
   const binderModals = useBinderModals({
@@ -190,7 +196,24 @@ export const BinderContainer = ({
     enableModals: features.modals,
   });
 
-  // Navigation management
+  // Drag and drop management (needs to be first to provide edge navigation state)
+  const binderDragDrop = useBinderDragDrop({
+    binder,
+    moveCard: features.dragDrop ? moveCard : undefined,
+    navigation: {
+      canGoNext,
+      canGoPrev,
+      goToNextPage,
+      goToPrevPage,
+      goToPage,
+    },
+    onDragStateChange: (isDragging) => {
+      // Optional: Add any side effects when drag state changes
+    },
+    enableDrag: features.dragDrop,
+  });
+
+  // Navigation management (receives edge navigation state from drag drop)
   const binderNavigation = useBinderNavigation({
     binder,
     navigation: {
@@ -200,23 +223,15 @@ export const BinderContainer = ({
       goToPrevPage,
       goToPage,
     },
-    activeCard: null, // Will be updated by drag hook
+    activeCard: binderDragDrop.activeCard,
     dimensions: binderDimensions,
     isModalsOpen: binderModals.modals.isAnyModalOpen,
     enableKeyboard: features.keyboard,
     enableEdgeNavigation: features.edgeNavigation,
-  });
-
-  // Drag and drop management
-  const binderDragDrop = useBinderDragDrop({
-    binder,
-    moveCard: features.dragDrop ? moveCard : undefined,
-    navigation: binderNavigation,
-    onDragStateChange: (isDragging) => {
-      // Optional: Add any side effects when drag state changes
-      console.log("Drag state changed:", isDragging);
+    edgeNavigationState: {
+      currentEdgeZone: binderDragDrop.currentEdgeZone,
+      navigationProgress: binderDragDrop.navigationProgress,
     },
-    enableDrag: features.dragDrop,
   });
 
   // Initialize to specific page
@@ -228,7 +243,6 @@ export const BinderContainer = ({
 
   // Card interaction handlers
   const handleCardClick = (card, slotIndex) => {
-    console.log("Card clicked:", card, "at slot:", slotIndex);
     onCardClick?.(card, slotIndex);
   };
 
@@ -274,6 +288,10 @@ export const BinderContainer = ({
     }
   };
 
+  const handleMobileSettings = () => {
+    setIsMobileSettingsOpen(true);
+  };
+
   const handleExport = () => {
     if (features.export && exportBinderData) {
       exportBinderData();
@@ -294,11 +312,20 @@ export const BinderContainer = ({
 
     try {
       setIsPdfExporting(true);
-      // TODO: Implement PDF export
-      console.log("PDF export not yet implemented");
-      toast.success("PDF generated successfully!");
+      toast.loading("Generating PDF...", { id: "pdf-export" });
+
+      // Generate PDF using the service
+      await pdfExportService.generateBinderPdf(binder, {
+        quality: 0.95,
+        format: "a4",
+        includeEmptyPages: false, // Don't include empty pages for cleaner output
+        filename: null, // Auto-generate filename
+      });
+
+      toast.success("PDF generated successfully!", { id: "pdf-export" });
     } catch (error) {
       console.error("PDF export failed:", error);
+      toast.error(`PDF export failed: ${error.message}`, { id: "pdf-export" });
       onError?.(error);
     } finally {
       setIsPdfExporting(false);
@@ -407,7 +434,9 @@ export const BinderContainer = ({
   }
 
   const pageConfig = getCurrentPageConfig;
-  const sidebarWidth = features.sidebar && !isSidebarCollapsed ? 320 : 0;
+  const isMobile = binderDimensions.isMobile;
+  const sidebarWidth =
+    features.sidebar && !isSidebarCollapsed && !isMobile ? 320 : 0;
 
   // Get the current binder color (preview or saved)
   const currentDisplayColor =
@@ -418,11 +447,22 @@ export const BinderContainer = ({
   return (
     <div
       className={`h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
-      style={{ paddingRight: `${sidebarWidth}px`, ...style }}
+      style={{
+        paddingRight: `${sidebarWidth}px`,
+        paddingTop: isMobile ? "60px" : "0", // Account for mobile toolbar
+        paddingBottom: isMobile ? "80px" : "0", // Account for mobile navigation
+        ...style,
+      }}
     >
-      {/* Toolbar - positioned absolutely to not affect flex layout */}
+      {/* Toolbar - different positioning for mobile vs desktop */}
       {features.toolbar && (
-        <div className="absolute top-0 left-0 right-0 z-20 p-2">
+        <div
+          className={
+            isMobile
+              ? "fixed top-16 left-0 right-0 z-20"
+              : "absolute top-0 left-0 right-0 z-20 p-2"
+          }
+        >
           <BinderToolbar
             onAddCard={handleAddCard}
             onSettings={handleSettings}
@@ -431,8 +471,10 @@ export const BinderContainer = ({
             onPageOverview={handlePageOverview}
             onPdfExport={handlePdfExport}
             onColorPicker={handleColorPicker}
+            onMobileSettings={handleMobileSettings}
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
+            isMobile={isMobile}
             disabled={
               !features.addCards && !features.export && !features.clearBinder
             }
@@ -456,7 +498,7 @@ export const BinderContainer = ({
         disabled={!features.dragDrop}
         className="h-full flex items-center justify-center"
         style={{
-          paddingTop: features.toolbar ? "70px" : "0", // Account for toolbar height
+          paddingTop: features.toolbar && !isMobile ? "70px" : "0", // Account for toolbar height on desktop only
         }}
       >
         <BinderCore
@@ -486,21 +528,24 @@ export const BinderContainer = ({
           className={`drag-container ${
             binderDragDrop.activeCard ? "dragging-active" : ""
           }`}
+          // Public view specific props
+          isPublicView={isPublicView}
+          binderOwner={binderOwner}
         />
-      </DragProvider>
 
-      {/* Edge Navigation - positioned relative to full viewport */}
-      {features.edgeNavigation && (
-        <EdgeNavigation
-          isActive={!!binderDragDrop.activeCard}
-          navigation={binderNavigation}
-          positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
-          dragState={{
-            isInNavigationZone: binderNavigation.isInNavigationZone,
-            navigationProgress: binderNavigation.navigationProgress,
-          }}
-        />
-      )}
+        {/* Edge Navigation - positioned relative to full viewport, inside DndContext */}
+        {features.edgeNavigation && (
+          <EdgeNavigation
+            isActive={!!binderDragDrop.activeCard}
+            navigation={binderNavigation}
+            positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
+            dragState={{
+              isInNavigationZone: binderNavigation.isInNavigationZone,
+              navigationProgress: binderNavigation.navigationProgress,
+            }}
+          />
+        )}
+      </DragProvider>
 
       {/* Page Navigation - positioned relative to full viewport */}
       {features.navigation && (
@@ -511,11 +556,13 @@ export const BinderContainer = ({
           isReadOnly={mode === "readonly" || mode === "preview"}
           mode={mode}
           activeCard={binderDragDrop.activeCard}
+          currentPageConfig={pageConfig}
+          isMobile={isMobile}
         />
       )}
 
-      {/* Sidebar Toggle Button - positioned relative to full viewport */}
-      {features.sidebar && (
+      {/* Sidebar Toggle Button - only show on desktop */}
+      {features.sidebar && !isMobile && (
         <div
           className="absolute top-4 right-4"
           style={{
@@ -553,8 +600,8 @@ export const BinderContainer = ({
         </div>
       )}
 
-      {/* Sidebar */}
-      {features.sidebar && (
+      {/* Sidebar - only show on desktop */}
+      {features.sidebar && !isMobile && (
         <BinderSidebar
           binder={binder}
           onGridSizeChange={features.sorting ? handleGridSizeChange : undefined}
@@ -578,6 +625,22 @@ export const BinderContainer = ({
           handlers={binderModals.handlers}
         />
       )}
+
+      {/* Mobile Settings Modal */}
+      {isMobile && features.sidebar && (
+        <MobileSettingsModal
+          isOpen={isMobileSettingsOpen}
+          onClose={() => setIsMobileSettingsOpen(false)}
+          binder={binder}
+          onGridSizeChange={features.sorting ? handleGridSizeChange : undefined}
+          onNameChange={handleNameChange}
+          onSortChange={features.sorting ? handleSortChange : undefined}
+          onAutoSortChange={
+            features.autoSort ? handleAutoSortChange : undefined
+          }
+          isReadOnly={mode === "readonly" || mode === "preview"}
+        />
+      )}
     </div>
   );
 };
@@ -596,6 +659,9 @@ BinderContainer.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   showNoBinderMessage: PropTypes.bool,
+  // Public view specific props
+  isPublicView: PropTypes.bool,
+  binderOwner: PropTypes.object,
 };
 
 export default BinderContainer;

@@ -24,8 +24,72 @@ export const useBinderDragDrop = ({
   const [activeCard, setActiveCard] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
 
+  // Edge navigation state
+  const [currentEdgeZone, setCurrentEdgeZone] = useState(null);
+  const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
+  const [navigationProgress, setNavigationProgress] = useState(0);
+  const [progressAnimationId, setProgressAnimationId] = useState(null);
+
   // Persistent drag data storage to handle React re-renders
   const activeDragDataRef = useRef(null);
+
+  // Clear navigation timer helper
+  const clearNavigationTimer = useCallback(() => {
+    if (edgeNavigationTimer) {
+      clearTimeout(edgeNavigationTimer);
+      setEdgeNavigationTimer(null);
+    }
+    if (progressAnimationId) {
+      cancelAnimationFrame(progressAnimationId);
+      setProgressAnimationId(null);
+    }
+    setCurrentEdgeZone(null);
+    setNavigationProgress(0);
+  }, [edgeNavigationTimer, progressAnimationId]);
+
+  // Start navigation timer for edge navigation
+  const startNavigationTimer = useCallback(
+    (direction) => {
+      const canNavigate =
+        (direction === "left" && navigation.canGoPrev) ||
+        (direction === "right" && navigation.canGoNext);
+
+      if (!canNavigate) return;
+
+      // Clear any existing timer
+      clearNavigationTimer();
+
+      setCurrentEdgeZone(direction);
+
+      // Start progress animation
+      const startTime = Date.now();
+      const animateProgress = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min((elapsed / 1000) * 100, 100);
+        setNavigationProgress(progress);
+
+        if (progress < 100) {
+          const animId = requestAnimationFrame(animateProgress);
+          setProgressAnimationId(animId);
+        }
+      };
+      const initialAnimId = requestAnimationFrame(animateProgress);
+      setProgressAnimationId(initialAnimId);
+
+      // Start new timer
+      const timer = setTimeout(() => {
+        if (direction === "left" && navigation.canGoPrev) {
+          navigation.goToPrevPage();
+        } else if (direction === "right" && navigation.canGoNext) {
+          navigation.goToNextPage();
+        }
+        clearNavigationTimer();
+      }, 1000); // 1 second delay
+
+      setEdgeNavigationTimer(timer);
+    },
+    [clearNavigationTimer, navigation]
+  );
 
   // Clear drag state utility
   const clearDragState = useCallback(() => {
@@ -33,8 +97,8 @@ export const useBinderDragDrop = ({
     setIsDragging(false);
     activeDragDataRef.current = null;
 
-    // Clear navigation timer if available
-    navigation?.clearNavigationTimer?.();
+    // Clear navigation timer
+    clearNavigationTimer();
 
     // Restore document scrolling
     document.body.style.overflow = "";
@@ -43,7 +107,7 @@ export const useBinderDragDrop = ({
 
     // Notify parent of drag state change
     onDragStateChange?.(false);
-  }, [navigation, onDragStateChange]);
+  }, [clearNavigationTimer, onDragStateChange]);
 
   // Drag start handler
   const handleDragStart = useCallback(
@@ -52,8 +116,6 @@ export const useBinderDragDrop = ({
 
       const { active } = event;
       const cardData = active.data.current;
-
-      console.log("Drag start:", cardData);
 
       if (cardData?.type === "card") {
         setActiveCard(cardData.card);
@@ -72,22 +134,44 @@ export const useBinderDragDrop = ({
     [enableDrag, onDragStateChange]
   );
 
+  // Drag over handler for edge navigation
+  const handleDragOver = useCallback(
+    (event) => {
+      if (!event.over) {
+        // Clear edge navigation when not over anything
+        if (currentEdgeZone) {
+          clearNavigationTimer();
+        }
+        return;
+      }
+
+      const overData = event.over.data.current;
+
+      // Handle edge navigation zones
+      if (overData?.type === "edge-navigation") {
+        const direction = overData.direction;
+        const canNavigate = overData.canNavigate;
+
+        if (canNavigate && currentEdgeZone !== direction) {
+          startNavigationTimer(direction);
+        }
+      } else {
+        // Clear edge navigation when over other elements
+        if (currentEdgeZone) {
+          clearNavigationTimer();
+        }
+      }
+    },
+    [currentEdgeZone, clearNavigationTimer, startNavigationTimer]
+  );
+
   // Drag end handler
   const handleDragEnd = useCallback(
     async (event) => {
       const { active, over } = event;
 
-      console.log(
-        "handleDragEnd - stored drag data:",
-        activeDragDataRef.current
-      );
-      console.log(
-        "handleDragEnd - active.data.current:",
-        active?.data?.current
-      );
-
       // Clear navigation timer first (before any early returns)
-      navigation?.clearNavigationTimer?.();
+      clearNavigationTimer();
 
       // Restore document scrolling
       document.body.style.overflow = "";
@@ -99,13 +183,11 @@ export const useBinderDragDrop = ({
       setIsDragging(false);
 
       if (!active || !binder) {
-        console.log("Drag ended - no active item or current binder");
         clearDragState();
         return;
       }
 
       if (!over) {
-        console.log("Drag ended - no drop target");
         clearDragState();
         return;
       }
@@ -115,73 +197,48 @@ export const useBinderDragDrop = ({
         : activeDragDataRef.current; // Use stored data if original is empty or missing type
       const overData = over.data.current;
 
-      console.log("Drag end data:", {
-        activeType: activeData?.type,
-        activePosition: activeData?.position,
-        overType: overData?.type,
-        overPosition: overData?.position,
-        usingStoredData:
-          !active.data.current?.type && !!activeDragDataRef.current,
-        hasActiveDragData: !!activeDragDataRef.current,
-        hasActiveDataCurrent: !!active.data.current,
-        activeDataCurrentType: active.data.current?.type,
-      });
+      // Handle edge navigation drops (no action needed, navigation already handled in timer)
+      if (overData?.type === "edge-navigation") {
+        clearDragState();
+        onDragStateChange?.(false);
+        return;
+      }
 
       // Only handle card-to-slot drops
       if (activeData?.type === "card" && overData?.type === "slot") {
         const fromPosition = activeData.position;
         const toPosition = overData.position;
 
-        console.log(
-          `Attempting to move card from position ${fromPosition} to ${toPosition}`
-        );
-
         if (fromPosition !== toPosition) {
           try {
             await moveCard(binder.id, fromPosition, toPosition);
-            console.log("Card move successful");
           } catch (error) {
             console.error("Failed to move card:", error);
             toast.error("Failed to move card");
           }
-        } else {
-          console.log("Same position - no move needed");
         }
-      } else {
-        console.log("Invalid drag/drop combination:", {
-          activeType: activeData?.type,
-          overType: overData?.type,
-        });
       }
 
       // Clear stored drag data
       clearDragState();
       onDragStateChange?.(false);
     },
-    [binder, moveCard, navigation, clearDragState, onDragStateChange]
+    [binder, moveCard, clearNavigationTimer, clearDragState, onDragStateChange]
   );
 
   // Drag cancel handler
   const handleDragCancel = useCallback(() => {
-    console.log("Drag cancelled");
     clearDragState();
   }, [clearDragState]);
-
-  // Drag over handler for debugging and edge navigation
-  const handleDragOver = useCallback((event) => {
-    // Debug collision detection during drag
-    if (event.over) {
-      console.log("Drag over:", {
-        overId: event.over.id,
-        overData: event.over.data.current,
-      });
-    }
-  }, []);
 
   return {
     // State
     activeCard,
     isDragging,
+
+    // Edge navigation state
+    currentEdgeZone,
+    navigationProgress,
 
     // Handlers
     handleDragStart,
@@ -191,6 +248,7 @@ export const useBinderDragDrop = ({
 
     // Utilities
     clearDragState,
+    clearNavigationTimer,
 
     // Data persistence
     activeDragDataRef,

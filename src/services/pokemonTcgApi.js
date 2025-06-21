@@ -247,8 +247,16 @@ export const pokemonTcgApi = {
         q += (q ? " " : "") + `subtypes:"${filters.subtypes.join('","')}"`;
       }
       if (filters.set) {
-        // Always treat as set ID first, fallback to set name
-        q += (q ? " " : "") + `set.id:"${filters.set}"`;
+        // Check if it looks like a set ID (contains letters and numbers) or set name
+        // Set IDs typically look like "sv7", "ex1", "base1", etc.
+        // Set names are longer like "Scarlet & Violet", "Base Set", etc.
+        if (filters.set.match(/^[a-z0-9-]+$/i) && filters.set.length <= 10) {
+          // Looks like a set ID
+          q += (q ? " " : "") + `set.id:"${filters.set}"`;
+        } else {
+          // Looks like a set name
+          q += (q ? " " : "") + `set.name:"${filters.set}"`;
+        }
       }
       if (filters.rarity) {
         q += (q ? " " : "") + `rarity:"${filters.rarity}"`;
@@ -330,14 +338,32 @@ export const pokemonTcgApi = {
   // Get all available sets
   async getSets() {
     try {
-      const response = await apiRequest("/sets", {
-        params: {
-          orderBy: "-releaseDate",
-          pageSize: MAX_PAGE_SIZE,
-        },
-      });
+      const allSets = [];
+      let page = 1;
+      let hasMore = true;
 
-      return response.data || [];
+      // Fetch all pages of sets
+      while (hasMore) {
+        const response = await apiRequest("/sets", {
+          params: {
+            orderBy: "-releaseDate",
+            pageSize: MAX_PAGE_SIZE,
+            page: page,
+          },
+        });
+
+        if (response.data && response.data.length > 0) {
+          allSets.push(...response.data);
+
+          // Check if there are more pages
+          hasMore = response.data.length === MAX_PAGE_SIZE;
+          page++;
+        } else {
+          hasMore = false;
+        }
+      }
+
+      return allSets;
     } catch (error) {
       console.error("Get sets failed:", error);
       throw new Error(`Failed to get sets: ${error.message}`);
@@ -371,8 +397,53 @@ export const pokemonTcgApi = {
   // Get all available rarities
   async getRarities() {
     try {
-      const response = await apiRequest("/rarities");
-      return response.data || [];
+      // Use comprehensive list ordered by rarity level (most common to least common)
+      const pokemonRarities = [
+        // Standard rarities (most common)
+        "Common",
+        "Uncommon",
+        "Rare",
+
+        // Holofoil rarities (more rare)
+        "Rare Holo",
+        "Rare Holo EX",
+        "Rare Holo GX",
+        "Rare Holo V",
+        "Rare Holo VMAX",
+        "Rare Holo VSTAR",
+        "Rare Holo LV.X",
+        "Rare Holo Star",
+
+        // Special rarities (very rare)
+        "Double Rare",
+        "Illustration Rare",
+        "Special Illustration Rare",
+        "Ultra Rare",
+        "Rare Ultra",
+        "Hyper Rare",
+
+        // Secret/Rainbow rarities (extremely rare)
+        "Secret Rare",
+        "Rare Secret",
+        "Rare Rainbow",
+
+        // Older special rarities
+        "Amazing Rare",
+        "Rare ACE",
+        "Rare BREAK",
+        "Rare Prime",
+        "Rare Prism Star",
+        "Rare Shining",
+        "Rare Shiny",
+        "Rare Shiny GX",
+        "Shiny Rare",
+
+        // Promotional/Special (varies)
+        "Promo",
+        "LEGEND",
+      ];
+
+      return pokemonRarities;
     } catch (error) {
       console.error("Get rarities failed:", error);
       throw new Error(`Failed to get rarities: ${error.message}`);
@@ -409,18 +480,45 @@ export const pokemonTcgApi = {
   },
 };
 
+// Cards that should use normal size images instead of _hires (they don't have hires versions)
+const CARDS_WITH_NO_HIRES = [
+  "sv8-196", // Larvesta
+  "xyp-XY39", // Kingdra
+  "xyp-XY46", // Altaria
+  "xyp-XY68", // Chesnaught
+];
+
 // Helper function to normalize card data for our application
 // Only keeps essential data to reduce storage size
 export function normalizeCardData(card) {
   if (!card) return null;
+
+  // Determine which image to use for small and large
+  let imageSmallUrl = card.images?.small || "";
+  let imageLargeUrl = card.images?.large || "";
+
+  // Use _hires version by default, unless the card is in the exception list
+  if (imageSmallUrl && !CARDS_WITH_NO_HIRES.includes(card.id)) {
+    // Convert normal image URL to _hires version
+    // e.g., "10.png" becomes "10_hires.png"
+    imageSmallUrl = imageSmallUrl.replace(/(\d+)\.png$/, "$1_hires.png");
+  }
+
+  if (imageLargeUrl && !CARDS_WITH_NO_HIRES.includes(card.id)) {
+    // Convert normal image URL to _hires version
+    // e.g., "10.png" becomes "10_hires.png"
+    imageLargeUrl = imageLargeUrl.replace(/(\d+)\.png$/, "$1_hires.png");
+  }
 
   return {
     // Essential identification
     id: card.id,
     name: card.name,
 
-    // Images (essential for display)
-    image: card.images?.small || card.images?.large || "",
+    // Images (essential for display) - now using _hires by default with exceptions
+    // Maintain both imageSmall and image for compatibility
+    imageSmall: imageSmallUrl,
+    image: imageLargeUrl || imageSmallUrl, // Fallback to small if large not available
 
     // Card classification
     supertype: card.supertype,

@@ -589,6 +589,8 @@ const BinderSidebar = ({
   onSortChange,
   onAutoSortChange,
   isCollapsed = false,
+  isReadOnly = false,
+  isMobile = false,
 }) => {
   const { updateBinderMetadata, downloadBinderFromCloud } = useBinderContext();
   const [showRevertModal, setShowRevertModal] = useState(false);
@@ -671,6 +673,58 @@ const BinderSidebar = ({
   };
 
   if (!binder) return null;
+
+  // Mobile mode: return just the content without fixed positioning
+  if (isMobile) {
+    return (
+      <div className="space-y-4">
+        {/* Binder Name Editor */}
+        <BinderNameEditor
+          currentName={binder.metadata.name}
+          onNameChange={onNameChange}
+        />
+
+        {/* Grid Size Selector */}
+        <GridSizeSelector
+          currentSize={binder.settings.gridSize}
+          onSizeChange={onGridSizeChange}
+        />
+
+        {/* Sort Controls */}
+        <div className="space-y-2">
+          <label className="block text-sm font-medium text-slate-700">
+            Card Sorting
+          </label>
+          <SortControls
+            currentSortBy={binder.settings?.sortBy || "custom"}
+            autoSort={binder.settings?.autoSort || false}
+            onSortChange={onSortChange}
+            onAutoSortChange={onAutoSortChange}
+            className="w-full"
+          />
+        </div>
+
+        {/* Page Manager */}
+        <PageManager binder={binder} />
+
+        {/* Sync Button */}
+        <SyncButton
+          binder={binder}
+          onShowRevertModal={() => setShowRevertModal(true)}
+          isReverting={isReverting}
+        />
+
+        {/* Revert Modal */}
+        <RevertConfirmationModal
+          isOpen={showRevertModal}
+          onClose={() => setShowRevertModal(false)}
+          onConfirm={handleConfirmRevert}
+          binderName={binder?.metadata?.name || "Unnamed Binder"}
+          isLoading={isReverting}
+        />
+      </div>
+    );
+  }
 
   return (
     <>

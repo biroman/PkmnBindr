@@ -52,7 +52,7 @@ const useCardSearch = () => {
         ]);
 
         setAvailableTypes(types);
-        setAvailableSets(sets.slice(0, 50)); // Limit to recent sets
+        setAvailableSets(sets); // Show all available sets
         setAvailableRarities(rarities);
       } catch (error) {
         console.error("Failed to load filter options:", error);
