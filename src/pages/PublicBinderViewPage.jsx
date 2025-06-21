@@ -264,7 +264,7 @@ const PublicBinderViewPage = () => {
               <img
                 src={selectedCard.image || selectedCard.imageSmall}
                 alt={selectedCard.name}
-                className="max-w-sm w-full h-auto cursor-pointer shadow-2xl rounded-lg"
+                className=" cursor-pointer shadow-2xl rounded-lg"
                 onClick={handleCloseModal}
                 style={{ maxHeight: "60vh" }}
               />
