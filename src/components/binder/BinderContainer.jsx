@@ -420,9 +420,9 @@ export const BinderContainer = ({
       className={`h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
       style={{ paddingRight: `${sidebarWidth}px`, ...style }}
     >
-      <div className="flex flex-col p-2 h-full">
-        {/* Toolbar */}
-        {features.toolbar && (
+      {/* Toolbar - positioned absolutely to not affect flex layout */}
+      {features.toolbar && (
+        <div className="absolute top-0 left-0 right-0 z-20 p-2">
           <BinderToolbar
             onAddCard={handleAddCard}
             onSettings={handleSettings}
@@ -437,10 +437,41 @@ export const BinderContainer = ({
               !features.addCards && !features.export && !features.clearBinder
             }
           />
-        )}
+        </div>
+      )}
 
-        {/* Main Binder Display */}
-        <DragProvider
+      {/* Main Binder Display - Full height with proper centering */}
+      <DragProvider
+        dragHandlers={
+          features.dragDrop
+            ? {
+                onDragStart: binderDragDrop.handleDragStart,
+                onDragEnd: binderDragDrop.handleDragEnd,
+                onDragCancel: binderDragDrop.handleDragCancel,
+                onDragOver: binderDragDrop.handleDragOver,
+              }
+            : {}
+        }
+        activeCard={binderDragDrop.activeCard}
+        disabled={!features.dragDrop}
+        className="h-full flex items-center justify-center"
+        style={{
+          paddingTop: features.toolbar ? "70px" : "0", // Account for toolbar height
+        }}
+      >
+        <BinderCore
+          binder={binder}
+          currentPageConfig={pageConfig}
+          dimensions={binderDimensions}
+          mode={mode}
+          backgroundColor={currentDisplayColor}
+          getCardsForPage={getCardsForPage}
+          onCardInteraction={{
+            onCardClick: handleCardClick,
+            onCardDelete: features.deleteCards ? handleCardDelete : undefined,
+            onSlotClick: features.addCards ? handleSlotClick : undefined,
+            onToggleMissing: handleToggleMissing,
+          }}
           dragHandlers={
             features.dragDrop
               ? {
@@ -452,100 +483,70 @@ export const BinderContainer = ({
               : {}
           }
           activeCard={binderDragDrop.activeCard}
-          disabled={!features.dragDrop}
-          className="flex-1 flex items-center justify-center"
+          className={`drag-container ${
+            binderDragDrop.activeCard ? "dragging-active" : ""
+          }`}
         >
-          <BinderCore
-            binder={binder}
-            currentPageConfig={pageConfig}
-            dimensions={binderDimensions}
-            mode={mode}
-            backgroundColor={currentDisplayColor}
-            getCardsForPage={getCardsForPage}
-            onCardInteraction={{
-              onCardClick: handleCardClick,
-              onCardDelete: features.deleteCards ? handleCardDelete : undefined,
-              onSlotClick: features.addCards ? handleSlotClick : undefined,
-              onToggleMissing: handleToggleMissing,
-            }}
-            dragHandlers={
-              features.dragDrop
-                ? {
-                    onDragStart: binderDragDrop.handleDragStart,
-                    onDragEnd: binderDragDrop.handleDragEnd,
-                    onDragCancel: binderDragDrop.handleDragCancel,
-                    onDragOver: binderDragDrop.handleDragOver,
-                  }
-                : {}
-            }
-            activeCard={binderDragDrop.activeCard}
-            className={`drag-container relative ${
-              binderDragDrop.activeCard ? "dragging-active" : ""
-            }`}
-          >
-            {/* Edge Navigation */}
-            {features.edgeNavigation && (
-              <EdgeNavigation
-                isActive={!!binderDragDrop.activeCard}
-                navigation={binderNavigation}
-                positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
-                dragState={{
-                  isInNavigationZone: binderNavigation.isInNavigationZone,
-                  navigationProgress: binderNavigation.navigationProgress,
-                }}
-              />
-            )}
+          {/* Edge Navigation */}
+          {features.edgeNavigation && (
+            <EdgeNavigation
+              isActive={!!binderDragDrop.activeCard}
+              navigation={binderNavigation}
+              positions={binderNavigation.getEdgeZonePositions(sidebarWidth)}
+              dragState={{
+                isInNavigationZone: binderNavigation.isInNavigationZone,
+                navigationProgress: binderNavigation.navigationProgress,
+              }}
+            />
+          )}
 
-            {/* Page Navigation */}
-            {features.navigation && (
-              <BinderNavigation
-                navigation={binderNavigation}
-                positions={binderNavigation.getNavigationPositions(
-                  sidebarWidth
-                )}
-                onAddPage={features.pageManagement ? handleAddPage : undefined}
-                isReadOnly={mode === "readonly" || mode === "preview"}
-                mode={mode}
-                activeCard={binderDragDrop.activeCard}
-              />
-            )}
+          {/* Page Navigation */}
+          {features.navigation && (
+            <BinderNavigation
+              navigation={binderNavigation}
+              positions={binderNavigation.getNavigationPositions(sidebarWidth)}
+              onAddPage={features.pageManagement ? handleAddPage : undefined}
+              isReadOnly={mode === "readonly" || mode === "preview"}
+              mode={mode}
+              activeCard={binderDragDrop.activeCard}
+            />
+          )}
 
-            {/* Sidebar Toggle Button */}
-            {features.sidebar && (
-              <div className="absolute top-4 right-4">
-                <button
-                  onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-                  className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
-                  title={isSidebarCollapsed ? "Open sidebar" : "Close sidebar"}
+          {/* Sidebar Toggle Button */}
+          {features.sidebar && (
+            <div className="absolute top-4 right-4">
+              <button
+                onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+                className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+                title={isSidebarCollapsed ? "Open sidebar" : "Close sidebar"}
+              >
+                <svg
+                  className="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    className="w-5 h-5 text-gray-700"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <span className="text-sm font-medium text-gray-700">
-                    {isSidebarCollapsed ? "Settings" : "Hide"}
-                  </span>
-                </button>
-              </div>
-            )}
-          </BinderCore>
-        </DragProvider>
-      </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span className="text-sm font-medium text-gray-700">
+                  {isSidebarCollapsed ? "Settings" : "Hide"}
+                </span>
+              </button>
+            </div>
+          )}
+        </BinderCore>
+      </DragProvider>
 
       {/* Sidebar */}
       {features.sidebar && (
