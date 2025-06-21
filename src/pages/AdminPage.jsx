@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
 import { useAuth, useOwner } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
 import BinderLimitsManager from "../components/admin/BinderLimitsManager";
@@ -35,6 +34,9 @@ const CACHE_KEYS = SERVICE_CACHE_KEYS;
 const AdminPage = () => {
   const { user } = useAuth();
   const isOwner = useOwner();
+
+  // Authorization is now handled at the route level by AdminProtectedRoute
+
   const {
     rules,
     loading: rulesLoading,
@@ -732,10 +734,6 @@ const AdminPage = () => {
   useEffect(() => {
     loadRuleStats();
   }, [rules, isRulesOwner]);
-
-  if (!isOwner) {
-    return <Navigate to="/dashboard" replace />;
-  }
 
   const renderDashboard = () => (
     <DashboardOverview

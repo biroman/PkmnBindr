@@ -6,7 +6,9 @@ import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
 import { CardCacheProvider } from "./contexts/CardCacheContext";
 import { BinderCardCustomizationProvider } from "./contexts/BinderCardCustomizationContext";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
+import ProtectedRoute, {
+  AdminProtectedRoute,
+} from "./components/auth/ProtectedRoute";
 import PublicRoute from "./components/auth/PublicRoute";
 import RootLayout from "./components/layout/RootLayout";
 import AuthLayout from "./components/layout/AuthLayout";
@@ -152,6 +154,10 @@ const App = () => {
                       />
                       <Route path="messages" element={<MessagesPage />} />
                       <Route path="settings" element={<SettingsPage />} />
+                    </Route>
+
+                    {/* Admin Routes - Only accessible to admin/owner */}
+                    <Route element={<AdminProtectedRoute />}>
                       <Route path="admin" element={<AdminPage />} />
                       <Route
                         path="admin/binder/:userId/:binderId/:source"
