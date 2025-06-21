@@ -88,10 +88,13 @@ const PokemonCard = forwardRef(
       className = "",
       style = {},
       children,
-      // Drag and drop props (for future implementation)
+      // Drag and drop props
       draggable = false,
       onDragStart,
       onDragEnd,
+      // Drag state props (consumed here to prevent DOM warnings)
+      isPlaceholder,
+      isDragging,
       ...props
     },
     ref

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import BinderDisplay from "./BinderDisplay";
-import DragProvider from "./DragProvider";
 
 const BinderCore = ({
   binder,
@@ -23,39 +22,28 @@ const BinderCore = ({
     onToggleMissing = () => {},
   } = onCardInteraction;
 
-  const {
-    onDragStart = () => {},
-    onDragEnd = () => {},
-    onDragCancel = () => {},
-    onDragOver = () => {},
-  } = dragHandlers;
-
   const isReadOnly = mode === "readonly" || mode === "admin";
   const isDragDropEnabled = mode === "edit" && !isReadOnly;
 
   return (
-    <DragProvider
-      dragHandlers={isDragDropEnabled ? dragHandlers : {}}
-      activeCard={activeCard}
-      disabled={!isDragDropEnabled}
+    <div
       className={`flex items-center justify-center flex-1 ${className}`}
+      style={style}
     >
-      <div style={style}>
-        <BinderDisplay
-          binder={binder}
-          currentPageConfig={currentPageConfig}
-          dimensions={dimensions}
-          backgroundColor={backgroundColor}
-          isReadOnly={isReadOnly}
-          onCardClick={onCardClick}
-          onCardDelete={isDragDropEnabled ? onCardDelete : undefined}
-          onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
-          onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
-          getCardsForPage={getCardsForPage}
-        />
-        {children}
-      </div>
-    </DragProvider>
+      <BinderDisplay
+        binder={binder}
+        currentPageConfig={currentPageConfig}
+        dimensions={dimensions}
+        backgroundColor={backgroundColor}
+        isReadOnly={isReadOnly}
+        onCardClick={onCardClick}
+        onCardDelete={isDragDropEnabled ? onCardDelete : undefined}
+        onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
+        onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
+        getCardsForPage={getCardsForPage}
+      />
+      {children}
+    </div>
   );
 };
 
