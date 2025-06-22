@@ -16,6 +16,7 @@ import { toast } from "react-hot-toast";
 export const useBinderDragDrop = ({
   binder,
   moveCard,
+  removeCard,
   navigation,
   onDragStateChange,
   enableDrag = true,
@@ -199,6 +200,24 @@ export const useBinderDragDrop = ({
 
       // Handle edge navigation drops (no action needed, navigation already handled in timer)
       if (overData?.type === "edge-navigation") {
+        clearDragState();
+        onDragStateChange?.(false);
+        return;
+      }
+
+      // Handle card deletion drops
+      if (activeData?.type === "card" && overData?.type === "delete-zone") {
+        const cardPosition = activeData.position;
+        const card = activeData.card;
+
+        try {
+          await removeCard(card, cardPosition);
+          toast.success(`Deleted ${card.name} from binder`);
+        } catch (error) {
+          console.error("Failed to delete card:", error);
+          toast.error("Failed to delete card");
+        }
+
         clearDragState();
         onDragStateChange?.(false);
         return;

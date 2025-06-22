@@ -39,13 +39,16 @@ import {
   ShieldCheckIcon as ShieldCheckSolid,
   QuestionMarkCircleIcon as QuestionMarkCircleSolid,
 } from "@heroicons/react/24/solid";
+import MobileSyncButtons from "../binder/MobileSyncButtons";
+import RevertConfirmationModal from "../binder/RevertConfirmationModal";
+import { toast } from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const { userProfile, updateUserProfile } = useUserProfile(user);
   const isOwner = useOwner();
   const { isOwner: isRulesOwner } = useRules();
-  const { currentBinder } = useBinderContext();
+  const { currentBinder, downloadBinderFromCloud } = useBinderContext();
   const location = useLocation();
   const { isMobileMenuOpen, isScrolled, toggleMobileMenu, closeMobileMenu } =
     useNavigation();
@@ -54,6 +57,10 @@ const Navbar = () => {
   // User dropdown state
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  // Revert modal state
+  const [showRevertModal, setShowRevertModal] = useState(false);
+  const [isReverting, setIsReverting] = useState(false);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -83,6 +90,72 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
   const isPathActive = (path) => location.pathname.startsWith(path);
+
+  // Check if we're on a binder page (mobile)
+  const isOnBinderPage =
+    location.pathname.startsWith("/binder/") &&
+    location.pathname !== "/binders";
+
+  // Use a responsive check that's updated on screen size change
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const shouldShowMobileSyncButtons =
+    isOnBinderPage && currentBinder && isMobile;
+
+  // Handle revert confirmation
+  const handleConfirmRevert = async () => {
+    if (!currentBinder?.id) {
+      toast.error("No binder ID found");
+      return;
+    }
+
+    if (isReverting) {
+      return;
+    }
+
+    setIsReverting(true);
+    setShowRevertModal(false);
+
+    try {
+      const result = await downloadBinderFromCloud(currentBinder.id);
+
+      if (result?.success) {
+        toast.success("Successfully reverted to last saved version");
+      } else {
+        toast.success("Reverted to last saved version");
+      }
+    } catch (error) {
+      console.error("Revert failed:", error);
+
+      if (error.message?.includes("not found")) {
+        toast.error("Cloud save not found. The binder may have been deleted.");
+      } else if (error.message?.includes("permission")) {
+        toast.error(
+          "Permission denied. You may not have access to this binder."
+        );
+      } else if (
+        error.message?.includes("network") ||
+        error.message?.includes("offline")
+      ) {
+        toast.error(
+          "Network error. Please check your connection and try again."
+        );
+      } else {
+        toast.error("Failed to revert: " + (error.message || "Unknown error"));
+      }
+    } finally {
+      setIsReverting(false);
+    }
+  };
 
   // Navigation items configuration - logical order for better UX
   const userNavItems = user
@@ -445,8 +518,17 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Mobile menu button and messages */}
+            {/* Mobile menu button, sync buttons, and messages */}
             <div className="md:hidden flex items-center space-x-2">
+              {/* Mobile Sync Buttons - Only show when on binder page with unsaved changes */}
+              {shouldShowMobileSyncButtons && (
+                <MobileSyncButtons
+                  binder={currentBinder}
+                  onShowRevertModal={() => setShowRevertModal(true)}
+                  isReverting={isReverting}
+                />
+              )}
+
               {/* Messages Icon for Mobile */}
               {user && (
                 <Link
@@ -515,6 +597,17 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Revert Confirmation Modal */}
+      {shouldShowMobileSyncButtons && (
+        <RevertConfirmationModal
+          isOpen={showRevertModal}
+          onClose={() => setShowRevertModal(false)}
+          onConfirm={handleConfirmRevert}
+          binderName={currentBinder?.metadata?.name || "Unnamed Binder"}
+          isLoading={isReverting}
+        />
+      )}
     </>
   );
 };

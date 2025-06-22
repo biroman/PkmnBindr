@@ -197,10 +197,34 @@ export const BinderContainer = ({
     enableModals: features.modals,
   });
 
+  // Card interaction handlers (must be defined before drag and drop hook)
+  const handleCardClick = (card, slotIndex) => {
+    onCardClick?.(card, slotIndex);
+  };
+
+  const handleCardDelete = async (card, position) => {
+    if (!binder || !features.deleteCards) return;
+
+    try {
+      await removeCardFromBinder(binder.id, position);
+      onBinderChange?.(binder);
+    } catch (error) {
+      console.error("Failed to delete card:", error);
+      onError?.(error);
+    }
+  };
+
+  const handleSlotClick = (slotIndex) => {
+    if (features.addCards) {
+      binderModals.handlers.openAddCardModal(slotIndex);
+    }
+  };
+
   // Drag and drop management (needs to be first to provide edge navigation state)
   const binderDragDrop = useBinderDragDrop({
     binder,
     moveCard: features.dragDrop ? moveCard : undefined,
+    removeCard: features.deleteCards ? handleCardDelete : undefined,
     navigation: {
       canGoNext,
       canGoPrev,
@@ -241,29 +265,6 @@ export const BinderContainer = ({
       goToPage(initialPage);
     }
   }, [initialPage, goToPage]);
-
-  // Card interaction handlers
-  const handleCardClick = (card, slotIndex) => {
-    onCardClick?.(card, slotIndex);
-  };
-
-  const handleCardDelete = async (card, position) => {
-    if (!binder || !features.deleteCards) return;
-
-    try {
-      await removeCardFromBinder(binder.id, position);
-      onBinderChange?.(binder);
-    } catch (error) {
-      console.error("Failed to delete card:", error);
-      onError?.(error);
-    }
-  };
-
-  const handleSlotClick = (slotIndex) => {
-    if (features.addCards) {
-      binderModals.handlers.openAddCardModal(slotIndex);
-    }
-  };
 
   // Toolbar handlers
   const handleAddCard = () => {
@@ -547,42 +548,43 @@ export const BinderContainer = ({
             }}
           />
         )}
-      </DragProvider>
 
-      {/* Page Navigation - positioned relative to full viewport */}
-      {features.navigation && (
-        <BinderNavigation
-          navigation={binderNavigation}
-          positions={binderNavigation.getNavigationPositions(sidebarWidth)}
-          onAddPage={features.pageManagement ? handleAddPage : undefined}
-          isReadOnly={mode === "readonly" || mode === "preview"}
-          mode={mode}
-          activeCard={binderDragDrop.activeCard}
-          currentPageConfig={pageConfig}
-          isMobile={isMobile}
-          // Mobile toolbar integration
-          toolbarActions={
-            isMobile && features.toolbar
-              ? {
-                  onAddCard: features.addCards ? handleAddCard : undefined,
-                  onPageOverview: features.navigation
-                    ? handlePageOverview
-                    : undefined,
-                  onColorPicker: features.colorPicker
-                    ? handleColorPicker
-                    : undefined,
-                  onMobileSettings: handleMobileSettings,
-                  onPdfExport: features.export ? handlePdfExport : undefined,
-                  onClearBinder: features.clearBinder
-                    ? handleClearBinder
-                    : undefined,
-                }
-              : {}
-          }
-          isToolbarOpen={isMobileToolbarOpen}
-          onToggleToolbar={() => setIsMobileToolbarOpen(!isMobileToolbarOpen)}
-        />
-      )}
+        {/* Page Navigation - positioned relative to full viewport, inside DndContext */}
+        {features.navigation && (
+          <BinderNavigation
+            navigation={binderNavigation}
+            positions={binderNavigation.getNavigationPositions(sidebarWidth)}
+            onAddPage={features.pageManagement ? handleAddPage : undefined}
+            isReadOnly={mode === "readonly" || mode === "preview"}
+            mode={mode}
+            activeCard={binderDragDrop.activeCard}
+            currentPageConfig={pageConfig}
+            isMobile={isMobile}
+            // Mobile toolbar integration
+            toolbarActions={
+              isMobile && features.toolbar
+                ? {
+                    onAddCard: features.addCards ? handleAddCard : undefined,
+                    onPageOverview: features.navigation
+                      ? handlePageOverview
+                      : undefined,
+                    onColorPicker: features.colorPicker
+                      ? handleColorPicker
+                      : undefined,
+                    onMobileSettings: handleMobileSettings,
+                    onPdfExport: features.export ? handlePdfExport : undefined,
+                    onClearBinder: features.clearBinder
+                      ? handleClearBinder
+                      : undefined,
+                  }
+                : {}
+            }
+            isToolbarOpen={isMobileToolbarOpen}
+            onToggleToolbar={() => setIsMobileToolbarOpen(!isMobileToolbarOpen)}
+            onCardDelete={features.deleteCards ? handleCardDelete : undefined}
+          />
+        )}
+      </DragProvider>
 
       {/* Sidebar Toggle Button - only show on desktop */}
       {features.sidebar && !isMobile && (

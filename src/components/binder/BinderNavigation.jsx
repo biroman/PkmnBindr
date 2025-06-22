@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useDroppable } from "@dnd-kit/core";
 import {
   PlusIcon,
   Cog6ToothIcon,
@@ -25,11 +26,55 @@ const BinderNavigation = ({
   toolbarActions = {},
   isToolbarOpen = false,
   onToggleToolbar = () => {},
+  // Drag to delete handler
+  onCardDelete = null,
 }) => {
   const { canGoNext, canGoPrev, goToPrevPage, goToNextPage } = navigation;
 
-  // Don't show navigation during drag operations
-  if (activeCard) {
+  // Set up droppable for delete zone
+  const { isOver: isOverDelete, setNodeRef: setDeleteRef } = useDroppable({
+    id: "delete-zone",
+    data: {
+      type: "delete-zone",
+    },
+  });
+
+  // On mobile, show drag-to-delete interface when dragging
+  if (activeCard && isMobile) {
+    return (
+      <div className={`fixed bottom-0 left-0 right-0 z-30 ${className}`}>
+        <div className="bg-red-50/95 backdrop-blur-sm border-t border-red-200 px-4 py-3">
+          <div className="flex items-center justify-center max-w-md mx-auto h-12">
+            {/* Drag to delete zone */}
+            <div
+              ref={setDeleteRef}
+              className={`flex items-center justify-center w-full h-full rounded-lg border-2 border-dashed transition-all duration-200 ${
+                isOverDelete
+                  ? "border-red-500 bg-red-100 scale-105"
+                  : "border-red-300 bg-red-50"
+              }`}
+            >
+              <TrashIcon
+                className={`w-6 h-6 mr-2 transition-colors ${
+                  isOverDelete ? "text-red-600" : "text-red-400"
+                }`}
+              />
+              <span
+                className={`text-sm font-medium transition-colors ${
+                  isOverDelete ? "text-red-700" : "text-red-500"
+                }`}
+              >
+                {isOverDelete ? "Release to Delete" : "Drop to Delete"}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't show navigation during drag operations on desktop
+  if (activeCard && !isMobile) {
     return null;
   }
 
@@ -339,6 +384,7 @@ BinderNavigation.propTypes = {
   }),
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,
+  onCardDelete: PropTypes.func,
 };
 
 export default BinderNavigation;
