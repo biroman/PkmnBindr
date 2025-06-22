@@ -14,10 +14,66 @@ const CardPage = ({
   isReadOnly = false, // New prop for read-only mode
   backgroundColor = "#ffffff", // New prop for background color
   isMobile = false, // New prop for mobile mode
+  fullScreen = false, // New prop for full-screen mobile mode
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
 
+  // Full screen mobile layout (keeps background but removes binder styling)
+  if (fullScreen && isMobile) {
+    return (
+      <div
+        className="mobile-card-page-fullscreen"
+        style={{
+          background: backgroundColor?.startsWith("linear-gradient")
+            ? backgroundColor
+            : undefined,
+          backgroundColor: !backgroundColor?.startsWith("linear-gradient")
+            ? backgroundColor
+            : undefined,
+        }}
+      >
+        {/* Card Grid - Full Screen */}
+        <div
+          className="mobile-fullscreen-grid"
+          style={{
+            gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
+            gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
+          }}
+        >
+          {slots.map((_, index) => {
+            const card = cards[index];
+            // Calculate global position based on page index and slot index
+            const globalPosition = cardPageIndex * gridConfig.total + index;
+
+            // Check if this card is marked as missing (instance-based)
+            const instanceId = card?.binderMetadata?.instanceId;
+            const isMissing =
+              instanceId && missingPositions.includes(instanceId);
+
+            return (
+              <DroppableSlot
+                key={`slot-${globalPosition}`}
+                card={card}
+                position={globalPosition}
+                gridSize={gridSize}
+                onCardClick={onCardClick}
+                onCardDelete={isReadOnly ? undefined : onCardDelete}
+                onSlotClick={isReadOnly ? undefined : onSlotClick}
+                onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+                className="w-full h-full"
+                isMissing={isMissing}
+                isReadOnly={isReadOnly}
+                isMobile={isMobile}
+              />
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
+  // Traditional binder layout (desktop and regular mobile)
   return (
     <div
       className={`flex-1 rounded-lg shadow-2xl relative transition-colors duration-300 ${

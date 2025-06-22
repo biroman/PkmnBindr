@@ -56,23 +56,12 @@ const CoverPage = ({
     }
   };
 
-  // Calculate mobile-specific styling
-  const mobileStyles =
-    isMobile && dimensions
-      ? {
-          height: `${dimensions.height}px`,
-          maxHeight: `${dimensions.height}px`,
-          width: `${dimensions.width}px`,
-          maxWidth: `${dimensions.width}px`,
-        }
-      : {};
-
   // If in read-only mode, show different content based on context
   if (isReadOnly) {
     return (
       <div
-        className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
-          isMobile ? "mobile-cover-page" : ""
+        className={`flex-1 shadow-2xl relative overflow-hidden transition-colors duration-300 ${
+          isMobile ? "w-full h-full rounded-none" : "rounded-lg"
         }`}
         style={{
           background: backgroundColor?.startsWith("linear-gradient")
@@ -81,7 +70,6 @@ const CoverPage = ({
           backgroundColor: !backgroundColor?.startsWith("linear-gradient")
             ? backgroundColor
             : undefined,
-          ...mobileStyles,
         }}
       >
         {/* Subtle background pattern */}
@@ -272,8 +260,8 @@ const CoverPage = ({
 
   return (
     <div
-      className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
-        isMobile ? "mobile-cover-page" : ""
+      className={`flex-1 shadow-2xl relative overflow-hidden transition-colors duration-300 ${
+        isMobile ? "w-full h-full rounded-none" : "rounded-lg"
       }`}
       style={{
         background: backgroundColor?.startsWith("linear-gradient")
@@ -282,7 +270,6 @@ const CoverPage = ({
         backgroundColor: !backgroundColor?.startsWith("linear-gradient")
           ? backgroundColor
           : undefined,
-        ...mobileStyles,
       }}
     >
       {/* Subtle background pattern */}

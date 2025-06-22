@@ -3,6 +3,7 @@ import {
   MagnifyingGlassIcon,
   FunnelIcon,
   CheckIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import useCardSearch from "../../hooks/useCardSearch";
 import PokemonCard from "../PokemonCard";
@@ -17,6 +18,46 @@ const SearchFilters = ({
   onToggle,
   isSidebarMode = false,
 }) => {
+  // State for mobile modal filters (temporary until saved)
+  const [tempFilters, setTempFilters] = useState(filters);
+
+  // Update temp filters when actual filters change (from external updates)
+  useEffect(() => {
+    setTempFilters(filters);
+  }, [filters]);
+
+  // Handle temp filter changes in modal
+  const handleTempFilterChange = (key, value) => {
+    setTempFilters((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
+
+  // Save filters and close modal
+  const handleSaveFilters = () => {
+    Object.keys(tempFilters).forEach((key) => {
+      onFilterChange(key, tempFilters[key]);
+    });
+    onToggle(); // Close modal
+  };
+
+  // Cancel and revert to original filters
+  const handleCancelFilters = () => {
+    setTempFilters(filters); // Revert to original
+    onToggle(); // Close modal
+  };
+
+  // Clear all temp filters
+  const handleClearTempFilters = () => {
+    setTempFilters({
+      name: "",
+      types: [],
+      set: "",
+      rarity: "",
+    });
+  };
+
   if (isSidebarMode) {
     // Desktop sidebar layout - always expanded
     return (
@@ -116,129 +157,172 @@ const SearchFilters = ({
     );
   }
 
-  // Mobile/tablet collapsible layout (original)
+  // Mobile layout - popup modal
   return (
-    <div className="border-b border-slate-200">
-      {/* Filter toggle */}
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
-      >
-        <div className="flex items-center space-x-2">
-          <FunnelIcon className="w-5 h-5 text-slate-600" />
-          <span className="font-medium text-slate-800">Filters</span>
-          {Object.values(filters).some(
-            (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-          ) && (
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-              Active
-            </span>
-          )}
-        </div>
-        <div
-          className={`transform transition-transform ${
-            isExpanded ? "rotate-180" : ""
-          }`}
+    <>
+      {/* Filter toggle button */}
+      <div className="border-b border-slate-200">
+        <button
+          onClick={onToggle}
+          className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
         >
-          <svg
-            className="w-5 h-5 text-slate-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </div>
-      </button>
-
-      {/* Filter options */}
-      {isExpanded && (
-        <div className="px-4 pb-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Pokemon Name */}
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Pokemon Name
-              </label>
-              <input
-                type="text"
-                value={filters.name}
-                onChange={(e) => onFilterChange("name", e.target.value)}
-                placeholder="e.g., Charizard"
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+          <div className="flex items-center space-x-2">
+            <FunnelIcon className="w-5 h-5 text-slate-600" />
+            <span className="font-medium text-slate-800">Filters</span>
+            {Object.values(filters).some(
+              (f) => f && (Array.isArray(f) ? f.length > 0 : true)
+            ) && (
+              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                Active
+              </span>
+            )}
+          </div>
+          <div className="flex items-center text-slate-400">
+            <span className="text-sm mr-2">Tap to filter</span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
               />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      {/* Modal Popup */}
+      {isExpanded && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+            onClick={handleCancelFilters}
+          />
+
+          {/* Modal Content */}
+          <div className="fixed inset-x-4 bottom-4 top-20 bg-white rounded-xl shadow-2xl z-50 flex flex-col">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-4 border-b border-slate-200">
+              <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+                <FunnelIcon className="w-5 h-5" />
+                Search Filters
+              </h3>
+              <button
+                onClick={handleCancelFilters}
+                className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+              >
+                <XMarkIcon className="w-5 h-5 text-slate-500" />
+              </button>
             </div>
 
-            {/* Types */}
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Type
-              </label>
-              <select
-                value={filters.types[0] || ""}
-                onChange={(e) =>
-                  onFilterChange(
-                    "types",
-                    e.target.value ? [e.target.value] : []
-                  )
-                }
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
-              >
-                <option value="">All Types</option>
-                {availableTypes.map((type) => (
-                  <option key={type} value={type}>
-                    {type}
-                  </option>
-                ))}
-              </select>
+            {/* Modal Body - Scrollable */}
+            <div className="flex-1 overflow-y-auto p-4">
+              <div className="space-y-6">
+                {/* Type */}
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Type
+                  </label>
+                  <select
+                    value={tempFilters.types?.[0] || ""}
+                    onChange={(e) =>
+                      handleTempFilterChange(
+                        "types",
+                        e.target.value ? [e.target.value] : []
+                      )
+                    }
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
+                  >
+                    <option value="">All Types</option>
+                    {availableTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Set */}
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Set
+                  </label>
+                  <select
+                    value={tempFilters.set || ""}
+                    onChange={(e) =>
+                      handleTempFilterChange("set", e.target.value)
+                    }
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
+                  >
+                    <option value="">All Sets</option>
+                    {availableSets.map((set) => (
+                      <option key={set.id} value={set.id}>
+                        {set.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Rarity */}
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Rarity
+                  </label>
+                  <select
+                    value={tempFilters.rarity || ""}
+                    onChange={(e) =>
+                      handleTempFilterChange("rarity", e.target.value)
+                    }
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
+                  >
+                    <option value="">All Rarities</option>
+                    {availableRarities.map((rarity) => (
+                      <option key={rarity} value={rarity}>
+                        {rarity}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Clear Filters Button */}
+                {Object.values(tempFilters).some(
+                  (f) => f && (Array.isArray(f) ? f.length > 0 : true)
+                ) && (
+                  <button
+                    onClick={handleClearTempFilters}
+                    className="w-full px-4 py-3 text-sm text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors border border-slate-200"
+                  >
+                    Clear All Filters
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* Set */}
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Set
-              </label>
-              <select
-                value={filters.set}
-                onChange={(e) => onFilterChange("set", e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            {/* Modal Footer */}
+            <div className="flex gap-3 p-4 border-t border-slate-200">
+              <button
+                onClick={handleCancelFilters}
+                className="flex-1 px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors font-medium"
               >
-                <option value="">All Sets</option>
-                {availableSets.map((set) => (
-                  <option key={set.id} value={set.id}>
-                    {set.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Rarity */}
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Rarity
-              </label>
-              <select
-                value={filters.rarity}
-                onChange={(e) => onFilterChange("rarity", e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                Cancel
+              </button>
+              <button
+                onClick={handleSaveFilters}
+                className="flex-1 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
               >
-                <option value="">All Rarities</option>
-                {availableRarities.map((rarity) => (
-                  <option key={rarity} value={rarity}>
-                    {rarity}
-                  </option>
-                ))}
-              </select>
+                Apply Filters
+              </button>
             </div>
           </div>
-        </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

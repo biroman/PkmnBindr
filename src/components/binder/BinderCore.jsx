@@ -27,9 +27,13 @@ const BinderCore = ({
 
   const isReadOnly = mode === "readonly" || mode === "admin";
   const isDragDropEnabled = mode === "edit" && !isReadOnly;
+  const isMobile = dimensions.isMobile;
 
   return (
-    <div className={`relative ${className}`} style={style}>
+    <div
+      className={`relative ${isMobile ? "w-full h-full" : ""} ${className}`}
+      style={style}
+    >
       <BinderDisplay
         binder={binder}
         currentPageConfig={currentPageConfig}

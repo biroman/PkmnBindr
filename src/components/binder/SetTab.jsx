@@ -375,10 +375,6 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                     </span>
                   )}
                 </div>
-                <div className="text-xs text-purple-600 mt-1">
-                  Adds shimmering reverse holo versions of Common, Uncommon, and
-                  Rare cards alongside regular cards
-                </div>
               </div>
             </label>
           </div>

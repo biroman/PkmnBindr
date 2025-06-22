@@ -9,6 +9,7 @@ import {
   Squares2X2Icon,
   TrashIcon,
   ExclamationTriangleIcon,
+  CursorArrowRaysIcon,
 } from "@heroicons/react/24/outline";
 import {
   DndContext,
@@ -268,16 +269,16 @@ const CardPageItem = ({
         }
                 ${
                   gridConfig.total === 36
-                    ? "h-[240px]"
+                    ? "h-[240px] md:h-[200px] lg:h-[240px]"
                     : gridConfig.total === 25
-                    ? "h-[200px]"
+                    ? "h-[200px] md:h-[160px] lg:h-[200px]"
                     : gridConfig.total === 16
-                    ? "h-[160px]"
+                    ? "h-[160px] md:h-[140px] lg:h-[160px]"
                     : gridConfig.total === 12
-                    ? "h-[140px]"
+                    ? "h-[140px] md:h-[120px] lg:h-[140px]"
                     : gridConfig.total === 9
-                    ? "h-[140px]"
-                    : "h-[120px]"
+                    ? "h-[140px] md:h-[120px] lg:h-[140px]"
+                    : "h-[120px] md:h-[100px] lg:h-[120px]"
                 } flex flex-col
       `}
     >
@@ -675,6 +676,7 @@ const BinderPageOverview = ({
     moveCard,
   } = useBinderContext();
   const [isCtrlPressed, setIsCtrlPressed] = useState(false);
+  const [cardSelectionActive, setCardSelectionActive] = useState(false);
   const [selectedPages, setSelectedPages] = useState(new Set()); // Card pages selected
   const [selectedBinderPages, setSelectedBinderPages] = useState(new Set()); // Binder pages selected
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -754,6 +756,8 @@ const BinderPageOverview = ({
   useEffect(() => {
     if (!isOpen) {
       setSelectedPages(new Set());
+      setSelectedBinderPages(new Set());
+      setCardSelectionActive(false);
     }
   }, [isOpen]);
 
@@ -893,6 +897,7 @@ const BinderPageOverview = ({
   const clearSelection = () => {
     setSelectedPages(new Set());
     setSelectedBinderPages(new Set());
+    setCardSelectionActive(false);
   };
 
   const handleDeleteBinderPages = () => {
@@ -1302,26 +1307,29 @@ const BinderPageOverview = ({
     }
   };
 
+  const isSelectionActive =
+    selectionMode === "cardPages" && (isCtrlPressed || cardSelectionActive);
+
   return (
     <>
       <div
-        className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+        className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 md:p-6"
         onClick={handleBackdropClick}
       >
-        <div className="bg-white rounded-3xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden flex flex-col">
+        <div className="bg-white rounded-none sm:rounded-3xl shadow-2xl w-full h-full sm:max-w-7xl sm:max-h-[90vh] overflow-hidden flex flex-col">
           {/* Header */}
-          <div className="p-6 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100">
-            <div className="flex items-center justify-between gap-6">
+          <div className="p-4 sm:p-6 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-shrink-0">
-                <h2 className="text-2xl font-bold text-slate-900 mb-1">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">
                   📚 Page Overview
                 </h2>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-600 text-xs sm:text-sm">
                   {currentBinder.metadata?.name} • {totalCards} cards •{" "}
                   {gridConfig.name} grid
                 </p>
               </div>
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 {/* Mode & Actions Row */}
                 {/* Simple Mode Toggle */}
                 <div className="bg-white rounded-lg border border-slate-200 p-1 shadow-sm">
@@ -1331,7 +1339,7 @@ const BinderPageOverview = ({
                         setSelectionMode("cardPages");
                         clearSelection();
                       }}
-                      className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                      className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "cardPages"
                           ? "bg-blue-500 text-white shadow-sm"
                           : "text-slate-600 hover:bg-slate-50"
@@ -1344,7 +1352,7 @@ const BinderPageOverview = ({
                         setSelectionMode("binderPages");
                         clearSelection();
                       }}
-                      className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                      className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "binderPages"
                           ? "bg-slate-700 text-white shadow-sm"
                           : "text-slate-600 hover:bg-slate-50"
@@ -1355,16 +1363,33 @@ const BinderPageOverview = ({
                   </div>
                 </div>
 
-                {/* Help Text & Status */}
-                <div className="text-xs text-slate-500 italic">
-                  {selectionMode === "cardPages"
-                    ? isCtrlPressed
-                      ? "✨ Click cards to select them"
-                      : "💡 Hold Ctrl + click cards to select"
-                    : "✨ Click binder pages to select them"}
+                {/* Help Text, Selection Toggle & Status */}
+                <div className="flex items-center gap-2">
+                  {selectionMode === "cardPages" && (
+                    <button
+                      onClick={() => setCardSelectionActive((prev) => !prev)}
+                      className={`p-2 rounded-md text-xs sm:text-sm font-medium transition-all flex items-center gap-2 ${
+                        cardSelectionActive
+                          ? "bg-green-500 text-white shadow-sm"
+                          : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
+                      }`}
+                    >
+                      <CursorArrowRaysIcon className="w-4 h-4" />
+                      <span>
+                        {cardSelectionActive ? "Selecting..." : "Select"}
+                      </span>
+                    </button>
+                  )}
+                  <div className="text-xs text-slate-500 italic hidden md:block">
+                    {selectionMode === "cardPages"
+                      ? cardSelectionActive
+                        ? "Click cards to select"
+                        : "Use 'Select' or Ctrl+Click"
+                      : "Click binder pages to select"}
+                  </div>
                 </div>
 
-                {(isCtrlPressed || selectionMode === "binderPages") && (
+                {isSelectionActive && (
                   <div className="flex items-center gap-2 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span>Selection active</span>
@@ -1374,7 +1399,7 @@ const BinderPageOverview = ({
                 {((selectionMode === "cardPages" && selectedPages.size > 0) ||
                   (selectionMode === "binderPages" &&
                     selectedBinderPages.size > 0)) && (
-                  <div className="flex items-center gap-2 bg-white border border-slate-200 rounded px-3 py-1.5 shadow-sm">
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 rounded px-2 sm:px-3 py-1.5 shadow-sm">
                     <span className="text-xs font-medium text-slate-700">
                       {selectionMode === "cardPages"
                         ? `${selectedPages.size} cards`
@@ -1418,7 +1443,7 @@ const BinderPageOverview = ({
 
           {/* Card Pages Grid */}
           <div
-            className="flex-1 overflow-auto p-8"
+            className="flex-1 overflow-auto p-4 sm:p-8"
             onClick={handleBackgroundClick}
           >
             <DndContext
@@ -1427,9 +1452,7 @@ const BinderPageOverview = ({
               onDragOver={handleDragOver}
               onDragEnd={handleDragEnd}
             >
-              {console.log("DndContext rendering")}
-
-              <div className="flex flex-wrap gap-8">
+              <div className="flex flex-col lg:flex-row lg:flex-wrap gap-8">
                 {Object.entries(pageGroups).map(([groupNum, groupPages]) => {
                   const binderPageNum = parseInt(groupNum);
                   const isBinderPageSelected =
@@ -1494,13 +1517,16 @@ const BinderPageOverview = ({
 
                       {/* Group Container */}
                       <div
-                        className={`inline-flex rounded-2xl p-4 gap-6 transition-all duration-200 ${
-                          selectionMode === "binderPages"
-                            ? isBinderPageSelected
-                              ? "border-2 border-blue-500 bg-blue-200/70 shadow-md"
-                              : "border-2 border-dashed border-blue-400 bg-blue-100/50 hover:border-blue-500 hover:bg-blue-200/50 cursor-pointer"
-                            : "border-2 border-dashed border-slate-200 bg-slate-50/30"
-                        }`}
+                        className={`rounded-2xl p-4 gap-4 sm:gap-6 transition-all duration-200 w-full overflow-x-auto
+                          flex flex-row
+                          ${
+                            selectionMode === "binderPages"
+                              ? isBinderPageSelected
+                                ? "border-2 border-blue-500 bg-blue-200/70 shadow-md"
+                                : "border-2 border-dashed border-blue-400 bg-blue-100/50 hover:border-blue-500 hover:bg-blue-200/50 cursor-pointer"
+                              : "border-2 border-dashed border-slate-200 bg-slate-50/30"
+                          }
+                        `}
                         onClick={(e) => {
                           if (selectionMode === "binderPages") {
                             e.preventDefault();
@@ -1522,13 +1548,13 @@ const BinderPageOverview = ({
                             key={cardPageIndex}
                             className={`flex-shrink-0 ${
                               gridConfig.total === 36
-                                ? "w-[180px]"
+                                ? "w-[180px] sm:w-[150px] md:w-[180px]"
                                 : gridConfig.total === 25
-                                ? "w-[150px]"
+                                ? "w-[150px] sm:w-[120px] md:w-[150px]"
                                 : gridConfig.total === 16
-                                ? "w-[120px]"
+                                ? "w-[120px] sm:w-[100px] md:w-[120px]"
                                 : gridConfig.total === 12
-                                ? "w-[120px]"
+                                ? "w-[120px] sm:w-[100px] md:w-[120px]"
                                 : "w-[90px]"
                             }`}
                           >
@@ -1581,10 +1607,7 @@ const BinderPageOverview = ({
                                   onCardPageClick={handleCardPageClick}
                                   onMoveCardPages={handleMoveCardPages}
                                   isCover={cardPageIndex === 0}
-                                  isSelectionMode={
-                                    selectionMode === "cardPages" &&
-                                    isCtrlPressed
-                                  }
+                                  isSelectionMode={isSelectionActive}
                                   isSelected={selectedPages.has(cardPageIndex)}
                                   onToggleSelection={handleToggleSelection}
                                   selectedPages={selectedPagesArray}
@@ -1709,34 +1732,42 @@ const BinderPageOverview = ({
           </div>
 
           {/* Footer */}
-          <div className="border-t border-slate-200 px-8 py-6 bg-gradient-to-r from-slate-50 to-slate-100">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-8">
-                <div className="text-sm text-slate-600">
+          <div className="border-t border-slate-200 px-4 sm:px-8 py-4 sm:py-6 bg-gradient-to-r from-slate-50 to-slate-100">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center space-x-4 sm:space-x-8 text-xs sm:text-sm">
+                <div className="text-slate-600">
                   <span className="font-semibold">Total Pages:</span>{" "}
-                  {displayPages + 1} (including cover)
+                  {displayPages + 1}
                 </div>
-                <div className="text-sm text-slate-600">
-                  <span className="font-semibold">Cards per Page:</span>{" "}
+                <div className="text-slate-600">
+                  <span className="font-semibold">Cards/Page:</span>{" "}
                   {cardsPerPage}
                 </div>
               </div>
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-3 sm:space-x-6 flex-wrap justify-center">
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-purple-500 rounded"></div>
-                  <span className="text-sm text-slate-600">Cover (fixed)</span>
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded"></div>
+                  <span className="text-xs sm:text-sm text-slate-600">
+                    Cover
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-blue-500 rounded"></div>
-                  <span className="text-sm text-slate-600">Has cards</span>
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded"></div>
+                  <span className="text-xs sm:text-sm text-slate-600">
+                    Has cards
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-slate-400 rounded"></div>
-                  <span className="text-sm text-slate-600">Empty</span>
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-slate-400 rounded"></div>
+                  <span className="text-xs sm:text-sm text-slate-600">
+                    Empty
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 bg-green-500 rounded"></div>
-                  <span className="text-sm text-slate-600">Selected</span>
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded"></div>
+                  <span className="text-xs sm:text-sm text-slate-600">
+                    Selected
+                  </span>
                 </div>
               </div>
             </div>

@@ -171,7 +171,7 @@ button {
       font-size: 16px;
     }
 
-    /* Optimize card display for mobile */
+    /* Optimize card display for mobile - traditional binder layout */
     .mobile-card-page {
       padding: 16px;
       max-width: 100vw;
@@ -180,6 +180,33 @@ button {
       height: 100%;
       display: flex;
       flex-direction: column;
+    }
+
+    /* Full screen card display for mobile - works with BinderContainer padding */
+    .mobile-card-page-fullscreen {
+      width: 100%;
+      /* Use full available height since BinderContainer handles navbar/navigation padding */
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      /* Prevent any overflow that could cause scrolling */
+      overflow: hidden;
+    }
+
+    /* Full screen grid layout */
+    .mobile-fullscreen-grid {
+      flex: 1;
+      display: grid;
+      width: 100%;
+      height: 100%;
+      gap: 6px;
+      padding: 12px;
+      box-sizing: border-box;
+      /* Ensure grid doesn't overflow */
+      overflow: hidden;
     }
 
     /* Mobile toolbar optimizations */
@@ -223,6 +250,16 @@ button {
       max-width: 100vw;
       max-height: 100vh;
       box-sizing: border-box;
+    }
+
+    /* Hide scrollbar for mobile toolbar */
+    .scrollbar-hide {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
     }
   }
 }

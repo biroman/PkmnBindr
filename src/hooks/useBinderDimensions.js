@@ -12,9 +12,9 @@ const BINDER_CONFIG = {
   SPINE_WIDTH: 16,
   // Mobile specific constants
   MOBILE_BREAKPOINT: 768, // px
-  MOBILE_TOOLBAR_HEIGHT: 60,
+  MOBILE_TOOLBAR_HEIGHT: 0, // Integrated into navigation now
   MOBILE_NAVIGATION_HEIGHT: 80,
-  MOBILE_VERTICAL_PADDING: 120, // Space for mobile toolbar + navigation
+  MOBILE_VERTICAL_PADDING: 80, // Space for mobile navigation only
   GRID_CONFIGS: {
     "1x1": { cols: 1, rows: 1, total: 1 },
     "2x2": { cols: 2, rows: 2, total: 4 },

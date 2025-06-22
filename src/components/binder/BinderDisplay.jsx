@@ -30,20 +30,10 @@ const BinderDisplay = ({
     ...style,
   };
 
-  // Mobile single-page layout
+  // Mobile full-screen layout
   if (dimensions.isMobile) {
     return (
-      <div
-        className={`relative flex justify-center items-center binder-container mobile-binder ${className}`}
-        style={{
-          ...containerStyle,
-          // Ensure full mobile viewport usage
-          minWidth: "100vw",
-          minHeight: "100vh",
-          width: "100%",
-          height: "100%",
-        }}
-      >
+      <div className={`w-full h-full ${className}`}>
         {/* Single Page - cover or card page based on mobile navigation */}
         {currentPageConfig.type === "cover-single" ? (
           <CoverPage
@@ -71,6 +61,7 @@ const BinderDisplay = ({
             backgroundColor={backgroundColor}
             isReadOnly={isReadOnly}
             isMobile={true}
+            fullScreen={true}
           />
         )}
       </div>

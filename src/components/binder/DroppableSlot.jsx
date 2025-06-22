@@ -51,7 +51,7 @@ const DroppableSlot = ({
     <div
       ref={setNodeRef}
       className={`
-        relative aspect-card rounded-lg border-2 transition-all duration-200
+        relative aspect-card rounded-md border-2 transition-all duration-200
         ${
           isSwapHover
             ? "border-orange-400 bg-orange-50 border-solid shadow-lg" // Swap indicator

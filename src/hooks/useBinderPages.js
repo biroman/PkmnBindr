@@ -70,23 +70,35 @@ const useBinderPages = (binder, isMobile = false) => {
 
   // Calculate total individual pages for mobile (cover + all card pages)
   const totalMobilePages = useMemo(() => {
-    if (!binder?.cards || typeof binder.cards !== "object") {
-      return 1; // Just cover page
-    }
-
-    const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
-    if (positions.length === 0) {
-      return 1; // Just cover page
-    }
-
     const gridConfig = getGridConfig(binder.settings?.gridSize || "3x3");
     const cardsPerPage = gridConfig.total;
-    const maxPosition = Math.max(...positions);
-    const requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+
+    // Get the stored page count from settings
+    const storedPageCount = binder?.settings?.pageCount || 1;
+
+    // Calculate pages needed based on cards
+    let requiredCardPages = 0;
+    if (binder?.cards && typeof binder.cards === "object") {
+      const positions = Object.keys(binder.cards).map((pos) => parseInt(pos));
+      if (positions.length > 0) {
+        const maxPosition = Math.max(...positions);
+        requiredCardPages = Math.ceil((maxPosition + 1) / cardsPerPage);
+      }
+    }
+
+    // Calculate card pages from desktop page count
+    // Page 1 (cover + 1 card page) = 1 card page
+    // Page 2 = 2 more card pages
+    // Page 3 = 2 more card pages, etc.
+    const cardPagesFromSettings =
+      storedPageCount === 1 ? 1 : 1 + (storedPageCount - 1) * 2;
+
+    // Use the higher of the two calculations
+    const totalCardPages = Math.max(requiredCardPages, cardPagesFromSettings);
 
     // Total individual pages = cover + card pages
-    return 1 + requiredCardPages;
-  }, [binder?.cards, binder?.settings?.gridSize]);
+    return 1 + totalCardPages;
+  }, [binder?.cards, binder?.settings?.gridSize, binder?.settings?.pageCount]);
 
   // Auto-adjust current page when total pages changes
   useEffect(() => {

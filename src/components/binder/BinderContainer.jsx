@@ -138,6 +138,7 @@ export const BinderContainer = ({
   );
   const [isPdfExporting, setIsPdfExporting] = useState(false);
   const [isMobileSettingsOpen, setIsMobileSettingsOpen] = useState(false);
+  const [isMobileToolbarOpen, setIsMobileToolbarOpen] = useState(false);
 
   // Use external binder context or internal hook
   const contextValue = binderContext || useBinderContext();
@@ -448,31 +449,20 @@ export const BinderContainer = ({
     <div
       className={`${
         isMobile
-          ? "min-h-[100vh] min-h-[100dvh]" // Use dynamic viewport height on mobile
-          : "h-[calc(100vh-65px)]"
+          ? "fixed top-16 bottom-0 left-0 right-0" // Position fixed below navbar and above navigation
+          : "h-[calc(100vh-64px)]"
       } bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
       style={{
         paddingRight: `${sidebarWidth}px`,
-        paddingTop: isMobile ? "60px" : "0", // Account for mobile toolbar
-        paddingBottom: isMobile ? "80px" : "0", // Account for mobile navigation
-        // Mobile specific height handling
-        ...(isMobile && {
-          height: "100vh",
-          maxHeight: "100vh",
-          minHeight: "100vh",
-        }),
+        // Remove padding on mobile - use fixed positioning
+        paddingTop: isMobile ? "0" : "0",
+        paddingBottom: isMobile ? "72px" : "0", // Add bottom padding for navigation
         ...style,
       }}
     >
-      {/* Toolbar - different positioning for mobile vs desktop */}
-      {features.toolbar && (
-        <div
-          className={
-            isMobile
-              ? "fixed top-16 left-0 right-0 z-20"
-              : "absolute top-0 left-0 right-0 z-20 p-2"
-          }
-        >
+      {/* Desktop Toolbar - only show on desktop */}
+      {features.toolbar && !isMobile && (
+        <div className="absolute top-0 left-0 right-0 z-20 p-2">
           <BinderToolbar
             onAddCard={handleAddCard}
             onSettings={handleSettings}
@@ -484,7 +474,7 @@ export const BinderContainer = ({
             onMobileSettings={handleMobileSettings}
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
-            isMobile={isMobile}
+            isMobile={false}
             disabled={
               !features.addCards && !features.export && !features.clearBinder
             }
@@ -506,7 +496,9 @@ export const BinderContainer = ({
         }
         activeCard={binderDragDrop.activeCard}
         disabled={!features.dragDrop}
-        className="h-full flex items-center justify-center"
+        className={`h-full flex ${
+          isMobile ? "items-start" : "items-center"
+        } justify-center`}
         style={{
           paddingTop: features.toolbar && !isMobile ? "70px" : "0", // Account for toolbar height on desktop only
         }}
@@ -568,6 +560,27 @@ export const BinderContainer = ({
           activeCard={binderDragDrop.activeCard}
           currentPageConfig={pageConfig}
           isMobile={isMobile}
+          // Mobile toolbar integration
+          toolbarActions={
+            isMobile && features.toolbar
+              ? {
+                  onAddCard: features.addCards ? handleAddCard : undefined,
+                  onPageOverview: features.navigation
+                    ? handlePageOverview
+                    : undefined,
+                  onColorPicker: features.colorPicker
+                    ? handleColorPicker
+                    : undefined,
+                  onMobileSettings: handleMobileSettings,
+                  onPdfExport: features.export ? handlePdfExport : undefined,
+                  onClearBinder: features.clearBinder
+                    ? handleClearBinder
+                    : undefined,
+                }
+              : {}
+          }
+          isToolbarOpen={isMobileToolbarOpen}
+          onToggleToolbar={() => setIsMobileToolbarOpen(!isMobileToolbarOpen)}
         />
       )}
 

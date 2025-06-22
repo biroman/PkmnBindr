@@ -1,6 +1,7 @@
 // Pokemon TCG API Service
 // Handles all interactions with the Pokemon TCG API (pokemontcg.io)
 
+// Direct API access - Pokemon TCG API supports CORS
 const BASE_URL = "https://api.pokemontcg.io/v2";
 const DEFAULT_PAGE_SIZE = 20;
 const MAX_PAGE_SIZE = 250;
@@ -96,6 +97,7 @@ async function apiRequest(endpoint, options = {}) {
 
   // Build URL with query parameters
   const url = new URL(`${BASE_URL}${endpoint}`);
+
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
       url.searchParams.append(key, value);
