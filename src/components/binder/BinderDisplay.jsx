@@ -35,7 +35,14 @@ const BinderDisplay = ({
     return (
       <div
         className={`relative flex justify-center items-center binder-container mobile-binder ${className}`}
-        style={containerStyle}
+        style={{
+          ...containerStyle,
+          // Ensure full mobile viewport usage
+          minWidth: "100vw",
+          minHeight: "100vh",
+          width: "100%",
+          height: "100%",
+        }}
       >
         {/* Single Page - cover or card page based on mobile navigation */}
         {currentPageConfig.type === "cover-single" ? (

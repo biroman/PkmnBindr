@@ -85,17 +85,20 @@ const useBinderDimensions = (gridSize) => {
       ? windowWidth - 40 // Just some padding on mobile
       : windowWidth - BINDER_CONFIG.NAVIGATION_SPACE;
 
-    // Validate minimum dimensions
-    if (availableHeight < 200 || availableWidth < 300) {
+    // Validate minimum dimensions - more lenient for mobile
+    const minHeight = isMobile ? 300 : 200;
+    const minWidth = isMobile ? 250 : 300;
+
+    if (availableHeight < minHeight || availableWidth < minWidth) {
       return {
-        width: Math.max(300, availableWidth),
-        height: Math.max(200, availableHeight),
-        cardWidth: 50,
-        cardHeight: 70,
+        width: Math.max(minWidth, availableWidth),
+        height: Math.max(minHeight, availableHeight),
+        cardWidth: isMobile ? 60 : 50,
+        cardHeight: isMobile ? 84 : 70,
         isMobile,
         isMinimal: true,
-        pageWidth: Math.max(300, availableWidth),
-        pageHeight: Math.max(200, availableHeight),
+        pageWidth: Math.max(minWidth, availableWidth),
+        pageHeight: Math.max(minHeight, availableHeight),
         grid,
       };
     }

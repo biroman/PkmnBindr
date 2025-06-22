@@ -74,7 +74,15 @@ const CoverPage = ({
         className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
           isMobile ? "mobile-cover-page" : ""
         }`}
-        style={{ backgroundColor, ...mobileStyles }}
+        style={{
+          background: backgroundColor?.startsWith("linear-gradient")
+            ? backgroundColor
+            : undefined,
+          backgroundColor: !backgroundColor?.startsWith("linear-gradient")
+            ? backgroundColor
+            : undefined,
+          ...mobileStyles,
+        }}
       >
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]">
@@ -267,7 +275,15 @@ const CoverPage = ({
       className={`flex-1 rounded-lg shadow-2xl relative overflow-hidden transition-colors duration-300 ${
         isMobile ? "mobile-cover-page" : ""
       }`}
-      style={{ backgroundColor, ...mobileStyles }}
+      style={{
+        background: backgroundColor?.startsWith("linear-gradient")
+          ? backgroundColor
+          : undefined,
+        backgroundColor: !backgroundColor?.startsWith("linear-gradient")
+          ? backgroundColor
+          : undefined,
+        ...mobileStyles,
+      }}
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">

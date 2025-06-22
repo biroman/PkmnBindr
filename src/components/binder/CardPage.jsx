@@ -23,28 +23,20 @@ const CardPage = ({
       className={`flex-1 rounded-lg shadow-2xl relative transition-colors duration-300 ${
         isMobile ? "mobile-card-page" : ""
       }`}
-      style={{ backgroundColor }}
+      style={{
+        background: backgroundColor?.startsWith("linear-gradient")
+          ? backgroundColor
+          : undefined,
+        backgroundColor: !backgroundColor?.startsWith("linear-gradient")
+          ? backgroundColor
+          : undefined,
+      }}
     >
       {/* Page Header */}
       <div className="absolute top-2 left-4 right-4 flex items-center justify-between z-10">
         <div className="text-sm font-medium text-gray-500">
           Page {pageNumber}
         </div>
-        {/* Only show binding holes on desktop */}
-        {!isMobile && (
-          <div className="flex items-center gap-2">
-            {/* Binding holes decoration */}
-            <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-            </div>
-            <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-            </div>
-            <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Card Grid */}

@@ -446,11 +446,21 @@ export const BinderContainer = ({
 
   return (
     <div
-      className={`h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
+      className={`${
+        isMobile
+          ? "min-h-[100vh] min-h-[100dvh]" // Use dynamic viewport height on mobile
+          : "h-[calc(100vh-65px)]"
+      } bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
       style={{
         paddingRight: `${sidebarWidth}px`,
         paddingTop: isMobile ? "60px" : "0", // Account for mobile toolbar
         paddingBottom: isMobile ? "80px" : "0", // Account for mobile navigation
+        // Mobile specific height handling
+        ...(isMobile && {
+          height: "100vh",
+          maxHeight: "100vh",
+          minHeight: "100vh",
+        }),
         ...style,
       }}
     >
