@@ -44,6 +44,9 @@ const BinderCard = ({
   user,
   // Owner data for "Created by" feature
   ownerData = null,
+  // Cached data to prevent Firebase requests
+  cachedInteractionStats = null,
+  cachedCustomization = null,
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [interactionStats, setInteractionStats] = useState({
@@ -95,6 +98,17 @@ const BinderCard = ({
         return;
       }
 
+      // Use cached data if available
+      if (cachedInteractionStats) {
+        setInteractionStats({
+          likeCount: cachedInteractionStats.likeCount,
+          favoriteCount: cachedInteractionStats.favoriteCount,
+          viewCount: cachedInteractionStats.viewCount,
+          loading: false,
+        });
+        return;
+      }
+
       try {
         const stats = await BinderInteractionService.getBinderStats(
           binder.id,
@@ -124,6 +138,7 @@ const BinderCard = ({
     binder.ownerId,
     binder.permissions?.public,
     showInteractionStats,
+    cachedInteractionStats,
   ]);
 
   // Load binder customization - this determines the final header color
@@ -134,7 +149,16 @@ const BinderCard = ({
         return;
       }
 
-      // First check if we already have it cached
+      // Use cached customization if available
+      if (cachedCustomization) {
+        if (cachedCustomization.headerColor) {
+          setFinalHeaderColor(cachedCustomization.headerColor);
+        }
+        setIsCustomizationReady(true);
+        return;
+      }
+
+      // First check if we already have it cached in context
       const cachedColor = getHeaderColor(binder.id);
       if (cachedColor) {
         setFinalHeaderColor(cachedColor);
@@ -159,7 +183,13 @@ const BinderCard = ({
     };
 
     loadCustomization();
-  }, [binder.id, binder.ownerId, getHeaderColor, loadBinderCustomization]);
+  }, [
+    binder.id,
+    binder.ownerId,
+    getHeaderColor,
+    loadBinderCustomization,
+    cachedCustomization,
+  ]);
 
   const handleCardClick = (e) => {
     // Don't trigger card click if clicking on dropdown or its trigger

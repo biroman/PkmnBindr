@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import { useRules } from "./RulesContext";
 import { useAuth } from "../hooks/useAuth";
 import { binderSyncService } from "../services/binderSyncService";
+import { PublicCollectionsCacheService } from "../services/PublicCollectionsCacheService";
 import { db } from "../lib/firebase";
 import {
   collection,
@@ -652,6 +653,9 @@ export const BinderProvider = ({ children }) => {
 
               // Show success message
               if (updates.permissions.public !== undefined) {
+                // Invalidate public collections cache when a binder's public status changes
+                PublicCollectionsCacheService.invalidateCache();
+
                 toast.success(
                   updates.permissions.public
                     ? "Binder is now public and visible on your profile"

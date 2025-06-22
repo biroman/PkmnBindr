@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { toast } from "react-hot-toast";
+import { PublicCollectionsCacheService } from "./PublicCollectionsCacheService";
 
 export class BinderInteractionService {
   // Cache to prevent spam clicking
@@ -93,6 +94,9 @@ export class BinderInteractionService {
 
         return newIsLiked;
       });
+
+      // Trigger background refresh of public collections cache
+      PublicCollectionsCacheService.backgroundRefresh();
 
       // Show success message
       if (newLikeState) {
@@ -240,6 +244,9 @@ export class BinderInteractionService {
         return newIsFavorited;
       });
 
+      // Trigger background refresh of public collections cache
+      PublicCollectionsCacheService.backgroundRefresh();
+
       // Show success message
       if (newFavoriteState) {
         toast.success("Added to favorites! ⭐");
@@ -329,6 +336,11 @@ export class BinderInteractionService {
 
         return true;
       });
+
+      // Trigger background refresh of public collections cache if it was a new view
+      if (wasNewView) {
+        PublicCollectionsCacheService.backgroundRefresh();
+      }
 
       return wasNewView;
     } catch (error) {

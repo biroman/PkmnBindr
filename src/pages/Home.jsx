@@ -17,129 +17,81 @@ import {
 } from "@heroicons/react/24/solid";
 import { useAuth } from "../hooks/useAuth";
 import BinderCard from "../components/binder/BinderCard";
-import {
-  collection,
-  query,
-  where,
-  orderBy,
-  limit,
-  getDocs,
-} from "firebase/firestore";
-import { db } from "../lib/firebase";
 import { toast } from "react-hot-toast";
-import { getUserProfile } from "../utils/userManagement";
+import { PublicCollectionsCacheService } from "../services/PublicCollectionsCacheService";
+
+// Cached version of BinderCard that uses pre-loaded data
+const CachedBinderCard = ({ binder, collectionsData, onSelect, user }) => {
+  const ownerData = collectionsData?.ownerData[binder.ownerId];
+  const interactionStats = collectionsData?.interactionStats[binder.id];
+  const customization = collectionsData?.customizations[binder.id];
+
+  return (
+    <BinderCard
+      binder={binder}
+      onSelect={onSelect}
+      showSyncStatus={false}
+      showActions={false}
+      showDeleteButton={false}
+      showPublicToggle={false}
+      showClaimButton={false}
+      showDropdownMenu={false}
+      showInteractionStats={true}
+      showCreatedBy={true}
+      ownerData={ownerData}
+      user={user}
+      isOwnedByCurrentUser={() => false}
+      getBinderStatus={() => "synced"}
+      // Pass cached data to prevent additional Firebase requests
+      cachedInteractionStats={interactionStats}
+      cachedCustomization={customization}
+    />
+  );
+};
 
 const Home = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
-  const [publicBinders, setPublicBinders] = useState([]);
+  const [collectionsData, setCollectionsData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("recent");
-  const [ownerDataCache, setOwnerDataCache] = useState({}); // Cache for owner data
 
-  // Load public binders
+  // Load public collections using the cache service
   useEffect(() => {
-    const loadPublicBinders = async () => {
+    const loadPublicCollections = async () => {
       try {
         setLoading(true);
-
-        // Simple query to get all public binders without ordering
-        // We'll sort them in memory to avoid needing composite indexes
-        const q = query(
-          collection(db, "user_binders"),
-          where("permissions.public", "==", true),
-          limit(50) // Get more to have better sorting options
-        );
-
-        const querySnapshot = await getDocs(q);
-        const binders = [];
-
-        querySnapshot.forEach((doc) => {
-          const data = doc.data();
-          binders.push({
-            id: data.id,
-            ...data,
-          });
-        });
-
-        // Sort in memory based on active filter
-        let sortedBinders = [...binders];
-        switch (activeFilter) {
-          case "popular":
-            sortedBinders.sort(
-              (a, b) => (b.likeCount || 0) - (a.likeCount || 0)
-            );
-            break;
-          case "recent":
-          default:
-            sortedBinders.sort((a, b) => {
-              const aDate =
-                a.updatedAt?.toDate?.() || new Date(a.updatedAt || 0);
-              const bDate =
-                b.updatedAt?.toDate?.() || new Date(b.updatedAt || 0);
-              return bDate - aDate;
-            });
-            break;
-        }
-
-        // Limit to 20 after sorting
-        const finalBinders = sortedBinders.slice(0, 20);
-        setPublicBinders(finalBinders);
-
-        // Fetch owner data for all binders
-        const ownerIds = [
-          ...new Set(finalBinders.map((binder) => binder.ownerId)),
-        ];
-        const ownerDataPromises = ownerIds.map(async (ownerId) => {
-          if (ownerDataCache[ownerId]) {
-            return { ownerId, data: ownerDataCache[ownerId] };
-          }
-
-          try {
-            const ownerData = await getUserProfile(ownerId);
-            return { ownerId, data: ownerData };
-          } catch (error) {
-            console.error(`Error fetching owner data for ${ownerId}:`, error);
-            return {
-              ownerId,
-              data: {
-                uid: ownerId,
-                displayName: "Unknown User",
-                photoURL: null,
-              },
-            };
-          }
-        });
-
-        const ownerResults = await Promise.all(ownerDataPromises);
-        const newOwnerData = {};
-        ownerResults.forEach(({ ownerId, data }) => {
-          newOwnerData[ownerId] = data;
-        });
-
-        setOwnerDataCache((prev) => ({ ...prev, ...newOwnerData }));
+        const data =
+          await PublicCollectionsCacheService.fetchPublicCollections();
+        setCollectionsData(data);
       } catch (error) {
-        console.error("Error loading public binders:", error);
-        toast.error("Failed to load public binders");
+        console.error("Error loading public collections:", error);
+        toast.error("Failed to load public collections");
       } finally {
         setLoading(false);
       }
     };
 
-    loadPublicBinders();
+    loadPublicCollections();
+  }, []);
+
+  // Refresh data when filter changes (but use cached data)
+  useEffect(() => {
+    if (collectionsData) {
+      // Trigger a background refresh when filter changes to get fresh data
+      PublicCollectionsCacheService.backgroundRefresh();
+    }
   }, [activeFilter]);
 
-  // Filter binders based on search query
-  const filteredBinders = publicBinders.filter(
-    (binder) =>
-      binder.metadata?.name
-        ?.toLowerCase()
-        .includes(searchQuery.toLowerCase()) ||
-      binder.metadata?.description
-        ?.toLowerCase()
-        .includes(searchQuery.toLowerCase())
-  );
+  // Get filtered and sorted binders from cached data
+  const filteredBinders = collectionsData
+    ? PublicCollectionsCacheService.getSortedBinders(
+        collectionsData,
+        activeFilter,
+        searchQuery
+      )
+    : [];
 
   const handleBinderClick = (binder) => {
     navigate(`/user/${binder.ownerId}/binder/${binder.id}`);
@@ -236,22 +188,12 @@ const Home = () => {
               ) : filteredBinders.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredBinders.map((binder) => (
-                    <BinderCard
+                    <CachedBinderCard
                       key={binder.id}
                       binder={binder}
+                      collectionsData={collectionsData}
                       onSelect={handleBinderClick}
-                      showSyncStatus={false}
-                      showActions={false}
-                      showDeleteButton={false}
-                      showPublicToggle={false}
-                      showClaimButton={false}
-                      showDropdownMenu={false}
-                      showInteractionStats={true}
-                      showCreatedBy={true}
-                      ownerData={ownerDataCache[binder.ownerId]}
                       user={user}
-                      isOwnedByCurrentUser={() => false}
-                      getBinderStatus={() => "synced"}
                     />
                   ))}
                 </div>
