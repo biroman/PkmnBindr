@@ -173,15 +173,81 @@ async function apiRequest(endpoint, options = {}) {
   );
 }
 
+// Helper function to build fuzzy name queries
+function buildFuzzyNameQuery(searchTerm) {
+  if (!searchTerm || typeof searchTerm !== "string") {
+    return "";
+  }
+
+  const trimmed = searchTerm.trim();
+
+  // If the search term contains spaces, we need to handle it differently
+  if (trimmed.includes(" ")) {
+    // For multi-word searches like "Sandy Shocks" or "Sandy sho"
+    const words = trimmed.split(/\s+/).filter((word) => word.length > 0);
+
+    if (words.length === 1) {
+      // Single word after splitting (shouldn't happen, but safe fallback)
+      return `name:*${words[0]}*`;
+    } else if (words.length === 2) {
+      const [word1, word2] = words;
+
+      // Check if second word looks like a partial search (less than 4 chars)
+      if (word2.length < 4) {
+        // Partial second word: "Sandy sho" -> search just the first word with wildcard
+        // This is more reliable than complex queries
+        return `name:*${word1}*`;
+      } else {
+        // Both words seem complete: "Sandy Shocks" -> use exact match with quotes
+        // This works best for complete names with spaces
+        return `name:"${trimmed}"`;
+      }
+    } else {
+      // More than 2 words - use exact match for precision
+      return `name:"${trimmed}"`;
+    }
+  } else {
+    // Single word - use wildcards for partial matching
+    return `name:*${trimmed}*`;
+  }
+}
+
 // Card search functions
 export const pokemonTcgApi = {
-  // Search for cards with advanced filtering
+  // Add helper method to the API object
+  buildFuzzyNameQuery,
+
+  // Build fallback query for failed searches
+  buildFallbackQuery(originalQuery) {
+    if (!originalQuery || typeof originalQuery !== "string") {
+      return "";
+    }
+
+    const trimmed = originalQuery.trim();
+
+    // If it contains spaces, try just the first word
+    if (trimmed.includes(" ")) {
+      const firstWord = trimmed.split(" ")[0];
+      if (firstWord.length >= 3) {
+        return firstWord; // This will become name:*firstWord*
+      }
+    }
+
+    // If it's already a single word, try without wildcards (exact match)
+    if (!trimmed.includes(" ") && trimmed.length >= 3) {
+      return `"${trimmed}"`; // Force exact match
+    }
+
+    return null; // No fallback available
+  },
+  // Search for cards with advanced filtering and fallback strategies
   async searchCards({
     query = "",
     page = 1,
     pageSize = DEFAULT_PAGE_SIZE,
     orderBy = "",
     filters = {},
+    _isRetry = false,
   } = {}) {
     try {
       // Build search query
@@ -230,16 +296,15 @@ export const pokemonTcgApi = {
           const rarityName = trimmedQuery.substring(7).trim(); // Remove "rarity:"
           q += `rarity:"${rarityName}"`;
         } else {
-          // Default: treat as pokemon name search with fuzzy matching
-          // Use wildcards (*) for partial matching instead of exact quotes
-          q += `name:*${trimmedQuery}*`;
+          // Default: treat as pokemon name search with smart fuzzy matching
+          q += this.buildFuzzyNameQuery(trimmedQuery);
         }
       }
 
       // Add filters to query (these will be combined with the parsed query above)
       if (filters.name) {
-        // Use partial matching for name filter as well
-        q += (q ? " " : "") + `name:*${filters.name}*`;
+        // Use smart fuzzy matching for name filter as well
+        q += (q ? " " : "") + this.buildFuzzyNameQuery(filters.name);
       }
       if (filters.types && filters.types.length > 0) {
         q += (q ? " " : "") + `types:"${filters.types.join('","')}"`;
@@ -278,6 +343,7 @@ export const pokemonTcgApi = {
 
       console.log("Search params:", params);
       console.log("Built query:", q);
+      console.log("Original query input:", query);
 
       const response = await apiRequest("/cards", { params });
 
@@ -290,6 +356,29 @@ export const pokemonTcgApi = {
       };
     } catch (error) {
       console.error("Card search failed:", error);
+
+      // If this is a 400 error and we haven't tried a fallback yet, try a simpler search
+      if (error.message.includes("400") && !_isRetry && query.trim()) {
+        console.log("Attempting fallback search with simpler query...");
+
+        try {
+          // Try fallback strategy: search just the first word for multi-word queries
+          const fallbackQuery = this.buildFallbackQuery(query.trim());
+          if (fallbackQuery && fallbackQuery !== query) {
+            return await this.searchCards({
+              query: fallbackQuery,
+              page,
+              pageSize,
+              orderBy,
+              filters,
+              _isRetry: true,
+            });
+          }
+        } catch (fallbackError) {
+          console.error("Fallback search also failed:", fallbackError);
+        }
+      }
+
       throw new Error(`Failed to search cards: ${error.message}`);
     }
   },
