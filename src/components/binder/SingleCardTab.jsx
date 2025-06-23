@@ -387,7 +387,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                 value={searchQuery}
                 onChange={(e) => updateSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Search Pokemon cards (e.g., Pikachu #25, artist:Ken Sugimori, set:Base Set)"
+                placeholder="Search Pokemon cards (e.g., Pika, Pikachu #25, artist:Ken Sugimori, set:Base Set)"
                 className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -405,9 +405,10 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
           <div className="mt-4 space-y-3">
             {/* Search examples */}
             <div className="text-xs text-slate-500">
-              <strong>Search examples:</strong> Try "Pikachu #25" (card number),
-              "artist:Ken Sugimori" (artist), "set:Base Set" (set), "type:Fire"
-              (type), or "rarity:Rare Holo" (rarity)
+              <strong>Search examples:</strong> Try "Pika" (partial name),
+              "Pikachu #25" (card number), "artist:Ken Sugimori" (artist),
+              "set:Base Set" (set), "type:Fire" (type), or "rarity:Rare Holo"
+              (rarity)
             </div>
           </div>
         </div>

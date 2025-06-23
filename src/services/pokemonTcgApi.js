@@ -230,14 +230,16 @@ export const pokemonTcgApi = {
           const rarityName = trimmedQuery.substring(7).trim(); // Remove "rarity:"
           q += `rarity:"${rarityName}"`;
         } else {
-          // Default: treat as pokemon name search
-          q += `name:"${trimmedQuery}"`;
+          // Default: treat as pokemon name search with fuzzy matching
+          // Use wildcards (*) for partial matching instead of exact quotes
+          q += `name:*${trimmedQuery}*`;
         }
       }
 
       // Add filters to query (these will be combined with the parsed query above)
       if (filters.name) {
-        q += (q ? " " : "") + `name:"${filters.name}"`;
+        // Use partial matching for name filter as well
+        q += (q ? " " : "") + `name:*${filters.name}*`;
       }
       if (filters.types && filters.types.length > 0) {
         q += (q ? " " : "") + `types:"${filters.types.join('","')}"`;
