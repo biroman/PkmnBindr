@@ -10,6 +10,8 @@ import {
   TrophyIcon,
   UserGroupIcon,
   ChartBarIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
 } from "@heroicons/react/24/outline";
 import {
   HeartIcon as HeartSolid,
@@ -49,53 +51,185 @@ const CachedBinderCard = ({ binder, collectionsData, onSelect, user }) => {
   );
 };
 
+// Pagination Controls Component
+const PaginationControls = ({
+  pageInfo,
+  currentPage,
+  onPageChange,
+  loading,
+}) => {
+  const { totalPages, hasPreviousPage, hasNextPage } = pageInfo;
+
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    // Adjust start page if we're near the end
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
+    }
+
+    return pages;
+  };
+
+  if (totalPages <= 1) return null;
+
+  return (
+    <div className="flex items-center justify-between px-4 py-3 sm:px-6">
+      <div className="flex flex-1 justify-between sm:hidden">
+        <button
+          onClick={() => onPageChange(currentPage - 1)}
+          disabled={!hasPreviousPage || loading}
+          className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => onPageChange(currentPage + 1)}
+          disabled={!hasNextPage || loading}
+          className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Next
+        </button>
+      </div>
+      <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+        <div>
+          <p className="text-sm text-gray-700">
+            Showing page <span className="font-medium">{currentPage}</span> of{" "}
+            <span className="font-medium">{totalPages}</span>
+          </p>
+        </div>
+        <div>
+          <nav
+            className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+            aria-label="Pagination"
+          >
+            <button
+              onClick={() => onPageChange(currentPage - 1)}
+              disabled={!hasPreviousPage || loading}
+              className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <span className="sr-only">Previous</span>
+              <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+            </button>
+
+            {getPageNumbers().map((pageNum) => (
+              <button
+                key={pageNum}
+                onClick={() => onPageChange(pageNum)}
+                disabled={loading}
+                className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
+                  pageNum === currentPage
+                    ? "z-10 bg-blue-600 text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                } disabled:opacity-50 disabled:cursor-not-allowed`}
+              >
+                {pageNum}
+              </button>
+            ))}
+
+            <button
+              onClick={() => onPageChange(currentPage + 1)}
+              disabled={!hasNextPage || loading}
+              className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <span className="sr-only">Next</span>
+              <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [collectionsData, setCollectionsData] = useState(null);
+  const [pageInfo, setPageInfo] = useState({
+    currentPage: 1,
+    totalPages: 1,
+    hasNextPage: false,
+    hasPreviousPage: false,
+    totalItems: 0,
+  });
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("recent");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // Load public collections using the cache service
+  // Load public collections for current page
+  const loadPublicCollections = async (
+    page = 1,
+    filter = activeFilter,
+    search = searchQuery,
+    forceRefresh = false
+  ) => {
+    try {
+      setLoading(true);
+      const result =
+        await PublicCollectionsCacheService.fetchPaginatedCollections(
+          page,
+          filter,
+          search,
+          forceRefresh
+        );
+      setCollectionsData(result.data);
+      setPageInfo(result.pageInfo);
+      setCurrentPage(result.pageInfo.currentPage);
+    } catch (error) {
+      console.error("Error loading public collections:", error);
+      toast.error("Failed to load public collections");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Initial load
   useEffect(() => {
-    const loadPublicCollections = async () => {
-      try {
-        setLoading(true);
-        const data =
-          await PublicCollectionsCacheService.fetchPublicCollections();
-        setCollectionsData(data);
-      } catch (error) {
-        console.error("Error loading public collections:", error);
-        toast.error("Failed to load public collections");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadPublicCollections();
+    loadPublicCollections(1, activeFilter, searchQuery);
   }, []);
 
-  // Refresh data when filter changes (but use cached data)
+  // Handle filter changes
   useEffect(() => {
-    if (collectionsData) {
-      // Trigger a background refresh when filter changes to get fresh data
-      PublicCollectionsCacheService.backgroundRefresh();
-    }
+    setCurrentPage(1);
+    loadPublicCollections(1, activeFilter, searchQuery);
   }, [activeFilter]);
 
-  // Get filtered and sorted binders from cached data
-  const filteredBinders = collectionsData
-    ? PublicCollectionsCacheService.getSortedBinders(
-        collectionsData,
-        activeFilter,
-        searchQuery
-      )
-    : [];
+  // Handle search with debouncing
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setCurrentPage(1);
+      loadPublicCollections(1, activeFilter, searchQuery);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery]);
+
+  // Handle page changes
+  const handlePageChange = (newPage) => {
+    if (
+      newPage !== currentPage &&
+      newPage >= 1 &&
+      newPage <= pageInfo.totalPages
+    ) {
+      loadPublicCollections(newPage, activeFilter, searchQuery);
+    }
+  };
 
   const handleBinderClick = (binder) => {
     navigate(`/user/${binder.ownerId}/binder/${binder.id}`);
   };
+
+  const filteredBinders = collectionsData?.binders || [];
 
   const mockStats = {
     totalPublicBinders: 1247,
@@ -146,33 +280,50 @@ const Home = () => {
           <div className="lg:col-span-3 space-y-8">
             {/* Filter Tabs */}
             <div className="bg-white rounded-lg border border-gray-200 p-6">
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
                 <h2 className="text-xl font-bold text-gray-900">
                   Public Collections
                 </h2>
-                <div className="flex bg-gray-100 rounded-lg p-1">
-                  <button
-                    onClick={() => setActiveFilter("recent")}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                      activeFilter === "recent"
-                        ? "bg-white text-gray-900 shadow-sm"
-                        : "text-gray-600 hover:text-gray-900"
-                    }`}
-                  >
-                    <ClockIcon className="w-4 h-4 inline mr-2" />
-                    Recent
-                  </button>
-                  <button
-                    onClick={() => setActiveFilter("popular")}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                      activeFilter === "popular"
-                        ? "bg-white text-gray-900 shadow-sm"
-                        : "text-gray-600 hover:text-gray-900"
-                    }`}
-                  >
-                    <FireIcon className="w-4 h-4 inline mr-2" />
-                    Popular
-                  </button>
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                  {/* Search Input */}
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MagnifyingGlassIcon className="h-4 w-4 text-gray-400" />
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="Search collections..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm w-full sm:w-64"
+                    />
+                  </div>
+
+                  {/* Filter Buttons */}
+                  <div className="flex bg-gray-100 rounded-lg p-1">
+                    <button
+                      onClick={() => setActiveFilter("recent")}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        activeFilter === "recent"
+                          ? "bg-white text-gray-900 shadow-sm"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
+                      <ClockIcon className="w-4 h-4 inline mr-2" />
+                      Recent
+                    </button>
+                    <button
+                      onClick={() => setActiveFilter("popular")}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        activeFilter === "popular"
+                          ? "bg-white text-gray-900 shadow-sm"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
+                      <FireIcon className="w-4 h-4 inline mr-2" />
+                      Popular
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -186,17 +337,27 @@ const Home = () => {
                   ))}
                 </div>
               ) : filteredBinders.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredBinders.map((binder) => (
-                    <CachedBinderCard
-                      key={binder.id}
-                      binder={binder}
-                      collectionsData={collectionsData}
-                      onSelect={handleBinderClick}
-                      user={user}
-                    />
-                  ))}
-                </div>
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {filteredBinders.map((binder) => (
+                      <CachedBinderCard
+                        key={binder.id}
+                        binder={binder}
+                        collectionsData={collectionsData}
+                        onSelect={handleBinderClick}
+                        user={user}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Pagination Controls */}
+                  <PaginationControls
+                    pageInfo={pageInfo}
+                    currentPage={currentPage}
+                    onPageChange={handlePageChange}
+                    loading={loading}
+                  />
+                </>
               ) : (
                 <div className="text-center py-12">
                   <SparklesIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />

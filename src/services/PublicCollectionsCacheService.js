@@ -1,4 +1,12 @@
-import { collection, query, where, limit, getDocs } from "firebase/firestore";
+import {
+  collection,
+  query,
+  where,
+  limit,
+  getDocs,
+  orderBy,
+  startAfter,
+} from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { getUserProfile } from "../utils/userManagement";
 import { BinderInteractionService } from "./BinderInteractionService";
@@ -8,7 +16,7 @@ import { binderCardCustomizationService } from "./binderCardCustomizationService
  * PublicCollectionsCacheService - Centralized caching for public collections page
  *
  * Features:
- * - Caches public binders list with owner data
+ * - Paginated loading of public binders with owner data
  * - Caches interaction stats (likes, views, favorites)
  * - Caches binder customizations
  * - Intelligent cache invalidation
@@ -17,126 +25,194 @@ import { binderCardCustomizationService } from "./binderCardCustomizationService
 export class PublicCollectionsCacheService {
   static CACHE_KEY = "public_collections_cache";
   static CACHE_TTL = 5 * 60 * 1000; // 5 minutes
-  static MAX_BINDERS = 50;
+  static PAGE_SIZE = 6; // Show 6 binders per page
 
   static cache = {
-    data: null,
+    data: new Map(), // Store data by page number and filter
+    pageInfo: new Map(), // Store pagination metadata
     timestamp: null,
     isValid: false,
   };
 
   /**
-   * Check if cache is valid
+   * Generate cache key for specific page and filter
    */
-  static isCacheValid() {
-    if (!this.cache.data || !this.cache.timestamp) return false;
+  static getCacheKey(page, filter, searchQuery = "") {
+    return `${filter}_${page}_${searchQuery}`;
+  }
+
+  /**
+   * Check if cache is valid for specific page
+   */
+  static isCacheValid(cacheKey) {
+    if (!this.cache.data.has(cacheKey) || !this.cache.timestamp) return false;
     return Date.now() - this.cache.timestamp < this.CACHE_TTL;
   }
 
   /**
-   * Get cached data from memory or localStorage
+   * Get cached data for specific page
    */
-  static getCachedData() {
-    // First check memory cache
-    if (this.isCacheValid()) {
-      return this.cache.data;
-    }
+  static getCachedPage(page, filter, searchQuery = "") {
+    const cacheKey = this.getCacheKey(page, filter, searchQuery);
 
-    // Then check localStorage
-    try {
-      const cached = localStorage.getItem(this.CACHE_KEY);
-      if (cached) {
-        const parsedCache = JSON.parse(cached);
-        if (Date.now() - parsedCache.timestamp < this.CACHE_TTL) {
-          this.cache = parsedCache;
-          return parsedCache.data;
-        }
-      }
-    } catch (error) {
-      console.warn("Failed to load public collections cache:", error);
+    if (this.isCacheValid(cacheKey)) {
+      return {
+        data: this.cache.data.get(cacheKey),
+        pageInfo: this.cache.pageInfo.get(cacheKey),
+      };
     }
 
     return null;
   }
 
   /**
-   * Set cached data in memory and localStorage
+   * Set cached data for specific page
    */
-  static setCachedData(data) {
-    const cacheData = {
-      data,
-      timestamp: Date.now(),
-      isValid: true,
-    };
+  static setCachedPage(page, filter, searchQuery, data, pageInfo) {
+    const cacheKey = this.getCacheKey(page, filter, searchQuery);
 
-    this.cache = cacheData;
-
-    try {
-      localStorage.setItem(this.CACHE_KEY, JSON.stringify(cacheData));
-    } catch (error) {
-      console.warn("Failed to save public collections cache:", error);
-    }
+    this.cache.data.set(cacheKey, data);
+    this.cache.pageInfo.set(cacheKey, pageInfo);
+    this.cache.timestamp = Date.now();
+    this.cache.isValid = true;
   }
 
   /**
-   * Clear cache
+   * Clear all cache
    */
   static clearCache() {
-    this.cache = { data: null, timestamp: null, isValid: false };
-    try {
-      localStorage.removeItem(this.CACHE_KEY);
-    } catch (error) {
-      console.warn("Failed to clear public collections cache:", error);
-    }
+    this.cache = {
+      data: new Map(),
+      pageInfo: new Map(),
+      timestamp: null,
+      isValid: false,
+    };
   }
 
   /**
-   * Fetch public binders with all associated data in batched requests
+   * Fetch paginated public binders with all associated data
    */
-  static async fetchPublicCollections(forceRefresh = false) {
+  static async fetchPaginatedCollections(
+    page = 1,
+    activeFilter = "recent",
+    searchQuery = "",
+    forceRefresh = false
+  ) {
+    const cacheKey = this.getCacheKey(page, activeFilter, searchQuery);
+
     // Return cached data if available and not forcing refresh
     if (!forceRefresh) {
-      const cached = this.getCachedData();
+      const cached = this.getCachedPage(page, activeFilter, searchQuery);
       if (cached) {
-        console.log("Loading public collections from cache");
+        console.log(`Loading public collections page ${page} from cache`);
         return cached;
       }
     }
 
-    console.log("Fetching public collections from Firebase");
+    console.log(`Fetching public collections page ${page} from Firebase`);
 
     try {
-      // Step 1: Fetch public binders
+      // Build query - fetch more data than needed for client-side sorting and pagination
+      // This avoids the need for composite indexes
+      const fetchSize = Math.max(50, page * this.PAGE_SIZE + this.PAGE_SIZE); // Fetch enough for current page + some buffer
+
       const q = query(
         collection(db, "user_binders"),
         where("permissions.public", "==", true),
-        limit(this.MAX_BINDERS)
+        limit(fetchSize)
       );
 
       const querySnapshot = await getDocs(q);
-      const binders = [];
+      const allBinders = [];
 
       querySnapshot.forEach((doc) => {
         const data = doc.data();
-        binders.push({
+        allBinders.push({
           id: data.id,
           ...data,
         });
       });
 
-      if (binders.length === 0) {
-        const emptyData = {
-          binders: [],
-          ownerData: {},
-          interactionStats: {},
-          customizations: {},
-        };
-        this.setCachedData(emptyData);
-        return emptyData;
+      // Apply search filter if provided
+      let filteredBinders = allBinders;
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        filteredBinders = allBinders.filter(
+          (binder) =>
+            binder.metadata?.name?.toLowerCase().includes(query) ||
+            binder.metadata?.description?.toLowerCase().includes(query)
+        );
       }
 
-      // Step 2: Batch fetch owner data
-      const ownerIds = [...new Set(binders.map((binder) => binder.ownerId))];
+      // Sort based on active filter
+      if (activeFilter === "popular") {
+        // For popular filter, we need to fetch interaction stats to sort properly
+        const statsPromises = filteredBinders.map(async (binder) => {
+          try {
+            const stats = await BinderInteractionService.getBinderStats(
+              binder.id,
+              binder.ownerId
+            );
+            return { binder, likeCount: stats.likeCount || 0 };
+          } catch (error) {
+            return { binder, likeCount: 0 };
+          }
+        });
+
+        const bindersWithStats = await Promise.all(statsPromises);
+        bindersWithStats.sort((a, b) => b.likeCount - a.likeCount);
+        filteredBinders = bindersWithStats.map((item) => item.binder);
+      } else {
+        // Default to recent (sort by updatedAt)
+        filteredBinders.sort((a, b) => {
+          const aDate = a.updatedAt?.toDate?.() || new Date(a.updatedAt || 0);
+          const bDate = b.updatedAt?.toDate?.() || new Date(b.updatedAt || 0);
+          return bDate - aDate;
+        });
+      }
+
+      // Apply pagination to sorted results
+      const startIndex = (page - 1) * this.PAGE_SIZE;
+      const endIndex = startIndex + this.PAGE_SIZE;
+      const paginatedBinders = filteredBinders.slice(startIndex, endIndex);
+
+      // Determine if there are more pages based on total filtered results
+      const hasNextPage = filteredBinders.length > endIndex;
+      const totalFilteredItems = filteredBinders.length;
+
+      if (paginatedBinders.length === 0) {
+        const emptyResult = {
+          data: {
+            binders: [],
+            ownerData: {},
+            interactionStats: {},
+            customizations: {},
+          },
+          pageInfo: {
+            currentPage: page,
+            totalItems: totalFilteredItems,
+            hasNextPage: false,
+            hasPreviousPage: page > 1,
+            totalPages: Math.ceil(totalFilteredItems / this.PAGE_SIZE),
+          },
+        };
+
+        this.setCachedPage(
+          page,
+          activeFilter,
+          searchQuery,
+          emptyResult.data,
+          emptyResult.pageInfo
+        );
+        return emptyResult;
+      }
+
+      // Fetch associated data for current page binders only
+      const ownerIds = [
+        ...new Set(paginatedBinders.map((binder) => binder.ownerId)),
+      ];
+
+      // Batch fetch owner data
       const ownerDataPromises = ownerIds.map(async (ownerId) => {
         try {
           const ownerData = await getUserProfile(ownerId);
@@ -154,8 +230,8 @@ export class PublicCollectionsCacheService {
         }
       });
 
-      // Step 3: Batch fetch interaction stats
-      const interactionStatsPromises = binders.map(async (binder) => {
+      // Batch fetch interaction stats
+      const interactionStatsPromises = paginatedBinders.map(async (binder) => {
         try {
           const stats = await BinderInteractionService.getBinderStats(
             binder.id,
@@ -171,8 +247,8 @@ export class PublicCollectionsCacheService {
         }
       });
 
-      // Step 4: Batch fetch customizations
-      const customizationPromises = binders.map(async (binder) => {
+      // Batch fetch customizations
+      const customizationPromises = paginatedBinders.map(async (binder) => {
         try {
           const result = await binderCardCustomizationService.getCustomization(
             binder.id,
@@ -219,18 +295,28 @@ export class PublicCollectionsCacheService {
 
       // Create final data structure
       const data = {
-        binders,
+        binders: paginatedBinders,
         ownerData,
         interactionStats,
         customizations,
         lastUpdated: new Date().toISOString(),
       };
 
-      // Cache the data
-      this.setCachedData(data);
+      const pageInfo = {
+        currentPage: page,
+        totalItems: totalFilteredItems,
+        hasNextPage: hasNextPage,
+        hasPreviousPage: page > 1,
+        totalPages: Math.ceil(totalFilteredItems / this.PAGE_SIZE),
+      };
 
-      console.log(`Loaded ${binders.length} public collections with all data`);
-      return data;
+      // Cache the data
+      this.setCachedPage(page, activeFilter, searchQuery, data, pageInfo);
+
+      console.log(
+        `Loaded ${paginatedBinders.length} public collections with all data`
+      );
+      return { data, pageInfo };
     } catch (error) {
       console.error("Error fetching public collections:", error);
       throw error;
@@ -238,43 +324,25 @@ export class PublicCollectionsCacheService {
   }
 
   /**
-   * Get sorted and filtered binders from cached data
+   * Legacy method for backward compatibility - now uses pagination
+   */
+  static async fetchPublicCollections(forceRefresh = false) {
+    const result = await this.fetchPaginatedCollections(
+      1,
+      "recent",
+      "",
+      forceRefresh
+    );
+    return result.data;
+  }
+
+  /**
+   * Legacy method - now handled by pagination
+   * @deprecated Use fetchPaginatedCollections instead
    */
   static getSortedBinders(data, activeFilter = "recent", searchQuery = "") {
-    let { binders } = data;
-
-    // Apply search filter
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      binders = binders.filter(
-        (binder) =>
-          binder.metadata?.name?.toLowerCase().includes(query) ||
-          binder.metadata?.description?.toLowerCase().includes(query)
-      );
-    }
-
-    // Sort based on active filter
-    let sortedBinders = [...binders];
-    switch (activeFilter) {
-      case "popular":
-        sortedBinders.sort((a, b) => {
-          const aLikes = data.interactionStats[a.id]?.likeCount || 0;
-          const bLikes = data.interactionStats[b.id]?.likeCount || 0;
-          return bLikes - aLikes;
-        });
-        break;
-      case "recent":
-      default:
-        sortedBinders.sort((a, b) => {
-          const aDate = a.updatedAt?.toDate?.() || new Date(a.updatedAt || 0);
-          const bDate = b.updatedAt?.toDate?.() || new Date(b.updatedAt || 0);
-          return bDate - aDate;
-        });
-        break;
-    }
-
-    // Limit to 20 after sorting
-    return sortedBinders.slice(0, 20);
+    // This method is now handled by the pagination system
+    return data.binders || [];
   }
 
   /**
@@ -282,7 +350,7 @@ export class PublicCollectionsCacheService {
    */
   static async backgroundRefresh() {
     try {
-      await this.fetchPublicCollections(true);
+      await this.fetchPaginatedCollections(1, "recent", "", true);
     } catch (error) {
       console.error("Background refresh failed:", error);
       // Don't throw - this is a background operation
@@ -298,43 +366,40 @@ export class PublicCollectionsCacheService {
   }
 
   /**
-   * Get stats for a specific binder from cache
+   * Get stats for a specific binder from cache (searches all cached pages)
    */
   static getCachedBinderStats(binderId) {
-    const cached = this.getCachedData();
-    if (cached && cached.interactionStats[binderId]) {
-      return cached.interactionStats[binderId];
+    for (const [cacheKey, cachedData] of this.cache.data) {
+      if (cachedData && cachedData.interactionStats[binderId]) {
+        return cachedData.interactionStats[binderId];
+      }
     }
     return null;
   }
 
   /**
-   * Get customization for a specific binder from cache
+   * Get customization for a specific binder from cache (searches all cached pages)
    */
   static getCachedBinderCustomization(binderId) {
-    const cached = this.getCachedData();
-    if (cached && cached.customizations[binderId]) {
-      return cached.customizations[binderId];
+    for (const [cacheKey, cachedData] of this.cache.data) {
+      if (cachedData && cachedData.customizations[binderId]) {
+        return cachedData.customizations[binderId];
+      }
     }
     return null;
   }
 
   /**
-   * Update a specific binder's interaction stats in cache
+   * Update a specific binder's interaction stats in all relevant caches
    */
   static updateCachedBinderStats(binderId, newStats) {
-    if (!this.cache.data) return;
-
-    this.cache.data.interactionStats[binderId] = {
-      ...this.cache.data.interactionStats[binderId],
-      ...newStats,
-    };
-
-    // Update localStorage cache as well
-    try {
-      localStorage.setItem(this.CACHE_KEY, JSON.stringify(this.cache));
-    } catch (error) {
-      console.warn("Failed to update cached stats:", error);
+    for (const [cacheKey, cachedData] of this.cache.data) {
+      if (cachedData && cachedData.interactionStats[binderId]) {
+        cachedData.interactionStats[binderId] = {
+          ...cachedData.interactionStats[binderId],
+          ...newStats,
+        };
+      }
     }
   }
 }
