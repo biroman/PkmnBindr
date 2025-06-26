@@ -91,7 +91,14 @@ const DroppableSlot = ({
         <div className="relative w-full h-full">
           {shouldShowCardBack ? (
             /* Show card back for missing cards when toggle is enabled */
-            <div className="relative w-full h-full group overflow-hidden rounded-md">
+            <div
+              className="relative w-full h-full group overflow-hidden rounded-md cursor-pointer"
+              onClick={(e) => {
+                if (onCardClick && card) {
+                  onCardClick(card, e);
+                }
+              }}
+            >
               <img
                 src={CARD_BACK_URL}
                 alt="Card back"
