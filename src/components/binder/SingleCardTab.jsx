@@ -400,18 +400,6 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
               Search
             </button>
           </div>
-
-          {/* Search examples and quick searches */}
-          <div className="mt-4 space-y-3">
-            {/* Search examples */}
-            <div className="text-xs text-slate-500">
-              <strong>Search examples:</strong> Try "Pika" (partial name),
-              "Sandy Shocks" (full name), "Sandy sho" (partial multi-word),
-              "Pikachu #25" (card number), "artist:Ken Sugimori" (artist),
-              "set:Base Set" (set), "type:Fire" (type), or "rarity:Rare Holo"
-              (rarity)
-            </div>
-          </div>
         </div>
 
         {/* Mobile/Tablet Filters (show on lg screens and below) */}

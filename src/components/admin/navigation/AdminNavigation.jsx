@@ -87,6 +87,12 @@ const AdminNavigation = ({
       icon: DocumentTextIcon,
       description: "Manage global rules and application limits",
     },
+    {
+      id: "changelog-cleanup",
+      name: "Changelog Cleanup",
+      icon: ShieldCheckIcon,
+      description: "Clean up bloated changelogs causing storage issues",
+    },
   ];
 
   const handleTabClick = (tabId) => {

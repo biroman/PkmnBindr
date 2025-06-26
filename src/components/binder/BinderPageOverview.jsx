@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import {
   XMarkIcon,
   ArrowsRightLeftIcon,
@@ -23,6 +23,15 @@ import { useBinderContext } from "../../contexts/BinderContext";
 import { useCardCache } from "../../contexts/CardCacheContext";
 import { getGridConfig } from "../../hooks/useBinderDimensions";
 import { toast } from "react-hot-toast";
+
+// Mobile breakpoint and constants
+const MOBILE_BREAKPOINT = 768;
+const NAVBAR_HEIGHT = 65;
+const MOBILE_PADDING = 16;
+
+const ItemTypes = {
+  CARD_PAGE: "card_page",
+};
 
 // Helper function to get low-quality image URL for thumbnails
 // This significantly improves performance by using standard quality images
@@ -63,6 +72,7 @@ const CardPageItem = ({
   showHeader = true,
   currentHoverTarget = null,
   activeDragData = null,
+  isMobile = false,
 }) => {
   const { getCardFromCache } = useCardCache();
   const { active } = useDndContext();
@@ -236,6 +246,12 @@ const CardPageItem = ({
           isDraggable,
           isSelectionMode,
         });
+      }}
+      style={{
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        MozUserSelect: "none",
+        msUserSelect: "none",
       }}
       className={`
         relative bg-white rounded-sm shadow-md border-2 transition-all duration-300 group
@@ -685,6 +701,150 @@ const BinderPageOverview = ({
   const [activeId, setActiveId] = useState(null);
   const [activeDragData, setActiveDragData] = useState(null);
   const [currentHoverTarget, setCurrentHoverTarget] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1024
+  );
+  const [isDragging, setIsDragging] = useState(false);
+  const [autoScrollInterval, setAutoScrollInterval] = useState(null);
+  const [dragStartTime, setDragStartTime] = useState(null);
+
+  // Update window width on resize
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-scroll functionality during drag
+  const handleAutoScroll = useCallback(
+    (clientY, scrollContainer) => {
+      if (!scrollContainer || !isDragging || !dragStartTime) return;
+
+      // Add delay before auto-scroll starts (prevent immediate scrolling)
+      const dragDuration = Date.now() - dragStartTime;
+      const AUTO_SCROLL_DELAY = 800; // 800ms delay before auto-scroll can start
+
+      if (dragDuration < AUTO_SCROLL_DELAY) {
+        // Clear any existing interval if we're still in delay period
+        if (autoScrollInterval) {
+          clearInterval(autoScrollInterval);
+          setAutoScrollInterval(null);
+        }
+        return;
+      }
+
+      const containerRect = scrollContainer.getBoundingClientRect();
+      const scrollThreshold = 60; // Slightly larger threshold for better UX
+      const scrollSpeed = 8; // Slower, more controlled scrolling
+
+      const distanceFromTop = clientY - containerRect.top;
+      const distanceFromBottom = containerRect.bottom - clientY;
+
+      let shouldScroll = false;
+      let scrollDirection = 0;
+
+      if (distanceFromTop < scrollThreshold && scrollContainer.scrollTop > 0) {
+        // Near top edge, scroll up
+        scrollDirection = -scrollSpeed;
+        shouldScroll = true;
+      } else if (distanceFromBottom < scrollThreshold) {
+        // Near bottom edge, scroll down
+        const maxScroll =
+          scrollContainer.scrollHeight - scrollContainer.clientHeight;
+        if (scrollContainer.scrollTop < maxScroll) {
+          scrollDirection = scrollSpeed;
+          shouldScroll = true;
+        }
+      }
+
+      if (shouldScroll && !autoScrollInterval) {
+        const interval = setInterval(() => {
+          scrollContainer.scrollTop += scrollDirection;
+        }, 20); // Slightly slower refresh rate for smoother scrolling
+        setAutoScrollInterval(interval);
+      } else if (!shouldScroll && autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        setAutoScrollInterval(null);
+      }
+    },
+    [isDragging, autoScrollInterval, dragStartTime]
+  );
+
+  // Clean up auto-scroll interval
+  useEffect(() => {
+    return () => {
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+      }
+    };
+  }, [autoScrollInterval]);
+
+  // Modified scroll prevention - allow auto-scroll but prevent accidental scrolling
+  useEffect(() => {
+    const scrollContainer = document.querySelector(
+      ".page-overview-scroll-container"
+    );
+    if (!scrollContainer) return;
+
+    if (isDragging) {
+      // During drag, we manage scrolling manually via auto-scroll
+      scrollContainer.style.touchAction = "none";
+      scrollContainer.style.userSelect = "none";
+      scrollContainer.style.webkitUserSelect = "none";
+      scrollContainer.style.mozUserSelect = "none";
+      scrollContainer.style.msUserSelect = "none";
+      document.body.style.overflow = "hidden";
+      document.body.style.userSelect = "none";
+      document.body.style.webkitUserSelect = "none";
+
+      // Add mouse move listener for auto-scroll
+      const handleMouseMove = (e) => {
+        e.preventDefault(); // Prevent any default behavior during drag
+        handleAutoScroll(e.clientY, scrollContainer);
+      };
+
+      // Also handle touch move for mobile
+      const handleTouchMove = (e) => {
+        if (e.touches.length === 1) {
+          e.preventDefault(); // Prevent scrolling on mobile
+          handleAutoScroll(e.touches[0].clientY, scrollContainer);
+        }
+      };
+
+      document.addEventListener("mousemove", handleMouseMove, {
+        passive: false,
+      });
+      document.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+
+      return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("touchmove", handleTouchMove);
+        if (autoScrollInterval) {
+          clearInterval(autoScrollInterval);
+          setAutoScrollInterval(null);
+        }
+      };
+    } else {
+      // Re-enable normal scrolling when not dragging
+      scrollContainer.style.touchAction = "auto";
+      scrollContainer.style.userSelect = "auto";
+      scrollContainer.style.webkitUserSelect = "auto";
+      scrollContainer.style.mozUserSelect = "auto";
+      scrollContainer.style.msUserSelect = "auto";
+      document.body.style.overflow = "";
+      document.body.style.userSelect = "";
+      document.body.style.webkitUserSelect = "";
+
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        setAutoScrollInterval(null);
+      }
+    }
+  }, [isDragging, handleAutoScroll, autoScrollInterval]);
 
   const gridConfig = getGridConfig(currentBinder.settings?.gridSize || "3x3");
 
@@ -725,9 +885,12 @@ const BinderPageOverview = ({
     (e) => {
       if (e.key === "Control" && !isCtrlPressed) {
         setIsCtrlPressed(true);
+      } else if (e.key === "Escape" && isDragging) {
+        // Cancel drag operation on Escape
+        handleDragCancel();
       }
     },
-    [isCtrlPressed]
+    [isCtrlPressed, isDragging]
   );
 
   const handleKeyUp = useCallback(
@@ -758,8 +921,19 @@ const BinderPageOverview = ({
       setSelectedPages(new Set());
       setSelectedBinderPages(new Set());
       setCardSelectionActive(false);
+      setIsDragging(false);
+      setDragStartTime(null);
+      setActiveId(null);
+      setActiveDragData(null);
+      setCurrentHoverTarget(null);
+
+      // Clean up auto-scroll
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        setAutoScrollInterval(null);
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, autoScrollInterval]);
 
   // Drag handlers for custom overlay
   const handleDragStart = (event) => {
@@ -767,6 +941,8 @@ const BinderPageOverview = ({
     setActiveId(event.active.id);
     setActiveDragData(event.active.data.current);
     setCurrentHoverTarget(null);
+    setIsDragging(true);
+    setDragStartTime(Date.now());
   };
 
   const handleDragOver = (event) => {
@@ -785,6 +961,14 @@ const BinderPageOverview = ({
     setActiveId(null);
     setActiveDragData(null);
     setCurrentHoverTarget(null);
+    setIsDragging(false);
+    setDragStartTime(null);
+
+    // Clean up auto-scroll
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+      setAutoScrollInterval(null);
+    }
 
     if (!active || !over) return;
 
@@ -804,6 +988,21 @@ const BinderPageOverview = ({
       if (!sourcePages.includes(targetPage)) {
         handleMoveCardPages(sourcePages, targetPage);
       }
+    }
+  };
+
+  const handleDragCancel = () => {
+    console.log("DndContext handleDragCancel");
+    setActiveId(null);
+    setActiveDragData(null);
+    setCurrentHoverTarget(null);
+    setIsDragging(false);
+    setDragStartTime(null);
+
+    // Clean up auto-scroll
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+      setAutoScrollInterval(null);
     }
   };
 
@@ -1310,21 +1509,57 @@ const BinderPageOverview = ({
   const isSelectionActive =
     selectionMode === "cardPages" && (isCtrlPressed || cardSelectionActive);
 
+  const isMobile = windowWidth < MOBILE_BREAKPOINT;
+
+  // Calculate modal height for mobile to account for navigation bar
+  const modalHeight = isMobile
+    ? `calc(100vh - ${NAVBAR_HEIGHT}px - ${MOBILE_PADDING}px)`
+    : "90vh";
+
+  const modalTop = isMobile
+    ? `${NAVBAR_HEIGHT + MOBILE_PADDING / 2}px`
+    : "auto";
+
   return (
     <>
       <div
-        className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 md:p-6"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm"
         onClick={handleBackdropClick}
+        style={isMobile ? { paddingTop: modalTop } : { padding: "1rem" }}
       >
-        <div className="bg-white rounded-none sm:rounded-3xl shadow-2xl w-full h-full sm:max-w-7xl sm:max-h-[90vh] overflow-hidden flex flex-col">
+        <div
+          className={`bg-white shadow-2xl w-full overflow-hidden flex flex-col ${
+            isMobile ? "rounded-none h-full" : "rounded-3xl max-w-7xl"
+          }`}
+          style={
+            isMobile
+              ? {
+                  height: modalHeight,
+                  maxHeight: `calc(100vh - ${NAVBAR_HEIGHT}px - ${MOBILE_PADDING}px)`,
+                }
+              : { maxHeight: "90vh" }
+          }
+        >
           {/* Header */}
-          <div className="p-4 sm:p-6 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100">
+          <div
+            className={`border-b border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 ${
+              isMobile ? "p-3" : "p-4 sm:p-6"
+            }`}
+          >
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-shrink-0">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1">
+                <h2
+                  className={`font-bold text-slate-900 mb-1 ${
+                    isMobile ? "text-lg" : "text-xl sm:text-2xl"
+                  }`}
+                >
                   📚 Page Overview
                 </h2>
-                <p className="text-slate-600 text-xs sm:text-sm">
+                <p
+                  className={`text-slate-600 ${
+                    isMobile ? "text-xs" : "text-xs sm:text-sm"
+                  }`}
+                >
                   {currentBinder.metadata?.name} • {totalCards} cards •{" "}
                   {gridConfig.name} grid
                 </p>
@@ -1432,10 +1667,16 @@ const BinderPageOverview = ({
                 )}
                 <button
                   onClick={onClose}
-                  className="p-3 hover:bg-slate-100 rounded-lg transition-colors"
+                  className={`hover:bg-slate-100 rounded-lg transition-colors ${
+                    isMobile ? "p-2" : "p-3"
+                  }`}
                   title="Close Overview"
                 >
-                  <XMarkIcon className="w-6 h-6 text-slate-600 hover:text-slate-800" />
+                  <XMarkIcon
+                    className={`text-slate-600 hover:text-slate-800 ${
+                      isMobile ? "w-5 h-5" : "w-6 h-6"
+                    }`}
+                  />
                 </button>
               </div>
             </div>
@@ -1443,7 +1684,11 @@ const BinderPageOverview = ({
 
           {/* Card Pages Grid */}
           <div
-            className="flex-1 overflow-auto p-4 sm:p-8"
+            className={`flex-1 page-overview-scroll-container overflow-auto relative `}
+            style={{
+              touchAction: isDragging ? "none" : "auto",
+              userSelect: isDragging ? "none" : "auto",
+            }}
             onClick={handleBackgroundClick}
           >
             <DndContext
@@ -1451,7 +1696,27 @@ const BinderPageOverview = ({
               onDragStart={handleDragStart}
               onDragOver={handleDragOver}
               onDragEnd={handleDragEnd}
+              onDragCancel={handleDragCancel}
             >
+              {/* Auto-scroll indicators - only show on mobile when auto-scroll is ready */}
+              {isMobile &&
+                isDragging &&
+                dragStartTime &&
+                Date.now() - dragStartTime >= 800 && (
+                  <>
+                    {/* Top scroll zone indicator */}
+                    <div
+                      className={`sticky top-0 h-12 bg-gradient-to-b from-blue-500/20 to-transparent pointer-events-none z-50 flex items-center justify-center -mb-12 ${
+                        isMobile ? "-mx-3" : "-mx-4 sm:-mx-8"
+                      }`}
+                    >
+                      <div className="text-blue-600 text-xs font-medium animate-pulse">
+                        ↑ Drag here to scroll up
+                      </div>
+                    </div>
+                  </>
+                )}
+
               <div className="flex flex-col lg:flex-row lg:flex-wrap gap-8">
                 {Object.entries(pageGroups).map(([groupNum, groupPages]) => {
                   const binderPageNum = parseInt(groupNum);
@@ -1618,6 +1883,7 @@ const BinderPageOverview = ({
                                   showHeader={false}
                                   currentHoverTarget={currentHoverTarget}
                                   activeDragData={activeDragData}
+                                  isMobile={isMobile}
                                 />
                               </div>
                             </div>
@@ -1628,6 +1894,20 @@ const BinderPageOverview = ({
                   );
                 })}
               </div>
+
+              {/* Bottom scroll zone indicator */}
+              {isMobile &&
+                isDragging &&
+                dragStartTime &&
+                Date.now() - dragStartTime >= 800 && (
+                  <div
+                    className={`sticky bottom-0 h-12 bg-gradient-to-t from-blue-500/20 to-transparent pointer-events-none z-50 flex items-center justify-center`}
+                  >
+                    <div className="text-blue-600 text-xs font-medium animate-pulse">
+                      ↓ Drag here to scroll down
+                    </div>
+                  </div>
+                )}
 
               {/* Custom DragOverlay for Multi-Selection */}
               <DragOverlay>
@@ -1732,7 +2012,11 @@ const BinderPageOverview = ({
           </div>
 
           {/* Footer */}
-          <div className="border-t border-slate-200 px-4 sm:px-8 py-4 sm:py-6 bg-gradient-to-r from-slate-50 to-slate-100">
+          <div
+            className={`border-t border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 ${
+              isMobile ? "px-3 py-3" : "px-4 sm:px-8 py-4 sm:py-6"
+            }`}
+          >
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center space-x-4 sm:space-x-8 text-xs sm:text-sm">
                 <div className="text-slate-600">

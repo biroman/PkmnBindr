@@ -7,12 +7,13 @@ import {
   Squares2X2Icon,
   SwatchIcon,
   DocumentArrowDownIcon,
+  DocumentPlusIcon,
   TrashIcon,
   XMarkIcon,
   AdjustmentsHorizontalIcon,
   EllipsisVerticalIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const BinderNavigation = ({
   navigation,
@@ -38,6 +39,29 @@ const BinderNavigation = ({
 
   // Mobile more menu state - must be at top level to avoid conditional hook calls
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef(null);
+
+  // Handle click outside to close more menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMoreMenuOpen &&
+        moreMenuRef.current &&
+        !moreMenuRef.current.contains(event.target)
+      ) {
+        setIsMoreMenuOpen(false);
+      }
+    };
+
+    if (isMoreMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener("touchstart", handleClickOutside);
+      };
+    }
+  }, [isMoreMenuOpen]);
 
   // Set up droppable for delete zone
   const { isOver: isOverDelete, setNodeRef: setDeleteRef } = useDroppable({
@@ -261,20 +285,29 @@ const BinderNavigation = ({
               </div>
               <button
                 onClick={showAddPage && !canGoNext ? onAddPage : goToNextPage}
-                className="flex items-center justify-center w-12 h-11 bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-colors"
+                disabled={!showAddPage && !canGoNext}
+                className={`flex items-center justify-center w-12 h-11 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                  showAddPage && !canGoNext
+                    ? "border-2 border-blue-500 text-blue-600 hover:bg-blue-50 bg-white"
+                    : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                }`}
                 title={showAddPage && !canGoNext ? "Add Page" : "Next Page"}
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                {showAddPage && !canGoNext ? (
+                  <DocumentPlusIcon className="w-5 h-5" />
+                ) : (
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
 
@@ -290,7 +323,7 @@ const BinderNavigation = ({
                 </button>
               )}
               {/* "More" Menu */}
-              <div className="relative">
+              <div className="relative" ref={moreMenuRef}>
                 <button
                   onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
                   className="flex items-center justify-center w-11 h-11 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"

@@ -6,6 +6,7 @@ import ContactLimitsManager from "../components/admin/ContactLimitsManager";
 import { announcementService } from "../services/AnnouncementService";
 import AnnouncementManagement from "../components/admin/AnnouncementManagement";
 import StaticBinderGenerator from "../components/admin/StaticBinderGenerator";
+import ChangelogCleanupTool from "../components/admin/ChangelogCleanupTool";
 
 // Import Phase 2 components
 import {
@@ -888,6 +889,7 @@ const AdminPage = () => {
                 formatDate={formatDate}
               />
             )}
+            {activeTab === "changelog-cleanup" && <ChangelogCleanupTool />}
           </div>
         </div>
       </div>

@@ -99,15 +99,33 @@ const generateChangeId = () =>
 // Sync helper functions
 const markBinderAsModified = (binder, changeType, changeData, userId) => {
   const now = new Date().toISOString();
-  const changeId = generateChangeId();
 
-  const change = {
-    id: changeId,
-    timestamp: now,
-    type: changeType,
-    userId: userId || "local_user",
-    data: changeData,
-  };
+  // Skip changelog creation for card movements - they're not used anywhere and cause storage bloat
+  const skipChangelogTypes = ["card_moved", "card_moved_optimistic"];
+
+  let cleanedChangelog = [...(binder.changelog || [])];
+  let change = null;
+
+  // Only create changelog entries for meaningful actions
+  if (!skipChangelogTypes.includes(changeType)) {
+    const changeId = generateChangeId();
+
+    change = {
+      id: changeId,
+      timestamp: now,
+      type: changeType,
+      userId: userId || "local_user",
+      data: changeData,
+    };
+
+    // Add the new change
+    cleanedChangelog.push(change);
+
+    // Limit changelog size to prevent storage bloat (keep last 20 entries for truly important changes)
+    if (cleanedChangelog.length > 20) {
+      cleanedChangelog = cleanedChangelog.slice(-20);
+    }
+  }
 
   return {
     ...binder,
@@ -117,9 +135,11 @@ const markBinderAsModified = (binder, changeType, changeData, userId) => {
     sync: {
       ...binder.sync,
       status: "local", // Mark as having local changes
-      pendingChanges: [...(binder.sync?.pendingChanges || []), change],
+      pendingChanges: change
+        ? [...(binder.sync?.pendingChanges || []), change]
+        : binder.sync?.pendingChanges || [],
     },
-    changelog: [...(binder.changelog || []), change],
+    changelog: cleanedChangelog,
   };
 };
 
@@ -416,6 +436,78 @@ const migrateBinder = (oldBinder) => {
   };
 
   return migratedBinder;
+};
+
+// Utility function to clean up bloated changelogs in existing binders
+const cleanupBinderChangelog = (binder) => {
+  if (!binder.changelog || binder.changelog.length <= 100) {
+    return binder; // No cleanup needed
+  }
+
+  console.log(
+    `Cleaning up changelog for binder ${binder.id}: ${binder.changelog.length} entries -> 100 entries`
+  );
+
+  // Remove optimistic entries that have corresponding final entries
+  let cleanedChangelog = [...binder.changelog];
+
+  // Group entries by card and timestamp to find optimistic/final pairs
+  const cardMoves = new Map();
+
+  cleanedChangelog.forEach((entry, index) => {
+    if (entry.type === "card_moved" || entry.type === "card_moved_optimistic") {
+      const cardId = entry.data?.cardId;
+      const timestamp = new Date(entry.timestamp).getTime();
+
+      if (cardId) {
+        if (!cardMoves.has(cardId)) {
+          cardMoves.set(cardId, []);
+        }
+        cardMoves.get(cardId).push({ entry, index, timestamp });
+      }
+    }
+  });
+
+  // Find optimistic entries to remove
+  const indicesToRemove = new Set();
+
+  cardMoves.forEach((moves) => {
+    moves.sort((a, b) => a.timestamp - b.timestamp);
+
+    for (let i = 0; i < moves.length - 1; i++) {
+      const currentMove = moves[i];
+      const nextMove = moves[i + 1];
+
+      // If current is optimistic and next is final within 30 seconds, mark optimistic for removal
+      if (
+        currentMove.entry.type === "card_moved_optimistic" &&
+        nextMove.entry.type === "card_moved" &&
+        nextMove.timestamp - currentMove.timestamp < 30000
+      ) {
+        indicesToRemove.add(currentMove.index);
+      }
+    }
+  });
+
+  // Remove optimistic entries
+  if (indicesToRemove.size > 0) {
+    cleanedChangelog = cleanedChangelog.filter(
+      (_, index) => !indicesToRemove.has(index)
+    );
+    console.log(`Removed ${indicesToRemove.size} optimistic entries`);
+  }
+
+  // Limit to last 100 entries
+  if (cleanedChangelog.length > 100) {
+    cleanedChangelog = cleanedChangelog.slice(-100);
+  }
+
+  return {
+    ...binder,
+    changelog: cleanedChangelog,
+    version: (binder.version || 0) + 1,
+    lastModified: new Date().toISOString(),
+  };
 };
 
 // Binder Context Provider
@@ -1783,12 +1875,53 @@ export const BinderProvider = ({ children }) => {
   const clearAllData = useCallback(() => {
     setBinders([]);
     setCurrentBinder(null);
-    storage.remove(STORAGE_KEYS.BINDERS);
+    localStorage.removeItem(STORAGE_KEYS.BINDERS);
     storage.remove(STORAGE_KEYS.CURRENT_BINDER);
     toast.success("All binder data cleared");
   }, []);
 
-  // Export data
+  // Cleanup changelogs for all binders (fix for bloated changelogs)
+  const cleanupAllBinderChangelogs = useCallback(() => {
+    setBinders((prevBinders) => {
+      const cleanedBinders = prevBinders.map((binder) => {
+        const originalLength = binder.changelog?.length || 0;
+        if (originalLength > 100) {
+          const cleanedBinder = cleanupBinderChangelog(binder);
+          console.log(
+            `Cleaned binder ${
+              binder.metadata?.name || binder.id
+            }: ${originalLength} -> ${cleanedBinder.changelog.length} entries`
+          );
+          return cleanedBinder;
+        }
+        return binder;
+      });
+
+      // Save cleaned data
+      storage.set(STORAGE_KEYS.BINDERS, cleanedBinders);
+
+      // Show summary
+      const cleanedCount = cleanedBinders.filter(
+        (binder, index) =>
+          (binder.changelog?.length || 0) !==
+          (prevBinders[index]?.changelog?.length || 0)
+      ).length;
+
+      if (cleanedCount > 0) {
+        toast.success(
+          `Cleaned up changelogs for ${cleanedCount} binder${
+            cleanedCount > 1 ? "s" : ""
+          }`
+        );
+      } else {
+        toast.success("No bloated changelogs found");
+      }
+
+      return cleanedBinders;
+    });
+  }, []);
+
+  // Export binder data
   const exportBinderData = useCallback(() => {
     try {
       const data = {
@@ -3356,6 +3489,7 @@ export const BinderProvider = ({ children }) => {
 
     // Utilities
     clearAllData,
+    cleanupAllBinderChangelogs,
     exportBinderData,
     importBinderData,
 
