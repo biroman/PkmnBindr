@@ -74,6 +74,12 @@ const BinderDisplay = ({
               isMobile={true}
               fullScreen={true}
               dimensions={dimensions}
+              showCardBackForEmpty={
+                binder.settings?.showCardBackForEmpty || false
+              }
+              showCardBackForMissing={
+                binder.settings?.showCardBackForMissing || false
+              }
             />
           )}
         </div>
@@ -113,6 +119,10 @@ const BinderDisplay = ({
           missingPositions={binder.metadata?.missingInstances || []}
           backgroundColor={backgroundColor}
           isReadOnly={isReadOnly}
+          showCardBackForEmpty={binder.settings?.showCardBackForEmpty || false}
+          showCardBackForMissing={
+            binder.settings?.showCardBackForMissing || false
+          }
         />
       )}
 
@@ -134,6 +144,10 @@ const BinderDisplay = ({
         missingPositions={binder.metadata?.missingInstances || []}
         backgroundColor={backgroundColor}
         isReadOnly={isReadOnly}
+        showCardBackForEmpty={binder.settings?.showCardBackForEmpty || false}
+        showCardBackForMissing={
+          binder.settings?.showCardBackForMissing || false
+        }
       />
     </div>
   );

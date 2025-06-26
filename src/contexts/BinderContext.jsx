@@ -45,9 +45,13 @@ const DEFAULT_BINDER_SETTINGS = {
   viewMode: "grid",
   autoSort: false,
   sortBy: "custom",
+  sortDirection: "asc", // asc or desc
   showGridNumbers: false,
   cardBackUrl: null,
   binderColor: "#ffffff", // Default white color
+  // Card back display settings
+  showCardBackForEmpty: false, // Show card back instead of empty slots
+  showCardBackForMissing: false, // Show card back instead of missing card overlay
   // Page management
   minPages: 1, // Minimum number of pages (including cover)
   maxPages: 100, // Maximum number of pages allowed
@@ -3290,96 +3294,41 @@ export const BinderProvider = ({ children }) => {
 
   // Sorting functionality
   const sortBinder = useCallback(
-    async (binderId, sortBy) => {
-      if (!binderId) {
-        throw new Error("Binder ID is required");
-      }
-
-      const { sortCards, isValidSortOption } = await import(
-        "../utils/binderSorting"
-      );
-
-      if (!isValidSortOption(sortBy)) {
-        throw new Error(`Invalid sort option: ${sortBy}`);
-      }
-
+    (binderId, sortBy, sortDirection) => {
       try {
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
-          // If sorting to custom, no need to rearrange cards
-          if (sortBy === "custom") {
-            return markBinderAsModified(
-              {
-                ...binder,
-                settings: {
-                  ...binder.settings,
-                  sortBy: "custom",
-                },
-              },
-              "settings_updated",
-              { sortBy: "custom" },
-              user?.uid || binder.ownerId
-            );
-          }
+          // Get the sorting function from the utility
+          const sortedCards = sortCards(binder.cards, sortBy, sortDirection);
 
-          // Sort the cards
-          const sortedCards = sortCards(binder.cards || {}, sortBy);
-
-          // Update the binder with sorted cards and new setting
           const updatedBinder = {
             ...binder,
             cards: sortedCards,
-            settings: {
-              ...binder.settings,
-              sortBy,
-            },
           };
 
+          // Use markBinderAsModified to properly track changes
           return markBinderAsModified(
             updatedBinder,
-            "cards_sorted",
-            {
-              sortBy,
-              cardCount: Object.keys(sortedCards).length,
-            },
-            user?.uid || binder.ownerId
+            "binder_sorted",
+            { sortBy, sortDirection },
+            binder.ownerId
           );
         };
 
-        // Update binders state and ensure currentBinder is synchronized
-        setBinders((prev) => {
-          const updatedBinders = prev.map(updateBinder);
+        setBinders((prev) => prev.map(updateBinder));
 
-          // If the current binder is being sorted, update it synchronously
-          if (currentBinder?.id === binderId) {
-            const updatedCurrentBinder = updatedBinders.find(
-              (b) => b.id === binderId
-            );
-            if (updatedCurrentBinder) {
-              setCurrentBinder(updatedCurrentBinder);
-            }
-          }
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
 
-          return updatedBinders;
-        });
-
-        // Invalidate cache since we modified binder data
-        invalidateCache();
-
-        // Show success message
-        const { getSortDisplayInfo } = await import("../utils/binderSorting");
-        const sortInfo = getSortDisplayInfo(sortBy);
-        toast.success(`Cards sorted by ${sortInfo.label.toLowerCase()}`);
-
-        return true;
+        toast.success(`Binder sorted by ${sortBy}`);
       } catch (error) {
         console.error("Failed to sort binder:", error);
-        toast.error("Failed to sort cards");
-        throw error;
+        toast.error("Failed to sort binder");
       }
     },
-    [binders, currentBinder, user, invalidateCache]
+    [currentBinder]
   );
 
   // Update auto-sort setting

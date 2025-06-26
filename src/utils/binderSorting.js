@@ -205,14 +205,14 @@ const getTypeWeight = (types) => {
 /**
  * Sort cards by set name, then by card number within set
  */
-const sortBySet = (cardsArray) => {
+const sortBySet = (cardsArray, direction = "asc") => {
   return cardsArray.sort((a, b) => {
     const aSet = a.cardData?.set?.name || "";
     const bSet = b.cardData?.set?.name || "";
 
     // First sort by set name
     const setComparison = aSet.localeCompare(bSet);
-    if (setComparison !== 0) return setComparison;
+    let comparison = setComparison;
 
     // Then sort by card number within the same set
     const aNumber = parseCardNumber(a.cardData?.number);
@@ -220,23 +220,21 @@ const sortBySet = (cardsArray) => {
 
     // Compare prefix first
     if (aNumber.prefix !== bNumber.prefix) {
-      return aNumber.prefix.localeCompare(bNumber.prefix);
+      comparison = aNumber.prefix.localeCompare(bNumber.prefix);
+    } else if (aNumber.numeric !== bNumber.numeric) {
+      comparison = aNumber.numeric - bNumber.numeric;
+    } else {
+      comparison = aNumber.suffix.localeCompare(bNumber.suffix);
     }
 
-    // Then numeric part
-    if (aNumber.numeric !== bNumber.numeric) {
-      return aNumber.numeric - bNumber.numeric;
-    }
-
-    // Finally suffix
-    return aNumber.suffix.localeCompare(bNumber.suffix);
+    return direction === "asc" ? comparison : -comparison;
   });
 };
 
 /**
  * Sort cards by rarity hierarchy
  */
-const sortByRarity = (cardsArray) => {
+const sortByRarity = (cardsArray, direction = "asc") => {
   return cardsArray.sort((a, b) => {
     const aRarity = a.cardData?.rarity || "";
     const bRarity = b.cardData?.rarity || "";
@@ -244,57 +242,48 @@ const sortByRarity = (cardsArray) => {
     const aWeight = getRarityWeight(aRarity);
     const bWeight = getRarityWeight(bRarity);
 
+    let comparison = 0;
     if (aWeight !== bWeight) {
-      return aWeight - bWeight;
+      comparison = aWeight - bWeight;
+    } else {
+      // Secondary sort by name if rarity is the same
+      const aName = a.cardData?.name || "";
+      const bName = b.cardData?.name || "";
+      comparison = aName.localeCompare(bName);
     }
 
-    // Secondary sort by set name
-    const aSet = a.cardData?.set?.name || "";
-    const bSet = b.cardData?.set?.name || "";
-    const setComparison = aSet.localeCompare(bSet);
-    if (setComparison !== 0) return setComparison;
-
-    // Tertiary sort by card number
-    const aNumber = parseCardNumber(a.cardData?.number);
-    const bNumber = parseCardNumber(b.cardData?.number);
-    return aNumber.numeric - bNumber.numeric;
+    return direction === "asc" ? comparison : -comparison;
   });
 };
 
 /**
  * Sort cards by card number across all sets
  */
-const sortByNumber = (cardsArray) => {
+const sortByNumber = (cardsArray, direction = "asc") => {
   return cardsArray.sort((a, b) => {
     const aNumber = parseCardNumber(a.cardData?.number);
     const bNumber = parseCardNumber(b.cardData?.number);
 
+    let comparison = 0;
     // Compare prefix first
     if (aNumber.prefix !== bNumber.prefix) {
-      return aNumber.prefix.localeCompare(bNumber.prefix);
+      comparison = aNumber.prefix.localeCompare(bNumber.prefix);
+    } else if (aNumber.numeric !== bNumber.numeric) {
+      // Then numeric part
+      comparison = aNumber.numeric - bNumber.numeric;
+    } else {
+      // Finally suffix
+      comparison = aNumber.suffix.localeCompare(bNumber.suffix);
     }
 
-    // Then numeric part
-    if (aNumber.numeric !== bNumber.numeric) {
-      return aNumber.numeric - bNumber.numeric;
-    }
-
-    // Finally suffix
-    if (aNumber.suffix !== bNumber.suffix) {
-      return aNumber.suffix.localeCompare(bNumber.suffix);
-    }
-
-    // Quaternary sort by set name
-    const aSet = a.cardData?.set?.name || "";
-    const bSet = b.cardData?.set?.name || "";
-    return aSet.localeCompare(bSet);
+    return direction === "asc" ? comparison : -comparison;
   });
 };
 
 /**
  * Sort cards by Pokemon type
  */
-const sortByType = (cardsArray) => {
+const sortByType = (cardsArray, direction = "asc") => {
   return cardsArray.sort((a, b) => {
     const aTypes = a.cardData?.types || [];
     const bTypes = b.cardData?.types || [];
@@ -302,98 +291,89 @@ const sortByType = (cardsArray) => {
     const aWeight = getTypeWeight(aTypes);
     const bWeight = getTypeWeight(bTypes);
 
+    let comparison = 0;
     if (aWeight !== bWeight) {
-      return aWeight - bWeight;
+      comparison = aWeight - bWeight;
+    } else {
+      // Secondary sort by number if type is the same
+      const aNumber = parseCardNumber(a.cardData?.number);
+      const bNumber = parseCardNumber(b.cardData?.number);
+      if (aNumber.numeric !== bNumber.numeric) {
+        comparison = aNumber.numeric - bNumber.numeric;
+      } else {
+        comparison = aNumber.suffix.localeCompare(bNumber.suffix);
+      }
     }
 
-    // Secondary sort by rarity
-    const aRarity = getRarityWeight(a.cardData?.rarity);
-    const bRarity = getRarityWeight(b.cardData?.rarity);
-    if (aRarity !== bRarity) {
-      return aRarity - bRarity;
-    }
-
-    // Tertiary sort by set name
-    const aSet = a.cardData?.set?.name || "";
-    const bSet = b.cardData?.set?.name || "";
-    const setComparison = aSet.localeCompare(bSet);
-    if (setComparison !== 0) return setComparison;
-
-    // Quaternary sort by card number
-    const aNumber = parseCardNumber(a.cardData?.number);
-    const bNumber = parseCardNumber(b.cardData?.number);
-    return aNumber.numeric - bNumber.numeric;
+    return direction === "asc" ? comparison : -comparison;
   });
 };
 
 /**
  * Sort cards by name alphabetically
  */
-const sortByName = (cardsArray) => {
+const sortByName = (cardsArray, direction = "asc") => {
   return cardsArray.sort((a, b) => {
     const aName = a.cardData?.name || "";
     const bName = b.cardData?.name || "";
-    return aName.localeCompare(bName);
+    const comparison = aName.localeCompare(bName);
+    return direction === "asc" ? comparison : -comparison;
   });
 };
 
 /**
- * Main sorting function that handles all sort types
+ * Main sorting function
+ * @param {object} cards - The cards object from the binder
+ * @param {string} sortBy - The sort key (e.g., 'rarity', 'number')
+ * @param {string} sortDirection - The sort direction ('asc' or 'desc')
+ * @returns {object} - The sorted cards object
  */
-export const sortCards = (cards, sortBy) => {
+export const sortCards = (cards, sortBy, sortDirection = "asc") => {
   if (!cards || typeof cards !== "object") {
-    console.warn("Invalid cards object provided to sortCards");
+    console.warn("sortCards: cards parameter is not a valid object", cards);
     return {};
   }
 
-  try {
-    // Convert position-based object to array with position info
-    const cardsArray = Object.entries(cards).map(([position, cardData]) => ({
-      ...cardData,
-      originalPosition: parseInt(position, 10),
-    }));
+  const cardsArray = Object.entries(cards).map(([position, cardData]) => ({
+    ...cardData,
+    originalPosition: parseInt(position, 10),
+  }));
 
-    if (cardsArray.length === 0) {
-      return cards; // Return original if empty
-    }
-
-    let sortedArray;
-
-    switch (sortBy) {
-      case "set":
-        sortedArray = sortBySet(cardsArray);
-        break;
-      case "rarity":
-        sortedArray = sortByRarity(cardsArray);
-        break;
-      case "number":
-        sortedArray = sortByNumber(cardsArray);
-        break;
-      case "type":
-        sortedArray = sortByType(cardsArray);
-        break;
-
-      case "name":
-        sortedArray = sortByName(cardsArray);
-        break;
-      case "custom":
-      default:
-        // Return original order for custom sorting
-        return cards;
-    }
-
-    // Convert back to position-based object with new positions
-    const sortedCards = {};
-    sortedArray.forEach((cardData, index) => {
-      const { originalPosition, ...cleanCardData } = cardData;
-      sortedCards[index.toString()] = cleanCardData;
-    });
-
-    return sortedCards;
-  } catch (error) {
-    console.error("Error sorting cards:", error);
-    return cards; // Return original cards on error
+  let sortedArray;
+  switch (sortBy) {
+    case "set":
+      sortedArray = sortBySet(cardsArray, sortDirection); // Pass direction
+      break;
+    case "rarity":
+      sortedArray = sortByRarity(cardsArray, sortDirection); // Pass direction
+      break;
+    case "number":
+      sortedArray = sortByNumber(cardsArray, sortDirection); // Pass direction
+      break;
+    case "type":
+      sortedArray = sortByType(cardsArray, sortDirection); // Pass direction
+      break;
+    case "name":
+      sortedArray = sortByName(cardsArray, sortDirection); // Pass direction
+      break;
+    case "custom":
+    default:
+      // For custom, just sort by original position to maintain order
+      sortedArray = cardsArray.sort(
+        (a, b) => a.originalPosition - b.originalPosition
+      );
+      break;
   }
+
+  // Reconstruct the cards object with new positions (0-indexed)
+  const sortedCardsObject = {};
+  sortedArray.forEach((card, index) => {
+    // eslint-disable-next-line no-unused-vars
+    const { originalPosition, ...cardData } = card; // Omit originalPosition
+    sortedCardsObject[index.toString()] = cardData;
+  });
+
+  return sortedCardsObject;
 };
 
 /**
@@ -417,9 +397,44 @@ export const isValidSortOption = (sortBy) => {
 };
 
 /**
- * Get sort display info
+ * Get display info for a given sort key
+ * @param {string} sortBy - The sort key
+ * @returns {object} - { label, icon }
  */
 export const getSortDisplayInfo = (sortBy) => {
-  const option = getSortOptions().find((opt) => opt.value === sortBy);
-  return option || getSortOptions()[0]; // Default to custom
+  const options = getSortOptions();
+  return (
+    options.find((option) => option.value === sortBy) || {
+      label: "Custom Order",
+      icon: "Target",
+    }
+  );
+};
+
+/**
+ * Get display info for a given sort key and direction
+ * @param {string} sortBy - The sort key
+ * @param {string} sortDirection - The sort direction ('asc' or 'desc')
+ * @returns {object} - { label, icon }
+ */
+export const getSortDirectionInfo = (sortBy, sortDirection) => {
+  const isAsc = sortDirection === "asc";
+  switch (sortBy) {
+    case "rarity":
+    case "number":
+      return {
+        label: isAsc ? "Low to High" : "High to Low",
+      };
+    case "name":
+    case "set":
+      return {
+        label: isAsc ? "A-Z" : "Z-A",
+      };
+    case "type":
+      return {
+        label: isAsc ? "Default Order" : "Reversed Order",
+      };
+    default:
+      return { label: "" };
+  }
 };

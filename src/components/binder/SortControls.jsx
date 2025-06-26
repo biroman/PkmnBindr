@@ -4,9 +4,23 @@ import {
   ArrowsUpDownIcon,
   CheckIcon,
   CogIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
 } from "@heroicons/react/24/outline";
-import { Target, BookOpen, Gem, Hash, Tag, SortAsc } from "lucide-react";
-import { getSortOptions, getSortDisplayInfo } from "../../utils/binderSorting";
+import {
+  Target,
+  BookOpen,
+  Gem,
+  Hash,
+  Tag,
+  SortAsc,
+  SortDesc,
+} from "lucide-react";
+import {
+  getSortOptions,
+  getSortDisplayInfo,
+  getSortDirectionInfo,
+} from "../../utils/binderSorting";
 import TypeOrderCustomizer from "./TypeOrderCustomizer";
 
 // Map icon names to icon components
@@ -17,6 +31,7 @@ const IconMap = {
   Hash,
   Tag,
   SortAsc,
+  SortDesc,
 };
 
 // Helper function to render icon component
@@ -27,8 +42,10 @@ const renderIcon = (iconName, className = "w-4 h-4") => {
 
 const SortControls = ({
   currentSortBy = "custom",
+  currentSortDirection = "asc",
   autoSort = false,
   onSortChange,
+  onSortDirectionChange,
   onAutoSortChange,
   disabled = false,
   className = "",
@@ -40,6 +57,10 @@ const SortControls = ({
 
   const sortOptions = getSortOptions();
   const currentSortInfo = getSortDisplayInfo(currentSortBy);
+  const currentDirectionInfo = getSortDirectionInfo(
+    currentSortBy,
+    currentSortDirection
+  );
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -63,7 +84,14 @@ const SortControls = ({
 
   const handleSortSelect = (sortValue) => {
     onSortChange?.(sortValue);
+    // When changing sort type, reset direction to default 'asc'
+    onSortDirectionChange?.("asc");
     setIsDropdownOpen(false);
+  };
+
+  const handleToggleDirection = () => {
+    const newDirection = currentSortDirection === "asc" ? "desc" : "asc";
+    onSortDirectionChange?.(newDirection);
   };
 
   const handleToggleAutoSort = () => {
@@ -77,10 +105,13 @@ const SortControls = ({
     }
   };
 
+  const supportsDirection =
+    currentSortBy !== "custom" && currentDirectionInfo.label;
+
   return (
-    <div className={`space-y-2 ${className}`}>
-      {/* Top Row: Sort Dropdown + Auto-sort Toggle */}
-      <div className="flex items-center justify-between gap-3">
+    <div className={`space-y-3 ${className}`}>
+      {/* Primary Row: Sort Dropdown + Direction Toggle */}
+      <div className="flex items-center gap-2">
         {/* Sort Dropdown */}
         <div className="relative flex-1">
           <button
@@ -101,8 +132,10 @@ const SortControls = ({
             title="Sort binder cards"
           >
             <div className="flex items-center gap-2">
-              <ArrowsUpDownIcon className="w-4 h-4 text-gray-500" />
-              <span className="text-gray-700">{currentSortInfo.label}</span>
+              {renderIcon(currentSortInfo.icon, "w-4 h-4 text-gray-500")}
+              <span className="text-gray-700 font-medium">
+                {currentSortInfo.label}
+              </span>
             </div>
             <ChevronDownIcon
               className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
@@ -144,8 +177,77 @@ const SortControls = ({
           )}
         </div>
 
+        {/* Direction Toggle */}
+        <div className="relative">
+          <button
+            onClick={handleToggleDirection}
+            disabled={disabled || !supportsDirection}
+            className={`
+              flex-shrink-0 flex items-center justify-center gap-2 px-3 py-2 bg-white border rounded-md
+              text-sm font-medium text-gray-700 shadow-sm
+              transition-all duration-200
+              ${
+                disabled || !supportsDirection
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-gray-50 hover:border-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              }
+            `}
+            title={
+              supportsDirection
+                ? `Change sort order (current: ${currentDirectionInfo.label})`
+                : "Sort order not applicable"
+            }
+          >
+            {currentSortDirection === "asc" ? (
+              <SortAsc className="w-4 h-4 text-gray-500" />
+            ) : (
+              <SortDesc className="w-4 h-4 text-gray-500" />
+            )}
+            <span className="hidden sm:inline">
+              {currentDirectionInfo.label || "N/A"}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {/* Secondary Row: Auto-sort and other options */}
+      <div className="flex items-center justify-between pt-1">
+        {/* Type Customizer Button (only shown when sorting by type) */}
+        <div>
+          {currentSortBy === "type" && (
+            <button
+              onClick={() => setShowTypeCustomizer(true)}
+              disabled={disabled}
+              className={`
+              flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-md border transition-colors
+              ${
+                disabled
+                  ? "text-gray-400 border-gray-200 cursor-not-allowed"
+                  : "text-blue-600 border-blue-200 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-300"
+              }
+            `}
+              title="Customize type order"
+            >
+              <CogIcon className="w-3.5 h-3.5" />
+              Customize
+            </button>
+          )}
+        </div>
+
         {/* Auto-sort Toggle Switch */}
         <div className="flex items-center gap-2">
+          <span
+            className={`text-sm font-medium whitespace-nowrap ${
+              currentSortBy === "custom" ? "text-gray-400" : "text-gray-700"
+            }`}
+            title={
+              currentSortBy === "custom"
+                ? "Auto-sort not available for custom order"
+                : ""
+            }
+          >
+            Auto-sort
+          </span>
           <button
             onClick={handleToggleAutoSort}
             disabled={disabled || currentSortBy === "custom"}
@@ -183,46 +285,8 @@ const SortControls = ({
               `}
             />
           </button>
-          <span
-            className={`text-sm font-medium whitespace-nowrap ${
-              currentSortBy === "custom" ? "text-gray-400" : "text-gray-700"
-            }`}
-          >
-            Auto-sort
-          </span>
         </div>
       </div>
-
-      {/* Auto-sort Info Text */}
-      {autoSort && currentSortBy !== "custom" && (
-        <div className="px-1">
-          <p className="text-xs text-gray-500">
-            ✨ New cards will be automatically sorted when added
-          </p>
-        </div>
-      )}
-
-      {/* Bottom Row: Type Customizer Button (only shown when sorting by type) */}
-      {currentSortBy === "type" && (
-        <div className="flex justify-start">
-          <button
-            onClick={() => setShowTypeCustomizer(true)}
-            disabled={disabled}
-            className={`
-              flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-md border transition-colors
-              ${
-                disabled
-                  ? "text-gray-400 border-gray-200 cursor-not-allowed"
-                  : "text-blue-600 border-blue-200 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-300"
-              }
-            `}
-            title="Customize type order"
-          >
-            <CogIcon className="w-3.5 h-3.5" />
-            Customize Type Order
-          </button>
-        </div>
-      )}
 
       {/* Type Order Customizer Modal */}
       <TypeOrderCustomizer

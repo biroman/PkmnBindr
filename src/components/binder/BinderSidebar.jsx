@@ -581,6 +581,92 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
   );
 };
 
+const CardBackSettings = ({ binder, onSettingsChange }) => {
+  const handleToggleEmptyCardBack = () => {
+    const newValue = !binder.settings?.showCardBackForEmpty;
+    onSettingsChange("showCardBackForEmpty", newValue);
+    if (newValue) {
+      toast.success("Card backs will now show for empty slots");
+    } else {
+      toast.success("Empty slots will show add card prompt");
+    }
+  };
+
+  const handleToggleMissingCardBack = () => {
+    const newValue = !binder.settings?.showCardBackForMissing;
+    onSettingsChange("showCardBackForMissing", newValue);
+    if (newValue) {
+      toast.success(
+        "Missing cards will now show as card backs with hover preview"
+      );
+    } else {
+      toast.success("Missing cards will show with overlay indicator");
+    }
+  };
+
+  return (
+    <div className="space-y-3">
+      <label className="block text-sm font-medium text-slate-700">
+        Card Back Display
+      </label>
+
+      {/* Empty Slots Toggle */}
+      <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-200">
+        <div className="flex-1">
+          <div className="font-medium text-slate-700 text-sm">Empty Slots</div>
+          <div className="text-xs text-slate-500 mt-1">
+            Show card backs instead of "Add card" prompt
+          </div>
+        </div>
+        <button
+          onClick={handleToggleEmptyCardBack}
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+            binder.settings?.showCardBackForEmpty
+              ? "bg-blue-600"
+              : "bg-slate-300"
+          }`}
+        >
+          <span
+            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              binder.settings?.showCardBackForEmpty
+                ? "translate-x-6"
+                : "translate-x-1"
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Missing Cards Toggle */}
+      <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-200">
+        <div className="flex-1">
+          <div className="font-medium text-slate-700 text-sm">
+            Missing Cards
+          </div>
+          <div className="text-xs text-slate-500 mt-1">
+            Show card backs with hover preview instead of overlay
+          </div>
+        </div>
+        <button
+          onClick={handleToggleMissingCardBack}
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+            binder.settings?.showCardBackForMissing
+              ? "bg-blue-600"
+              : "bg-slate-300"
+          }`}
+        >
+          <span
+            className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              binder.settings?.showCardBackForMissing
+                ? "translate-x-6"
+                : "translate-x-1"
+            }`}
+          />
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const BinderSidebar = ({
   binder,
   onGridSizeChange,
@@ -588,11 +674,16 @@ const BinderSidebar = ({
   onCollapseChange,
   onSortChange,
   onAutoSortChange,
+  onSortDirectionChange,
   isCollapsed = false,
   isReadOnly = false,
   isMobile = false,
 }) => {
-  const { updateBinderMetadata, downloadBinderFromCloud } = useBinderContext();
+  const {
+    updateBinderMetadata,
+    downloadBinderFromCloud,
+    updateBinderSettings,
+  } = useBinderContext();
   const [showRevertModal, setShowRevertModal] = useState(false);
   const [isReverting, setIsReverting] = useState(false);
 
@@ -690,6 +781,14 @@ const BinderSidebar = ({
           onSizeChange={onGridSizeChange}
         />
 
+        {/* Card Back Settings */}
+        <CardBackSettings
+          binder={binder}
+          onSettingsChange={(setting, value) =>
+            updateBinderSettings(binder.id, { [setting]: value })
+          }
+        />
+
         {/* Sort Controls */}
         <div className="space-y-2">
           <label className="block text-sm font-medium text-slate-700">
@@ -697,9 +796,11 @@ const BinderSidebar = ({
           </label>
           <SortControls
             currentSortBy={binder.settings?.sortBy || "custom"}
+            currentSortDirection={binder.settings?.sortDirection || "asc"}
             autoSort={binder.settings?.autoSort || false}
             onSortChange={onSortChange}
             onAutoSortChange={onAutoSortChange}
+            onSortDirectionChange={onSortDirectionChange}
             className="w-full"
           />
         </div>
@@ -774,6 +875,14 @@ const BinderSidebar = ({
             onSizeChange={onGridSizeChange}
           />
 
+          {/* Card Back Settings */}
+          <CardBackSettings
+            binder={binder}
+            onSettingsChange={(setting, value) =>
+              updateBinderSettings(binder.id, { [setting]: value })
+            }
+          />
+
           {/* Sort Controls */}
           <div className="space-y-2">
             <label className="block text-sm font-medium text-slate-700">
@@ -781,9 +890,11 @@ const BinderSidebar = ({
             </label>
             <SortControls
               currentSortBy={binder.settings?.sortBy || "custom"}
+              currentSortDirection={binder.settings?.sortDirection || "asc"}
               autoSort={binder.settings?.autoSort || false}
               onSortChange={onSortChange}
               onAutoSortChange={onAutoSortChange}
+              onSortDirectionChange={onSortDirectionChange}
               className="w-full"
             />
           </div>

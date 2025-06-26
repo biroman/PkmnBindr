@@ -16,6 +16,9 @@ const CardPage = ({
   isMobile = false, // New prop for mobile mode
   fullScreen = false, // New prop for full-screen mobile mode
   dimensions,
+  // Card back display settings
+  showCardBackForEmpty = false,
+  showCardBackForMissing = false,
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
@@ -69,6 +72,8 @@ const CardPage = ({
                   isMissing={isMissing}
                   isReadOnly={isReadOnly}
                   isMobile={isMobile}
+                  showCardBackForEmpty={showCardBackForEmpty}
+                  showCardBackForMissing={showCardBackForMissing}
                 />
               );
             })}
@@ -134,6 +139,8 @@ const CardPage = ({
                 isMissing={isMissing}
                 isReadOnly={isReadOnly}
                 isMobile={isMobile}
+                showCardBackForEmpty={showCardBackForEmpty}
+                showCardBackForMissing={showCardBackForMissing}
               />
             );
           })}

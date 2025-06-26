@@ -361,23 +361,31 @@ export const BinderContainer = ({
 
   const handleNameChange = (newName) => {
     if (!binder) return;
-    updateBinder(binder.id, {
-      metadata: {
-        ...binder.metadata,
-        name: newName,
-      },
-    });
+    updateBinderMetadata(binder.id, { name: newName });
     onBinderChange?.(binder);
   };
 
   const handleSortChange = async (sortBy) => {
     if (!binder || !features.sorting) return;
-
+    // Always sort ascending when the type changes
+    const sortDirection = "asc";
     try {
-      await sortBinder(binder.id, sortBy);
+      await updateBinderSettings(binder.id, { sortBy, sortDirection });
+      sortBinder(binder.id, sortBy, sortDirection);
       onBinderChange?.(binder);
     } catch (error) {
-      console.error("Failed to sort binder:", error);
+      onError?.(error);
+    }
+  };
+
+  const handleSortDirectionChange = async (sortDirection) => {
+    if (!binder || !features.sorting) return;
+    try {
+      const sortBy = binder.settings?.sortBy || "custom";
+      await updateBinderSettings(binder.id, { sortDirection });
+      sortBinder(binder.id, sortBy, sortDirection);
+      onBinderChange?.(binder);
+    } catch (error) {
       onError?.(error);
     }
   };
@@ -631,16 +639,16 @@ export const BinderContainer = ({
       {/* Sidebar - only show on desktop */}
       {features.sidebar && !isMobile && (
         <BinderSidebar
-          binder={binder}
-          onGridSizeChange={features.sorting ? handleGridSizeChange : undefined}
-          onNameChange={handleNameChange}
-          onCollapseChange={setIsSidebarCollapsed}
-          onSortChange={features.sorting ? handleSortChange : undefined}
-          onAutoSortChange={
-            features.autoSort ? handleAutoSortChange : undefined
-          }
+          isMobile={binderDimensions.isMobile}
           isCollapsed={isSidebarCollapsed}
-          isReadOnly={mode === "readonly" || mode === "preview"}
+          binder={binder}
+          onCollapseChange={setIsSidebarCollapsed}
+          onGridSizeChange={handleGridSizeChange}
+          onNameChange={handleNameChange}
+          onSortChange={handleSortChange}
+          onSortDirectionChange={handleSortDirectionChange}
+          onAutoSortChange={handleAutoSortChange}
+          isReadOnly={mode !== "edit"}
         />
       )}
 
@@ -660,13 +668,13 @@ export const BinderContainer = ({
           isOpen={isMobileSettingsOpen}
           onClose={() => setIsMobileSettingsOpen(false)}
           binder={binder}
-          onGridSizeChange={features.sorting ? handleGridSizeChange : undefined}
+          onGridSizeChange={handleGridSizeChange}
           onNameChange={handleNameChange}
-          onSortChange={features.sorting ? handleSortChange : undefined}
-          onAutoSortChange={
-            features.autoSort ? handleAutoSortChange : undefined
-          }
-          isReadOnly={mode === "readonly" || mode === "preview"}
+          onSortChange={handleSortChange}
+          onSortDirectionChange={handleSortDirectionChange}
+          onAutoSortChange={handleAutoSortChange}
+          onAddPage={handleAddPage}
+          onClearBinder={handleClearBinder}
         />
       )}
     </div>
