@@ -546,8 +546,14 @@ const Navbar = () => {
               )}
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
+                onTouchEnd={(e) => {
+                  e.preventDefault();
+                  toggleMobileMenu(e);
+                }}
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 min-w-[40px] min-h-[40px] flex items-center justify-center touch-manipulation select-none"
                 aria-label="Toggle navigation menu"
+                data-mobile-menu-toggle
+                type="button"
               >
                 {isMobileMenuOpen ? (
                   <XMarkIcon className="w-6 h-6" />

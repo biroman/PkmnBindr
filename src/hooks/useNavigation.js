@@ -25,13 +25,18 @@ export const useNavigation = () => {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMobileMenuOpen && !event.target.closest("[data-navbar]")) {
+      if (
+        isMobileMenuOpen &&
+        !event.target.closest("[data-navbar]") &&
+        !event.target.closest("[data-mobile-menu-toggle]")
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
 
     if (isMobileMenuOpen) {
       document.addEventListener("click", handleClickOutside);
+      document.addEventListener("touchend", handleClickOutside);
       document.body.style.overflow = "hidden"; // Prevent scroll when menu is open
     } else {
       document.body.style.overflow = "unset";
@@ -39,11 +44,16 @@ export const useNavigation = () => {
 
     return () => {
       document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("touchend", handleClickOutside);
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (event) => {
+    if (event) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
