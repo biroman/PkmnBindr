@@ -29,7 +29,7 @@ export const useBinderDragDrop = ({
   const [currentEdgeZone, setCurrentEdgeZone] = useState(null);
   const [edgeNavigationTimer, setEdgeNavigationTimer] = useState(null);
   const [navigationProgress, setNavigationProgress] = useState(0);
-  const [progressAnimationId, setProgressAnimationId] = useState(null);
+  const progressAnimationIdRef = useRef(null); // Use ref for animation frame
 
   // Persistent drag data storage to handle React re-renders
   const activeDragDataRef = useRef(null);
@@ -41,74 +41,86 @@ export const useBinderDragDrop = ({
       clearTimeout(edgeNavigationTimer);
       setEdgeNavigationTimer(null);
     }
-    if (progressAnimationId) {
-      cancelAnimationFrame(progressAnimationId);
-      setProgressAnimationId(null);
+    if (progressAnimationIdRef.current) {
+      cancelAnimationFrame(progressAnimationIdRef.current);
+      progressAnimationIdRef.current = null;
     }
     setCurrentEdgeZone(null);
     setNavigationProgress(0);
     activeEdgeZoneRef.current = null; // Clear ref as well
-  }, [edgeNavigationTimer, progressAnimationId]);
+  }, [edgeNavigationTimer]);
 
   // Start navigation timer for edge navigation
   const startNavigationTimer = useCallback(
-    (direction) => {
+    (direction, isContinuation = false) => {
       const canNavigate =
         (direction === "left" && navigation.canGoPrev) ||
         (direction === "right" && navigation.canGoNext);
 
-      if (!canNavigate) return;
+      if (!canNavigate) {
+        clearNavigationTimer();
+        return;
+      }
 
-      // Clear any existing timer
-      clearNavigationTimer();
+      // For continuations, we only need to reset the progress animation
+      if (isContinuation) {
+        setNavigationProgress(0);
+        if (progressAnimationIdRef.current) {
+          cancelAnimationFrame(progressAnimationIdRef.current);
+        }
+      } else {
+        clearNavigationTimer();
+      }
 
       setCurrentEdgeZone(direction);
-      activeEdgeZoneRef.current = direction; // Track in ref for reliability
+      activeEdgeZoneRef.current = direction;
 
-      // Start progress animation
+      const delay = isContinuation ? 700 : 1000;
       const startTime = Date.now();
+
       const animateProgress = () => {
         const elapsed = Date.now() - startTime;
-        const progress = Math.min((elapsed / 1000) * 100, 100);
+        const progress = Math.min((elapsed / delay) * 100, 100);
         setNavigationProgress(progress);
 
         if (progress < 100) {
-          const animId = requestAnimationFrame(animateProgress);
-          setProgressAnimationId(animId);
+          progressAnimationIdRef.current =
+            requestAnimationFrame(animateProgress);
         }
       };
-      const initialAnimId = requestAnimationFrame(animateProgress);
-      setProgressAnimationId(initialAnimId);
+      progressAnimationIdRef.current = requestAnimationFrame(animateProgress);
 
-      // Continuous navigation function
       const performNavigation = () => {
         const currentDirection = activeEdgeZoneRef.current;
+        if (currentDirection !== direction) return;
 
-        if (currentDirection === "left" && navigation.canGoPrev) {
-          navigation.goToPrevPage();
-        } else if (currentDirection === "right" && navigation.canGoNext) {
-          navigation.goToNextPage();
-        }
+        // Explicitly set 100% to ensure it completes visually
+        cancelAnimationFrame(progressAnimationIdRef.current);
+        setNavigationProgress(100);
 
-        // Schedule next navigation if still in the same zone
+        // Allow the 100% to render, then navigate and restart
         setTimeout(() => {
-          const stillInZone = activeEdgeZoneRef.current === currentDirection;
-          const canStillNavigate =
-            (currentDirection === "left" && navigation.canGoPrev) ||
-            (currentDirection === "right" && navigation.canGoNext);
+          if (activeEdgeZoneRef.current !== currentDirection) return;
 
-          if (stillInZone && canStillNavigate) {
-            const nextTimer = setTimeout(performNavigation, 700);
-            setEdgeNavigationTimer(nextTimer);
+          if (currentDirection === "left") {
+            navigation.goToPrevPage();
+          } else if (currentDirection === "right") {
+            navigation.goToNextPage();
           }
-        }, 50); // Very short delay to allow page change to complete
+
+          // After navigation, start the next cycle
+          setTimeout(() => {
+            if (activeEdgeZoneRef.current === currentDirection) {
+              startNavigationTimer(currentDirection, true);
+            }
+          }, 50); // Short delay to allow page state to update
+        }, 100); // Short delay to render the 100% state
       };
 
-      // Start initial timer
-      const timer = setTimeout(performNavigation, 1000);
+      const timer = setTimeout(performNavigation, delay);
       setEdgeNavigationTimer(timer);
     },
-    [clearNavigationTimer, navigation]
+    [navigation, clearNavigationTimer]
   );
 
   // Clear drag state utility
@@ -173,7 +185,7 @@ export const useBinderDragDrop = ({
         const direction = overData.direction;
         const canNavigate = overData.canNavigate;
 
-        if (canNavigate && currentEdgeZone !== direction) {
+        if (canNavigate && activeEdgeZoneRef.current !== direction) {
           startNavigationTimer(direction);
         }
       } else {
@@ -263,7 +275,14 @@ export const useBinderDragDrop = ({
       clearDragState();
       onDragStateChange?.(false);
     },
-    [binder, moveCard, clearNavigationTimer, clearDragState, onDragStateChange]
+    [
+      binder,
+      moveCard,
+      removeCard,
+      clearNavigationTimer,
+      clearDragState,
+      onDragStateChange,
+    ]
   );
 
   // Drag cancel handler

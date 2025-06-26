@@ -30,6 +30,9 @@ const BinderNavigation = ({
   onToggleToolbar = () => {},
   // Drag to delete handler
   onCardDelete = null,
+  // Drag progress props
+  navigationProgress = 0,
+  currentEdgeZone = null,
 }) => {
   const { canGoNext, canGoPrev, goToPrevPage, goToNextPage } = navigation;
 
@@ -66,8 +69,22 @@ const BinderNavigation = ({
   // On mobile, show drag-to-delete interface when dragging
   if (activeCard && isMobile) {
     return (
-      <div className={`fixed bottom-0 left-0 right-0 z-30 ${className}`}>
-        <div className="bg-gray-50/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3">
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-30 ${className}`}
+        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      >
+        <div className="relative bg-gray-50/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3">
+          {/* Progress Bar */}
+          {navigationProgress > 0 &&
+            (currentEdgeZone === "left" || currentEdgeZone === "right") && (
+              <div className="absolute top-0 left-0 h-1 bg-blue-100 w-full">
+                <div
+                  className="h-full bg-blue-500 rounded-full"
+                  style={{ width: `${navigationProgress}%` }}
+                />
+              </div>
+            )}
+
           <div className="flex items-center justify-center max-w-md mx-auto h-12 gap-2">
             {/* Left Navigation Zone */}
             <div
@@ -438,6 +455,9 @@ BinderNavigation.propTypes = {
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,
   onCardDelete: PropTypes.func,
+  // Drag progress props
+  navigationProgress: PropTypes.number,
+  currentEdgeZone: PropTypes.string,
 };
 
 export default BinderNavigation;

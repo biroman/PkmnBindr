@@ -560,6 +560,9 @@ export const BinderContainer = ({
             activeCard={binderDragDrop.activeCard}
             currentPageConfig={pageConfig}
             isMobile={isMobile}
+            // Pass down drag state for progress indicator
+            navigationProgress={binderDragDrop.navigationProgress}
+            currentEdgeZone={binderDragDrop.currentEdgeZone}
             // Mobile toolbar integration
             toolbarActions={
               isMobile && features.toolbar
