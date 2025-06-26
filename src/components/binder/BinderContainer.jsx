@@ -129,6 +129,24 @@ export const BinderContainer = ({
   isPublicView = false,
   binderOwner = null,
 }) => {
+  // Early return check - must be before any hooks
+  if (!binder) {
+    if (!showNoBinderMessage) {
+      return null;
+    }
+
+    return (
+      <div className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 p-4 flex items-center justify-center">
+        <div className="text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">No Binder Selected</h2>
+          <p className="text-slate-300 mb-6">
+            Create or select a binder to start organizing your Pokemon cards
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   // Merge default features with overrides
   const features = { ...DEFAULT_FEATURES[mode], ...featureOverrides };
 
@@ -417,24 +435,6 @@ export const BinderContainer = ({
     }
   };
 
-  // Don't render if no binder and showing message is disabled
-  if (!binder) {
-    if (!showNoBinderMessage) {
-      return null;
-    }
-
-    return (
-      <div className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 p-4 flex items-center justify-center">
-        <div className="text-white text-center">
-          <h2 className="text-2xl font-bold mb-4">No Binder Selected</h2>
-          <p className="text-slate-300 mb-6">
-            Create or select a binder to start organizing your Pokemon cards
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   const pageConfig = getCurrentPageConfig;
   const isMobile = binderDimensions.isMobile;
   const sidebarWidth =
@@ -450,14 +450,13 @@ export const BinderContainer = ({
     <div
       className={`${
         isMobile
-          ? "fixed top-16 bottom-0 left-0 right-0" // Position fixed below navbar and above navigation
-          : "h-[calc(100vh-64px)]"
-      } bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden ${className}`}
+          ? "fixed top-16 bottom-0 left-0 right-0 overflow-auto" // Use auto overflow
+          : "h-[calc(100vh-64px)] overflow-hidden"
+      } bg-gradient-to-br from-slate-800 to-slate-900 ${className}`}
       style={{
         paddingRight: `${sidebarWidth}px`,
-        // Remove padding on mobile - use fixed positioning
-        paddingTop: isMobile ? "0" : "0",
-        paddingBottom: isMobile ? "72px" : "0", // Add bottom padding for navigation
+        // On mobile, use flexbox to center the content, no padding needed here
+        paddingBottom: isMobile ? "80px" : "0", // Add bottom padding for mobile navigation
         ...style,
       }}
     >
@@ -497,11 +496,12 @@ export const BinderContainer = ({
         }
         activeCard={binderDragDrop.activeCard}
         disabled={!features.dragDrop}
-        className={`h-full flex ${
-          isMobile ? "items-start" : "items-center"
+        className={`h-full w-full flex ${
+          isMobile ? "items-center" : "items-center" // Center vertically on mobile too
         } justify-center`}
         style={{
           paddingTop: features.toolbar && !isMobile ? "70px" : "0", // Account for toolbar height on desktop only
+          padding: isMobile ? "16px 0" : "0", // Add some vertical padding on mobile
         }}
       >
         <BinderCore

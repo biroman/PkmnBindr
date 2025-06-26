@@ -33,6 +33,7 @@ export const useBinderDragDrop = ({
 
   // Persistent drag data storage to handle React re-renders
   const activeDragDataRef = useRef(null);
+  const activeEdgeZoneRef = useRef(null); // Track active zone more reliably
 
   // Clear navigation timer helper
   const clearNavigationTimer = useCallback(() => {
@@ -46,6 +47,7 @@ export const useBinderDragDrop = ({
     }
     setCurrentEdgeZone(null);
     setNavigationProgress(0);
+    activeEdgeZoneRef.current = null; // Clear ref as well
   }, [edgeNavigationTimer, progressAnimationId]);
 
   // Start navigation timer for edge navigation
@@ -61,6 +63,7 @@ export const useBinderDragDrop = ({
       clearNavigationTimer();
 
       setCurrentEdgeZone(direction);
+      activeEdgeZoneRef.current = direction; // Track in ref for reliability
 
       // Start progress animation
       const startTime = Date.now();
@@ -77,16 +80,32 @@ export const useBinderDragDrop = ({
       const initialAnimId = requestAnimationFrame(animateProgress);
       setProgressAnimationId(initialAnimId);
 
-      // Start new timer
-      const timer = setTimeout(() => {
-        if (direction === "left" && navigation.canGoPrev) {
+      // Continuous navigation function
+      const performNavigation = () => {
+        const currentDirection = activeEdgeZoneRef.current;
+
+        if (currentDirection === "left" && navigation.canGoPrev) {
           navigation.goToPrevPage();
-        } else if (direction === "right" && navigation.canGoNext) {
+        } else if (currentDirection === "right" && navigation.canGoNext) {
           navigation.goToNextPage();
         }
-        clearNavigationTimer();
-      }, 1000); // 1 second delay
 
+        // Schedule next navigation if still in the same zone
+        setTimeout(() => {
+          const stillInZone = activeEdgeZoneRef.current === currentDirection;
+          const canStillNavigate =
+            (currentDirection === "left" && navigation.canGoPrev) ||
+            (currentDirection === "right" && navigation.canGoNext);
+
+          if (stillInZone && canStillNavigate) {
+            const nextTimer = setTimeout(performNavigation, 700);
+            setEdgeNavigationTimer(nextTimer);
+          }
+        }, 50); // Very short delay to allow page change to complete
+      };
+
+      // Start initial timer
+      const timer = setTimeout(performNavigation, 1000);
       setEdgeNavigationTimer(timer);
     },
     [clearNavigationTimer, navigation]
@@ -142,6 +161,7 @@ export const useBinderDragDrop = ({
         // Clear edge navigation when not over anything
         if (currentEdgeZone) {
           clearNavigationTimer();
+          activeEdgeZoneRef.current = null;
         }
         return;
       }
@@ -160,6 +180,7 @@ export const useBinderDragDrop = ({
         // Clear edge navigation when over other elements
         if (currentEdgeZone) {
           clearNavigationTimer();
+          activeEdgeZoneRef.current = null;
         }
       }
     },

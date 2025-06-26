@@ -79,7 +79,7 @@ const BinderToolbar = ({
   // Mobile layout - horizontal toolbar at top
   if (isMobile) {
     return (
-      <div className="bg-white/95 backdrop-blur-sm border-b border-gray-200 px-4 py-2">
+      <div className="bg-white/95 backdrop-blur-sm rounded-md border-b border-gray-200 px-4 py-2">
         <div className="flex items-center justify-between max-w-md mx-auto">
           {/* Primary Action - Add Card */}
           <ToolbarButton

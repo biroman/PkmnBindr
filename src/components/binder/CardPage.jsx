@@ -15,6 +15,7 @@ const CardPage = ({
   backgroundColor = "#ffffff", // New prop for background color
   isMobile = false, // New prop for mobile mode
   fullScreen = false, // New prop for full-screen mobile mode
+  dimensions,
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
@@ -23,7 +24,7 @@ const CardPage = ({
   if (fullScreen && isMobile) {
     return (
       <div
-        className="mobile-card-page-fullscreen"
+        className="h-full w-full flex flex-col rounded-lg"
         style={{
           background: backgroundColor?.startsWith("linear-gradient")
             ? backgroundColor
@@ -31,43 +32,47 @@ const CardPage = ({
           backgroundColor: !backgroundColor?.startsWith("linear-gradient")
             ? backgroundColor
             : undefined,
+          // The parent in BinderDisplay provides the dimensions, so we just fill it.
         }}
       >
-        {/* Card Grid - Full Screen */}
-        <div
-          className="mobile-fullscreen-grid"
-          style={{
-            gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
-            gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
-          }}
-        >
-          {slots.map((_, index) => {
-            const card = cards[index];
-            // Calculate global position based on page index and slot index
-            const globalPosition = cardPageIndex * gridConfig.total + index;
+        {/* Card Grid */}
+        <div className="flex-1 p-2">
+          <div
+            className="grid h-full"
+            style={{
+              gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
+              gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
+              gap: "2px",
+            }}
+          >
+            {slots.map((_, index) => {
+              const card = cards[index];
+              // Calculate global position based on page index and slot index
+              const globalPosition = cardPageIndex * gridConfig.total + index;
 
-            // Check if this card is marked as missing (instance-based)
-            const instanceId = card?.binderMetadata?.instanceId;
-            const isMissing =
-              instanceId && missingPositions.includes(instanceId);
+              // Check if this card is marked as missing (instance-based)
+              const instanceId = card?.binderMetadata?.instanceId;
+              const isMissing =
+                instanceId && missingPositions.includes(instanceId);
 
-            return (
-              <DroppableSlot
-                key={`slot-${globalPosition}`}
-                card={card}
-                position={globalPosition}
-                gridSize={gridSize}
-                onCardClick={onCardClick}
-                onCardDelete={isReadOnly ? undefined : onCardDelete}
-                onSlotClick={isReadOnly ? undefined : onSlotClick}
-                onToggleMissing={isReadOnly ? undefined : onToggleMissing}
-                className="w-full h-full"
-                isMissing={isMissing}
-                isReadOnly={isReadOnly}
-                isMobile={isMobile}
-              />
-            );
-          })}
+              return (
+                <DroppableSlot
+                  key={`slot-${globalPosition}`}
+                  card={card}
+                  position={globalPosition}
+                  gridSize={gridSize}
+                  onCardClick={onCardClick}
+                  onCardDelete={isReadOnly ? undefined : onCardDelete}
+                  onSlotClick={isReadOnly ? undefined : onSlotClick}
+                  onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+                  className="w-full h-full"
+                  isMissing={isMissing}
+                  isReadOnly={isReadOnly}
+                  isMobile={isMobile}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -102,6 +107,7 @@ const CardPage = ({
           style={{
             gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
             gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
+            gap: "2px",
           }}
         >
           {slots.map((_, index) => {

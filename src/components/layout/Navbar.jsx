@@ -39,7 +39,7 @@ import {
   ShieldCheckIcon as ShieldCheckSolid,
   QuestionMarkCircleIcon as QuestionMarkCircleSolid,
 } from "@heroicons/react/24/solid";
-import MobileSyncButtons from "../binder/MobileSyncButtons";
+import MobileSyncButtons from "../sync/SyncButtons";
 import RevertConfirmationModal from "../binder/RevertConfirmationModal";
 import { toast } from "react-hot-toast";
 

@@ -238,7 +238,7 @@ const CardPageItem = ({
         });
       }}
       className={`
-        relative bg-white rounded-xl shadow-md border-2 transition-all duration-300 group
+        relative bg-white rounded-sm shadow-md border-2 transition-all duration-300 group
         ${isDragging ? "opacity-50 scale-95 shadow-2xl z-50" : ""}
         ${
           shouldHighlight && !isCover && !isSelectionMode
@@ -1517,7 +1517,7 @@ const BinderPageOverview = ({
 
                       {/* Group Container */}
                       <div
-                        className={`rounded-2xl p-4 gap-4 sm:gap-6 transition-all duration-200 w-full overflow-x-auto
+                        className={`rounded-md p-4 gap-4 sm:gap-6 transition-all duration-200 w-full overflow-x-auto
                           flex flex-row
                           ${
                             selectionMode === "binderPages"

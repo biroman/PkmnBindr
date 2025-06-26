@@ -182,33 +182,6 @@ button {
       flex-direction: column;
     }
 
-    /* Full screen card display for mobile - works with BinderContainer padding */
-    .mobile-card-page-fullscreen {
-      width: 100%;
-      /* Use full available height since BinderContainer handles navbar/navigation padding */
-      height: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin: 0;
-      /* Prevent any overflow that could cause scrolling */
-      overflow: hidden;
-    }
-
-    /* Full screen grid layout */
-    .mobile-fullscreen-grid {
-      flex: 1;
-      display: grid;
-      width: 100%;
-      height: 100%;
-      gap: 6px;
-      padding: 12px;
-      box-sizing: border-box;
-      /* Ensure grid doesn't overflow */
-      overflow: hidden;
-    }
-
     /* Mobile toolbar optimizations */
     .mobile-toolbar {
       -webkit-backdrop-filter: blur(8px);

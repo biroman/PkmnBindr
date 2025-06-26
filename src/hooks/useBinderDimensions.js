@@ -7,7 +7,7 @@ const BINDER_CONFIG = {
   VERTICAL_PADDING: 80, // 40px top + 40px bottom
   NAVIGATION_SPACE: 160, // Space for left/right nav buttons
   PAGE_PADDING: 32,
-  CARD_GAP: 8,
+  CARD_GAP: 2,
   HEADER_SPACE: 32,
   SPINE_WIDTH: 16,
   // Mobile specific constants
@@ -72,7 +72,7 @@ const useBinderDimensions = (gridSize) => {
     const grid = getGridConfig(gridSize);
     const isMobile = windowWidth < BINDER_CONFIG.MOBILE_BREAKPOINT;
 
-    // Calculate available space - different for mobile vs desktop
+    // Calculate available space
     const availableHeight = isMobile
       ? windowHeight -
         BINDER_CONFIG.NAVBAR_HEIGHT -
@@ -82,7 +82,7 @@ const useBinderDimensions = (gridSize) => {
         BINDER_CONFIG.VERTICAL_PADDING;
 
     const availableWidth = isMobile
-      ? windowWidth - 40 // Just some padding on mobile
+      ? windowWidth - 20 // 10px padding on each side for mobile
       : windowWidth - BINDER_CONFIG.NAVIGATION_SPACE;
 
     // Validate minimum dimensions - more lenient for mobile
@@ -103,55 +103,48 @@ const useBinderDimensions = (gridSize) => {
       };
     }
 
-    // For mobile, calculate single page dimensions
+    // For mobile, the layout is a single page that should fit the screen.
     if (isMobile) {
-      const singlePageWidth = availableWidth;
+      // Determine card width based on container width
       const widthConstrainedCardWidth =
-        (singlePageWidth -
+        (availableWidth -
           BINDER_CONFIG.PAGE_PADDING -
-          BINDER_CONFIG.CARD_GAP * (grid.cols - 1)) /
+          (grid.cols - 1) * BINDER_CONFIG.CARD_GAP) /
         grid.cols;
 
+      // Determine card height based on container height
       const heightConstrainedCardHeight =
         (availableHeight -
           BINDER_CONFIG.PAGE_PADDING -
-          BINDER_CONFIG.HEADER_SPACE -
-          BINDER_CONFIG.CARD_GAP * (grid.rows - 1)) /
+          (grid.rows - 1) * BINDER_CONFIG.CARD_GAP) /
         grid.rows;
 
-      const heightConstrainedCardWidth =
+      // To compare, we need to convert one to the other's dimension via aspect ratio
+      const widthFromHeightConstraint =
         heightConstrainedCardHeight * BINDER_CONFIG.CARD_ASPECT_RATIO;
 
-      // Use the smaller constraint to ensure everything fits
-      let cardWidth = Math.min(
-        heightConstrainedCardWidth,
-        widthConstrainedCardWidth
+      // The final card width is the minimum of the two constraints
+      const cardWidth = Math.min(
+        widthConstrainedCardWidth,
+        widthFromHeightConstraint
       );
-
-      // Scale down 4x3 layout to make it more compact on mobile
-      if (gridSize === "4x3") {
-        cardWidth = cardWidth * 0.8; // Scale down by 20% on mobile
-      }
-
       const cardHeight = cardWidth / BINDER_CONFIG.CARD_ASPECT_RATIO;
 
-      // Calculate final single page dimensions for mobile
       const pageWidth =
         cardWidth * grid.cols +
         BINDER_CONFIG.PAGE_PADDING +
-        BINDER_CONFIG.CARD_GAP * (grid.cols - 1);
+        (grid.cols - 1) * BINDER_CONFIG.CARD_GAP;
 
       const pageHeight =
         cardHeight * grid.rows +
         BINDER_CONFIG.PAGE_PADDING +
-        BINDER_CONFIG.HEADER_SPACE +
-        BINDER_CONFIG.CARD_GAP * (grid.rows - 1);
+        (grid.rows - 1) * BINDER_CONFIG.CARD_GAP;
 
       return {
-        width: Math.min(pageWidth, availableWidth),
-        height: Math.min(pageHeight, availableHeight),
-        cardWidth: Math.max(cardWidth, 40), // Minimum card size
-        cardHeight: Math.max(cardHeight, 56), // Minimum card size (40 * 7/5)
+        width: pageWidth,
+        height: pageHeight,
+        cardWidth: Math.max(cardWidth, 40),
+        cardHeight: Math.max(cardHeight, 56),
         pageWidth,
         pageHeight,
         grid,
@@ -164,7 +157,6 @@ const useBinderDimensions = (gridSize) => {
     const heightConstrainedCardHeight =
       (availableHeight -
         BINDER_CONFIG.PAGE_PADDING -
-        BINDER_CONFIG.HEADER_SPACE -
         BINDER_CONFIG.CARD_GAP * (grid.rows - 1)) /
       grid.rows;
 
@@ -200,7 +192,6 @@ const useBinderDimensions = (gridSize) => {
     const pageHeight =
       cardHeight * grid.rows +
       BINDER_CONFIG.PAGE_PADDING +
-      BINDER_CONFIG.HEADER_SPACE +
       BINDER_CONFIG.CARD_GAP * (grid.rows - 1);
 
     const binderWidth = pageWidth * 2 + BINDER_CONFIG.SPINE_WIDTH;

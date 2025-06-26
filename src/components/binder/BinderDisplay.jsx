@@ -26,44 +26,57 @@ const BinderDisplay = ({
 
   const containerStyle = {
     width: `${dimensions.width}px`,
-    height: `${dimensions.height}px`,
     ...style,
   };
 
   // Mobile full-screen layout
   if (dimensions.isMobile) {
     return (
-      <div className={`w-full h-full ${className}`}>
-        {/* Single Page - cover or card page based on mobile navigation */}
-        {currentPageConfig.type === "cover-single" ? (
-          <CoverPage
-            binder={binder}
-            owner={binderOwner}
-            backgroundColor={backgroundColor}
-            isReadOnly={isReadOnly}
-            isPublicView={isPublicView}
-            isMobile={dimensions.isMobile}
-            dimensions={dimensions}
-          />
-        ) : (
-          <CardPage
-            pageNumber={currentPageConfig.leftPage.pageNumber}
-            cards={getCardsForPage(currentPageConfig.leftPage.cardPageIndex)}
-            gridSize={binder.settings?.gridSize || "3x3"}
-            onCardClick={
-              isPublicView ? onCardClick : isReadOnly ? undefined : onCardClick
-            }
-            onCardDelete={isReadOnly ? undefined : onCardDelete}
-            onSlotClick={isReadOnly ? undefined : onSlotClick}
-            onToggleMissing={isReadOnly ? undefined : onToggleMissing}
-            cardPageIndex={currentPageConfig.leftPage.cardPageIndex}
-            missingPositions={binder.metadata?.missingInstances || []}
-            backgroundColor={backgroundColor}
-            isReadOnly={isReadOnly}
-            isMobile={true}
-            fullScreen={true}
-          />
-        )}
+      <div
+        className={`flex items-center justify-center w-full h-full ${className}`}
+      >
+        <div
+          style={{
+            width: `${dimensions.width}px`,
+            height: `${dimensions.height}px`,
+          }}
+        >
+          {/* Single Page - cover or card page based on mobile navigation */}
+          {currentPageConfig.type === "cover-single" ? (
+            <CoverPage
+              binder={binder}
+              owner={binderOwner}
+              backgroundColor={backgroundColor}
+              isReadOnly={isReadOnly}
+              isPublicView={isPublicView}
+              isMobile={dimensions.isMobile}
+              dimensions={dimensions}
+            />
+          ) : (
+            <CardPage
+              pageNumber={currentPageConfig.leftPage.pageNumber}
+              cards={getCardsForPage(currentPageConfig.leftPage.cardPageIndex)}
+              gridSize={binder.settings?.gridSize || "3x3"}
+              onCardClick={
+                isPublicView
+                  ? onCardClick
+                  : isReadOnly
+                  ? undefined
+                  : onCardClick
+              }
+              onCardDelete={isReadOnly ? undefined : onCardDelete}
+              onSlotClick={isReadOnly ? undefined : onSlotClick}
+              onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+              cardPageIndex={currentPageConfig.leftPage.cardPageIndex}
+              missingPositions={binder.metadata?.missingInstances || []}
+              backgroundColor={backgroundColor}
+              isReadOnly={isReadOnly}
+              isMobile={true}
+              fullScreen={true}
+              dimensions={dimensions}
+            />
+          )}
+        </div>
       </div>
     );
   }
