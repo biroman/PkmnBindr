@@ -6,7 +6,7 @@ import { jsPDF } from "jspdf";
  */
 class QRCodePdfService {
   /**
-   * Generate a PDF with 6 QR codes for a share link
+   * Generate a PDF with 6 QR codes for a share
    * @param {string} shareUrl - The URL to encode in the QR codes
    * @param {string} binderName - Name of the binder for labeling
    * @param {string} qrCodeDataUrl - Base64 data URL of the QR code image
