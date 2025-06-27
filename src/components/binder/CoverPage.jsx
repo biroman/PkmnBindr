@@ -4,12 +4,15 @@ import {
   GlobeAltIcon,
   LockClosedIcon,
   ArrowPathIcon,
+  QrCodeIcon,
 } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
+import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
+import { QRCodeSVG } from "qrcode.react";
 import ContactModal from "./ContactModal";
 import UserProfileCard from "../ui/UserProfileCard";
-import BinderInteractionButtons from "../ui/BinderInteractionButtons";
+// import BinderInteractionButtons from "../ui/BinderInteractionButtons";  // Disabled
 
 const CoverPage = ({
   binder,
@@ -19,9 +22,13 @@ const CoverPage = ({
   backgroundColor = "#ffffff",
   isMobile = false,
   dimensions = null,
+  shareUrl = null,
+  showQRCode = false,
+  onToggleQRCode = null,
 }) => {
   const navigate = useNavigate();
   const { updateBinderPrivacy } = useBinderContext();
+  const { user } = useAuth();
   const [contactModal, setContactModal] = useState({
     isOpen: false,
     type: "message",
@@ -72,6 +79,27 @@ const CoverPage = ({
             : undefined,
         }}
       >
+        {/* Action Buttons - Top Right (for readonly mode) */}
+        <div className="absolute top-2 right-2 z-10 flex gap-2">
+          {/* QR Code Button - Only for shared binders */}
+          {shareUrl && onToggleQRCode && (
+            <button
+              onClick={onToggleQRCode}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg border transition-all duration-200 ${
+                isMobile ? "text-sm" : "text-sm"
+              } font-medium ${
+                showQRCode
+                  ? "bg-blue-600 hover:bg-blue-700 border-blue-500 text-white"
+                  : "bg-white/90 hover:bg-white border-gray-200 text-gray-700 hover:text-gray-900"
+              } backdrop-blur-sm`}
+              title={showQRCode ? "Hide QR Code" : "Show QR Code for sharing"}
+            >
+              <QrCodeIcon className="w-4 h-4" />
+              <span>{showQRCode ? "Hide QR Code" : "Share"}</span>
+            </button>
+          )}
+        </div>
+
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="grid grid-cols-6 grid-rows-8 h-full gap-1 p-2 rotate-12 scale-110">
@@ -87,97 +115,230 @@ const CoverPage = ({
             isMobile ? "p-2" : "p-3 sm:p-4 md:p-6"
           } flex flex-col items-center justify-center overflow-y-auto`}
         >
-          {isPublicView && owner ? (
-            <div
-              className={`w-full ${
-                isMobile ? "max-w-full" : "max-w-lg"
-              } mx-auto space-y-${isMobile ? "2" : "4"}`}
-            >
-              {/* Binder Title */}
-              <div className={`text-center ${isMobile ? "mb-3" : "mb-6"}`}>
-                <h1
+          {showQRCode && shareUrl ? (
+            /* QR Code View for readonly mode */
+            <div className="h-full flex flex-col items-center justify-center">
+              <div className="text-center mb-6">
+                <h2
                   className={`${
-                    isMobile ? "text-sm" : "text-lg sm:text-xl md:text-2xl"
-                  } font-bold mb-2 text-gray-800`}
+                    isMobile ? "text-lg" : "text-2xl md:text-3xl"
+                  } font-bold text-gray-900 mb-2`}
                 >
-                  {binder?.metadata?.name || "Pokemon Card Collection"}
-                </h1>
+                  Scan to Share
+                </h2>
+                <p
+                  className={`${
+                    isMobile ? "text-sm" : "text-base"
+                  } text-gray-600`}
+                >
+                  Scan this QR code to share "
+                  {binder?.metadata?.name || "this binder"}" with others
+                </p>
               </div>
 
-              {/* Owner Profile Card */}
-              <div className="flex justify-center">
-                <div
-                  onClick={handleProfileClick}
-                  className="w-full cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                  title={`Visit ${owner?.displayName || "User"}'s profile`}
+              <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+                <QRCodeSVG
+                  value={shareUrl}
+                  size={isMobile ? 200 : 280}
+                  level="M"
+                  includeMargin={true}
+                  className="block"
+                />
+              </div>
+
+              <div className="mt-6 text-center max-w-md">
+                <p
+                  className={`${
+                    isMobile ? "text-xs" : "text-sm"
+                  } text-gray-500 break-all font-mono bg-gray-50 p-2 rounded-lg border`}
                 >
-                  <UserProfileCard
-                    user={owner}
-                    size={isMobile ? "small" : "large"}
-                    editable={false}
-                    showBanner={true}
-                    showStatus={true}
-                    showBadges={true}
-                    isOwnProfile={false}
-                    className="w-full"
-                  />
+                  {shareUrl}
+                </p>
+              </div>
+            </div>
+          ) : isPublicView && owner ? (
+            <div className="w-full h-full flex flex-col">
+              {/* Website Logo at Top */}
+              <div
+                className={`flex justify-center ${
+                  isMobile ? "pt-4 pb-6" : "pt-8 pb-8"
+                }`}
+              >
+                <div className="text-center">
+                  <div
+                    className={`${
+                      isMobile ? "text-3xl" : "text-6xl"
+                    } font-bold text-gray-800 mb-1`}
+                  >
+                    pkmnbindr
+                  </div>
+                  <div
+                    className={`${
+                      isMobile ? "text-xs" : "text-lg"
+                    } text-gray-600`}
+                  >
+                    Pokemon Card Collection Platform
+                  </div>
                 </div>
               </div>
 
-              {/* Collection Stats */}
-              <div
-                className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg ${
-                  isMobile ? "p-2" : "p-3 sm:p-4"
-                } border border-blue-100`}
-              >
+              {/* Main Content */}
+              <div className="flex-1 flex items-center justify-center">
                 <div
-                  className={`space-y-${isMobile ? "1" : "2"} text-xs ${
-                    isMobile ? "" : "sm:text-sm"
-                  } text-gray-700 text-center`}
+                  className={`w-full ${
+                    isMobile ? "max-w-full px-4" : "max-w-2xl"
+                  } mx-auto text-center space-y-${isMobile ? "6" : "8"}`}
                 >
-                  <p className="flex items-center justify-center gap-2">
-                    <span>📊</span>
-                    <strong>
-                      {Object.keys(binder?.cards || {}).length}
-                    </strong>{" "}
-                    Cards in Collection
-                  </p>
-                  <p className="flex items-center justify-center gap-2">
-                    <span>📅</span>
-                    Created{" "}
-                    {binder?.metadata?.createdAt
-                      ? new Date(binder.metadata.createdAt).toLocaleDateString()
-                      : "Recently"}
-                  </p>
-                  {binder?.metadata?.description && (
-                    <p
-                      className={`text-center ${
-                        isMobile ? "mt-2" : "mt-3"
-                      } text-gray-600 italic`}
+                  {/* Binder Title */}
+                  <div>
+                    <h1
+                      className={`${
+                        isMobile ? "text-xl" : "text-4xl md:text-5xl"
+                      } font-bold mb-4 text-gray-900`}
                     >
-                      "{binder.metadata.description}"
-                    </p>
+                      {binder?.metadata?.name || "Pokemon Card Collection"}
+                    </h1>
+                    {binder?.metadata?.description && (
+                      <p
+                        className={`${
+                          isMobile ? "text-sm" : "text-lg"
+                        } text-gray-600 italic leading-relaxed ${
+                          isMobile ? "max-w-full" : "max-w-lg"
+                        } mx-auto`}
+                      >
+                        "{binder.metadata.description}"
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Collection Stats */}
+                  <div
+                    className={`bg-white/80 backdrop-blur-sm rounded-2xl ${
+                      isMobile ? "p-4" : "p-6"
+                    } border border-white/20 shadow-lg`}
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center">
+                        <div
+                          className={`${
+                            isMobile ? "text-2xl" : "text-3xl"
+                          } font-bold text-blue-600 mb-1`}
+                        >
+                          {Object.keys(binder?.cards || {}).length}
+                        </div>
+                        <div
+                          className={`${
+                            isMobile ? "text-xs" : "text-sm"
+                          } text-gray-600`}
+                        >
+                          Cards
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div
+                          className={`${
+                            isMobile ? "text-sm" : "text-lg"
+                          } font-semibold text-gray-900 mb-1`}
+                        >
+                          {binder?.metadata?.createdAt
+                            ? new Date(
+                                binder.metadata.createdAt
+                              ).toLocaleDateString("en-US", {
+                                month: "short",
+                                year: "numeric",
+                              })
+                            : "Recent"}
+                        </div>
+                        <div
+                          className={`${
+                            isMobile ? "text-xs" : "text-sm"
+                          } text-gray-600`}
+                        >
+                          Created
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Call to Action for Non-Users */}
+                  {!user && (
+                    <div
+                      className={`bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl ${
+                        isMobile ? "p-4" : "p-6"
+                      } border border-blue-100`}
+                    >
+                      <h3
+                        className={`${
+                          isMobile ? "text-lg" : "text-xl"
+                        } font-semibold text-gray-900 mb-3`}
+                      >
+                        Create Your Own Collection
+                      </h3>
+                      <p
+                        className={`${
+                          isMobile ? "text-sm" : "text-base"
+                        } text-gray-600 ${isMobile ? "mb-4" : "mb-6"}`}
+                      >
+                        Join thousands of collectors organizing their Pokemon
+                        cards with pkmnbindr
+                      </p>
+                      <div
+                        className={`flex ${
+                          isMobile ? "flex-col" : "flex-col sm:flex-row"
+                        } gap-3 justify-center`}
+                      >
+                        <button
+                          onClick={() => navigate("/auth/register")}
+                          className={`${
+                            isMobile ? "px-4 py-2 text-sm" : "px-6 py-3"
+                          } bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-md`}
+                        >
+                          Start Collecting
+                        </button>
+                        <button
+                          onClick={() => navigate("/auth/login")}
+                          className={`${
+                            isMobile ? "px-4 py-2 text-sm" : "px-6 py-3"
+                          } border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium`}
+                        >
+                          Sign In
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* User Already Signed In */}
+                  {user && (
+                    <div
+                      className={`bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl ${
+                        isMobile ? "p-4" : "p-6"
+                      } border border-green-100`}
+                    >
+                      <h3
+                        className={`${
+                          isMobile ? "text-lg" : "text-xl"
+                        } font-semibold text-gray-900 mb-3`}
+                      >
+                        Welcome back, {user.displayName || "Collector"}!
+                      </h3>
+                      <p
+                        className={`${
+                          isMobile ? "text-sm" : "text-base"
+                        } text-gray-600 ${isMobile ? "mb-3" : "mb-4"}`}
+                      >
+                        Ready to organize your own collection?
+                      </p>
+                      <button
+                        onClick={() => navigate("/binders")}
+                        className={`${
+                          isMobile ? "px-4 py-2 text-sm" : "px-6 py-3"
+                        } bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium shadow-md`}
+                      >
+                        View My Binders
+                      </button>
+                    </div>
                   )}
                 </div>
-              </div>
-
-              {/* Interaction Buttons */}
-              <div className="flex justify-center">
-                <BinderInteractionButtons
-                  binderId={binder?.id}
-                  ownerId={owner?.uid}
-                  binderMetadata={{
-                    name: binder?.metadata?.name,
-                    ownerName: owner?.displayName,
-                    ownerId: owner?.uid,
-                    cardCount: Object.keys(binder?.cards || {}).length,
-                  }}
-                  size={isMobile ? "small" : "default"}
-                  showLabels={true}
-                  showCounts={true}
-                  layout="horizontal"
-                  className={`w-full ${isMobile ? "max-w-full" : "max-w-xs"}`}
-                />
               </div>
             </div>
           ) : (
@@ -281,8 +442,27 @@ const CoverPage = ({
         </div>
       </div>
 
-      {/* Content Toggle Button - Top Right */}
-      <div className="absolute top-2 right-2 z-10">
+      {/* Action Buttons - Top Right */}
+      <div className="absolute top-2 right-2 z-10 flex gap-2">
+        {/* QR Code Button - Only for shared binders */}
+        {shareUrl && onToggleQRCode && (
+          <button
+            onClick={onToggleQRCode}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg border transition-all duration-200 ${
+              isMobile ? "text-sm" : "text-sm"
+            } font-medium ${
+              showQRCode
+                ? "bg-blue-600 hover:bg-blue-700 border-blue-500 text-white"
+                : "bg-white/90 hover:bg-white border-gray-200 text-gray-700 hover:text-gray-900"
+            } backdrop-blur-sm`}
+            title={showQRCode ? "Hide QR Code" : "Show QR Code for sharing"}
+          >
+            <QrCodeIcon className="w-4 h-4" />
+            <span>{showQRCode ? "Hide QR Code" : "Share"}</span>
+          </button>
+        )}
+
+        {/* Content Toggle Button */}
         <button
           onClick={() => setShowContent(!showContent)}
           className={`flex items-center gap-2 px-3 py-2 rounded-lg shadow-lg border transition-all duration-200 ${
@@ -344,7 +524,48 @@ const CoverPage = ({
           isMobile ? "p-2 text-xs" : "p-3 sm:p-4 md:p-6"
         } overflow-y-auto`}
       >
-        {showContent ? (
+        {showQRCode && shareUrl ? (
+          /* QR Code View */
+          <div className="h-full flex flex-col items-center justify-center">
+            <div className="text-center mb-6">
+              <h2
+                className={`${
+                  isMobile ? "text-lg" : "text-2xl md:text-3xl"
+                } font-bold text-gray-900 mb-2`}
+              >
+                Scan to Share
+              </h2>
+              <p
+                className={`${
+                  isMobile ? "text-sm" : "text-base"
+                } text-gray-600`}
+              >
+                Scan this QR code to share "
+                {binder?.metadata?.name || "this binder"}" with others
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+              <QRCodeSVG
+                value={shareUrl}
+                size={isMobile ? 200 : 280}
+                level="M"
+                includeMargin={true}
+                className="block"
+              />
+            </div>
+
+            <div className="mt-6 text-center max-w-md">
+              <p
+                className={`${
+                  isMobile ? "text-xs" : "text-sm"
+                } text-gray-500 break-all font-mono bg-gray-50 p-2 rounded-lg border`}
+              >
+                {shareUrl}
+              </p>
+            </div>
+          </div>
+        ) : showContent ? (
           <>
             {/* Header - responsive text sizes */}
             <div

@@ -12,7 +12,7 @@ import {
   HeartIcon,
   BookmarkIcon,
 } from "@heroicons/react/24/outline";
-import { BinderInteractionService } from "../../services/BinderInteractionService";
+// import { BinderInteractionService } from "../../services/BinderInteractionService";  // Disabled
 import { useBinderCardCustomization } from "../../contexts/BinderCardCustomizationContext";
 
 const BinderCard = ({
@@ -86,66 +86,23 @@ const BinderCard = ({
     ],
   };
 
-  // Load interaction stats for public binders
-  useEffect(() => {
-    const loadInteractionStats = async () => {
-      if (
-        !showInteractionStats ||
-        !binder.permissions?.public ||
-        !binder.ownerId
-      ) {
-        setInteractionStats((prev) => ({ ...prev, loading: false }));
-        return;
-      }
+  // Load interaction stats for public binders - DISABLED
+  const loadInteractionStats = async () => {
+    // Interaction stats disabled
+    return;
 
-      // Use cached data if available
-      if (cachedInteractionStats) {
-        console.log(
-          `📋 Using cached interaction stats for binder ${binder.id}`
-        );
-        setInteractionStats({
-          likeCount: cachedInteractionStats.likeCount,
-          favoriteCount: cachedInteractionStats.favoriteCount,
-          viewCount: cachedInteractionStats.viewCount,
-          loading: false,
-        });
-        return;
-      }
+    // if (!binder.permissions?.public || !user) return;
 
-      console.warn(
-        `🔥 FIREBASE READ: BinderCard fetching interaction stats for binder ${binder.id} (cached data not available)`
-      );
-      try {
-        const stats = await BinderInteractionService.getBinderStats(
-          binder.id,
-          binder.ownerId
-        );
-        console.log(`Binder ${binder.id} stats:`, stats); // Debug log
-        setInteractionStats({
-          likeCount: stats.likeCount,
-          favoriteCount: stats.favoriteCount,
-          viewCount: stats.viewCount,
-          loading: false,
-        });
-      } catch (error) {
-        console.error("Error loading interaction stats:", error);
-        setInteractionStats({
-          likeCount: 0,
-          favoriteCount: 0,
-          viewCount: 0,
-          loading: false,
-        });
-      }
-    };
-
-    loadInteractionStats();
-  }, [
-    binder.id,
-    binder.ownerId,
-    binder.permissions?.public,
-    showInteractionStats,
-    cachedInteractionStats,
-  ]);
+    // try {
+    //   const stats = await BinderInteractionService.getBinderStats(
+    //     binder.id,
+    //     binder.ownerId
+    //   );
+    //   setInteractionStats(stats);
+    // } catch (error) {
+    //   console.error("Failed to load interaction stats:", error);
+    // }
+  };
 
   // Load binder customization - this determines the final header color
   useEffect(() => {
@@ -209,39 +166,33 @@ const BinderCard = ({
     }
     e.preventDefault();
 
-    // Track view when user actually clicks to open the binder
-    const trackViewOnClick = async () => {
-      // Only track views for public binders when user is logged in and it's not their own binder
-      if (
-        user?.uid &&
-        binder.permissions?.public &&
-        binder.ownerId &&
-        binder.ownerId !== user.uid && // Don't track views for own binders
-        !isLocalOnly &&
-        !isGuestBinder
-      ) {
-        try {
-          const wasNewView = await BinderInteractionService.trackView(
-            binder.id,
-            user.uid,
-            binder.ownerId
-          );
+    // Track view when binder is selected - DISABLED
+    const trackView = async () => {
+      // View tracking disabled
+      return;
 
-          // If it was a new view, update the local stats
-          if (wasNewView && showInteractionStats) {
-            setInteractionStats((prev) => ({
-              ...prev,
-              viewCount: prev.viewCount + 1,
-            }));
-          }
-        } catch (error) {
-          // Fail silently for view tracking - don't show error to user
-        }
-      }
+      // if (!binder.permissions?.public || !user || !user.uid) return;
+
+      // try {
+      //   const wasNewView = await BinderInteractionService.trackView(
+      //     binder.id,
+      //     user.uid,
+      //     binder.ownerId
+      //   );
+
+      //   if (wasNewView) {
+      //     setInteractionStats((prev) => ({
+      //       ...prev,
+      //       viewCount: (prev?.viewCount || 0) + 1,
+      //     }));
+      //   }
+      // } catch (error) {
+      //   console.error("Failed to track view:", error);
+      // }
     };
 
     // Track the view (fire and forget)
-    trackViewOnClick();
+    trackView();
 
     // Continue with normal card selection
     if (onSelect && !isGuestBinderInaccessible) {
@@ -525,71 +476,36 @@ const BinderCard = ({
 
           {/* Footer */}
           <div className="mt-4 pt-4 border-t border-gray-100">
-            {/* Interaction Stats for Public Binders */}
-            {showInteractionStats && binder.permissions?.public && (
-              <div className="flex items-center gap-4 mb-3">
-                {interactionStats.loading ? (
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 bg-gray-200 rounded animate-pulse"></div>
-                      <div className="w-6 h-3 bg-gray-200 rounded animate-pulse"></div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 bg-gray-200 rounded animate-pulse"></div>
-                      <div className="w-6 h-3 bg-gray-200 rounded animate-pulse"></div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 bg-gray-200 rounded animate-pulse"></div>
-                      <div className="w-6 h-3 bg-gray-200 rounded animate-pulse"></div>
+            {/* Interaction stats disabled */}
+            {/* {binder.permissions?.public &&
+              user &&
+              interactionStats &&
+              (interactionStats.likeCount > 0 ||
+                interactionStats.favoriteCount > 0 ||
+                interactionStats.viewCount > 0) && (
+                  <div className="flex items-center justify-between text-xs text-gray-500 bg-gray-50 px-3 py-2 rounded-md">
+                    <div className="flex items-center space-x-3">
+                      {interactionStats.likeCount > 0 && (
+                        <span className="flex items-center space-x-1">
+                          <HeartIcon className="w-3 h-3 text-red-400" />
+                          <span>{interactionStats.likeCount}</span>
+                        </span>
+                      )}
+                      {interactionStats.favoriteCount > 0 && (
+                        <span className="flex items-center space-x-1">
+                          <StarIcon className="w-3 h-3 text-yellow-400" />
+                          <span>{interactionStats.favoriteCount}</span>
+                        </span>
+                      )}
+                      {interactionStats.viewCount > 0 && (
+                        <span className="flex items-center space-x-1">
+                          <EyeIcon className="w-3 h-3 text-blue-400" />
+                          <span>{interactionStats.viewCount}</span>
+                        </span>
+                      )}
                     </div>
                   </div>
-                ) : (
-                  <>
-                    {/* Always show interaction stats for public binders */}
-                    <div className="flex items-center gap-4">
-                      {/* Views */}
-                      <div className="flex items-center gap-1 text-xs text-gray-600">
-                        <EyeIcon className="w-4 h-4 text-blue-500" />
-                        <span className="font-medium">
-                          {interactionStats.viewCount || 0}
-                        </span>
-                        <span className="text-gray-500">
-                          {(interactionStats.viewCount || 0) === 1
-                            ? "view"
-                            : "views"}
-                        </span>
-                      </div>
-
-                      {/* Likes */}
-                      <div className="flex items-center gap-1 text-xs text-gray-600">
-                        <HeartIcon className="w-4 h-4 text-red-500" />
-                        <span className="font-medium">
-                          {interactionStats.likeCount || 0}
-                        </span>
-                        <span className="text-gray-500">
-                          {(interactionStats.likeCount || 0) === 1
-                            ? "like"
-                            : "likes"}
-                        </span>
-                      </div>
-
-                      {/* Favorites */}
-                      <div className="flex items-center gap-1 text-xs text-gray-600">
-                        <BookmarkIcon className="w-4 h-4 text-yellow-500" />
-                        <span className="font-medium">
-                          {interactionStats.favoriteCount || 0}
-                        </span>
-                        <span className="text-gray-500">
-                          {(interactionStats.favoriteCount || 0) === 1
-                            ? "favorite"
-                            : "favorites"}
-                        </span>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
+                )} */}
 
             <div
               className={`flex items-center justify-between text-xs ${

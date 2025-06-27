@@ -34,6 +34,8 @@ const BinderNavigation = ({
   // Drag progress props
   navigationProgress = 0,
   currentEdgeZone = null,
+  // Public view props
+  isPublicView = false,
 }) => {
   const { canGoNext, canGoPrev, goToPrevPage, goToNextPage } = navigation;
 
@@ -259,17 +261,27 @@ const BinderNavigation = ({
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <div className="bg-white/95 backdrop-blur-sm border-t border-gray-200 px-3 py-2">
-          <div className="flex items-center justify-between max-w-md mx-auto gap-2">
-            {/* Page Navigation */}
-            <div className="flex items-center gap-1">
+          <div
+            className={`flex items-center ${
+              isPublicView
+                ? "w-full justify-center"
+                : "max-w-md mx-auto justify-between"
+            } gap-2`}
+          >
+            {/* Page Navigation - Expanded in public view */}
+            <div
+              className={`flex items-center gap-1 ${
+                isPublicView ? "w-full justify-between" : ""
+              }`}
+            >
               <button
                 onClick={goToPrevPage}
                 disabled={!canGoPrev}
-                className="flex items-center justify-center w-12 h-11 bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition-colors"
+                className="flex items-center justify-center w-16 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                 title="Previous Page"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -280,24 +292,24 @@ const BinderNavigation = ({
                   />
                 </svg>
               </button>
-              <div className="text-sm font-semibold text-gray-700 w-20 text-center">
+              <div className="text-base font-bold text-gray-800 flex-1 text-center px-4">
                 {getCurrentPageText()}
               </div>
               <button
                 onClick={showAddPage && !canGoNext ? onAddPage : goToNextPage}
                 disabled={!showAddPage && !canGoNext}
-                className={`flex items-center justify-center w-12 h-11 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                className={`flex items-center justify-center w-16 h-12 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed ${
                   showAddPage && !canGoNext
                     ? "border-2 border-blue-500 text-blue-600 hover:bg-blue-50 bg-white"
-                    : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                    : "bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-700"
                 }`}
                 title={showAddPage && !canGoNext ? "Add Page" : "Next Page"}
               >
                 {showAddPage && !canGoNext ? (
-                  <DocumentPlusIcon className="w-5 h-5" />
+                  <DocumentPlusIcon className="w-6 h-6 transition-colors" />
                 ) : (
                   <svg
-                    className="w-5 h-5"
+                    className="w-6 h-6 hover:text-blue-600 transition-colors"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -311,75 +323,81 @@ const BinderNavigation = ({
               </button>
             </div>
 
-            {/* Actions */}
-            <div className="flex items-center gap-2">
-              {toolbarActions.onAddCard && (
-                <button
-                  onClick={toolbarActions.onAddCard}
-                  className="flex items-center justify-center h-11 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-sm font-medium"
-                  title="Add Card"
-                >
-                  <PlusIcon className="w-5 h-5" />
-                </button>
-              )}
-              {/* "More" Menu */}
-              <div className="relative" ref={moreMenuRef}>
-                <button
-                  onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
-                  className="flex items-center justify-center w-11 h-11 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-                  title="More Actions"
-                >
-                  <EllipsisVerticalIcon className="w-5 h-5 text-gray-600" />
-                </button>
+            {/* Actions - Only show if not in public view or has actions */}
+            {!isPublicView &&
+              (toolbarActions.onAddCard ||
+                Object.keys(toolbarActions).length > 0) && (
+                <div className="flex items-center gap-2">
+                  {toolbarActions.onAddCard && (
+                    <button
+                      onClick={toolbarActions.onAddCard}
+                      className="flex items-center justify-center h-11 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-sm font-medium"
+                      title="Add Card"
+                    >
+                      <PlusIcon className="w-5 h-5" />
+                    </button>
+                  )}
+                  {/* "More" Menu - Hidden in public view */}
+                  {!isPublicView && (
+                    <div className="relative" ref={moreMenuRef}>
+                      <button
+                        onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
+                        className="flex items-center justify-center w-11 h-11 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                        title="More Actions"
+                      >
+                        <EllipsisVerticalIcon className="w-5 h-5 text-gray-600" />
+                      </button>
 
-                {isMoreMenuOpen && (
-                  <div
-                    className="absolute bottom-full right-0 mb-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 z-40 overflow-hidden"
-                    onClick={() => setIsMoreMenuOpen(false)}
-                  >
-                    <div className="py-1">
-                      {toolbarActions.onPageOverview && (
-                        <button
-                          onClick={toolbarActions.onPageOverview}
-                          className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      {isMoreMenuOpen && (
+                        <div
+                          className="absolute bottom-full right-0 mb-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 z-40 overflow-hidden"
+                          onClick={() => setIsMoreMenuOpen(false)}
                         >
-                          <Squares2X2Icon className="w-5 h-5 text-gray-500" />
-                          <span>Page Overview</span>
-                        </button>
-                      )}
-                      {toolbarActions.onColorPicker && (
-                        <button
-                          onClick={toolbarActions.onColorPicker}
-                          className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          <SwatchIcon className="w-5 h-5 text-gray-500" />
-                          <span>Customize</span>
-                        </button>
-                      )}
-                      {toolbarActions.onMobileSettings && (
-                        <button
-                          onClick={toolbarActions.onMobileSettings}
-                          className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          <Cog6ToothIcon className="w-5 h-5 text-gray-500" />
-                          <span>Settings</span>
-                        </button>
-                      )}
-                      <div className="border-t border-gray-100 my-1"></div>
-                      {toolbarActions.onClearBinder && (
-                        <button
-                          onClick={toolbarActions.onClearBinder}
-                          className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50"
-                        >
-                          <TrashIcon className="w-5 h-5" />
-                          <span>Clear Binder</span>
-                        </button>
+                          <div className="py-1">
+                            {toolbarActions.onPageOverview && (
+                              <button
+                                onClick={toolbarActions.onPageOverview}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >
+                                <Squares2X2Icon className="w-5 h-5 text-gray-500" />
+                                <span>Page Overview</span>
+                              </button>
+                            )}
+                            {toolbarActions.onColorPicker && (
+                              <button
+                                onClick={toolbarActions.onColorPicker}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >
+                                <SwatchIcon className="w-5 h-5 text-gray-500" />
+                                <span>Customize</span>
+                              </button>
+                            )}
+                            {toolbarActions.onMobileSettings && (
+                              <button
+                                onClick={toolbarActions.onMobileSettings}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >
+                                <Cog6ToothIcon className="w-5 h-5 text-gray-500" />
+                                <span>Settings</span>
+                              </button>
+                            )}
+                            <div className="border-t border-gray-100 my-1"></div>
+                            {toolbarActions.onClearBinder && (
+                              <button
+                                onClick={toolbarActions.onClearBinder}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                              >
+                                <TrashIcon className="w-5 h-5" />
+                                <span>Clear Binder</span>
+                              </button>
+                            )}
+                          </div>
+                        </div>
                       )}
                     </div>
-                  </div>
-                )}
-              </div>
-            </div>
+                  )}
+                </div>
+              )}
           </div>
         </div>
       </div>
@@ -397,12 +415,12 @@ const BinderNavigation = ({
         <button
           onClick={goToPrevPage}
           disabled={!canGoPrev}
-          className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-14 h-14 bg-white/95 backdrop-blur-sm rounded-full shadow-xl hover:shadow-2xl border-2 border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center"
           title="Previous Page"
           aria-label="Go to previous page"
         >
           <svg
-            className="w-6 h-6 text-gray-700"
+            className="w-7 h-7 text-gray-700 hover:text-blue-600 transition-colors"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -410,7 +428,7 @@ const BinderNavigation = ({
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={2.5}
               d="M15 19l-7-7 7-7"
             />
           </svg>
@@ -425,10 +443,10 @@ const BinderNavigation = ({
         <button
           onClick={showAddPage && !canGoNext ? onAddPage : goToNextPage}
           disabled={!showAddPage && !canGoNext}
-          className={`w-12 h-12 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center ${
+          className={`w-14 h-14 backdrop-blur-sm rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center justify-center ${
             showAddPage && !canGoNext
-              ? "bg-blue-500 hover:bg-blue-600 text-white"
-              : "bg-white/90 hover:bg-white text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              ? "bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-400 hover:border-blue-500"
+              : "bg-white/95 border-2 border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
           }`}
           title={showAddPage && !canGoNext ? "Add New Page" : "Next Page"}
           aria-label={
@@ -436,10 +454,10 @@ const BinderNavigation = ({
           }
         >
           {showAddPage && !canGoNext ? (
-            <PlusIcon className="w-6 h-6" />
+            <PlusIcon className="w-7 h-7" />
           ) : (
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7 hover:text-blue-600 transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -447,7 +465,7 @@ const BinderNavigation = ({
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth={2.5}
                 d="M9 5l7 7-7 7"
               />
             </svg>

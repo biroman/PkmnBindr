@@ -64,6 +64,7 @@ const BinderToolbar = ({
   onPageOverview,
   onPdfExport,
   onColorPicker,
+  onShare, // New prop for share functionality
   onMobileSettings, // New prop for mobile settings modal
   currentBinder,
   isPdfExporting = false,
@@ -114,6 +115,16 @@ const BinderToolbar = ({
               title="Customize Color"
               isMobile={true}
             />
+
+            {/* Share - Only show for public binders */}
+            {currentBinder?.permissions?.public && onShare && (
+              <ToolbarButton
+                icon={ShareIcon}
+                onClick={() => handleToolClick("share", onShare)}
+                title="Share Binder"
+                isMobile={true}
+              />
+            )}
 
             {/* PDF Export */}
             <div className="relative group">
@@ -196,6 +207,15 @@ const BinderToolbar = ({
             onClick={() => handleToolClick("color", onColorPicker)}
             title="Customize Binder Color"
           />
+
+          {/* Share - Only show for public binders */}
+          {currentBinder?.permissions?.public && onShare && (
+            <ToolbarButton
+              icon={ShareIcon}
+              onClick={() => handleToolClick("share", onShare)}
+              title="Share Binder"
+            />
+          )}
 
           {/* PDF Export */}
           <div className="relative flex items-center group">

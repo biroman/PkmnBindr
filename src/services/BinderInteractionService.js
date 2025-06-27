@@ -10,7 +10,10 @@ import {
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import { toast } from "react-hot-toast";
-import { PublicCollectionsCacheService } from "./PublicCollectionsCacheService";
+import {
+  PublicCollectionsCacheService,
+  triggerBackgroundRefresh,
+} from "./PublicCollectionsCacheService";
 
 export class BinderInteractionService {
   // Cache to prevent spam clicking
@@ -96,7 +99,7 @@ export class BinderInteractionService {
       });
 
       // Trigger background refresh of public collections cache
-      PublicCollectionsCacheService.backgroundRefresh();
+      triggerBackgroundRefresh();
 
       // Show success message
       if (newLikeState) {
@@ -245,7 +248,7 @@ export class BinderInteractionService {
       });
 
       // Trigger background refresh of public collections cache
-      PublicCollectionsCacheService.backgroundRefresh();
+      triggerBackgroundRefresh();
 
       // Show success message
       if (newFavoriteState) {
@@ -339,7 +342,7 @@ export class BinderInteractionService {
 
       // Trigger background refresh of public collections cache if it was a new view
       if (wasNewView) {
-        PublicCollectionsCacheService.backgroundRefresh();
+        triggerBackgroundRefresh();
       }
 
       return wasNewView;
@@ -445,19 +448,7 @@ export class BinderInteractionService {
       const favoriteCount = binderData.favoriteCount || 0;
       const viewCount = binderData.viewCount || 0;
 
-      console.log(`getBinderStats for ${binderId}:`, {
-        likeCount,
-        favoriteCount,
-        viewCount,
-        rawData: {
-          likeCount: binderData.likeCount,
-          favoriteCount: binderData.favoriteCount,
-          viewCount: binderData.viewCount,
-          likes: binderData.likes,
-          favoriteUsers: binderData.favoriteUsers,
-          views: binderData.views,
-        },
-      });
+      // Removed console.log to reduce noise - stats are now fetched only when needed
 
       return {
         likeCount,

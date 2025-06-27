@@ -128,6 +128,10 @@ export const BinderContainer = ({
   // Public view specific props
   isPublicView = false,
   binderOwner = null,
+  // QR code sharing props
+  shareUrl = null,
+  showQRCode = false,
+  onToggleQRCode = null,
 }) => {
   // Early return check - must be before any hooks
   if (!binder) {
@@ -308,6 +312,10 @@ export const BinderContainer = ({
     }
   };
 
+  const handleShare = () => {
+    binderModals.handlers.openShareLinkModal();
+  };
+
   const handleMobileSettings = () => {
     setIsMobileSettingsOpen(true);
   };
@@ -479,6 +487,7 @@ export const BinderContainer = ({
             onPageOverview={handlePageOverview}
             onPdfExport={handlePdfExport}
             onColorPicker={handleColorPicker}
+            onShare={handleShare}
             onMobileSettings={handleMobileSettings}
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
@@ -542,6 +551,10 @@ export const BinderContainer = ({
           // Public view specific props
           isPublicView={isPublicView}
           binderOwner={binderOwner}
+          // QR code sharing props
+          shareUrl={shareUrl}
+          showQRCode={showQRCode}
+          onToggleQRCode={onToggleQRCode}
         />
 
         {/* Edge Navigation - positioned relative to full viewport, inside DndContext */}
@@ -571,6 +584,8 @@ export const BinderContainer = ({
             // Pass down drag state for progress indicator
             navigationProgress={binderDragDrop.navigationProgress}
             currentEdgeZone={binderDragDrop.currentEdgeZone}
+            // Public view props
+            isPublicView={isPublicView}
             // Mobile toolbar integration
             toolbarActions={
               isMobile && features.toolbar
@@ -698,6 +713,10 @@ BinderContainer.propTypes = {
   // Public view specific props
   isPublicView: PropTypes.bool,
   binderOwner: PropTypes.object,
+  // QR code sharing props
+  shareUrl: PropTypes.string,
+  showQRCode: PropTypes.bool,
+  onToggleQRCode: PropTypes.func,
 };
 
 export default BinderContainer;

@@ -10,6 +10,7 @@ import { useRules } from "./RulesContext";
 import { useAuth } from "../hooks/useAuth";
 import { binderSyncService } from "../services/binderSyncService";
 import { PublicCollectionsCacheService } from "../services/PublicCollectionsCacheService";
+import shareService from "../services/ShareService";
 import { db } from "../lib/firebase";
 import {
   collection,
@@ -3292,6 +3293,86 @@ export const BinderProvider = ({ children }) => {
     [binders, currentBinder, user]
   );
 
+  // Share link management functions
+  const createShareLink = useCallback(
+    async (binderId, options = {}) => {
+      try {
+        if (!user) {
+          throw new Error("User must be logged in to create share links");
+        }
+
+        const binder = binders.find((b) => b.id === binderId);
+        if (!binder) {
+          throw new Error("Binder not found");
+        }
+
+        if (!binder.permissions?.public) {
+          throw new Error("Binder must be public to create share links");
+        }
+
+        const result = await shareService.createShareLink(
+          binderId,
+          user.uid,
+          options
+        );
+        return result;
+      } catch (error) {
+        console.error("Error creating share link:", error);
+        throw error;
+      }
+    },
+    [binders, user]
+  );
+
+  const getShareLinks = useCallback(
+    async (binderId) => {
+      try {
+        if (!user) {
+          throw new Error("User must be logged in to view share links");
+        }
+
+        return await shareService.getShareLinks(binderId, user.uid);
+      } catch (error) {
+        console.error("Error fetching share links:", error);
+        throw error;
+      }
+    },
+    [user]
+  );
+
+  const revokeShareLink = useCallback(
+    async (shareToken) => {
+      try {
+        if (!user) {
+          throw new Error("User must be logged in to revoke share links");
+        }
+
+        await shareService.revokeShareLink(shareToken, user.uid);
+        return true;
+      } catch (error) {
+        console.error("Error revoking share link:", error);
+        throw error;
+      }
+    },
+    [user]
+  );
+
+  const getShareAnalytics = useCallback(
+    async (binderId) => {
+      try {
+        if (!user) {
+          throw new Error("User must be logged in to view share analytics");
+        }
+
+        return await shareService.getShareAnalytics(binderId, user.uid);
+      } catch (error) {
+        console.error("Error fetching share analytics:", error);
+        throw error;
+      }
+    },
+    [user]
+  );
+
   // Sorting functionality
   const sortBinder = useCallback(
     (binderId, sortBy, sortDirection) => {
@@ -3465,6 +3546,12 @@ export const BinderProvider = ({ children }) => {
     fetchUserPublicBinders,
     getPublicBinder,
     updateBinderPrivacy,
+
+    // Share link functions
+    createShareLink,
+    getShareLinks,
+    revokeShareLink,
+    getShareAnalytics,
   };
 
   return (

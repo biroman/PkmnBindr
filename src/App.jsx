@@ -28,6 +28,7 @@ import SettingsPage from "./pages/SettingsPage";
 import AdminPage from "./pages/AdminPage";
 import BinderViewer from "./components/admin/BinderViewer";
 import PublicBinderViewPage from "./pages/PublicBinderViewPage";
+import SharedBinderPage from "./pages/SharedBinderPage";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
@@ -70,6 +71,12 @@ const App = () => {
               <BrowserRouter>
                 <ScrollToTop />
                 <Routes>
+                  {/* Shared Binder Route - Outside RootLayout (no navbar) */}
+                  <Route
+                    path="share/:shareToken"
+                    element={<SharedBinderPage />}
+                  />
+
                   {/* Public Routes */}
                   <Route path="/" element={<RootLayout />}>
                     <Route index element={<HomePage />} />

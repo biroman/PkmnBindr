@@ -17,6 +17,10 @@ const BinderCore = ({
   // Public view specific props
   isPublicView = false,
   binderOwner = null,
+  // QR code sharing props
+  shareUrl = null,
+  showQRCode = false,
+  onToggleQRCode = null,
 }) => {
   const {
     onCardClick = () => {},
@@ -48,6 +52,10 @@ const BinderCore = ({
         // Public view specific props
         isPublicView={isPublicView}
         binderOwner={binderOwner}
+        // QR code sharing props
+        shareUrl={shareUrl}
+        showQRCode={showQRCode}
+        onToggleQRCode={onToggleQRCode}
       />
       {children}
     </div>
@@ -94,6 +102,10 @@ BinderCore.propTypes = {
   // Public view specific props
   isPublicView: PropTypes.bool,
   binderOwner: PropTypes.object,
+  // QR code sharing props
+  shareUrl: PropTypes.string,
+  showQRCode: PropTypes.bool,
+  onToggleQRCode: PropTypes.func,
 };
 
 export default BinderCore;

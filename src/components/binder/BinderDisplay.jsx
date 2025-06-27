@@ -19,6 +19,10 @@ const BinderDisplay = ({
   // Public view specific props
   isPublicView = false,
   binderOwner = null,
+  // QR code sharing props
+  shareUrl = null,
+  showQRCode = false,
+  onToggleQRCode = null,
 }) => {
   if (!binder || !currentPageConfig) {
     return null;
@@ -51,6 +55,9 @@ const BinderDisplay = ({
               isPublicView={isPublicView}
               isMobile={dimensions.isMobile}
               dimensions={dimensions}
+              shareUrl={shareUrl}
+              showQRCode={showQRCode}
+              onToggleQRCode={onToggleQRCode}
             />
           ) : (
             <CardPage
@@ -103,6 +110,9 @@ const BinderDisplay = ({
           isPublicView={isPublicView}
           isMobile={false}
           dimensions={dimensions}
+          shareUrl={shareUrl}
+          showQRCode={showQRCode}
+          onToggleQRCode={onToggleQRCode}
         />
       ) : (
         <CardPage
@@ -184,6 +194,10 @@ BinderDisplay.propTypes = {
   // Public view specific props
   isPublicView: PropTypes.bool,
   binderOwner: PropTypes.object,
+  // QR code sharing props
+  shareUrl: PropTypes.string,
+  showQRCode: PropTypes.bool,
+  onToggleQRCode: PropTypes.func,
 };
 
 export default BinderDisplay;

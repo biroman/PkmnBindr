@@ -4,6 +4,7 @@ import AddCardModal from "./AddCardModal";
 import BinderPageOverview from "./BinderPageOverview";
 import ClearBinderModal from "./ClearBinderModal";
 import BinderColorPicker from "./BinderColorPicker";
+import ShareLinkModal from "./ShareLinkModal";
 
 /**
  * ModalProvider component that centralizes all binder modal rendering and management
@@ -36,6 +37,7 @@ export const ModalProvider = ({
     isPageOverviewOpen = false,
     isClearModalOpen = false,
     isColorPickerOpen = false,
+    isShareLinkModalOpen = false,
   } = modals;
 
   const { targetPosition = null, previewColor = null } = modalData;
@@ -46,6 +48,7 @@ export const ModalProvider = ({
     closeClearModal = () => {},
     confirmClearBinder = () => {},
     closeColorPicker = () => {},
+    closeShareLinkModal = () => {},
     handlePageSelect = () => {},
     handleColorChange = () => {},
     handleColorPreview = () => {},
@@ -56,6 +59,7 @@ export const ModalProvider = ({
     pageOverview: pageOverviewProps = {},
     clearModal: clearModalProps = {},
     colorPicker: colorPickerProps = {},
+    shareModal: shareModalProps = {},
   } = modalProps;
 
   return (
@@ -97,6 +101,14 @@ export const ModalProvider = ({
         onPreviewChange={handleColorPreview}
         {...colorPickerProps}
       />
+
+      {/* Share Link Modal */}
+      <ShareLinkModal
+        isOpen={isShareLinkModalOpen}
+        onClose={closeShareLinkModal}
+        binder={binder}
+        {...shareModalProps}
+      />
     </>
   );
 };
@@ -108,6 +120,7 @@ ModalProvider.propTypes = {
     isPageOverviewOpen: PropTypes.bool,
     isClearModalOpen: PropTypes.bool,
     isColorPickerOpen: PropTypes.bool,
+    isShareLinkModalOpen: PropTypes.bool,
     isAnyModalOpen: PropTypes.bool,
   }),
   modalData: PropTypes.shape({
@@ -120,6 +133,7 @@ ModalProvider.propTypes = {
     closeClearModal: PropTypes.func,
     confirmClearBinder: PropTypes.func,
     closeColorPicker: PropTypes.func,
+    closeShareLinkModal: PropTypes.func,
     handlePageSelect: PropTypes.func,
     handleColorChange: PropTypes.func,
     handleColorPreview: PropTypes.func,
@@ -129,6 +143,7 @@ ModalProvider.propTypes = {
     pageOverview: PropTypes.object,
     clearModal: PropTypes.object,
     colorPicker: PropTypes.object,
+    shareModal: PropTypes.object,
   }),
   disabled: PropTypes.bool,
 };

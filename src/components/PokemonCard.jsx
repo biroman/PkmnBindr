@@ -127,14 +127,6 @@ const PokemonCard = forwardRef(
 
     const handleImageLoad = () => {
       setImageLoaded(true);
-      console.log(
-        `[PokemonCard] Image loaded successfully for card: ${card.name}`,
-        {
-          cardId: card.id,
-          imageUrl: card.imageSmall || card.image,
-          card,
-        }
-      );
       onImageLoad?.(card);
     };
 

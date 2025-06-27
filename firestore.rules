@@ -233,18 +233,22 @@ service cloud.firestore {
                        ['permissions.public', '==', true]
                      ]);
       
-      // BINDER INTERACTIONS: Allow authenticated users to like and favorite public binders
-      // Allow interaction updates (likes, favorites, views) on public binders
-      allow update: if !isEmergencyMode() && 
-                       request.auth != null && 
-                       resource.data.permissions.public == true &&
-                       // Only allow updating interaction fields
-                       request.resource.data.diff(resource.data).affectedKeys().hasOnly([
-                         'likes', 'likeCount', 
-                         'favoriteUsers', 'favoriteCount', 
-                         'views', 'viewCount', 
-                         'lastViewed', 'lastInteraction', 'updatedAt'
-                       ]);
+      // UNAUTHENTICATED SHARE ACCESS: Allow reading public binders without auth
+      // This enables share link functionality for non-registered users
+      // Additional validation (share token) is handled in application logic
+      allow read: if resource.data.permissions.public == true;
+      
+      // BINDER INTERACTIONS: DISABLED - No longer allow interaction updates
+      // allow update: if !isEmergencyMode() && 
+      //                  request.auth != null && 
+      //                  resource.data.permissions.public == true &&
+      //                  // Only allow updating interaction fields
+      //                  request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+      //                    'likes', 'likeCount', 
+      //                    'favoriteUsers', 'favoriteCount', 
+      //                    'views', 'viewCount', 
+      //                    'lastViewed', 'lastInteraction', 'updatedAt'
+      //                  ]);
       
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
@@ -272,6 +276,30 @@ service cloud.firestore {
                                (!('permissions' in request.resource.data) ||
                                 (request.resource.data.permissions.keys().hasAll(['public']) &&
                                  request.resource.data.permissions.public is bool));
+    }
+
+    // Public Shares collection - for share token access
+    match /publicShares/{shareToken} {
+      // Owner can manage all share tokens (for admin purposes)
+      allow read, write, delete: if isOwner();
+      
+      // Authenticated users can read/write their own share tokens
+      allow read, write: if request.auth != null && 
+                            resource.data.ownerId == request.auth.uid;
+      
+      // Allow creation of share tokens for authenticated users
+      allow create: if request.auth != null && 
+                       request.resource.data.ownerId == request.auth.uid &&
+                       request.resource.data.keys().hasAll(['shareToken', 'binderId', 'ownerId']) &&
+                       isValidStringLength(request.resource.data.shareToken, 50) &&
+                       isValidStringLength(request.resource.data.binderId, 100) &&
+                       request.resource.data.isActive is bool;
+      
+      // UNAUTHENTICATED ACCESS: Allow reading active share tokens by anyone
+      // This enables public access via share links for non-registered users
+      allow read: if resource.data.isActive == true &&
+                     (resource.data.expiresAt == null || 
+                      resource.data.expiresAt > request.time);
     }
 
     // Global Rules collection - Owner can manage, users can read
@@ -421,15 +449,15 @@ service cloud.firestore {
       }
     }
 
-    // Binder interactions collection - for likes and favorites
-    match /binderInteractions/{interactionId} {
-      // Users can read/write their own interactions
-      allow read, write: if request.auth != null && 
-        request.auth.uid == resource.data.userId;
-      
-      // Allow reading interactions for public binders (for stats)
-      allow read: if request.auth != null;
-    }
+    // Binder interactions collection - DISABLED
+    // match /binderInteractions/{interactionId} {
+    //   // Users can read/write their own interactions
+    //   allow read, write: if request.auth != null && 
+    //     request.auth.uid == resource.data.userId;
+    //   
+    //   // Allow reading interactions for public binders (for stats)
+    //   allow read: if request.auth != null;
+    // }
 
     // Binder card customizations collection - separate from binder content
     match /binderCardCustomizations/{customizationId} {

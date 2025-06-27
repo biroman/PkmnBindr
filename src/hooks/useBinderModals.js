@@ -28,6 +28,7 @@ export const useBinderModals = ({
   const [isPageOverviewOpen, setIsPageOverviewOpen] = useState(false);
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
+  const [isShareLinkModalOpen, setIsShareLinkModalOpen] = useState(false);
 
   // Modal-specific state
   const [targetPosition, setTargetPosition] = useState(null); // For slot-specific card addition
@@ -41,7 +42,8 @@ export const useBinderModals = ({
     isAddCardModalOpen ||
     isPageOverviewOpen ||
     isClearModalOpen ||
-    isColorPickerOpen;
+    isColorPickerOpen ||
+    isShareLinkModalOpen;
 
   // Generic modal opener with duplicate prevention
   const openModal = useCallback(
@@ -158,6 +160,15 @@ export const useBinderModals = ({
     [binder, onColorChange]
   );
 
+  // Share Link Modal handlers
+  const openShareLinkModal = useCallback(() => {
+    openModal(setIsShareLinkModalOpen);
+  }, [openModal]);
+
+  const closeShareLinkModal = useCallback(() => {
+    closeModal(setIsShareLinkModalOpen);
+  }, [closeModal]);
+
   // Page selection handler
   const handlePageSelect = useCallback(
     (pageIndex) => {
@@ -173,6 +184,7 @@ export const useBinderModals = ({
     setIsPageOverviewOpen(false);
     setIsClearModalOpen(false);
     setIsColorPickerOpen(false);
+    setIsShareLinkModalOpen(false);
     setTargetPosition(null);
     setPreviewColor(null);
     modalOpenRef.current = false;
@@ -185,6 +197,7 @@ export const useBinderModals = ({
       isPageOverviewOpen,
       isClearModalOpen,
       isColorPickerOpen,
+      isShareLinkModalOpen,
       isAnyModalOpen,
     },
 
@@ -216,6 +229,10 @@ export const useBinderModals = ({
       handleColorPreview,
       handleColorChange,
 
+      // Share Link Modal
+      openShareLinkModal,
+      closeShareLinkModal,
+
       // Utilities
       closeAllModals,
     },
@@ -227,6 +244,7 @@ export const useBinderModals = ({
         pageOverview: isPageOverviewOpen,
         clearBinder: isClearModalOpen,
         colorPicker: isColorPickerOpen,
+        shareLink: isShareLinkModalOpen,
       };
       return modalMap[modalName] || false;
     },

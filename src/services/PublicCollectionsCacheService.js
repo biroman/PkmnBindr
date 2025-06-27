@@ -469,40 +469,23 @@ export class PublicCollectionsCacheService {
   }
 }
 
-// Set up periodic background refresh (every 2 minutes when page is visible)
-let backgroundRefreshInterval;
+// Background refresh is now only triggered manually when needed
+// Removed automatic periodic refresh to prevent unnecessary API calls
 
-const startBackgroundRefresh = () => {
-  if (backgroundRefreshInterval) return;
+/**
+ * Manual background refresh - only call when explicitly needed
+ * (e.g., when user views a binder, likes/favorites something, etc.)
+ */
+export const triggerBackgroundRefresh = () => {
+  // Only refresh if cache is getting stale (older than 3 minutes)
+  const STALE_THRESHOLD = 3 * 60 * 1000; // 3 minutes
 
-  backgroundRefreshInterval = setInterval(() => {
-    // Only refresh if document is visible (user is active)
-    if (!document.hidden) {
-      PublicCollectionsCacheService.backgroundRefresh();
-    }
-  }, 2 * 60 * 1000); // 2 minutes
-};
-
-const stopBackgroundRefresh = () => {
-  if (backgroundRefreshInterval) {
-    clearInterval(backgroundRefreshInterval);
-    backgroundRefreshInterval = null;
+  if (
+    PublicCollectionsCacheService.cache.timestamp &&
+    Date.now() - PublicCollectionsCacheService.cache.timestamp < STALE_THRESHOLD
+  ) {
+    return; // Cache is still fresh, no need to refresh
   }
+
+  PublicCollectionsCacheService.backgroundRefresh();
 };
-
-// Start background refresh on page visibility
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    stopBackgroundRefresh();
-  } else {
-    startBackgroundRefresh();
-  }
-});
-
-// Start immediately if page is visible
-if (!document.hidden) {
-  startBackgroundRefresh();
-}
-
-// Cleanup on page unload
-window.addEventListener("beforeunload", stopBackgroundRefresh);
