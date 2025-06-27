@@ -82,8 +82,8 @@ export const useAuthStore = create()(
         isAuthenticated: () => Boolean(get().user),
         isOwner: () => {
           const { user } = get();
-          const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-          return user?.email === ownerEmail;
+          // Use role-based checking instead of email
+          return user?.role === "owner";
         },
 
         // Actions
@@ -183,18 +183,19 @@ export const useAuthStore = create()(
             // Update user profile
             await updateProfile(user, { displayName });
 
-            // Create user document in Firestore
-            await setDoc(doc(db, "users", user.uid), {
-              displayName,
-              email,
-              emailVerified: false,
-              role: "user", // Add default role
+            // Use safe profile creation and add signup-specific fields
+            const { RobustRoleService } = await import(
+              "../services/RobustRoleService"
+            );
+            await RobustRoleService.safeCreateOrUpdateUserProfile(user);
+
+            // Add signup-specific fields
+            await updateDoc(doc(db, "users", user.uid), {
               agreeToTerms: true,
               agreeToTermsAt: new Date().toISOString(),
-              createdAt: serverTimestamp(),
-              updatedAt: serverTimestamp(),
               loginCount: 0,
               accountStatus: "active",
+              authProvider: "email",
               securityFlags: {
                 suspiciousActivity: false,
                 lastPasswordChange: new Date().toISOString(),
@@ -203,7 +204,7 @@ export const useAuthStore = create()(
 
             // Send email verification
             await sendEmailVerification(user, {
-              url: `${window.location.origin}/home`,
+              url: `${window.location.origin}/dashboard`,
               handleCodeInApp: true,
             });
 
@@ -267,36 +268,33 @@ export const useAuthStore = create()(
 
             const { user } = await signInWithPopup(auth, provider);
 
-            // Check if user document exists, create if not
-            const userDoc = await getDoc(doc(db, "users", user.uid));
+            // Use safe profile creation to avoid role overriding
+            const { RobustRoleService } = await import(
+              "../services/RobustRoleService"
+            );
+            await RobustRoleService.safeCreateOrUpdateUserProfile(user);
 
-            if (!userDoc.exists()) {
-              // New user - create document
-              await setDoc(doc(db, "users", user.uid), {
-                displayName: user.displayName || user.email?.split("@")[0],
-                email: user.email,
-                emailVerified: user.emailVerified,
-                photoURL: user.photoURL,
-                role: "user",
-                agreeToTerms: true, // OAuth users implicitly agree
-                agreeToTermsAt: new Date().toISOString(),
-                createdAt: serverTimestamp(),
-                updatedAt: serverTimestamp(),
-                loginCount: 1,
-                accountStatus: "active",
-                authProvider: "google",
-                securityFlags: {
-                  suspiciousActivity: false,
-                  lastPasswordChange: null, // OAuth users don't have passwords
-                },
-              });
-            } else {
-              // Existing user - update last login
+            // Update OAuth-specific fields safely
+            const userDoc = await getDoc(doc(db, "users", user.uid));
+            if (userDoc.exists()) {
               await updateDoc(doc(db, "users", user.uid), {
                 lastLoginAt: serverTimestamp(),
                 loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified, // Update verification status
-                photoURL: user.photoURL, // Update photo in case it changed
+                emailVerified: user.emailVerified,
+                authProvider: "google",
+              });
+            } else {
+              // For new OAuth users, add OAuth-specific fields
+              await updateDoc(doc(db, "users", user.uid), {
+                agreeToTerms: true,
+                agreeToTermsAt: new Date().toISOString(),
+                authProvider: "google",
+                loginCount: 1,
+                accountStatus: "active",
+                securityFlags: {
+                  suspiciousActivity: false,
+                  lastPasswordChange: null,
+                },
               });
             }
 
@@ -319,39 +317,33 @@ export const useAuthStore = create()(
 
             const { user } = await signInWithPopup(auth, provider);
 
-            // Check if user document exists, create if not
-            const userDoc = await getDoc(doc(db, "users", user.uid));
+            // Use safe profile creation to avoid role overriding
+            const { RobustRoleService } = await import(
+              "../services/RobustRoleService"
+            );
+            await RobustRoleService.safeCreateOrUpdateUserProfile(user);
 
-            if (!userDoc.exists()) {
-              // New user - create document
-              await setDoc(doc(db, "users", user.uid), {
-                displayName:
-                  user.displayName ||
-                  user.email?.split("@")[0] ||
-                  "Twitter User",
-                email: user.email,
-                emailVerified: user.emailVerified,
-                photoURL: user.photoURL,
-                role: "user",
-                agreeToTerms: true, // OAuth users implicitly agree
-                agreeToTermsAt: new Date().toISOString(),
-                createdAt: serverTimestamp(),
-                updatedAt: serverTimestamp(),
-                loginCount: 1,
-                accountStatus: "active",
-                authProvider: "twitter",
-                securityFlags: {
-                  suspiciousActivity: false,
-                  lastPasswordChange: null, // OAuth users don't have passwords
-                },
-              });
-            } else {
-              // Existing user - update last login
+            // Update OAuth-specific fields safely
+            const userDoc = await getDoc(doc(db, "users", user.uid));
+            if (userDoc.exists()) {
               await updateDoc(doc(db, "users", user.uid), {
                 lastLoginAt: serverTimestamp(),
                 loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified, // Update verification status
-                photoURL: user.photoURL, // Update photo in case it changed
+                emailVerified: user.emailVerified,
+                authProvider: "twitter",
+              });
+            } else {
+              // For new OAuth users, add OAuth-specific fields
+              await updateDoc(doc(db, "users", user.uid), {
+                agreeToTerms: true,
+                agreeToTermsAt: new Date().toISOString(),
+                authProvider: "twitter",
+                loginCount: 1,
+                accountStatus: "active",
+                securityFlags: {
+                  suspiciousActivity: false,
+                  lastPasswordChange: null,
+                },
               });
             }
 

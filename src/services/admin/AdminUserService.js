@@ -47,7 +47,23 @@ export class AdminUserService {
       // If no cached data or force refresh, fetch from server
       if (!allUsers) {
         allUsers = await fetchAllUsersWithStatsAsAdmin();
+
+        // Ensure we have a valid array
+        if (!Array.isArray(allUsers)) {
+          console.error(
+            "fetchAllUsersWithStatsAsAdmin did not return an array:",
+            allUsers
+          );
+          allUsers = [];
+        }
+
         AdminCacheService.setCachedData(CACHE_KEYS.USERS, allUsers);
+      }
+
+      // Ensure cached data is also an array
+      if (!Array.isArray(allUsers)) {
+        console.error("Cached users data is not an array:", allUsers);
+        allUsers = [];
       }
 
       // Calculate user statistics
@@ -83,6 +99,21 @@ export class AdminUserService {
    * Calculate comprehensive user statistics
    */
   static calculateUserStats(users) {
+    // Ensure users is an array
+    if (!Array.isArray(users)) {
+      console.error("calculateUserStats: users is not an array:", users);
+      return {
+        total: 0,
+        active: 0,
+        inactive: 0,
+        admins: 0,
+        lastWeekSignups: 0,
+        lastMonthSignups: 0,
+        totalBinders: 0,
+        totalCards: 0,
+      };
+    }
+
     const now = new Date();
     const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
@@ -110,6 +141,12 @@ export class AdminUserService {
    * Apply advanced filters to user list
    */
   static applyFilters(users, { searchTerm, filterRole, filterStatus }) {
+    // Ensure users is an array
+    if (!Array.isArray(users)) {
+      console.error("applyFilters: users is not an array:", users);
+      return [];
+    }
+
     return users.filter((user) => {
       // Search filter
       const matchesSearch =
@@ -133,6 +170,12 @@ export class AdminUserService {
    * Apply sorting to user list
    */
   static applySorting(users, sortBy, sortOrder) {
+    // Ensure users is an array
+    if (!Array.isArray(users)) {
+      console.error("applySorting: users is not an array:", users);
+      return [];
+    }
+
     return [...users].sort((a, b) => {
       let aValue = a[sortBy];
       let bValue = b[sortBy];
@@ -165,6 +208,15 @@ export class AdminUserService {
    * Apply pagination to user list
    */
   static applyPagination(users, page, limit) {
+    // Ensure users is an array
+    if (!Array.isArray(users)) {
+      console.error("applyPagination: users is not an array:", users);
+      return {
+        users: [],
+        totalPages: 0,
+      };
+    }
+
     const totalPages = Math.ceil(users.length / limit);
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;

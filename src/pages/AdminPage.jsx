@@ -49,7 +49,7 @@ const AdminPage = () => {
   } = useRules();
 
   // Restore original state management for now
-  const [activeTab, setActiveTab] = useState("dashboard");
+  const [activeTab, setActiveTab] = useState("contact");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 

@@ -12,9 +12,9 @@ const PublicRoute = () => {
     );
   }
 
-  // If user is authenticated, redirect to home
+  // If user is authenticated, redirect to dashboard
   if (user) {
-    return <Navigate to="/home" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   // If not authenticated, render the route

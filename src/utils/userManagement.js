@@ -645,6 +645,12 @@ export const fetchAllUsersWithStatsAsAdmin = async () => {
   try {
     const users = await fetchAllUsers();
 
+    // Ensure we have a valid array
+    if (!Array.isArray(users)) {
+      console.error("fetchAllUsers did not return an array:", users);
+      return [];
+    }
+
     // Calculate real stats for each user using admin privileges
     const usersWithStats = await Promise.all(
       users.map(async (user) => {

@@ -12,9 +12,9 @@ const AuthLayout = () => {
     );
   }
 
-  // If user is already authenticated, redirect to home
+  // If user is already authenticated, redirect to dashboard
   if (user) {
-    return <Navigate to="/home" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return (

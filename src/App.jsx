@@ -18,7 +18,6 @@ import { useActivityTracking } from "./hooks/useActivityTracking";
 
 // Pages
 import HomePage from "./pages/HomePage";
-import Home from "./pages/Home";
 import BinderPage from "./pages/BinderPage";
 import BindersPage from "./pages/BindersPage";
 import StaticBinderPage from "./pages/StaticBinderPage";
@@ -138,7 +137,6 @@ const App = () => {
 
                     {/* Protected Routes - Only accessible when logged in */}
                     <Route element={<ProtectedRoute />}>
-                      <Route path="home" element={<Home />} />
                       <Route path="profile" element={<PublicProfilePage />} />
                       <Route
                         path="profile/:userId"

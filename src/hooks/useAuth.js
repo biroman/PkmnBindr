@@ -54,6 +54,6 @@ export const useAuth = () => {
 
 export const useOwner = () => {
   const user = useAuthStore((state) => state.user);
-  const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
-  return user?.email === ownerEmail;
+  // Use role-based checking instead of email
+  return user?.role === "owner";
 };

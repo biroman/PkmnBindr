@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useAuth } from "./useAuth";
-import { createOrUpdateUserProfile } from "../utils/userManagement";
+import { RobustRoleService } from "../services/RobustRoleService";
 
 /**
- * Hook to automatically track user sign-ins and maintain user profiles
- * This should be used at the app level to ensure all user activity is tracked
+ * Hook to safely track user sign-ins without affecting roles
+ * This uses the RobustRoleService to prevent role downgrades
  */
 export const useUserTracking = () => {
   const { user } = useAuth();
@@ -13,7 +13,8 @@ export const useUserTracking = () => {
     const trackUser = async () => {
       if (user) {
         try {
-          await createOrUpdateUserProfile(user);
+          // Use the safe method that preserves existing roles
+          await RobustRoleService.safeCreateOrUpdateUserProfile(user);
         } catch (error) {
           console.error("Error tracking user:", error);
         }

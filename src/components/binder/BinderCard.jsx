@@ -100,6 +100,9 @@ const BinderCard = ({
 
       // Use cached data if available
       if (cachedInteractionStats) {
+        console.log(
+          `📋 Using cached interaction stats for binder ${binder.id}`
+        );
         setInteractionStats({
           likeCount: cachedInteractionStats.likeCount,
           favoriteCount: cachedInteractionStats.favoriteCount,
@@ -109,6 +112,9 @@ const BinderCard = ({
         return;
       }
 
+      console.warn(
+        `🔥 FIREBASE READ: BinderCard fetching interaction stats for binder ${binder.id} (cached data not available)`
+      );
       try {
         const stats = await BinderInteractionService.getBinderStats(
           binder.id,
@@ -151,6 +157,7 @@ const BinderCard = ({
 
       // Use cached customization if available
       if (cachedCustomization) {
+        console.log(`📋 Using cached customization for binder ${binder.id}`);
         if (cachedCustomization.headerColor) {
           setFinalHeaderColor(cachedCustomization.headerColor);
         }
@@ -161,11 +168,15 @@ const BinderCard = ({
       // First check if we already have it cached in context
       const cachedColor = getHeaderColor(binder.id);
       if (cachedColor) {
+        console.log(`📋 Using context-cached color for binder ${binder.id}`);
         setFinalHeaderColor(cachedColor);
         setIsCustomizationReady(true);
         return;
       }
 
+      console.warn(
+        `🔥 FIREBASE READ: BinderCard fetching customization for binder ${binder.id} (cached data not available)`
+      );
       // Load from Firebase if not cached
       try {
         const customization = await loadBinderCustomization(

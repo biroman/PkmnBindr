@@ -144,24 +144,52 @@ export class PublicCollectionsCacheService {
         );
       }
 
-      // Sort based on active filter
+      // Pre-fetch interaction stats for ALL filtered binders if using popular filter
+      // This prevents duplicate fetching later
+      let allBinderStats = {};
+
       if (activeFilter === "popular") {
-        // For popular filter, we need to fetch interaction stats to sort properly
+        console.log(
+          `Pre-fetching stats for ${filteredBinders.length} binders for popular sorting`
+        );
+
         const statsPromises = filteredBinders.map(async (binder) => {
           try {
             const stats = await BinderInteractionService.getBinderStats(
               binder.id,
               binder.ownerId
             );
-            return { binder, likeCount: stats.likeCount || 0 };
+            return {
+              binderId: binder.id,
+              stats,
+              likeCount: stats.likeCount || 0,
+            };
           } catch (error) {
-            return { binder, likeCount: 0 };
+            console.error(
+              `Error fetching stats for binder ${binder.id}:`,
+              error
+            );
+            return {
+              binderId: binder.id,
+              stats: { likeCount: 0, favoriteCount: 0, viewCount: 0 },
+              likeCount: 0,
+            };
           }
         });
 
-        const bindersWithStats = await Promise.all(statsPromises);
-        bindersWithStats.sort((a, b) => b.likeCount - a.likeCount);
-        filteredBinders = bindersWithStats.map((item) => item.binder);
+        const statsResults = await Promise.all(statsPromises);
+
+        // Store stats in lookup object for reuse
+        statsResults.forEach(({ binderId, stats }) => {
+          allBinderStats[binderId] = stats;
+        });
+
+        // Sort by like count using pre-fetched stats
+        filteredBinders.sort((a, b) => {
+          const aLikes = allBinderStats[a.id]?.likeCount || 0;
+          const bLikes = allBinderStats[b.id]?.likeCount || 0;
+          return bLikes - aLikes;
+        });
       } else {
         // Default to recent (sort by updatedAt)
         filteredBinders.sort((a, b) => {
@@ -230,8 +258,15 @@ export class PublicCollectionsCacheService {
         }
       });
 
-      // Batch fetch interaction stats
+      // Fetch interaction stats for page binders (reuse pre-fetched stats if available)
       const interactionStatsPromises = paginatedBinders.map(async (binder) => {
+        // If we already fetched stats for popular sorting, reuse them
+        if (allBinderStats[binder.id]) {
+          console.log(`Reusing pre-fetched stats for binder ${binder.id}`);
+          return { binderId: binder.id, stats: allBinderStats[binder.id] };
+        }
+
+        // Otherwise fetch stats normally
         try {
           const stats = await BinderInteractionService.getBinderStats(
             binder.id,
@@ -313,9 +348,39 @@ export class PublicCollectionsCacheService {
       // Cache the data
       this.setCachedPage(page, activeFilter, searchQuery, data, pageInfo);
 
+      const readsCount =
+        1 + // Initial binder query
+        (activeFilter === "popular" ? filteredBinders.length : 0) + // Popular filter stats (if used)
+        paginatedBinders.filter((b) => !allBinderStats[b.id]).length + // Additional stats (only if not pre-fetched)
+        paginatedBinders.length + // Customizations
+        ownerIds.length; // Owner profiles
+
       console.log(
-        `Loaded ${paginatedBinders.length} public collections with all data`
+        `✅ Loaded ${paginatedBinders.length} public collections with optimized reads`,
+        {
+          estimatedReads: readsCount,
+          breakdown: {
+            initialQuery: 1,
+            popularFilterStats:
+              activeFilter === "popular" ? filteredBinders.length : 0,
+            additionalStats: paginatedBinders.filter(
+              (b) => !allBinderStats[b.id]
+            ).length,
+            customizations: paginatedBinders.length,
+            ownerProfiles: ownerIds.length,
+          },
+          reusedStats:
+            activeFilter === "popular"
+              ? paginatedBinders.filter((b) => allBinderStats[b.id]).length
+              : 0,
+          totalBinders: filteredBinders.length,
+          filter: activeFilter,
+          page: page,
+          optimization:
+            activeFilter === "popular" ? "STATS_REUSED" : "STANDARD",
+        }
       );
+
       return { data, pageInfo };
     } catch (error) {
       console.error("Error fetching public collections:", error);

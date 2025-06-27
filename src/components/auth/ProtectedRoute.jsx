@@ -21,11 +21,10 @@ const ProtectedRoute = () => {
   return <Outlet />;
 };
 
-// Admin-specific protected route that checks for owner permissions
+// Admin-specific protected route that checks for admin/owner roles
 export const AdminProtectedRoute = () => {
   const { user, loading } = useAuth();
   const location = useLocation();
-  const ownerEmail = import.meta.env.VITE_OWNER_EMAIL;
 
   if (loading) {
     return (
@@ -40,8 +39,8 @@ export const AdminProtectedRoute = () => {
     return <Navigate to="/auth/login" state={{ from: location }} replace />;
   }
 
-  // Then check if user is admin/owner
-  if (user.email !== ownerEmail) {
+  // Then check if user has admin or owner role
+  if (user.role !== "admin" && user.role !== "owner") {
     return <Navigate to="/dashboard" replace />;
   }
 

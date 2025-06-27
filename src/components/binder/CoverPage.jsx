@@ -374,8 +374,8 @@ const CoverPage = ({
                 {binder?.metadata?.name || "Your Collection"}
               </p>
 
-              {/* Public/Private Toggle - Only show when not in read-only mode */}
-              {!isReadOnly && (
+              {/* Public/Private Toggle - HIDDEN FOR NOW - Only show when not in read-only mode */}
+              {false && !isReadOnly && (
                 <div className="mt-3 sm:mt-4 flex justify-center">
                   <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-200 shadow-sm">
                     {/* Status Indicator */}

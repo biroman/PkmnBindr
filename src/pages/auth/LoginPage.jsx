@@ -93,8 +93,8 @@ const LoginPage = () => {
 
       await signIn(data.email, data.password);
 
-      // Redirect to intended page or home
-      const from = location.state?.from?.pathname || "/home";
+      // Redirect to intended page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
       navigate(from, { replace: true });
     } catch (error) {
       console.error("Login error:", error);
@@ -158,8 +158,8 @@ const LoginPage = () => {
 
       await signInWithGoogle();
 
-      // OAuth login successful - redirect to intended page or home
-      const from = location.state?.from?.pathname || "/home";
+      // OAuth login successful - redirect to intended page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
       navigate(from, { replace: true });
     } catch (error) {
       console.error("Google login error:", error);
@@ -184,8 +184,8 @@ const LoginPage = () => {
 
       await signInWithTwitter();
 
-      // OAuth login successful - redirect to intended page or home
-      const from = location.state?.from?.pathname || "/home";
+      // OAuth login successful - redirect to intended page or dashboard
+      const from = location.state?.from?.pathname || "/dashboard";
       navigate(from, { replace: true });
     } catch (error) {
       console.error("Twitter login error:", error);
