@@ -57,17 +57,18 @@ service cloud.firestore {
 
     // Users collection - allow owners to read for admin purposes
     match /users/{userId} {
-      // Block operations if in emergency mode (except for owners)
-      allow read, write, delete: if !isEmergencyMode() && request.auth != null && request.auth.uid == userId;
-      allow read, write, delete: if isOwner(); // Owners can always access
+      // Users can access their own profile
+      allow read, write, delete: if request.auth != null && request.auth.uid == userId;
+      
+      // Owners can access all user profiles (for admin purposes)
+      allow read, write, delete: if isOwner();
       
       // PUBLIC PROFILE ACCESS: Allow any authenticated user to read basic profile info
-      allow read: if !isEmergencyMode() && request.auth != null;
+      allow read: if request.auth != null;
       
       // Enhanced data validation for user profile updates
       allow update: if request.auth != null && 
                        request.auth.uid == userId &&
-                       !isEmergencyMode() &&
                        // Validate displayName length (max 50 chars)
                        (!('displayName' in resource.data) || 
                         !('displayName' in request.resource.data) ||
@@ -203,8 +204,9 @@ service cloud.firestore {
     // Binders collection - Global binder collection (for admin queries)
     match /binders/{binderId} {
       // Users can only access their own binders
-      allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
+      allow read, write, delete: if request.auth != null && 
                                    resource.data.ownerId == request.auth.uid;
+      
       // Owners can access all binders (for admin purposes)
       allow read, write, delete: if isOwner();
       
@@ -214,21 +216,23 @@ service cloud.firestore {
 
     // User Binders collection - for the new sync service
     match /user_binders/{docId} {
-      // Block operations if in emergency mode (except for owners)
-      allow read, write, delete: if !isEmergencyMode() && request.auth != null && 
+      // Users can access their own binders
+      allow read, write, delete: if request.auth != null && 
                            docId.matches('^' + request.auth.uid + '_.*');
+      
+      // Owners can access all binders (for admin purposes)
       allow read, write, delete: if isOwner();
       
       // Allow collection queries where ownerId equals current user
-      allow list: if !isEmergencyMode() && request.auth != null && 
+      allow list: if request.auth != null && 
                      resource.data.ownerId == request.auth.uid;
       
       // PUBLIC BINDER ACCESS: Allow reading public binders by any authenticated user
-      allow read: if !isEmergencyMode() && request.auth != null && 
+      allow read: if request.auth != null && 
                      resource.data.permissions.public == true;
       
       // Allow querying public binders by any authenticated user
-      allow list: if !isEmergencyMode() && request.auth != null && 
+      allow list: if request.auth != null && 
                      request.query.filters.hasAny([
                        ['permissions.public', '==', true]
                      ]);
@@ -253,7 +257,6 @@ service cloud.firestore {
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
                                docId.matches('^' + request.auth.uid + '_.*') &&
-                               !isEmergencyMode() &&
                                // Validate required fields
                                request.resource.data.keys().hasAll(['id', 'ownerId']) &&
                                request.resource.data.ownerId == request.auth.uid &&
@@ -278,22 +281,28 @@ service cloud.firestore {
                                  request.resource.data.permissions.public is bool));
     }
 
-    // Public Shares collection - for share token access
+        // Public Shares collection - CLEAN ROLE-BASED VERSION
     match /publicShares/{shareToken} {
       // Owner can manage all share tokens (for admin purposes)
       allow read, write, delete: if isOwner();
       
-      // Authenticated users can read/write their own share tokens
+      // Authenticated users can create/read/write their own share tokens
       allow read, write: if request.auth != null && 
                             resource.data.ownerId == request.auth.uid;
       
       // Allow creation of share tokens for authenticated users
       allow create: if request.auth != null && 
                        request.resource.data.ownerId == request.auth.uid &&
-                       request.resource.data.keys().hasAll(['shareToken', 'binderId', 'ownerId']) &&
-                       isValidStringLength(request.resource.data.shareToken, 50) &&
-                       isValidStringLength(request.resource.data.binderId, 100) &&
+                       // Validate required fields
+                       request.resource.data.keys().hasAll(['shareToken', 'binderId', 'ownerId', 'isActive']) &&
+                       request.resource.data.shareToken is string &&
+                       request.resource.data.binderId is string &&
                        request.resource.data.isActive is bool;
+      
+      // Allow updates to existing share tokens by owners (for revocation, etc.)
+      allow update: if request.auth != null && 
+                       resource.data.ownerId == request.auth.uid &&
+                       request.resource.data.ownerId == request.auth.uid;
       
       // UNAUTHENTICATED ACCESS: Allow reading active share tokens by anyone
       // This enables public access via share links for non-registered users
