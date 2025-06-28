@@ -45,7 +45,7 @@ const CardPage = ({
             style={{
               gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
               gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
-              gap: "2px",
+              gap: "0px",
             }}
           >
             {slots.map((_, index) => {
@@ -112,7 +112,7 @@ const CardPage = ({
           style={{
             gridTemplateColumns: `repeat(${gridConfig.cols}, 1fr)`,
             gridTemplateRows: `repeat(${gridConfig.rows}, 1fr)`,
-            gap: "2px",
+            gap: "8px",
           }}
         >
           {slots.map((_, index) => {

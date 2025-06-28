@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
+import Clarity from "@microsoft/clarity";
 
 import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
@@ -56,6 +58,32 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
+  // Get Clarity Project ID from environment variables
+  const clarityProjectId = import.meta.env.VITE_CLARITY_PROJECT_ID;
+
+  // Initialize Microsoft Clarity
+  useEffect(() => {
+    // Only initialize in production and when window is available
+    if (
+      typeof window !== "undefined" &&
+      import.meta.env.MODE === "production"
+    ) {
+      try {
+        Clarity.init(clarityProjectId);
+        console.log(
+          "Microsoft Clarity initialized successfully with ID:",
+          clarityProjectId
+        );
+      } catch (error) {
+        console.error("Failed to initialize Microsoft Clarity:", error);
+      }
+    } else if (import.meta.env.MODE === "development") {
+      console.log(
+        "Microsoft Clarity: Skipped initialization in development mode"
+      );
+    }
+  }, [clarityProjectId]);
+
   // Enable automatic user tracking
   useUserTracking();
 
