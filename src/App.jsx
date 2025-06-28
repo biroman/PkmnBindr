@@ -63,6 +63,13 @@ const App = () => {
 
   // Initialize Microsoft Clarity
   useEffect(() => {
+    console.log("🔍 Clarity Debug: Initialization attempt", {
+      mode: import.meta.env.MODE,
+      hasWindow: typeof window !== "undefined",
+      clarityProjectId: clarityProjectId,
+      clarityExists: !!Clarity,
+    });
+
     // Only initialize in production and when window is available
     if (
       typeof window !== "undefined" &&
@@ -70,12 +77,21 @@ const App = () => {
     ) {
       try {
         Clarity.init(clarityProjectId);
+        console.log("✅ Microsoft Clarity: Initialized successfully");
+
+        // Check if Clarity started after a brief delay
+        setTimeout(() => {
+          console.log("🔍 Clarity Debug: Status check", {
+            hasStarted: Clarity?.hasStarted,
+            clarityObject: !!Clarity,
+          });
+        }, 1000);
       } catch (error) {
-        console.error("Failed to initialize Microsoft Clarity:", error);
+        console.error("❌ Failed to initialize Microsoft Clarity:", error);
       }
     } else if (import.meta.env.MODE === "development") {
       console.log(
-        "Microsoft Clarity: Skipped initialization in development mode"
+        "🚧 Microsoft Clarity: Skipped initialization in development mode"
       );
     }
   }, [clarityProjectId]);

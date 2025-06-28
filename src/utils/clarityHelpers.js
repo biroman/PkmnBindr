@@ -6,6 +6,15 @@ import Clarity from "@microsoft/clarity";
  * @param {Object} additionalData - Additional custom data to track (optional)
  */
 export const identifyUserWithClarity = (user, additionalData = {}) => {
+  // Debug: Always log that this function was called
+  console.log("🔍 Clarity Debug: identifyUserWithClarity called", {
+    userId: user?.uid,
+    mode: import.meta.env.MODE,
+    hasWindow: typeof window !== "undefined",
+    clarityExists: !!Clarity,
+    clarityHasStarted: Clarity?.hasStarted,
+  });
+
   // Only identify users in production and when Clarity is initialized
   if (
     typeof window !== "undefined" &&
@@ -24,14 +33,21 @@ export const identifyUserWithClarity = (user, additionalData = {}) => {
       };
 
       Clarity.identify(user.uid, userData);
-      console.log("Clarity: User identified successfully", user.uid);
+      console.log("✅ Clarity: User identified successfully", user.uid);
     } catch (error) {
-      console.error("Clarity: Failed to identify user", error);
+      console.error("❌ Clarity: Failed to identify user", error);
     }
   } else if (import.meta.env.MODE === "development") {
-    console.log("Clarity: User identification skipped in development mode", {
+    console.log("🚧 Clarity: User identification skipped in development mode", {
       userId: user.uid,
       userName: user.displayName || user.email?.split("@")[0] || "Anonymous",
+    });
+  } else {
+    console.log("⚠️ Clarity: Conditions not met for user identification", {
+      hasWindow: typeof window !== "undefined",
+      mode: import.meta.env.MODE,
+      clarityExists: !!Clarity,
+      clarityHasStarted: Clarity?.hasStarted,
     });
   }
 };
