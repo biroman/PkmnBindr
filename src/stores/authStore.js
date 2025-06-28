@@ -31,6 +31,10 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { auth, db } from "../lib/firebase";
+import {
+  identifyUserWithClarity,
+  clearUserFromClarity,
+} from "../utils/clarityHelpers";
 
 // Rate limiting storage (in production, move to Firebase or Redis)
 const rateLimitStore = {
@@ -115,6 +119,9 @@ export const useAuthStore = create()(
 
                 set({ user, loading: false, initialized: true });
 
+                // Identify user with Microsoft Clarity for analytics
+                identifyUserWithClarity(user);
+
                 // Update last login time
                 if (userDoc.exists()) {
                   await updateDoc(doc(db, "users", firebaseUser.uid), {
@@ -123,25 +130,35 @@ export const useAuthStore = create()(
                   });
                 }
               } else {
+                // User logged out - clear Clarity session
+                clearUserFromClarity();
                 set({ user: null, loading: false, initialized: true });
               }
             } catch (error) {
               console.error("Error in auth state change:", error);
+
+              const fallbackUser = firebaseUser
+                ? {
+                    uid: firebaseUser.uid,
+                    email: firebaseUser.email,
+                    displayName: firebaseUser.displayName,
+                    photoURL: firebaseUser.photoURL,
+                    emailVerified: firebaseUser.emailVerified,
+                    providerData: firebaseUser.providerData,
+                  }
+                : null;
+
               set({
-                user: firebaseUser
-                  ? {
-                      uid: firebaseUser.uid,
-                      email: firebaseUser.email,
-                      displayName: firebaseUser.displayName,
-                      photoURL: firebaseUser.photoURL,
-                      emailVerified: firebaseUser.emailVerified,
-                      providerData: firebaseUser.providerData,
-                    }
-                  : null,
+                user: fallbackUser,
                 loading: false,
                 initialized: true,
                 error: error.message,
               });
+
+              // Identify user with Microsoft Clarity even in error case
+              if (fallbackUser) {
+                identifyUserWithClarity(fallbackUser);
+              }
             }
           });
 
@@ -368,6 +385,9 @@ export const useAuthStore = create()(
                 lastLogoutAt: serverTimestamp(),
               });
             }
+
+            // Clear user from Microsoft Clarity analytics
+            clearUserFromClarity();
 
             await signOut(auth);
           } catch (error) {
