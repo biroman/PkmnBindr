@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import { useDroppable } from "@dnd-kit/core";
 import { useState } from "react";
+import { Check, EyeOff, Trash2, Plus } from "lucide-react";
 import DraggableCard from "./DraggableCard";
 
 const CARD_BACK_URL = "https://img.pkmnbindr.com/000.png";
@@ -162,38 +164,14 @@ const DroppableSlot = ({
                       >
                         {isMissing ? (
                           <>
-                            <svg
-                              className="w-4 h-4 pointer-events-none"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M5 13l4 4L19 7"
-                              />
-                            </svg>
+                            <Check className="w-4 h-4 pointer-events-none" />
                             <span className="pointer-events-none">
                               Collected
                             </span>
                           </>
                         ) : (
                           <>
-                            <svg
-                              className="w-4 h-4 pointer-events-none"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"
-                              />
-                            </svg>
+                            <EyeOff className="w-4 h-4 pointer-events-none" />
                             <span className="pointer-events-none">Missing</span>
                           </>
                         )}
@@ -219,19 +197,7 @@ const DroppableSlot = ({
                         } bg-red-500 hover:bg-red-600 text-white py-2 text-sm font-medium transition-colors duration-200 flex items-center justify-center space-x-1 pointer-events-auto`}
                         title="Remove card from binder"
                       >
-                        <svg
-                          className="w-4 h-4 pointer-events-none"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                          />
-                        </svg>
+                        <Trash2 className="w-4 h-4 pointer-events-none" />
                         <span className="pointer-events-none">Remove</span>
                       </button>
                     )}
@@ -269,19 +235,7 @@ const DroppableSlot = ({
           {shouldShowMissingOverlay && (
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
               <div className="bg-red-500/90 text-white text-xs font-bold px-2 py-1 rounded shadow-lg flex items-center gap-1">
-                <svg
-                  className="w-3 h-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"
-                  />
-                </svg>
+                <EyeOff className="w-3 h-3" />
                 MISSING
               </div>
             </div>
@@ -307,19 +261,7 @@ const DroppableSlot = ({
                 <div className="flex flex-col items-center justify-center text-center">
                   {/* Icon Container: Transforms on hover */}
                   <div className="w-8 h-8 flex items-center justify-center rounded-full bg-transparent group-hover:w-12 group-hover:h-12 group-hover:bg-white/20 group-hover:backdrop-blur-sm group-hover:border group-hover:border-white/30 transition-all duration-300">
-                    <svg
-                      className="w-6 h-6 text-white/30 group-hover:text-white transition-colors duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v12m6-6H6"
-                      />
-                    </svg>
+                    <Plus className="w-6 h-6 text-white/30 group-hover:text-white transition-colors duration-300" />
                   </div>
                   {/* Text: Appears on hover */}
                   <span className="mt-2 font-semibold text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -332,19 +274,7 @@ const DroppableSlot = ({
             <div className="text-blue-500 text-xs font-medium">Drop here</div>
           ) : !isReadOnly ? (
             <div className="flex flex-col items-center justify-center text-gray-400 group-hover:text-gray-600 transition-colors duration-200">
-              <svg
-                className="w-6 h-6 mb-1 opacity-60 group-hover:opacity-80"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M12 4v16m8-8H4"
-                />
-              </svg>
+              <Plus className="w-6 h-6 mb-1 opacity-60 group-hover:opacity-80" />
               <span className="text-xs font-medium opacity-60 group-hover:opacity-80">
                 Add card
               </span>

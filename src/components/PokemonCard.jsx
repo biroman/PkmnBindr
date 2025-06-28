@@ -1,4 +1,6 @@
 import { useState, forwardRef } from "react";
+import PropTypes from "prop-types";
+import { Check, EyeOff, Trash2 } from "lucide-react";
 
 // Loading placeholder component
 const CardLoadingScreen = () => (
@@ -280,36 +282,12 @@ const PokemonCard = forwardRef(
                 >
                   {isMissing ? (
                     <>
-                      <svg
-                        className="w-4 h-4 pointer-events-none"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <Check className="w-4 h-4 pointer-events-none" />
                       <span className="pointer-events-none">Collected</span>
                     </>
                   ) : (
                     <>
-                      <svg
-                        className="w-4 h-4 pointer-events-none"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"
-                        />
-                      </svg>
+                      <EyeOff className="w-4 h-4 pointer-events-none" />
                       <span className="pointer-events-none">Missing</span>
                     </>
                   )}
@@ -335,19 +313,7 @@ const PokemonCard = forwardRef(
                   } bg-red-500 hover:bg-red-600 text-white py-2 text-sm font-medium transition-colors duration-200 flex items-center justify-center space-x-1 pointer-events-auto`}
                   title="Remove card from binder"
                 >
-                  <svg
-                    className="w-4 h-4 pointer-events-none"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                    />
-                  </svg>
+                  <Trash2 className="w-4 h-4 pointer-events-none" />
                   <span className="pointer-events-none">Remove</span>
                 </button>
               )}

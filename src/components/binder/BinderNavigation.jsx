@@ -15,6 +15,7 @@ import {
   ShareIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const BinderNavigation = ({
   navigation,
@@ -124,7 +125,7 @@ const BinderNavigation = ({
                   : "border-gray-300 bg-gray-50 opacity-50"
               }`}
             >
-              <svg
+              <ChevronLeft
                 className={`w-5 h-5 mr-1 transition-colors ${
                   isOverPrevPage && canGoPrev
                     ? "text-blue-600"
@@ -132,15 +133,7 @@ const BinderNavigation = ({
                     ? "text-blue-400"
                     : "text-gray-400"
                 }`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              />
               <span
                 className={`text-xs font-medium transition-colors ${
                   isOverPrevPage && canGoPrev
@@ -201,7 +194,7 @@ const BinderNavigation = ({
               >
                 {isOverNextPage && canGoNext ? "Release to Go Forward" : "Next"}
               </span>
-              <svg
+              <ChevronRight
                 className={`w-5 h-5 transition-colors ${
                   isOverNextPage && canGoNext
                     ? "text-blue-600"
@@ -209,15 +202,7 @@ const BinderNavigation = ({
                     ? "text-blue-400"
                     : "text-gray-400"
                 }`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              />
             </div>
           </div>
         </div>
@@ -281,17 +266,7 @@ const BinderNavigation = ({
                 className="flex items-center justify-center w-16 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                 title="Previous Page"
               >
-                <svg
-                  className="w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <ChevronLeft className="w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors" />
               </button>
               <div className="text-base font-bold text-gray-800 flex-1 text-center px-4">
                 {getCurrentPageText()}
@@ -309,17 +284,7 @@ const BinderNavigation = ({
                 {showAddPage && !canGoNext ? (
                   <DocumentPlusIcon className="w-6 h-6 transition-colors" />
                 ) : (
-                  <svg
-                    className="w-6 h-6 hover:text-blue-600 transition-colors"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <ChevronRight className="w-6 h-6 hover:text-blue-600 transition-colors" />
                 )}
               </button>
             </div>
@@ -429,19 +394,7 @@ const BinderNavigation = ({
           title="Previous Page"
           aria-label="Go to previous page"
         >
-          <svg
-            className="w-7 h-7 text-gray-700 hover:text-blue-600 transition-colors"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+          <ChevronLeft className="w-7 h-7 text-gray-700 hover:text-blue-600 transition-colors" />
         </button>
       </div>
 
@@ -466,19 +419,7 @@ const BinderNavigation = ({
           {showAddPage && !canGoNext ? (
             <PlusIcon className="w-7 h-7" />
           ) : (
-            <svg
-              className="w-7 h-7 hover:text-blue-600 transition-colors"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            <ChevronRight className="w-7 h-7 hover:text-blue-600 transition-colors" />
           )}
         </button>
       </div>

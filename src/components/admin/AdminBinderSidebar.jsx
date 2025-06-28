@@ -10,6 +10,7 @@ import {
   WrenchScrewdriverIcon,
   PhotoIcon,
 } from "@heroicons/react/24/outline";
+import { Menu, ChevronLeft } from "lucide-react";
 
 const AdminBinderSidebar = ({
   binder,
@@ -36,19 +37,7 @@ const AdminBinderSidebar = ({
           className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
           title={isVisible ? "Hide sidebar" : "Show sidebar"}
         >
-          <svg
-            className="w-5 h-5 text-gray-700"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <Menu className="w-5 h-5 text-gray-700" />
           <span className="text-sm font-medium text-gray-700">
             {isVisible ? "Hide Info" : "Show Info"}
           </span>
@@ -67,19 +56,7 @@ const AdminBinderSidebar = ({
             onClick={() => navigate("/admin")}
             className="flex items-center text-gray-600 hover:text-gray-900 transition-colors mb-4"
           >
-            <svg
-              className="w-4 h-4 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+            <ChevronLeft className="w-4 h-4 mr-2" />
             Back to Admin
           </button>
 

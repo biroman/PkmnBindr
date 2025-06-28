@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import useCardSearch from "../hooks/useCardSearch";
 import PokemonCard from "./PokemonCard";
+import { ChevronDown } from "lucide-react";
 
 // Search filters component
 const SearchFilters = ({
@@ -42,19 +43,7 @@ const SearchFilters = ({
             isExpanded ? "rotate-180" : ""
           }`}
         >
-          <svg
-            className="w-5 h-5 text-slate-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+          <ChevronDown className="w-5 h-5 text-slate-400" />
         </div>
       </button>
 

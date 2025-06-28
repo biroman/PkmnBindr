@@ -13,6 +13,7 @@ import { toast } from "react-hot-toast";
 import BinderContainer from "../components/binder/BinderContainer";
 import PublicBreadcrumb from "../components/ui/PublicBreadcrumb";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
+import { X } from "lucide-react";
 
 const PublicBinderViewPage = () => {
   const { binderId, userId: urlUserId } = useParams();
@@ -284,19 +285,7 @@ const PublicBinderViewPage = () => {
                 }}
                 className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 rounded-full hover:bg-gray-100"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <X className="w-6 h-6" />
               </button>
             </div>
 

@@ -20,6 +20,7 @@ import { toast } from "react-hot-toast";
 import PageManager from "./PageManager";
 import RevertConfirmationModal from "./RevertConfirmationModal";
 import SortControls from "./SortControls";
+import { X } from "lucide-react";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
   const gridSizes = [
@@ -119,7 +120,7 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
             className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded transition-colors"
             title="Cancel (Esc)"
           >
-            <XMarkIcon className="w-4 h-4" />
+            <X className="w-4 h-4" />
           </button>
           <div className="mt-1 text-xs text-slate-500">
             Press Enter to apply • Esc to cancel
@@ -846,19 +847,7 @@ const BinderSidebar = ({
             className="p-2 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
             title="Close sidebar"
           >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <X className="w-4 h-4" />
           </button>
         </div>
 

@@ -6,7 +6,7 @@ import {
   PhotoIcon,
   ArrowTrendingUpIcon,
 } from "@heroicons/react/24/outline";
-import { Clock, User, Crown } from "lucide-react";
+import { Clock, User, Crown, ChevronDown, Search, Info, X } from "lucide-react";
 import UserAvatar from "../../ui/UserAvatar";
 import UserBindersList from "../UserBindersList";
 import { LoadingSpinner, EmptyState } from "../";
@@ -397,21 +397,11 @@ const UserManagementTable = ({
               setActiveDropdown(activeDropdown === u.uid ? null : u.uid);
             }}
           >
-            <svg
+            <ChevronDown
               className={`w-4 h-4 transition-transform ${
                 activeDropdown === u.uid ? "rotate-180" : ""
               }`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
+            />
           </button>
 
           {/* Dropdown positioned relative to this button */}
@@ -582,19 +572,7 @@ const UserManagementTable = ({
             {/* Search Bar */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg
-                  className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
+                <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
               </div>
               <input
                 type="text"
@@ -648,19 +626,7 @@ const UserManagementTable = ({
             {/* Mobile Instructions */}
             <div className="md:hidden bg-blue-50 rounded-lg p-3 border border-blue-200">
               <div className="flex items-center gap-2 text-sm text-blue-700">
-                <svg
-                  className="w-4 h-4 text-blue-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <Info className="w-4 h-4 text-blue-500" />
                 <span>Tap any user card to access management options</span>
               </div>
             </div>
@@ -847,21 +813,11 @@ const UserManagementTable = ({
                               }}
                             >
                               <span className="text-xs">Actions</span>
-                              <svg
+                              <ChevronDown
                                 className={`w-4 h-4 transition-transform ${
                                   activeDropdown === u.uid ? "rotate-180" : ""
                                 }`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M19 9l-7 7-7-7"
-                                />
-                              </svg>
+                              />
                             </button>
 
                             {/* Dropdown positioned relative to this button */}
@@ -983,19 +939,7 @@ const UserManagementTable = ({
                   onClick={() => setShowUserModal(false)}
                   className="text-gray-400 hover:text-gray-600 p-2 -m-2 touch-manipulation"
                 >
-                  <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
+                  <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
             </div>

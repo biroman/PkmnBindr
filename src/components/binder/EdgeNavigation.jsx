@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useDroppable } from "@dnd-kit/core";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
  * EdgeNavigationZone - Individual droppable zone for edge navigation
@@ -52,19 +53,11 @@ const EdgeNavigationZone = ({
       <div className="flex items-center justify-center h-full">
         <div className="text-white text-center">
           <div className="relative inline-block">
-            <svg
-              className="w-8 h-8 mx-auto mb-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isLeftZone ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"}
-              />
-            </svg>
+            {isLeftZone ? (
+              <ChevronLeft className="w-8 h-8 mx-auto mb-2" />
+            ) : (
+              <ChevronRight className="w-8 h-8 mx-auto mb-2" />
+            )}
             {(isInZone || isOver) && (
               <svg
                 className="absolute inset-0 w-8 h-8 -rotate-90"
