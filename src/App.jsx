@@ -70,10 +70,6 @@ const App = () => {
     ) {
       try {
         Clarity.init(clarityProjectId);
-        console.log(
-          "Microsoft Clarity initialized successfully with ID:",
-          clarityProjectId
-        );
       } catch (error) {
         console.error("Failed to initialize Microsoft Clarity:", error);
       }
