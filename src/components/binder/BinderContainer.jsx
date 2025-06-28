@@ -128,6 +128,8 @@ export const BinderContainer = ({
   // Public view specific props
   isPublicView = false,
   binderOwner = null,
+  // Layout props
+  hasNavbar = true, // Whether the page has a navbar (affects height calculations)
   // QR code sharing props
   shareUrl = null,
   showQRCode = false,
@@ -466,8 +468,12 @@ export const BinderContainer = ({
     <div
       className={`${
         isMobile
-          ? "fixed top-16 bottom-0 left-0 right-0 overflow-auto" // Use auto overflow
-          : "h-[calc(100vh-64px)] overflow-hidden"
+          ? hasNavbar
+            ? "fixed top-16 bottom-0 left-0 right-0 overflow-auto"
+            : "fixed inset-0 overflow-auto"
+          : hasNavbar
+          ? "h-[calc(100vh-64px)] overflow-hidden"
+          : "h-screen overflow-hidden"
       } bg-gradient-to-br from-slate-800 to-slate-900 ${className}`}
       style={{
         paddingRight: `${sidebarWidth}px`,
@@ -597,6 +603,7 @@ export const BinderContainer = ({
                     onColorPicker: features.colorPicker
                       ? handleColorPicker
                       : undefined,
+                    onShare: features.export ? handleShare : undefined,
                     onMobileSettings: handleMobileSettings,
                     onPdfExport: features.export ? handlePdfExport : undefined,
                     onClearBinder: features.clearBinder

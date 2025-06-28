@@ -12,6 +12,7 @@ import {
   XMarkIcon,
   AdjustmentsHorizontalIcon,
   EllipsisVerticalIcon,
+  ShareIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 
@@ -361,6 +362,15 @@ const BinderNavigation = ({
                               >
                                 <Squares2X2Icon className="w-5 h-5 text-gray-500" />
                                 <span>Page Overview</span>
+                              </button>
+                            )}
+                            {toolbarActions.onShare && (
+                              <button
+                                onClick={toolbarActions.onShare}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              >
+                                <ShareIcon className="w-5 h-5 text-gray-500" />
+                                <span>Share Binder</span>
                               </button>
                             )}
                             {toolbarActions.onColorPicker && (

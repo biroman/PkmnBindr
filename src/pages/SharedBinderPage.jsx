@@ -206,11 +206,12 @@ const SharedBinderPage = () => {
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
+    <>
       {/* Clean binder display - no navbar, no header, full focus on binder */}
       <BinderContainer
         binder={binder}
         mode="readonly"
+        hasNavbar={false}
         features={{
           toolbar: false,
           sidebar: false,
@@ -298,7 +299,6 @@ const SharedBinderPage = () => {
         isPublicView={true}
         binderOwner={binderOwner}
         showNoBinderMessage={false}
-        className="h-full"
         shareUrl={shareData?.shareUrl}
         showQRCode={showQRCode}
         onToggleQRCode={() => setShowQRCode(!showQRCode)}
@@ -405,7 +405,7 @@ const SharedBinderPage = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

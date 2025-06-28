@@ -139,27 +139,27 @@ const AdminPage = () => {
   const [ruleActionSuccess, setRuleActionSuccess] = useState("");
 
   // Calculate system statistics
-  useEffect(() => {
-    const calculateStats = () => {
-      // Use userStats totals if available (these are calculated from ALL users, not just the filtered/paginated ones)
-      const totalBinders =
-        userStats.totalBinders ||
-        users.reduce((sum, u) => sum + (u.binderCount || 0), 0);
-      const totalCards =
-        userStats.totalCards ||
-        users.reduce((sum, u) => sum + (u.cardCount || 0), 0);
-      const activeRules = rules.filter((rule) => rule.enabled).length;
+  // useEffect(() => {
+  //   const calculateStats = () => {
+  //     // Use userStats totals if available (these are calculated from ALL users, not just the filtered/paginated ones)
+  //     const totalBinders =
+  //       userStats.totalBinders ||
+  //       users.reduce((sum, u) => sum + (u.binderCount || 0), 0);
+  //     const totalCards =
+  //       userStats.totalCards ||
+  //       users.reduce((sum, u) => sum + (u.cardCount || 0), 0);
+  //     const activeRules = rules.filter((rule) => rule.enabled).length;
 
-      setSystemStats({
-        totalUsers: userStats.total || users.length || 1,
-        totalBinders,
-        totalCards,
-        activeRules,
-      });
-    };
+  //     setSystemStats({
+  //       totalUsers: userStats.total || users.length || 1,
+  //       totalBinders,
+  //       totalCards,
+  //       activeRules,
+  //     });
+  //   };
 
-    calculateStats();
-  }, [users, rules, userStats]);
+  //   calculateStats();
+  // }, [users, rules, userStats]);
 
   // Phase 3: Use AdminUserService for user management
   const loadUsers = async (

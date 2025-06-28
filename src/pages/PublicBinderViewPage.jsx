@@ -221,6 +221,7 @@ const PublicBinderViewPage = () => {
         binder={binder}
         owner={binderOwner}
         mode="readonly"
+        hasNavbar={false}
         features={{
           toolbar: false,
           sidebar: false,
@@ -237,11 +238,6 @@ const PublicBinderViewPage = () => {
           autoSort: false,
         }}
         onCardClick={handleCardClick}
-        className="relative"
-        style={{
-          background:
-            "linear-gradient(to bottom right, rgb(248 250 252), rgb(241 245 249))",
-        }}
         // Public view specific props
         isPublicView={true}
         binderOwner={binderOwner}
