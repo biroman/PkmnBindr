@@ -122,13 +122,13 @@ const AddCardModal = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col h-[98vh] sm:h-[95vh]">
+              <Dialog.Panel className="w-full max-w-6xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all flex flex-col h-[99vh] sm:h-[95vh]">
                 {/* Header */}
-                <div className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-200 flex-shrink-0">
+                <div className="flex items-center justify-between p-3 sm:p-4 border-b border-slate-200 flex-shrink-0">
                   <div className="min-w-0 flex-1 pr-4">
                     <Dialog.Title
                       as="h3"
-                      className="text-base sm:text-lg font-medium text-slate-900 truncate"
+                      className="text-sm sm:text-lg font-medium text-slate-900 truncate"
                     >
                       Add Cards to {currentBinder?.metadata?.name}
                       {targetPosition !== null && (
@@ -138,16 +138,11 @@ const AddCardModal = ({
                         </span>
                       )}
                     </Dialog.Title>
-                    <p className="text-xs sm:text-sm text-slate-500 mt-1 line-clamp-2">
-                      {targetPosition !== null
-                        ? `First card will be placed at position ${targetPosition}. Additional cards will fill empty slots.`
-                        : "Search for individual cards or add entire sets to your binder"}
-                    </p>
                   </div>
                   <button
                     ref={closeButtonRef}
                     onClick={onClose}
-                    className="p-2 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="p-1.5 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     aria-label="Close modal"
                   >
                     <XMarkIcon className="w-5 h-5 text-slate-400" />
@@ -165,7 +160,7 @@ const AddCardModal = ({
                     <Tab as={Fragment}>
                       {({ selected }) => (
                         <button
-                          className={`flex-1 px-4 sm:px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
+                          className={`flex-1 px-3 sm:px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
                             selected
                               ? "border-b-2 border-blue-500 text-blue-600 bg-white"
                               : "text-slate-600 hover:text-slate-800 hover:bg-slate-100"
@@ -178,7 +173,7 @@ const AddCardModal = ({
                     <Tab as={Fragment}>
                       {({ selected }) => (
                         <button
-                          className={`flex-1 px-4 sm:px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
+                          className={`flex-1 px-3 sm:px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
                             selected
                               ? "border-b-2 border-blue-500 text-blue-600 bg-white"
                               : "text-slate-600 hover:text-slate-800 hover:bg-slate-100"
@@ -215,15 +210,15 @@ const AddCardModal = ({
                 <div className="flex-shrink-0 border-t border-slate-200 bg-slate-50">
                   {activeTab === 0 && (
                     /* Footer for single cards tab */
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 gap-4">
+                    <div className="flex items-center justify-between p-3 sm:p-4 gap-4">
+                      {/* Selected cards info */}
                       <div className="flex items-center space-x-2 min-w-0">
                         {selectedCards.length > 0 && (
-                          <>
-                            <span className="text-sm text-slate-600 flex-shrink-0">
-                              {selectedCards.length} card
-                              {selectedCards.length > 1 ? "s" : ""} selected
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-slate-600 flex-shrink-0 font-medium">
+                              {selectedCards.length} selected
                             </span>
-                            <div className="flex -space-x-2 overflow-hidden">
+                            <div className="hidden sm:flex -space-x-2 overflow-hidden">
                               {selectedCards.slice(0, 3).map((card) => (
                                 <div
                                   key={card.id}
@@ -246,21 +241,22 @@ const AddCardModal = ({
                                 </div>
                               )}
                             </div>
-                          </>
+                          </div>
                         )}
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-3 sm:space-x-3 sm:gap-0">
+                      {/* Action Buttons */}
+                      <div className="flex flex-row gap-2">
                         <button
                           onClick={onClose}
-                          className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 order-2 sm:order-1"
+                          className="px-4 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         >
                           Cancel
                         </button>
                         <button
                           onClick={handleAddSelectedCards}
                           disabled={selectedCards.length === 0 || isAdding}
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 order-1 sm:order-2"
+                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                         >
                           {isAdding ? (
                             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -281,7 +277,7 @@ const AddCardModal = ({
 
                   {activeTab === 1 && (
                     /* Footer for sets tab */
-                    <div className="p-4 sm:p-6">
+                    <div className="p-3 sm:p-4">
                       <div className="flex justify-end">
                         <button
                           onClick={onClose}

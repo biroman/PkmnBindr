@@ -8,6 +8,7 @@ import {
 import { ChevronRight } from "lucide-react";
 import useCardSearch from "../../hooks/useCardSearch";
 import PokemonCard from "../PokemonCard";
+import SortDropdown from "../ui/SortDropdown";
 
 const SearchFilters = ({
   filters,
@@ -294,16 +295,16 @@ const SearchFilters = ({
             </div>
 
             {/* Modal Footer */}
-            <div className="flex gap-3 p-4 border-t border-slate-200">
+            <div className="flex flex-row items-center gap-2 p-3 border-t border-slate-200">
               <button
                 onClick={handleCancelFilters}
-                className="flex-1 px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors font-medium"
+                className="flex-1 px-4 py-2.5 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors font-medium text-sm"
               >
                 Cancel
               </button>
               <button
                 onClick={handleSaveFilters}
-                className="flex-1 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
+                className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
               >
                 Apply Filters
               </button>
@@ -322,6 +323,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
   const {
     searchQuery,
     filters,
+    orderBy,
     cards,
     totalCount,
     hasMore,
@@ -336,6 +338,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
     loadMoreCards,
     updateFilter,
     updateSearchQuery,
+    setOrderBy,
     hasActiveFilters,
     isEmpty,
     showFeatured,
@@ -350,6 +353,13 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
       }, 100);
     }
   }, []);
+
+  // Trigger search when sorting changes (if there are existing results or active filters)
+  useEffect(() => {
+    if (orderBy && (cards.length > 0 || hasActiveFilters)) {
+      performSearch();
+    }
+  }, [orderBy]);
 
   // Handle Enter key press in search input
   const handleKeyPress = (e) => {
@@ -367,7 +377,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
       <div className="flex flex-col flex-1 min-h-0">
         {/* Search Bar */}
         <div className="p-6 border-b border-slate-200">
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-4">
             <div className="relative flex-1">
               <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
               <input
@@ -388,6 +398,41 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
               <MagnifyingGlassIcon className="w-5 h-5" />
               Search
             </button>
+          </div>
+
+          {/* Sort and Results Info Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <label className="text-sm font-medium text-slate-700 whitespace-nowrap">
+                Sort by:
+              </label>
+              <SortDropdown value={orderBy} onChange={setOrderBy} />
+            </div>
+
+            {/* Results Count */}
+            {(totalCount > 0 || cards.length > 0) && (
+              <div className="text-sm text-slate-600 whitespace-nowrap">
+                {showFeatured ? (
+                  <span className="flex items-center gap-1">
+                    <span className="text-yellow-500">⭐</span>
+                    Featured Cards
+                  </span>
+                ) : (
+                  <span>
+                    {isLoading ? (
+                      "Searching..."
+                    ) : (
+                      <>
+                        <span className="font-medium">
+                          {totalCount.toLocaleString()}
+                        </span>
+                        <span className="text-slate-500"> cards found</span>
+                      </>
+                    )}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

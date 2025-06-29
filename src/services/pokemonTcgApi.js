@@ -317,9 +317,9 @@ export const pokemonTcgApi = {
       }
       if (filters.set) {
         // Check if it looks like a set ID (contains letters and numbers) or set name
-        // Set IDs typically look like "sv7", "ex1", "base1", etc.
+        // Set IDs typically look like "sv7", "ex1", "base1", "swsh12pt5gg", etc.
         // Set names are longer like "Scarlet & Violet", "Base Set", etc.
-        if (filters.set.match(/^[a-z0-9-]+$/i) && filters.set.length <= 10) {
+        if (filters.set.match(/^[a-z0-9-]+$/i) && filters.set.length <= 15) {
           // Looks like a set ID
           q += (q ? " " : "") + `set.id:"${filters.set}"`;
         } else {

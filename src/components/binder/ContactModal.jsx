@@ -69,6 +69,30 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
     defaultValues: type === "bug" ? { priority: "medium" } : {},
   });
 
+  // Prevent keyboard shortcuts from triggering in background
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e) => {
+      // Prevent all keyboard events from bubbling up when modal is open
+      // This prevents BinderPage shortcuts from triggering
+      e.stopPropagation();
+
+      // Allow ESC key to close the modal
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    // Add event listeners
+    document.addEventListener("keydown", handleKeyDown, true); // Use capture phase
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown, true);
+    };
+  }, [isOpen, onClose]);
+
   // Check rate limits when modal opens
   useEffect(() => {
     if (isOpen && user && rules) {
@@ -202,9 +226,20 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
 
   if (!isOpen) return null;
 
+  // Handler to prevent event propagation on the modal content
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-hidden">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-hidden"
+        onClick={handleModalClick}
+      >
         {/* Success State */}
         {showSuccess ? (
           <div className="p-8 text-center">
