@@ -44,6 +44,11 @@ import BlogPost6 from "./pages/BlogPost6";
 import FAQPage from "./pages/FAQPage";
 import MessagesPage from "./pages/MessagesPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Clarity from "@microsoft/clarity";
+
+const projectId = "s6ry57f9wb";
+
+Clarity.init(projectId);
 
 // Create a client for TanStack Query
 const queryClient = new QueryClient({
