@@ -37,8 +37,6 @@ export const AdminServices = {
  */
 export const initializeAdminServices = async () => {
   try {
-    console.log("Initializing admin services...");
-
     // Import services dynamically to avoid circular dependencies
     const { AdminCacheService } = await import("./AdminCacheService");
     const { AdminSystemService } = await import("./AdminSystemService");
@@ -46,18 +44,11 @@ export const initializeAdminServices = async () => {
     // Check cache health
     const cacheHealthy = AdminCacheService.isCacheHealthy();
     if (!cacheHealthy) {
-      console.warn("Cache system may have issues, clearing cache...");
       AdminCacheService.clearAllCache();
     }
 
     // Get system health
     const systemHealth = await AdminSystemService.getSystemHealth();
-
-    console.log("Admin services initialized successfully:", {
-      cache: cacheHealthy ? "healthy" : "reset",
-      system: systemHealth.database.status,
-      timestamp: new Date(),
-    });
 
     return {
       success: true,
@@ -87,7 +78,6 @@ export const cleanupAdminServices = () => {
     const { AdminCacheService } = require("./AdminCacheService");
     AdminCacheService.clearExpiredCache();
 
-    console.log("Admin services cleaned up successfully");
     return true;
   } catch (error) {
     console.error("Error cleaning up admin services:", error);

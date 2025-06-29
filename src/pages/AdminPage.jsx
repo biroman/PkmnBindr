@@ -182,22 +182,6 @@ const AdminPage = () => {
         resetStats,
       });
 
-      console.log("🔍 AdminPage loadUsers result:", {
-        userCount: result.users.length,
-        totalUsers: result.totalUsers,
-        stats: result.stats,
-        sampleUser: result.users[0]
-          ? {
-              uid: result.users[0].uid,
-              email: result.users[0].email,
-              createdAt: result.users[0].createdAt,
-              lastSeen: result.users[0].lastSeen,
-              binderCount: result.users[0].binderCount,
-              cardCount: result.users[0].cardCount,
-            }
-          : null,
-      });
-
       setUsers(result.users);
       setTotalUsers(result.totalUsers);
       setCurrentPage(page);
@@ -214,7 +198,18 @@ const AdminPage = () => {
     }
   };
 
-  // Remove automatic data fetching - data will only be loaded via manual refresh
+  // Auto-load data when switching to specific tabs
+  useEffect(() => {
+    if (activeTab === "users" && user?.uid) {
+      loadUsers(currentPage, true);
+    }
+  }, [activeTab, user?.uid]);
+
+  useEffect(() => {
+    if (activeTab === "contact" && isOwner) {
+      loadContactData();
+    }
+  }, [activeTab, isOwner]);
 
   // Close dropdown when clicking outside
   useEffect(() => {

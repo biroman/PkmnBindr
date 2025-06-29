@@ -27,7 +27,6 @@ export const useActivityTracking = () => {
         lastActivity: new Date().toISOString(),
       });
       lastUpdateRef.current = now;
-      console.log("Activity tracked for user:", user.email);
     } catch (error) {
       console.warn("Failed to update lastSeen:", error);
     }

@@ -300,9 +300,6 @@ class MessageService {
             return bTime - aTime; // Descending order
           });
 
-          console.log(
-            `Loaded ${conversations.length} conversations for user ${userId}`
-          );
           callback(conversations);
         },
         (error) => {

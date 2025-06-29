@@ -23,7 +23,6 @@ export const useMessages = () => {
     try {
       // Set a timeout to stop loading if no response after 10 seconds
       const timeoutId = setTimeout(() => {
-        console.log("Messages loading timeout - stopping loading state");
         setLoading(false);
       }, 10000);
 
@@ -32,7 +31,6 @@ export const useMessages = () => {
         user.uid,
         isOwner,
         (updatedConversations) => {
-          console.log("Conversations updated:", updatedConversations);
           setConversations(updatedConversations);
           setLoading(false);
           setError(null);

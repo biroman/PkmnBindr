@@ -67,12 +67,6 @@ export class RobustRoleService {
 
         // 🔒 CRITICAL: Never update role, status, or other sensitive fields
         await updateDoc(userRef, safeUpdateData);
-        console.log(
-          "✅ User sign-in tracked safely:",
-          user.uid,
-          "Role preserved:",
-          existingData.role
-        );
       }
 
       return true;
