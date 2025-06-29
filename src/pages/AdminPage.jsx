@@ -93,7 +93,7 @@ const AdminPage = () => {
 
   // User management state
   const [users, setUsers] = useState([]);
-  const [usersLoading, setUsersLoading] = useState(true);
+  const [usersLoading, setUsersLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("all");
   const [filterStatus, setFilterStatus] = useState("all");
@@ -123,7 +123,7 @@ const AdminPage = () => {
     featureRequests: [],
     bugReports: [],
   });
-  const [contactLoading, setContactLoading] = useState(true);
+  const [contactLoading, setContactLoading] = useState(false);
   const [selectedThread, setSelectedThread] = useState(null);
   const [replyText, setReplyText] = useState("");
 
@@ -214,20 +214,7 @@ const AdminPage = () => {
     }
   };
 
-  // Fetch users effect
-  useEffect(() => {
-    if (user?.uid) {
-      loadUsers(currentPage, true);
-    }
-  }, [
-    user,
-    currentPage,
-    searchTerm,
-    filterRole,
-    filterStatus,
-    sortBy,
-    sortOrder,
-  ]);
+  // Remove automatic data fetching - data will only be loaded via manual refresh
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -261,11 +248,7 @@ const AdminPage = () => {
     }
   };
 
-  useEffect(() => {
-    if (isOwner) {
-      loadContactData();
-    }
-  }, [isOwner]);
+  // Contact data will only be loaded via manual refresh
 
   // Phase 3: Load announcements using AdminCacheService
   const loadAnnouncements = async (forceRefresh = false) => {
@@ -300,11 +283,7 @@ const AdminPage = () => {
     }
   };
 
-  useEffect(() => {
-    if (isOwner) {
-      loadAnnouncements();
-    }
-  }, [isOwner]);
+  // Announcements will only be loaded via manual refresh
 
   // Phase 3: Use AdminContactService for contact management
   const handleReplyToMessage = async (threadId) => {
@@ -779,7 +758,7 @@ const AdminPage = () => {
 
   // Announcements state
   const [announcements, setAnnouncements] = useState([]);
-  const [announcementsLoading, setAnnouncementsLoading] = useState(true);
+  const [announcementsLoading, setAnnouncementsLoading] = useState(false);
 
   return (
     <ErrorBoundary>

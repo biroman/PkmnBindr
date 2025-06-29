@@ -242,18 +242,6 @@ service cloud.firestore {
       // Additional validation (share token) is handled in application logic
       allow read: if resource.data.permissions.public == true;
       
-      // BINDER INTERACTIONS: DISABLED - No longer allow interaction updates
-      // allow update: if !isEmergencyMode() && 
-      //                  request.auth != null && 
-      //                  resource.data.permissions.public == true &&
-      //                  // Only allow updating interaction fields
-      //                  request.resource.data.diff(resource.data).affectedKeys().hasOnly([
-      //                    'likes', 'likeCount', 
-      //                    'favoriteUsers', 'favoriteCount', 
-      //                    'views', 'viewCount', 
-      //                    'lastViewed', 'lastInteraction', 'updatedAt'
-      //                  ]);
-      
       // Enhanced validation for binder creation/updates
       allow create, update: if request.auth != null && 
                                docId.matches('^' + request.auth.uid + '_.*') &&
@@ -281,7 +269,63 @@ service cloud.firestore {
                                  request.resource.data.permissions.public is bool));
     }
 
-        // Public Shares collection - CLEAN ROLE-BASED VERSION
+    // Share links for public binders
+    match /publicShares/{shareToken} {
+      // ANYONE can read a share link document. This is how share links work.
+      allow read: if true;
+
+      // Authenticated users can create share links for their own binders.
+      allow create: if request.auth != null &&
+                       // The ownerId in the new document must be the user creating it.
+                       request.resource.data.ownerId == request.auth.uid &&
+                       // The link must be active.
+                       request.resource.data.isActive == true &&
+                       // Validate required fields are present
+                       request.resource.data.keys().hasAll(['shareToken', 'binderId', 'ownerId', 'binderName', 'createdAt', 'isActive']) &&
+                       // Validate data types and lengths
+                       isValidStringLength(request.resource.data.shareToken, 16) &&
+                       isValidStringLength(request.resource.data.binderId, 100) &&
+                       isValidStringLength(request.resource.data.ownerId, 100) &&
+                       isValidStringLength(request.resource.data.binderName, 100) &&
+                       (request.resource.data.description == null || isValidStringLength(request.resource.data.description, 200));
+
+
+      // Only the owner of the binder can update the share link (e.g., to revoke it).
+      allow update: if request.auth != null &&
+                       // Get the existing document's data to check ownerId
+                       get(/databases/$(database)/documents/publicShares/$(shareToken)).data.ownerId == request.auth.uid;
+
+      // Only the owner can delete a share link.
+      allow delete: if request.auth != null &&
+                       resource.data.ownerId == request.auth.uid;
+    }
+
+    // User binder changes subcollection (for changelog)
+    match /user_binders/{docId}/changes/{changeId} {
+      // Users can read their own changes
+      allow read: if request.auth != null && 
+        request.auth.uid == resource.data.userId;
+      
+      // Users can create their own changes
+      allow create: if request.auth != null && 
+        request.auth.uid == request.resource.data.userId &&
+        request.resource.data.keys().hasAll(['binderId', 'userId']) &&
+        changeId == (request.resource.data.userId + '_' + request.resource.data.binderId);
+      
+      // Users can update their own changes
+      allow update: if request.auth != null && 
+        request.auth.uid == resource.data.userId &&
+        request.auth.uid == request.resource.data.userId;
+      
+      // Users can delete their own changes
+      allow delete: if request.auth != null && 
+        request.auth.uid == resource.data.userId;
+      
+      // Allow reading changes for public binders (so others can see the changes)
+      allow read: if request.auth != null;
+    }
+
+    // Public Shares collection - CLEAN ROLE-BASED VERSION
     match /publicShares/{shareToken} {
       // Owner can manage all share tokens (for admin purposes)
       allow read, write, delete: if isOwner();
@@ -457,16 +501,6 @@ service cloud.firestore {
         allow read, write, list, create, update, delete: if request.auth != null;
       }
     }
-
-    // Binder interactions collection - DISABLED
-    // match /binderInteractions/{interactionId} {
-    //   // Users can read/write their own interactions
-    //   allow read, write: if request.auth != null && 
-    //     request.auth.uid == resource.data.userId;
-    //   
-    //   // Allow reading interactions for public binders (for stats)
-    //   allow read: if request.auth != null;
-    // }
 
     // Binder card customizations collection - separate from binder content
     match /binderCardCustomizations/{customizationId} {
