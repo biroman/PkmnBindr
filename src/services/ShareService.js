@@ -74,7 +74,7 @@ class ShareService {
         throw new Error("Binder must be public to create share links");
       }
 
-      // Check if user already has active share links for this binder
+      // Check for existing active share links for this binder
       const existingSharesQuery = query(
         collection(db, this.collectionName),
         where("binderId", "==", binderId),
@@ -84,10 +84,31 @@ class ShareService {
 
       const existingShares = await getDocs(existingSharesQuery);
 
-      // Limit to 5 active share links per binder (rate limiting)
-      if (existingShares.size >= 5) {
-        throw new Error(
-          "Maximum number of active share links reached (5). Please revoke some existing links first."
+      // NEW POLICY: Only 1 active share link per binder
+      // If an existing active link exists, revoke it automatically
+      if (existingShares.size > 0) {
+        console.log(
+          `Found ${existingShares.size} existing active share link(s) for binder ${binderId}. Revoking automatically...`
+        );
+
+        // Revoke all existing active links for this binder
+        const revokePromises = [];
+        existingShares.forEach((shareDoc) => {
+          const shareData = shareDoc.data();
+          revokePromises.push(
+            updateDoc(doc(db, this.collectionName, shareData.shareToken), {
+              isActive: false,
+              revokedAt: serverTimestamp(),
+              revokedBy: ownerId,
+              revokeReason: "Replaced by new share link",
+            })
+          );
+        });
+
+        // Wait for all revocations to complete
+        await Promise.all(revokePromises);
+        console.log(
+          `Successfully revoked ${existingShares.size} existing share link(s)`
         );
       }
 
@@ -125,6 +146,8 @@ class ShareService {
         metadata: {
           userAgent: navigator.userAgent,
           referrer: document.referrer,
+          replacedExistingLinks: existingShares.size > 0,
+          version: "v2", // Track new single-link policy
         },
       };
 
@@ -141,6 +164,7 @@ class ShareService {
           ...shareData,
           shareUrl,
         },
+        replacedExistingLinks: existingShares.size > 0, // Let the UI know if we replaced links
       };
     } catch (error) {
       console.error("Error creating share link:", error);

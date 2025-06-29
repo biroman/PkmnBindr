@@ -324,31 +324,31 @@ const SetTab = ({ currentBinder, onAddCards }) => {
   return (
     <>
       <div className="flex flex-col h-full">
-        {/* Search Bar */}
-        <div className="p-6 border-b border-slate-200">
+        {/* Search & Controls */}
+        <div className="p-4 border-b border-slate-200 space-y-4">
+          {/* Search Bar */}
           <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+            <MagnifyingGlassIcon className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => updateSearchQuery(e.target.value)}
               placeholder="Search sets by name or series..."
-              className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
-          {/* Binder Capacity Info */}
-          <div className="mt-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-slate-700">
-                <span className="font-medium">Binder Capacity:</span>{" "}
+          {/* Binder Capacity */}
+          <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-slate-700">
+                Binder Capacity
+              </span>
+              <span className="text-xs text-slate-500">
                 {usedSlots} / {totalSlots} slots used
-              </div>
-              <div className="text-xs text-slate-500">
-                {availableSlots} available
-              </div>
+              </span>
             </div>
-            <div className="mt-2 w-full bg-slate-200 rounded-full h-2">
+            <div className="w-full bg-slate-200 rounded-full h-2">
               <div
                 className="bg-blue-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${(usedSlots / totalSlots) * 100}%` }}
@@ -356,40 +356,38 @@ const SetTab = ({ currentBinder, onAddCards }) => {
             </div>
           </div>
 
-          {/* Reverse Holo Option - More prominent design */}
-          <div className="mt-4 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg border-2 border-purple-200">
-            <label className="flex items-start space-x-3 cursor-pointer">
+          {/* Reverse Holo Option */}
+          <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+            <label className="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={includeReverseHolos}
                 onChange={(e) => setIncludeReverseHolos(e.target.checked)}
-                className="w-5 h-5 text-purple-600 bg-white border-purple-300 rounded focus:ring-purple-500 focus:ring-2 mt-0.5"
+                className="w-4 h-4 text-purple-600 bg-white border-purple-300 rounded focus:ring-purple-500 focus:ring-2"
               />
-              <div className="flex-1">
-                <div className="flex items-center space-x-2">
-                  <div className="text-sm font-semibold text-purple-800">
-                    ✨ Include Reverse Holo Cards
-                  </div>
-                  {includeReverseHolos && (
-                    <span className="bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
-                      Active
-                    </span>
-                  )}
-                </div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-purple-900">
+                  ✨ Include Reverse Holo Cards
+                </span>
+                {includeReverseHolos && (
+                  <span className="bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
+                    Active
+                  </span>
+                )}
               </div>
             </label>
           </div>
 
-          {/* Stats */}
-          <div className="flex items-center justify-between mt-4">
-            <div className="text-sm text-slate-600">
+          {/* Results Stats */}
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-slate-600">
               <span className="font-medium">{filteredCount}</span> of{" "}
               <span className="font-medium">{totalSets}</span> sets
-            </div>
+            </span>
             {searchQuery && (
               <button
                 onClick={() => updateSearchQuery("")}
-                className="text-sm text-slate-500 hover:text-slate-700 underline"
+                className="text-blue-600 hover:text-blue-700 font-medium"
               >
                 Clear search
               </button>
@@ -398,24 +396,21 @@ const SetTab = ({ currentBinder, onAddCards }) => {
         </div>
 
         {/* Sets Grid */}
-        <div
-          className="flex-1 overflow-y-auto"
-          style={{ maxHeight: "calc(90vh - 420px)" }}
-        >
-          <div className="p-6">
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-4">
             {isLoading ? (
-              <div className="text-center py-12">
-                <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                <div className="text-slate-600 font-medium">
+              <div className="text-center py-16">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
+                <div className="text-slate-600 font-medium text-sm">
                   Loading sets...
                 </div>
-                <div className="text-slate-500 text-sm mt-1">
+                <div className="text-slate-500 text-xs mt-1">
                   This might take a moment
                 </div>
               </div>
             ) : sets.length === 0 ? (
-              <div className="text-center py-12">
-                <div className="text-slate-400 text-lg mb-2">
+              <div className="text-center py-16">
+                <div className="text-slate-400 font-medium mb-2">
                   {searchQuery ? "No matching sets found" : "No sets available"}
                 </div>
                 <div className="text-slate-500 text-sm">
@@ -425,7 +420,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                 </div>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {sets.map((set) => {
                   const totalCards = calculateTotalCards(set);
                   const hasReverseHoloBonus =
@@ -436,127 +431,116 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                   return (
                     <div
                       key={set.id}
-                      className={`relative border-2 rounded-xl p-4 cursor-pointer transition-all duration-200 overflow-hidden group hover:border-blue-300 bg-white hover:shadow-md ${
+                      className={`group relative bg-white rounded-xl border transition-all duration-200 hover:shadow-lg ${
                         addingSetId === set.id
-                          ? "opacity-50 cursor-not-allowed border-blue-500"
+                          ? "border-blue-300 shadow-md"
                           : canFit
-                          ? "border-slate-200"
-                          : "border-red-200 bg-red-25"
+                          ? "border-slate-200 hover:border-slate-300"
+                          : "border-red-200 bg-red-50"
                       }`}
-                      style={{
-                        backgroundImage: set.logo ? `url(${set.logo})` : "none",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "top right",
-                        backgroundSize: "30%",
-                      }}
                     >
-                      {/* Subtle background overlay for better text readability */}
-                      {set.logo && (
-                        <div className="absolute inset-0 bg-white/80 rounded-xl pointer-events-none"></div>
-                      )}
-
-                      {/* Capacity Warning */}
-                      {!canFit && (
-                        <div className="absolute top-3 left-3 z-20">
-                          <div className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg flex items-center space-x-1">
-                            <ExclamationTriangleIcon className="w-3 h-3" />
-                            <span>Need space</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Reverse Holo Indicator */}
-                      {hasReverseHoloBonus && (
-                        <div className="absolute top-3 right-3 z-20">
-                          <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg flex items-center space-x-1">
-                            <span>✨</span>
-                            <span>+{totalCards - set.cardCount}</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Loading indicator */}
+                      {/* Loading Overlay */}
                       {addingSetId === set.id && (
-                        <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center z-30">
+                        <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center z-20">
                           <div className="text-center">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-3"></div>
-                            <div className="text-sm font-medium text-slate-700 mb-1">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
+                            <div className="text-sm font-medium text-slate-700">
                               Adding {totalCards} cards...
                             </div>
-                            <div className="text-xs text-slate-500">
-                              Using optimized batch processing
-                            </div>
                           </div>
                         </div>
                       )}
 
-                      <div className="relative z-10">
-                        <div className="flex items-start space-x-4 mb-4">
-                          {/* Set Symbol/Logo */}
-                          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center overflow-hidden shadow-sm">
+                      {/* Card Header */}
+                      <div className="p-4 border-b border-slate-100">
+                        <div className="flex items-start gap-3">
+                          {/* Set Symbol */}
+                          <div className="flex-shrink-0 w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center overflow-hidden">
                             {set.symbol ? (
                               <img
                                 src={set.symbol}
                                 alt={`${set.name} symbol`}
-                                className="w-10 h-10 object-contain"
-                                onError={(e) => {
-                                  e.target.style.display = "none";
-                                  e.target.nextSibling.style.display = "block";
-                                }}
+                                className="w-8 h-8 object-contain"
                               />
-                            ) : null}
-                            <div
-                              className="text-slate-500 text-xs text-center leading-tight font-bold"
-                              style={{ display: set.symbol ? "none" : "block" }}
-                            >
-                              {set.name
-                                .split(" ")
-                                .map((word) => word[0])
-                                .join("")
-                                .slice(0, 3)}
-                            </div>
+                            ) : (
+                              <div className="text-slate-500 text-xs font-bold text-center">
+                                {set.name
+                                  .split(" ")
+                                  .map((word) => word[0])
+                                  .join("")
+                                  .slice(0, 2)}
+                              </div>
+                            )}
                           </div>
 
                           {/* Set Info */}
                           <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-slate-900 truncate text-base leading-tight">
+                            <h3 className="font-semibold text-slate-900 text-sm leading-tight line-clamp-2">
                               {set.name}
                             </h3>
-                            <div className="text-sm text-slate-600 mt-1">
-                              <div className="truncate font-medium">
-                                {set.series}
-                              </div>
-                              <div className="flex items-center justify-between mt-2">
-                                <div className="flex items-center space-x-2">
-                                  <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded-md text-xs font-medium">
-                                    {set.cardCount} cards
-                                  </span>
-                                  {hasReverseHoloBonus && (
-                                    <span className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-2 py-1 rounded-md text-xs font-medium border border-purple-200">
-                                      {totalCards} total
-                                    </span>
-                                  )}
-                                </div>
-                                {set.releaseDate && (
-                                  <span className="text-xs text-slate-500 font-medium">
-                                    {new Date(set.releaseDate).getFullYear()}
-                                  </span>
-                                )}
-                              </div>
-                            </div>
+                            <p className="text-xs text-slate-600 mt-1 truncate">
+                              {set.series}
+                            </p>
                           </div>
+
+                          {/* Year Badge */}
+                          {set.releaseDate && (
+                            <div className="flex-shrink-0">
+                              <span className="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-md">
+                                {new Date(set.releaseDate).getFullYear()}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Card Details */}
+                      <div className="p-4 space-y-3">
+                        {/* Cards Count & Status */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-medium text-slate-900">
+                              {set.cardCount} cards
+                            </span>
+                            {hasReverseHoloBonus && (
+                              <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
+                                <span>✨</span>
+                                <span>+{totalCards - set.cardCount}</span>
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Capacity Status */}
+                          {!canFit && (
+                            <div className="flex items-center gap-1 text-red-600">
+                              <ExclamationTriangleIcon className="w-4 h-4" />
+                              <span className="text-xs font-medium">
+                                Need Space
+                              </span>
+                            </div>
+                          )}
                         </div>
 
-                        {/* Add button */}
+                        {/* Total Cards (if reverse holos) */}
+                        {hasReverseHoloBonus && (
+                          <div className="text-xs text-slate-600">
+                            <span className="font-medium">
+                              {totalCards} total cards
+                            </span>{" "}
+                            (including reverse holos)
+                          </div>
+                        )}
+
+                        {/* Action Button */}
                         <button
                           onClick={() => handleAddSet(set)}
                           disabled={addingSetId !== null}
-                          className={`relative z-10 w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 ${
+                          className={`w-full px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 ${
                             addingSetId === set.id
                               ? "bg-blue-500 text-white cursor-not-allowed"
                               : canFit
-                              ? "bg-slate-100 hover:bg-blue-500 hover:text-white text-slate-700 group-hover:bg-blue-50"
-                              : "bg-orange-100 hover:bg-orange-200 text-orange-700 border border-orange-300"
+                              ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md"
+                              : "bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:shadow-md"
                           }`}
                         >
                           <PlusIcon className="w-4 h-4" />

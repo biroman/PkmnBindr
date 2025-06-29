@@ -176,8 +176,17 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
       );
 
       if (result.success) {
-        toast.success("🔗 Share link created!");
-        setShareLinks((prev) => [result.shareData, ...prev]);
+        // Show different success messages based on whether we replaced an existing link
+        if (result.replacedExistingLinks) {
+          toast.success(
+            "🔗 Share link updated! Previous link was automatically replaced."
+          );
+        } else {
+          toast.success("🔗 Share link created!");
+        }
+
+        // Since we only allow 1 link per binder, replace the entire array
+        setShareLinks([result.shareData]);
         setShowCreateForm(false);
         setNewLinkDesc("");
         setSelectedExpiration("never");
@@ -413,11 +422,31 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
           <PlusIcon className="w-4 h-4 text-white" />
         </div>
         <h3 className="text-lg sm:text-xl font-bold text-gray-900">
-          Create New Share Link
+          {shareLinks.length > 0 ? "Replace Share Link" : "Create Share Link"}
         </h3>
       </div>
 
       <div className="space-y-6">
+        {shareLinks.length > 0 && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+            <div className="flex items-start space-x-3">
+              <div className="w-6 h-6 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-amber-600 text-sm">⚠️</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-amber-800 text-sm mb-1">
+                  Replace Existing Link
+                </h4>
+                <p className="text-amber-700 text-sm">
+                  Creating a new share link will automatically revoke your
+                  current active link. Only 1 share link is allowed per binder
+                  for security.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div>
           <label
             htmlFor="link-description"
@@ -484,7 +513,9 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
           ) : (
             <div className="flex items-center justify-center space-x-2">
               <CheckIcon className="w-5 h-5" />
-              <span>Create Link</span>
+              <span>
+                {shareLinks.length > 0 ? "Replace Link" : "Create Link"}
+              </span>
             </div>
           )}
         </button>
@@ -747,7 +778,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                 Share Binder
               </h2>
               <p className="text-sm text-gray-600 truncate mt-1">
-                {binder?.metadata?.name || "Unnamed Binder"}
+                {binder?.metadata?.name || "Unnamed Binder"} • 1 Link Max
               </p>
             </div>
           </div>
@@ -810,37 +841,32 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
           )}
 
           {/* Create New Link Button / Form */}
-          {binder?.permissions?.public &&
-            !showCreateForm &&
-            shareLinks.length < 5 && (
-              <div className="mb-6 sm:mb-8">
-                <button
-                  onClick={() => setShowCreateForm(true)}
-                  className="w-full flex items-center justify-center space-x-3 sm:space-x-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform-gpu hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl min-h-[56px]"
-                  aria-label="Create new share link"
-                >
-                  <div className="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center">
-                    <PlusIcon className="w-5 h-5" />
-                  </div>
-                  <span className="text-base sm:text-lg font-bold">
-                    Create New Share Link
-                  </span>
-                </button>
-              </div>
-            )}
-
-          {shareLinks.length >= 5 && (
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <ShieldCheckIcon className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-blue-800 mb-2 text-base sm:text-lg">
-                Maximum Links Reached
-              </h3>
-              <p className="text-sm text-blue-700">
-                You have 5 active share links (maximum). Revoke an existing link
-                to create a new one.
-              </p>
+          {binder?.permissions?.public && !showCreateForm && (
+            <div className="mb-6 sm:mb-8">
+              <button
+                onClick={() => setShowCreateForm(true)}
+                className="w-full flex items-center justify-center space-x-3 sm:space-x-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform-gpu hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl min-h-[56px]"
+                aria-label={
+                  shareLinks.length > 0
+                    ? "Replace existing share link"
+                    : "Create new share link"
+                }
+              >
+                <div className="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center">
+                  <PlusIcon className="w-5 h-5" />
+                </div>
+                <span className="text-base sm:text-lg font-bold">
+                  {shareLinks.length > 0
+                    ? "Replace Share Link"
+                    : "Create Share Link"}
+                </span>
+              </button>
+              {shareLinks.length > 0 && (
+                <p className="text-sm text-gray-600 text-center mt-3 px-4">
+                  📝 Creating a new link will automatically replace your current
+                  share link
+                </p>
+              )}
             </div>
           )}
 
@@ -861,21 +887,21 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                   <ShareIcon className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">
-                  No Share Links Yet
+                  No Share Link Yet
                 </h3>
                 <p className="text-gray-500 mb-6 max-w-md mx-auto px-4">
-                  Create your first link to share this binder with friends,
-                  family, or the community. Each link includes a scannable QR
-                  code!
+                  Create a share link to share this binder with friends, family,
+                  or the community. Each binder can have 1 secure share link
+                  with a scannable QR code!
                 </p>
                 {binder?.permissions?.public && (
                   <button
                     onClick={() => setShowCreateForm(true)}
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 min-h-[48px] rounded-xl hover:bg-blue-700 transition-colors font-semibold"
-                    aria-label="Create your first share link"
+                    aria-label="Create share link"
                   >
                     <PlusIcon className="w-5 h-5" />
-                    <span>Create Your First Link</span>
+                    <span>Create Share Link</span>
                   </button>
                 )}
               </div>
