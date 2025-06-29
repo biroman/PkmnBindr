@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
-import Clarity from "@microsoft/clarity";
 
 import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
@@ -58,44 +56,6 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  // Get Clarity Project ID from environment variables
-  const clarityProjectId = import.meta.env.VITE_CLARITY_PROJECT_ID;
-
-  // Initialize Microsoft Clarity
-  useEffect(() => {
-    console.log("🔍 Clarity Debug: Initialization attempt", {
-      mode: import.meta.env.MODE,
-      hasWindow: typeof window !== "undefined",
-      clarityProjectId: clarityProjectId,
-      clarityExists: !!Clarity,
-    });
-
-    // Only initialize in production and when window is available
-    if (
-      typeof window !== "undefined" &&
-      import.meta.env.MODE === "production"
-    ) {
-      try {
-        Clarity.init(clarityProjectId);
-        console.log("✅ Microsoft Clarity: Initialized successfully");
-
-        // Check if Clarity started after a brief delay
-        setTimeout(() => {
-          console.log("🔍 Clarity Debug: Status check", {
-            hasStarted: Clarity?.hasStarted,
-            clarityObject: !!Clarity,
-          });
-        }, 1000);
-      } catch (error) {
-        console.error("❌ Failed to initialize Microsoft Clarity:", error);
-      }
-    } else if (import.meta.env.MODE === "development") {
-      console.log(
-        "🚧 Microsoft Clarity: Skipped initialization in development mode"
-      );
-    }
-  }, [clarityProjectId]);
-
   // Enable automatic user tracking
   useUserTracking();
 
