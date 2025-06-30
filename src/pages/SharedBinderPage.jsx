@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import BinderContainer from "../components/binder/BinderContainer";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { X } from "lucide-react";
+import { useDocumentHead } from "../hooks/useDocumentHead";
 
 /**
  * SharedBinderPage - Displays shared binders via share tokens
@@ -158,6 +159,68 @@ const SharedBinderPage = () => {
   const handleGoHome = () => {
     navigate("/");
   };
+
+  // SEO optimization - Dynamic meta tags for Discord link previews
+  useDocumentHead({
+    title: binder?.metadata?.name
+      ? `${binder.metadata.name} - Pokemon Card Collection | PkmnBindr`
+      : "Pokemon Card Collection | PkmnBindr",
+    description: binder?.metadata?.description
+      ? `${
+          binder.metadata.description
+        } - View this Pokemon card collection with ${
+          Object.keys(binder?.cards || {}).length
+        } cards`
+      : `View this Pokemon card collection with ${
+          Object.keys(binder?.cards || {}).length
+        } cards on PkmnBindr`,
+    keywords:
+      "pokemon cards, card collection, pokemon binder, tcg, trading cards, pokemon tcg",
+    ogTitle: binder?.metadata?.name
+      ? `${binder.metadata.name} - Pokemon Card Collection`
+      : "Pokemon Card Collection",
+    ogDescription: binder?.metadata?.description
+      ? `${binder.metadata.description} - Contains ${
+          Object.keys(binder?.cards || {}).length
+        } Pokemon cards`
+      : `View this Pokemon card collection with ${
+          Object.keys(binder?.cards || {}).length
+        } cards`,
+    ogImage: "https://www.pkmnbindr.com/logo.png", // You can customize this to show binder-specific images
+    ogUrl: `https://www.pkmnbindr.com/share/${shareToken}`,
+    canonicalUrl: `https://www.pkmnbindr.com/share/${shareToken}`,
+    structuredData: binder
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Collection",
+          name: binder.metadata?.name || "Pokemon Card Collection",
+          description:
+            binder.metadata?.description || "A Pokemon card collection",
+          url: `https://www.pkmnbindr.com/share/${shareToken}`,
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: Object.keys(binder.cards || {}).length,
+            itemListElement: Object.values(binder.cards || {})
+              .slice(0, 10)
+              .map((card, index) => ({
+                "@type": "Thing",
+                position: index + 1,
+                name: card?.name || "Pokemon Card",
+                description: card?.set?.name || "Trading Card",
+              })),
+          },
+          creator: {
+            "@type": "Person",
+            name: binderOwner?.displayName || "Pokemon Collector",
+          },
+          provider: {
+            "@type": "Organization",
+            name: "PkmnBindr",
+            url: "https://www.pkmnbindr.com",
+          },
+        }
+      : null,
+  });
 
   // Loading state
   if (loading) {

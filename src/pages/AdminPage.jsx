@@ -710,6 +710,13 @@ const AdminPage = () => {
     loadRuleStats();
   }, [rules, isRulesOwner]);
 
+  // Load announcements when announcements tab is active
+  useEffect(() => {
+    if (activeTab === "announcements") {
+      loadAnnouncements();
+    }
+  }, [activeTab]);
+
   const renderDashboard = () => (
     <DashboardOverview
       systemStats={systemStats}

@@ -86,7 +86,7 @@ const PrivacyPolicyPage = () => {
                 dangerouslySetInnerHTML={{
                   __html: `
                   <h1>Privacy Policy for pkmnbindr</h1>
-                  <p class="last-updated"><strong>Last updated: June 10, 2025</strong></p>
+                  <p class="last-updated"><strong>Last updated: January 20, 2025</strong></p>
                   
                   <div class="section">
                     <h2>1. Data Controller</h2>
@@ -103,7 +103,14 @@ const PrivacyPolicyPage = () => {
                       <li><strong>Pokemon card data</strong> - your binder collections and card information</li>
                       <li><strong>Account activity</strong> - login times, last activity (for account management)</li>
                     </ul>
-                    <p>We do <strong>not</strong> collect your real name, IP address, or use cookies or tracking technologies for analytics or marketing.</p>
+                    <p>We also automatically collect some information to improve our service:</p>
+                    <ul>
+                      <li><strong>Usage analytics</strong> - how you interact with our website (clicks, scrolls, page views)</li>
+                      <li><strong>Technical information</strong> - browser type, device information, screen resolution</li>
+                      <li><strong>Performance data</strong> - page load times, errors, and site performance metrics</li>
+                      <li><strong>Session recordings</strong> - anonymized recordings of user sessions to identify usability issues</li>
+                    </ul>
+                    <p>This behavioral data is collected through Microsoft Clarity and helps us understand how users interact with our platform to improve user experience and fix issues. We do <strong>not</strong> collect your real name or use this data for marketing purposes.</p>
                   </div>
                   
                   <div class="section">
@@ -111,9 +118,10 @@ const PrivacyPolicyPage = () => {
                     <p>We process your personal data based on:</p>
                     <ul>
                       <li><strong>Contract</strong> - to provide your account and subscription services</li>
-                      <li><strong>Legitimate Interest</strong> - for security, fraud prevention, and service improvement</li>
+                      <li><strong>Legitimate Interest</strong> - for security, fraud prevention, service improvement, website analytics, and user experience optimization</li>
                       <li><strong>Consent</strong> - for any optional features (which we'll ask for separately)</li>
                     </ul>
+                    <p>Our legitimate interest in collecting analytics data is to continuously improve our service quality, identify and fix technical issues, and enhance user experience. You can object to this processing at any time by contacting us.</p>
                   </div>
                   
                   <div class="section">
@@ -125,8 +133,11 @@ const PrivacyPolicyPage = () => {
                       <li>Store and display your Pokemon card collections</li>
                       <li>Ensure account security and prevent fraud</li>
                       <li>Provide customer support</li>
+                      <li>Analyze website usage and user behavior to improve our service</li>
+                      <li>Identify and fix technical issues and usability problems</li>
+                      <li>Understand how users interact with our features to enhance user experience</li>
                     </ul>
-                    <p>We do <strong>not</strong> use your data for marketing, advertising, or tracking. We do <strong>not</strong> share, sell, or transfer your personal information to third parties except as described below.</p>
+                    <p>We do <strong>not</strong> use your data for marketing, advertising, or selling to third parties. We do <strong>not</strong> share, sell, or transfer your personal information to third parties except as described below for essential service operations.</p>
                   </div>
                   
                   <div class="section">
@@ -135,6 +146,7 @@ const PrivacyPolicyPage = () => {
                     <ul>
                       <li><strong>Google Firebase</strong> - for hosting, database, and authentication (servers may be located internationally)</li>
                       <li><strong>Stripe</strong> - for secure payment processing (we never store your payment details)</li>
+                      <li><strong>Microsoft Clarity</strong> - for website analytics and user behavior tracking to improve user experience. Clarity may collect data such as how you interact with our site, including clicks, scrolls, and page navigation. View Microsoft's privacy policy at <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">https://privacy.microsoft.com/en-us/privacystatement</a></li>
                       <li><strong>Google/Twitter</strong> - if you choose social login (only basic profile info)</li>
                     </ul>
                     <p>These services have their own privacy policies and may transfer data internationally with appropriate safeguards under GDPR.</p>
@@ -147,12 +159,25 @@ const PrivacyPolicyPage = () => {
                       <li><strong>Account data</strong> - until you delete your account</li>
                       <li><strong>Payment records</strong> - for 7 years (legal requirement)</li>
                       <li><strong>Support communications</strong> - for 2 years</li>
+                      <li><strong>Analytics data</strong> - automatically deleted after 25 months (Microsoft Clarity retention policy)</li>
                     </ul>
                     <p>You can request account deletion at any time.</p>
                   </div>
                   
                   <div class="section">
-                    <h2>7. Your Rights Under GDPR</h2>
+                    <h2>7. Analytics Data Control</h2>
+                    <p>You have control over analytics data collection:</p>
+                    <ul>
+                      <li><strong>Browser settings</strong> - You can disable tracking through your browser's privacy settings</li>
+                      <li><strong>Do Not Track</strong> - We respect browser "Do Not Track" signals</li>
+                      <li><strong>Opt-out request</strong> - Contact us to opt out of analytics tracking</li>
+                      <li><strong>Session recordings</strong> - These are anonymized and cannot be linked back to individual users</li>
+                    </ul>
+                    <p>Note that disabling analytics may affect our ability to improve the service and fix issues, but will not impact core functionality.</p>
+                  </div>
+                  
+                  <div class="section">
+                    <h2>8. Your Rights Under GDPR</h2>
                     <p>As an EU resident, you have the right to:</p>
                     <ul>
                       <li><strong>Access</strong> - get a copy of your personal data</li>
@@ -167,35 +192,35 @@ const PrivacyPolicyPage = () => {
                   </div>
                   
                   <div class="section">
-                    <h2>8. Security</h2>
+                    <h2>9. Security</h2>
                     <p>We store all data securely on Google Firebase with industry-standard encryption. However, no system is 100% secure. Use a strong, unique password and keep it safe.</p>
                     <p>If we discover a data breach affecting your personal data, we'll notify you and the Norwegian Data Protection Authority as required by law.</p>
                   </div>
                   
                   <div class="section">
-                    <h2>9. International Data Transfers</h2>
-                    <p>Your data may be processed on servers outside the EU/EEA (primarily Google's infrastructure). These transfers are protected by:</p>
+                    <h2>10. International Data Transfers</h2>
+                    <p>Your data may be processed on servers outside the EU/EEA (primarily Google's and Microsoft's infrastructure). These transfers are protected by:</p>
                     <ul>
-                      <li>Google's compliance with GDPR</li>
+                      <li>Google's and Microsoft's compliance with GDPR</li>
                       <li>Standard Contractual Clauses approved by the EU Commission</li>
                       <li>Adequate security measures</li>
                     </ul>
                   </div>
                   
                   <div class="section">
-                    <h2>10. Complaints</h2>
+                    <h2>11. Complaints</h2>
                     <p>If you're not satisfied with how we handle your personal data, you can file a complaint with:</p>
                     <p><strong>Datatilsynet (Norwegian Data Protection Authority)</strong><br>
                     Website: <a href="https://www.datatilsynet.no" target="_blank" rel="noopener noreferrer">www.datatilsynet.no</a></p>
                   </div>
                   
                   <div class="section">
-                    <h2>11. Changes to This Policy</h2>
+                    <h2>12. Changes to This Policy</h2>
                     <p>We may update this privacy policy occasionally. If we make significant changes, we'll notify you by email or through the service. Continued use after changes means you accept the updated policy.</p>
                   </div>
                   
                   <div class="section">
-                    <h2>12. Contact Us</h2>
+                    <h2>13. Contact Us</h2>
                     <p>For any privacy-related questions or to exercise your rights, contact us via <a href="https://www.pkmnbindr.com/contact" target="_blank" rel="noopener noreferrer">https://www.pkmnbindr.com/contact</a>.</p>
                   </div>
                 `,
