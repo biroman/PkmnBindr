@@ -86,7 +86,7 @@ const PrivacyPolicyPage = () => {
                 dangerouslySetInnerHTML={{
                   __html: `
                   <h1>Privacy Policy for pkmnbindr</h1>
-                  <p class="last-updated"><strong>Last updated: January 20, 2025</strong></p>
+                  <p class="last-updated"><strong>Last updated: June 30, 2025</strong></p>
                   
                   <div class="section">
                     <h2>1. Data Controller</h2>
