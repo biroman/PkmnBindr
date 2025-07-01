@@ -142,7 +142,7 @@ const CardRepairTool = ({ userId, binderId, source, onRepairComplete }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6">
+    <div className="bg-card-background rounded-lg border border-border p-6">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
           <WrenchScrewdriverIcon className="w-5 h-5 text-orange-600" />
@@ -340,8 +340,8 @@ const CardRepairTool = ({ userId, binderId, source, onRepairComplete }) => {
       {/* Preview Results */}
       {previewResults && (
         <div className="mb-6">
-          <div className="bg-gray-50 rounded-lg p-4 mb-4">
-            <h4 className="font-medium text-gray-900 mb-3">Preview Results</h4>
+          <div className="bg-background rounded-lg p-4 mb-6">
+            <h4 className="font-medium text-text-primary mb-3">Preview Results</h4>
 
             <div className="grid grid-cols-3 gap-4 mb-4">
               <div className="text-center">
@@ -371,7 +371,7 @@ const CardRepairTool = ({ userId, binderId, source, onRepairComplete }) => {
               <h4 className="font-medium text-gray-900 mb-3">
                 Card Previews (Review Before Committing)
               </h4>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-h-96 overflow-y-auto bg-gray-50 p-4 rounded-lg">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-h-96 overflow-y-auto bg-background p-4 rounded-lg">
                 {previewResults.previews
                   .filter((p) => p.success)
                   .map((preview, index) => (
@@ -428,8 +428,8 @@ const CardRepairTool = ({ userId, binderId, source, onRepairComplete }) => {
 
       {/* Commit Results */}
       {commitResults && (
-        <div className="bg-gray-50 rounded-lg p-4 mb-6">
-          <h4 className="font-medium text-gray-900 mb-3">Final Results</h4>
+        <div className="bg-background rounded-lg p-4 mb-6">
+          <h4 className="font-medium text-text-primary mb-3">Final Results</h4>
 
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div className="text-center">

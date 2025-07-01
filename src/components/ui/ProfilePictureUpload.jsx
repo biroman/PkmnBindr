@@ -154,7 +154,7 @@ const ProfilePictureUpload = ({
       >
         {/* Profile Picture */}
         <div
-          className={`${sizeClasses[size]} rounded-full bg-slate-100 p-1 shadow-md`}
+          className={`${sizeClasses[size]} rounded-full bg-background p-1 shadow-md`}
         >
           {user?.photoURL ? (
             <img
@@ -173,7 +173,7 @@ const ProfilePictureUpload = ({
 
         {/* Upload Overlay - Only show if editable */}
         {editable && (
-          <div className="absolute inset-0 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute inset-0 rounded-full bg-text-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
             {isUploading ? (
               <div
                 className={`${iconSizeClasses[size]} border-2 border-white border-t-transparent rounded-full animate-spin`}

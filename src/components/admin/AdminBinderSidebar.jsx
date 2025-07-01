@@ -48,10 +48,10 @@ const AdminBinderSidebar = ({
       <div
         className={`${
           isVisible ? "w-80" : "w-0"
-        } bg-white border-r border-slate-200 flex flex-col transition-all duration-300 overflow-hidden`}
+        } bg-card-background border-r border-border flex flex-col transition-all duration-300 overflow-hidden`}
       >
         {/* Sidebar Header */}
-        <div className="p-6 border-b border-slate-200">
+        <div className="p-6 border-b border-border">
           <button
             onClick={() => navigate("/admin")}
             className="flex items-center text-gray-600 hover:text-gray-900 transition-colors mb-4"
@@ -116,7 +116,7 @@ const AdminBinderSidebar = ({
           </div>
 
           {/* Admin Tools */}
-          <div className="mt-6 pt-4 border-t border-gray-200 space-y-3">
+          <div className="mt-6 pt-4 border-t border-border space-y-3">
             <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
               Admin Tools
             </h4>

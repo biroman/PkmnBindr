@@ -41,7 +41,7 @@ export const AdminActionBar = ({
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
       {/* Page Title and Context */}
       <div className="flex items-center space-x-3">
-        <h1 className="text-2xl font-bold text-gray-900 capitalize">
+        <h1 className="text-2xl font-bold text-text-primary capitalize">
           {activeTab === "dashboard"
             ? "Admin Dashboard"
             : activeTab === "users"

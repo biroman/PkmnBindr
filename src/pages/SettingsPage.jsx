@@ -135,8 +135,8 @@ const SettingsPage = () => {
       onClick={() => setActiveTab(tabName)}
       className={`flex items-center w-full text-left px-3 py-2 rounded-md text-sm font-medium ${
         activeTab === tabName
-          ? "bg-slate-300 text-slate-800"
-          : "text-slate-600 hover:bg-slate-200 hover:text-slate-800"
+          ? "bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300"
+          : "text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-800 dark:hover:text-slate-200"
       }`}
     >
       {icon}
@@ -145,13 +145,13 @@ const SettingsPage = () => {
   );
 
   return (
-    <div className="bg-slate-100 min-h-screen">
+    <div className="bg-background min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Left Sidebar Navigation */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg p-3 space-y-1">
-              <h3 className="px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+            <div className="bg-card-background rounded-lg p-3 space-y-1">
+              <h3 className="px-3 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
                 Account Settings
               </h3>
               <NavItem
@@ -174,10 +174,10 @@ const SettingsPage = () => {
                 label="Privacy & Safety"
                 tabName="privacy"
               />
-              <div className="!my-3 border-t border-slate-200"></div>
+              <div className="!my-3 border-t border-slate-200 dark:border-slate-700"></div>
               <button
                 onClick={handleLogout}
-                className="flex items-center w-full text-left px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:bg-slate-200 hover:text-slate-800"
+                className="flex items-center w-full text-left px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-800 dark:hover:text-slate-200"
               >
                 <ArrowRightOnRectangleIcon className="w-5 h-5" />
                 <span className="ml-3">Log Out</span>
@@ -202,19 +202,19 @@ const SettingsPage = () => {
             )}
 
             {activeTab === "account" && (
-              <div className="bg-white rounded-lg shadow-sm p-6 space-y-8">
+              <div className="bg-card-background rounded-lg shadow-sm p-6 space-y-8">
                 <div>
-                  <h2 className="text-xl font-semibold text-slate-900">
+                  <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
                     My Account
                   </h2>
                   <div className="mt-6 space-y-4">
                     {/* Display Name */}
-                    <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-background rounded-lg">
                       <div>
-                        <h3 className="font-medium text-slate-800">
+                        <h3 className="font-medium text-slate-800 dark:text-slate-200">
                           Display Name
                         </h3>
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
                           {userProfile?.displayName ||
                             user?.displayName ||
                             "Not set"}
@@ -232,12 +232,12 @@ const SettingsPage = () => {
                     </div>
 
                     {/* Email Address */}
-                    <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-background rounded-lg">
                       <div>
-                        <h3 className="font-medium text-slate-800">
+                        <h3 className="font-medium text-slate-800 dark:text-slate-200">
                           Email Address
                         </h3>
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
                           {userProfile?.email}
                         </p>
                       </div>
@@ -256,10 +256,12 @@ const SettingsPage = () => {
                         </Button>
                       )}
                     </div>
-                    <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-background rounded-lg">
                       <div>
-                        <h3 className="font-medium text-slate-800">Password</h3>
-                        <p className="text-sm text-slate-600">
+                        <h3 className="font-medium text-slate-800 dark:text-slate-200">
+                          Password
+                        </h3>
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
                           {isOAuthUser
                             ? `Managed by ${getProviderLabel(authProvider)}`
                             : "••••••••"}
@@ -279,15 +281,15 @@ const SettingsPage = () => {
                 </div>
 
                 {/* Danger Zone */}
-                <div className="pt-8 border-t border-red-200">
-                  <div className="bg-red-50/50 p-4 rounded-lg">
+                <div className="pt-8 border-t border-red-200 dark:border-red-800">
+                  <div className="bg-red-50/50 dark:bg-red-950/30 p-4 rounded-lg border border-red-200/50 dark:border-red-800/50">
                     <div className="flex items-start">
-                      <ExclamationTriangleIcon className="w-6 h-6 text-red-500 mr-3 flex-shrink-0" />
+                      <ExclamationTriangleIcon className="w-6 h-6 text-red-500 dark:text-red-400 mr-3 flex-shrink-0" />
                       <div>
-                        <h3 className="text-lg font-semibold text-red-800">
+                        <h3 className="text-lg font-semibold text-red-800 dark:text-red-200">
                           Delete Account
                         </h3>
-                        <p className="text-sm text-red-700 mt-1">
+                        <p className="text-sm text-red-700 dark:text-red-300 mt-1">
                           Permanently delete your account. This action is not
                           reversible.
                         </p>
@@ -303,7 +305,7 @@ const SettingsPage = () => {
                     </div>
 
                     {showDeleteSection && (
-                      <div className="mt-4 pt-4 border-t border-red-200 space-y-4">
+                      <div className="mt-4 pt-4 border-t border-red-200 dark:border-red-800 space-y-4">
                         {deleteError && (
                           <Alert variant="destructive">
                             <AlertDescription>{deleteError}</AlertDescription>
@@ -312,7 +314,7 @@ const SettingsPage = () => {
 
                         {deleteStep === 1 && (
                           <>
-                            <p className="text-sm text-red-900 font-medium">
+                            <p className="text-sm text-red-900 dark:text-red-200 font-medium">
                               Are you sure? This will delete all your data.
                             </p>
                             <div className="flex gap-2">
@@ -332,7 +334,7 @@ const SettingsPage = () => {
                           <div>
                             <Label
                               htmlFor="confirmation"
-                              className="text-red-900"
+                              className="text-red-900 dark:text-red-200"
                             >
                               Type "{requiredConfirmationText}" to confirm
                             </Label>
@@ -375,7 +377,7 @@ const SettingsPage = () => {
                                 />
                               </>
                             ) : (
-                              <p className="text-sm p-3 bg-blue-100 text-blue-800 rounded-lg">
+                              <p className="text-sm p-3 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-lg border border-blue-200 dark:border-blue-700">
                                 You will be prompted to re-authenticate with{" "}
                                 {getProviderLabel(authProvider)} to finalize the
                                 deletion.
@@ -403,7 +405,7 @@ const SettingsPage = () => {
             {/* Change Password Modal/Form */}
             {showChangePassword && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                   <div className="p-6">
                     <ChangePasswordForm
                       onSuccess={() => {
@@ -421,7 +423,7 @@ const SettingsPage = () => {
             {/* Change Display Name Modal/Form */}
             {showChangeDisplayName && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                   <div className="p-6">
                     <ChangeDisplayNameForm
                       currentDisplayName={
@@ -443,21 +445,21 @@ const SettingsPage = () => {
             {activeTab === "security" && <SecuritySettings />}
 
             {activeTab === "privacy" && (
-              <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-xl font-semibold text-slate-900">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
                   Privacy & Safety
                 </h2>
-                <p className="mt-1 text-sm text-slate-600">
+                <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                   Control who can see your activity and binders.
                 </p>
 
-                <div className="mt-6 pt-6 border-t border-slate-200 space-y-6">
+                <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700 space-y-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-medium text-slate-800">
+                      <h3 className="font-medium text-slate-800 dark:text-slate-200">
                         Profile Visibility
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">
                         Decide if your profile is public or private.
                       </p>
                     </div>
@@ -467,10 +469,10 @@ const SettingsPage = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-medium text-slate-800">
+                      <h3 className="font-medium text-slate-800 dark:text-slate-200">
                         Binder Visibility
                       </h3>
-                      <p className="text-sm text-slate-600">
+                      <p className="text-sm text-slate-600 dark:text-slate-400">
                         Set default visibility for new binders you create.
                       </p>
                     </div>
@@ -479,8 +481,8 @@ const SettingsPage = () => {
                     </Button>
                   </div>
 
-                  <div className="mt-6 p-4 bg-slate-50 rounded-lg">
-                    <p className="text-sm text-slate-500 italic text-center">
+                  <div className="mt-6 p-4 bg-background rounded-lg">
+                    <p className="text-sm text-slate-500 dark:text-slate-400 italic text-center">
                       Privacy settings will be available in a future update
                     </p>
                   </div>

@@ -69,7 +69,7 @@ const UserAvatar = ({
       style={{ cursor: onClick ? "pointer" : "default" }}
     >
       <div
-        className={`${sizeClasses[size]} rounded-full overflow-hidden ${borderClasses[size]} border-gray-200 bg-slate-100`}
+        className={`${sizeClasses[size]} rounded-full overflow-hidden ${borderClasses[size]} border-border bg-background`}
       >
         {user?.photoURL ? (
           <img

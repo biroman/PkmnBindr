@@ -101,11 +101,11 @@ const BinderNavigation = ({
         className={`fixed bottom-0 left-0 right-0 z-30 ${className}`}
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className="relative bg-gray-50/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3">
+        <div className="relative bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 px-4 py-3">
           {/* Progress Bar */}
           {navigationProgress > 0 &&
             (currentEdgeZone === "left" || currentEdgeZone === "right") && (
-              <div className="absolute top-0 left-0 h-1 bg-blue-100 w-full">
+              <div className="absolute top-0 left-0 h-1 bg-blue-100 dark:bg-blue-900 w-full">
                 <div
                   className="h-full bg-blue-500 rounded-full"
                   style={{ width: `${navigationProgress}%` }}
@@ -119,28 +119,28 @@ const BinderNavigation = ({
               ref={setPrevPageRef}
               className={`flex-1 flex items-center justify-center h-full rounded-lg border-2 border-dashed transition-all duration-200 ${
                 isOverPrevPage && canGoPrev
-                  ? "border-blue-500 bg-blue-100 scale-105"
+                  ? "border-blue-500 bg-blue-100 dark:bg-blue-950 scale-105"
                   : canGoPrev
-                  ? "border-blue-300 bg-blue-50"
-                  : "border-gray-300 bg-gray-50 opacity-50"
+                  ? "border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-950"
+                  : "border-border bg-secondary opacity-50"
               }`}
             >
               <ChevronLeft
                 className={`w-5 h-5 mr-1 transition-colors ${
                   isOverPrevPage && canGoPrev
-                    ? "text-blue-600"
+                    ? "text-blue-600 dark:text-blue-400"
                     : canGoPrev
-                    ? "text-blue-400"
-                    : "text-gray-400"
+                    ? "text-blue-400 dark:text-blue-500"
+                    : "text-secondary"
                 }`}
               />
               <span
                 className={`text-xs font-medium transition-colors ${
                   isOverPrevPage && canGoPrev
-                    ? "text-blue-700"
+                    ? "text-blue-700 dark:text-blue-300"
                     : canGoPrev
-                    ? "text-blue-500"
-                    : "text-gray-400"
+                    ? "text-blue-500 dark:text-blue-400"
+                    : "text-secondary"
                 }`}
               >
                 {isOverPrevPage && canGoPrev
@@ -154,18 +154,22 @@ const BinderNavigation = ({
               ref={setDeleteRef}
               className={`flex-1 flex items-center justify-center h-full rounded-lg border-2 border-dashed transition-all duration-200 ${
                 isOverDelete
-                  ? "border-red-500 bg-red-100 scale-105"
-                  : "border-red-300 bg-red-50"
+                  ? "border-red-500 bg-red-100 dark:bg-red-950 scale-105"
+                  : "border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-950"
               }`}
             >
               <TrashIcon
                 className={`w-5 h-5 mr-1 transition-colors ${
-                  isOverDelete ? "text-red-600" : "text-red-400"
+                  isOverDelete
+                    ? "text-red-600 dark:text-red-400"
+                    : "text-red-400 dark:text-red-500"
                 }`}
               />
               <span
                 className={`text-xs font-medium transition-colors ${
-                  isOverDelete ? "text-red-700" : "text-red-500"
+                  isOverDelete
+                    ? "text-red-700 dark:text-red-300"
+                    : "text-red-500 dark:text-red-400"
                 }`}
               >
                 {isOverDelete ? "Release to Delete" : "Delete"}
@@ -177,19 +181,19 @@ const BinderNavigation = ({
               ref={setNextPageRef}
               className={`flex-1 flex items-center justify-center h-full rounded-lg border-2 border-dashed transition-all duration-200 ${
                 isOverNextPage && canGoNext
-                  ? "border-blue-500 bg-blue-100 scale-105"
+                  ? "border-blue-500 bg-blue-100 dark:bg-blue-950 scale-105"
                   : canGoNext
-                  ? "border-blue-300 bg-blue-50"
-                  : "border-gray-300 bg-gray-50 opacity-50"
+                  ? "border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-950"
+                  : "border-border bg-secondary opacity-50"
               }`}
             >
               <span
                 className={`text-xs font-medium mr-1 transition-colors ${
                   isOverNextPage && canGoNext
-                    ? "text-blue-700"
+                    ? "text-blue-700 dark:text-blue-300"
                     : canGoNext
-                    ? "text-blue-500"
-                    : "text-gray-400"
+                    ? "text-blue-500 dark:text-blue-400"
+                    : "text-secondary"
                 }`}
               >
                 {isOverNextPage && canGoNext ? "Release to Go Forward" : "Next"}
@@ -197,10 +201,10 @@ const BinderNavigation = ({
               <ChevronRight
                 className={`w-5 h-5 transition-colors ${
                   isOverNextPage && canGoNext
-                    ? "text-blue-600"
+                    ? "text-blue-600 dark:text-blue-400"
                     : canGoNext
-                    ? "text-blue-400"
-                    : "text-gray-400"
+                    ? "text-blue-400 dark:text-blue-500"
+                    : "text-secondary"
                 }`}
               />
             </div>
@@ -246,7 +250,7 @@ const BinderNavigation = ({
         className={`fixed bottom-0 left-0 right-0 z-30 ${className}`}
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className="bg-white/95 backdrop-blur-sm border-t border-gray-200 px-3 py-2">
+        <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 px-3 py-2">
           <div
             className={`flex items-center ${
               isPublicView
@@ -263,12 +267,12 @@ const BinderNavigation = ({
               <button
                 onClick={goToPrevPage}
                 disabled={!canGoPrev}
-                className="flex items-center justify-center w-16 h-12 bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+                className="flex items-center justify-center w-16 h-12 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                 title="Previous Page"
               >
-                <ChevronLeft className="w-6 h-6 text-gray-700 hover:text-blue-600 transition-colors" />
+                <ChevronLeft className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors" />
               </button>
-              <div className="text-base font-bold text-gray-800 flex-1 text-center px-4">
+              <div className="text-base font-bold text-gray-900 dark:text-gray-100 flex-1 text-center px-4">
                 {getCurrentPageText()}
               </div>
               <button
@@ -276,15 +280,15 @@ const BinderNavigation = ({
                 disabled={!showAddPage && !canGoNext}
                 className={`flex items-center justify-center w-16 h-12 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-40 disabled:cursor-not-allowed ${
                   showAddPage && !canGoNext
-                    ? "border-2 border-blue-500 text-blue-600 hover:bg-blue-50 bg-white"
-                    : "bg-white border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-700"
+                    ? "border-2 border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 bg-white dark:bg-gray-800"
+                    : "bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950 text-gray-700 dark:text-gray-300"
                 }`}
                 title={showAddPage && !canGoNext ? "Add Page" : "Next Page"}
               >
                 {showAddPage && !canGoNext ? (
                   <DocumentPlusIcon className="w-6 h-6 transition-colors" />
                 ) : (
-                  <ChevronRight className="w-6 h-6 hover:text-blue-600 transition-colors" />
+                  <ChevronRight className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors" />
                 )}
               </button>
             </div>
@@ -308,59 +312,59 @@ const BinderNavigation = ({
                     <div className="relative" ref={moreMenuRef}>
                       <button
                         onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
-                        className="flex items-center justify-center w-11 h-11 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                        className="flex items-center justify-center w-11 h-11 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors"
                         title="More Actions"
                       >
-                        <EllipsisVerticalIcon className="w-5 h-5 text-gray-600" />
+                        <EllipsisVerticalIcon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                       </button>
 
                       {isMoreMenuOpen && (
                         <div
-                          className="absolute bottom-full right-0 mb-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 z-40 overflow-hidden"
+                          className="absolute bottom-full right-0 mb-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-40 overflow-hidden"
                           onClick={() => setIsMoreMenuOpen(false)}
                         >
                           <div className="py-1">
                             {toolbarActions.onPageOverview && (
                               <button
                                 onClick={toolbarActions.onPageOverview}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                               >
-                                <Squares2X2Icon className="w-5 h-5 text-gray-500" />
+                                <Squares2X2Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                                 <span>Page Overview</span>
                               </button>
                             )}
                             {toolbarActions.onShare && (
                               <button
                                 onClick={toolbarActions.onShare}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                               >
-                                <ShareIcon className="w-5 h-5 text-gray-500" />
+                                <ShareIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                                 <span>Share Binder</span>
                               </button>
                             )}
                             {toolbarActions.onColorPicker && (
                               <button
                                 onClick={toolbarActions.onColorPicker}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                               >
-                                <SwatchIcon className="w-5 h-5 text-gray-500" />
+                                <SwatchIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                                 <span>Customize</span>
                               </button>
                             )}
                             {toolbarActions.onMobileSettings && (
                               <button
                                 onClick={toolbarActions.onMobileSettings}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                               >
-                                <Cog6ToothIcon className="w-5 h-5 text-gray-500" />
+                                <Cog6ToothIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                                 <span>Settings</span>
                               </button>
                             )}
-                            <div className="border-t border-gray-100 my-1"></div>
+                            <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
                             {toolbarActions.onClearBinder && (
                               <button
                                 onClick={toolbarActions.onClearBinder}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950"
                               >
                                 <TrashIcon className="w-5 h-5" />
                                 <span>Clear Binder</span>
@@ -390,11 +394,11 @@ const BinderNavigation = ({
         <button
           onClick={goToPrevPage}
           disabled={!canGoPrev}
-          className="w-14 h-14 bg-white/95 backdrop-blur-sm rounded-full shadow-xl hover:shadow-2xl border-2 border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-14 h-14 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-full shadow-xl hover:shadow-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center"
           title="Previous Page"
           aria-label="Go to previous page"
         >
-          <ChevronLeft className="w-7 h-7 text-gray-700 hover:text-blue-600 transition-colors" />
+          <ChevronLeft className="w-7 h-7 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors" />
         </button>
       </div>
 
@@ -409,7 +413,7 @@ const BinderNavigation = ({
           className={`w-14 h-14 backdrop-blur-sm rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center justify-center ${
             showAddPage && !canGoNext
               ? "bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-400 hover:border-blue-500"
-              : "bg-white/95 border-2 border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
+              : "bg-white/95 dark:bg-gray-800/95 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 text-gray-700 dark:text-gray-300 disabled:opacity-40 disabled:cursor-not-allowed"
           }`}
           title={showAddPage && !canGoNext ? "Add New Page" : "Next Page"}
           aria-label={
@@ -419,7 +423,7 @@ const BinderNavigation = ({
           {showAddPage && !canGoNext ? (
             <PlusIcon className="w-7 h-7" />
           ) : (
-            <ChevronRight className="w-7 h-7 hover:text-blue-600 transition-colors" />
+            <ChevronRight className="w-7 h-7 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors" />
           )}
         </button>
       </div>

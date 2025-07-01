@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
+import { getThemeAwareBinderColor } from "../../utils/themeUtils";
 import BinderCore from "./BinderCore";
 import useBinderDimensions from "../../hooks/useBinderDimensions";
 
@@ -6,6 +8,7 @@ import useBinderDimensions from "../../hooks/useBinderDimensions";
 const BinderCoreDemo = ({ binder, getCardsForPage, currentPageConfig }) => {
   const [mode, setMode] = useState("edit");
   const [activeCard, setActiveCard] = useState(null);
+  const { theme } = useTheme();
 
   const dimensions = useBinderDimensions(binder?.settings?.gridSize || "3x3");
 
@@ -13,7 +16,7 @@ const BinderCoreDemo = ({ binder, getCardsForPage, currentPageConfig }) => {
     return (
       <div className="p-8 text-center">
         <h2 className="text-xl font-bold mb-4">BinderCore Demo</h2>
-        <p className="text-gray-600">No binder selected</p>
+        <p className="text-secondary">No binder selected</p>
       </div>
     );
   }
@@ -86,7 +89,10 @@ const BinderCoreDemo = ({ binder, getCardsForPage, currentPageConfig }) => {
           currentPageConfig={currentPageConfig}
           dimensions={dimensions}
           mode={mode}
-          backgroundColor={binder.settings?.binderColor || "#ffffff"}
+          backgroundColor={getThemeAwareBinderColor(
+            binder.settings?.binderColor,
+            theme
+          )}
           getCardsForPage={getCardsForPage}
           onCardInteraction={handleCardInteraction}
           dragHandlers={dragHandlers}

@@ -88,17 +88,17 @@ const EmailVerificationPage = () => {
   }, [searchParams, navigate]);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-white dark:bg-gray-800 py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <div className="text-center">
             {status === "verifying" && (
               <>
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <h2 className="text-xl font-bold text-gray-900 mb-2">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
                   Verifying Email
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   Please wait while we verify your email address...
                 </p>
               </>
@@ -115,7 +115,7 @@ const EmailVerificationPage = () => {
                 <Alert variant="success" className="mb-4">
                   <AlertDescription>{message}</AlertDescription>
                 </Alert>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
                   Redirecting to dashboard in 5 seconds...
                 </p>
               </>

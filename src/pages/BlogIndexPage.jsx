@@ -113,7 +113,7 @@ const BlogIndexPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,21 +133,21 @@ const BlogIndexPage = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+        <nav className="flex items-center space-x-2 text-sm text-text-secondary dark:text-gray-400 mb-8">
           <Link to="/" className="hover:text-blue-600 transition-colors">
             Home
           </Link>
           <ChevronRightIcon className="w-4 h-4" />
-          <span className="text-gray-900">Blog</span>
+          <span className="text-text-primary dark:text-gray-100">Blog</span>
         </nav>
 
         {/* Featured Post */}
         {blogPosts.find((post) => post.featured) && (
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-text-primary dark:text-gray-100 mb-6">
               Featured Article
             </h2>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+            <div className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-border dark:border-gray-700">
               <div className="md:flex">
                 <div className="md:w-1/3 relative">
                   <img
@@ -164,7 +164,7 @@ const BlogIndexPage = () => {
                   </div>
                 </div>
                 <div className="md:w-2/3 p-8">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                  <div className="flex items-center space-x-4 text-sm text-text-secondary dark:text-gray-400 mb-4">
                     <div className="flex items-center space-x-2">
                       <CalendarIcon className="w-4 h-4" />
                       <span>
@@ -177,14 +177,14 @@ const BlogIndexPage = () => {
                         {blogPosts.find((post) => post.featured).readTime}
                       </span>
                     </div>
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium">
                       {blogPosts.find((post) => post.featured).category}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-bold text-text-primary dark:text-gray-100 mb-4">
                     {blogPosts.find((post) => post.featured).title}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-text-secondary dark:text-gray-300 mb-6 leading-relaxed">
                     {blogPosts.find((post) => post.featured).excerpt}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -193,7 +193,7 @@ const BlogIndexPage = () => {
                       .tags.map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium"
+                          className="bg-secondary dark:bg-gray-700 text-text-primary dark:text-gray-100 px-3 py-1 rounded-full text-xs font-medium"
                         >
                           {tag}
                         </span>
@@ -214,14 +214,14 @@ const BlogIndexPage = () => {
 
         {/* All Articles */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             All Articles
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+                className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-border dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
               >
                 {post.id === 6 ? (
                   <div className="h-48 relative">
@@ -338,7 +338,7 @@ const BlogIndexPage = () => {
                   </div>
                 )}
                 <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
                     <div className="flex items-center space-x-1">
                       <CalendarIcon className="w-4 h-4" />
                       <span>{post.date}</span>
@@ -348,23 +348,23 @@ const BlogIndexPage = () => {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   <div className="flex flex-wrap gap-1 mb-4">
                     {post.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs"
+                        className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded-full text-xs"
                       >
                         {tag}
                       </span>
                     ))}
                     {post.tags.length > 2 && (
-                      <span className="text-gray-400 text-xs px-2 py-1">
+                      <span className="text-gray-400 dark:text-gray-500 text-xs px-2 py-1">
                         +{post.tags.length - 2} more
                       </span>
                     )}

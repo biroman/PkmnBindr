@@ -132,9 +132,9 @@ const ZoomableImage = ({
         {/* Loading skeleton */}
         {!isLoaded && !isError && (
           <div
-            className={`${className} bg-gray-200 animate-pulse flex items-center justify-center`}
+            className={`${className} bg-background animate-pulse flex items-center justify-center`}
           >
-            <div className="text-gray-400">
+            <div className="text-text-secondary">
               <Image className="w-8 h-8" />
             </div>
           </div>
@@ -143,9 +143,9 @@ const ZoomableImage = ({
         {/* Error state */}
         {isError && (
           <div
-            className={`${className} bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300`}
+            className={`${className} bg-card-background flex items-center justify-center border-2 border-dashed border-border`}
           >
-            <div className="text-gray-500 text-center p-4">
+            <div className="text-text-secondary text-center p-4">
               <AlertCircle className="w-8 h-8 mx-auto mb-2" />
               <p className="text-sm font-medium">Failed to load image</p>
               <p className="text-xs text-gray-400 mt-1">
@@ -176,7 +176,7 @@ const ZoomableImage = ({
         />
 
         {caption && (
-          <p className="text-sm text-gray-600 mt-2 font-medium">{caption}</p>
+          <p className="text-sm text-text-secondary mt-2 font-medium">{caption}</p>
         )}
       </div>
     </>

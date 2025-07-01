@@ -249,11 +249,11 @@ const BinderCard = ({
   // Don't render until we know the final header color (prevents flash)
   if (!isCustomizationReady) {
     return (
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden animate-pulse">
-        <div className="h-16 bg-gray-200"></div>
+      <div className="bg-card-background dark:bg-gray-800 rounded-xl shadow-sm border border-border dark:border-gray-700 overflow-hidden animate-pulse">
+        <div className="h-16 bg-secondary dark:bg-gray-700"></div>
         <div className="p-4 space-y-2">
-          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-          <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+          <div className="h-4 bg-secondary dark:bg-gray-700 rounded w-3/4"></div>
+          <div className="h-3 bg-secondary dark:bg-gray-700 rounded w-1/2"></div>
         </div>
       </div>
     );
@@ -263,11 +263,13 @@ const BinderCard = ({
     <div className="relative">
       {/* Main Card */}
       <div
-        className={`bg-white rounded-xl shadow-sm border transition-all hover:shadow-lg hover:-translate-y-0.5 border-gray-200 hover:border-gray-300 overflow-hidden cursor-pointer ${
-          isLocalOnly ? "border-orange-200 bg-orange-50" : ""
+        className={`bg-card-background dark:bg-gray-800 rounded-xl shadow-sm border transition-all hover:shadow-lg hover:-translate-y-0.5 border-border dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 overflow-hidden cursor-pointer ${
+          isLocalOnly
+            ? "border-orange-200 dark:border-orange-700 bg-orange-50 dark:bg-orange-950"
+            : ""
         } ${
           isGuestBinderInaccessible
-            ? "opacity-60 border-gray-300 bg-gray-50"
+            ? "opacity-60 border-border dark:border-gray-700 bg-secondary dark:bg-gray-700"
             : ""
         }`}
         onClick={handleCardClick}
@@ -282,7 +284,7 @@ const BinderCard = ({
           }}
         >
           {/* Header overlay for better text readability */}
-          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-10 dark:bg-opacity-20"></div>
 
           {/* Header content */}
           <div className="absolute inset-0 px-3 py-2 flex items-center justify-between">
@@ -301,29 +303,29 @@ const BinderCard = ({
                 <div className="dropdown-container relative">
                   <button
                     onClick={handleDropdownClick}
-                    className="p-1.5 bg-white hover:bg-gray-100 rounded-full shadow-sm border border-white/20 transition-all"
+                    className="p-1.5 bg-card-background dark:bg-gray-800 hover:bg-accent dark:hover:bg-gray-700 rounded-full shadow-sm border border-border dark:border-gray-600 transition-all"
                     title="More options"
                   >
-                    <EllipsisVerticalIcon className="w-4 h-4 text-gray-700" />
+                    <EllipsisVerticalIcon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
                   </button>
 
                   {/* Dropdown Menu */}
                   {showDropdown && (
-                    <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-10">
+                    <div className="absolute right-0 top-full mt-2 w-48 bg-card-background dark:bg-gray-800 rounded-lg shadow-lg border border-border dark:border-gray-600 py-1 z-10">
                       {/* Public/Private Toggle */}
                       {showPublicToggle && (
                         <button
                           onClick={handleTogglePublicClick}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                          className="w-full px-4 py-2 text-left text-sm hover:bg-accent dark:hover:bg-gray-700 flex items-center gap-2 text-gray-700 dark:text-gray-300"
                         >
                           {binder.permissions?.public ? (
                             <>
-                              <LockClosedIcon className="w-4 h-4 text-gray-500" />
+                              <LockClosedIcon className="w-4 h-4 text-secondary dark:text-gray-400" />
                               Make Private
                             </>
                           ) : (
                             <>
-                              <GlobeAltIcon className="w-4 h-4 text-gray-500" />
+                              <GlobeAltIcon className="w-4 h-4 text-secondary dark:text-gray-400" />
                               Make Public
                             </>
                           )}
@@ -333,19 +335,19 @@ const BinderCard = ({
                       {/* Customize Button */}
                       <button
                         onClick={handleCustomizeClick}
-                        className="w-full px-4 py-2 text-left text-sm hover:bg-gray-50 flex items-center gap-2"
+                        className="w-full px-4 py-2 text-left text-sm hover:bg-accent dark:hover:bg-gray-700 flex items-center gap-2 text-gray-700 dark:text-gray-300"
                       >
-                        <PencilIcon className="w-4 h-4 text-gray-500" />
+                        <PencilIcon className="w-4 h-4 text-secondary dark:text-gray-400" />
                         Customize
                       </button>
 
                       {/* Delete Button */}
                       {showDeleteButton && (
                         <>
-                          <div className="border-t border-gray-100 my-1"></div>
+                          <div className="border-t border-border dark:border-gray-600 my-1"></div>
                           <button
                             onClick={handleDeleteClick}
-                            className="w-full px-4 py-2 text-left text-sm hover:bg-red-50 text-red-600 flex items-center gap-2"
+                            className="w-full px-4 py-2 text-left text-sm hover:bg-red-50 dark:hover:bg-red-950 text-red-600 dark:text-red-400 flex items-center gap-2"
                           >
                             <TrashIcon className="w-4 h-4" />
                             Delete Binder
@@ -364,7 +366,9 @@ const BinderCard = ({
           <div className="mb-3">
             <h3
               className={`text-base font-semibold truncate mb-1 ${
-                isGuestBinderInaccessible ? "text-gray-500" : "text-gray-900"
+                isGuestBinderInaccessible
+                  ? "text-gray-500 dark:text-gray-400"
+                  : "text-gray-900 dark:text-gray-100"
               }`}
             >
               {binder.metadata?.name || "Unnamed Binder"}
@@ -374,7 +378,9 @@ const BinderCard = ({
             {binder.metadata?.description && (
               <p
                 className={`text-sm line-clamp-1 mb-2 ${
-                  isGuestBinderInaccessible ? "text-gray-400" : "text-gray-600"
+                  isGuestBinderInaccessible
+                    ? "text-gray-400 dark:text-gray-500"
+                    : "text-gray-600 dark:text-gray-300"
                 }`}
               >
                 {binder.metadata.description}
@@ -385,11 +391,13 @@ const BinderCard = ({
             {showCreatedBy && ownerData && (
               <p
                 className={`text-xs mb-2 ${
-                  isGuestBinderInaccessible ? "text-gray-400" : "text-gray-500"
+                  isGuestBinderInaccessible
+                    ? "text-gray-400 dark:text-gray-500"
+                    : "text-gray-500 dark:text-gray-400"
                 }`}
               >
                 Created by{" "}
-                <span className="font-medium text-gray-700">
+                <span className="font-medium text-gray-700 dark:text-gray-300">
                   {ownerData.displayName || "Unknown User"}
                 </span>
               </p>
@@ -402,8 +410,8 @@ const BinderCard = ({
                 <span
                   className={`text-xs ${
                     isGuestBinderInaccessible
-                      ? "text-gray-400"
-                      : "text-gray-600"
+                      ? "text-gray-400 dark:text-gray-500"
+                      : "text-gray-600 dark:text-gray-300"
                   }`}
                 >
                   {getStatusText(status)}
@@ -416,13 +424,17 @@ const BinderCard = ({
               <div className="flex items-center gap-2">
                 {binder.permissions?.public ? (
                   <>
-                    <GlobeAltIcon className="w-3 h-3 text-green-600" />
-                    <span className="text-xs text-green-600">Public</span>
+                    <GlobeAltIcon className="w-3 h-3 text-green-600 dark:text-green-400" />
+                    <span className="text-xs text-green-600 dark:text-green-400">
+                      Public
+                    </span>
                   </>
                 ) : (
                   <>
-                    <LockClosedIcon className="w-3 h-3 text-gray-500" />
-                    <span className="text-xs text-gray-500">Private</span>
+                    <LockClosedIcon className="w-3 h-3 text-gray-500 dark:text-gray-400" />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                      Private
+                    </span>
                   </>
                 )}
               </div>
@@ -431,14 +443,14 @@ const BinderCard = ({
 
           {/* Local-only claim option */}
           {showClaimButton && isLocalOnly && user && (
-            <div className="mb-3 p-2 bg-orange-100 border border-orange-200 rounded-lg">
-              <p className="text-xs text-orange-700 mb-2">
+            <div className="mb-3 p-2 bg-orange-100 dark:bg-orange-950 border border-orange-200 dark:border-orange-800 rounded-lg">
+              <p className="text-xs text-orange-700 dark:text-orange-300 mb-2">
                 This binder belongs to another user. Claim it to save to your
                 account.
               </p>
               <button
                 onClick={handleClaimClick}
-                className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded-lg font-medium transition-colors"
+                className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-600 text-white text-sm rounded-lg font-medium transition-colors"
               >
                 <CloudIcon className="w-4 h-4" />
                 Claim Binder
@@ -452,7 +464,7 @@ const BinderCard = ({
               {isGuestBinder && user && showClaimButton ? (
                 <button
                   onClick={handleClaimClick}
-                  className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors text-sm"
+                  className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg font-medium transition-colors text-sm"
                 >
                   <CloudIcon className="w-4 h-4" />
                   Claim to Access
@@ -463,8 +475,8 @@ const BinderCard = ({
                   disabled={isGuestBinderInaccessible}
                   className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg font-medium transition-colors text-sm ${
                     isGuestBinderInaccessible
-                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
+                      ? "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white"
                   }`}
                 >
                   <EyeIcon className="w-4 h-4" />
@@ -475,7 +487,7 @@ const BinderCard = ({
           )}
 
           {/* Footer */}
-          <div className="mt-4 pt-4 border-t border-gray-100">
+          <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
             {/* Interaction stats disabled */}
             {/* {binder.permissions?.public &&
               user &&
@@ -509,7 +521,9 @@ const BinderCard = ({
 
             <div
               className={`flex items-center justify-between text-xs ${
-                isGuestBinderInaccessible ? "text-gray-400" : "text-gray-500"
+                isGuestBinderInaccessible
+                  ? "text-gray-400 dark:text-gray-500"
+                  : "text-gray-500 dark:text-gray-400"
               }`}
             >
               <span>

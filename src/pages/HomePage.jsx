@@ -30,13 +30,13 @@ const HomePage = () => {
 
   if (user) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-text-primary mb-6">
               Welcome back to PkmnBindr
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-text-secondary mb-8">
               Welcome back,{" "}
               <span className="font-semibold">
                 {user.displayName || user.email}
@@ -110,25 +110,25 @@ const HomePage = () => {
         </div>
       )}
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-background">
         {/* Full-width container for hero */}
         <div className="w-full">
           {/* SEO-Optimized Hero Section with Image */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div className="text-left lg:text-left">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-5xl lg:text-6xl font-bold text-text-primary mb-6">
                   Free Pokemon Card Binder Organizer{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     PkmnBindr
                   </span>
                 </h1>
-                <p className="text-xl text-gray-600 mb-4">
+                <p className="text-xl text-text-secondary mb-4">
                   The ultimate digital Pokemon binder generator for organizing
                   your Pokemon TCG collection. Create your own binders, track
                   cards by set, and sync across devices.
                 </p>
-                <p className="text-lg text-gray-500 mb-8">
+                <p className="text-lg text-text-secondary mb-8">
                   Join thousands of Pokemon collectors using the easiest way to
                   manage their card collection online. Choose how you want to
                   get started below.
@@ -151,7 +151,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="rounded-sm overflow-hidden shadow-2xl border border-gray-200 cursor-zoom-in hover:shadow-3xl transition-shadow duration-300 group">
+                <div className="rounded-sm overflow-hidden shadow-2xl border border-border cursor-zoom-in hover:shadow-3xl transition-shadow duration-300 group">
                   <img
                     src="/frontpage-images/destined-rivals-binder.png"
                     alt="Pokemon binder showing organized card collection with Destined Rivals cards"
@@ -176,7 +176,7 @@ const HomePage = () => {
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-4">
+                <h2 className="text-4xl font-bold mb-4 text-white">
                   See PkmnBindr in Action
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -324,10 +324,10 @@ const HomePage = () => {
           {/* Pricing Cards Section */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 Choose Your Experience
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                 Start organizing immediately as a guest, or create an account
                 for the full experience with cloud sync
               </p>
@@ -335,21 +335,23 @@ const HomePage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               {/* Guest Mode Card */}
-              <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative bg-card-background rounded-2xl shadow-xl border border-border p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <div className="text-center mb-8 mt-4">
                   <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <UserIcon className="w-8 h-8 text-gray-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
                     Guest Mode
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
                     Jump right in and start organizing
                   </p>
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
+                  <div className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
                     Free
                   </div>
-                  <p className="text-sm text-gray-500">No account needed</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    No account needed
+                  </p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -367,8 +369,8 @@ const HomePage = () => {
                         <span
                           className={`${
                             isStorageLimitation
-                              ? "text-amber-700"
-                              : "text-gray-700"
+                              ? "text-amber-700 dark:text-amber-300"
+                              : "text-gray-700 dark:text-gray-300"
                           }`}
                         >
                           {feature}
@@ -464,13 +466,13 @@ const HomePage = () => {
           </div>
 
           {/* How It Works Section - Visual */}
-          <div className="bg-gray-50 py-16">
+          <div className="bg-background py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   How to Create Your Pokemon Card Binder
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                   Get started in just three simple steps and have your digital
                   collection organized in minutes
                 </p>
@@ -483,11 +485,11 @@ const HomePage = () => {
                       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                         1
                       </div>
-                      <h3 className="text-2xl font-semibold text-gray-900">
+                      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                         Create Your First Digital Binder
                       </h3>
                     </div>
-                    <p className="text-lg text-gray-600 mb-6">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                       Start by creating a new digital Pokemon binder. Name it,
                       customize the layout, and choose your preferred grid size
                       for optimal card organization. Your binder will have a
@@ -538,11 +540,11 @@ const HomePage = () => {
                       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                         2
                       </div>
-                      <h3 className="text-2xl font-semibold text-gray-900">
+                      <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                         Add Pokemon Cards from Any Set
                       </h3>
                     </div>
-                    <p className="text-lg text-gray-600 mb-6">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                       Search our complete Pokemon TCG database and add cards to
                       your binder instantly. Browse by set, search by name,
                       filter by type or rarity, or add entire sets at once.
@@ -564,42 +566,42 @@ const HomePage = () => {
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                       3
                     </div>
-                    <h3 className="text-2xl font-semibold text-gray-900">
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
                       Track & Organize Your Collection
                     </h3>
                   </div>
-                  <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                  <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
                     View your collection progress, organize by sets, rarity, or
                     custom categories. Your data syncs across all devices
                     automatically, so you can access your collection anywhere,
                     anytime.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    <div className="bg-white rounded-lg p-6 shadow-md">
+                    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
                       <div className="text-blue-600 text-2xl mb-2">📊</div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                         Collection Stats
                       </h4>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">
                         Track completion percentage, total cards, and set
                         progress
                       </p>
                     </div>
-                    <div className="bg-white rounded-lg p-6 shadow-md">
+                    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
                       <div className="text-green-600 text-2xl mb-2">☁️</div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                         Cloud Sync
                       </h4>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">
                         Access your binders from any device, anywhere
                       </p>
                     </div>
-                    <div className="bg-white rounded-lg p-6 shadow-md">
+                    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
                       <div className="text-purple-600 text-2xl mb-2">🎨</div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                         Custom Layouts
                       </h4>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">
                         Personalize your binder appearance and organization
                       </p>
                     </div>
@@ -631,12 +633,12 @@ const HomePage = () => {
           </div>
 
           {/* SEO-Enhanced Feature Highlights */}
-          <div className="bg-white py-16">
+          <div className="bg-white dark:bg-gray-800 py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-4">
                 Why Choose PkmnBindr?
               </h2>
-              <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
                 Built by an active Pokemon collector for the community. I
                 created this tool to organize my own collection and decided to
                 share it with fellow collectors. Expect exciting new features
@@ -648,10 +650,10 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <SparklesIcon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
                     Digital Pokemon Binders
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Create unlimited digital binders to organize your Pokemon
                     TCG collection. Modern, intuitive design that makes
                     organizing your collection a joy. No physical space
@@ -663,10 +665,10 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <ComputerDesktopIcon className="w-8 h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
                     Pokemon Card Search & Database
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Access complete Pokemon TCG database with every card ever
                     released. Search by set, rarity, type, or card name. Works
                     anywhere, online or offline.*
@@ -677,10 +679,10 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <GiftIcon className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
                     Cloud Sync & Free Forever
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Your Pokemon collection syncs across all devices
                     automatically. Every binder customization feature is
                     completely free for everyone, forever.
@@ -691,29 +693,29 @@ const HomePage = () => {
           </div>
 
           {/* FAQ Section for SEO */}
-          <div className="bg-gray-50 py-16">
+          <div className="bg-background py-16">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+              <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
                 Frequently Asked Questions
               </h2>
 
               <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="bg-card-background dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     Is PkmnBindr really free to use?
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Yes! PkmnBindr is completely free forever. Create digital
                     Pokemon binders, add thousands of cards, and sync across
                     devices at no cost.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="bg-card-background dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     How does the Pokemon card database work?
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     We use Pokemon TCG API to include every official Pokemon TCG
                     cards ever released*, from Base Set to the latest
                     expansions. Search by set, card name, type, or rarity to
@@ -721,21 +723,21 @@ const HomePage = () => {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="bg-card-background dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     Can I access my Pokemon binders on different devices?
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Absolutely! Your Pokemon collection syncs automatically
                     across all your devices with a free account.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="bg-card-background dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     How do I organize my Pokemon card collection digitally?
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     Create separate binders for different purposes - by Pokemon
                     set, by favorite Pokemon, by deck type, or any custom system
                     you prefer. Each binder can hold hundreds of cards with
@@ -743,11 +745,11 @@ const HomePage = () => {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <div className="bg-card-background dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     What makes PkmnBindr different from other virtual binders?
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     PkmnBindr focuses specifically on the visual binder
                     experience that Pokemon collectors love. Beautiful card
                     layouts and completely free access to all binder features.

@@ -117,7 +117,7 @@ const MessageItem = React.memo(
     if (!messageUserProfile) {
       return (
         <div className="flex justify-center mb-4">
-          <div className="animate-pulse bg-gray-200 w-8 h-8 rounded-full"></div>
+          <div className="animate-pulse bg-gray-200 dark:bg-gray-700 w-8 h-8 rounded-full"></div>
         </div>
       );
     }
@@ -152,7 +152,7 @@ const MessageItem = React.memo(
               </div>
 
               {/* Timestamp */}
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 {formatTimestamp(message.timestamp)}
               </p>
             </div>
@@ -188,7 +188,7 @@ const MessageItem = React.memo(
                   className={`text-xs font-semibold ${
                     isOwnerMessage
                       ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
-                      : "text-gray-600"
+                      : "text-gray-600 dark:text-gray-400"
                   }`}
                 >
                   {messageUserProfile?.displayName || "User"}
@@ -206,8 +206,8 @@ const MessageItem = React.memo(
                     ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-white border border-yellow-400 shadow-lg"
                     : "bg-blue-500 text-white"
                   : isOwnerMessage
-                  ? "bg-gradient-to-r from-yellow-50 to-yellow-100 text-yellow-900 border border-yellow-200 shadow-md"
-                  : "bg-gray-100 text-gray-900"
+                  ? "bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 text-yellow-900 dark:text-yellow-200 border border-yellow-200 dark:border-yellow-700 shadow-md"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               }`}
             >
               {isFromOwner && (
@@ -226,8 +226,8 @@ const MessageItem = React.memo(
                       ? "text-yellow-100"
                       : "text-blue-200"
                     : isOwnerMessage
-                    ? "text-yellow-600"
-                    : "text-gray-500"
+                    ? "text-yellow-600 dark:text-yellow-400"
+                    : "text-gray-500 dark:text-gray-400"
                 }`}
               >
                 {formatTimestamp(message.timestamp)}

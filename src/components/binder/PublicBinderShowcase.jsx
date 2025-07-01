@@ -64,25 +64,25 @@ const PublicBinderShowcase = () => {
       onClick={() => handleBinderClick(binder)}
       className={`group cursor-pointer transition-all duration-200 ${
         featured
-          ? "bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 hover:border-blue-300"
-          : "bg-white hover:bg-gray-50"
-      } border rounded-lg p-3 hover:shadow-md`}
+          ? "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border-blue-200 dark:border-blue-700 hover:border-blue-300 dark:hover:border-blue-600"
+          : "bg-card-background hover:bg-secondary"
+      } border border-border rounded-lg p-3 hover:shadow-md`}
     >
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
+        <h3 className="text-sm font-semibold text-text-primary group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
           {binder.name}
         </h3>
         {featured && (
-          <StarIconSolid className="h-4 w-4 text-yellow-500 flex-shrink-0 ml-2" />
+          <StarIconSolid className="h-4 w-4 text-yellow-500 dark:text-yellow-400 flex-shrink-0 ml-2" />
         )}
       </div>
 
-      <div className="flex items-center justify-between text-xs text-gray-600">
+      <div className="flex items-center justify-between text-xs text-text-secondary">
         <div className="flex items-center">
           <PhotoIcon className="h-3 w-3 mr-1" />
           <span>{binder.statistics.cardCount} cards</span>
         </div>
-        <div className="flex items-center text-gray-500">
+        <div className="flex items-center text-text-secondary">
           <EyeIcon className="h-3 w-3 mr-1" />
           <span>View</span>
         </div>
@@ -91,13 +91,13 @@ const PublicBinderShowcase = () => {
   );
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4 mb-6">
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-6">
       <div className="flex items-center justify-between mb-3">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900">
+          <h2 className="text-lg font-semibold text-text-primary">
             Binder Examples
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-text-secondary">
             Explore Pokemon card collections
           </p>
         </div>

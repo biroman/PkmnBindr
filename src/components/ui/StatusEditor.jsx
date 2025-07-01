@@ -96,7 +96,7 @@ const StatusEditor = ({
                 onChange={(e) => setStatusText(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder={placeholder}
-                className={`w-full px-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary ${
                   charInfo.isOverLimit ? "border-red-500" : "border-gray-300"
                 }`}
                 maxLength={UserStatusService.MAX_STATUS_LENGTH + 10}
@@ -151,7 +151,7 @@ const StatusEditor = ({
               {currentStatus ? (
                 <span className="truncate">{currentStatus}</span>
               ) : (
-                <span className="text-gray-500 italic">{placeholder}</span>
+                <span className="text-text-secondary italic">{placeholder}</span>
               )}
             </div>
           </button>
@@ -228,7 +228,7 @@ const StatusEditor = ({
           >
             <div className="flex-1">
               {currentStatus ? (
-                <p className="text-sm text-gray-700 break-words">
+                <p className="text-sm text-text-primary break-words">
                   {currentStatus}
                 </p>
               ) : (

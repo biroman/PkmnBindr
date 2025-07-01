@@ -142,7 +142,7 @@ const BinderViewer = () => {
   // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading admin binder view...</p>
@@ -154,11 +154,11 @@ const BinderViewer = () => {
   // Error state
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="bg-card-background rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center">
           <div className="text-red-500 text-6xl mb-4">⚠️</div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Error</h1>
-          <p className="text-gray-600 mb-6">{error}</p>
+          <h1 className="text-2xl font-bold text-text-primary mb-2">Admin Error</h1>
+          <p className="text-text-secondary mb-6">{error}</p>
           <button
             onClick={() => navigate("/admin")}
             className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors"
@@ -172,15 +172,15 @@ const BinderViewer = () => {
 
   if (!currentBinder) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center">
-          <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <FileText className="w-8 h-8 text-gray-400" />
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="bg-card-background rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center">
+          <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6">
+            <FileText className="w-8 h-8 text-text-secondary" />
           </div>
-          <h2 className="text-xl font-bold text-gray-900 mb-2">
+          <h2 className="text-xl font-bold text-text-primary mb-2">
             Binder Not Found
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-text-secondary mb-6">
             The binder you're looking for doesn't exist.
           </p>
           <button

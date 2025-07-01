@@ -21,19 +21,21 @@ const SearchFilters = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-slate-200">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-200 dark:border-gray-700">
       {/* Filter toggle header */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-gray-700 transition-colors"
       >
         <div className="flex items-center space-x-2">
-          <FunnelIcon className="w-5 h-5 text-slate-600" />
-          <span className="font-medium text-slate-800">Filters</span>
+          <FunnelIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+          <span className="font-medium text-slate-800 dark:text-slate-200">
+            Filters
+          </span>
           {Object.values(filters).some(
             (f) => f && (Array.isArray(f) ? f.length > 0 : true)
           ) && (
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
               Active
             </span>
           )}
@@ -43,17 +45,17 @@ const SearchFilters = ({
             isExpanded ? "rotate-180" : ""
           }`}
         >
-          <ChevronDown className="w-5 h-5 text-slate-400" />
+          <ChevronDown className="w-5 h-5 text-slate-400 dark:text-slate-500" />
         </div>
       </button>
 
       {/* Filter options */}
       {isExpanded && (
-        <div className="px-4 pb-4 border-t border-slate-100">
+        <div className="px-4 pb-4 border-t border-slate-100 dark:border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {/* Pokemon Name */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Pokemon Name
               </label>
               <input
@@ -61,13 +63,13 @@ const SearchFilters = ({
                 value={filters.name}
                 onChange={(e) => onFilterChange("name", e.target.value)}
                 placeholder="e.g., Charizard"
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-slate-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               />
             </div>
 
             {/* Types */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Types
               </label>
               <select
@@ -82,7 +84,7 @@ const SearchFilters = ({
                     )
                   )
                 }
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-slate-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 size="3"
               >
                 {availableTypes.map((type) => (
@@ -265,30 +267,30 @@ const CardSearch = ({ onCardSelect, selectedCards = [], className = "" }) => {
   return (
     <div className={`space-y-6 ${className}`}>
       {/* Search Header */}
-      <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-slate-200 dark:border-gray-700 p-6">
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-4">
           Pokemon Card Search
         </h2>
 
         {/* Main search bar */}
         <form onSubmit={handleSearchSubmit} className="mb-4">
           <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+            <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400 dark:text-slate-500" />
             <input
               ref={searchInputRef}
               type="text"
               value={searchQuery}
               onChange={(e) => updateSearchQuery(e.target.value)}
               placeholder="Search for Pokemon cards..."
-              className="w-full pl-10 pr-12 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full pl-10 pr-12 py-3 border border-slate-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => updateSearchQuery("")}
-                className="absolute right-3 top-3 p-1 hover:bg-slate-100 rounded"
+                className="absolute right-3 top-3 p-1 hover:bg-slate-100 dark:hover:bg-gray-600 rounded"
               >
-                <XMarkIcon className="w-4 h-4 text-slate-400" />
+                <XMarkIcon className="w-4 h-4 text-slate-400 dark:text-slate-500" />
               </button>
             )}
           </div>
@@ -296,12 +298,14 @@ const CardSearch = ({ onCardSelect, selectedCards = [], className = "" }) => {
 
         {/* Quick searches */}
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="text-sm text-slate-600 mr-2">Quick search:</span>
+          <span className="text-sm text-slate-600 dark:text-slate-400 mr-2">
+            Quick search:
+          </span>
           {quickSearches.map((pokemon) => (
             <button
               key={pokemon}
               onClick={() => handleQuickSearch(pokemon)}
-              className="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full text-sm transition-colors"
+              className="px-3 py-1 bg-slate-100 dark:bg-gray-700 hover:bg-slate-200 dark:hover:bg-gray-600 text-slate-700 dark:text-slate-300 rounded-full text-sm transition-colors"
             >
               {pokemon}
             </button>

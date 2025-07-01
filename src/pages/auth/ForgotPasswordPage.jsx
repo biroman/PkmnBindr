@@ -69,10 +69,12 @@ const ForgotPasswordPage = () => {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="bg-white shadow-lg rounded-lg p-8">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Reset Password</h1>
-          <p className="text-gray-600 mt-2">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            Reset Password
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">
             Enter your email and we'll send you a reset link
           </p>
         </div>
@@ -119,15 +121,15 @@ const ForgotPasswordPage = () => {
         <div className="mt-6 text-center space-y-2">
           <Link
             to="/auth/login"
-            className="text-blue-600 hover:text-blue-500 text-sm"
+            className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 text-sm"
           >
             Back to Sign In
           </Link>
-          <div className="text-gray-600 text-sm">
+          <div className="text-gray-600 dark:text-gray-300 text-sm">
             Don't have an account?{" "}
             <Link
               to="/auth/register"
-              className="text-blue-600 hover:text-blue-500 font-medium"
+              className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
             >
               Sign up
             </Link>

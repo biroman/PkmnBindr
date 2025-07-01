@@ -100,7 +100,7 @@ const CardPage = ({
     >
       {/* Page Header */}
       <div className="absolute top-2 left-4 right-4 flex items-center justify-between z-10">
-        <div className="text-sm font-medium text-gray-500">
+        <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
           Page {pageNumber}
         </div>
       </div>

@@ -254,7 +254,7 @@ const CardPageItem = ({
         msUserSelect: "none",
       }}
       className={`
-        relative bg-white rounded-sm shadow-md border-2 transition-all duration-300 group
+        relative bg-card-background rounded-sm shadow-md border-2 transition-all duration-300 group
         ${isDragging ? "opacity-50 scale-95 shadow-2xl z-50" : ""}
         ${
           shouldHighlight && !isCover && !isSelectionMode
@@ -276,26 +276,26 @@ const CardPageItem = ({
         ${isDragging ? "cursor-grabbing" : ""}
         ${
           isCover
-            ? "border-purple-300 bg-gradient-to-br from-purple-50 to-purple-100"
+            ? "border-purple-300 dark:border-purple-700 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900"
             : selectionMode === "binderPages"
-            ? "border-slate-300 bg-gradient-to-br from-slate-50 to-slate-100 opacity-60"
+            ? "border-slate-300 dark:border-slate-700 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 opacity-60"
             : cardCount > 0
-            ? "border-blue-300 bg-gradient-to-br from-blue-50 to-blue-100"
-            : "border-slate-300 bg-gradient-to-br from-slate-50 to-slate-100"
+            ? "border-blue-300 dark:border-blue-700 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900"
+            : "border-slate-300 dark:border-slate-700 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900"
         }
-                ${
-                  gridConfig.total === 36
-                    ? "h-[240px] md:h-[200px] lg:h-[240px]"
-                    : gridConfig.total === 25
-                    ? "h-[200px] md:h-[160px] lg:h-[200px]"
-                    : gridConfig.total === 16
-                    ? "h-[160px] md:h-[140px] lg:h-[160px]"
-                    : gridConfig.total === 12
-                    ? "h-[140px] md:h-[120px] lg:h-[140px]"
-                    : gridConfig.total === 9
-                    ? "h-[140px] md:h-[120px] lg:h-[140px]"
-                    : "h-[120px] md:h-[100px] lg:h-[120px]"
-                } flex flex-col
+        ${
+          gridConfig.total === 36
+            ? "h-[240px] md:h-[200px] lg:h-[240px]"
+            : gridConfig.total === 25
+            ? "h-[200px] md:h-[160px] lg:h-[200px]"
+            : gridConfig.total === 16
+            ? "h-[160px] md:h-[140px] lg:h-[160px]"
+            : gridConfig.total === 12
+            ? "h-[140px] md:h-[120px] lg:h-[140px]"
+            : gridConfig.total === 9
+            ? "h-[140px] md:h-[120px] lg:h-[140px]"
+            : "h-[120px] md:h-[100px] lg:h-[120px]"
+        } flex flex-col
       `}
     >
       {/* Selection Indicator */}
@@ -307,7 +307,7 @@ const CardPageItem = ({
 
       {/* Selection Mode Overlay */}
       {isSelectionMode && (
-        <div className="absolute top-2 left-2 w-6 h-6 border-2 border-slate-400 rounded bg-white flex items-center justify-center z-10">
+        <div className="absolute top-2 left-2 w-6 h-6 border-2 border-slate-400 dark:border-slate-600 rounded bg-card-background flex items-center justify-center z-10">
           {isSelected && <div className="w-3 h-3 bg-green-500 rounded"></div>}
         </div>
       )}
@@ -1567,7 +1567,7 @@ const BinderPageOverview = ({
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 {/* Mode & Actions Row */}
                 {/* Simple Mode Toggle */}
-                <div className="bg-white rounded-lg border border-slate-200 p-1 shadow-sm">
+                <div className="bg-card-background rounded-lg border border-border p-1 shadow-sm">
                   <div className="flex gap-1">
                     <button
                       onClick={() => {
@@ -1577,7 +1577,7 @@ const BinderPageOverview = ({
                       className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "cardPages"
                           ? "bg-blue-500 text-white shadow-sm"
-                          : "text-slate-600 hover:bg-slate-50"
+                          : "text-secondary hover:bg-accent"
                       }`}
                     >
                       📋 Organize
@@ -1590,7 +1590,7 @@ const BinderPageOverview = ({
                       className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "binderPages"
                           ? "bg-slate-700 text-white shadow-sm"
-                          : "text-slate-600 hover:bg-slate-50"
+                          : "text-secondary hover:bg-accent"
                       }`}
                     >
                       ⚙️ Manage

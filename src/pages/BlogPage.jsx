@@ -10,7 +10,7 @@ import ZoomableImage from "../components/ZoomableImage";
 const BlogPost1 = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,19 +28,19 @@ const BlogPost1 = () => {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
-          <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
             <Link to="/" className="hover:text-blue-600 transition-colors">
               Home
             </Link>
             <ChevronRightIcon className="w-4 h-4" />
-            <span className="text-gray-900">Blog</span>
+            <span className="text-gray-900 dark:text-gray-100">Blog</span>
           </nav>
 
           {/* Featured Article */}
-          <article className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <article className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-12">
             {/* Article Header */}
-            <div className="px-8 py-6 border-b border-gray-100">
-              <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+            <div className="px-8 py-6 border-b border-gray-100 dark:border-gray-700">
+              <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <div className="flex items-center space-x-2">
                   <UserIcon className="w-4 h-4" />
                   <span>PkmnBindr Team</span>
@@ -50,11 +50,11 @@ const BlogPost1 = () => {
                   <span>15 min read</span>
                 </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 The Ultimate Guide to Organizing Your Pokémon Card Collection:
                 From Physical Binders to Digital Dominance
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 Master the art of Pokemon card organization with professional
                 techniques that protect your investment and enhance your
                 collecting experience.
@@ -67,7 +67,7 @@ const BlogPost1 = () => {
                   alt="Digital Pokemon collection management interface showing organized card tracking and portfolio management"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
-                <p className="text-xs text-gray-500 mt-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
                   Digital collection management from PkmnBindr.com
                 </p>
               </div>
@@ -77,11 +77,11 @@ const BlogPost1 = () => {
             <div className="px-8 py-8 prose prose-lg max-w-none">
               {/* Introduction */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Introduction: Taming the Beautiful Chaos of a Growing Pokémon
                   Collection
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     It's a feeling every Pokémon card collector knows
                     intimately: the thrill of tearing open a new booster box or
@@ -134,11 +134,11 @@ const BlogPost1 = () => {
 
               {/* Section 1 */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Section 1: The Collector's Compass — Why Your "Why" Defines
                   Your "How"
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     Before you sort a single card, you must answer one question:
                     why do you collect? There is no single "best" way to
@@ -147,11 +147,11 @@ const BlogPost1 = () => {
                     can build a system that works for you.
                   </p>
 
-                  <div className="bg-blue-50 rounded-lg p-6 my-6">
-                    <h3 className="text-xl font-semibold text-blue-900 mb-3">
+                  <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-6 my-6">
+                    <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-3">
                       The Player/Deck-Builder
                     </h3>
-                    <p className="text-blue-800">
+                    <p className="text-blue-800 dark:text-blue-200">
                       Your collection is a toolbox, a resource for building the
                       next winning deck. You prioritize playability, card
                       effects, and format legality, always on the lookout for
@@ -165,11 +165,11 @@ const BlogPost1 = () => {
                     </p>
                   </div>
 
-                  <div className="bg-green-50 rounded-lg p-6 my-6">
-                    <h3 className="text-xl font-semibold text-green-900 mb-3">
+                  <div className="bg-green-50 dark:bg-green-950 rounded-lg p-6 my-6">
+                    <h3 className="text-xl font-semibold text-green-900 dark:text-green-100 mb-3">
                       The Completist/Master Set Collector
                     </h3>
-                    <p className="text-green-800">
+                    <p className="text-green-800 dark:text-green-200">
                       Your mantra is "Gotta catch 'em all!"—and that means every
                       card in a given set, including all variations like holos
                       and reverse holos. The thrill is in filling the gaps in a
@@ -182,11 +182,11 @@ const BlogPost1 = () => {
                     </p>
                   </div>
 
-                  <div className="bg-purple-50 rounded-lg p-6 my-6">
-                    <h3 className="text-xl font-semibold text-purple-900 mb-3">
+                  <div className="bg-purple-50 dark:bg-purple-950 rounded-lg p-6 my-6">
+                    <h3 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-3">
                       The Investor/Financier
                     </h3>
-                    <p className="text-purple-800">
+                    <p className="text-purple-800 dark:text-purple-200">
                       You view Pokémon cards as a legitimate alternative asset
                       class, with some market segments outperforming traditional
                       stocks. Your focus is on market trends, scarcity, and the
@@ -201,16 +201,16 @@ const BlogPost1 = () => {
                     </p>
                   </div>
 
-                  <div className="bg-orange-50 rounded-lg p-6 my-6">
-                    <h3 className="text-xl font-semibold text-orange-900 mb-3">
+                  <div className="bg-orange-50 dark:bg-orange-950 rounded-lg p-6 my-6">
+                    <h3 className="text-xl font-semibold text-orange-900 dark:text-orange-100 mb-3">
                       The Specialist/Curator
                     </h3>
-                    <p className="text-orange-800 mb-3">
+                    <p className="text-orange-800 dark:text-orange-200 mb-3">
                       Your collection is a unique expression of your personal
                       passion. This is the most diverse group, with goals that
                       include:
                     </p>
-                    <ul className="list-disc pl-6 space-y-2 text-orange-800">
+                    <ul className="list-disc pl-6 space-y-2 text-orange-800 dark:text-orange-200">
                       <li>
                         <strong>Species Collecting:</strong> Acquiring every
                         card of a specific Pokémon, like the ever-popular Eevee
@@ -231,7 +231,7 @@ const BlogPost1 = () => {
                         novelty.
                       </li>
                     </ul>
-                    <p className="text-orange-800 mt-3">
+                    <p className="text-orange-800 dark:text-orange-200 mt-3">
                       Your organizational method will be highly customized,
                       often starting with your theme (e.g., all Pikachu cards
                       together) and then sub-sorting by release date or rarity.
@@ -267,11 +267,11 @@ const BlogPost1 = () => {
 
               {/* Section 2 */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Section 2: The Physical Realm — A Masterclass in Binder & Box
                   Organization
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     While binders offer the best combination of protection and
                     display, every collector knows that "bulk"—the mountain of
@@ -281,11 +281,11 @@ const BlogPost1 = () => {
                     distinct advantages and disadvantages.
                   </p>
 
-                  <div className="bg-gray-50 rounded-lg p-6 my-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 my-8">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                       Method 1: By Set & Card Number
                     </h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
                       This is the gold standard for master set collectors. Cards
                       are placed in a binder following the official set
                       checklist, with empty slots visually representing your
@@ -293,10 +293,10 @@ const BlogPost1 = () => {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-semibold text-green-700 mb-2">
+                        <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">
                           Pros:
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
                           It's incredibly satisfying to complete a page,
                           provides a chronological view of the game's history,
                           and makes it easy to see exactly which cards you're
@@ -304,10 +304,10 @@ const BlogPost1 = () => {
                         </p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-red-700 mb-2">
+                        <h4 className="font-semibold text-red-700 dark:text-red-400 mb-2">
                           Cons:
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
                           The initial sort can be extremely time-consuming,
                           especially with a large volume of cards. Finding a
                           specific Pokémon for a deck is difficult unless you
@@ -330,11 +330,11 @@ const BlogPost1 = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-6 my-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 my-8">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                       Method 2: By National Pokédex Number
                     </h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
                       The original method from the playground days of the 90s,
                       this involves organizing all Pokémon by their number in
                       the National Pokédex. All Bulbasaurs together, followed by
@@ -342,20 +342,20 @@ const BlogPost1 = () => {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-semibold text-green-700 mb-2">
+                        <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">
                           Pros:
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
                           Creates a beautiful "living Pokédex" and is perfect
                           for species collectors who want to see all versions of
                           their favorite Pokémon in one place.
                         </p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-red-700 mb-2">
+                        <h4 className="font-semibold text-red-700 dark:text-red-400 mb-2">
                           Cons:
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
                           This method is notoriously difficult to maintain. With
                           every new set release, you'll find yourself constantly
                           re-sorting and shifting cards between binders, a
@@ -378,11 +378,11 @@ const BlogPost1 = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-6 my-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 my-8">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                       Method 3: By Pokémon Type
                     </h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
                       For this method, you group all Pokémon of the same type
                       together (e.g., Fire, Water, Psychic). A common sub-sort
                       is to then alphabetize by the base Pokémon in an evolution
@@ -391,10 +391,10 @@ const BlogPost1 = () => {
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-semibold text-green-700 mb-2">
+                        <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">
                           Pros:
                         </h4>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
                           Unbeatable for players and deck-builders. It makes
                           brainstorming and assembling a new deck incredibly
                           fast and efficient.
@@ -1010,7 +1010,7 @@ const BlogPost1 = () => {
           </article>
 
           {/* More Articles Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-card-background rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               More Expert Guides
             </h2>

@@ -90,15 +90,15 @@ const BinderCustomizationModal = ({
       key={scheme.name}
       className={`relative cursor-pointer rounded-lg overflow-hidden border-2 transition-all ${
         selectedColor === scheme.value
-          ? "border-blue-500 ring-2 ring-blue-200"
-          : "border-gray-200 hover:border-gray-300"
+          ? "border-blue-500 ring-2 ring-blue-200 dark:ring-blue-800"
+          : "border-border hover:border-text-secondary"
       }`}
       onClick={() => handleColorSelect(scheme.value)}
     >
       <div className="h-16 w-full" style={{ background: scheme.gradient }} />
       <div className="p-3">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-900">
+          <span className="text-sm font-medium text-text-primary">
             {scheme.name}
           </span>
         </div>
@@ -113,37 +113,37 @@ const BinderCustomizationModal = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2 sm:p-4 z-50">
-      <div className="bg-white rounded-xl shadow-xl w-full h-full max-w-7xl max-h-[98vh] overflow-hidden flex flex-col">
+      <div className="bg-card-background rounded-xl shadow-xl w-full h-full max-w-7xl max-h-[98vh] overflow-hidden flex flex-col">
         {/* Header - Fixed */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 flex-shrink-0">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-border flex-shrink-0">
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">
+            <h2 className="text-xl font-semibold text-text-primary">
               Customize Binder
             </h2>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-text-secondary mt-1">
               Personalize the appearance of "
               {binder?.metadata?.name || "Unnamed Binder"}"
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 hover:bg-accent rounded-lg transition-colors"
           >
-            <XMarkIcon className="w-5 h-5 text-gray-500" />
+            <XMarkIcon className="w-5 h-5 text-text-secondary" />
           </button>
         </div>
 
         {/* Main Content - Scrollable */}
         <div className="flex flex-col xl:flex-row flex-1 min-h-0">
           {/* Left Sidebar - Navigation */}
-          <div className="xl:w-64 border-b xl:border-b-0 xl:border-r border-gray-200 p-4 flex-shrink-0">
+          <div className="xl:w-64 border-b xl:border-b-0 xl:border-r border-border p-4 flex-shrink-0">
             <nav className="flex xl:flex-col xl:space-y-2 space-x-2 xl:space-x-0 overflow-x-auto xl:overflow-x-visible">
               <button
                 onClick={() => setActiveTab("colors")}
                 className={`flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors whitespace-nowrap ${
                   activeTab === "colors"
-                    ? "bg-blue-50 text-blue-700"
-                    : "text-gray-700 hover:bg-gray-100"
+                    ? "bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                    : "text-text-primary hover:bg-accent"
                 }`}
               >
                 <SwatchIcon className="w-5 h-5 flex-shrink-0" />
@@ -159,12 +159,12 @@ const BinderCustomizationModal = ({
               {activeTab === "colors" && (
                 <div className="space-y-8">
                   {/* Color Schemes Section */}
-                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                  <div className="bg-card-background border border-border rounded-xl p-6 shadow-sm">
                     <div className="mb-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-xl font-bold text-text-primary mb-2">
                         Header Colors
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-text-secondary">
                         Choose from beautiful color schemes for your binder
                         header
                       </p>
@@ -180,14 +180,14 @@ const BinderCustomizationModal = ({
           </div>
 
           {/* Right Sidebar - Preview (Fixed) */}
-          <div className="xl:w-80 border-t xl:border-t-0 xl:border-l border-gray-200 p-4 sm:p-6 flex-shrink-0 bg-gray-50">
+          <div className="xl:w-80 border-t xl:border-t-0 xl:border-l border-border p-4 sm:p-6 flex-shrink-0 bg-secondary">
             <div className="sticky top-0">
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
+              <h3 className="text-sm font-medium text-text-primary mb-4">
                 Live Preview
               </h3>
 
               {/* Preview Card */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-4">
+              <div className="bg-card-background rounded-xl shadow-sm border border-border overflow-hidden mb-4">
                 <div
                   className="h-16 relative"
                   style={{
@@ -205,11 +205,11 @@ const BinderCustomizationModal = ({
                   </div>
                 </div>
                 <div className="p-4">
-                  <h3 className="text-base font-semibold mb-1">
+                  <h3 className="text-base font-semibold mb-1 text-text-primary">
                     {binder?.metadata?.name || "Unnamed Binder"}
                   </h3>
                   {binder?.metadata?.description && (
-                    <p className="text-sm text-gray-600 line-clamp-2 mb-2">
+                    <p className="text-sm text-text-secondary line-clamp-2 mb-2">
                       {binder.metadata.description}
                     </p>
                   )}
@@ -220,10 +220,10 @@ const BinderCustomizationModal = ({
         </div>
 
         {/* Footer - Fixed */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-t border-gray-200 bg-gray-50 flex-shrink-0">
+        <div className="flex items-center justify-between p-4 sm:p-6 border-t border-border bg-secondary flex-shrink-0">
           <button
             onClick={onClose}
-            className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+            className="px-4 py-2 text-text-primary hover:bg-accent rounded-lg transition-colors"
           >
             Cancel
           </button>
@@ -234,7 +234,7 @@ const BinderCustomizationModal = ({
                 setCustomizationMode("presets");
                 handleSave();
               }}
-              className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+              className="px-4 py-2 text-text-primary hover:bg-accent rounded-lg transition-colors"
             >
               Reset to Default
             </button>

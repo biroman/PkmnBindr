@@ -206,10 +206,14 @@ const LoginPage = () => {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="bg-white shadow-lg rounded-lg p-8">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
-          <p className="text-gray-600 mt-2">Sign in to your account</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            Welcome Back
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">
+            Sign in to your account
+          </p>
         </div>
 
         {/* Success message from registration */}
@@ -282,10 +286,10 @@ const LoginPage = () => {
         {/* Divider */}
         <div className="relative mb-6">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-300" />
+            <div className="w-full border-t border-gray-300 dark:border-gray-600" />
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-white text-gray-500">
+            <span className="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400">
               Or continue with email
             </span>
           </div>
@@ -351,7 +355,7 @@ const LoginPage = () => {
           <div className="flex items-center justify-between">
             <Link
               to="/auth/forgot-password"
-              className="text-sm text-blue-600 hover:text-blue-500"
+              className="text-sm text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
             >
               Forgot password?
             </Link>
@@ -374,11 +378,11 @@ const LoginPage = () => {
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             Don't have an account?{" "}
             <Link
               to="/auth/register"
-              className="text-blue-600 hover:text-blue-500 font-medium"
+              className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
             >
               Sign up
             </Link>

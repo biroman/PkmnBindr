@@ -4,15 +4,17 @@ import { Check, EyeOff, Trash2 } from "lucide-react";
 
 // Loading placeholder component
 const CardLoadingScreen = () => (
-  <div className="aspect-[5/7] bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg animate-pulse flex items-center justify-center">
-    <div className="text-slate-400 text-sm">Loading...</div>
+  <div className="aspect-[5/7] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 rounded-lg animate-pulse flex items-center justify-center">
+    <div className="text-slate-400 dark:text-slate-500 text-sm">Loading...</div>
   </div>
 );
 
 // Error placeholder component
 const CardErrorScreen = ({ error, onRetry }) => (
-  <div className="aspect-[5/7] bg-gradient-to-br from-red-50 to-red-100 rounded-lg flex flex-col items-center justify-center p-2 text-center">
-    <div className="text-red-500 text-xs mb-2">Failed to load</div>
+  <div className="aspect-[5/7] bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950 dark:to-red-900 rounded-lg flex flex-col items-center justify-center p-2 text-center">
+    <div className="text-red-500 dark:text-red-400 text-xs mb-2">
+      Failed to load
+    </div>
     {onRetry && (
       <button
         onClick={onRetry}
@@ -31,16 +33,16 @@ const EmptyCardSlot = forwardRef(
       ref={ref}
       onClick={onClick}
       className={`
-      aspect-[5/7] bg-gradient-to-br from-slate-50 to-slate-100 
-      border-2 border-dashed border-slate-300 rounded-lg 
+      aspect-[5/7] bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700
+      border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-lg 
       flex items-center justify-center transition-all duration-200
-      hover:border-slate-400 hover:bg-slate-100 cursor-pointer
+      hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer
       group
       ${className}
     `}
     >
       {children || (
-        <div className="text-slate-400 text-center">
+        <div className="text-slate-400 dark:text-slate-500 text-center">
           <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
             +
           </div>
@@ -200,8 +202,10 @@ const PokemonCard = forwardRef(
 
               {/* Loading overlay */}
               {!imageLoaded && (
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 animate-pulse flex items-center justify-center">
-                  <div className="text-slate-400 text-xs">Loading...</div>
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 animate-pulse flex items-center justify-center">
+                  <div className="text-slate-400 dark:text-slate-500 text-xs">
+                    Loading...
+                  </div>
                 </div>
               )}
             </>

@@ -32,7 +32,7 @@ const GridSizeSelector = ({ currentSize, onSizeChange }) => {
 
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-slate-700">
+      <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
         Grid Size
       </label>
       <div className="space-y-2">
@@ -42,12 +42,14 @@ const GridSizeSelector = ({ currentSize, onSizeChange }) => {
             onClick={() => onSizeChange(size.value)}
             className={`w-full text-left px-3 py-2 rounded-lg border transition-colors ${
               currentSize === size.value
-                ? "border-blue-500 bg-blue-50 text-blue-900"
-                : "border-slate-200 hover:border-slate-300 text-slate-700"
+                ? "border-blue-500 bg-blue-50 dark:bg-blue-950 text-blue-900 dark:text-blue-200"
+                : "border-gray-200 dark:border-gray-700 hover:border-slate-300 dark:hover:border-slate-500 text-gray-900 dark:text-gray-100"
             }`}
           >
             <div className="font-medium">{size.label}</div>
-            <div className="text-xs text-slate-500">{size.description}</div>
+            <div className="text-xs text-gray-600 dark:text-gray-400">
+              {size.description}
+            </div>
           </button>
         ))}
       </div>
@@ -100,7 +102,7 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
 
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-slate-700">
+      <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
         Binder Name
       </label>
       {isEditing ? (
@@ -112,28 +114,28 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
             onChange={(e) => setTempName(e.target.value)}
             onKeyDown={handleKeyPress}
             onBlur={handleBlur}
-            className="w-full px-3 py-2 pr-10 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-blue-50"
+            className="w-full px-3 py-2 pr-10 border border-blue-300 dark:border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-blue-50 dark:bg-blue-950 text-gray-900 dark:text-gray-100"
             placeholder="Enter binder name..."
           />
           <button
             onClick={handleCancel}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded transition-colors"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors"
             title="Cancel (Esc)"
           >
             <X className="w-4 h-4" />
           </button>
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-gray-600 dark:text-gray-400">
             Press Enter to apply • Esc to cancel
           </div>
         </div>
       ) : (
         <div className="flex items-center gap-2">
-          <div className="flex-1 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700">
+          <div className="flex-1 px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
             {currentName}
           </div>
           <button
             onClick={() => setIsEditing(true)}
-            className="p-2 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
+            className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
             title="Edit binder name"
           >
             <PencilIcon className="w-4 h-4" />
@@ -234,7 +236,7 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
 
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-slate-700">
+      <label className="block text-sm font-medium text-primary">
         Missing Cards Tracker
       </label>
 
@@ -247,13 +249,13 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
             onChange={(e) => setNewCardNumber(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Enter card # (e.g., 25, 25rh for reverse holo)"
-            className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
           />
         </div>
         <button
           onClick={handleAddMissingCard}
           disabled={!newCardNumber.trim()}
-          className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-slate-400 text-white rounded-lg transition-colors"
+          className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors"
           title="Mark as missing"
         >
           <PlusIcon className="w-4 h-4" />
@@ -263,7 +265,7 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
       {/* Missing cards list */}
       {missingCards.length > 0 && (
         <div className="space-y-2">
-          <div className="text-xs text-slate-500 font-medium">
+          <div className="text-xs text-secondary font-medium">
             Missing Cards ({missingCards.length})
           </div>
           <div className="max-h-40 overflow-y-auto space-y-1">
@@ -277,14 +279,14 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
               return (
                 <div
                   key={cardNumber}
-                  className="flex items-center justify-between px-3 py-2 bg-red-50 border border-red-200 rounded-lg"
+                  className="flex items-center justify-between px-3 py-2 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg"
                 >
                   <div className="flex items-center gap-2">
                     <EyeSlashIcon className="w-4 h-4 text-red-500" />
-                    <span className="text-sm font-medium text-red-700">
+                    <span className="text-sm font-medium text-red-700 dark:text-red-300">
                       #{displayNumber}
                       {cardType && (
-                        <span className="text-xs ml-1 text-red-600">
+                        <span className="text-xs ml-1 text-red-600 dark:text-red-400">
                           {cardType}
                         </span>
                       )}
@@ -292,7 +294,7 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
                   </div>
                   <button
                     onClick={() => handleRemoveMissingCard(cardNumber)}
-                    className="p-1 text-red-600 hover:text-red-800 hover:bg-red-100 rounded transition-colors"
+                    className="p-1 text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-200 hover:bg-red-100 dark:hover:bg-red-900 rounded transition-colors"
                     title="Mark as collected"
                   >
                     <CheckIcon className="w-4 h-4" />
@@ -305,12 +307,12 @@ const WantListTracker = ({ binder, onToggleCardVisibility }) => {
       )}
 
       {missingCards.length === 0 && (
-        <div className="text-xs text-slate-500 text-center py-4 bg-slate-50 rounded-lg border border-dashed border-slate-300">
+        <div className="text-xs text-secondary text-center py-4 bg-secondary rounded-lg border border-dashed border-border">
           No missing cards tracked yet
         </div>
       )}
 
-      <div className="text-xs text-slate-500">
+      <div className="text-xs text-secondary">
         💡 Add card numbers you're missing to track your collection progress.
         Cards will be visually marked in the binder.
         <br />
@@ -460,20 +462,20 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
 
   const getButtonStyle = () => {
     if (!user) {
-      return "bg-gray-100 text-gray-600 cursor-not-allowed";
+      return "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 cursor-not-allowed";
     }
 
     if (isLoading || binderSyncStatus?.status === "saving") {
-      return "bg-blue-100 text-blue-700 cursor-wait";
+      return "bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 cursor-wait";
     }
 
     switch (syncState) {
       case "synced":
-        return "bg-green-100 text-green-700 hover:bg-green-200";
+        return "bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900";
       case "error":
-        return "bg-red-100 text-red-700 hover:bg-red-200";
+        return "bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900";
       case "conflict":
-        return "bg-orange-100 text-orange-700 hover:bg-orange-200";
+        return "bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 hover:bg-orange-200 dark:hover:bg-orange-900";
       default:
         return "bg-blue-600 text-white hover:bg-blue-700";
     }
@@ -529,7 +531,7 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
     <div className="space-y-2">
       {/* Unsaved changes indicator */}
       {user && hasUnsyncedChanges() && syncState !== "error" && (
-        <div className="flex items-center gap-2 text-xs text-amber-600 bg-amber-50 px-3 py-2 rounded-lg border border-amber-200">
+        <div className="flex items-center gap-2 text-xs text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 px-3 py-2 rounded-lg border border-amber-200 dark:border-amber-800">
           <ExclamationTriangleIcon className="w-4 h-4 flex-shrink-0" />
           <span>You have unsaved changes</span>
         </div>
@@ -559,7 +561,7 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
             binderSyncStatus?.status === "downloading" ||
             !binder?.sync?.lastSynced
           }
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <div className="flex-shrink-0">
             {isReverting ? (
@@ -607,24 +609,26 @@ const CardBackSettings = ({ binder, onSettingsChange }) => {
 
   return (
     <div className="space-y-3">
-      <label className="block text-sm font-medium text-slate-700">
+      <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
         Card Back Display
       </label>
 
       {/* Empty Slots Toggle */}
-      <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-200">
+      <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
         <div className="flex-1">
-          <div className="font-medium text-slate-700 text-sm">Empty Slots</div>
-          <div className="text-xs text-slate-500 mt-1">
+          <div className="font-medium text-gray-900 dark:text-gray-100 text-sm">
+            Empty Slots
+          </div>
+          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
             Show card backs instead of "Add card" prompt
           </div>
         </div>
         <button
           onClick={handleToggleEmptyCardBack}
-          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${
             binder.settings?.showCardBackForEmpty
               ? "bg-blue-600"
-              : "bg-slate-300"
+              : "bg-slate-300 dark:bg-slate-600"
           }`}
         >
           <span
@@ -638,21 +642,21 @@ const CardBackSettings = ({ binder, onSettingsChange }) => {
       </div>
 
       {/* Missing Cards Toggle */}
-      <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-200">
+      <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
         <div className="flex-1">
-          <div className="font-medium text-slate-700 text-sm">
+          <div className="font-medium text-gray-900 dark:text-gray-100 text-sm">
             Missing Cards
           </div>
-          <div className="text-xs text-slate-500 mt-1">
+          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
             Show card backs with hover preview instead of overlay
           </div>
         </div>
         <button
           onClick={handleToggleMissingCardBack}
-          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${
             binder.settings?.showCardBackForMissing
               ? "bg-blue-600"
-              : "bg-slate-300"
+              : "bg-slate-300 dark:bg-slate-600"
           }`}
         >
           <span
@@ -792,7 +796,7 @@ const BinderSidebar = ({
 
         {/* Sort Controls */}
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
             Card Sorting
           </label>
           <SortControls
@@ -831,20 +835,22 @@ const BinderSidebar = ({
   return (
     <>
       <div
-        className={`fixed top-16 bottom-0 bg-white border-l border-slate-200 transition-all duration-300 z-30 w-80 flex flex-col shadow-lg ${
+        className={`fixed top-16 bottom-0 bg-white dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700 transition-all duration-300 z-30 w-80 flex flex-col shadow-lg ${
           isCollapsed ? "translate-x-full" : "translate-x-0"
         }`}
         style={{ right: 0 }}
       >
         {/* Sidebar Header */}
-        <div className="p-4 border-b border-slate-200 flex items-center justify-between">
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Cog6ToothIcon className="w-5 h-5 text-slate-600" />
-            <h3 className="font-semibold text-slate-800">Binder Settings</h3>
+            <Cog6ToothIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              Binder Settings
+            </h3>
           </div>
           <button
             onClick={handleToggleCollapse}
-            className="p-2 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
+            className="p-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
             title="Close sidebar"
           >
             <X className="w-4 h-4" />
@@ -874,7 +880,7 @@ const BinderSidebar = ({
 
           {/* Sort Controls */}
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-slate-700">
+            <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
               Card Sorting
             </label>
             <SortControls
@@ -895,7 +901,7 @@ const BinderSidebar = ({
         </div>
 
         {/* Sync Button at the bottom */}
-        <div className="border-t border-slate-200 p-4">
+        <div className="border-t border-gray-200 dark:border-gray-700 p-4">
           <SyncButton
             binder={binder}
             onShowRevertModal={() => setShowRevertModal(true)}

@@ -80,13 +80,13 @@ const DashboardOverview = ({
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
+        <div className="bg-card-background rounded-xl border border-border p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
           <div className="flex items-center justify-between">
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-medium text-gray-600 truncate">
+              <p className="text-xs sm:text-sm font-medium text-text-secondary truncate">
                 Total Users
               </p>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary">
                 {systemStats.totalUsers}
               </p>
             </div>
@@ -100,13 +100,13 @@ const DashboardOverview = ({
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
+        <div className="bg-card-background rounded-xl border border-border p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
           <div className="flex items-center justify-between">
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-medium text-gray-600 truncate">
+              <p className="text-xs sm:text-sm font-medium text-text-secondary truncate">
                 Total Binders
               </p>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary">
                 {systemStats.totalBinders}
               </p>
             </div>
@@ -120,13 +120,13 @@ const DashboardOverview = ({
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
+        <div className="bg-card-background rounded-xl border border-border p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow">
           <div className="flex items-center justify-between">
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-medium text-gray-600 truncate">
+              <p className="text-xs sm:text-sm font-medium text-text-secondary truncate">
                 Total Cards
               </p>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary">
                 {systemStats.totalCards}
               </p>
             </div>
@@ -140,13 +140,13 @@ const DashboardOverview = ({
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow col-span-2 lg:col-span-1">
+        <div className="bg-card-background rounded-xl border border-border p-3 sm:p-4 lg:p-6 hover:shadow-lg transition-shadow col-span-2 lg:col-span-1">
           <div className="flex items-center justify-between">
             <div className="min-w-0">
-              <p className="text-xs sm:text-sm font-medium text-gray-600 truncate">
+              <p className="text-xs sm:text-sm font-medium text-text-secondary truncate">
                 Active Rules
               </p>
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary">
                 {systemStats.activeRules}
               </p>
             </div>
@@ -162,14 +162,14 @@ const DashboardOverview = ({
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6">
+      <div className="bg-card-background rounded-xl border border-border p-4 sm:p-6">
         <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
           Quick Actions
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           <button
             onClick={() => onTabChange("binder-limits")}
-            className="text-left p-3 sm:p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
+            className="text-left p-3 sm:p-4 border border-border rounded-lg hover:border-blue-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <DocumentIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0" />
@@ -184,7 +184,7 @@ const DashboardOverview = ({
 
           <button
             onClick={onSetupBinderLimits}
-            className="text-left p-3 sm:p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
+            className="text-left p-3 sm:p-4 border border-border rounded-lg hover:border-green-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <Cog6ToothIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" />
@@ -199,7 +199,7 @@ const DashboardOverview = ({
 
           <button
             onClick={onSetupContactLimits}
-            className="text-left p-3 sm:p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
+            className="text-left p-3 sm:p-4 border border-border rounded-lg hover:border-orange-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <ClockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600 flex-shrink-0" />
@@ -214,7 +214,7 @@ const DashboardOverview = ({
 
           <button
             onClick={() => onTabChange("system")}
-            className="text-left p-3 sm:p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
+            className="text-left p-3 sm:p-4 border border-border rounded-lg hover:border-purple-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto]"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <ServerIcon className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 flex-shrink-0" />
@@ -229,7 +229,7 @@ const DashboardOverview = ({
 
           <button
             onClick={() => onTabChange("static-binders")}
-            className="text-left p-3 sm:p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto] sm:col-span-2 lg:col-span-1"
+            className="text-left p-3 sm:p-4 border border-border rounded-lg hover:border-green-300 hover:shadow-md transition-all group touch-manipulation min-h-[80px] sm:min-h-[auto] sm:col-span-2 lg:col-span-1"
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <GlobeAltIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 flex-shrink-0" />

@@ -134,28 +134,28 @@ const RequestCenter = () => {
       case "completed":
       case "resolved":
       case "read":
-        return "text-green-600 bg-green-100";
+        return "text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900";
       case "in-progress":
       case "in-review":
-        return "text-yellow-600 bg-yellow-100";
+        return "text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900";
       case "rejected":
       case "closed":
-        return "text-red-600 bg-red-100";
+        return "text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900";
       default:
-        return "text-gray-600 bg-gray-100";
+        return "text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-700";
     }
   };
 
   const getPriorityColor = (priority) => {
     switch (priority) {
       case "high":
-        return "text-red-600 bg-red-50 border-red-200";
+        return "text-red-600 bg-red-50 border-red-200 dark:text-red-400 dark:bg-red-900 dark:border-red-700";
       case "medium":
-        return "text-yellow-600 bg-yellow-50 border-yellow-200";
+        return "text-yellow-600 bg-yellow-50 border-yellow-200 dark:text-yellow-400 dark:bg-yellow-900 dark:border-yellow-700";
       case "low":
-        return "text-green-600 bg-green-50 border-green-200";
+        return "text-green-600 bg-green-50 border-green-200 dark:text-green-400 dark:bg-green-900 dark:border-green-700";
       default:
-        return "text-gray-600 bg-gray-50 border-gray-200";
+        return "text-gray-600 bg-gray-50 border-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-600";
     }
   };
 
@@ -187,13 +187,13 @@ const RequestCenter = () => {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
         <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="h-6 bg-gray-200 dark:bg-gray-600 rounded w-1/4 mb-4"></div>
           <div className="space-y-3">
-            <div className="h-16 bg-gray-200 rounded"></div>
-            <div className="h-16 bg-gray-200 rounded"></div>
-            <div className="h-16 bg-gray-200 rounded"></div>
+            <div className="h-16 bg-gray-200 dark:bg-gray-600 rounded"></div>
+            <div className="h-16 bg-gray-200 dark:bg-gray-600 rounded"></div>
+            <div className="h-16 bg-gray-200 dark:bg-gray-600 rounded"></div>
           </div>
         </div>
       </div>
@@ -201,34 +201,42 @@ const RequestCenter = () => {
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200">
-      <div className="p-6 border-b border-gray-200">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
-            <DocumentTextIcon className="w-6 h-6 text-blue-600 mr-2" />
-            <h2 className="text-lg font-semibold text-gray-900">My Requests</h2>
+            <DocumentTextIcon className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-2" />
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              My Requests
+            </h2>
           </div>
         </div>
 
         {/* Summary Stats */}
         <div className="grid grid-cols-3 gap-4 mb-4">
-          <div className="text-center p-3 bg-gray-50 rounded-lg">
-            <div className="text-lg font-bold text-gray-900">
+          <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <div className="text-lg font-bold text-gray-900 dark:text-gray-100">
               {counts.pending}
             </div>
-            <div className="text-xs text-gray-600">Pending</div>
+            <div className="text-xs text-gray-600 dark:text-gray-400">
+              Pending
+            </div>
           </div>
-          <div className="text-center p-3 bg-yellow-50 rounded-lg">
-            <div className="text-lg font-bold text-yellow-800">
+          <div className="text-center p-3 bg-yellow-50 dark:bg-yellow-900 rounded-lg">
+            <div className="text-lg font-bold text-yellow-800 dark:text-yellow-200">
               {counts.inProgress}
             </div>
-            <div className="text-xs text-yellow-700">In Progress</div>
+            <div className="text-xs text-yellow-700 dark:text-yellow-300">
+              In Progress
+            </div>
           </div>
-          <div className="text-center p-3 bg-green-50 rounded-lg">
-            <div className="text-lg font-bold text-green-800">
+          <div className="text-center p-3 bg-green-50 dark:bg-green-900 rounded-lg">
+            <div className="text-lg font-bold text-green-800 dark:text-green-200">
               {counts.completed}
             </div>
-            <div className="text-xs text-green-700">Completed</div>
+            <div className="text-xs text-green-700 dark:text-green-300">
+              Completed
+            </div>
           </div>
         </div>
 
@@ -249,8 +257,8 @@ const RequestCenter = () => {
               onClick={() => setFilter(filterOption.key)}
               className={`px-3 py-1.5 text-sm rounded-full font-medium transition-colors ${
                 filter === filterOption.key
-                  ? "bg-blue-100 text-blue-700 border-blue-200"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  ? "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900 dark:text-blue-300 dark:border-blue-700"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600"
               } border`}
             >
               {filterOption.label} ({filterOption.count})
@@ -261,7 +269,7 @@ const RequestCenter = () => {
 
       <div className="max-h-96 overflow-y-auto">
         {filteredRequests.length > 0 ? (
-          <div className="divide-y divide-gray-200">
+          <div className="divide-y divide-gray-200 dark:divide-gray-700">
             {filteredRequests.map((request) => {
               const StatusIcon = getStatusIcon(request.status);
               const IconComponent = request.icon;
@@ -269,20 +277,20 @@ const RequestCenter = () => {
               return (
                 <div
                   key={request.id}
-                  className="p-4 hover:bg-gray-50 transition-colors"
+                  className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start flex-1">
                       <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 bg-${request.color}-100`}
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 bg-${request.color}-100 dark:bg-${request.color}-900`}
                       >
                         <IconComponent
-                          className={`w-4 h-4 text-${request.color}-600`}
+                          className={`w-4 h-4 text-${request.color}-600 dark:text-${request.color}-400`}
                         />
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-medium text-gray-900 truncate">
+                          <h3 className="font-medium text-gray-900 dark:text-gray-100 truncate">
                             {request.title}
                           </h3>
                           <span
@@ -293,10 +301,10 @@ const RequestCenter = () => {
                             {request.priority}
                           </span>
                         </div>
-                        <p className="text-sm text-gray-600 line-clamp-2 mb-2">
+                        <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-2">
                           {request.description}
                         </p>
-                        <div className="flex items-center gap-3 text-xs text-gray-500">
+                        <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
                           <span className="font-medium">
                             {request.typeLabel}
                           </span>
@@ -326,11 +334,11 @@ const RequestCenter = () => {
           </div>
         ) : (
           <div className="p-8 text-center">
-            <DocumentTextIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+            <DocumentTextIcon className="w-12 h-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
               No requests found
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               {filter === "all"
                 ? "You haven't submitted any feedback, feature ideas, or bug reports yet."
                 : `No requests with status "${filter}" found.`}

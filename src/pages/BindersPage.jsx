@@ -370,7 +370,7 @@ const BindersPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -378,7 +378,7 @@ const BindersPage = () => {
             {/* Title and Stats */}
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-3">
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
                   My Pokemon Binders
                 </h1>
                 {/* Subtle Binder Usage Badge */}
@@ -386,10 +386,10 @@ const BindersPage = () => {
                   <div
                     className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium self-start ${
                       limits.binders.percentage >= 100
-                        ? "bg-red-100 text-red-700"
+                        ? "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
                         : limits.binders.percentage >= 80
-                        ? "bg-amber-100 text-amber-700"
-                        : "bg-green-100 text-green-700"
+                        ? "bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300"
+                        : "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
                     }`}
                   >
                     <FolderIcon className="w-4 h-4 flex-shrink-0" />
@@ -481,18 +481,18 @@ const BindersPage = () => {
         <PublicBinderShowcase />
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 mb-8">
           <div className="flex flex-col gap-4">
             {/* Search */}
             <div className="w-full">
               <div className="relative">
-                <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
                 <input
                   type="text"
                   placeholder="Search binders..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 />
               </div>
             </div>
@@ -500,11 +500,11 @@ const BindersPage = () => {
             {/* Filters */}
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex items-center gap-2 flex-1">
-                <FunnelIcon className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                <FunnelIcon className="w-5 h-5 text-gray-400 dark:text-gray-500 flex-shrink-0" />
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="flex-1 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                  className="flex-1 border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 >
                   <option value="all">All Binders</option>
                   {user && <option value="synced">Cloud Synced</option>}
@@ -518,7 +518,7 @@ const BindersPage = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="flex-1 sm:flex-initial border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-w-0"
+                  className="flex-1 sm:flex-initial border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-w-0 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 >
                   <option value="modified">Last Modified</option>
                   <option value="created">Date Created</option>
@@ -526,13 +526,13 @@ const BindersPage = () => {
                   <option value="cards">Card Count</option>
                 </select>
 
-                <div className="flex items-center bg-gray-100 rounded-xl p-1">
+                <div className="flex items-center bg-gray-100 dark:bg-gray-700 rounded-xl p-1">
                   <button
                     onClick={() => setViewMode("grid")}
                     className={`p-2 rounded-lg transition-all ${
                       viewMode === "grid"
-                        ? "bg-white text-blue-600 shadow-sm"
-                        : "text-gray-500 hover:text-gray-700"
+                        ? "bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm"
+                        : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                     }`}
                   >
                     <Squares2X2Icon className="w-4 h-4" />
@@ -541,8 +541,8 @@ const BindersPage = () => {
                     onClick={() => setViewMode("list")}
                     className={`p-2 rounded-lg transition-all ${
                       viewMode === "list"
-                        ? "bg-white text-blue-600 shadow-sm"
-                        : "text-gray-500 hover:text-gray-700"
+                        ? "bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm"
+                        : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                     }`}
                   >
                     <QueueListIcon className="w-4 h-4" />
@@ -555,14 +555,14 @@ const BindersPage = () => {
 
         {/* Create Binder Form */}
         {showCreateForm && (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Create New Binder
             </h3>
             <form onSubmit={handleCreateBinder} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Binder Name *
                   </label>
                   <input
@@ -570,12 +570,12 @@ const BindersPage = () => {
                     value={newBinderName}
                     onChange={(e) => setNewBinderName(e.target.value)}
                     placeholder="My Pokemon Collection"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Description
                   </label>
                   <input
@@ -583,7 +583,7 @@ const BindersPage = () => {
                     value={newBinderDescription}
                     onChange={(e) => setNewBinderDescription(e.target.value)}
                     placeholder="Brief description..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                   />
                 </div>
               </div>
@@ -592,7 +592,7 @@ const BindersPage = () => {
                 <button
                   type="submit"
                   disabled={isCreating || !newBinderName.trim()}
-                  className="flex-1 sm:flex-initial px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors"
+                  className="flex-1 sm:flex-initial px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 text-white rounded-lg font-medium transition-colors"
                 >
                   {isCreating ? "Creating..." : "Create Binder"}
                 </button>
@@ -603,7 +603,7 @@ const BindersPage = () => {
                     setNewBinderName("");
                     setNewBinderDescription("");
                   }}
-                  className="flex-1 sm:flex-initial px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors"
+                  className="flex-1 sm:flex-initial px-6 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
                 >
                   Cancel
                 </button>
@@ -615,7 +615,7 @@ const BindersPage = () => {
         {/* Results Header */}
         {searchQuery || filterStatus !== "all" ? (
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-0 mb-6">
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-gray-600 dark:text-gray-400">
               {filteredAndSortedBinders.length} of {binders.length} binders
               {searchQuery && <span> matching "{searchQuery}"</span>}
             </div>
@@ -625,7 +625,7 @@ const BindersPage = () => {
                   setSearchQuery("");
                   setFilterStatus("all");
                 }}
-                className="text-sm text-blue-600 hover:text-blue-700 self-start sm:self-auto"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 self-start sm:self-auto"
               >
                 Clear filters
               </button>
@@ -636,13 +636,13 @@ const BindersPage = () => {
         {/* Binders Grid/List */}
         {filteredAndSortedBinders.length === 0 ? (
           <div className="text-center py-12 sm:py-16">
-            <FolderIcon className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-2">
+            <FolderIcon className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+            <h3 className="text-lg sm:text-xl font-medium text-gray-900 dark:text-gray-100 mb-2">
               {searchQuery || filterStatus !== "all"
                 ? "No matching binders"
                 : "No binders yet"}
             </h3>
-            <p className="text-gray-600 mb-6 max-w-md mx-auto text-sm sm:text-base px-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto text-sm sm:text-base px-4">
               {searchQuery || filterStatus !== "all"
                 ? "Try adjusting your search or filters to find what you're looking for."
                 : user
@@ -677,11 +677,13 @@ const BindersPage = () => {
                 return (
                   <div
                     key={binder.id}
-                    className={`bg-white rounded-lg border transition-all hover:shadow-md border-gray-200 hover:border-gray-300 ${
-                      isLocalOnly ? "border-orange-200 bg-orange-50" : ""
+                    className={`bg-card-background rounded-lg border transition-all hover:shadow-md border-border hover:border-gray-300 dark:hover:border-gray-600 ${
+                      isLocalOnly
+                        ? "border-orange-200 bg-orange-50 dark:bg-orange-900/20 dark:border-orange-700"
+                        : ""
                     } ${
                       isGuestBinderInaccessible
-                        ? "opacity-60 border-gray-300 bg-gray-50"
+                        ? "opacity-60 border-gray-300 bg-gray-50 dark:bg-gray-800/50 dark:border-gray-700"
                         : ""
                     }`}
                   >
@@ -709,10 +711,10 @@ const BindersPage = () => {
                                   className={`px-2 py-1 rounded-full text-xs font-medium ${(() => {
                                     const usage = getBinderCardUsage(binder);
                                     return usage.isAtLimit
-                                      ? "bg-red-100 text-red-700"
+                                      ? "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300"
                                       : usage.isNearLimit
-                                      ? "bg-amber-100 text-amber-700"
-                                      : "bg-gray-100 text-gray-600";
+                                      ? "bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300"
+                                      : "bg-secondary text-text-secondary";
                                   })()}`}
                                 >
                                   {cardCount}/{limits.cardsPerBinder.limit}
@@ -724,8 +726,8 @@ const BindersPage = () => {
                             <p
                               className={`text-sm mb-2 line-clamp-1 ${
                                 isGuestBinderInaccessible
-                                  ? "text-gray-400"
-                                  : "text-gray-600"
+                                  ? "text-text-secondary opacity-60"
+                                  : "text-text-secondary"
                               }`}
                             >
                               {binder.metadata.description}

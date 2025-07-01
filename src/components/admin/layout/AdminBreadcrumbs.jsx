@@ -16,15 +16,15 @@ export const AdminBreadcrumbs = ({ breadcrumbs }) => {
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         {/* Home/Admin Root */}
         <li className="inline-flex items-center">
-          <HomeIcon className="w-4 h-4 text-gray-400" />
-          <span className="ml-1 text-sm font-medium text-gray-500">Admin</span>
+          <HomeIcon className="w-4 h-4 text-text-secondary" />
+          <span className="ml-1 text-sm font-medium text-text-secondary">Admin</span>
         </li>
 
         {/* Breadcrumb Items */}
         {breadcrumbs.map((crumb, index) => (
           <li key={index}>
             <div className="flex items-center">
-              <ChevronRightIcon className="w-4 h-4 text-gray-400 mx-1" />
+              <ChevronRightIcon className="w-4 h-4 text-border mx-1" />
               {crumb.href ? (
                 <button
                   onClick={() => crumb.onClick && crumb.onClick()}
@@ -33,7 +33,7 @@ export const AdminBreadcrumbs = ({ breadcrumbs }) => {
                   {crumb.label}
                 </button>
               ) : (
-                <span className="text-sm font-medium text-gray-900">
+                <span className="text-sm font-medium text-text-primary">
                   {crumb.label}
                 </span>
               )}

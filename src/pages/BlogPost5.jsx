@@ -4,8 +4,8 @@ import ZoomableImage from "../components/ZoomableImage";
 
 const BlogPost5 = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen bg-background">
+      <div className="max-w-4xl mx-auto bg-card-background shadow-lg rounded-lg overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white p-8">
           <div className="flex items-center justify-between mb-4">
@@ -37,7 +37,7 @@ const BlogPost5 = () => {
         <div className="px-8 py-8 prose prose-lg max-w-none">
           {/* Introduction */}
           <section className="mb-12">
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 The thrill of collecting Pokémon cards is a unique blend of
                 nostalgia, strategy, and the pure joy of the hunt. It's the
@@ -80,11 +80,11 @@ const BlogPost5 = () => {
 
           {/* Section 1 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 1: The First-Glance Test: Spotting Obvious Fakes in
               Seconds
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Before diving into microscopic details, it is crucial to master
                 the art of triage. Many counterfeits can be identified in
@@ -202,10 +202,10 @@ const BlogPost5 = () => {
 
           {/* Section 2 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 2: The Physical Exam: Developing a "Feel" for Authenticity
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Beyond what can be seen, there is what can be felt. Experienced
                 collectors often develop a tactile muscle memory, an instinct
@@ -309,7 +309,7 @@ const BlogPost5 = () => {
 
           {/* Quick Reference Table */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Quick Reference: Real vs. Fake Checklist
             </h2>
 
@@ -317,13 +317,13 @@ const BlogPost5 = () => {
               <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Characteristic
                     </th>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Authentic Card
                     </th>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Likely Fake Card
                     </th>
                   </tr>
@@ -390,10 +390,10 @@ const BlogPost5 = () => {
 
           {/* Section 3 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 3: The Forensic Files: A Masterclass in Visual Details
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Having covered the basics, it's time to transition from a
                 general practitioner to a specialist. This section delves into
@@ -531,10 +531,10 @@ const BlogPost5 = () => {
 
           {/* Section 4 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 4: Advanced & Controversial Authentication Methods
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Beyond visual and tactile inspection, there are several "tests"
                 that have become popular in online communities. However, these
@@ -624,11 +624,11 @@ const BlogPost5 = () => {
 
           {/* Section 5 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 5: Error or Forgery? Distinguishing Valuable Misprints
               from Fakes
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 A common point of confusion for collectors arises when a card
                 has a clear defect. Is it a worthless fake or a rare and
@@ -704,10 +704,10 @@ const BlogPost5 = () => {
 
           {/* Section 6 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 6: The Collector's Shield: Your Guide to Safe Purchasing
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 The most effective way to protect your collection from fakes is
                 through proactive defense. By cultivating safe buying habits and
@@ -757,10 +757,10 @@ const BlogPost5 = () => {
 
           {/* Section 7 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 7: Damage Control: What to Do When You've Bought a Fake
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Even with the best preparation, mistakes can happen. If you find
                 that you've been sold a counterfeit card, it's crucial to know
@@ -837,10 +837,10 @@ const BlogPost5 = () => {
 
           {/* Conclusion */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Conclusion: Collect with Confidence
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 The world of Pokémon card collecting is more exciting than ever,
                 but with its rising popularity comes the unfortunate shadow of

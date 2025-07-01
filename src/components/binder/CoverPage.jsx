@@ -91,7 +91,7 @@ const CoverPage = ({
               } font-medium ${
                 showQRCode
                   ? "bg-blue-600 hover:bg-blue-700 border-blue-500 text-white"
-                  : "bg-white/90 hover:bg-white border-gray-200 text-gray-700 hover:text-gray-900"
+                  : "bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
               } backdrop-blur-sm`}
               title={showQRCode ? "Hide QR Code" : "Show QR Code for sharing"}
             >
@@ -123,21 +123,21 @@ const CoverPage = ({
                 <h2
                   className={`${
                     isMobile ? "text-lg" : "text-2xl md:text-3xl"
-                  } font-bold text-gray-900 mb-2`}
+                  } font-bold text-gray-900 dark:text-gray-100 mb-2`}
                 >
                   Scan to Share
                 </h2>
                 <p
                   className={`${
                     isMobile ? "text-sm" : "text-base"
-                  } text-gray-600`}
+                  } text-gray-600 dark:text-gray-400`}
                 >
                   Scan this QR code to share "
                   {binder?.metadata?.name || "this binder"}" with others
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-600">
                 <QRCodeSVG
                   value={shareUrl}
                   size={isMobile ? 200 : 280}
@@ -151,7 +151,7 @@ const CoverPage = ({
                 <p
                   className={`${
                     isMobile ? "text-xs" : "text-sm"
-                  } text-gray-500 break-all font-mono bg-gray-50 p-2 rounded-lg border`}
+                  } text-gray-500 dark:text-gray-400 break-all font-mono bg-gray-50 dark:bg-gray-800 p-2 rounded-lg border border-gray-200 dark:border-gray-600`}
                 >
                   {shareUrl}
                 </p>
@@ -169,14 +169,14 @@ const CoverPage = ({
                   <div
                     className={`${
                       isMobile ? "text-3xl" : "text-6xl"
-                    } font-bold text-gray-800 mb-1`}
+                    } font-bold text-gray-800 dark:text-gray-200 mb-1`}
                   >
                     pkmnbindr
                   </div>
                   <div
                     className={`${
                       isMobile ? "text-xs" : "text-lg"
-                    } text-gray-600`}
+                    } text-gray-600 dark:text-gray-400`}
                   >
                     Pokemon Card Collection Platform
                   </div>
@@ -195,7 +195,7 @@ const CoverPage = ({
                     <h1
                       className={`${
                         isMobile ? "text-xl" : "text-4xl md:text-5xl"
-                      } font-bold mb-4 text-gray-900`}
+                      } font-bold mb-4 text-gray-900 dark:text-gray-100`}
                     >
                       {binder?.metadata?.name || "Pokemon Card Collection"}
                     </h1>
@@ -347,11 +347,11 @@ const CoverPage = ({
               <h1
                 className={`${
                   isMobile ? "text-sm" : "text-lg sm:text-xl md:text-2xl"
-                } font-bold mb-2 text-gray-800`}
+                } font-bold mb-2 text-gray-800 dark:text-gray-200`}
               >
                 {binder?.metadata?.name || "Pokemon Card Collection"}
               </h1>
-              <p className="text-xs opacity-60 text-slate-400">
+              <p className="text-xs opacity-60 text-slate-400 dark:text-slate-500">
                 {isPublicView ? "Public Collection" : "Admin View"}
               </p>
             </div>
@@ -454,7 +454,7 @@ const CoverPage = ({
             } font-medium ${
               showQRCode
                 ? "bg-blue-600 hover:bg-blue-700 border-blue-500 text-white"
-                : "bg-white/90 hover:bg-white border-gray-200 text-gray-700 hover:text-gray-900"
+                : "bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
             } backdrop-blur-sm`}
             title={showQRCode ? "Hide QR Code" : "Show QR Code for sharing"}
           >
@@ -470,8 +470,8 @@ const CoverPage = ({
             isMobile ? "text-xs" : "text-sm"
           } ${
             showContent
-              ? "bg-white/90 hover:bg-white border-gray-200 text-gray-700 hover:text-gray-900"
-              : "bg-gray-800/90 hover:bg-gray-800 border-gray-600 text-white"
+              ? "bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-800 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+              : "bg-gray-800/90 dark:bg-gray-200/90 hover:bg-gray-800 dark:hover:bg-gray-200 border-gray-600 dark:border-gray-300 text-white dark:text-gray-800"
           } backdrop-blur-sm`}
           title={showContent ? "Hide cover content" : "Show cover content"}
         >
@@ -502,14 +502,14 @@ const CoverPage = ({
               <h2
                 className={`${
                   isMobile ? "text-lg" : "text-2xl md:text-3xl"
-                } font-bold text-gray-900 mb-2`}
+                } font-bold text-gray-900 dark:text-gray-100 mb-2`}
               >
                 Scan to Share
               </h2>
               <p
                 className={`${
                   isMobile ? "text-sm" : "text-base"
-                } text-gray-600`}
+                } text-gray-600 dark:text-gray-400`}
               >
                 Scan this QR code to share "
                 {binder?.metadata?.name || "this binder"}" with others
@@ -637,9 +637,9 @@ const CoverPage = ({
               {appTips.map((tip, index) => (
                 <div
                   key={index}
-                  className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-md ${
+                  className={`bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 rounded-md ${
                     isMobile ? "p-1.5" : "sm:rounded-lg p-2 sm:p-3"
-                  } border border-blue-100 ${
+                  } border border-blue-100 dark:border-blue-800 ${
                     isMobile ? "" : "hover:shadow-sm sm:hover:shadow-md"
                   } transition-shadow duration-200`}
                 >
@@ -657,7 +657,7 @@ const CoverPage = ({
                     </div>
                     <div className="min-w-0">
                       <h3
-                        className={`font-semibold text-gray-800 ${
+                        className={`font-semibold text-gray-800 dark:text-gray-200 ${
                           isMobile
                             ? "text-xs mb-0.5"
                             : "text-xs sm:text-sm mb-1"
@@ -666,7 +666,7 @@ const CoverPage = ({
                         {tip.title}
                       </h3>
                       <p
-                        className={`text-gray-600 ${
+                        className={`text-gray-600 dark:text-gray-400 ${
                           isMobile
                             ? "text-xs leading-tight"
                             : "text-xs leading-relaxed"
@@ -682,13 +682,13 @@ const CoverPage = ({
 
             {/* Discord Community Section (hidden in read-only mode) */}
             {!isReadOnly && (
-              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-md sm:rounded-lg p-3 sm:p-4 border border-indigo-200">
+              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-md sm:rounded-lg p-3 sm:p-4 border border-indigo-200 dark:border-indigo-800">
                   <div className="text-center mb-3 sm:mb-4">
-                    <h3 className="text-sm sm:text-base font-semibold text-indigo-900 mb-1">
+                    <h3 className="text-sm sm:text-base font-semibold text-indigo-900 dark:text-indigo-200 mb-1">
                       Join Our New Growing Community!
                     </h3>
-                    <p className="text-xs sm:text-sm text-indigo-700 leading-relaxed mb-3">
+                    <p className="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300 leading-relaxed mb-3">
                       Connect with fellow collectors, discuss, share binders,
                       ask questions, report bugs, and more!
                     </p>
@@ -717,13 +717,13 @@ const CoverPage = ({
 
             {/* Contact Section - Encourage feedback (hidden in read-only mode) */}
             {!isReadOnly && (
-              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-md sm:rounded-lg p-3 sm:p-4 border border-amber-200">
+              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-md sm:rounded-lg p-3 sm:p-4 border border-amber-200 dark:border-amber-800">
                   <div className="text-center mb-2 sm:mb-3">
-                    <h3 className="text-sm sm:text-base font-semibold text-amber-900 mb-1">
+                    <h3 className="text-sm sm:text-base font-semibold text-amber-900 dark:text-amber-200 mb-1">
                       Help us improve! 💡
                     </h3>
-                    <p className="text-xs sm:text-sm text-amber-700 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-amber-700 dark:text-amber-300 leading-relaxed">
                       Experience bugs? Missing features? Ideas for improvement?
                     </p>
                   </div>
@@ -733,7 +733,7 @@ const CoverPage = ({
                       onClick={() =>
                         setContactModal({ isOpen: true, type: "bug" })
                       }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 bg-amber-100 hover:bg-amber-200 border border-amber-300 rounded-md transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
                     >
                       <span>🐛</span>
                       Report Bug
@@ -742,7 +742,7 @@ const CoverPage = ({
                       onClick={() =>
                         setContactModal({ isOpen: true, type: "feature" })
                       }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 bg-amber-100 hover:bg-amber-200 border border-amber-300 rounded-md transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
                     >
                       <span>✨</span>
                       Request Feature
@@ -751,7 +751,7 @@ const CoverPage = ({
                       onClick={() =>
                         setContactModal({ isOpen: true, type: "message" })
                       }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 bg-amber-100 hover:bg-amber-200 border border-amber-300 rounded-md transition-colors duration-200"
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
                     >
                       <span>💭</span>
                       Share Feedback
@@ -763,13 +763,13 @@ const CoverPage = ({
 
             {/* Admin View Notice (shown only in read-only mode) */}
             {isReadOnly && (
-              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-md sm:rounded-lg p-3 sm:p-4 border border-blue-200">
+              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 rounded-md sm:rounded-lg p-3 sm:p-4 border border-blue-200 dark:border-blue-800">
                   <div className="text-center">
-                    <h3 className="text-sm sm:text-base font-semibold text-blue-900 mb-1">
+                    <h3 className="text-sm sm:text-base font-semibold text-blue-900 dark:text-blue-200 mb-1">
                       👁️ Admin View Mode
                     </h3>
-                    <p className="text-xs sm:text-sm text-blue-700 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
                       You are viewing this binder as an administrator. This is a
                       read-only view.
                     </p>
@@ -779,8 +779,8 @@ const CoverPage = ({
             )}
 
             {/* Footer - scales with container */}
-            <div className="text-center mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-gray-100">
-              <p className="text-xs text-gray-500">
+            <div className="text-center mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-gray-100 dark:border-gray-700">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 Created{" "}
                 {binder?.metadata?.createdAt
                   ? new Date(binder.metadata.createdAt).toLocaleDateString()
@@ -796,14 +796,14 @@ const CoverPage = ({
               <h1
                 className={`${
                   isMobile ? "text-lg" : "text-2xl sm:text-3xl md:text-4xl"
-                } font-bold text-gray-800 mb-2`}
+                } font-bold text-gray-800 dark:text-gray-200 mb-2`}
               >
                 {binder?.metadata?.name || "Pokemon Card Collection"}
               </h1>
               <p
                 className={`${
                   isMobile ? "text-sm" : "text-base sm:text-lg"
-                } text-gray-600`}
+                } text-gray-600 dark:text-gray-400`}
               >
                 {Object.keys(binder?.cards || {}).length} Cards • Created{" "}
                 {binder?.metadata?.createdAt

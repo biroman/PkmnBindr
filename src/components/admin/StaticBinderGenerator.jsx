@@ -403,7 +403,7 @@ ${sitemapEntries}
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg border border-gray-200 p-6">
+      <div className="bg-card-background rounded-lg border border-border p-6">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-lg font-medium text-gray-900 flex items-center">
@@ -539,7 +539,7 @@ ${sitemapEntries}
                     <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">
+                          <label className="block text-sm font-medium text-text-secondary mb-1">
                             URL Slug
                           </label>
                           <input
@@ -562,7 +562,7 @@ ${sitemapEntries}
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">
+                          <label className="block text-sm font-medium text-text-secondary mb-1">
                             Category
                           </label>
                           <select
@@ -625,9 +625,9 @@ ${sitemapEntries}
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Tags (comma-separated)
-                        </label>
+                        <label className="block text-sm font-medium text-text-secondary mb-1">
+                            Tags (comma-separated)
+                          </label>
                         <input
                           type="text"
                           value={binderOptions[binder.id].tags.join(", ")}
@@ -676,7 +676,7 @@ ${sitemapEntries}
 
       {/* Generated Binders List */}
       {generatedBinders.length > 0 && (
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
+        <div className="bg-card-background rounded-lg border border-border p-6">
           <h4 className="font-medium text-gray-900 mb-4">
             Generated Static Binders
           </h4>

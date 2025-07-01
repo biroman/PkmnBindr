@@ -102,9 +102,9 @@ const ConversationItem = React.memo(
 
     return (
       <div
-        className={`p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors ${
+        className={`p-4 border-b border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${
           isSelected
-            ? "bg-blue-50 border-l-4 border-blue-500"
+            ? "bg-blue-50 dark:bg-blue-900/30 border-l-4 border-blue-500"
             : "border-l-4 border-transparent"
         }`}
         onClick={() => onSelect(conversation)}
@@ -136,7 +136,7 @@ const ConversationItem = React.memo(
                   } ${
                     isOtherUserOwner
                       ? "text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text"
-                      : "text-gray-900"
+                      : "text-gray-900 dark:text-gray-100"
                   }`}
                 >
                   {otherUserName}
@@ -145,14 +145,14 @@ const ConversationItem = React.memo(
                   <Crown className="w-3 h-3 text-yellow-500 animate-pulse flex-shrink-0" />
                 )}
               </div>
-              <span className="text-xs text-gray-500 flex-shrink-0">
+              <span className="text-xs text-gray-500 dark:text-gray-400 flex-shrink-0">
                 {formatTimestamp(conversation.lastMessageAt)}
               </span>
             </div>
 
             {conversation.lastMessage && (
               <p
-                className={`text-sm text-gray-600 truncate mt-1 ${
+                className={`text-sm text-gray-600 dark:text-gray-300 truncate mt-1 ${
                   unreadCount > 0 ? "font-medium" : ""
                 }`}
               >

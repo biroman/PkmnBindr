@@ -27,7 +27,7 @@ const RulesManagementPanel = ({
 }) => {
   if (!isRulesOwner) {
     return (
-      <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+      <div className="bg-card-background rounded-xl border border-border p-8 text-center">
         <DocumentTextIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
         <h3 className="text-lg font-medium text-gray-900 mb-2">
           Access Denied
@@ -43,13 +43,13 @@ const RulesManagementPanel = ({
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-card-background rounded-xl border border-border p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+            <h2 className="text-xl font-semibold text-text-primary mb-2">
               Rules Management
             </h2>
-            <p className="text-gray-600">
+            <p className="text-text-secondary">
               Manage global rules and limits that apply to all users of the
               application.
             </p>
@@ -104,7 +104,7 @@ const RulesManagementPanel = ({
       )}
 
       {rulesLoading ? (
-        <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
+        <div className="bg-card-background rounded-xl border border-border p-8 text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading rules...</p>
         </div>
@@ -112,7 +112,7 @@ const RulesManagementPanel = ({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Rules List */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl border border-gray-200">
+            <div className="bg-card-background rounded-xl border border-border">
               <div className="px-6 py-4 border-b border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900">
                   Active Rules ({rules.length})
@@ -206,8 +206,8 @@ const RulesManagementPanel = ({
           {/* Rule Details/Create Form */}
           <div className="lg:col-span-1">
             {showCreateRuleForm ? (
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="bg-card-background rounded-xl border border-border p-6">
+                <h3 className="text-lg font-semibold text-text-primary mb-4">
                   Create New Rule
                 </h3>
                 <div className="space-y-4">
@@ -239,9 +239,9 @@ const RulesManagementPanel = ({
                 </div>
               </div>
             ) : selectedRule ? (
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <div className="bg-card-background rounded-xl border border-border p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-text-primary">
                     Rule Details
                   </h3>
                   <button
@@ -300,12 +300,12 @@ const RulesManagementPanel = ({
                 </div>
               </div>
             ) : (
-              <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
-                <DocumentTextIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 mb-2">
+              <div className="bg-card-background rounded-xl border border-border p-6 text-center">
+                <DocumentTextIcon className="w-12 h-12 text-text-secondary mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-text-primary mb-2">
                   Rule Management
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-text-secondary text-sm mb-4">
                   Select a rule from the list to view details, or create a new
                   rule to get started.
                 </p>

@@ -29,6 +29,8 @@ const BinderColorPicker = ({
     "#f97316", // Orange
     "#ec4899", // Pink
     "#6b7280", // Gray
+    "#1e293b", // Slate-800 (Dark mode friendly)
+    "#374151", // Gray-700 (Dark mode friendly)
     "#000000", // Black
     "#ffffff", // White
     "#dc2626", // Dark Red
@@ -134,19 +136,19 @@ const BinderColorPicker = ({
         />
 
         {/* Mobile Bottom Sheet */}
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-3xl shadow-2xl border-t border-gray-200 max-h-[70vh] overflow-hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-card-background rounded-t-3xl shadow-2xl border-t border-border max-h-[70vh] overflow-hidden">
           {/* Mobile Header with drag indicator */}
-          <div className="flex flex-col items-center px-4 pt-3 pb-2 border-b border-gray-200">
-            <div className="w-12 h-1 bg-gray-300 rounded-full mb-3"></div>
+          <div className="flex flex-col items-center px-4 pt-3 pb-2 border-b border-border">
+            <div className="w-12 h-1 bg-secondary rounded-full mb-3"></div>
             <div className="flex items-center justify-between w-full">
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-primary">
                 Binder Color
               </h3>
               <button
                 onClick={handleCancel}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 hover:bg-accent rounded-full transition-colors"
               >
-                <XMarkIcon className="w-5 h-5 text-gray-500" />
+                <XMarkIcon className="w-5 h-5 text-secondary" />
               </button>
             </div>
           </div>
@@ -156,17 +158,17 @@ const BinderColorPicker = ({
             {/* Color Preview */}
             <div className="mb-4">
               <div
-                className="w-full h-16 rounded-xl border-2 border-gray-200 shadow-inner"
+                className="w-full h-16 rounded-xl border-2 border-border shadow-inner"
                 style={{ backgroundColor: color }}
               />
-              <div className="mt-2 text-center text-sm text-gray-600 font-mono">
+              <div className="mt-2 text-center text-sm text-secondary font-mono">
                 {color.toUpperCase()}
               </div>
             </div>
 
             {/* Color Palette - Optimized for mobile */}
             <div className="mb-6">
-              <h4 className="text-sm font-medium text-gray-700 mb-3">
+              <h4 className="text-sm font-medium text-primary mb-3">
                 Quick Colors
               </h4>
               <div className="grid grid-cols-4 gap-3">
@@ -176,8 +178,8 @@ const BinderColorPicker = ({
                     onClick={() => handlePaletteColorClick(paletteColor)}
                     className={`w-full aspect-square rounded-xl border-2 transition-all hover:scale-105 active:scale-95 ${
                       color.toLowerCase() === paletteColor.toLowerCase()
-                        ? "border-gray-900 ring-2 ring-gray-300"
-                        : "border-gray-200 hover:border-gray-300"
+                        ? "border-slate-900 dark:border-slate-100 ring-2 ring-slate-300 dark:ring-slate-600"
+                        : "border-border hover:border-slate-300 dark:hover:border-slate-600"
                     }`}
                     style={{ backgroundColor: paletteColor }}
                     title={paletteColor}
@@ -188,7 +190,7 @@ const BinderColorPicker = ({
 
             {/* Color Picker - Compact for mobile */}
             <div className="mb-6">
-              <h4 className="text-sm font-medium text-gray-700 mb-3">
+              <h4 className="text-sm font-medium text-primary mb-3">
                 Custom Color
               </h4>
               <HexColorPicker
@@ -199,10 +201,10 @@ const BinderColorPicker = ({
             </div>
 
             {/* Mobile Actions - Sticky bottom */}
-            <div className="flex gap-3 pt-4 border-t border-gray-200 sticky bottom-0 bg-white">
+            <div className="flex gap-3 pt-4 border-t border-border sticky bottom-0 bg-card-background">
               <button
                 onClick={handleCancel}
-                className="flex-1 px-4 py-3 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors"
+                className="flex-1 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 bg-secondary hover:bg-accent rounded-xl transition-colors"
               >
                 Cancel
               </button>
@@ -225,7 +227,7 @@ const BinderColorPicker = ({
       {/* Draggable Color Picker Popup */}
       <div
         ref={popupRef}
-        className={`fixed z-50 bg-white rounded-xl shadow-2xl border border-gray-200 ${
+        className={`fixed z-50 bg-card-background rounded-xl shadow-2xl border border-border ${
           isDragging ? "cursor-grabbing" : "cursor-grab"
         }`}
         style={{
@@ -236,13 +238,13 @@ const BinderColorPicker = ({
         onMouseDown={handleMouseDown}
       >
         {/* Header */}
-        <div className="px-4 py-3 border-b border-gray-200 flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-900">Binder Color</h3>
+        <div className="px-4 py-3 border-b border-border flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-primary">Binder Color</h3>
           <button
             onClick={handleCancel}
-            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-1 hover:bg-accent rounded-full transition-colors"
           >
-            <XMarkIcon className="w-5 h-5 text-gray-500" />
+            <XMarkIcon className="w-5 h-5 text-secondary" />
           </button>
         </div>
 
@@ -251,10 +253,10 @@ const BinderColorPicker = ({
           {/* Color Preview */}
           <div className="mb-4">
             <div
-              className="w-full h-12 rounded-lg border-2 border-gray-200 shadow-inner"
+              className="w-full h-12 rounded-lg border-2 border-border shadow-inner"
               style={{ backgroundColor: color }}
             />
-            <div className="mt-2 text-center text-sm text-gray-600 font-mono">
+            <div className="mt-2 text-center text-sm text-secondary font-mono">
               {color.toUpperCase()}
             </div>
           </div>
@@ -270,7 +272,7 @@ const BinderColorPicker = ({
 
           {/* Color Palette */}
           <div className="mb-4">
-            <h4 className="text-sm font-medium text-gray-700 mb-2">
+            <h4 className="text-sm font-medium text-primary mb-2">
               Quick Colors
             </h4>
             <div className="grid grid-cols-6 gap-2">
@@ -280,8 +282,8 @@ const BinderColorPicker = ({
                   onClick={() => handlePaletteColorClick(paletteColor)}
                   className={`w-8 h-8 rounded-lg border-2 transition-all hover:scale-110 ${
                     color.toLowerCase() === paletteColor.toLowerCase()
-                      ? "border-gray-900 ring-2 ring-gray-300"
-                      : "border-gray-200 hover:border-gray-300"
+                      ? "border-slate-900 dark:border-slate-100 ring-2 ring-accent"
+                      : "border-border hover:border-slate-400 dark:hover:border-slate-500"
                   }`}
                   style={{ backgroundColor: paletteColor }}
                   title={paletteColor}
@@ -291,10 +293,10 @@ const BinderColorPicker = ({
           </div>
 
           {/* Actions */}
-          <div className="flex gap-2 pt-3 border-t border-gray-200">
+          <div className="flex gap-2 pt-3 border-t border-border">
             <button
               onClick={handleCancel}
-              className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+              className="flex-1 px-4 py-2 text-sm font-medium text-primary bg-secondary hover:bg-accent rounded-lg transition-colors"
             >
               Cancel
             </button>

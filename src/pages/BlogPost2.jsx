@@ -9,7 +9,7 @@ import ZoomableImage from "../components/ZoomableImage";
 
 const BlogPost2 = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ const BlogPost2 = () => {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+        <nav className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
           <Link to="/" className="hover:text-blue-600 transition-colors">
             Home
           </Link>
@@ -42,14 +42,16 @@ const BlogPost2 = () => {
             Blog
           </Link>
           <ChevronRightIcon className="w-4 h-4" />
-          <span className="text-gray-900">Fort Knox Guide</span>
+          <span className="text-gray-900 dark:text-gray-100">
+            Fort Knox Guide
+          </span>
         </nav>
 
         {/* Article */}
-        <article className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <article className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-12">
           {/* Article Header */}
-          <div className="px-8 py-6 border-b border-gray-100">
-            <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+          <div className="px-8 py-6 border-b border-gray-100 dark:border-gray-700 dark:border-gray-700">
+            <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
               <div className="flex items-center space-x-2">
                 <UserIcon className="w-4 h-4" />
                 <span>PkmnBindr Team</span>
@@ -62,14 +64,14 @@ const BlogPost2 = () => {
                 <ClockIcon className="w-4 h-4" />
                 <span>12 min read</span>
               </div>
-              <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">
+              <span className="bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-2 py-1 rounded-full text-xs font-medium">
                 Equipment
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Your 2025 Guide to Choosing the Right Card Binder
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               Not all binders are created equal. Discover the anatomy of a
               perfect binder, compare top brands, and find the ideal Fort Knox
               for your treasured collection.
@@ -80,7 +82,7 @@ const BlogPost2 = () => {
           <div className="px-8 py-8 prose prose-lg max-w-none">
             {/* Introduction */}
             <section className="mb-12">
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   You've just pulled it. After countless packs, the chase card
                   you've been hunting for is finally in your hands. The stunning
@@ -143,30 +145,30 @@ const BlogPost2 = () => {
 
             {/* Section 1 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Section 1: The Anatomy of a Perfect Binder
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Before you even look at brands, you need to understand the key
                   features that separate a premium, protective binder from a
                   glorified school folder.
                 </p>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 my-6">
-                  <h3 className="text-xl font-semibold text-blue-900 mb-4">
+                <div className="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-6 my-6">
+                  <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-4">
                     Binding: The Ringless Revolution
                   </h3>
-                  <p className="text-blue-800 mb-4">
+                  <p className="text-blue-800 dark:text-blue-200 mb-4">
                     The single most important feature of a modern collector's
                     binder is the binding method.
                   </p>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-blue-800 mb-2">
+                      <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
                         Ringless Binders (The Gold Standard):
                       </h4>
-                      <p className="text-blue-700">
+                      <p className="text-blue-700 dark:text-blue-300">
                         Also known as portfolio or fixed-page binders, these are
                         the safest option available. The pages are stitched
                         directly into the spine, completely eliminating the risk
@@ -176,10 +178,10 @@ const BlogPost2 = () => {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-blue-800 mb-2">
+                      <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
                         D-Ring Binders (The Acceptable Alternative):
                       </h4>
-                      <p className="text-blue-700">
+                      <p className="text-blue-700 dark:text-blue-300">
                         If you need the flexibility of adding pages, a D-ring
                         binder is the only ringed style you should consider. The
                         straight edge of the "D" allows pages to lie flat,
@@ -189,10 +191,10 @@ const BlogPost2 = () => {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-blue-800 mb-2">
+                      <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
                         O-Ring Binders (The Enemy):
                       </h4>
-                      <p className="text-blue-700">
+                      <p className="text-blue-700 dark:text-blue-300">
                         Avoid these at all costs for your valuable cards. The
                         curved shape of O-rings forces the inner pages to bend
                         around the spine, leading to permanent creases and
@@ -328,11 +330,11 @@ const BlogPost2 = () => {
 
             {/* Section 2 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Section 2: The Brand Showdown: Vault X vs. Ultra PRO vs. Dragon
                 Shield
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Three names consistently dominate the conversation for the
                   best Pokémon card binders. Here's how they stack up.
@@ -490,20 +492,20 @@ const BlogPost2 = () => {
 
             {/* Section 3 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Section 3: Specialty Binders for Specific Missions
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Beyond the big three, certain binders are designed for very
                   specific purposes.
                 </p>
 
                 <div className="bg-gray-50 rounded-lg p-6 my-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                     Toploader Binders: The Ultimate Armor
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     For your most valuable cards—the ones worth hundreds or even
                     thousands of dollars—a standard binder might not feel like
                     enough. Enter the toploader binder.
@@ -513,7 +515,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         What They Are:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         These are binders with oversized, heavy-duty pockets
                         designed to hold cards that are already encased in a
                         rigid plastic toploader. Brands like TopDeck, Gemloader,
@@ -524,7 +526,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         Why Use Them:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         They offer an unparalleled level of protection, making
                         them ideal for high-value trade binders or for storing
                         your top pulls with maximum peace of mind. It's the next
@@ -535,7 +537,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         The Trade-Off:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         Toploader binders are incredibly bulky, heavy, and can
                         be awkward to flip through. They are often considered
                         "overkill" and too expensive for an entire collection,
@@ -546,10 +548,10 @@ const BlogPost2 = () => {
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-6 my-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                     Budget Binders: Smart Storage for Bulk
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     Not every card is a chase card. For the thousands of commons
                     and uncommons that make up your "bulk," a $40 premium binder
                     is unnecessary.
@@ -559,7 +561,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         What They Are:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         Dozens of brands on Amazon (like Fafacy or DTCGBIN)
                         offer binders that mimic the design of premium
                         brands—zippered, side-loading, ringless—at a fraction of
@@ -570,7 +572,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         Why Use Them:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         They provide surprisingly good protection for the price
                         and are the most cost-effective way to organize large
                         quantities of cards that don't require Fort Knox-level
@@ -581,7 +583,7 @@ const BlogPost2 = () => {
                       <h4 className="font-semibold text-gray-800 mb-2">
                         The Trade-Off:
                       </h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         The materials are noticeably cheaper and less durable
                         than their premium counterparts. While perfect for
                         at-home storage, their long-term resilience to travel
@@ -595,10 +597,10 @@ const BlogPost2 = () => {
 
             {/* Section 4 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Section 4: The Final Verdict
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Choosing a binder is a personal decision based on your goals,
                   budget, and collection size. Here's a quick-reference chart to
@@ -609,16 +611,16 @@ const BlogPost2 = () => {
                   <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                        <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                           Binder Brand/Type
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                        <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                           Best For
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                        <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                           Key Feature
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                        <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                           Price Range
                         </th>
                       </tr>
@@ -688,10 +690,10 @@ const BlogPost2 = () => {
 
             {/* Conclusion */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Conclusion: Invest in Your Investment
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Your Pokémon card binder is more than just storage; it's an
                   investment in the longevity and value of your collection. The
@@ -735,8 +737,8 @@ const BlogPost2 = () => {
         </article>
 
         {/* Navigation to other posts */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">
+        <div className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             More Collector Guides
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -744,10 +746,10 @@ const BlogPost2 = () => {
               to="/blog/ultimate-guide-organizing-pokemon-cards"
               className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 The Ultimate Guide to Organizing Your Pokémon Cards
               </h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Master the art of collection organization with professional
                 techniques.
               </p>
@@ -756,10 +758,10 @@ const BlogPost2 = () => {
               to="/blog"
               className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 View All Articles
               </h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Browse our complete collection of Pokemon card guides and tips.
               </p>
             </Link>

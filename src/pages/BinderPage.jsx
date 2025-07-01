@@ -73,10 +73,10 @@ const BinderPage = () => {
   // Don't render if no binder selected
   if (!currentBinder) {
     return (
-      <div className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 p-4 flex items-center justify-center">
-        <div className="text-white text-center">
+      <div className="h-[calc(100vh-65px)] bg-gray-50 dark:bg-gray-900 p-4 flex items-center justify-center">
+        <div className="text-gray-900 dark:text-gray-100 text-center">
           <h2 className="text-2xl font-bold mb-4">No Binder Selected</h2>
-          <p className="text-slate-300 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             Create or select a binder to start organizing your Pokemon cards
           </p>
           <div className="space-x-4">

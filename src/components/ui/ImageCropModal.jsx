@@ -235,7 +235,7 @@ const ImageCropModal = ({ isOpen, onClose, imageSrc, onCropComplete }) => {
       />
 
       {/* Modal */}
-      <div className="relative bg-gray-800 rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+      <div className="relative bg-card-background rounded-xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 bg-gray-900 border-b border-gray-700">
           <h2 className="text-lg font-semibold text-white">
@@ -250,7 +250,7 @@ const ImageCropModal = ({ isOpen, onClose, imageSrc, onCropComplete }) => {
         </div>
 
         {/* Canvas Editor */}
-        <div className="p-6 bg-gray-800">
+        <div className="p-6 bg-card-background">
           <div className="flex justify-center mb-6">
             <div className="relative">
               <canvas
@@ -264,7 +264,7 @@ const ImageCropModal = ({ isOpen, onClose, imageSrc, onCropComplete }) => {
                 style={{ display: imageLoaded ? "block" : "none" }}
               />
               {!imageLoaded && (
-                <div className="w-[200px] h-[200px] border-4 border-gray-600 rounded-lg bg-gray-700 flex items-center justify-center">
+                <div className="w-[200px] h-[200px] border-4 border-border rounded-lg bg-background flex items-center justify-center">
                   <div className="text-gray-400 text-sm">Loading...</div>
                 </div>
               )}
@@ -276,7 +276,7 @@ const ImageCropModal = ({ isOpen, onClose, imageSrc, onCropComplete }) => {
             {/* Scale Control */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-sm font-medium text-gray-300">
+                <label className="text-sm font-medium text-text-secondary">
                   Zoom
                 </label>
                 <span className="text-xs text-gray-400">
@@ -297,7 +297,7 @@ const ImageCropModal = ({ isOpen, onClose, imageSrc, onCropComplete }) => {
             {/* Rotation Control */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-sm font-medium text-gray-300">
+                <label className="text-sm font-medium text-text-secondary">
                   Rotation
                 </label>
                 <span className="text-xs text-gray-400">{rotation}°</span>

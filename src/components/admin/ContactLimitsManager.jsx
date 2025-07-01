@@ -330,10 +330,10 @@ const ContactLimitsManager = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <h3 className="text-lg font-semibold text-text-primary mb-2">
           Contact Rate Limits
         </h3>
-        <p className="text-gray-600 text-sm">
+        <p className="text-text-secondary text-sm">
           Configure how often users can send messages and submit requests to
           prevent spam.
         </p>
@@ -423,13 +423,13 @@ const ContactLimitsManager = () => {
       {/* Limit Configuration */}
       <div className="space-y-6">
         {/* Direct Messages */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <div className="bg-card-background border border-border rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h4 className="font-medium text-gray-900">
+              <h4 className="font-medium text-text-primary">
                 💬 Direct Message Limits
               </h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-text-secondary">
                 How often users can send direct messages
               </p>
             </div>
@@ -487,13 +487,13 @@ const ContactLimitsManager = () => {
         </div>
 
         {/* Feature Requests */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <div className="bg-card-background border border-border rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h4 className="font-medium text-gray-900">
+              <h4 className="font-medium text-text-primary">
                 💡 Feature Request Limits
               </h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-text-secondary">
                 How often users can submit feature requests
               </p>
             </div>
@@ -551,13 +551,13 @@ const ContactLimitsManager = () => {
         </div>
 
         {/* Bug Reports */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <div className="bg-card-background border border-border rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h4 className="font-medium text-gray-900">
+              <h4 className="font-medium text-text-primary">
                 🐛 Bug Report Limits
               </h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-text-secondary">
                 How often users can submit bug reports
               </p>
             </div>

@@ -26,7 +26,7 @@ export const AdminLayout = ({
   breadcrumbs = [],
 }) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Main Admin Navigation */}
       <AdminNavigation
         activeTab={activeTab}
@@ -52,7 +52,7 @@ export const AdminLayout = ({
         />
 
         {/* Main Content */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+        <div className="bg-card-background rounded-lg shadow-sm border border-border overflow-hidden">
           {children}
         </div>
       </div>

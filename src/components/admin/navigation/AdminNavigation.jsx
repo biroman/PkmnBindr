@@ -107,7 +107,7 @@ const AdminNavigation = ({
       {/* Mobile Header */}
       {isMobile && (
         <div className="md:hidden mb-4">
-          <div className="flex items-center justify-between bg-white rounded-xl p-4 border border-gray-200">
+          <div className="flex items-center justify-between bg-card-background rounded-xl p-4 border border-border">
             <h1 className="text-lg font-bold text-gray-900">Admin Panel</h1>
             <button
               onClick={onToggleMobileMenu}
@@ -126,7 +126,7 @@ const AdminNavigation = ({
       {/* Navigation Tabs */}
       <div className="mb-4 sm:mb-8">
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-1 bg-white rounded-xl p-1 border border-gray-200 overflow-x-auto">
+        <nav className="hidden md:flex space-x-1 bg-card-background rounded-xl p-1 border border-border overflow-x-auto">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -151,7 +151,7 @@ const AdminNavigation = ({
 
         {/* Mobile Navigation Menu */}
         {isMobile && mobileMenuOpen && (
-          <div className="md:hidden bg-white rounded-xl border border-gray-200 mt-2 overflow-hidden">
+          <div className="md:hidden bg-card-background rounded-xl border border-border mt-2 overflow-hidden">
             <div className="divide-y divide-gray-100">
               {tabs.map((tab) => {
                 const Icon = tab.icon;

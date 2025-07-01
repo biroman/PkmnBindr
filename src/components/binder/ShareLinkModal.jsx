@@ -416,12 +416,12 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
   if (!isOpen) return null;
 
   const renderCreateForm = () => (
-    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl border border-gray-200/60 shadow-lg p-4 sm:p-6 mb-6 sm:mb-8">
+    <div className="bg-gradient-to-br from-card-background to-secondary/50 rounded-2xl border border-border shadow-lg p-4 sm:p-6 mb-6 sm:mb-8">
       <div className="flex items-center space-x-3 mb-4 sm:mb-6">
         <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
           <PlusIcon className="w-4 h-4 text-white" />
         </div>
-        <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+        <h3 className="text-lg sm:text-xl font-bold text-primary">
           {shareLinks.length > 0 ? "Replace Share Link" : "Create Share Link"}
         </h3>
       </div>
@@ -450,7 +450,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
         <div>
           <label
             htmlFor="link-description"
-            className="block text-base sm:text-sm font-semibold text-gray-800 mb-3"
+            className="block text-base sm:text-sm font-semibold text-primary mb-3"
           >
             Description
           </label>
@@ -460,16 +460,16 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
             value={newLinkDesc}
             onChange={(e) => setNewLinkDesc(e.target.value)}
             placeholder="e.g., Friends only, Tournament deck, Family sharing"
-            className="w-full px-4 py-4 sm:py-3 text-base sm:text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-white shadow-sm"
+            className="w-full px-4 py-4 sm:py-3 text-base sm:text-sm border border-border rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-card-background shadow-sm"
             maxLength={50}
           />
-          <p className="text-sm sm:text-xs text-gray-500 mt-2">
+          <p className="text-sm sm:text-xs text-secondary mt-2">
             Optional - helps you identify this link later
           </p>
         </div>
 
         <div>
-          <label className="block text-base sm:text-sm font-semibold text-gray-800 mb-4">
+          <label className="block text-base sm:text-sm font-semibold text-primary mb-4">
             Link Expiration
           </label>
           <RadioGroup.Root
@@ -481,14 +481,14 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
               <div key={option.id} className="relative">
                 <RadioGroup.Item
                   value={option.id}
-                  className="w-full p-4 min-h-[48px] rounded-xl border border-gray-200 hover:border-blue-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-white shadow-sm cursor-pointer group data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-50/50"
+                  className="w-full p-4 min-h-[48px] rounded-xl border border-border hover:border-blue-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-card-background shadow-sm cursor-pointer group data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-50 dark:data-[state=checked]:bg-blue-950"
                 >
                   <div className="flex items-center space-x-3">
                     <RadioGroup.Indicator className="w-4 h-4 rounded-full bg-blue-600 flex items-center justify-center">
                       <div className="w-1.5 h-1.5 rounded-full bg-white" />
                     </RadioGroup.Indicator>
                     <span className="text-lg">{option.icon}</span>
-                    <span className="text-base sm:text-sm font-medium text-gray-800 group-data-[state=checked]:text-blue-800">
+                    <span className="text-base sm:text-sm font-medium text-primary group-data-[state=checked]:text-blue-800 dark:group-data-[state=checked]:text-blue-200">
                       {option.label}
                     </span>
                   </div>
@@ -521,7 +521,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
         </button>
         <button
           onClick={() => setShowCreateForm(false)}
-          className="w-full min-h-[48px] border-2 border-gray-200 bg-white px-6 py-4 rounded-xl text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-semibold text-center"
+          className="w-full min-h-[48px] border-2 border-border bg-card-background px-6 py-4 rounded-xl text-primary hover:bg-accent hover:border-text-secondary transition-all duration-200 font-semibold text-center"
         >
           Cancel
         </button>
@@ -541,21 +541,21 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
     return (
       <div
         key={link.shareToken}
-        className={`bg-gradient-to-br from-white to-gray-50/30 rounded-2xl border shadow-lg transition-all duration-300 hover:shadow-xl ${
+        className={`bg-gradient-to-br from-card-background to-secondary/30 rounded-2xl border shadow-lg transition-all duration-300 hover:shadow-xl ${
           isExpired
-            ? "border-red-200 bg-gradient-to-br from-red-50 to-red-100/30"
-            : "border-gray-200/60 hover:border-gray-300"
+            ? "border-red-200 dark:border-red-800 bg-gradient-to-br from-red-50 dark:from-red-950 to-red-100/30 dark:to-red-900/30"
+            : "border-border hover:border-text-secondary"
         } p-4 sm:p-6 relative overflow-hidden`}
       >
         {/* Status Badge */}
         <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
           {isExpired ? (
-            <div className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 border border-red-200">
+            <div className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-semibold bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800">
               <ExclamationTriangleIcon className="w-3 h-3 mr-1" />
               <span className="hidden sm:inline">Expired</span>
             </div>
           ) : (
-            <div className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-200">
+            <div className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800">
               <CheckCircleIcon className="w-3 h-3 mr-1" />
               <span className="hidden sm:inline">Active</span>
             </div>
@@ -575,10 +575,10 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                 <LinkIcon className="w-5 h-5 text-white" />
               </div>
               <div className="min-w-0 flex-1">
-                <h4 className="text-lg font-bold text-gray-900 truncate">
+                <h4 className="text-lg font-bold text-primary truncate">
                   {link.description || "Share Link"}
                 </h4>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-secondary mt-1">
                   Created {formatDate(link.createdAt)}
                 </p>
               </div>
@@ -586,10 +586,10 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
           </div>
 
           {/* URL Display */}
-          <div className="bg-gray-50/80 rounded-xl p-4 border border-gray-200/60">
+          <div className="bg-secondary/80 rounded-xl p-4 border border-border">
             <div className="flex items-center space-x-2 mb-3">
-              <LinkIcon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-              <span className="font-semibold text-gray-700 text-sm">
+              <LinkIcon className="w-4 h-4 text-secondary flex-shrink-0" />
+              <span className="font-semibold text-primary text-sm">
                 Share URL
               </span>
             </div>
@@ -598,32 +598,32 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                 type="text"
                 readOnly
                 value={link.shareUrl}
-                className="w-full bg-white text-gray-700 border border-gray-200 rounded-lg p-3 pr-12 text-xs font-mono select-all shadow-sm"
+                className="w-full bg-card-background text-primary border border-border rounded-lg p-3 pr-12 text-xs font-mono select-all shadow-sm"
                 onClick={(e) => e.target.select()}
               />
               <button
                 onClick={() => handleCopyLink(link.shareUrl, link.description)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-h-[40px] min-w-[40px] rounded-md bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-h-[40px] min-w-[40px] rounded-md bg-secondary hover:bg-accent transition-colors flex items-center justify-center"
                 title="Copy URL"
                 aria-label="Copy URL to clipboard"
               >
-                <ClipboardIcon className="w-4 h-4 text-gray-600" />
+                <ClipboardIcon className="w-4 h-4 text-primary hover:text-accent-foreground" />
               </button>
             </div>
           </div>
 
           {/* QR Code Section */}
-          <div className="bg-white/80 rounded-xl p-4 border border-gray-200/60">
+          <div className="bg-card-background/80 rounded-xl p-4 border border-border">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2">
-                <QrCodeIcon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <span className="font-semibold text-gray-700 text-sm">
+                <QrCodeIcon className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span className="font-semibold text-primary text-sm">
                   QR Code
                 </span>
               </div>
               <button
                 onClick={() => toggleQRCode(link.shareToken)}
-                className="inline-flex items-center space-x-2 px-3 py-2 min-h-[40px] rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors text-sm font-medium text-gray-700"
+                className="inline-flex items-center space-x-2 px-3 py-2 min-h-[40px] rounded-lg bg-secondary hover:bg-accent transition-colors text-sm font-medium text-primary"
                 aria-label={qrVisible ? "Hide QR code" : "Show QR code"}
               >
                 {qrVisible ? (
@@ -642,7 +642,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
 
             {qrVisible && (
               <div className="flex flex-col items-center space-y-3 pt-2">
-                <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                <div className="bg-card-background p-4 rounded-xl border border-border shadow-sm">
                   <QRCodeSVG
                     value={link.shareUrl}
                     size={isMobile ? 140 : 160}
@@ -652,7 +652,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                     includeMargin={true}
                   />
                 </div>
-                <p className="text-xs text-gray-500 text-center px-4">
+                <p className="text-xs text-secondary text-center px-4">
                   Scan with your phone camera to open link directly
                 </p>
               </div>
@@ -661,42 +661,42 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
 
           {/* Link Details */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <div className="bg-white/60 rounded-xl p-4 border border-gray-200/60">
+            <div className="bg-card-background/60 rounded-xl p-4 border border-border">
               <div className="flex items-center space-x-2 mb-2">
-                <CalendarIcon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <span className="font-semibold text-gray-700 text-sm">
+                <CalendarIcon className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span className="font-semibold text-primary text-sm">
                   Expires
                 </span>
               </div>
               <p
                 className={`text-sm font-medium ${
-                  isExpired ? "text-red-600" : "text-gray-800"
+                  isExpired ? "text-red-600 dark:text-red-400" : "text-primary"
                 }`}
               >
                 {formatDate(link.expiresAt)}
               </p>
             </div>
 
-            <div className="bg-white/60 rounded-xl p-4 border border-gray-200/60">
+            <div className="bg-card-background/60 rounded-xl p-4 border border-border">
               <div className="flex items-center space-x-2 mb-2">
-                <TimeIcon className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <span className="font-semibold text-gray-700 text-sm">
+                <TimeIcon className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span className="font-semibold text-primary text-sm">
                   Created
                 </span>
               </div>
-              <p className="text-sm font-medium text-gray-800">
+              <p className="text-sm font-medium text-primary">
                 {formatDate(link.createdAt)}
               </p>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="pt-4 border-t border-gray-200/60">
+          <div className="pt-4 border-t border-border">
             <div className="grid grid-cols-2 gap-3">
               {/* Copy Button */}
               <button
                 onClick={() => handleCopyLink(link.shareUrl, link.description)}
-                className="flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
+                className="flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900 border border-blue-200/60 dark:border-blue-800/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
                 title="Copy link to clipboard"
                 aria-label="Copy link to clipboard"
               >
@@ -710,7 +710,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                   onClick={() =>
                     handleShareLink(link.shareUrl, link.description)
                   }
-                  className="flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-green-50 text-green-700 hover:bg-green-100 border border-green-200/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
+                  className="flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300 hover:bg-green-100 dark:hover:bg-green-900 border border-green-200/60 dark:border-green-800/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
                   title="Share via device apps"
                   aria-label="Share via device apps"
                 >
@@ -724,7 +724,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                 onClick={() =>
                   handleDownloadQRCode(link.shareUrl, link.description)
                 }
-                className={`flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95 ${
+                className={`flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-900 border border-purple-200/60 dark:border-purple-800/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95 ${
                   !isMobile && !navigator.share
                     ? ""
                     : "col-span-2 sm:col-span-1"
@@ -739,7 +739,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
               {/* Revoke Button */}
               <button
                 onClick={() => handleRevokeLink(link.shareToken)}
-                className="col-span-2 flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-red-50 text-red-700 hover:bg-red-100 border border-red-200/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
+                className="col-span-2 flex items-center justify-center gap-2 p-3 min-h-[48px] rounded-xl bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900 border border-red-200/60 dark:border-red-800/60 transition-all duration-200 font-medium shadow-sm hover:shadow transform-gpu active:scale-95"
                 title="Revoke link"
                 aria-label="Revoke this share link"
               >
@@ -758,7 +758,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4 transition-all duration-300">
       <div
         ref={modalRef}
-        className={`bg-white shadow-2xl w-full flex flex-col transform-gpu ${
+        className={`bg-card-background shadow-2xl w-full flex flex-col transform-gpu ${
           isMobile
             ? "rounded-t-3xl max-h-[95vh] min-h-[70vh]"
             : "rounded-2xl max-w-5xl max-h-[90vh]"
@@ -768,23 +768,23 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
         }}
       >
         {/* Header - Mobile Optimized */}
-        <div className="p-4 sm:p-6 border-b border-gray-200/60 flex items-center rounded-t-2xl justify-between flex-shrink-0 bg-gradient-to-r from-white to-gray-50/50">
+        <div className="p-4 sm:p-6 border-b border-border flex items-center rounded-t-2xl justify-between flex-shrink-0 bg-gradient-to-r from-card-background to-secondary/50">
           <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
               <ShareIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div className="min-w-0 flex-1">
-              <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              <h2 className="text-lg sm:text-xl font-bold text-primary">
                 Share Binder
               </h2>
-              <p className="text-sm text-gray-600 truncate mt-1">
+              <p className="text-sm text-secondary truncate mt-1">
                 {binder?.metadata?.name || "Unnamed Binder"} • 1 Link Max
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 min-h-[44px] min-w-[44px] rounded-xl text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-all duration-200 flex-shrink-0 flex items-center justify-center"
+            className="p-2 min-h-[44px] min-w-[44px] rounded-xl text-secondary hover:bg-accent hover:text-primary transition-all duration-200 flex-shrink-0 flex items-center justify-center"
             aria-label="Close modal"
           >
             <XMarkIcon className="w-6 h-6" />
@@ -794,7 +794,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
         {/* Pull indicator for mobile */}
         {isMobile && (
           <div className="flex justify-center py-3 cursor-grab active:cursor-grabbing">
-            <div className="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-1.5 bg-border rounded-full"></div>
           </div>
         )}
 
@@ -862,7 +862,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                 </span>
               </button>
               {shareLinks.length > 0 && (
-                <p className="text-sm text-gray-600 text-center mt-3 px-4">
+                <p className="text-sm text-secondary text-center mt-3 px-4">
                   📝 Creating a new link will automatically replace your current
                   share link
                 </p>
@@ -877,19 +877,19 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
             {loading ? (
               <div className="flex flex-col items-center justify-center py-12 sm:py-16">
                 <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
-                <p className="text-gray-500 font-medium text-base">
+                <p className="text-secondary font-medium text-base">
                   Loading share links...
                 </p>
               </div>
             ) : shareLinks.length === 0 && !showCreateForm ? (
               <div className="text-center py-12 sm:py-16">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <ShareIcon className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <ShareIcon className="w-8 h-8 sm:w-10 sm:h-10 text-secondary" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-primary mb-3">
                   No Share Link Yet
                 </h3>
-                <p className="text-gray-500 mb-6 max-w-md mx-auto px-4">
+                <p className="text-secondary mb-6 max-w-md mx-auto px-4">
                   Create a share link to share this binder with friends, family,
                   or the community. Each binder can have 1 secure share link
                   with a scannable QR code!

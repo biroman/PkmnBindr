@@ -10,6 +10,9 @@ import {
   DocumentArrowDownIcon,
   SwatchIcon,
   ExclamationTriangleIcon,
+  EllipsisVerticalIcon,
+  ArrowPathIcon,
+  DocumentTextIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -71,6 +74,7 @@ const BinderToolbar = ({
   isMobile = false,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
 
   const handleToolClick = (tool, action) => {
     setActiveTool(tool === activeTool ? null : tool);
@@ -80,96 +84,118 @@ const BinderToolbar = ({
   // Mobile layout - horizontal toolbar at top
   if (isMobile) {
     return (
-      <div className="bg-white/95 backdrop-blur-sm rounded-md border-b border-gray-200 px-4 py-2">
-        <div className="flex items-center justify-between max-w-md mx-auto">
-          {/* Primary Action - Add Card */}
-          <ToolbarButton
-            icon={PlusIcon}
-            onClick={() => handleToolClick("add", onAddCard)}
-            variant="primary"
-            title="Add Cards"
-            isMobile={true}
-          />
+      <div className="bg-card-background/95 backdrop-blur-sm rounded-md border-b border-border px-4 py-2">
+        <div className="flex items-center justify-between gap-3">
+          {/* Left side - Add Card button */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={onAddCard}
+              disabled={disabled}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-lg font-medium transition-colors shadow-sm"
+              title="Add new card to binder"
+            >
+              <PlusIcon className="w-4 h-4" />
+              <span className="hidden sm:inline">Add Card</span>
+            </button>
+          </div>
 
-          <div className="flex items-center space-x-3">
-            {/* Settings - Mobile specific */}
-            <ToolbarButton
-              icon={Cog6ToothIcon}
-              onClick={() => handleToolClick("settings", onMobileSettings)}
-              title="Binder Settings"
-              isMobile={true}
-            />
+          {/* Center - Binder name */}
+          {currentBinder?.metadata?.name && (
+            <div className="flex-1 text-center">
+              <h2 className="text-lg font-semibold text-primary truncate max-w-xs">
+                {currentBinder.metadata.name}
+              </h2>
+            </div>
+          )}
 
-            {/* Page Overview */}
-            <ToolbarButton
-              icon={Squares2X2Icon}
-              onClick={() => handleToolClick("overview", onPageOverview)}
-              title="Page Overview"
-              isMobile={true}
-            />
+          {/* Right side - Action buttons */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={onPageOverview}
+              disabled={disabled}
+              className="flex items-center gap-2 px-3 py-2 text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed rounded-lg transition-colors"
+              title="View all pages"
+            >
+              <Squares2X2Icon className="w-4 h-4" />
+              <span className="hidden lg:inline">Pages</span>
+            </button>
 
-            {/* Color Picker */}
-            <ToolbarButton
-              icon={SwatchIcon}
-              onClick={() => handleToolClick("color", onColorPicker)}
-              title="Customize Color"
-              isMobile={true}
-            />
+            <button
+              onClick={onColorPicker}
+              disabled={disabled}
+              className="flex items-center gap-2 px-3 py-2 text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed rounded-lg transition-colors"
+              title="Customize binder"
+            >
+              <SwatchIcon className="w-4 h-4" />
+              <span className="hidden lg:inline">Customize</span>
+            </button>
 
-            {/* Share - Only show for public binders */}
-            {currentBinder?.permissions?.public && onShare && (
-              <ToolbarButton
-                icon={ShareIcon}
-                onClick={() => handleToolClick("share", onShare)}
-                title="Share Binder"
-                isMobile={true}
-              />
-            )}
+            <button
+              onClick={onShare}
+              disabled={disabled}
+              className="flex items-center gap-2 px-3 py-2 text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed rounded-lg transition-colors"
+              title="Share binder"
+            >
+              <ShareIcon className="w-4 h-4" />
+              <span className="hidden lg:inline">Share</span>
+            </button>
 
-            {/* PDF Export */}
-            <div className="relative group">
-              <ToolbarButton
-                icon={DocumentArrowDownIcon}
-                onClick={() => handleToolClick("pdf", onPdfExport)}
-                title="Export PDF"
-                className={
-                  isPdfExporting ? "opacity-50 cursor-not-allowed" : ""
-                }
-                isMobile={true}
-              />
+            {/* More menu for additional actions */}
+            <div className="relative">
+              <button
+                onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
+                disabled={disabled}
+                className="flex items-center gap-2 px-3 py-2 text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed rounded-lg transition-colors"
+                title="More actions"
+              >
+                <EllipsisVerticalIcon className="w-4 h-4" />
+              </button>
 
-              {/* Warning Triangle */}
-              <div className="absolute -top-1 -right-1 z-10">
-                <ExclamationTriangleIcon className="w-4 h-4 text-yellow-500 drop-shadow-sm" />
-              </div>
-
-              {/* Warning Tooltip */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-yellow-50 border border-yellow-200 rounded-lg px-3 py-2 text-xs text-yellow-800 shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-                <div className="flex items-center gap-1">
-                  <ExclamationTriangleIcon className="w-3 h-3 text-yellow-600" />
-                  <span>Limited functionality - works best in Firefox</span>
-                </div>
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-yellow-50 border-l border-t border-yellow-200 rotate-45"></div>
-              </div>
-
-              {isPdfExporting && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gray-800/95 backdrop-blur-sm rounded-lg px-3 py-2 text-xs text-white shadow-lg whitespace-nowrap z-30">
-                  <div className="flex items-center gap-2">
-                    <div className="animate-spin rounded-full h-3 w-3 border-2 border-white border-t-transparent" />
-                    <span>Generating...</span>
+              {isMoreMenuOpen && (
+                <div className="absolute right-0 top-full mt-1 w-48 bg-card-background border border-border rounded-md shadow-lg z-50">
+                  <div className="py-1">
+                    <button
+                      onClick={() => {
+                        onExport?.();
+                        setIsMoreMenuOpen(false);
+                      }}
+                      disabled={disabled}
+                      className="w-full text-left px-4 py-2 text-sm text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed flex items-center gap-3"
+                    >
+                      <DocumentArrowDownIcon className="w-4 h-4" />
+                      Export Data
+                    </button>
+                    <button
+                      onClick={() => {
+                        onPdfExport?.();
+                        setIsMoreMenuOpen(false);
+                      }}
+                      disabled={disabled || isPdfExporting}
+                      className="w-full text-left px-4 py-2 text-sm text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed flex items-center gap-3"
+                    >
+                      {isPdfExporting ? (
+                        <ArrowPathIcon className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <DocumentTextIcon className="w-4 h-4" />
+                      )}
+                      {isPdfExporting ? "Exporting..." : "Export PDF"}
+                    </button>
+                    <hr className="my-1 border-border" />
+                    <button
+                      onClick={() => {
+                        onClearBinder?.();
+                        setIsMoreMenuOpen(false);
+                      }}
+                      disabled={disabled}
+                      className="w-full text-left px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950 disabled:text-secondary disabled:cursor-not-allowed flex items-center gap-3"
+                    >
+                      <TrashIcon className="w-4 h-4" />
+                      Clear Binder
+                    </button>
                   </div>
                 </div>
               )}
             </div>
-
-            {/* Clear Binder */}
-            <ToolbarButton
-              icon={TrashIcon}
-              onClick={() => handleToolClick("clear", onClearBinder)}
-              variant="danger"
-              title="Clear Binder"
-              isMobile={true}
-            />
           </div>
         </div>
       </div>

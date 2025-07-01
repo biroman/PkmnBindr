@@ -198,7 +198,7 @@ const BinderInteractionButtons = ({
           ${
             interactions.isLiked
               ? "bg-red-50 text-red-600 border-red-200 hover:bg-red-100"
-              : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100"
+              : "bg-card-background text-text-secondary border-border hover:bg-gray-100 dark:hover:bg-gray-800"
           }
           border rounded-lg transition-all duration-200 
           ${
@@ -242,7 +242,7 @@ const BinderInteractionButtons = ({
           ${
             interactions.isFavorited
               ? "bg-yellow-50 text-yellow-600 border-yellow-200 hover:bg-yellow-100"
-              : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100"
+              : "bg-card-background text-text-secondary border-border hover:bg-gray-100 dark:hover:bg-gray-800"
           }
           border rounded-lg transition-all duration-200 
           ${

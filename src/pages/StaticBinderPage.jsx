@@ -143,8 +143,8 @@ const StaticBinderPage = () => {
   // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4">
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="bg-card-background rounded-2xl shadow-xl p-8 max-w-md w-full mx-4">
           <div className="animate-pulse">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-blue-200 rounded-full"></div>
@@ -165,7 +165,7 @@ const StaticBinderPage = () => {
   // Error state
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center">
           <div className="text-red-500 text-6xl mb-4">⚠️</div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">
@@ -184,7 +184,7 @@ const StaticBinderPage = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="bg-background">
       {/* Main Content Layout */}
       <div className="flex h-[calc(100vh-65px)]">
         {/* Custom Sidebar for Static Binders */}

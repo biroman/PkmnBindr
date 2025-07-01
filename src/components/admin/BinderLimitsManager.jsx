@@ -258,15 +258,16 @@ const BinderLimitsManager = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white rounded-lg border border-gray-200 p-6">
-        <div className="flex items-center justify-between">
+      <div className="bg-card-background rounded-lg border border-border p-6">
+        <div className="flex justify-between items-center mb-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Binder Limits</h2>
-            <p className="text-gray-600 mt-1">
-              Configure maximum limits for user binders and content
+            <h2 className="text-xl font-bold text-text-primary">
+              Binder Limits Configuration
+            </h2>
+            <p className="text-text-secondary">
+              Manage user and binder limits across the platform
             </p>
           </div>
-
           {hasChanges() && (
             <div className="flex items-center gap-3">
               <span className="text-sm text-amber-600 font-medium">
@@ -287,14 +288,14 @@ const BinderLimitsManager = () => {
       {/* Limits Configuration */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Max Binders per User */}
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
+        <div className="bg-card-background rounded-lg border border-border p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-blue-100 rounded-lg">
               <DocumentIcon className="w-5 h-5 text-blue-600" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Max Binders</h3>
-              <p className="text-sm text-gray-600">Per user limit</p>
+              <h3 className="font-semibold text-text-primary">Max Binders</h3>
+              <p className="text-sm text-text-secondary">Per user limit</p>
             </div>
           </div>
 
@@ -372,14 +373,14 @@ const BinderLimitsManager = () => {
         </div>
 
         {/* Max Cards per Binder */}
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
+        <div className="bg-card-background rounded-lg border border-border p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-green-100 rounded-lg">
               <CogIcon className="w-5 h-5 text-green-600" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Max Cards</h3>
-              <p className="text-sm text-gray-600">Per binder limit</p>
+              <h3 className="font-semibold text-text-primary">Max Cards</h3>
+              <p className="text-sm text-text-secondary">Per binder limit</p>
             </div>
           </div>
 
@@ -458,14 +459,14 @@ const BinderLimitsManager = () => {
         </div>
 
         {/* Max Pages per Binder */}
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
+        <div className="bg-card-background rounded-lg border border-border p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-purple-100 rounded-lg">
               <UsersIcon className="w-5 h-5 text-purple-600" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Max Pages</h3>
-              <p className="text-sm text-gray-600">Per binder limit</p>
+              <h3 className="font-semibold text-text-primary">Max Pages</h3>
+              <p className="text-sm text-text-secondary">Per binder limit</p>
             </div>
           </div>
 
@@ -546,8 +547,8 @@ const BinderLimitsManager = () => {
 
       {/* Current Rule Status */}
       {Object.values(currentRules).some(Boolean) && (
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+        <div className="bg-card-background rounded-lg border border-border p-6">
+          <h3 className="font-semibold text-text-primary mb-4 flex items-center gap-2">
             <CheckCircleIcon className="w-5 h-5 text-green-500" />
             Active Binder Rules
           </h3>
@@ -557,7 +558,7 @@ const BinderLimitsManager = () => {
               if (!rule) return null;
 
               return (
-                <div key={key} className="bg-gray-50 rounded-lg p-4">
+                <div key={key} className="bg-background rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-medium text-gray-900">
                       {rule.name}

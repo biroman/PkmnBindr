@@ -6,9 +6,11 @@ const Alert = forwardRef(
     const baseClasses = "relative w-full rounded-lg border p-4";
 
     const variants = {
-      default: "bg-white text-gray-900 border-gray-200",
-      destructive: "border-red-200 text-red-700 bg-red-50",
-      success: "border-green-200 text-green-700 bg-green-50",
+      default: "bg-card-background text-text-primary border-border",
+      destructive:
+        "border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-950",
+      success:
+        "border-green-200 dark:border-green-800 text-green-700 dark:text-green-300 bg-green-50 dark:bg-green-950",
     };
 
     return (

@@ -60,6 +60,9 @@
 }
 
 body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
@@ -69,6 +72,52 @@ body {
   /* Prevent horizontal scrolling and improve drag behavior */
   overflow-x: hidden;
   position: relative;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #ffffff; /* Light background */
+  --color-foreground: #0f172a; /* Light foreground */
+  --color-card-background: #ffffff; /* Light card background */
+  --color-border: #e2e8f0; /* Light border */
+  --color-input: #ffffff; /* Light input background */
+  --color-ring: #3b82f6; /* Light ring color (blue-500) */
+  --color-primary: #2563eb; /* Light primary (blue-600) */
+  --color-primary-foreground: #ffffff; /* Light primary foreground */
+  --color-secondary: #f1f5f9; /* Light secondary (slate-100) */
+  --color-secondary-foreground: #0f172a; /* Light secondary foreground */
+  --color-muted: #f1f5f9; /* Light muted (slate-100) */
+  --color-muted-foreground: #64748b; /* Light muted foreground (slate-500) */
+  --color-accent: #e2e8f0; /* Light accent (slate-200) */
+  --color-accent-foreground: #0f172a; /* Light accent foreground */
+  --color-destructive: #ef4444; /* Light destructive (red-500) */
+  --color-destructive-foreground: #ffffff; /* Light destructive foreground */
+  --color-text-primary: #1f2937; /* gray-800 */
+  --color-text-secondary: #6b7280; /* gray-500 */
+}
+
+.dark {
+  --color-background: #020617; /* Dark background (slate-950) */
+  --color-foreground: #f8fafc; /* Dark foreground (slate-50) */
+  --color-card-background: #1e293b; /* Dark card background (slate-800) */
+  --color-border: #334155; /* Dark border (slate-700) */
+  --color-input: #1e293b; /* Dark input background (slate-800) */
+  --color-ring: #60a5fa; /* Dark ring color (blue-400) */
+  --color-primary: #3b82f6; /* Dark primary (blue-500) */
+  --color-primary-foreground: #ffffff; /* Dark primary foreground */
+  --color-secondary: #334155; /* Dark secondary (slate-700) */
+  --color-secondary-foreground: #f8fafc; /* Dark secondary foreground */
+  --color-muted: #1e293b; /* Dark muted (slate-800) */
+  --color-muted-foreground: #94a3b8; /* Dark muted foreground (slate-400) */
+  --color-accent: #334155; /* Dark accent (slate-700) */
+  --color-accent-foreground: #f8fafc; /* Dark accent foreground */
+  --color-destructive: #ef4444; /* Dark destructive (red-500) */
+  --color-destructive-foreground: #ffffff; /* Dark destructive foreground */
+  --color-text-primary: #f9fafb; /* gray-50 */
+  --color-text-secondary: #9ca3af; /* gray-400 */
 }
 
 html {
@@ -87,35 +136,35 @@ button {
 
 @layer components {
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 
   .btn-secondary {
-    @apply bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium py-2 px-4 rounded-md transition-colors duration-200;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 
   .btn-outline {
-    @apply border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200;
+    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground text-foreground font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 
   .btn-ghost {
-    @apply hover:bg-gray-100 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200;
+    @apply hover:bg-accent hover:text-accent-foreground text-foreground font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 
   .btn-destructive {
-    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 
   .input-field {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+    @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200;
   }
 
   .alert-error {
-    @apply bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md;
+    @apply bg-destructive/10 border border-destructive text-destructive px-4 py-3 rounded-md;
   }
 
   .alert-success {
-    @apply bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-md;
+    @apply bg-green-500/10 border border-green-500 text-green-500 px-4 py-3 rounded-md;
   }
 
   /* Drag and drop utilities */

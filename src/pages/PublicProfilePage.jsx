@@ -121,7 +121,7 @@ const PublicProfilePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Breadcrumb Navigation - only show when viewing someone else's profile */}
         {!isOwnProfile && (
@@ -146,7 +146,7 @@ const PublicProfilePage = () => {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="bg-white rounded-lg shadow-sm mb-6">
+        <div className="bg-card-background rounded-lg shadow-sm mb-6">
           <div className="border-b border-gray-200">
             <nav className="flex space-x-8 px-6">
               <button

@@ -148,7 +148,7 @@ const ChangelogCleanupTool = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="bg-card-background rounded-lg shadow-sm border border-border p-6">
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
           Changelog Cleanup Tool
@@ -211,7 +211,7 @@ const ChangelogCleanupTool = () => {
 
         {analysisResults && (
           <div className="mt-6 space-y-4">
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-background rounded-lg p-4">
               <h4 className="font-medium text-gray-900 mb-3">
                 Analysis Results
               </h4>
@@ -264,7 +264,7 @@ const ChangelogCleanupTool = () => {
                     {analysisResults.bloatedBinders.map((binder) => (
                       <div
                         key={binder.id}
-                        className={`flex items-center gap-3 p-3 bg-white rounded border transition-colors ${
+                        className={`flex items-center gap-3 p-3 bg-card-background rounded border transition-colors ${
                           selectedBinders.has(binder.docId)
                             ? "border-blue-500 bg-blue-50"
                             : "border-gray-200"

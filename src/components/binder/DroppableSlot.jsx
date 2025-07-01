@@ -70,16 +70,16 @@ const DroppableSlot = ({
         relative aspect-card rounded-md border-2 transition-all duration-200
         ${
           isSwapHover
-            ? "border-orange-400 bg-orange-50 border-solid shadow-lg" // Swap indicator
+            ? "border-orange-400 bg-orange-50 dark:bg-orange-950 border-solid shadow-lg" // Swap indicator
             : isEmptySlotHover
-            ? "border-blue-400 bg-blue-50 border-dashed" // Empty slot drop indicator
+            ? "border-blue-400 bg-blue-50 dark:bg-blue-950 border-dashed" // Empty slot drop indicator
             : card && !shouldShowCardBack
             ? "border-transparent"
-            : "border-gray-200 border-dashed bg-gray-50/50"
+            : "border-gray-200 dark:border-gray-700 border-dashed bg-gray-50/50 dark:bg-gray-800/50"
         }
         ${
           !card && !isReadOnly
-            ? "cursor-pointer hover:border-gray-300 hover:bg-gray-100/50"
+            ? "cursor-pointer hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-100/50 dark:hover:bg-gray-700/50"
             : ""
         }
         ${className}
@@ -123,7 +123,7 @@ const DroppableSlot = ({
                     <div className="absolute inset-0 bg-black/20 rounded-md" />
 
                     {/* Preview Card - Full size to match regular cards */}
-                    <div className="absolute inset-0 bg-white rounded-md shadow-2xl border-2 border-blue-500 overflow-hidden">
+                    <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-md shadow-2xl border-2 border-blue-500 overflow-hidden">
                       <img
                         src={card.images?.small || card.image}
                         alt={card.name}

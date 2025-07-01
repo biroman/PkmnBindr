@@ -10,7 +10,7 @@ import ZoomableImage from "../components/ZoomableImage";
 const BlogPost6 = () => {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@ const BlogPost6 = () => {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
-          <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
             <Link to="/" className="hover:text-blue-600 transition-colors">
               Home
             </Link>
@@ -37,14 +37,16 @@ const BlogPost6 = () => {
               Blog
             </Link>
             <ChevronRightIcon className="w-4 h-4" />
-            <span className="text-gray-900">TCG Tracking Apps</span>
+            <span className="text-gray-900 dark:text-gray-100">
+              TCG Tracking Apps
+            </span>
           </nav>
 
           {/* Featured Article */}
-          <article className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <article className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-12">
             {/* Article Header */}
-            <div className="px-8 py-6 border-b border-gray-100">
-              <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+            <div className="px-8 py-6 border-b border-gray-100 dark:border-gray-700">
+              <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <div className="flex items-center space-x-2">
                   <UserIcon className="w-4 h-4" />
                   <span>PkmnBindr Team</span>
@@ -54,11 +56,11 @@ const BlogPost6 = () => {
                   <span>20 min read</span>
                 </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 The Ultimate Guide to the Best Pokémon TCG Tracking Apps of
                 2025: From Scanner to Portfolio
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 Discover the top digital tools that will transform your chaotic
                 card collection into an organized, valuable, and accessible
                 portfolio.
@@ -71,7 +73,7 @@ const BlogPost6 = () => {
                   alt="Pokemon TCG tracking apps interface showing digital collection management tools"
                   className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
-                <p className="text-xs text-gray-500 mt-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
                   Image source:{" "}
                   <a
                     href="https://www.pokebeach.com/news/2024/02/1280x720-vtime0_35-take2024-02-27-07.07.33.png"
@@ -89,10 +91,10 @@ const BlogPost6 = () => {
             <div className="px-8 py-8 prose prose-lg max-w-none">
               {/* Introduction */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Introduction: Finally Tame Your Growing Collection
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     For any dedicated Pokémon TCG enthusiast, a familiar scene
                     unfolds: binders are filled to capacity, unsorted stacks of
@@ -151,11 +153,11 @@ const BlogPost6 = () => {
 
               {/* Section 2 */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   The Heavy Hitters: In-Depth Reviews of the Top Pokémon TCG
                   Apps
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     The market for Pokémon TCG collection management has matured
                     significantly, resulting in several high-quality
@@ -423,10 +425,10 @@ const BlogPost6 = () => {
 
               {/* Section 3 */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   The Specialist & The Newcomer: Other Great Options to Consider
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     Beyond the top-tier, subscription-based applications, the
                     ecosystem includes other excellent options that serve
@@ -536,11 +538,11 @@ const BlogPost6 = () => {
 
               {/* Section 4 - Comparison Table */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Feature Face-Off: The Ultimate 2025 Pokémon App Comparison
                   Table
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     To provide a clear, at-a-glance summary of the top
                     contenders, the following table consolidates the key
@@ -551,22 +553,22 @@ const BlogPost6 = () => {
                     <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             Feature
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             Collectr
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             Dex
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             Pokécardex
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             Pokellector
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                             pkmn.gg
                           </th>
                         </tr>
@@ -654,10 +656,10 @@ const BlogPost6 = () => {
 
               {/* Section 5 - Recommendations */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Choosing Your Champion: Which App is Right for YOU?
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     With the detailed analysis complete, the final decision
                     comes down to personal collecting philosophy. The "best" app
@@ -735,13 +737,13 @@ const BlogPost6 = () => {
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                         💸 For the Budget-Conscious
                       </h3>
                       <p className="text-gray-800 mb-3">
                         <strong>Recommendation: pkmn.gg or Pokellector</strong>
                       </p>
-                      <p className="text-gray-700 text-sm">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm">
                         Both offer excellent functionality without subscription
                         fees. Choose based on your primary need: deck building
                         or set tracking.
@@ -753,10 +755,10 @@ const BlogPost6 = () => {
 
               {/* Section 6 - Pro Tips */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Pro-Tips for Getting Started: Maximizing Your App Experience
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     Regardless of the chosen application, following a few best
                     practices can ensure a smooth and successful cataloging
@@ -817,10 +819,10 @@ const BlogPost6 = () => {
 
               {/* Conclusion */}
               <section className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   Conclusion: Your Collection, Supercharged & Ready to Showcase
                 </h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     In 2025, the question is no longer if a collector should use
                     a digital app, but which app best aligns with their personal
@@ -871,11 +873,11 @@ const BlogPost6 = () => {
           </article>
 
           {/* Coming Soon Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               More Articles Coming Soon
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               Stay tuned for more expert guides, collection strategies, and
               market insights for Pokemon card collectors.
             </p>

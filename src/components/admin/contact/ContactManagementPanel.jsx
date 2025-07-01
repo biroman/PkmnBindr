@@ -140,44 +140,58 @@ const ContactManagementPanel = ({
   const getStatusColor = (status, type) => {
     const statusColors = {
       message: {
-        unread: "bg-blue-100 text-blue-800",
-        read: "bg-gray-100 text-gray-600",
+        unread: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        read: "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400",
       },
       feature: {
-        received: "bg-blue-100 text-blue-800",
-        "in-progress": "bg-orange-100 text-orange-800",
-        completed: "bg-green-100 text-green-800",
-        rejected: "bg-gray-100 text-gray-600",
+        received:
+          "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        "in-progress":
+          "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200",
+        completed:
+          "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
+        rejected:
+          "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400",
       },
       bug: {
-        new: "bg-blue-100 text-blue-800",
-        investigating: "bg-yellow-100 text-yellow-800",
-        resolved: "bg-green-100 text-green-800",
-        "wont-fix": "bg-gray-100 text-gray-600",
+        new: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200",
+        investigating:
+          "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200",
+        resolved:
+          "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200",
+        "wont-fix":
+          "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400",
       },
     };
-    return statusColors[type]?.[status] || "bg-gray-100 text-gray-600";
+    return (
+      statusColors[type]?.[status] ||
+      "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+    );
   };
 
   const getPriorityIcon = (priority) => {
     const priorityConfig = {
       high: {
         label: "High",
-        color: "bg-red-100 text-red-800 border-red-200",
+        color:
+          "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 border-red-200 dark:border-red-700",
       },
       medium: {
         label: "Medium",
-        color: "bg-yellow-100 text-yellow-800 border-yellow-200",
+        color:
+          "bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 border-yellow-200 dark:border-yellow-700",
       },
       low: {
         label: "Low",
-        color: "bg-green-100 text-green-800 border-green-200",
+        color:
+          "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 border-green-200 dark:border-green-700",
       },
     };
 
     const config = priorityConfig[priority] || {
       label: "Normal",
-      color: "bg-gray-100 text-gray-600 border-gray-200",
+      color:
+        "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700",
     };
 
     return (
@@ -307,54 +321,54 @@ const ContactManagementPanel = ({
         <div className="space-y-6">
           {/* Summary Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div className="bg-card-background rounded-lg border border-border p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-text-secondary">
                     Messages
                   </span>
                 </div>
-                <span className="text-lg font-bold text-gray-900">
+                <span className="text-lg font-bold text-text-primary">
                   {contactData.messageThreads.length}
                 </span>
               </div>
             </div>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div className="bg-card-background rounded-lg border border-border p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Lightbulb className="w-5 h-5 text-green-600" />
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-text-secondary">
                     Features
                   </span>
                 </div>
-                <span className="text-lg font-bold text-gray-900">
+                <span className="text-lg font-bold text-text-primary">
                   {contactData.featureRequests.length}
                 </span>
               </div>
             </div>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div className="bg-card-background rounded-lg border border-border p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Bug className="w-5 h-5 text-red-600" />
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-text-secondary">
                     Bugs
                   </span>
                 </div>
-                <span className="text-lg font-bold text-gray-900">
+                <span className="text-lg font-bold text-text-primary">
                   {contactData.bugReports.length}
                 </span>
               </div>
             </div>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div className="bg-card-background rounded-lg border border-border p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <BarChart3 className="w-5 h-5 text-purple-600" />
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-text-secondary">
                     Total
                   </span>
                 </div>
-                <span className="text-lg font-bold text-gray-900">
+                <span className="text-lg font-bold text-text-primary">
                   {allItems.length}
                 </span>
               </div>

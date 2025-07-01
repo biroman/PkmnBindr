@@ -10,7 +10,7 @@ const EditButton = ({ onClick, className = "", size = "sm" }) => {
   return (
     <button
       onClick={onClick}
-      className={`p-1 text-gray-800 hover:text-gray-600 hover:bg-gray-100 rounded transition-all ${className}`}
+      className={`p-1 text-text-primary hover:text-text-secondary hover:bg-background rounded transition-all ${className}`}
       title="Edit"
     >
       <PencilIcon className={sizeClasses[size]} />

@@ -123,12 +123,12 @@ const MessagesPage = () => {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center p-4">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Access Denied
           </h1>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             Please log in to view your messages.
           </p>
           <Link to="/auth/login">
@@ -141,12 +141,12 @@ const MessagesPage = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center text-center p-4">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center text-center p-4">
         <div>
-          <h1 className="text-2xl font-bold text-red-600 mb-4">
+          <h1 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">
             Error Loading Messages
           </h1>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             {error.message || "Failed to load conversations."}
           </p>
           <Button onClick={() => window.location.reload()}>Retry</Button>
@@ -159,12 +159,12 @@ const MessagesPage = () => {
   const showConversationList = isMobile ? selectedConversation === null : true;
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="mb-8"></div>
 
         <div
-          className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
+          className="bg-card-background rounded-xl shadow-lg border border-border overflow-hidden"
           style={{ height: "calc(100vh - 200px)" }}
         >
           <div className="flex h-full">

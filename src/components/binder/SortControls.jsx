@@ -119,26 +119,26 @@ const SortControls = ({
             onClick={() => !disabled && setIsDropdownOpen(!isDropdownOpen)}
             disabled={disabled}
             className={`
-              w-full flex items-center justify-between gap-2 px-3 py-2 bg-white border border-gray-300 rounded-md
-              text-sm font-medium text-gray-700 shadow-sm
+              w-full flex items-center justify-between gap-2 px-3 py-2 bg-card-background border border-border rounded-md
+              text-sm font-medium text-primary shadow-sm
               transition-all duration-200
               ${
                 disabled
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:bg-gray-50 hover:border-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  : "hover:bg-accent hover:border-text-secondary focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               }
               ${isDropdownOpen ? "ring-2 ring-blue-500 border-blue-500" : ""}
             `}
             title="Sort binder cards"
           >
             <div className="flex items-center gap-2">
-              {renderIcon(currentSortInfo.icon, "w-4 h-4 text-gray-500")}
-              <span className="text-gray-700 font-medium">
+              {renderIcon(currentSortInfo.icon, "w-4 h-4 text-secondary")}
+              <span className="text-primary font-medium">
                 {currentSortInfo.label}
               </span>
             </div>
             <ChevronDownIcon
-              className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+              className={`w-4 h-4 text-secondary transition-transform duration-200 ${
                 isDropdownOpen ? "rotate-180" : ""
               }`}
             />
@@ -148,7 +148,7 @@ const SortControls = ({
           {isDropdownOpen && (
             <div
               ref={dropdownRef}
-              className="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-50"
+              className="absolute top-full left-0 mt-1 w-full bg-card-background border border-border rounded-md shadow-lg z-50"
             >
               <div className="py-1">
                 {sortOptions.map((option) => (
@@ -160,15 +160,15 @@ const SortControls = ({
                       transition-colors duration-150
                       ${
                         option.value === currentSortBy
-                          ? "bg-blue-50 text-blue-700"
-                          : "text-gray-700 hover:bg-gray-50"
+                          ? "bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300"
+                          : "text-primary hover:bg-accent"
                       }
                     `}
                   >
-                    {renderIcon(option.icon, "w-4 h-4 text-gray-500")}
+                    {renderIcon(option.icon, "w-4 h-4 text-secondary")}
                     <span className="flex-1">{option.label}</span>
                     {option.value === currentSortBy && (
-                      <CheckIcon className="w-4 h-4 text-blue-600" />
+                      <CheckIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     )}
                   </button>
                 ))}
@@ -183,13 +183,13 @@ const SortControls = ({
             onClick={handleToggleDirection}
             disabled={disabled || !supportsDirection}
             className={`
-              flex-shrink-0 flex items-center justify-center gap-2 px-3 py-2 bg-white border rounded-md
-              text-sm font-medium text-gray-700 shadow-sm
+              flex-shrink-0 flex items-center justify-center gap-2 px-3 py-2 bg-card-background border border-border rounded-md
+              text-sm font-medium text-primary shadow-sm
               transition-all duration-200
               ${
                 disabled || !supportsDirection
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:bg-gray-50 hover:border-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  : "hover:bg-accent hover:border-text-secondary focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               }
             `}
             title={
@@ -199,9 +199,9 @@ const SortControls = ({
             }
           >
             {currentSortDirection === "asc" ? (
-              <SortAsc className="w-4 h-4 text-gray-500" />
+              <SortAsc className="w-4 h-4 text-secondary" />
             ) : (
-              <SortDesc className="w-4 h-4 text-gray-500" />
+              <SortDesc className="w-4 h-4 text-secondary" />
             )}
             <span className="hidden sm:inline">
               {currentDirectionInfo.label || "N/A"}
@@ -222,8 +222,8 @@ const SortControls = ({
               flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-md border transition-colors
               ${
                 disabled
-                  ? "text-gray-400 border-gray-200 cursor-not-allowed"
-                  : "text-blue-600 border-blue-200 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-300"
+                  ? "text-secondary border-border cursor-not-allowed"
+                  : "text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-700 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950 hover:border-blue-300 dark:hover:border-blue-600"
               }
             `}
               title="Customize type order"
@@ -238,7 +238,7 @@ const SortControls = ({
         <div className="flex items-center gap-2">
           <span
             className={`text-sm font-medium whitespace-nowrap ${
-              currentSortBy === "custom" ? "text-gray-400" : "text-gray-700"
+              currentSortBy === "custom" ? "text-secondary" : "text-primary"
             }`}
             title={
               currentSortBy === "custom"
@@ -253,11 +253,11 @@ const SortControls = ({
             disabled={disabled || currentSortBy === "custom"}
             className={`
               relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent 
-              transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+              transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800
               ${
                 autoSort && currentSortBy !== "custom"
                   ? "bg-blue-600"
-                  : "bg-gray-200"
+                  : "bg-gray-200 dark:bg-gray-600"
               }
               ${
                 disabled || currentSortBy === "custom"

@@ -88,12 +88,12 @@ const ConversationView = ({
 
   if (!selectedConversation) {
     return (
-      <div className="hidden md:flex flex-1 flex-col items-center justify-center bg-gray-50 p-8 text-center">
-        <ChatBubbleLeftRightIcon className="w-20 h-20 text-gray-300 mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800 mb-1">
+      <div className="hidden md:flex flex-1 flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 p-8 text-center">
+        <ChatBubbleLeftRightIcon className="w-20 h-20 text-gray-300 dark:text-gray-600 mb-4" />
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1">
           Select a Conversation
         </h3>
-        <p className="text-gray-500 max-w-xs">
+        <p className="text-gray-500 dark:text-gray-400 max-w-xs">
           Choose a conversation from the left to start messaging or view past
           discussions.
         </p>
@@ -111,15 +111,15 @@ const ConversationView = ({
   };
 
   return (
-    <div className="flex flex-col w-full h-full bg-white">
+    <div className="flex flex-col w-full h-full bg-white dark:bg-gray-800">
       {/* Chat Header */}
-      <div className="p-4 border-b border-gray-200 bg-gray-50 flex-shrink-0">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 flex-shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             {onBack && (
               <button
                 onClick={onBack}
-                className="p-2 text-gray-500 hover:text-gray-800 md:hidden"
+                className="p-2 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 md:hidden"
                 aria-label="Back to conversations"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
@@ -127,7 +127,7 @@ const ConversationView = ({
             )}
             <UserAvatar user={otherUserProfile} size="sm" />
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                 {otherUserProfile.displayName}
               </h3>
             </div>
@@ -136,18 +136,18 @@ const ConversationView = ({
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen((prev) => !prev)}
-                className="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100"
+                className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <EllipsisVerticalIcon className="w-5 h-5" />
               </button>
               {dropdownOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-10">
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-10">
                   <button
                     onClick={() => {
                       onDeleteConversation(selectedConversation.id);
                       setDropdownOpen(false);
                     }}
-                    className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                    className="flex items-center w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/50"
                   >
                     <TrashIcon className="w-4 h-4 mr-3" />
                     Delete Conversation
@@ -167,11 +167,13 @@ const ConversationView = ({
           </div>
         ) : messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full text-center">
-            <ChatBubbleLeftRightIcon className="w-16 h-16 text-gray-300 mb-4" />
-            <h3 className="text-lg font-medium text-gray-800 mb-1">
+            <ChatBubbleLeftRightIcon className="w-16 h-16 text-gray-300 dark:text-gray-600 mb-4" />
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-1">
               No messages yet
             </h3>
-            <p className="text-gray-500">Be the first to send a message!</p>
+            <p className="text-gray-500 dark:text-gray-400">
+              Be the first to send a message!
+            </p>
           </div>
         ) : (
           messages.map((message) => (
@@ -189,7 +191,7 @@ const ConversationView = ({
       </div>
 
       {/* Message Input */}
-      <div className="p-4 border-t border-gray-200 bg-gray-50">
+      <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900">
         <form
           onSubmit={handleSendMessage}
           className="flex space-x-3 items-start"
@@ -200,7 +202,7 @@ const ConversationView = ({
               onChange={(e) => setNewMessage(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type a message..."
-              className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 pr-12 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+              className="w-full resize-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 px-4 py-2 pr-12 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
               disabled={sendingMessage}
               rows={1}
               style={{ minHeight: "2.5rem", maxHeight: "8rem" }}
@@ -215,7 +217,7 @@ const ConversationView = ({
                 ref={emojiButtonRef}
                 type="button"
                 onClick={() => setShowEmojiPicker((prev) => !prev)}
-                className="rounded-full p-2 text-gray-500 hover:bg-gray-100"
+                className="rounded-full p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                 aria-label="Add emoji"
               >
                 <FaceSmileIcon className="h-5 w-5" />
@@ -242,7 +244,7 @@ const ConversationView = ({
             )}
           </Button>
         </form>
-        <p className="mt-1 text-xs text-gray-400 text-center">
+        <p className="mt-1 text-xs text-gray-400 dark:text-gray-500 text-center">
           Shift + Enter for new line
         </p>
       </div>

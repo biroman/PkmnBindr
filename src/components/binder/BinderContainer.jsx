@@ -17,6 +17,8 @@ import { useBinderContext } from "../../contexts/BinderContext";
 import { Button } from "../ui/Button";
 import { pdfExportService } from "../../services/PdfExportService";
 import { Settings } from "lucide-react";
+import { useTheme } from "../../contexts/ThemeContext";
+import { getThemeAwareBinderColor } from "../../utils/themeUtils";
 
 /**
  * Default feature configuration for different modes
@@ -143,10 +145,10 @@ export const BinderContainer = ({
     }
 
     return (
-      <div className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 p-4 flex items-center justify-center">
-        <div className="text-white text-center">
+      <div className="h-[calc(100vh-65px)] bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-900 dark:to-black p-4 flex items-center justify-center">
+        <div className="text-text-primary text-center">
           <h2 className="text-2xl font-bold mb-4">No Binder Selected</h2>
-          <p className="text-slate-300 mb-6">
+          <p className="text-text-secondary mb-6">
             Create or select a binder to start organizing your Pokemon cards
           </p>
         </div>
@@ -459,11 +461,19 @@ export const BinderContainer = ({
   const sidebarWidth =
     features.sidebar && !isSidebarCollapsed && !isMobile ? 320 : 0;
 
-  // Get the current binder color (preview or saved)
-  const currentDisplayColor =
-    binderModals.modalData.previewColor ||
-    binder?.settings?.binderColor ||
-    "#ffffff";
+  // Get the current theme
+  const { theme } = useTheme();
+
+  // Get the current binder color (preview or saved) with theme awareness
+  const currentDisplayColor = (() => {
+    // If there's a preview color (from color picker), use it
+    if (binderModals.modalData.previewColor) {
+      return binderModals.modalData.previewColor;
+    }
+
+    // Otherwise, get theme-aware color
+    return getThemeAwareBinderColor(binder?.settings?.binderColor, theme);
+  })();
 
   return (
     <div
@@ -630,11 +640,11 @@ export const BinderContainer = ({
         >
           <button
             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-            className="p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 flex items-center gap-2"
+            className="p-3 bg-card-background/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-card-background hover:shadow-xl transition-all duration-200 flex items-center gap-2 border border-border"
             title={isSidebarCollapsed ? "Open sidebar" : "Close sidebar"}
           >
-            <Settings className="w-5 h-5 text-gray-700" />
-            <span className="text-sm font-medium text-gray-700">
+            <Settings className="w-5 h-5 text-secondary" />
+            <span className="text-sm font-medium text-primary">
               {isSidebarCollapsed ? "Settings" : "Hide"}
             </span>
           </button>

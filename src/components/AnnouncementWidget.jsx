@@ -126,15 +126,23 @@ const AnnouncementWidget = ({ className = "" }) => {
   const getTypeIcon = (type) => {
     switch (type) {
       case "feature":
-        return <Lightbulb className="w-4 h-4 text-green-600" />;
+        return (
+          <Lightbulb className="w-4 h-4 text-green-600 dark:text-green-400" />
+        );
       case "bugfix":
-        return <Bug className="w-4 h-4 text-red-600" />;
+        return <Bug className="w-4 h-4 text-red-600 dark:text-red-400" />;
       case "maintenance":
-        return <Cog6ToothIcon className="w-4 h-4 text-orange-600" />;
+        return (
+          <Cog6ToothIcon className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+        );
       case "announcement":
-        return <MegaphoneIcon className="w-4 h-4 text-blue-600" />;
+        return (
+          <MegaphoneIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+        );
       default:
-        return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
+        return (
+          <InformationCircleIcon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+        );
     }
   };
 
@@ -156,15 +164,15 @@ const AnnouncementWidget = ({ className = "" }) => {
   const getTypeColor = (type) => {
     switch (type) {
       case "feature":
-        return "text-green-600 bg-green-50 border-green-200";
+        return "text-green-600 bg-green-50 border-green-200 dark:text-green-400 dark:bg-green-900 dark:border-green-700";
       case "bugfix":
-        return "text-red-600 bg-red-50 border-red-200";
+        return "text-red-600 bg-red-50 border-red-200 dark:text-red-400 dark:bg-red-900 dark:border-red-700";
       case "maintenance":
-        return "text-orange-600 bg-orange-50 border-orange-200";
+        return "text-orange-600 bg-orange-50 border-orange-200 dark:text-orange-400 dark:bg-orange-900 dark:border-orange-700";
       case "announcement":
-        return "text-blue-600 bg-blue-50 border-blue-200";
+        return "text-blue-600 bg-blue-50 border-blue-200 dark:text-blue-400 dark:bg-blue-900 dark:border-blue-700";
       default:
-        return "text-gray-600 bg-gray-50 border-gray-200";
+        return "text-gray-600 bg-gray-50 border-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-600";
     }
   };
 
@@ -183,14 +191,14 @@ const AnnouncementWidget = ({ className = "" }) => {
   if (loading) {
     return (
       <div
-        className={`bg-white rounded-xl border border-gray-200 p-6 ${className}`}
+        className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 ${className}`}
       >
         <div className="animate-pulse">
-          <div className="h-4 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded w-1/4 mb-4"></div>
           <div className="space-y-3">
-            <div className="h-3 bg-gray-200 rounded w-full"></div>
-            <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-            <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+            <div className="h-3 bg-gray-200 dark:bg-gray-600 rounded w-full"></div>
+            <div className="h-3 bg-gray-200 dark:bg-gray-600 rounded w-3/4"></div>
+            <div className="h-3 bg-gray-200 dark:bg-gray-600 rounded w-1/2"></div>
           </div>
         </div>
       </div>
@@ -203,16 +211,18 @@ const AnnouncementWidget = ({ className = "" }) => {
 
   return (
     <div
-      className={`bg-white rounded-xl border border-gray-200 shadow-sm ${className}`}
+      className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm ${className}`}
     >
       {/* Header */}
       <div
-        className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
+        className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
         onClick={handleToggleExpanded}
       >
         <div className="flex items-center gap-3">
-          <MegaphoneIcon className="w-5 h-5 text-purple-600" />
-          <h3 className="font-semibold text-gray-900">What's New</h3>
+          <MegaphoneIcon className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            What's New
+          </h3>
           {unreadCount > 0 && (
             <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full text-xs font-bold bg-red-500 text-white">
               {unreadCount}
@@ -220,9 +230,9 @@ const AnnouncementWidget = ({ className = "" }) => {
           )}
         </div>
         {isExpanded ? (
-          <ChevronUpIcon className="w-5 h-5 text-gray-400" />
+          <ChevronUpIcon className="w-5 h-5 text-gray-400 dark:text-gray-500" />
         ) : (
-          <ChevronDownIcon className="w-5 h-5 text-gray-400" />
+          <ChevronDownIcon className="w-5 h-5 text-gray-400 dark:text-gray-500" />
         )}
       </div>
 
@@ -233,7 +243,7 @@ const AnnouncementWidget = ({ className = "" }) => {
             {displayedAnnouncements.map((announcement) => (
               <div
                 key={announcement.id}
-                className="flex gap-3 p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
+                className="flex gap-3 p-3 rounded-lg border border-gray-100 dark:border-gray-600 hover:border-gray-200 dark:hover:border-gray-500 transition-colors"
               >
                 <div className="flex-shrink-0 mt-1">
                   {getTypeIcon(announcement.type)}
@@ -241,7 +251,7 @@ const AnnouncementWidget = ({ className = "" }) => {
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <h4 className="font-medium text-gray-900 text-sm line-clamp-1">
+                    <h4 className="font-medium text-gray-900 dark:text-gray-100 text-sm line-clamp-1">
                       {announcement.title}
                       {getPriorityIcon(announcement.priority) && (
                         <span className="ml-1">
@@ -260,11 +270,11 @@ const AnnouncementWidget = ({ className = "" }) => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-2 line-clamp-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-2 line-clamp-4">
                     {announcement.content}
                   </p>
 
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-gray-500 dark:text-gray-500">
                     {formatTimeAgo(announcement.createdAt)}
                   </div>
                 </div>
@@ -274,10 +284,10 @@ const AnnouncementWidget = ({ className = "" }) => {
 
           {/* Show More/Less Button */}
           {announcements.length > 2 && (
-            <div className="mt-4 pt-3 border-t border-gray-100">
+            <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-600">
               <button
                 onClick={handleShowMore}
-                className="w-full text-sm text-purple-600 hover:text-purple-800 font-medium"
+                className="w-full text-sm text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-medium"
               >
                 {showAll
                   ? "Show Less"

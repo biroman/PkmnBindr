@@ -340,7 +340,7 @@ const AnnouncementManagement = ({
       )}
 
       {/* Announcements List */}
-      <div className="bg-white rounded-xl border border-gray-200">
+      <div className="bg-card-background rounded-xl border border-border overflow-hidden">
         <div className="px-6 py-4 border-b border-gray-200">
           <h2 className="text-lg font-semibold text-gray-900">
             All Announcements ({announcements.length})

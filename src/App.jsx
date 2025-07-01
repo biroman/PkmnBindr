@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 
+import { ThemeProvider } from "./contexts/ThemeContext";
 import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
 import { CardCacheProvider } from "./contexts/CardCacheContext";
@@ -75,122 +76,124 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <RulesProvider>
-        <CardCacheProvider>
-          <BinderProvider>
-            <BinderCardCustomizationProvider>
-              <BrowserRouter>
-                <ScrollToTop />
-                <Routes>
-                  {/* Shared Binder Route - Outside RootLayout (no navbar) */}
-                  <Route
-                    path="share/:shareToken"
-                    element={<SharedBinderPage />}
-                  />
-
-                  {/* Public Routes */}
-                  <Route path="/" element={<RootLayout />}>
-                    <Route index element={<HomePage />} />
-                    <Route path="binders" element={<BindersPage />} />
+      <ThemeProvider>
+        <RulesProvider>
+          <CardCacheProvider>
+            <BinderProvider>
+              <BinderCardCustomizationProvider>
+                <BrowserRouter>
+                  <ScrollToTop />
+                  <Routes>
+                    {/* Shared Binder Route - Outside RootLayout (no navbar) */}
                     <Route
-                      path="binders/:slug"
-                      element={<StaticBinderPage />}
-                    />
-                    <Route path="binder/:id" element={<BinderPage />} />
-                    <Route
-                      path="binder"
-                      element={<Navigate to="/binders" replace />}
+                      path="share/:shareToken"
+                      element={<SharedBinderPage />}
                     />
 
-                    {/* Privacy Policy - Accessible to everyone */}
-                    <Route path="privacy" element={<PrivacyPolicyPage />} />
+                    {/* Public Routes */}
+                    <Route path="/" element={<RootLayout />}>
+                      <Route index element={<HomePage />} />
+                      <Route path="binders" element={<BindersPage />} />
+                      <Route
+                        path="binders/:slug"
+                        element={<StaticBinderPage />}
+                      />
+                      <Route path="binder/:id" element={<BinderPage />} />
+                      <Route
+                        path="binder"
+                        element={<Navigate to="/binders" replace />}
+                      />
 
-                    {/* Contact - Accessible to everyone */}
-                    <Route path="contact" element={<ContactPage />} />
+                      {/* Privacy Policy - Accessible to everyone */}
+                      <Route path="privacy" element={<PrivacyPolicyPage />} />
 
-                    {/* Blog - Accessible to everyone */}
-                    <Route path="blog" element={<BlogIndexPage />} />
-                    <Route
-                      path="blog/ultimate-guide-organizing-pokemon-cards"
-                      element={<BlogPost1 />}
-                    />
-                    <Route
-                      path="blog/fort-knox-pokemon-card-binder-guide-2025"
-                      element={<BlogPost2 />}
-                    />
-                    <Route
-                      path="blog/best-pokemon-card-binders-2025-complete-guide"
-                      element={<BlogPost3 />}
-                    />
-                    <Route
-                      path="blog/ultimate-pokemon-binder-showdown-2025"
-                      element={<BlogPost4 />}
-                    />
-                    <Route
-                      path="blog/how-to-spot-fake-pokemon-cards-protect-collection"
-                      element={<BlogPost5 />}
-                    />
-                    <Route
-                      path="blog/best-pokemon-tcg-tracking-apps-2025-guide"
-                      element={<BlogPost6 />}
-                    />
+                      {/* Contact - Accessible to everyone */}
+                      <Route path="contact" element={<ContactPage />} />
 
-                    {/* FAQ - Accessible to everyone */}
-                    <Route path="faq" element={<FAQPage />} />
+                      {/* Blog - Accessible to everyone */}
+                      <Route path="blog" element={<BlogIndexPage />} />
+                      <Route
+                        path="blog/ultimate-guide-organizing-pokemon-cards"
+                        element={<BlogPost1 />}
+                      />
+                      <Route
+                        path="blog/fort-knox-pokemon-card-binder-guide-2025"
+                        element={<BlogPost2 />}
+                      />
+                      <Route
+                        path="blog/best-pokemon-card-binders-2025-complete-guide"
+                        element={<BlogPost3 />}
+                      />
+                      <Route
+                        path="blog/ultimate-pokemon-binder-showdown-2025"
+                        element={<BlogPost4 />}
+                      />
+                      <Route
+                        path="blog/how-to-spot-fake-pokemon-cards-protect-collection"
+                        element={<BlogPost5 />}
+                      />
+                      <Route
+                        path="blog/best-pokemon-tcg-tracking-apps-2025-guide"
+                        element={<BlogPost6 />}
+                      />
 
-                    {/* Auth Routes - Only accessible when not logged in */}
-                    <Route element={<PublicRoute />}>
-                      <Route path="auth" element={<AuthLayout />}>
-                        <Route path="login" element={<LoginPage />} />
-                        <Route path="register" element={<RegisterPage />} />
+                      {/* FAQ - Accessible to everyone */}
+                      <Route path="faq" element={<FAQPage />} />
+
+                      {/* Auth Routes - Only accessible when not logged in */}
+                      <Route element={<PublicRoute />}>
+                        <Route path="auth" element={<AuthLayout />}>
+                          <Route path="login" element={<LoginPage />} />
+                          <Route path="register" element={<RegisterPage />} />
+                          <Route
+                            path="forgot-password"
+                            element={<ForgotPasswordPage />}
+                          />
+                        </Route>
+                      </Route>
+
+                      {/* Dashboard - handles both normal access and email verification */}
+                      <Route path="dashboard" element={<DashboardHandler />} />
+
+                      {/* Protected Routes - Only accessible when logged in */}
+                      <Route element={<ProtectedRoute />}>
+                        <Route path="profile" element={<PublicProfilePage />} />
                         <Route
-                          path="forgot-password"
-                          element={<ForgotPasswordPage />}
+                          path="profile/:userId"
+                          element={<PublicProfilePage />}
+                        />
+                        <Route
+                          path="binder/:binderId/view"
+                          element={<PublicBinderViewPage />}
+                        />
+                        <Route
+                          path="user/:userId/binder/:binderId"
+                          element={<PublicBinderViewPage />}
+                        />
+                        <Route path="messages" element={<MessagesPage />} />
+                        <Route path="settings" element={<SettingsPage />} />
+                      </Route>
+
+                      {/* Admin Routes - Only accessible to admin/owner */}
+                      <Route element={<AdminProtectedRoute />}>
+                        <Route path="admin" element={<AdminPage />} />
+                        <Route
+                          path="admin/binder/:userId/:binderId/:source"
+                          element={<BinderViewer />}
                         />
                       </Route>
+
+                      {/* Fallback route */}
+                      <Route path="*" element={<NotFoundPage />} />
                     </Route>
-
-                    {/* Dashboard - handles both normal access and email verification */}
-                    <Route path="dashboard" element={<DashboardHandler />} />
-
-                    {/* Protected Routes - Only accessible when logged in */}
-                    <Route element={<ProtectedRoute />}>
-                      <Route path="profile" element={<PublicProfilePage />} />
-                      <Route
-                        path="profile/:userId"
-                        element={<PublicProfilePage />}
-                      />
-                      <Route
-                        path="binder/:binderId/view"
-                        element={<PublicBinderViewPage />}
-                      />
-                      <Route
-                        path="user/:userId/binder/:binderId"
-                        element={<PublicBinderViewPage />}
-                      />
-                      <Route path="messages" element={<MessagesPage />} />
-                      <Route path="settings" element={<SettingsPage />} />
-                    </Route>
-
-                    {/* Admin Routes - Only accessible to admin/owner */}
-                    <Route element={<AdminProtectedRoute />}>
-                      <Route path="admin" element={<AdminPage />} />
-                      <Route
-                        path="admin/binder/:userId/:binderId/:source"
-                        element={<BinderViewer />}
-                      />
-                    </Route>
-
-                    {/* Fallback route */}
-                    <Route path="*" element={<NotFoundPage />} />
-                  </Route>
-                </Routes>
-              </BrowserRouter>
-              <Toaster position="top-right" />
-            </BinderCardCustomizationProvider>
-          </BinderProvider>
-        </CardCacheProvider>
-      </RulesProvider>
+                  </Routes>
+                </BrowserRouter>
+                <Toaster position="top-right" />
+              </BinderCardCustomizationProvider>
+            </BinderProvider>
+          </CardCacheProvider>
+        </RulesProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };

@@ -312,9 +312,11 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-        <div className="text-red-800 font-medium">Error Loading Sets</div>
-        <div className="text-red-600 text-sm">{error}</div>
+      <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
+        <div className="text-red-800 dark:text-red-200 font-medium">
+          Error Loading Sets
+        </div>
+        <div className="text-red-600 dark:text-red-400 text-sm">{error}</div>
       </div>
     );
   }
@@ -325,30 +327,30 @@ const SetTab = ({ currentBinder, onAddCards }) => {
     <>
       <div className="flex flex-col h-full">
         {/* Search & Controls */}
-        <div className="p-4 border-b border-slate-200 space-y-4">
+        <div className="p-4 border-b border-border space-y-4">
           {/* Search Bar */}
           <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+            <MagnifyingGlassIcon className="absolute left-3 top-3 w-4 h-4 text-slate-400 dark:text-slate-500" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => updateSearchQuery(e.target.value)}
               placeholder="Search sets by name or series..."
-              className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary"
             />
           </div>
 
           {/* Binder Capacity */}
-          <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
+          <div className="bg-secondary rounded-lg p-3 border border-border">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-slate-700">
+              <span className="text-sm font-medium text-primary">
                 Binder Capacity
               </span>
-              <span className="text-xs text-slate-500">
+              <span className="text-xs text-secondary">
                 {usedSlots} / {totalSlots} slots used
               </span>
             </div>
-            <div className="w-full bg-slate-200 rounded-full h-2">
+            <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
               <div
                 className="bg-blue-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${(usedSlots / totalSlots) * 100}%` }}
@@ -357,20 +359,20 @@ const SetTab = ({ currentBinder, onAddCards }) => {
           </div>
 
           {/* Reverse Holo Option */}
-          <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+          <div className="bg-purple-50 dark:bg-purple-950 rounded-lg p-3 border border-purple-200 dark:border-purple-800">
             <label className="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={includeReverseHolos}
                 onChange={(e) => setIncludeReverseHolos(e.target.checked)}
-                className="w-4 h-4 text-purple-600 bg-white border-purple-300 rounded focus:ring-purple-500 focus:ring-2"
+                className="w-4 h-4 text-purple-600 bg-white dark:bg-gray-800 border-purple-300 dark:border-purple-600 rounded focus:ring-purple-500 focus:ring-2"
               />
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-purple-900">
+                <span className="text-sm font-medium text-purple-900 dark:text-purple-200">
                   ✨ Include Reverse Holo Cards
                 </span>
                 {includeReverseHolos && (
-                  <span className="bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
+                  <span className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs font-medium px-2 py-1 rounded-full">
                     Active
                   </span>
                 )}
@@ -380,7 +382,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
           {/* Results Stats */}
           <div className="flex items-center justify-between text-sm">
-            <span className="text-slate-600">
+            <span className="text-secondary">
               <span className="font-medium">{filteredCount}</span> of{" "}
               <span className="font-medium">{totalSets}</span> sets
             </span>
@@ -401,19 +403,19 @@ const SetTab = ({ currentBinder, onAddCards }) => {
             {isLoading ? (
               <div className="text-center py-16">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                <div className="text-slate-600 font-medium text-sm">
+                <div className="text-secondary font-medium text-sm">
                   Loading sets...
                 </div>
-                <div className="text-slate-500 text-xs mt-1">
+                <div className="text-slate-500 dark:text-slate-400 text-xs mt-1">
                   This might take a moment
                 </div>
               </div>
             ) : sets.length === 0 ? (
               <div className="text-center py-16">
-                <div className="text-slate-400 font-medium mb-2">
+                <div className="text-slate-400 dark:text-slate-500 font-medium mb-2">
                   {searchQuery ? "No matching sets found" : "No sets available"}
                 </div>
-                <div className="text-slate-500 text-sm">
+                <div className="text-secondary text-sm">
                   {searchQuery
                     ? "Try adjusting your search terms"
                     : "Check your connection and try again"}
@@ -431,20 +433,20 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                   return (
                     <div
                       key={set.id}
-                      className={`group relative bg-white rounded-xl border transition-all duration-200 hover:shadow-lg ${
+                      className={`group relative bg-card-background rounded-xl border transition-all duration-200 hover:shadow-lg ${
                         addingSetId === set.id
                           ? "border-blue-300 shadow-md"
                           : canFit
-                          ? "border-slate-200 hover:border-slate-300"
-                          : "border-red-200 bg-red-50"
+                          ? "border-border hover:border-slate-300 dark:hover:border-slate-500"
+                          : "border-orange-200 dark:border-orange-700 hover:border-orange-300 dark:hover:border-orange-600"
                       }`}
                     >
                       {/* Loading Overlay */}
                       {addingSetId === set.id && (
-                        <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center z-20">
+                        <div className="absolute inset-0 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-xl flex items-center justify-center z-20">
                           <div className="text-center">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
-                            <div className="text-sm font-medium text-slate-700">
+                            <div className="text-sm font-medium text-primary">
                               Adding {totalCards} cards...
                             </div>
                           </div>
@@ -452,10 +454,10 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                       )}
 
                       {/* Card Header */}
-                      <div className="p-4 border-b border-slate-100">
+                      <div className="p-4 border-b border-slate-100 dark:border-slate-700">
                         <div className="flex items-start gap-3">
                           {/* Set Symbol */}
-                          <div className="flex-shrink-0 w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center overflow-hidden">
+                          <div className="flex-shrink-0 w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden">
                             {set.symbol ? (
                               <img
                                 src={set.symbol}
@@ -463,7 +465,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                                 className="w-8 h-8 object-contain"
                               />
                             ) : (
-                              <div className="text-slate-500 text-xs font-bold text-center">
+                              <div className="text-slate-500 dark:text-slate-400 text-xs font-bold text-center">
                                 {set.name
                                   .split(" ")
                                   .map((word) => word[0])
@@ -475,10 +477,10 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
                           {/* Set Info */}
                           <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-slate-900 text-sm leading-tight line-clamp-2">
+                            <h3 className="font-semibold text-primary text-sm leading-tight line-clamp-2">
                               {set.name}
                             </h3>
-                            <p className="text-xs text-slate-600 mt-1 truncate">
+                            <p className="text-xs text-secondary mt-1 truncate">
                               {set.series}
                             </p>
                           </div>
@@ -486,7 +488,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                           {/* Year Badge */}
                           {set.releaseDate && (
                             <div className="flex-shrink-0">
-                              <span className="inline-block bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-md">
+                              <span className="inline-block bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium px-2 py-1 rounded-md">
                                 {new Date(set.releaseDate).getFullYear()}
                               </span>
                             </div>
@@ -499,11 +501,11 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                         {/* Cards Count & Status */}
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <span className="text-sm font-medium text-slate-900">
+                            <span className="text-sm font-medium text-primary">
                               {set.cardCount} cards
                             </span>
                             {hasReverseHoloBonus && (
-                              <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-700 text-xs font-medium px-2 py-1 rounded-full">
+                              <span className="inline-flex items-center gap-1 bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-medium px-2 py-1 rounded-full">
                                 <span>✨</span>
                                 <span>+{totalCards - set.cardCount}</span>
                               </span>
@@ -512,7 +514,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
                           {/* Capacity Status */}
                           {!canFit && (
-                            <div className="flex items-center gap-1 text-red-600">
+                            <div className="flex items-center gap-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 px-2 py-1 rounded-md">
                               <ExclamationTriangleIcon className="w-4 h-4" />
                               <span className="text-xs font-medium">
                                 Need Space
@@ -523,7 +525,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
                         {/* Total Cards (if reverse holos) */}
                         {hasReverseHoloBonus && (
-                          <div className="text-xs text-slate-600">
+                          <div className="text-xs text-secondary">
                             <span className="font-medium">
                               {totalCards} total cards
                             </span>{" "}
@@ -594,15 +596,15 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-card-background p-6 text-left align-middle shadow-xl transition-all">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                      <ExclamationTriangleIcon className="w-6 h-6 text-orange-600" />
+                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 dark:bg-orange-950 rounded-full flex items-center justify-center">
+                      <ExclamationTriangleIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                     </div>
                     <div>
                       <Dialog.Title
                         as="h3"
-                        className="text-lg font-medium leading-6 text-gray-900"
+                        className="text-lg font-medium leading-6 text-primary"
                       >
                         Not Enough Space
                       </Dialog.Title>
@@ -615,7 +617,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                       const clearedCapacity = calculateBinderCapacity(true);
                       return (
                         <div className="mb-6">
-                          <p className="text-sm text-gray-500 mb-4">
+                          <p className="text-sm text-secondary mb-4">
                             "{pendingSet.set.name}" requires{" "}
                             <strong>{pendingSet.cardsToAdd} slots</strong>, but
                             your binder only has{" "}
@@ -625,14 +627,14 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                             .
                           </p>
 
-                          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
+                          <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-4">
                             <div className="flex items-center space-x-2 mb-2">
-                              <ExclamationTriangleIcon className="w-4 h-4 text-amber-600" />
-                              <div className="text-xs font-medium text-amber-800">
+                              <ExclamationTriangleIcon className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                              <div className="text-xs font-medium text-amber-800 dark:text-amber-200">
                                 Complete Set Addition
                               </div>
                             </div>
-                            <div className="text-xs text-amber-700">
+                            <div className="text-xs text-amber-700 dark:text-amber-300">
                               Adding a complete set will clear all existing
                               cards first and use your total binder capacity of{" "}
                               <strong>
@@ -643,7 +645,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                           </div>
 
                           <div className="space-y-3">
-                            <div className="text-sm font-medium text-gray-700">
+                            <div className="text-sm font-medium text-primary">
                               Choose an option to expand capacity:
                             </div>
                             {calculateExpansionOptions(
@@ -653,12 +655,12 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                               <button
                                 key={index}
                                 onClick={() => handleExpandCapacity(option)}
-                                className="w-full p-3 text-left border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                                className="w-full p-3 text-left border border-border rounded-lg hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                               >
-                                <div className="font-medium text-sm text-gray-900">
+                                <div className="font-medium text-sm text-primary">
                                   {option.label}
                                 </div>
-                                <div className="text-xs text-gray-500 mt-1">
+                                <div className="text-xs text-secondary mt-1">
                                   New capacity: {option.newCapacity} slots (+
                                   {option.additionalSlots})
                                 </div>
@@ -672,7 +674,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                   <div className="flex justify-end space-x-3 mt-6">
                     <button
                       type="button"
-                      className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-transparent rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2"
+                      className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-100 dark:bg-gray-800 border border-transparent rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800"
                       onClick={handleCancelCapacity}
                     >
                       Cancel
@@ -715,37 +717,37 @@ const SetTab = ({ currentBinder, onAddCards }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-card-background p-6 text-left align-middle shadow-xl transition-all">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                      <AlertTriangle className="w-6 h-6 text-red-600" />
+                    <div className="w-10 h-10 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center">
+                      <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />
                     </div>
                   </div>
                   <div>
                     <Dialog.Title
                       as="h3"
-                      className="text-lg font-semibold text-gray-900"
+                      className="text-lg font-semibold text-primary"
                     >
                       Clear Binder Warning
                     </Dialog.Title>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-secondary">
                       This action cannot be undone
                     </p>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+                  <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
                     <div className="flex">
                       <div className="flex-shrink-0">
                         <AlertTriangle className="h-5 w-5 text-red-400" />
                       </div>
                       <div className="ml-3">
-                        <h3 className="text-sm font-medium text-red-800">
+                        <h3 className="text-sm font-medium text-red-800 dark:text-red-200">
                           All cards will be removed
                         </h3>
-                        <div className="mt-2 text-sm text-red-700">
+                        <div className="mt-2 text-sm text-red-700 dark:text-red-300">
                           <p>
                             Adding a complete set will{" "}
                             <strong>
@@ -761,28 +763,28 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">
+                    <div className="flex items-center justify-between p-3 bg-secondary rounded-lg">
+                      <span className="text-sm font-medium text-primary">
                         Current cards:
                       </span>
-                      <span className="text-sm font-semibold text-red-600">
+                      <span className="text-sm font-semibold text-red-600 dark:text-red-400">
                         {Object.keys(currentBinder.cards || {}).length} cards
                         (will be removed)
                       </span>
                     </div>
-                    <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">
+                    <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-950 rounded-lg">
+                      <span className="text-sm font-medium text-primary">
                         New cards to add:
                       </span>
-                      <span className="text-sm font-semibold text-green-600">
+                      <span className="text-sm font-semibold text-green-600 dark:text-green-400">
                         {pendingSet?.cardsToAdd || 0} cards from{" "}
                         {pendingSet?.set?.name}
                       </span>
                     </div>
                   </div>
 
-                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                    <p className="text-sm text-blue-800">
+                  <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg">
+                    <p className="text-sm text-blue-800 dark:text-blue-200">
                       <strong>Tip:</strong> This feature is perfect for
                       dedicating a binder to a specific set. Consider creating a
                       new binder if you want to keep your current cards.
@@ -793,14 +795,14 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                 <div className="flex space-x-3">
                   <button
                     type="button"
-                    className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-transparent rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 transition-colors"
+                    className="flex-1 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-100 dark:bg-gray-800 border border-transparent rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800 transition-colors"
                     onClick={handleCancelClearWarning}
                   >
                     Cancel
                   </button>
                   <button
                     type="button"
-                    className="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 transition-colors"
+                    className="flex-1 px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800 transition-colors"
                     onClick={handleClearAndAdd}
                   >
                     Clear & Add Set

@@ -5,6 +5,7 @@ import { useRules } from "../../contexts/RulesContext";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useNavigation } from "../../hooks/useNavigation";
 import { useMessages } from "../../hooks/useMessages";
+import ThemeToggle from "../ui/ThemeToggle";
 import { Button } from "../ui/Button";
 import UserAvatar from "../ui/UserAvatar";
 import StatusEditor from "../ui/StatusEditor";
@@ -261,7 +262,7 @@ const Navbar = () => {
     } else {
       desktopClasses = item.active
         ? "flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 text-white shadow-sm"
-        : "flex items-center px-4 py-2 text-sm font-medium rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50";
+        : "flex items-center px-4 py-2 text-sm font-medium rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent";
     }
 
     return (
@@ -317,18 +318,20 @@ const Navbar = () => {
       // Mobile version - simple layout without dropdown
       return (
         <div className="flex flex-col space-y-4">
-          <div className="flex items-center px-4 py-3 bg-gray-50 rounded-lg">
+          <div className="flex items-center px-4 py-3 bg-secondary rounded-lg">
             <UserAvatar
               user={userProfile || user}
               size="sm"
               className="flex-shrink-0"
             />
             <div className="flex-1 min-w-0 ml-3">
-              <p className="text-sm font-medium text-gray-900 truncate">
+              <p className="text-sm font-medium text-text-primary truncate">
                 {userProfile?.displayName || user?.displayName || user?.email}
               </p>
               {isOwner && (
-                <p className="text-xs text-yellow-600 font-medium">Owner</p>
+                <p className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">
+                  Owner
+                </p>
               )}
             </div>
           </div>
@@ -337,7 +340,7 @@ const Navbar = () => {
           <div className="space-y-2">
             <Link
               to="/profile"
-              className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className="flex items-center px-4 py-2 text-sm text-text-primary hover:bg-accent rounded-lg transition-colors"
               onClick={closeMobileMenu}
             >
               <UserIcon className="w-4 h-4 mr-3" />
@@ -345,7 +348,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/settings"
-              className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className="flex items-center px-4 py-2 text-sm text-text-primary hover:bg-accent rounded-lg transition-colors"
               onClick={closeMobileMenu}
             >
               <AdjustmentsHorizontalIcon className="w-4 h-4 mr-3" />
@@ -353,7 +356,7 @@ const Navbar = () => {
             </Link>
             <button
               onClick={handleLogout}
-              className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors text-left"
+              className="flex items-center w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950 rounded-lg transition-colors text-left"
             >
               <ArrowRightOnRectangleIcon className="w-4 h-4 mr-3" />
               Sign Out
@@ -368,7 +371,7 @@ const Navbar = () => {
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
-          className="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           <UserAvatar
             user={userProfile || user}
@@ -376,7 +379,7 @@ const Navbar = () => {
             className="flex-shrink-0"
           />
           <div className="hidden md:block text-left">
-            <p className="text-sm font-medium text-gray-900 truncate max-w-32">
+            <p className="text-sm font-medium text-text-primary truncate max-w-32">
               {userProfile?.displayName || user?.displayName || user?.email}
             </p>
             {isOwner && (
@@ -392,15 +395,17 @@ const Navbar = () => {
 
         {/* Dropdown Menu */}
         {isUserDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+          <div className="absolute right-0 mt-2 w-56 bg-card-background rounded-lg shadow-lg border border-border py-1 z-50">
             {/* User Info Header */}
-            <div className="px-4 py-3 border-b border-gray-100">
-              <p className="text-sm font-medium text-gray-900 truncate">
+            <div className="px-4 py-3 border-b border-border">
+              <p className="text-sm font-medium text-text-primary truncate">
                 {userProfile?.displayName || user?.displayName || user?.email}
               </p>
-              <p className="text-xs text-gray-500 truncate">{user?.email}</p>
+              <p className="text-xs text-text-secondary truncate">
+                {user?.email}
+              </p>
               {userProfile?.customStatus && (
-                <p className="text-xs text-gray-600 mt-1 italic truncate">
+                <p className="text-xs text-text-secondary mt-1 italic truncate">
                   {userProfile.customStatus}
                 </p>
               )}
@@ -412,10 +417,10 @@ const Navbar = () => {
             </div>
 
             {/* Menu Items */}
-            <div className="py-1 border-t border-gray-100">
+            <div className="py-1 border-t border-border">
               <Link
                 to="/profile"
-                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                className="flex items-center px-4 py-2 text-sm text-text-primary hover:bg-accent transition-colors"
                 onClick={() => setIsUserDropdownOpen(false)}
               >
                 <UserIcon className="w-4 h-4 mr-3" />
@@ -424,18 +429,18 @@ const Navbar = () => {
 
               <Link
                 to="/settings"
-                className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                className="flex items-center px-4 py-2 text-sm text-text-primary hover:bg-accent transition-colors"
                 onClick={() => setIsUserDropdownOpen(false)}
               >
                 <AdjustmentsHorizontalIcon className="w-4 h-4 mr-3" />
                 Settings
               </Link>
 
-              <div className="border-t border-gray-100 my-1"></div>
+              <div className="border-t border-border my-1"></div>
 
               <button
                 onClick={handleLogout}
-                className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors text-left"
+                className="flex items-center w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950 transition-colors text-left"
               >
                 <ArrowRightOnRectangleIcon className="w-4 h-4 mr-3" />
                 Sign Out
@@ -451,8 +456,8 @@ const Navbar = () => {
     <>
       <nav
         data-navbar
-        className={`bg-white border-b sticky top-0 z-50 transition-all duration-200 ${
-          isScrolled ? "shadow-md border-gray-300" : "shadow-sm border-gray-200"
+        className={`bg-card-background border-b sticky top-0 z-50 transition-all duration-200 ${
+          isScrolled ? "shadow-md border-border" : "shadow-sm border-border"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -480,7 +485,7 @@ const Navbar = () => {
               {user && (
                 <Link
                   to="/messages"
-                  className="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
+                  className="relative p-2 text-text-secondary hover:text-text-primary hover:bg-accent rounded-lg transition-all duration-200"
                   title="Messages"
                 >
                   <InboxIcon className="w-6 h-6" />
@@ -493,6 +498,7 @@ const Navbar = () => {
               )}
 
               <UserSection />
+              <ThemeToggle />
               {/* Buy me a coffee button */}
               <a
                 href="https://buymeacoffee.com/biroman"
@@ -526,7 +532,7 @@ const Navbar = () => {
               {user && (
                 <Link
                   to="/messages"
-                  className="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
+                  className="relative p-2 text-text-secondary hover:text-text-primary hover:bg-accent rounded-lg transition-all duration-200"
                   title="Messages"
                 >
                   <InboxIcon className="w-6 h-6" />
@@ -543,7 +549,7 @@ const Navbar = () => {
                   e.preventDefault();
                   toggleMobileMenu(e);
                 }}
-                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 min-w-[40px] min-h-[40px] flex items-center justify-center touch-manipulation select-none"
+                className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-accent transition-all duration-200 min-w-[40px] min-h-[40px] flex items-center justify-center touch-manipulation select-none"
                 aria-label="Toggle navigation menu"
                 data-mobile-menu-toggle
                 type="button"
@@ -560,7 +566,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`md:hidden bg-white border-t border-gray-200 shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`md:hidden bg-card-background border-t border-border shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
             isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -584,13 +590,19 @@ const Navbar = () => {
 
             {/* User Section */}
             <div
-              className={`pt-6 border-t border-gray-200 transform transition-all duration-300 ease-out ${
+              className={`pt-6 border-t border-border transform transition-all duration-300 ease-out ${
                 isMobileMenuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-2 opacity-0"
               }`}
               style={{ transitionDelay: `${allNavItems.length * 50}ms` }}
             >
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-medium text-text-primary">
+                  Theme
+                </span>
+                <ThemeToggle />
+              </div>
               <UserSection mobile />
             </div>
           </div>

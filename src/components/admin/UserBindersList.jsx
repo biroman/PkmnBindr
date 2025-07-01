@@ -186,14 +186,14 @@ const UserBindersList = ({ user, onViewBinder }) => {
                         <h4
                           className={`font-semibold truncate ${
                             binder.isArchived
-                              ? "text-gray-500"
-                              : "text-gray-900"
+                              ? "text-text-secondary"
+                              : "text-text-primary"
                           }`}
                         >
                           {binder.name}
                         </h4>
                         {binder.isArchived && (
-                          <span className="inline-flex items-center gap-1 bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
+                          <span className="inline-flex items-center gap-1 bg-secondary text-text-secondary text-xs font-medium px-2 py-1 rounded-full">
                             <ArchiveBoxIcon className="w-3 h-3" />
                             Archived
                           </span>
@@ -201,7 +201,7 @@ const UserBindersList = ({ user, onViewBinder }) => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-4 text-sm text-text-secondary">
                       <div className="flex items-center gap-1">
                         <DocumentTextIcon className="w-4 h-4" />
                         <span>{binder.cardCount} cards</span>

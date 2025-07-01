@@ -71,7 +71,7 @@ const CardBrowserPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 pb-8">
+    <div className="min-h-screen bg-background pb-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="pt-8 pb-6">

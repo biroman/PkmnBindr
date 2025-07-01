@@ -764,7 +764,7 @@ const AdminPage = () => {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-background">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-8">
           {/* Phase 2: AdminNavigation Component */}
           <AdminNavigation

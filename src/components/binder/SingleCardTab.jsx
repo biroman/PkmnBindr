@@ -63,15 +63,15 @@ const SearchFilters = ({
   if (isSidebarMode) {
     // Desktop sidebar layout - always expanded
     return (
-      <div className="bg-slate-50 border-l border-slate-200 p-4 w-80 flex-shrink-0">
+      <div className="bg-secondary border-l border-border p-4 w-80 flex-shrink-0">
         <div className="mb-4">
-          <h3 className="font-semibold text-slate-800 flex items-center gap-2">
+          <h3 className="font-semibold text-primary flex items-center gap-2">
             <FunnelIcon className="w-5 h-5" />
             Filters
             {Object.values(filters).some(
               (f) => f && (Array.isArray(f) ? f.length > 0 : true)
             ) && (
-              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+              <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
                 Active
               </span>
             )}
@@ -81,7 +81,7 @@ const SearchFilters = ({
         <div className="space-y-4">
           {/* Types */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               Type
             </label>
             <select
@@ -89,7 +89,7 @@ const SearchFilters = ({
               onChange={(e) =>
                 onFilterChange("types", e.target.value ? [e.target.value] : [])
               }
-              className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
             >
               <option value="">All Types</option>
               {availableTypes.map((type) => (
@@ -102,13 +102,13 @@ const SearchFilters = ({
 
           {/* Set */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               Set
             </label>
             <select
               value={filters.set}
               onChange={(e) => onFilterChange("set", e.target.value)}
-              className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
             >
               <option value="">All Sets</option>
               {availableSets.map((set) => (
@@ -121,13 +121,13 @@ const SearchFilters = ({
 
           {/* Rarity */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               Rarity
             </label>
             <select
               value={filters.rarity}
               onChange={(e) => onFilterChange("rarity", e.target.value)}
-              className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
             >
               <option value="">All Rarities</option>
               {availableRarities.map((rarity) => (
@@ -149,7 +149,7 @@ const SearchFilters = ({
                 onFilterChange("set", "");
                 onFilterChange("rarity", "");
               }}
-              className="w-full px-3 py-2 text-sm text-slate-600 hover:text-slate-800 hover:bg-slate-200 rounded-md transition-colors"
+              className="w-full px-3 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-md transition-colors"
             >
               Clear All Filters
             </button>
@@ -163,23 +163,23 @@ const SearchFilters = ({
   return (
     <>
       {/* Filter toggle button */}
-      <div className="border-b border-slate-200">
+      <div className="border-b border-border">
         <button
           onClick={onToggle}
-          className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
+          className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
         >
           <div className="flex items-center space-x-2">
-            <FunnelIcon className="w-5 h-5 text-slate-600" />
-            <span className="font-medium text-slate-800">Filters</span>
+            <FunnelIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+            <span className="font-medium text-primary">Filters</span>
             {Object.values(filters).some(
               (f) => f && (Array.isArray(f) ? f.length > 0 : true)
             ) && (
-              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+              <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
                 Active
               </span>
             )}
           </div>
-          <div className="flex items-center text-slate-400">
+          <div className="flex items-center text-slate-400 dark:text-slate-500">
             <span className="text-sm mr-2">Tap to filter</span>
             <ChevronRight className="w-5 h-5" />
           </div>
@@ -196,115 +196,104 @@ const SearchFilters = ({
           />
 
           {/* Modal Content */}
-          <div className="fixed inset-x-4 bottom-4 top-20 bg-white rounded-xl shadow-2xl z-50 flex flex-col">
+          <div className="fixed inset-x-4 bottom-4 top-20 bg-card-background rounded-xl shadow-2xl z-50 flex flex-col">
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-4 border-b border-slate-200">
-              <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-                <FunnelIcon className="w-5 h-5" />
-                Search Filters
-              </h3>
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <h3 className="text-lg font-semibold text-primary">Filters</h3>
               <button
                 onClick={handleCancelFilters}
-                className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
               >
-                <XMarkIcon className="w-5 h-5 text-slate-500" />
+                <XMarkIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
               </button>
             </div>
 
-            {/* Modal Body - Scrollable */}
-            <div className="flex-1 overflow-y-auto p-4">
-              <div className="space-y-6">
-                {/* Type */}
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Type
-                  </label>
-                  <select
-                    value={tempFilters.types?.[0] || ""}
-                    onChange={(e) =>
-                      handleTempFilterChange(
-                        "types",
-                        e.target.value ? [e.target.value] : []
-                      )
-                    }
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
-                  >
-                    <option value="">All Types</option>
-                    {availableTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+            {/* Modal Body */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {/* Types */}
+              <div>
+                <label className="block text-sm font-medium text-primary mb-2">
+                  Type
+                </label>
+                <select
+                  value={tempFilters.types[0] || ""}
+                  onChange={(e) =>
+                    handleTempFilterChange(
+                      "types",
+                      e.target.value ? [e.target.value] : []
+                    )
+                  }
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+                >
+                  <option value="">All Types</option>
+                  {availableTypes.map((type) => (
+                    <option key={type} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-                {/* Set */}
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Set
-                  </label>
-                  <select
-                    value={tempFilters.set || ""}
-                    onChange={(e) =>
-                      handleTempFilterChange("set", e.target.value)
-                    }
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
-                  >
-                    <option value="">All Sets</option>
-                    {availableSets.map((set) => (
-                      <option key={set.id} value={set.id}>
-                        {set.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+              {/* Set */}
+              <div>
+                <label className="block text-sm font-medium text-primary mb-2">
+                  Set
+                </label>
+                <select
+                  value={tempFilters.set}
+                  onChange={(e) =>
+                    handleTempFilterChange("set", e.target.value)
+                  }
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+                >
+                  <option value="">All Sets</option>
+                  {availableSets.map((set) => (
+                    <option key={set.id} value={set.id}>
+                      {set.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-                {/* Rarity */}
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Rarity
-                  </label>
-                  <select
-                    value={tempFilters.rarity || ""}
-                    onChange={(e) =>
-                      handleTempFilterChange("rarity", e.target.value)
-                    }
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
-                  >
-                    <option value="">All Rarities</option>
-                    {availableRarities.map((rarity) => (
-                      <option key={rarity} value={rarity}>
-                        {rarity}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Clear Filters Button */}
-                {Object.values(tempFilters).some(
-                  (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-                ) && (
-                  <button
-                    onClick={handleClearTempFilters}
-                    className="w-full px-4 py-3 text-sm text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors border border-slate-200"
-                  >
-                    Clear All Filters
-                  </button>
-                )}
+              {/* Rarity */}
+              <div>
+                <label className="block text-sm font-medium text-primary mb-2">
+                  Rarity
+                </label>
+                <select
+                  value={tempFilters.rarity}
+                  onChange={(e) =>
+                    handleTempFilterChange("rarity", e.target.value)
+                  }
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+                >
+                  <option value="">All Rarities</option>
+                  {availableRarities.map((rarity) => (
+                    <option key={rarity} value={rarity}>
+                      {rarity}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
             {/* Modal Footer */}
-            <div className="flex flex-row items-center gap-2 p-3 border-t border-slate-200">
+            <div className="flex gap-3 p-4 border-t border-border">
+              <button
+                onClick={handleClearTempFilters}
+                className="flex-1 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+              >
+                Clear All
+              </button>
               <button
                 onClick={handleCancelFilters}
-                className="flex-1 px-4 py-2.5 text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors font-medium text-sm"
+                className="flex-1 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border border-border rounded-lg transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleSaveFilters}
-                className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-sm"
+                className="flex-1 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
               >
                 Apply Filters
               </button>
@@ -376,10 +365,10 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 min-h-0">
         {/* Search Bar */}
-        <div className="p-6 border-b border-slate-200">
+        <div className="p-6 border-b border-border">
           <div className="flex gap-2 mb-4">
             <div className="relative flex-1">
-              <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+              <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400 dark:text-slate-500" />
               <input
                 ref={searchInputRef}
                 type="text"
@@ -387,13 +376,13 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                 onChange={(e) => updateSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Search Pokemon cards (e.g., Pika, Sandy Shocks, Pikachu #25, artist:Ken Sugimori)"
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary"
               />
             </div>
             <button
               onClick={performSearch}
               disabled={!searchQuery && !hasActiveFilters}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white rounded-lg transition-colors flex items-center gap-2 font-medium"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center gap-2 font-medium"
             >
               <MagnifyingGlassIcon className="w-5 h-5" />
               Search
@@ -403,7 +392,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
           {/* Sort and Results Info Bar */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div className="flex items-center gap-3">
-              <label className="text-sm font-medium text-slate-700 whitespace-nowrap">
+              <label className="text-sm font-medium text-primary whitespace-nowrap">
                 Sort by:
               </label>
               <SortDropdown value={orderBy} onChange={setOrderBy} />
@@ -411,7 +400,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
 
             {/* Results Count */}
             {(totalCount > 0 || cards.length > 0) && (
-              <div className="text-sm text-slate-600 whitespace-nowrap">
+              <div className="text-sm text-secondary whitespace-nowrap">
                 {showFeatured ? (
                   <span className="flex items-center gap-1">
                     <span className="text-yellow-500">⭐</span>
@@ -426,7 +415,10 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                         <span className="font-medium">
                           {totalCount.toLocaleString()}
                         </span>
-                        <span className="text-slate-500"> cards found</span>
+                        <span className="text-slate-500 dark:text-slate-400">
+                          {" "}
+                          cards found
+                        </span>
                       </>
                     )}
                   </span>
@@ -453,25 +445,29 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
         <div className="flex-1 overflow-y-auto min-h-0">
           <div className="p-6">
             {error && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-                <div className="text-red-800 font-medium">Search Error</div>
-                <div className="text-red-600 text-sm">{error}</div>
+              <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
+                <div className="text-red-800 dark:text-red-200 font-medium">
+                  Search Error
+                </div>
+                <div className="text-red-600 dark:text-red-400 text-sm">
+                  {error}
+                </div>
               </div>
             )}
 
             {displayLoading && (
               <div className="text-center py-8">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                <div className="text-slate-600">Searching for cards...</div>
+                <div className="text-secondary">Searching for cards...</div>
               </div>
             )}
 
             {isEmpty && (
               <div className="text-center py-8">
-                <div className="text-slate-400 text-lg mb-2">
+                <div className="text-slate-400 dark:text-slate-500 text-lg mb-2">
                   No cards found
                 </div>
-                <div className="text-slate-500 text-sm">
+                <div className="text-secondary text-sm">
                   Try adjusting your search terms or filters
                 </div>
               </div>
@@ -510,7 +506,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                     <button
                       onClick={loadMoreCards}
                       disabled={isLoadingMore}
-                      className="px-6 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors disabled:opacity-50"
+                      className="px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg transition-colors disabled:opacity-50"
                     >
                       {isLoadingMore ? "Loading..." : "Load More"}
                     </button>

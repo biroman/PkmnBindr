@@ -294,7 +294,7 @@ const BinderRulesManager = () => {
           </div>
 
           {/* Rules List */}
-          <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+          <div className="bg-card-background rounded-lg border border-border overflow-hidden">
             {loading ? (
               <div className="p-8 text-center text-slate-500">
                 Loading rules...
@@ -403,10 +403,10 @@ const BinderRulesManager = () => {
       {activeTab === "templates" && (
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium text-slate-900">
+            <h3 className="text-lg font-medium text-text-primary">
               Binder Rule Templates
             </h3>
-            <p className="text-sm text-slate-600 mt-1">
+            <p className="text-sm text-text-secondary mt-1">
               Quick-start templates for common binder restrictions and limits.
             </p>
           </div>
@@ -418,7 +418,7 @@ const BinderRulesManager = () => {
               return (
                 <div
                   key={key}
-                  className="bg-white border border-slate-200 rounded-lg p-4"
+                  className="bg-card-background border border-border rounded-lg p-4"
                 >
                   <div className="flex items-start gap-3">
                     <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
@@ -426,10 +426,10 @@ const BinderRulesManager = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h4 className="font-medium text-slate-900">
+                      <h4 className="font-medium text-text-primary">
                         {template.name}
                       </h4>
-                      <p className="text-sm text-slate-600 mt-1">
+                      <p className="text-sm text-text-secondary mt-1">
                         {template.description}
                       </p>
 
@@ -454,10 +454,10 @@ const BinderRulesManager = () => {
       {activeTab === "tiers" && (
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium text-slate-900">
+            <h3 className="text-lg font-medium text-text-primary">
               User Tier Templates
             </h3>
-            <p className="text-sm text-slate-600 mt-1">
+            <p className="text-sm text-text-secondary mt-1">
               Apply predefined rule sets for different user subscription tiers.
             </p>
           </div>
@@ -466,26 +466,26 @@ const BinderRulesManager = () => {
             {Object.entries(USER_TIER_RULES).map(([tier, tierData]) => (
               <div
                 key={tier}
-                className="bg-white border border-slate-200 rounded-lg p-6"
+                className="bg-card-background border border-border rounded-lg p-6"
               >
                 <div className="text-center">
                   <UserGroupIcon className="w-8 h-8 text-blue-600 mx-auto" />
-                  <h4 className="font-medium text-slate-900 mt-2 capitalize">
+                  <h4 className="font-medium text-text-primary mt-2 capitalize">
                     {tier} Tier
                   </h4>
-                  <p className="text-sm text-slate-600 mt-1">
+                  <p className="text-sm text-text-secondary mt-1">
                     {tierData.rules.length} rules included
                   </p>
                 </div>
 
                 <div className="mt-4 space-y-2">
                   {tierData.rules.slice(0, 3).map((rule, index) => (
-                    <div key={index} className="text-xs text-slate-600">
+                    <div key={index} className="text-xs text-text-secondary">
                       • {rule.name}
                     </div>
                   ))}
                   {tierData.rules.length > 3 && (
-                    <div className="text-xs text-slate-500">
+                    <div className="text-xs text-text-secondary">
                       +{tierData.rules.length - 3} more rules
                     </div>
                   )}
@@ -493,7 +493,7 @@ const BinderRulesManager = () => {
 
                 <button
                   onClick={() => applyTierRules(tier)}
-                  className="w-full mt-4 bg-slate-100 text-slate-700 px-3 py-2 rounded-lg hover:bg-slate-200 transition-colors text-sm"
+                  className="w-full mt-4 bg-background text-text-primary px-3 py-2 rounded-lg hover:bg-accent transition-colors text-sm"
                 >
                   Apply {tier} Rules
                 </button>

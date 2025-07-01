@@ -84,7 +84,7 @@ const SortDropdown = ({ value, onChange }) => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="flex items-center justify-between gap-2 w-full sm:w-48 px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+        <button className="flex items-center justify-between gap-2 w-full sm:w-48 px-3 py-2 border border-border rounded-lg text-sm bg-card-background text-text-primary hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
           <div className="flex items-center gap-2">
             {selectedOption.icon}
             <span className="font-medium">{selectedOption.label}</span>
@@ -94,7 +94,7 @@ const SortDropdown = ({ value, onChange }) => {
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="w-56 bg-white rounded-lg shadow-lg border border-slate-200 p-1 z-[60]"
+          className="w-56 bg-card-background rounded-lg shadow-lg border border-border p-1 z-[60]"
           sideOffset={5}
         >
           {sortOptions.map((option, index) => {
@@ -102,9 +102,9 @@ const SortDropdown = ({ value, onChange }) => {
               return (
                 <DropdownMenu.Group key={index}>
                   {index > 0 && (
-                    <DropdownMenu.Separator className="h-px bg-slate-100 my-1" />
+                    <DropdownMenu.Separator className="h-px bg-border my-1" />
                   )}
-                  <DropdownMenu.Label className="px-2 py-1.5 text-xs font-semibold text-slate-500">
+                  <DropdownMenu.Label className="px-2 py-1.5 text-xs font-semibold text-text-secondary">
                     {option.label}
                   </DropdownMenu.Label>
                 </DropdownMenu.Group>
@@ -114,7 +114,7 @@ const SortDropdown = ({ value, onChange }) => {
               <DropdownMenu.Item
                 key={option.value}
                 onSelect={() => onChange(option.value)}
-                className="flex items-center justify-between gap-2 px-2 py-1.5 text-sm text-slate-700 rounded-md hover:bg-blue-50 hover:text-blue-600 focus:bg-blue-50 focus:text-blue-600 focus:outline-none cursor-pointer"
+                className="flex items-center justify-between gap-2 px-2 py-1.5 text-sm text-text-primary rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none cursor-pointer"
               >
                 <div className="flex items-center gap-2">
                   {option.icon}

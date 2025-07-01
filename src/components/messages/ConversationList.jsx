@@ -15,10 +15,10 @@ const ConversationList = ({
   onSelectConversation,
 }) => {
   return (
-    <div className="w-full md:w-1/3 border-r border-gray-200 flex flex-col h-full">
-      <div className="p-4 border-b border-gray-200 bg-gray-50 flex-shrink-0">
-        <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-          <ChatSolid className="w-5 h-5 text-gray-700" />
+    <div className="w-full md:w-1/3 border-r border-gray-200 dark:border-gray-700 flex flex-col h-full">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 flex-shrink-0">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+          <ChatSolid className="w-5 h-5 text-gray-700 dark:text-gray-300" />
           Conversations
         </h2>
       </div>
@@ -30,11 +30,11 @@ const ConversationList = ({
           </div>
         ) : conversations.length === 0 ? (
           <div className="flex flex-col items-center justify-center text-center py-12 px-4 h-full">
-            <InboxIcon className="w-16 h-16 text-gray-300 mb-4" />
-            <h3 className="text-lg font-medium text-gray-800 mb-1">
+            <InboxIcon className="w-16 h-16 text-gray-300 dark:text-gray-600 mb-4" />
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-1">
               No conversations yet
             </h3>
-            <p className="text-gray-500 max-w-xs">
+            <p className="text-gray-500 dark:text-gray-400 max-w-xs">
               {isOwner
                 ? "You can start a new conversation from the user management panel."
                 : "Administrators can reach out to you here. Stay tuned!"}

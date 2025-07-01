@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const BinderSpine = ({
-  className = "w-2 bg-gray-400 rounded-full shadow-lg",
+  className = "w-2 bg-gray-400 dark:bg-gray-600 rounded-full shadow-lg",
   style = {},
 }) => {
   return (

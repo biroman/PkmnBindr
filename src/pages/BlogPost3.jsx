@@ -38,7 +38,7 @@ const BlogPost3 = () => {
     };
   }, []);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +62,7 @@ const BlogPost3 = () => {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+        <nav className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
           <Link to="/" className="hover:text-blue-600 transition-colors">
             Home
           </Link>
@@ -71,14 +71,16 @@ const BlogPost3 = () => {
             Blog
           </Link>
           <ChevronRightIcon className="w-4 h-4" />
-          <span className="text-gray-900">Binder Types Guide</span>
+          <span className="text-gray-900 dark:text-gray-100">
+            Binder Types Guide
+          </span>
         </nav>
 
         {/* Article */}
-        <article className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <article className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-12">
           {/* Article Header */}
-          <div className="px-8 py-6 border-b border-gray-100">
-            <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+          <div className="px-8 py-6 border-b border-gray-100 dark:border-gray-700">
+            <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
               <div className="flex items-center space-x-2">
                 <UserIcon className="w-4 h-4" />
                 <span>PkmnBindr Team</span>
@@ -95,11 +97,11 @@ const BlogPost3 = () => {
                 Comparison
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Best Pokemon Card Binders 2025: Ringless vs D-Ring vs O-Ring
               Complete Guide
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               The ultimate collector's guide to choosing between ringless,
               D-Ring, and O-Ring binders. Discover which type protects your
               collection best and why most Pokemon binders on Amazon aren't safe
@@ -111,10 +113,10 @@ const BlogPost3 = () => {
           <div className="px-8 py-8 prose prose-lg max-w-none">
             {/* Introduction */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Introduction: The Quest for the Perfect Pokémon Sanctuary
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   For any Pokémon Trading Card Game collector, the journey
                   begins with a single booster pack but quickly evolves into a
@@ -191,10 +193,10 @@ const BlogPost3 = () => {
 
             {/* Section 1 */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The Anatomy of a Card Binder: Beyond the Rings
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Before delving into the ring mechanism itself, it's essential
                   to understand that the definition of a high-quality binder has
@@ -276,10 +278,10 @@ const BlogPost3 = () => {
 
             {/* O-Ring Section */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The O-Ring: A Legacy of High Risk ⚠️
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <div className="bg-red-50 border-l-4 border-red-400 p-6 my-6">
                   <h3 className="text-xl font-semibold text-red-900 mb-4">
                     ⚠️ The Mechanics of Failure
@@ -338,10 +340,10 @@ const BlogPost3 = () => {
                 </div>
 
                 <div className="bg-gray-100 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     The Verdict on O-Ring Binders
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-300">
                     While some collectors report decades of use without issues,
                     this requires meticulous handling and under-filling. In
                     today's high-value collecting climate, the O-ring is an
@@ -357,10 +359,10 @@ const BlogPost3 = () => {
 
             {/* D-Ring Section */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The D-Ring: The Flexible, Customizable Contender 🔧
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   For collectors requiring flexibility, the D-ring binder is the
                   vastly superior ringed option. Its design directly addresses
@@ -432,10 +434,10 @@ const BlogPost3 = () => {
 
             {/* Ringless Section */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The Ringless Revolution: The Gold Standard 👑
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   The modern collecting scene has seen a seismic shift towards
                   ringless binders. This revolution responds to increasing
@@ -516,7 +518,7 @@ const BlogPost3 = () => {
 
             {/* Brand Comparison */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The Brand Battlefield: Head-to-Head Comparison
               </h2>
 
@@ -524,19 +526,19 @@ const BlogPost3 = () => {
                 <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                         Brand / Model
                       </th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                         Type
                       </th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                         Key Pro
                       </th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                         Key Con
                       </th>
-                      <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                      <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                         Price
                       </th>
                     </tr>
@@ -621,7 +623,7 @@ const BlogPost3 = () => {
 
             {/* Recommendations */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 The Final Verdict: Which Binder Is Right for YOU?
               </h2>
 
@@ -736,10 +738,10 @@ const BlogPost3 = () => {
 
             {/* Conclusion */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Conclusion: Protecting Your Passion for Years to Come
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   The great binder debate reflects a hobby that has matured into
                   serious passion and significant investment. Choosing the right
@@ -765,10 +767,10 @@ const BlogPost3 = () => {
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-6 mt-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                     Key Takeaways:
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li className="flex items-start space-x-2">
                       <span className="text-green-500 font-bold">✓</span>
                       <span>
@@ -805,8 +807,8 @@ const BlogPost3 = () => {
         </article>
 
         {/* Navigation to other posts */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">
+        <div className="bg-card-background dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             More Pokemon Card Guides
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -814,10 +816,10 @@ const BlogPost3 = () => {
               to="/blog/ultimate-guide-organizing-pokemon-cards"
               className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 Ultimate Guide to Organizing Your Collection
               </h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Master the four key methods for organizing your Pokemon cards.
               </p>
             </Link>
@@ -825,10 +827,10 @@ const BlogPost3 = () => {
               to="/blog/fort-knox-pokemon-card-binder-guide-2025"
               className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
             >
-              <h4 className="font-semibold text-gray-900 mb-2">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 2025 Guide to Choosing the Right Binder
               </h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Compare top binder brands and find your perfect card sanctuary.
               </p>
             </Link>

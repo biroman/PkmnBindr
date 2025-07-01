@@ -49,7 +49,7 @@ const DEFAULT_BINDER_SETTINGS = {
   sortDirection: "asc", // asc or desc
   showGridNumbers: false,
   cardBackUrl: null,
-  binderColor: "#ffffff", // Default white color
+  binderColor: null, // null = use theme-appropriate default color
   // Card back display settings
   showCardBackForEmpty: false, // Show card back instead of empty slots
   showCardBackForMissing: false, // Show card back instead of missing card overlay

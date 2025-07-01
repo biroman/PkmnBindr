@@ -4,8 +4,8 @@ import ZoomableImage from "../components/ZoomableImage";
 
 const BlogPost4 = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen bg-background">
+      <div className="max-w-4xl mx-auto bg-card-background shadow-lg rounded-lg overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8">
           <div className="flex items-center justify-between mb-4">
@@ -38,11 +38,11 @@ const BlogPost4 = () => {
         <div className="px-8 py-8 prose prose-lg max-w-none">
           {/* Introduction */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Introduction: Protecting Your Passion - A Collector's Guide to the
               Best Pokémon Binders
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Every Pokémon collector knows the feeling. The thrill of the
                 pull, the flash of holo foil, and the immediate, urgent thought:
@@ -77,11 +77,11 @@ const BlogPost4 = () => {
 
           {/* Section 1 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 1: Meet the Contenders: Brand Philosophy and Community
               Standing
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Before diving into technical specifications, it's crucial to
                 understand what each brand represents. Their philosophies,
@@ -227,11 +227,11 @@ const BlogPost4 = () => {
 
           {/* Section 2 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 2: The Anatomy of a Perfect Binder: A Feature-by-Feature
               Deep Dive
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 A binder's true worth is determined by its physical components.
                 This granular, feature-by-feature comparison examines the
@@ -360,11 +360,11 @@ const BlogPost4 = () => {
 
           {/* Section 3 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 3: The Collector's Gauntlet: Which Binder Wins for YOUR
               Collection Style?
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 A binder isn't just a product; it's a tool for a specific job.
                 By identifying your primary collecting style, you can match your
@@ -441,7 +441,7 @@ const BlogPost4 = () => {
 
           {/* Section 4 */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 4: The Verdict: Head-to-Head Comparison and Final
               Recommendations
             </h2>
@@ -450,16 +450,16 @@ const BlogPost4 = () => {
               <table className="min-w-full bg-white border border-gray-200 rounded-lg">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Feature
                     </th>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Vault X Exo-Tec
                     </th>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Ultra PRO Elite
                     </th>
-                    <th className="px-4 py-3 text-left font-semibold text-gray-900">
+                    <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-gray-100">
                       Dragon Shield Zipster
                     </th>
                   </tr>
@@ -565,15 +565,15 @@ const BlogPost4 = () => {
 
           {/* FAQ Section */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Section 5: Frequently Asked Questions (FAQ)
             </h2>
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                   Q1: Are D-ring binders really safe for valuable Pokémon cards?
                 </h3>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
                   The fear of ring damage primarily comes from cheap O-ring
                   binders. Modern, high-quality TCG binders like the Dragon
                   Shield Zipster use D-rings with flat edges that sit flush
@@ -584,11 +584,11 @@ const BlogPost4 = () => {
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                   Q2: What's the best way to sleeve cards before putting them in
                   a binder?
                 </h3>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
                   For valuable cards, double-sleeving is recommended: first into
                   a "perfect fit" inner sleeve, then into a standard outer
                   sleeve. This provides maximum protection against dust,
@@ -597,11 +597,11 @@ const BlogPost4 = () => {
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                   Q3: I'm collecting a master set of Pokémon 151. Which binder
                   fits it best?
                 </h3>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
                   For sets exceeding 400 cards, a 12-pocket, 480-card binder
                   works well for ringless setups. However, if you plan to
                   include all associated promo cards and want room to grow, the
@@ -611,11 +611,11 @@ const BlogPost4 = () => {
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                   Q4: Is the Vault X 12-month warranty legitimate and easy to
                   use?
                 </h3>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
                   Yes. User reports describe Vault X customer support as
                   "pleasant and efficient." The warranty demonstrates the
                   company's confidence in product quality and commitment to
@@ -627,10 +627,10 @@ const BlogPost4 = () => {
 
           {/* Conclusion */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Final Thoughts: Building Your Card Sanctuary
             </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Choosing the right binder is a critical step in any collector's
                 journey. The decision boils down to a simple trade-off of

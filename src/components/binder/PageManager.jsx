@@ -58,10 +58,10 @@ const PageManager = ({ binder, className = "" }) => {
   return (
     <div className={`space-y-3 ${className}`}>
       <div className="flex items-center justify-between">
-        <label className="block text-sm font-medium text-slate-700">
+        <label className="block text-sm font-medium text-primary">
           Page Management
         </label>
-        <div className="text-xs text-slate-500">
+        <div className="text-xs text-secondary">
           {currentPageCount} of {maxPages} pages
         </div>
       </div>
@@ -69,19 +69,19 @@ const PageManager = ({ binder, className = "" }) => {
         <button
           onClick={handleDecrement}
           disabled={currentPageCount <= minPages}
-          className="p-2 rounded-lg border bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="p-2 rounded-lg border border-border bg-card-background hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          <MinusIcon className="w-4 h-4 text-slate-600" />
+          <MinusIcon className="w-4 h-4 text-secondary" />
         </button>
-        <div className="flex-1 text-center font-semibold text-slate-800 text-sm py-2 px-3 bg-slate-50 border rounded-lg">
+        <div className="flex-1 text-center font-semibold text-primary text-sm py-2 px-3 bg-secondary border border-border rounded-lg">
           {currentPageCount} Pages
         </div>
         <button
           onClick={handleIncrement}
           disabled={currentPageCount >= maxPages}
-          className="p-2 rounded-lg border bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="p-2 rounded-lg border border-border bg-card-background hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          <PlusIcon className="w-4 h-4 text-slate-600" />
+          <PlusIcon className="w-4 h-4 text-secondary" />
         </button>
       </div>
       <BinderUsageStatus binder={binder} />

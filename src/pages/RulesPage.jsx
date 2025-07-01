@@ -173,7 +173,7 @@ const RulesPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Rules List */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+            <div className="bg-card-background rounded-lg shadow-sm border border-border">
               <div className="px-6 py-4 border-b border-gray-200">
                 <h2 className="text-lg font-semibold text-gray-900">
                   Active Rules ({rules.length})
@@ -408,7 +408,7 @@ const CreateRuleForm = ({ onSubmit, onCancel }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+    <div className="bg-card-background rounded-lg shadow-sm border border-border">
       <div className="px-6 py-4 border-b border-gray-200">
         <h3 className="text-lg font-semibold text-gray-900">Create New Rule</h3>
       </div>
@@ -521,7 +521,7 @@ const RuleDetails = ({ rule, stats, onUpdate, onClose }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+    <div className="bg-card-background rounded-lg shadow-sm border border-border">
       <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
         <h3 className="text-lg font-semibold text-gray-900">Rule Details</h3>
         <Button size="sm" variant="outline" onClick={onClose}>
@@ -667,7 +667,7 @@ const RuleDetails = ({ rule, stats, onUpdate, onClose }) => {
 // Rule Types Overview Component
 const RuleTypesOverview = () => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+    <div className="bg-card-background rounded-lg shadow-sm border border-border">
       <div className="px-6 py-4 border-b border-gray-200">
         <h3 className="text-lg font-semibold text-gray-900">Rule Types</h3>
       </div>

@@ -94,7 +94,7 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
         {/* Cards Status */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="text-gray-600">Cards</span>
+            <span className="text-text-secondary">Cards</span>
             <span
               className={`font-medium ${getStatusColor(
                 usage.cards.percentage,
@@ -102,13 +102,13 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
               )}`}
             >
               {usage.cards.current}/{usage.cards.limit}
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-text-secondary ml-1">
                 ({Math.round(usage.cards.percentage)}%)
               </span>
             </span>
           </div>
           {showProgress && (
-            <div className="w-full bg-gray-200 rounded-full h-2.5 border border-gray-300">
+            <div className="w-full bg-secondary rounded-full h-2.5 border border-border">
               <div
                 className={`h-2.5 rounded-full transition-all ${getProgressColor(
                   usage.cards.percentage,
@@ -125,7 +125,7 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
         {/* Pages Status */}
         <div className="space-y-1">
           <div className="flex items-center justify-between">
-            <span className="text-gray-600">Pages</span>
+            <span className="text-text-secondary">Pages</span>
             <span
               className={`font-medium ${getStatusColor(
                 usage.pages.percentage,
@@ -133,13 +133,13 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
               )}`}
             >
               {usage.pages.current}/{usage.pages.limit}
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-text-secondary ml-1">
                 ({Math.round(usage.pages.percentage)}%)
               </span>
             </span>
           </div>
           {showProgress && (
-            <div className="w-full bg-gray-200 rounded-full h-2.5 border border-gray-300">
+            <div className="w-full bg-secondary rounded-full h-2.5 border border-border">
               <div
                 className={`h-2.5 rounded-full transition-all ${getProgressColor(
                   usage.pages.percentage,

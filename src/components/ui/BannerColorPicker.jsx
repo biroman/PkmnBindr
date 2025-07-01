@@ -106,20 +106,20 @@ const BannerColorPicker = ({
       {/* Modal */}
       <div
         ref={modalRef}
-        className="relative bg-white rounded-xl shadow-2xl max-w-sm w-full mx-4 overflow-hidden"
+        className="relative bg-card-background rounded-xl shadow-2xl max-w-sm w-full mx-4 overflow-hidden"
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 bg-gray-50 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+        <div className="flex items-center justify-between p-4 bg-secondary border-b border-border">
+          <h2 className="text-lg font-semibold text-primary flex items-center gap-2">
             <SwatchIcon className="w-5 h-5" />
             Banner Color
           </h2>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-gray-200 rounded transition-colors"
+            className="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-colors"
             disabled={isUpdating}
           >
-            <XMarkIcon className="w-5 h-5 text-gray-500" />
+            <XMarkIcon className="w-5 h-5 text-secondary" />
           </button>
         </div>
 
@@ -127,9 +127,9 @@ const BannerColorPicker = ({
         <div className="p-4 space-y-4">
           {/* Preview */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-700">Preview</label>
+            <label className="text-sm font-medium text-primary">Preview</label>
             <div
-              className="h-16 rounded-lg border-2 border-gray-200"
+              className="h-16 rounded-lg border-2 border-border"
               style={BannerColorService.getBannerStyle(
                 selectedPreset ||
                   BannerColorService.hexToGradient(selectedColor)
@@ -139,7 +139,7 @@ const BannerColorPicker = ({
 
           {/* Color Picker */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-700">
+            <label className="text-sm font-medium text-primary">
               Custom Color
             </label>
             <div className="flex justify-center">
@@ -153,7 +153,7 @@ const BannerColorPicker = ({
               />
             </div>
             <div className="text-center">
-              <span className="text-xs text-gray-500 font-mono">
+              <span className="text-xs text-secondary font-mono">
                 {selectedColor}
               </span>
             </div>
@@ -161,7 +161,7 @@ const BannerColorPicker = ({
 
           {/* Preset Colors */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-700">
+            <label className="text-sm font-medium text-primary">
               Preset Gradients
             </label>
             <div className="grid grid-cols-4 gap-2">
@@ -172,8 +172,8 @@ const BannerColorPicker = ({
                   disabled={isUpdating}
                   className={`h-12 rounded-lg border-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
                     selectedPreset === gradient
-                      ? "border-blue-500 ring-2 ring-blue-200"
-                      : "border-gray-200 hover:border-gray-400"
+                      ? "border-blue-500 ring-2 ring-blue-200 dark:ring-blue-800"
+                      : "border-border hover:border-slate-400 dark:hover:border-slate-500"
                   }`}
                   style={{ background: gradient }}
                   title={`Preset ${index + 1}`}
@@ -183,11 +183,11 @@ const BannerColorPicker = ({
           </div>
 
           {/* Actions */}
-          <div className="flex items-center justify-end gap-2 pt-2 border-t border-gray-200">
+          <div className="flex items-center justify-end gap-2 pt-2 border-t border-border">
             <button
               onClick={onClose}
               disabled={isUpdating}
-              className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors disabled:opacity-50"
+              className="px-4 py-2 text-sm text-secondary hover:bg-accent rounded-md transition-colors disabled:opacity-50"
             >
               Cancel
             </button>

@@ -126,7 +126,7 @@ const UserProfileCard = ({
 
   return (
     <div
-      className={`bg-white rounded-2xl shadow-xl border border-gray-100 ${config.container} mx-auto lg:mx-0 overflow-hidden ${className}`}
+      className={`bg-card-background rounded-2xl shadow-xl border border-border ${config.container} mx-auto lg:mx-0 overflow-hidden ${className}`}
     >
       {/* Banner Section */}
       {showBanner && (
@@ -241,7 +241,7 @@ const UserProfileCard = ({
                 />
               )}
             </div>
-            <div className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+            <div className="bg-background rounded-lg p-3 border border-border">
               <StatusEditor
                 user={user}
                 onStatusUpdate={onStatusUpdate}

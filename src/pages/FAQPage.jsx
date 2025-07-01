@@ -58,7 +58,7 @@ const FAQPage = () => {
                 about
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   transitioning from physical to digital organization
                 </Link>
@@ -114,7 +114,7 @@ const FAQPage = () => {
                   Visit the{" "}
                   <Link
                     to="/binders"
-                    className="text-blue-600 hover:text-blue-800 font-medium"
+                    className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   >
                     Binders page
                   </Link>
@@ -136,7 +136,7 @@ const FAQPage = () => {
                 our{" "}
                 <Link
                   to="/binders/151"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   Pokemon 151 showcase binder
                 </Link>
@@ -181,7 +181,7 @@ const FAQPage = () => {
                 Compare this to other
                 <Link
                   to="/blog/best-pokemon-tcg-tracking-apps-2025-guide"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   Pokemon TCG tracking apps
                 </Link>{" "}
@@ -233,7 +233,7 @@ const FAQPage = () => {
                 read our comprehensive guide on
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   organizing Pokemon cards from physical to digital
                 </Link>
@@ -475,7 +475,7 @@ const FAQPage = () => {
                 plan purchases strategically. Check out our{" "}
                 <Link
                   to="/binders/151"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   Pokemon 151 showcase
                 </Link>{" "}
@@ -530,7 +530,7 @@ const FAQPage = () => {
                 about{" "}
                 <Link
                   to="/blog/how-to-spot-fake-pokemon-cards-protect-collection"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   spotting fake Pokemon cards
                 </Link>{" "}
@@ -581,7 +581,7 @@ const FAQPage = () => {
                 purposes. Read our detailed guide on{" "}
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   Pokemon card organization strategies
                 </Link>{" "}
@@ -648,7 +648,7 @@ const FAQPage = () => {
                 more about
                 <Link
                   to="/blog/fort-knox-pokemon-card-binder-guide-2025"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   choosing the right physical binder
                 </Link>{" "}
@@ -700,7 +700,7 @@ const FAQPage = () => {
                 comprehensive digital organization for everything else. Our
                 <Link
                   to="/blog/ultimate-guide-organizing-pokemon-cards"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   complete organization guide
                 </Link>{" "}
@@ -908,7 +908,7 @@ const FAQPage = () => {
                 If you consistently cannot find legitimate Pokemon cards, please{" "}
                 <Link
                   to="/contact"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   contact our support team
                 </Link>{" "}
@@ -1090,7 +1090,7 @@ const FAQPage = () => {
                 guide on
                 <Link
                   to="/blog/how-to-spot-fake-pokemon-cards-protect-collection"
-                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                 >
                   how to spot fake Pokemon cards
                 </Link>{" "}
@@ -1149,7 +1149,7 @@ const FAQPage = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1169,31 +1169,31 @@ const FAQPage = () => {
         {/* Search and Content */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
-          <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center space-x-2 text-sm text-text-secondary mb-8">
             <Link to="/" className="hover:text-blue-600 transition-colors">
               Home
             </Link>
             <ChevronRightIcon className="w-4 h-4" />
-            <span className="text-gray-900">FAQ</span>
+            <span className="text-text-primary">FAQ</span>
           </nav>
 
           {/* Search Bar */}
           <div className="mb-8">
             <div className="relative">
-              <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" />
               <input
                 type="text"
                 placeholder="Search frequently asked questions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-card-background text-text-primary placeholder-text-secondary focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="mb-8 p-6 bg-card-background rounded-lg shadow-sm border border-border">
+            <h2 className="text-lg font-semibold text-text-primary mb-4">
               Quick Navigation
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -1205,7 +1205,7 @@ const FAQPage = () => {
                       .getElementById(section.id)
                       .scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-left p-3 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm font-medium"
+                  className="text-left p-3 rounded-lg bg-secondary hover:bg-blue-50 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-sm font-medium"
                 >
                   {section.title}
                 </button>
@@ -1219,19 +1219,19 @@ const FAQPage = () => {
               <div
                 key={section.id}
                 id={section.id}
-                className="bg-white rounded-lg shadow-sm border border-gray-200"
+                className="bg-card-background rounded-lg shadow-sm border border-border"
               >
                 <button
                   onClick={() => toggleSection(section.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 rounded-t-lg"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-lg"
                 >
-                  <h2 className="text-xl font-semibold text-gray-900">
+                  <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     {section.title}
                   </h2>
                   {openSections[section.id] ? (
-                    <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                    <ChevronDownIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                   ) : (
-                    <ChevronRightIcon className="w-5 h-5 text-gray-500" />
+                    <ChevronRightIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
                   )}
                 </button>
 
@@ -1241,12 +1241,12 @@ const FAQPage = () => {
                       {section.questions.map((q) => (
                         <div
                           key={q.id}
-                          className="border-l-4 border-blue-200 pl-4"
+                          className="border-l-4 border-blue-200 dark:border-blue-600 pl-4"
                         >
-                          <h3 className="text-lg font-medium text-gray-900 mb-3">
+                          <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-3">
                             {q.question}
                           </h3>
-                          <div className="text-gray-700 leading-relaxed">
+                          <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
                             {q.answer}
                           </div>
                         </div>
@@ -1259,20 +1259,20 @@ const FAQPage = () => {
           </div>
 
           {/* Additional Resources */}
-          <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-lg border border-blue-200 dark:border-blue-700">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Additional Resources
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-medium text-gray-900 mb-2">
+                <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">
                   Expert Guides
                 </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
                       to="/blog/ultimate-guide-organizing-pokemon-cards"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       Complete Pokemon Card Organization Guide
                     </Link>
@@ -1280,7 +1280,7 @@ const FAQPage = () => {
                   <li>
                     <Link
                       to="/blog/best-pokemon-tcg-tracking-apps-2025-guide"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       Best Pokemon TCG Tracking Apps 2025
                     </Link>
@@ -1288,7 +1288,7 @@ const FAQPage = () => {
                   <li>
                     <Link
                       to="/blog/how-to-spot-fake-pokemon-cards-protect-collection"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       How to Spot Fake Pokemon Cards
                     </Link>
@@ -1296,12 +1296,14 @@ const FAQPage = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-gray-900 mb-2">Get Started</h3>
+                <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">
+                  Get Started
+                </h3>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
                       to="/binders"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       Create Your First Binder
                     </Link>
@@ -1309,7 +1311,7 @@ const FAQPage = () => {
                   <li>
                     <Link
                       to="/binders/151"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       View Pokemon 151 Showcase
                     </Link>
@@ -1317,7 +1319,7 @@ const FAQPage = () => {
                   <li>
                     <Link
                       to="/contact"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                       Contact Support
                     </Link>
@@ -1328,11 +1330,11 @@ const FAQPage = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-8 text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+          <div className="mt-8 text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
               Still have questions?
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Can't find what you're looking for? Our support team is here to
               help.
             </p>
