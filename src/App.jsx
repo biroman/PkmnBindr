@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import { RulesProvider } from "./contexts/RulesContext";
 import { BinderProvider } from "./contexts/BinderContext";
 import { CardCacheProvider } from "./contexts/CardCacheContext";
@@ -66,6 +66,54 @@ const queryClient = new QueryClient({
     },
   },
 });
+
+// Themed Toaster component that uses theme context
+const ThemedToaster = () => {
+  const { theme } = useTheme();
+
+  return (
+    <Toaster
+      position="top-right"
+      toastOptions={{
+        // Default options for all toasts
+        duration: 4000,
+        style: {
+          background: theme === "dark" ? "#374151" : "#ffffff",
+          color: theme === "dark" ? "#f3f4f6" : "#1f2937",
+          border: theme === "dark" ? "1px solid #4b5563" : "1px solid #e5e7eb",
+          borderRadius: "8px",
+          fontSize: "14px",
+          fontWeight: "500",
+          boxShadow:
+            theme === "dark"
+              ? "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)"
+              : "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        },
+        // Success toast styles
+        success: {
+          iconTheme: {
+            primary: theme === "dark" ? "#10b981" : "#059669",
+            secondary: theme === "dark" ? "#374151" : "#ffffff",
+          },
+        },
+        // Error toast styles
+        error: {
+          iconTheme: {
+            primary: theme === "dark" ? "#ef4444" : "#dc2626",
+            secondary: theme === "dark" ? "#374151" : "#ffffff",
+          },
+        },
+        // Loading toast styles
+        loading: {
+          iconTheme: {
+            primary: theme === "dark" ? "#6b7280" : "#9ca3af",
+            secondary: theme === "dark" ? "#374151" : "#ffffff",
+          },
+        },
+      }}
+    />
+  );
+};
 
 const App = () => {
   // Enable automatic user tracking
@@ -188,7 +236,7 @@ const App = () => {
                     </Route>
                   </Routes>
                 </BrowserRouter>
-                <Toaster position="top-right" />
+                <ThemedToaster />
               </BinderCardCustomizationProvider>
             </BinderProvider>
           </CardCacheProvider>

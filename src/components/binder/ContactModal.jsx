@@ -237,22 +237,24 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-hidden"
+        className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-hidden"
         onClick={handleModalClick}
       >
         {/* Success State */}
         {showSuccess ? (
           <div className="p-8 text-center">
             <div className="mb-4">
-              <CheckCircleIcon className="w-16 h-16 text-green-500 mx-auto mb-4 animate-bounce" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <CheckCircleIcon className="w-16 h-16 text-green-500 dark:text-green-400 mx-auto mb-4 animate-bounce" />
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
                 Success! {config.emoji}
               </h3>
-              <p className="text-gray-600">{config.successMessage}</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                {config.successMessage}
+              </p>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
               <div
-                className="bg-green-500 h-2 rounded-full transition-all duration-[3000ms] ease-linear"
+                className="bg-green-500 dark:bg-green-400 h-2 rounded-full transition-all duration-[3000ms] ease-linear"
                 style={{ width: "100%" }}
               ></div>
             </div>
@@ -260,18 +262,18 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
         ) : (
           <>
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{config.emoji}</span>
-                <h2 className="text-xl font-bold text-gray-900">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                   {config.title}
                 </h2>
               </div>
               <button
                 onClick={onClose}
-                className="p-1 hover:bg-gray-100 rounded-lg transition-colors"
+                className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
               >
-                <XMarkIcon className="w-6 h-6 text-gray-400" />
+                <XMarkIcon className="w-6 h-6 text-gray-400 dark:text-gray-500" />
               </button>
             </div>
 
@@ -279,14 +281,14 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
             <div className="p-6">
               {!user ? (
                 <div className="text-center py-8">
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                     Please sign in to submit feedback
                   </p>
                   <Button onClick={onClose}>Close</Button>
                 </div>
               ) : !currentRateLimit?.allowed ? (
                 <div className="text-center py-8">
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
                     {currentRateLimit?.reason ||
                       "Rate limit exceeded. Please try again later."}
                   </p>
@@ -305,10 +307,10 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
                         {...form.register("message")}
                         rows={6}
                         placeholder="Tell us what's on your mind..."
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
                       />
                       {form.formState.errors.message && (
-                        <p className="text-red-600 text-sm mt-1">
+                        <p className="text-red-600 dark:text-red-400 text-sm mt-1">
                           {form.formState.errors.message.message}
                         </p>
                       )}
@@ -325,7 +327,7 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
                           } description`}
                         />
                         {form.formState.errors.title && (
-                          <p className="text-red-600 text-sm mt-1">
+                          <p className="text-red-600 dark:text-red-400 text-sm mt-1">
                             {form.formState.errors.title.message}
                           </p>
                         )}
@@ -342,10 +344,10 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
                               ? "steps to reproduce the bug"
                               : "description of the feature"
                           }`}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
                         />
                         {form.formState.errors.description && (
-                          <p className="text-red-600 text-sm mt-1">
+                          <p className="text-red-600 dark:text-red-400 text-sm mt-1">
                             {form.formState.errors.description.message}
                           </p>
                         )}
@@ -357,7 +359,7 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
                           <select
                             id="priority"
                             {...form.register("priority")}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                           >
                             <option value="low">Low - Minor issue</option>
                             <option value="medium">
@@ -371,6 +373,49 @@ const ContactModal = ({ isOpen, onClose, type = "message" }) => {
                       )}
                     </>
                   )}
+
+                  {/* Discord Alternative */}
+                  <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0">
+                        <svg
+                          className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0190 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-medium text-blue-900 dark:text-blue-100">
+                          Need a faster response?
+                        </h4>
+                        <p className="text-xs text-blue-700 dark:text-blue-300 mt-1">
+                          Join our Discord community for real-time support and
+                          quicker responses from our development team.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            window.open(
+                              "https://discord.gg/HYB88JAZhU",
+                              "_blank"
+                            )
+                          }
+                          className="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 text-xs font-medium text-blue-800 dark:text-blue-200 bg-blue-100 dark:bg-blue-900/50 hover:bg-blue-200 dark:hover:bg-blue-800/50 border border-blue-300 dark:border-blue-700 rounded-md transition-colors duration-200"
+                        >
+                          <svg
+                            className="w-3.5 h-3.5"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0190 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z" />
+                          </svg>
+                          Open Discord
+                        </button>
+                      </div>
+                    </div>
+                  </div>
 
                   <div className="flex gap-3 pt-4">
                     <Button

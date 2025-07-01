@@ -307,7 +307,7 @@ const CardPageItem = ({
 
       {/* Selection Mode Overlay */}
       {isSelectionMode && (
-        <div className="absolute top-2 left-2 w-6 h-6 border-2 border-slate-400 dark:border-slate-600 rounded bg-card-background flex items-center justify-center z-10">
+        <div className="absolute top-2 left-2 w-6 h-6 border-2 border-slate-400 dark:border-gray-500 rounded bg-card-background dark:bg-gray-700 flex items-center justify-center z-10">
           {isSelected && <div className="w-3 h-3 bg-green-500 rounded"></div>}
         </div>
       )}
@@ -323,8 +323,10 @@ const CardPageItem = ({
                     <span className="text-white font-bold text-sm">C</span>
                   </div>
                   <div>
-                    <div className="font-bold text-slate-800">Cover</div>
-                    <div className="text-xs text-purple-600 flex items-center">
+                    <div className="font-bold text-slate-800 dark:text-gray-200">
+                      Cover
+                    </div>
+                    <div className="text-xs text-purple-600 dark:text-purple-400 flex items-center">
                       <LockClosedIcon className="w-3 h-3 mr-1" />
                       Fixed position
                     </div>
@@ -344,10 +346,10 @@ const CardPageItem = ({
                     <span className="font-bold text-sm">{cardPageIndex}</span>
                   </div>
                   <div>
-                    <div className="font-bold text-slate-800">
+                    <div className="font-bold text-slate-800 dark:text-gray-200">
                       Page {cardPageIndex}
                     </div>
-                    <div className="text-xs text-slate-600 flex items-center">
+                    <div className="text-xs text-slate-600 dark:text-gray-400 flex items-center">
                       <Squares2X2Icon className="w-3 h-3 mr-1" />
                       {cardCount}/{totalSlots} cards
                     </div>
@@ -364,10 +366,12 @@ const CardPageItem = ({
         {isCover ? (
           <div className="h-full flex items-center justify-center">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-2">
-                <span className="text-purple-700 font-bold text-2xl">📖</span>
+              <div className="w-16 h-16 bg-purple-200 dark:bg-purple-800 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                <span className="text-purple-700 dark:text-purple-300 font-bold text-2xl">
+                  📖
+                </span>
               </div>
-              <div className="text-sm text-purple-700 font-medium">
+              <div className="text-sm text-purple-700 dark:text-purple-300 font-medium">
                 Binder Cover
               </div>
             </div>
@@ -375,11 +379,13 @@ const CardPageItem = ({
         ) : pageCards.length === 0 ? (
           <div className="h-full flex items-center justify-center">
             <div className="text-center">
-              <DocumentDuplicateIcon className="w-12 h-12 text-slate-300 mx-auto mb-2" />
-              <div className="text-sm text-slate-500 font-medium">
+              <DocumentDuplicateIcon className="w-12 h-12 text-slate-300 dark:text-gray-600 mx-auto mb-2" />
+              <div className="text-sm text-slate-500 dark:text-gray-400 font-medium">
                 Empty Page
               </div>
-              <div className="text-xs text-slate-400">No cards added yet</div>
+              <div className="text-xs text-slate-400 dark:text-gray-500">
+                No cards added yet
+              </div>
             </div>
           </div>
         ) : (
@@ -397,8 +403,8 @@ const CardPageItem = ({
                   w-6 h-8 rounded-sm overflow-hidden border transition-all duration-200
                   ${
                     card
-                      ? "border-slate-200 shadow-sm hover:shadow-md"
-                      : "border-dashed border-slate-300 bg-slate-50"
+                      ? "border-slate-200 dark:border-gray-600 shadow-sm hover:shadow-md"
+                      : "border-dashed border-slate-300 dark:border-gray-600 bg-slate-50 dark:bg-gray-700"
                   }
                 `}
               >
@@ -560,27 +566,27 @@ const DeleteConfirmationModal = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6">
         <div className="flex items-center space-x-3 mb-4">
-          <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-            <ExclamationTriangleIcon className="w-6 h-6 text-red-600" />
+          <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
+            <ExclamationTriangleIcon className="w-6 h-6 text-red-600 dark:text-red-400" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-slate-900">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-gray-100">
               {isBinderPageDeletion
                 ? "Delete Binder Pages"
                 : deleteType === "pages"
                 ? "Delete Pages"
                 : "Clear Cards"}
             </h3>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-600 dark:text-gray-400">
               This action cannot be undone
             </p>
           </div>
         </div>
 
         <div className="mb-6">
-          <p className="text-slate-700 mb-3">
+          <p className="text-slate-700 dark:text-gray-300 mb-3">
             You are about to{" "}
             {isBinderPageDeletion
               ? "delete"
@@ -592,9 +598,12 @@ const DeleteConfirmationModal = ({
             {selectedPagesArray.length > 1 ? "s" : ""}:
           </p>
 
-          <div className="bg-slate-50 rounded-lg p-3 mb-3 max-h-32 overflow-y-auto">
+          <div className="bg-slate-50 dark:bg-gray-700 rounded-lg p-3 mb-3 max-h-32 overflow-y-auto">
             {selectedPagesArray.map((pageIndex) => (
-              <div key={pageIndex} className="text-sm text-slate-600 py-1">
+              <div
+                key={pageIndex}
+                className="text-sm text-slate-600 dark:text-gray-300 py-1"
+              >
                 {isBinderPageDeletion
                   ? `Binder Page ${pageIndex}`
                   : `Page ${pageIndex}`}
@@ -603,24 +612,24 @@ const DeleteConfirmationModal = ({
           </div>
 
           {isBinderPageDeletion ? (
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
+            <div className="bg-orange-50 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-700 rounded-lg p-3">
               <div className="flex items-center space-x-2 mb-2">
-                <ExclamationTriangleIcon className="w-4 h-4 text-orange-600" />
-                <span className="font-medium text-orange-800">
+                <ExclamationTriangleIcon className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                <span className="font-medium text-orange-800 dark:text-orange-300">
                   Impact Summary
                 </span>
               </div>
-              <div className="text-sm text-orange-700 space-y-1">
+              <div className="text-sm text-orange-700 dark:text-orange-300 space-y-1">
                 <p>
                   •{" "}
-                  <span className="font-medium text-red-600">
+                  <span className="font-medium text-red-600 dark:text-red-400">
                     {affectedCards.length} cards
                   </span>{" "}
                   will be deleted
                 </p>
                 <p>
                   •{" "}
-                  <span className="font-medium text-green-600">
+                  <span className="font-medium text-green-600 dark:text-green-400">
                     {cardsToPreserve.length} cards
                   </span>{" "}
                   will be reorganized
@@ -630,14 +639,14 @@ const DeleteConfirmationModal = ({
             </div>
           ) : (
             pagesWithCards.length > 0 && (
-              <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+              <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded-lg p-3">
                 <div className="flex items-center space-x-2 mb-2">
-                  <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />
-                  <span className="font-medium text-red-800">
+                  <ExclamationTriangleIcon className="w-4 h-4 text-red-600 dark:text-red-400" />
+                  <span className="font-medium text-red-800 dark:text-red-300">
                     Warning: Pages contain cards
                   </span>
                 </div>
-                <p className="text-sm text-red-700">
+                <p className="text-sm text-red-700 dark:text-red-300">
                   {pagesWithCards.length} page
                   {pagesWithCards.length > 1 ? "s" : ""} contain
                   {pagesWithCards.length === 1 ? "s" : ""} cards that will be
@@ -651,7 +660,7 @@ const DeleteConfirmationModal = ({
         <div className="flex space-x-3">
           <button
             onClick={onClose}
-            className="flex-1 px-4 py-2 text-slate-700 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors"
+            className="flex-1 px-4 py-2 text-slate-700 dark:text-gray-300 bg-slate-100 dark:bg-gray-700 rounded-lg hover:bg-slate-200 dark:hover:bg-gray-600 transition-colors"
           >
             Cancel
           </button>
@@ -659,8 +668,8 @@ const DeleteConfirmationModal = ({
             onClick={onConfirm}
             className={`flex-1 px-4 py-2 text-white rounded-lg transition-colors font-medium ${
               isBinderPageDeletion || deleteType === "pages"
-                ? "bg-red-600 hover:bg-red-700"
-                : "bg-orange-600 hover:bg-orange-700"
+                ? "bg-red-600 hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-700"
+                : "bg-orange-600 hover:bg-orange-700 dark:bg-orange-600 dark:hover:bg-orange-700"
             }`}
           >
             {isBinderPageDeletion
@@ -1528,7 +1537,7 @@ const BinderPageOverview = ({
         style={isMobile ? { paddingTop: modalTop } : { padding: "1rem" }}
       >
         <div
-          className={`bg-white shadow-2xl w-full overflow-hidden flex flex-col ${
+          className={`bg-white dark:bg-gray-800 shadow-2xl w-full overflow-hidden flex flex-col ${
             isMobile ? "rounded-none h-full" : "rounded-3xl max-w-7xl"
           }`}
           style={
@@ -1542,21 +1551,21 @@ const BinderPageOverview = ({
         >
           {/* Header */}
           <div
-            className={`border-b border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 ${
+            className={`border-b border-slate-200 dark:border-gray-700 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800 ${
               isMobile ? "p-3" : "p-4 sm:p-6"
             }`}
           >
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-shrink-0">
                 <h2
-                  className={`font-bold text-slate-900 mb-1 ${
+                  className={`font-bold text-slate-900 dark:text-gray-100 mb-1 ${
                     isMobile ? "text-lg" : "text-xl sm:text-2xl"
                   }`}
                 >
                   📚 Page Overview
                 </h2>
                 <p
-                  className={`text-slate-600 ${
+                  className={`text-slate-600 dark:text-gray-400 ${
                     isMobile ? "text-xs" : "text-xs sm:text-sm"
                   }`}
                 >
@@ -1567,7 +1576,7 @@ const BinderPageOverview = ({
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 {/* Mode & Actions Row */}
                 {/* Simple Mode Toggle */}
-                <div className="bg-card-background rounded-lg border border-border p-1 shadow-sm">
+                <div className="bg-card-background dark:bg-gray-700 rounded-lg border border-border dark:border-gray-600 p-1 shadow-sm">
                   <div className="flex gap-1">
                     <button
                       onClick={() => {
@@ -1577,7 +1586,7 @@ const BinderPageOverview = ({
                       className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "cardPages"
                           ? "bg-blue-500 text-white shadow-sm"
-                          : "text-secondary hover:bg-accent"
+                          : "text-secondary dark:text-gray-300 hover:bg-accent dark:hover:bg-gray-600"
                       }`}
                     >
                       📋 Organize
@@ -1589,8 +1598,8 @@ const BinderPageOverview = ({
                       }}
                       className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 ${
                         selectionMode === "binderPages"
-                          ? "bg-slate-700 text-white shadow-sm"
-                          : "text-secondary hover:bg-accent"
+                          ? "bg-slate-700 dark:bg-slate-600 text-white shadow-sm"
+                          : "text-secondary dark:text-gray-300 hover:bg-accent dark:hover:bg-gray-600"
                       }`}
                     >
                       ⚙️ Manage
@@ -1606,7 +1615,7 @@ const BinderPageOverview = ({
                       className={`p-2 rounded-md text-xs sm:text-sm font-medium transition-all flex items-center gap-2 ${
                         cardSelectionActive
                           ? "bg-green-500 text-white shadow-sm"
-                          : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"
+                          : "bg-white dark:bg-gray-700 text-slate-600 dark:text-gray-300 border border-slate-200 dark:border-gray-600 hover:bg-slate-50 dark:hover:bg-gray-600"
                       }`}
                     >
                       <CursorArrowRaysIcon className="w-4 h-4" />
@@ -1615,7 +1624,7 @@ const BinderPageOverview = ({
                       </span>
                     </button>
                   )}
-                  <div className="text-xs text-slate-500 italic hidden md:block">
+                  <div className="text-xs text-slate-500 dark:text-gray-400 italic hidden md:block">
                     {selectionMode === "cardPages"
                       ? cardSelectionActive
                         ? "Click cards to select"
@@ -1625,7 +1634,7 @@ const BinderPageOverview = ({
                 </div>
 
                 {isSelectionActive && (
-                  <div className="flex items-center gap-2 text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">
+                  <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-gray-300 bg-slate-100 dark:bg-gray-700 px-2 py-1 rounded">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span>Selection active</span>
                   </div>
@@ -1634,16 +1643,16 @@ const BinderPageOverview = ({
                 {((selectionMode === "cardPages" && selectedPages.size > 0) ||
                   (selectionMode === "binderPages" &&
                     selectedBinderPages.size > 0)) && (
-                  <div className="flex items-center gap-2 bg-white border border-slate-200 rounded px-2 sm:px-3 py-1.5 shadow-sm">
-                    <span className="text-xs font-medium text-slate-700">
+                  <div className="flex items-center gap-2 bg-white dark:bg-gray-700 border border-slate-200 dark:border-gray-600 rounded px-2 sm:px-3 py-1.5 shadow-sm">
+                    <span className="text-xs font-medium text-slate-700 dark:text-gray-300">
                       {selectionMode === "cardPages"
                         ? `${selectedPages.size} cards`
                         : `${selectedBinderPages.size} pages`}
                     </span>
-                    <div className="w-px h-3 bg-slate-300"></div>
+                    <div className="w-px h-3 bg-slate-300 dark:bg-gray-600"></div>
                     <button
                       onClick={clearSelection}
-                      className="text-xs text-slate-500 hover:text-slate-700 transition-colors"
+                      className="text-xs text-slate-500 dark:text-gray-400 hover:text-slate-700 dark:hover:text-gray-200 transition-colors"
                     >
                       Cancel
                     </button>
@@ -1667,13 +1676,13 @@ const BinderPageOverview = ({
                 )}
                 <button
                   onClick={onClose}
-                  className={`hover:bg-slate-100 rounded-lg transition-colors ${
+                  className={`hover:bg-slate-100 dark:hover:bg-gray-700 rounded-lg transition-colors ${
                     isMobile ? "p-2" : "p-3"
                   }`}
                   title="Close Overview"
                 >
                   <XMarkIcon
-                    className={`text-slate-600 hover:text-slate-800 ${
+                    className={`text-slate-600 dark:text-gray-400 hover:text-slate-800 dark:hover:text-gray-200 ${
                       isMobile ? "w-5 h-5" : "w-6 h-6"
                     }`}
                   />
@@ -1730,8 +1739,8 @@ const BinderPageOverview = ({
                       <div
                         className={`absolute -top-6 left-0 text-xs font-medium px-2 py-1 rounded-md border shadow-sm transition-all duration-200 ${
                           selectionMode === "binderPages"
-                            ? "text-blue-700 bg-blue-50 border-blue-300 font-semibold"
-                            : "text-slate-500 bg-white border-slate-200"
+                            ? "text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/50 border-blue-300 dark:border-blue-600 font-semibold"
+                            : "text-slate-500 dark:text-gray-300 bg-white dark:bg-gray-700 border-slate-200 dark:border-gray-600"
                         }`}
                       >
                         Binder Page {groupNum}
@@ -1775,7 +1784,7 @@ const BinderPageOverview = ({
 
                       {/* Selection Indicator */}
                       {isBinderPageSelected && (
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold z-20 shadow-sm border-2 border-white">
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold z-20 shadow-sm border-2 border-white dark:border-gray-700">
                           ✓
                         </div>
                       )}
@@ -1787,9 +1796,9 @@ const BinderPageOverview = ({
                           ${
                             selectionMode === "binderPages"
                               ? isBinderPageSelected
-                                ? "border-2 border-blue-500 bg-blue-200/70 shadow-md"
-                                : "border-2 border-dashed border-blue-400 bg-blue-100/50 hover:border-blue-500 hover:bg-blue-200/50 cursor-pointer"
-                              : "border-2 border-dashed border-slate-200 bg-slate-50/30"
+                                ? "border-2 border-blue-500 bg-blue-200/70 dark:bg-blue-800/50 shadow-md"
+                                : "border-2 border-dashed border-blue-400 dark:border-blue-500 bg-blue-100/50 dark:bg-blue-900/30 hover:border-blue-500 hover:bg-blue-200/50 dark:hover:bg-blue-800/40 cursor-pointer"
+                              : "border-2 border-dashed border-slate-200 dark:border-gray-600 bg-slate-50/30 dark:bg-gray-800/30"
                           }
                         `}
                         onClick={(e) => {
@@ -1826,12 +1835,12 @@ const BinderPageOverview = ({
                             <div className="space-y-2">
                               {/* Page Label Outside */}
                               <div className="text-center">
-                                <div className="text-xs font-semibold text-slate-700">
+                                <div className="text-xs font-semibold text-slate-700 dark:text-gray-300">
                                   {cardPageIndex === 0
                                     ? "Cover"
                                     : `Page ${cardPageIndex}`}
                                 </div>
-                                <div className="text-xs text-slate-500">
+                                <div className="text-xs text-slate-500 dark:text-gray-400">
                                   {cardPageIndex === 0
                                     ? "Fixed"
                                     : (() => {
@@ -1929,7 +1938,7 @@ const BinderPageOverview = ({
                               <div
                                 key={pageIndex}
                                 className={`
-                              absolute bg-white rounded-xl shadow-lg border-2 border-blue-400 w-[120px] h-[180px]
+                              absolute bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-blue-400 w-[120px] h-[180px]
                               flex items-center justify-center transform transition-all duration-200
                               ${
                                 index === 0
@@ -1953,7 +1962,7 @@ const BinderPageOverview = ({
                                       {pageIndex}
                                     </span>
                                   </div>
-                                  <div className="text-xs font-medium text-slate-700">
+                                  <div className="text-xs font-medium text-slate-700 dark:text-gray-300">
                                     Page {pageIndex}
                                   </div>
                                 </div>
@@ -1981,14 +1990,14 @@ const BinderPageOverview = ({
                       ) : (
                         /* Single page drag overlay */
                         <div className="relative">
-                          <div className="bg-white rounded-xl shadow-lg border-2 border-blue-400 w-[120px] h-[180px] flex items-center justify-center">
+                          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-blue-400 w-[120px] h-[180px] flex items-center justify-center">
                             <div className="text-center">
                               <div className="w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center mx-auto mb-2">
                                 <span className="font-bold text-sm">
                                   {activeDragData.cardPageIndex}
                                 </span>
                               </div>
-                              <div className="text-xs font-medium text-slate-700">
+                              <div className="text-xs font-medium text-slate-700 dark:text-gray-300">
                                 Page {activeDragData.cardPageIndex}
                               </div>
                             </div>
@@ -2013,17 +2022,17 @@ const BinderPageOverview = ({
 
           {/* Footer */}
           <div
-            className={`border-t border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 ${
+            className={`border-t border-slate-200 dark:border-gray-700 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800 ${
               isMobile ? "px-3 py-3" : "px-4 sm:px-8 py-4 sm:py-6"
             }`}
           >
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center space-x-4 sm:space-x-8 text-xs sm:text-sm">
-                <div className="text-slate-600">
+                <div className="text-slate-600 dark:text-gray-400">
                   <span className="font-semibold">Total Pages:</span>{" "}
                   {displayPages + 1}
                 </div>
-                <div className="text-slate-600">
+                <div className="text-slate-600 dark:text-gray-400">
                   <span className="font-semibold">Cards/Page:</span>{" "}
                   {cardsPerPage}
                 </div>
@@ -2031,25 +2040,25 @@ const BinderPageOverview = ({
               <div className="flex items-center space-x-3 sm:space-x-6 flex-wrap justify-center">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded"></div>
-                  <span className="text-xs sm:text-sm text-slate-600">
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-gray-400">
                     Cover
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded"></div>
-                  <span className="text-xs sm:text-sm text-slate-600">
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-gray-400">
                     Has cards
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 bg-slate-400 rounded"></div>
-                  <span className="text-xs sm:text-sm text-slate-600">
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-gray-400">
                     Empty
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded"></div>
-                  <span className="text-xs sm:text-sm text-slate-600">
+                  <span className="text-xs sm:text-sm text-slate-600 dark:text-gray-400">
                     Selected
                   </span>
                 </div>

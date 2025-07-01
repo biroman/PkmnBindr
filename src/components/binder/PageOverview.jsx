@@ -139,13 +139,13 @@ const DraggablePage = ({
       {/* Page Container */}
       <div
         className={`
-        bg-white rounded-xl shadow-lg border-2 transition-all duration-300
+        bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 transition-all duration-300
         ${
           isOver
             ? "border-blue-400 shadow-xl"
-            : "border-slate-200 group-hover:border-slate-300"
+            : "border-slate-200 dark:border-gray-700 group-hover:border-slate-300 dark:group-hover:border-gray-600"
         }
-        ${isEmpty ? "border-dashed border-slate-300" : ""}
+        ${isEmpty ? "border-dashed border-slate-300 dark:border-gray-600" : ""}
         ${isMobile ? "p-2" : "p-4"} aspect-[3/4]
       `}
       >
@@ -159,13 +159,13 @@ const DraggablePage = ({
             <div
               className={`${
                 isMobile ? "text-xs" : "text-sm"
-              } font-bold text-slate-700`}
+              } font-bold text-slate-700 dark:text-gray-300`}
             >
               Page {logicalIndex + 1}
             </div>
             {pageIndex === 0 && (
               <div
-                className={`bg-purple-100 text-purple-700 ${
+                className={`bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300 ${
                   isMobile ? "text-xs px-1 py-0.5" : "text-xs px-2 py-1"
                 } rounded-full font-medium`}
               >
@@ -175,20 +175,24 @@ const DraggablePage = ({
           </div>
           <div className="flex items-center space-x-1">
             <div
-              className={`${isMobile ? "text-xs" : "text-xs"} text-slate-500`}
+              className={`${
+                isMobile ? "text-xs" : "text-xs"
+              } text-slate-500 dark:text-gray-400`}
             >
               {cardCount}/{gridConfig.total}
             </div>
             {!isCoverPage && (
               <ArrowsRightLeftIcon
-                className={`${isMobile ? "w-2 h-2" : "w-3 h-3"} text-slate-400`}
+                className={`${
+                  isMobile ? "w-2 h-2" : "w-3 h-3"
+                } text-slate-400 dark:text-gray-500`}
               />
             )}
             {isCoverPage && (
               <div
                 className={`${
                   isMobile ? "w-2 h-2" : "w-3 h-3"
-                } text-purple-400`}
+                } text-purple-400 dark:text-purple-500`}
                 title="Cover page cannot be moved"
               >
                 <Lock className="w-full h-full" />
@@ -204,10 +208,12 @@ const DraggablePage = ({
               <DocumentDuplicateIcon
                 className={`${
                   isMobile ? "w-6 h-6" : "w-8 h-8"
-                } text-slate-300 mx-auto mb-2`}
+                } text-slate-300 dark:text-gray-600 mx-auto mb-2`}
               />
               <div
-                className={`${isMobile ? "text-xs" : "text-xs"} text-slate-400`}
+                className={`${
+                  isMobile ? "text-xs" : "text-xs"
+                } text-slate-400 dark:text-gray-500`}
               >
                 Empty Page
               </div>
@@ -228,8 +234,8 @@ const DraggablePage = ({
                   rounded border transition-all duration-200
                   ${
                     card
-                      ? "bg-slate-100 border-slate-200 overflow-hidden"
-                      : "bg-slate-50 border-dashed border-slate-200"
+                      ? "bg-slate-100 dark:bg-gray-700 border-slate-200 dark:border-gray-600 overflow-hidden"
+                      : "bg-slate-50 dark:bg-gray-800 border-dashed border-slate-200 dark:border-gray-600"
                   }
                 `}
               >
@@ -484,7 +490,7 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
       <div
-        className={`bg-white rounded-2xl shadow-2xl w-full overflow-hidden flex flex-col ${
+        className={`bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full overflow-hidden flex flex-col ${
           isMobile ? `mx-2 rounded-lg` : "max-w-7xl max-h-[90vh] m-4"
         }`}
         style={{
@@ -497,7 +503,7 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
       >
         {/* Header */}
         <div
-          className={`flex items-center justify-between border-b border-slate-200 ${
+          className={`flex items-center justify-between border-b border-slate-200 dark:border-gray-700 ${
             isMobile ? "p-3" : "p-6"
           }`}
         >
@@ -505,18 +511,22 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
             <h2
               className={`${
                 isMobile ? "text-lg" : "text-2xl"
-              } font-bold text-slate-900`}
+              } font-bold text-slate-900 dark:text-gray-100`}
             >
               Page Overview
             </h2>
-            <p className={`text-slate-600 mt-1 ${isMobile ? "text-sm" : ""}`}>
+            <p
+              className={`text-slate-600 dark:text-gray-400 mt-1 ${
+                isMobile ? "text-sm" : ""
+              }`}
+            >
               {currentBinder.metadata?.name} • {pageCount} pages
               {!isMobile && " • Drag to reorder (cover page fixed)"}
             </p>
           </div>
           <div className="flex items-center space-x-3">
             {!isMobile && (
-              <div className="flex items-center space-x-2 text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 text-sm text-slate-600 dark:text-gray-300 bg-slate-100 dark:bg-gray-700 px-3 py-2 rounded-lg">
                 <EyeIcon className="w-4 h-4" />
                 <span>Click to view • Drag to reorder</span>
               </div>
@@ -525,10 +535,12 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
               onClick={onClose}
               className={`${
                 isMobile ? "p-1" : "p-2"
-              } hover:bg-slate-100 rounded-lg transition-colors`}
+              } hover:bg-slate-100 dark:hover:bg-gray-700 rounded-lg transition-colors`}
             >
               <XMarkIcon
-                className={`${isMobile ? "w-5 h-5" : "w-6 h-6"} text-slate-400`}
+                className={`${
+                  isMobile ? "w-5 h-5" : "w-6 h-6"
+                } text-slate-400 dark:text-gray-500`}
               />
             </button>
           </div>
@@ -580,14 +592,14 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
 
         {/* Footer */}
         <div
-          className={`border-t border-slate-200 bg-slate-50 ${
+          className={`border-t border-slate-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-900 ${
             isMobile ? "px-3 py-2" : "px-6 py-4"
           }`}
         >
           <div
             className={`flex items-center justify-between ${
               isMobile ? "text-xs" : "text-sm"
-            } text-slate-600`}
+            } text-slate-600 dark:text-gray-400`}
           >
             <div>
               Total cards: {Object.keys(currentBinder.cards || {}).length} •
@@ -596,11 +608,11 @@ const PageOverview = ({ isOpen, onClose, currentBinder, onPageSelect }) => {
             {!isMobile && (
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-slate-100 border border-slate-300 rounded"></div>
+                  <div className="w-3 h-3 bg-slate-100 dark:bg-gray-700 border border-slate-300 dark:border-gray-600 rounded"></div>
                   <span>Empty slot</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-blue-100 border border-blue-300 rounded"></div>
+                  <div className="w-3 h-3 bg-blue-100 dark:bg-blue-800 border border-blue-300 dark:border-blue-600 rounded"></div>
                   <span>Card</span>
                 </div>
               </div>
