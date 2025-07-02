@@ -34,16 +34,20 @@ export class RobustRoleService {
       };
 
       if (!userSnap.exists()) {
-        // New user - create with default role ONLY if no role exists
-        await setDoc(userRef, {
-          ...baseUserData,
-          role: this.ROLES.USER, // Default for genuinely new users
-          status: "active",
-          createdAt: new Date(),
-          binderCount: 0,
-          cardCount: 0,
-        });
-        console.log("✅ New user profile created:", user.uid);
+        // New user - create with default role but use merge to prevent overwrites
+        await setDoc(
+          userRef,
+          {
+            ...baseUserData,
+            role: this.ROLES.USER, // Default for genuinely new users
+            status: "active",
+            createdAt: new Date(),
+            binderCount: 0,
+            cardCount: 0,
+          },
+          { merge: true }
+        ); // 🔒 CRITICAL: Use merge to prevent role overwrites
+        console.log("✅ New user profile created safely:", user.uid);
       } else {
         // Existing user - ONLY update safe fields, NEVER touch role
         const existingData = userSnap.data();
@@ -65,8 +69,8 @@ export class RobustRoleService {
           safeUpdateData.photoURL = user.photoURL;
         }
 
-        // 🔒 CRITICAL: Never update role, status, or other sensitive fields
-        await updateDoc(userRef, safeUpdateData);
+        // 🔒 CRITICAL: Use merge to ensure no accidental overwrites
+        await setDoc(userRef, safeUpdateData, { merge: true });
       }
 
       return true;

@@ -122,12 +122,16 @@ export const useAuthStore = create()(
                 // Identify user with Microsoft Clarity for analytics
                 identifyUserWithClarity(user);
 
-                // Update last login time
+                // Update last login time safely
                 if (userDoc.exists()) {
-                  await updateDoc(doc(db, "users", firebaseUser.uid), {
-                    lastLoginAt: serverTimestamp(),
-                    loginCount: (userData.loginCount || 0) + 1,
-                  });
+                  await setDoc(
+                    doc(db, "users", firebaseUser.uid),
+                    {
+                      lastLoginAt: serverTimestamp(),
+                      loginCount: (userData.loginCount || 0) + 1,
+                    },
+                    { merge: true }
+                  ); // 🔒 Safe merge for login tracking
                 }
               } else {
                 // User logged out - clear Clarity session
@@ -206,18 +210,22 @@ export const useAuthStore = create()(
             );
             await RobustRoleService.safeCreateOrUpdateUserProfile(user);
 
-            // Add signup-specific fields
-            await updateDoc(doc(db, "users", user.uid), {
-              agreeToTerms: true,
-              agreeToTermsAt: new Date().toISOString(),
-              loginCount: 0,
-              accountStatus: "active",
-              authProvider: "email",
-              securityFlags: {
-                suspiciousActivity: false,
-                lastPasswordChange: new Date().toISOString(),
+            // Add signup-specific fields safely with merge
+            await setDoc(
+              doc(db, "users", user.uid),
+              {
+                agreeToTerms: true,
+                agreeToTermsAt: new Date().toISOString(),
+                loginCount: 0,
+                accountStatus: "active",
+                authProvider: "email",
+                securityFlags: {
+                  suspiciousActivity: false,
+                  lastPasswordChange: new Date().toISOString(),
+                },
               },
-            });
+              { merge: true }
+            ); // 🔒 Use merge to prevent role overwriting
 
             // Send email verification
             await sendEmailVerification(user, {
@@ -291,28 +299,36 @@ export const useAuthStore = create()(
             );
             await RobustRoleService.safeCreateOrUpdateUserProfile(user);
 
-            // Update OAuth-specific fields safely
+            // Update OAuth-specific fields safely with merge
             const userDoc = await getDoc(doc(db, "users", user.uid));
             if (userDoc.exists()) {
-              await updateDoc(doc(db, "users", user.uid), {
-                lastLoginAt: serverTimestamp(),
-                loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified,
-                authProvider: "google",
-              });
-            } else {
-              // For new OAuth users, add OAuth-specific fields
-              await updateDoc(doc(db, "users", user.uid), {
-                agreeToTerms: true,
-                agreeToTermsAt: new Date().toISOString(),
-                authProvider: "google",
-                loginCount: 1,
-                accountStatus: "active",
-                securityFlags: {
-                  suspiciousActivity: false,
-                  lastPasswordChange: null,
+              await setDoc(
+                doc(db, "users", user.uid),
+                {
+                  lastLoginAt: serverTimestamp(),
+                  loginCount: (userDoc.data().loginCount || 0) + 1,
+                  emailVerified: user.emailVerified,
+                  authProvider: "google",
                 },
-              });
+                { merge: true }
+              ); // 🔒 Safe merge for existing users
+            } else {
+              // For new OAuth users, add OAuth-specific fields safely
+              await setDoc(
+                doc(db, "users", user.uid),
+                {
+                  agreeToTerms: true,
+                  agreeToTermsAt: new Date().toISOString(),
+                  authProvider: "google",
+                  loginCount: 1,
+                  accountStatus: "active",
+                  securityFlags: {
+                    suspiciousActivity: false,
+                    lastPasswordChange: null,
+                  },
+                },
+                { merge: true }
+              ); // 🔒 Safe merge for new users
             }
 
             return user;
@@ -340,28 +356,36 @@ export const useAuthStore = create()(
             );
             await RobustRoleService.safeCreateOrUpdateUserProfile(user);
 
-            // Update OAuth-specific fields safely
+            // Update OAuth-specific fields safely with merge
             const userDoc = await getDoc(doc(db, "users", user.uid));
             if (userDoc.exists()) {
-              await updateDoc(doc(db, "users", user.uid), {
-                lastLoginAt: serverTimestamp(),
-                loginCount: (userDoc.data().loginCount || 0) + 1,
-                emailVerified: user.emailVerified,
-                authProvider: "twitter",
-              });
-            } else {
-              // For new OAuth users, add OAuth-specific fields
-              await updateDoc(doc(db, "users", user.uid), {
-                agreeToTerms: true,
-                agreeToTermsAt: new Date().toISOString(),
-                authProvider: "twitter",
-                loginCount: 1,
-                accountStatus: "active",
-                securityFlags: {
-                  suspiciousActivity: false,
-                  lastPasswordChange: null,
+              await setDoc(
+                doc(db, "users", user.uid),
+                {
+                  lastLoginAt: serverTimestamp(),
+                  loginCount: (userDoc.data().loginCount || 0) + 1,
+                  emailVerified: user.emailVerified,
+                  authProvider: "twitter",
                 },
-              });
+                { merge: true }
+              ); // 🔒 Safe merge for existing users
+            } else {
+              // For new OAuth users, add OAuth-specific fields safely
+              await setDoc(
+                doc(db, "users", user.uid),
+                {
+                  agreeToTerms: true,
+                  agreeToTermsAt: new Date().toISOString(),
+                  authProvider: "twitter",
+                  loginCount: 1,
+                  accountStatus: "active",
+                  securityFlags: {
+                    suspiciousActivity: false,
+                    lastPasswordChange: null,
+                  },
+                },
+                { merge: true }
+              ); // 🔒 Safe merge for new users
             }
 
             return user;
@@ -378,12 +402,16 @@ export const useAuthStore = create()(
           try {
             set({ error: null });
 
-            // Update last logout time
+            // Update last logout time safely
             const { user } = get();
             if (user?.uid) {
-              await updateDoc(doc(db, "users", user.uid), {
-                lastLogoutAt: serverTimestamp(),
-              });
+              await setDoc(
+                doc(db, "users", user.uid),
+                {
+                  lastLogoutAt: serverTimestamp(),
+                },
+                { merge: true }
+              ); // 🔒 Safe merge for logout tracking
             }
 
             // Clear user from Microsoft Clarity analytics
