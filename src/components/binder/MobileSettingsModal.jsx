@@ -11,6 +11,7 @@ const MobileSettingsModal = ({
   onNameChange,
   onSortChange,
   onAutoSortChange,
+  onBulkToggleMissing,
   isReadOnly = false,
 }) => {
   return (
@@ -67,6 +68,7 @@ const MobileSettingsModal = ({
                     onCollapseChange={() => {}} // Not used in mobile modal
                     onSortChange={onSortChange}
                     onAutoSortChange={onAutoSortChange}
+                    onBulkToggleMissing={onBulkToggleMissing}
                     isCollapsed={false} // Always expanded in modal
                     isReadOnly={isReadOnly}
                     isMobile={true} // Pass mobile flag to sidebar

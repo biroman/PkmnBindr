@@ -456,6 +456,52 @@ export const BinderContainer = ({
     }
   };
 
+  const handleBulkToggleMissing = async (markAsMissing) => {
+    if (!binder?.cards) return;
+
+    // Get all current card instanceIds
+    const allCardInstanceIds = Object.values(binder.cards)
+      .map((cardEntry) => cardEntry?.instanceId)
+      .filter(Boolean);
+
+    if (allCardInstanceIds.length === 0) {
+      toast.error("No cards found in binder");
+      return;
+    }
+
+    const currentMissingCards = binder.metadata?.missingInstances || [];
+    let updatedMissingCards;
+
+    if (markAsMissing) {
+      // Add all card instanceIds to missing list (avoid duplicates)
+      updatedMissingCards = [
+        ...new Set([...currentMissingCards, ...allCardInstanceIds]),
+      ];
+    } else {
+      // Remove all card instanceIds from missing list
+      updatedMissingCards = currentMissingCards.filter(
+        (instanceId) => !allCardInstanceIds.includes(instanceId)
+      );
+    }
+
+    try {
+      await updateBinderMetadata(binder.id, {
+        missingInstances: updatedMissingCards,
+      });
+
+      const cardCount = allCardInstanceIds.length;
+      toast.success(
+        markAsMissing
+          ? `Marked ${cardCount} cards as missing`
+          : `Marked ${cardCount} cards as collected`
+      );
+      onBinderChange?.(binder);
+    } catch (error) {
+      console.error("Failed to update bulk missing status:", error);
+      onError?.(error);
+    }
+  };
+
   const pageConfig = getCurrentPageConfig;
   const isMobile = binderDimensions.isMobile;
   const sidebarWidth =
@@ -663,6 +709,7 @@ export const BinderContainer = ({
           onSortChange={handleSortChange}
           onSortDirectionChange={handleSortDirectionChange}
           onAutoSortChange={handleAutoSortChange}
+          onBulkToggleMissing={handleBulkToggleMissing}
           isReadOnly={mode !== "edit"}
         />
       )}
@@ -688,6 +735,7 @@ export const BinderContainer = ({
           onSortChange={handleSortChange}
           onSortDirectionChange={handleSortDirectionChange}
           onAutoSortChange={handleAutoSortChange}
+          onBulkToggleMissing={handleBulkToggleMissing}
           onAddPage={handleAddPage}
           onClearBinder={handleClearBinder}
         />

@@ -584,6 +584,78 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
   );
 };
 
+const BulkMissingToggle = ({ binder, onBulkToggleMissing, isReadOnly }) => {
+  if (isReadOnly || !onBulkToggleMissing) return null;
+
+  const allCardInstanceIds = Object.values(binder?.cards || {})
+    .map((cardEntry) => cardEntry?.instanceId)
+    .filter(Boolean);
+
+  const missingInstanceIds = binder?.metadata?.missingInstances || [];
+  const allCardsAreMissing =
+    allCardInstanceIds.length > 0 &&
+    allCardInstanceIds.every((instanceId) =>
+      missingInstanceIds.includes(instanceId)
+    );
+
+  const handleToggleAllMissing = () => {
+    onBulkToggleMissing(!allCardsAreMissing);
+  };
+
+  if (allCardInstanceIds.length === 0) {
+    return (
+      <div className="space-y-2">
+        <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
+          Bulk Missing Status
+        </label>
+        <div className="text-xs text-gray-500 dark:text-gray-400 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+          No cards in binder to mark as missing
+        </div>
+      </div>
+    );
+  }
+
+  const missingCount = allCardInstanceIds.filter((instanceId) =>
+    missingInstanceIds.includes(instanceId)
+  ).length;
+
+  return (
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-900 dark:text-gray-100">
+        Bulk Missing Status
+      </label>
+      <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm text-gray-700 dark:text-gray-300">
+            Mark all cards as missing
+          </span>
+          <button
+            onClick={handleToggleAllMissing}
+            className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 ${
+              allCardsAreMissing
+                ? "bg-blue-600"
+                : "bg-gray-200 dark:bg-gray-600"
+            }`}
+            role="switch"
+            aria-checked={allCardsAreMissing}
+            aria-label="Toggle all cards missing status"
+          >
+            <span
+              aria-hidden="true"
+              className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${
+                allCardsAreMissing ? "translate-x-5" : "translate-x-0"
+              }`}
+            />
+          </button>
+        </div>
+        <div className="text-xs text-gray-500 dark:text-gray-400">
+          {missingCount} of {allCardInstanceIds.length} cards marked as missing
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const CardBackSettings = ({ binder, onSettingsChange }) => {
   const handleToggleEmptyCardBack = () => {
     const newValue = !binder.settings?.showCardBackForEmpty;
@@ -680,6 +752,7 @@ const BinderSidebar = ({
   onSortChange,
   onAutoSortChange,
   onSortDirectionChange,
+  onBulkToggleMissing,
   isCollapsed = false,
   isReadOnly = false,
   isMobile = false,
@@ -786,6 +859,13 @@ const BinderSidebar = ({
           onSizeChange={onGridSizeChange}
         />
 
+        {/* Bulk Missing Toggle */}
+        <BulkMissingToggle
+          binder={binder}
+          onBulkToggleMissing={onBulkToggleMissing}
+          isReadOnly={isReadOnly}
+        />
+
         {/* Card Back Settings */}
         <CardBackSettings
           binder={binder}
@@ -868,6 +948,13 @@ const BinderSidebar = ({
           <GridSizeSelector
             currentSize={binder.settings.gridSize}
             onSizeChange={onGridSizeChange}
+          />
+
+          {/* Bulk Missing Toggle */}
+          <BulkMissingToggle
+            binder={binder}
+            onBulkToggleMissing={onBulkToggleMissing}
+            isReadOnly={isReadOnly}
           />
 
           {/* Card Back Settings */}
