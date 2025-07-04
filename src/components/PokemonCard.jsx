@@ -99,6 +99,10 @@ const PokemonCard = forwardRef(
       // Drag state props (consumed here to prevent DOM warnings)
       isPlaceholder,
       isDragging,
+      // Selection mode props
+      isSelectionMode = false,
+      isSelected = false,
+      onSelect,
       ...props
     },
     ref
@@ -150,7 +154,12 @@ const PokemonCard = forwardRef(
     };
 
     const handleCardClick = (e) => {
-      onClick?.(card, e);
+      if (isSelectionMode) {
+        e.stopPropagation();
+        onSelect?.(card, e);
+      } else {
+        onClick?.(card, e);
+      }
     };
 
     // Check if this is a reverse holo card
@@ -162,14 +171,15 @@ const PokemonCard = forwardRef(
         className={`
         group relative aspect-[5/7] rounded-lg shadow-md overflow-hidden
         transition-all duration-200 hover:shadow-lg hover:scale-105
-        ${onClick ? "cursor-pointer" : ""}
-        ${draggable ? "draggable" : ""}
+        ${onClick || isSelectionMode ? "cursor-pointer" : ""}
+        ${draggable && !isSelectionMode ? "draggable" : ""}
         ${isReverseHolo ? "ring-2 ring-gradient-to-r ring-purple-400" : ""}
+        ${isSelected ? "ring-4 ring-blue-500 ring-offset-2" : ""}
         ${className}
       `}
         style={style}
         onClick={handleCardClick}
-        draggable={draggable}
+        draggable={draggable && !isSelectionMode}
         onDragStart={onDragStart}
         onDragEnd={onDragEnd}
         {...props}
@@ -179,6 +189,15 @@ const PokemonCard = forwardRef(
           <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent animate-shimmer"></div>
+          </div>
+        )}
+
+        {/* Selection Mode Overlay */}
+        {isSelectionMode && (
+          <div className="absolute inset-0 bg-black/20 rounded-lg pointer-events-none">
+            <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white shadow-lg flex items-center justify-center">
+              {isSelected && <Check className="w-4 h-4 text-blue-600" />}
+            </div>
           </div>
         )}
 

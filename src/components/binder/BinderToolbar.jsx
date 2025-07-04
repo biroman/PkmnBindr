@@ -13,12 +13,17 @@ import {
   EllipsisVerticalIcon,
   ArrowPathIcon,
   DocumentTextIcon,
+  CheckCircleIcon,
+  XCircleIcon,
+  SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
+import { CheckCircleIcon as CheckCircleIconSolid } from "@heroicons/react/24/solid";
 
 const ToolbarButton = ({
   icon: Icon,
   onClick,
   active = false,
+  activeClassName = "",
   className = "",
   title,
   variant = "default",
@@ -42,16 +47,16 @@ const ToolbarButton = ({
       : "text-red-400 hover:text-red-300 hover:bg-red-500/10",
   };
 
+  const defaultActiveClasses = isMobile
+    ? "bg-gray-200 text-gray-800"
+    : "bg-white/20 text-white";
+
+  const activeClasses = active ? activeClassName || defaultActiveClasses : "";
+
   return (
     <button
       onClick={onClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${
-        active
-          ? isMobile
-            ? "bg-gray-200 text-gray-800"
-            : "bg-white/20 text-white"
-          : ""
-      } ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${activeClasses} ${className}`}
       title={title}
     >
       <Icon className="w-5 h-5" />
@@ -72,6 +77,14 @@ const BinderToolbar = ({
   currentBinder,
   isPdfExporting = false,
   isMobile = false,
+  // Selection mode props
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onToggleSelectionMode,
+  onSelectAll,
+  onDeselectAll,
+  onBulkMove,
+  onBulkDelete,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
@@ -110,6 +123,31 @@ const BinderToolbar = ({
 
           {/* Right side - Action buttons */}
           <div className="flex items-center gap-2">
+            {/* Selection Mode Toggle */}
+            <button
+              onClick={onToggleSelectionMode}
+              disabled={disabled}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                isSelectionMode
+                  ? "bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400"
+                  : "text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed"
+              }`}
+              title={
+                isSelectionMode
+                  ? "Exit Selection Mode"
+                  : "Select Multiple Cards"
+              }
+            >
+              {isSelectionMode ? (
+                <CheckCircleIconSolid className="w-5 h-5" />
+              ) : (
+                <SquaresPlusIcon className="w-5 h-5" />
+              )}
+              <span className="hidden lg:inline">
+                {isSelectionMode ? "Done" : "Select"}
+              </span>
+            </button>
+
             <button
               onClick={onPageOverview}
               disabled={disabled}
@@ -204,108 +242,124 @@ const BinderToolbar = ({
 
   // Desktop layout - vertical sidebar (existing)
   return (
-    <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
-      {/* Main toolbar container */}
-      <div className="bg-slate-800/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl border border-white/10">
-        <div className="flex flex-col space-y-3">
-          {/* Add Card - Primary Action */}
-          <ToolbarButton
-            icon={PlusIcon}
-            onClick={() => handleToolClick("add", onAddCard)}
-            variant="primary"
-            title="Add Cards to Binder"
-            className="relative"
-          />
-
-          {/* Divider */}
-          <div className="h-px bg-white/20 mx-2"></div>
-
-          {/* Page Overview */}
-          <ToolbarButton
-            icon={Squares2X2Icon}
-            onClick={() => handleToolClick("overview", onPageOverview)}
-            title="Page Overview"
-          />
-
-          {/* Color Picker */}
-          <ToolbarButton
-            icon={SwatchIcon}
-            onClick={() => handleToolClick("color", onColorPicker)}
-            title="Customize Binder Color"
-          />
-
-          {/* Share - Only show for public binders */}
-          {currentBinder?.permissions?.public && onShare && (
+    <>
+      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
+        {/* Main toolbar container */}
+        <div className="bg-slate-800/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl border border-white/10">
+          <div className="flex flex-col space-y-3">
+            {/* Add Card - Primary Action */}
             <ToolbarButton
-              icon={ShareIcon}
-              onClick={() => handleToolClick("share", onShare)}
-              title="Share Binder"
+              icon={PlusIcon}
+              onClick={() => handleToolClick("add", onAddCard)}
+              variant="primary"
+              title="Add Cards to Binder"
+              className="relative"
             />
-          )}
 
-          {/* PDF Export */}
-          <div className="relative flex items-center group">
+            {/* Divider */}
+            <div className="h-px bg-white/20 mx-2"></div>
+
+            {/* Selection Mode Toggle */}
             <div className="relative">
               <ToolbarButton
-                icon={DocumentArrowDownIcon}
-                onClick={() => handleToolClick("pdf", onPdfExport)}
-                title="Export as PDF"
-                className={
-                  isPdfExporting ? "opacity-50 cursor-not-allowed" : ""
+                icon={isSelectionMode ? CheckCircleIconSolid : SquaresPlusIcon}
+                onClick={() =>
+                  handleToolClick("selection", onToggleSelectionMode)
+                }
+                active={isSelectionMode}
+                activeClassName="!bg-green-500/90 text-white"
+                title={
+                  isSelectionMode
+                    ? "Exit Selection Mode"
+                    : "Select Multiple Cards"
                 }
               />
+              {isSelectionMode && !isMobile && (
+                <div className="absolute left-full top-1/2 -translate-y-1/2 ml-4 flex items-center gap-2 bg-green-500/95 text-white font-semibold px-4 py-2 rounded-lg shadow-lg border border-green-400/50 animate-in fade-in slide-in-from-left-4 duration-300 whitespace-nowrap">
+                  <div className="absolute right-full top-1/2 -translate-y-1/2 w-2 h-2 bg-green-500/95 transform rotate-45 border-l-0 border-t-0 border-b border-r-0 border-green-400/50" />
+                  <span>Select Mode Active</span>
+                </div>
+              )}
+            </div>
 
-              {/* Warning Triangle */}
-              <div className="absolute -top-1 -right-1 z-10">
-                <ExclamationTriangleIcon className="w-4 h-4 text-yellow-500 drop-shadow-sm" />
+            {/* Divider */}
+            <div className="h-px bg-white/20 mx-2"></div>
+
+            {/* Page Overview */}
+            <ToolbarButton
+              icon={Squares2X2Icon}
+              onClick={() => handleToolClick("overview", onPageOverview)}
+              title="Page Overview"
+            />
+
+            {/* Color Picker */}
+            <ToolbarButton
+              icon={SwatchIcon}
+              onClick={() => handleToolClick("color", onColorPicker)}
+              title="Customize Binder Color"
+            />
+
+            {/* Share - Only show for public binders */}
+            {currentBinder?.permissions?.public && onShare && (
+              <ToolbarButton
+                icon={ShareIcon}
+                onClick={() => handleToolClick("share", onShare)}
+                title="Share Binder"
+              />
+            )}
+
+            {/* PDF Export */}
+            <div className="relative flex items-center group">
+              <div className="relative">
+                <ToolbarButton
+                  icon={DocumentArrowDownIcon}
+                  onClick={() => handleToolClick("pdf", onPdfExport)}
+                  title="Export as PDF"
+                  className={
+                    isPdfExporting ? "opacity-50 cursor-not-allowed" : ""
+                  }
+                />
+
+                {/* Warning Triangle */}
+                <div className="absolute -top-1 -right-1 z-10">
+                  <ExclamationTriangleIcon className="w-4 h-4 text-yellow-500 drop-shadow-sm" />
+                </div>
               </div>
-            </div>
 
-            {/* Warning Tooltip */}
-            <div className="absolute left-full ml-3 flex items-center bg-yellow-50 border border-yellow-200 rounded-lg px-3 py-2 text-sm text-yellow-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-              <ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0" />
-              <span className="font-medium whitespace-nowrap">
-                Limited functionality - works best in Firefox
-              </span>
-              {/* Arrow pointing to button */}
-              <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-50 border-l border-b border-yellow-200 rotate-45"></div>
-            </div>
-
-            {isPdfExporting && (
-              <div className="absolute left-full ml-3 flex items-center bg-slate-800/95 backdrop-blur-sm rounded-lg px-3 py-2 text-sm text-white shadow-lg border border-white/10 z-30">
-                <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2 flex-shrink-0" />
-                <span className="text-white/90 font-medium whitespace-nowrap">
-                  Generating PDF...
+              {/* Warning Tooltip */}
+              <div className="absolute left-full ml-3 flex items-center bg-yellow-50 border border-yellow-200 rounded-lg px-3 py-2 text-sm text-yellow-800 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
+                <ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mr-2 flex-shrink-0" />
+                <span className="font-medium whitespace-nowrap">
+                  Limited functionality - works best in Firefox
                 </span>
                 {/* Arrow pointing to button */}
-                <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45 border-l border-b border-white/10"></div>
+                <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-yellow-50 border-l border-b border-yellow-200 rotate-45"></div>
               </div>
-            )}
-          </div>
 
-          {/* Divider */}
-          <div className="h-px bg-white/20 mx-2"></div>
-
-          {/* Clear binder */}
-          <ToolbarButton
-            icon={TrashIcon}
-            onClick={() => handleToolClick("clear", onClearBinder)}
-            variant="danger"
-            title="Clear Binder"
-          />
-        </div>
-
-        {/* Binder info tooltip */}
-        {currentBinder && (
-          <div className="absolute left-full ml-3 top-0 bg-slate-800/95 backdrop-blur-sm rounded-lg px-3 py-2 text-sm text-white shadow-lg border border-white/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none">
-            <div className="font-medium">{currentBinder.metadata.name}</div>
-            <div className="text-slate-300 text-xs">
-              {Object.keys(currentBinder.cards || {}).length} cards
+              {isPdfExporting && (
+                <div className="absolute left-full ml-3 flex items-center bg-slate-800/95 backdrop-blur-sm rounded-lg px-3 py-2 text-sm text-white shadow-lg border border-white/10 z-30">
+                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2 flex-shrink-0" />
+                  <span className="text-white/90 font-medium whitespace-nowrap">
+                    Generating PDF...
+                  </span>
+                  {/* Arrow pointing to button */}
+                  <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45 border-l border-b border-white/10"></div>
+                </div>
+              )}
             </div>
-            {/* Arrow pointing to toolbar */}
-            <div className="absolute right-full top-3 w-2 h-2 bg-slate-800 transform rotate-45 border-l border-b border-white/10"></div>
+
+            {/* Divider */}
+            <div className="h-px bg-white/20 mx-2"></div>
+
+            {/* Clear binder */}
+            <ToolbarButton
+              icon={TrashIcon}
+              onClick={() => handleToolClick("clear", onClearBinder)}
+              variant="danger"
+              title="Clear Binder"
+            />
           </div>
-        )}
+        </div>
       </div>
 
       {/* Floating action button style for small screens */}
@@ -317,7 +371,7 @@ const BinderToolbar = ({
           <PlusIcon className="w-6 h-6" />
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

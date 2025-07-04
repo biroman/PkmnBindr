@@ -14,6 +14,7 @@ const BinderDisplay = ({
   onSlotClick = () => {},
   onToggleMissing = () => {},
   getCardsForPage = () => [],
+  dropTarget = null,
   className = "",
   style = {},
   // Public view specific props
@@ -23,6 +24,10 @@ const BinderDisplay = ({
   shareUrl = null,
   showQRCode = false,
   onToggleQRCode = null,
+  // Selection mode props
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onCardSelect,
 }) => {
   if (!binder || !currentPageConfig) {
     return null;
@@ -81,12 +86,17 @@ const BinderDisplay = ({
               isMobile={true}
               fullScreen={true}
               dimensions={dimensions}
+              dropTarget={dropTarget}
               showCardBackForEmpty={
                 binder.settings?.showCardBackForEmpty || false
               }
               showCardBackForMissing={
                 binder.settings?.showCardBackForMissing || false
               }
+              // Selection mode props
+              isSelectionMode={isSelectionMode}
+              selectedCards={selectedCards}
+              onCardSelect={onCardSelect}
             />
           )}
         </div>
@@ -129,10 +139,15 @@ const BinderDisplay = ({
           missingPositions={binder.metadata?.missingInstances || []}
           backgroundColor={backgroundColor}
           isReadOnly={isReadOnly}
+          dropTarget={dropTarget}
           showCardBackForEmpty={binder.settings?.showCardBackForEmpty || false}
           showCardBackForMissing={
             binder.settings?.showCardBackForMissing || false
           }
+          // Selection mode props
+          isSelectionMode={isSelectionMode}
+          selectedCards={selectedCards}
+          onCardSelect={onCardSelect}
         />
       )}
 
@@ -154,10 +169,15 @@ const BinderDisplay = ({
         missingPositions={binder.metadata?.missingInstances || []}
         backgroundColor={backgroundColor}
         isReadOnly={isReadOnly}
+        dropTarget={dropTarget}
         showCardBackForEmpty={binder.settings?.showCardBackForEmpty || false}
         showCardBackForMissing={
           binder.settings?.showCardBackForMissing || false
         }
+        // Selection mode props
+        isSelectionMode={isSelectionMode}
+        selectedCards={selectedCards}
+        onCardSelect={onCardSelect}
       />
     </div>
   );
@@ -189,6 +209,7 @@ BinderDisplay.propTypes = {
   onSlotClick: PropTypes.func,
   onToggleMissing: PropTypes.func,
   getCardsForPage: PropTypes.func,
+  dropTarget: PropTypes.object,
   className: PropTypes.string,
   style: PropTypes.object,
   // Public view specific props
@@ -198,6 +219,10 @@ BinderDisplay.propTypes = {
   shareUrl: PropTypes.string,
   showQRCode: PropTypes.bool,
   onToggleQRCode: PropTypes.func,
+  // Selection mode props
+  isSelectionMode: PropTypes.bool,
+  selectedCards: PropTypes.object, // Set object
+  onCardSelect: PropTypes.func,
 };
 
 export default BinderDisplay;

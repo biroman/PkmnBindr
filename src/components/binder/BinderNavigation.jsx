@@ -13,6 +13,8 @@ import {
   AdjustmentsHorizontalIcon,
   EllipsisVerticalIcon,
   ShareIcon,
+  CheckCircleIcon,
+  SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -324,6 +326,27 @@ const BinderNavigation = ({
                           onClick={() => setIsMoreMenuOpen(false)}
                         >
                           <div className="py-1">
+                            {toolbarActions.onToggleSelectionMode && (
+                              <button
+                                onClick={toolbarActions.onToggleSelectionMode}
+                                className={`w-full text-left flex items-center gap-3 px-4 py-2 text-sm ${
+                                  toolbarActions.isSelectionMode
+                                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                }`}
+                              >
+                                {toolbarActions.isSelectionMode ? (
+                                  <CheckCircleIcon className="w-5 h-5 text-blue-500 dark:text-blue-400" />
+                                ) : (
+                                  <SquaresPlusIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                )}
+                                <span>
+                                  {toolbarActions.isSelectionMode
+                                    ? "Exit Selection Mode"
+                                    : "Select Cards"}
+                                </span>
+                              </button>
+                            )}
                             {toolbarActions.onPageOverview && (
                               <button
                                 onClick={toolbarActions.onPageOverview}
@@ -457,6 +480,8 @@ BinderNavigation.propTypes = {
     onMobileSettings: PropTypes.func,
     onPdfExport: PropTypes.func,
     onClearBinder: PropTypes.func,
+    onToggleSelectionMode: PropTypes.func,
+    isSelectionMode: PropTypes.bool,
   }),
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,

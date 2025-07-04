@@ -16,9 +16,14 @@ const CardPage = ({
   isMobile = false, // New prop for mobile mode
   fullScreen = false, // New prop for full-screen mobile mode
   dimensions,
+  dropTarget = null, // For drop preview
   // Card back display settings
   showCardBackForEmpty = false,
   showCardBackForMissing = false,
+  // Selection mode props
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onCardSelect,
 }) => {
   const gridConfig = getGridConfig(gridSize);
   const slots = Array.from({ length: gridConfig.total });
@@ -58,6 +63,16 @@ const CardPage = ({
               const isMissing =
                 instanceId && missingPositions.includes(instanceId);
 
+              // Check if this card is selected
+              const selectionKey = `${cardPageIndex}-${index}`;
+              const isSelected = selectedCards.has(selectionKey);
+
+              // Check if this slot is a drop target for preview
+              const isDropTarget =
+                dropTarget &&
+                globalPosition >= dropTarget.position &&
+                globalPosition < dropTarget.position + dropTarget.count;
+
               return (
                 <DroppableSlot
                   key={`slot-${globalPosition}`}
@@ -72,8 +87,18 @@ const CardPage = ({
                   isMissing={isMissing}
                   isReadOnly={isReadOnly}
                   isMobile={isMobile}
+                  isDropTarget={isDropTarget}
                   showCardBackForEmpty={showCardBackForEmpty}
                   showCardBackForMissing={showCardBackForMissing}
+                  // Selection mode props
+                  isSelectionMode={isSelectionMode}
+                  isSelected={isSelected}
+                  onCardSelect={(card) =>
+                    onCardSelect?.(card, {
+                      pageIndex: cardPageIndex,
+                      slotIndex: index,
+                    })
+                  }
                 />
               );
             })}
@@ -125,6 +150,16 @@ const CardPage = ({
             const isMissing =
               instanceId && missingPositions.includes(instanceId);
 
+            // Check if this card is selected
+            const selectionKey = `${cardPageIndex}-${index}`;
+            const isSelected = selectedCards.has(selectionKey);
+
+            // Check if this slot is a drop target for preview
+            const isDropTarget =
+              dropTarget &&
+              globalPosition >= dropTarget.position &&
+              globalPosition < dropTarget.position + dropTarget.count;
+
             return (
               <DroppableSlot
                 key={`slot-${globalPosition}`}
@@ -139,8 +174,18 @@ const CardPage = ({
                 isMissing={isMissing}
                 isReadOnly={isReadOnly}
                 isMobile={isMobile}
+                isDropTarget={isDropTarget}
                 showCardBackForEmpty={showCardBackForEmpty}
                 showCardBackForMissing={showCardBackForMissing}
+                // Selection mode props
+                isSelectionMode={isSelectionMode}
+                isSelected={isSelected}
+                onCardSelect={(card) =>
+                  onCardSelect?.(card, {
+                    pageIndex: cardPageIndex,
+                    slotIndex: index,
+                  })
+                }
               />
             );
           })}

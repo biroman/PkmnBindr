@@ -7,6 +7,7 @@ import BinderSidebar from "./BinderSidebar";
 import MobileSettingsModal from "./MobileSettingsModal";
 import ModalProvider from "./ModalProvider";
 import DragProvider from "./DragProvider";
+import SelectionActionBar from "./SelectionActionBar";
 import { BinderNavigation, EdgeNavigation } from "./navigation";
 import useBinderPages from "../../hooks/useBinderPages";
 import useBinderDimensions from "../../hooks/useBinderDimensions";
@@ -137,6 +138,15 @@ export const BinderContainer = ({
   shareUrl = null,
   showQRCode = false,
   onToggleQRCode = null,
+  // Selection mode props
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onToggleSelectionMode = null,
+  onCardSelect = null,
+  onSelectAll = null,
+  onDeselectAll = null,
+  onBulkMove = null,
+  onBulkDelete = null,
 }) => {
   // Early return check - must be before any hooks
   if (!binder) {
@@ -263,6 +273,11 @@ export const BinderContainer = ({
       // Optional: Add any side effects when drag state changes
     },
     enableDrag: features.dragDrop,
+    // Selection mode props for bulk operations
+    isSelectionMode,
+    selectedCards,
+    onBulkMove,
+    onDeselectAll,
   });
 
   // Navigation management (receives edge navigation state from drag drop)
@@ -521,6 +536,22 @@ export const BinderContainer = ({
     return getThemeAwareBinderColor(binder?.settings?.binderColor, theme);
   })();
 
+  // Toolbar actions for navigation
+  const toolbarActions = {
+    onAddCard: features.addCards ? handleAddCard : undefined,
+    onSettings: features.sidebar ? handleSettings : undefined,
+    onPageOverview: features.pageManagement ? handlePageOverview : undefined,
+    onColorPicker: features.colorPicker ? handleColorPicker : undefined,
+    onShare: features.export ? handleShare : undefined,
+    onMobileSettings: features.sidebar ? handleMobileSettings : undefined,
+    onExport: features.export ? handleExport : undefined,
+    onPdfExport: features.export ? handlePdfExport : undefined,
+    onClearBinder: features.clearBinder ? handleClearBinder : undefined,
+    // Selection mode actions
+    onToggleSelectionMode: onToggleSelectionMode,
+    isSelectionMode: isSelectionMode,
+  };
+
   return (
     <div
       className={`${
@@ -558,6 +589,14 @@ export const BinderContainer = ({
             disabled={
               !features.addCards && !features.export && !features.clearBinder
             }
+            // Selection mode props
+            isSelectionMode={isSelectionMode}
+            selectedCards={selectedCards}
+            onToggleSelectionMode={onToggleSelectionMode}
+            onSelectAll={onSelectAll}
+            onDeselectAll={onDeselectAll}
+            onBulkMove={onBulkMove}
+            onBulkDelete={onBulkDelete}
           />
         </div>
       )}
@@ -571,10 +610,12 @@ export const BinderContainer = ({
                 onDragEnd: binderDragDrop.handleDragEnd,
                 onDragCancel: binderDragDrop.handleDragCancel,
                 onDragOver: binderDragDrop.handleDragOver,
+                onDragMove: binderDragDrop.handleDragMove,
               }
             : {}
         }
         activeCard={binderDragDrop.activeCard}
+        selectedCardsData={binderDragDrop.selectedCardsData}
         disabled={!features.dragDrop}
         className={`h-full w-full flex ${
           isMobile ? "items-center" : "items-center" // Center vertically on mobile too
@@ -597,6 +638,7 @@ export const BinderContainer = ({
             onSlotClick: features.addCards ? handleSlotClick : undefined,
             onToggleMissing: handleToggleMissing,
           }}
+          dropTarget={binderDragDrop.dropTarget}
           dragHandlers={
             features.dragDrop
               ? {
@@ -618,6 +660,10 @@ export const BinderContainer = ({
           shareUrl={shareUrl}
           showQRCode={showQRCode}
           onToggleQRCode={onToggleQRCode}
+          // Selection mode props
+          isSelectionMode={isSelectionMode}
+          selectedCards={selectedCards}
+          onCardSelect={onCardSelect}
         />
 
         {/* Edge Navigation - positioned relative to full viewport, inside DndContext */}
@@ -650,31 +696,24 @@ export const BinderContainer = ({
             // Public view props
             isPublicView={isPublicView}
             // Mobile toolbar integration
-            toolbarActions={
-              isMobile && features.toolbar
-                ? {
-                    onAddCard: features.addCards ? handleAddCard : undefined,
-                    onPageOverview: features.navigation
-                      ? handlePageOverview
-                      : undefined,
-                    onColorPicker: features.colorPicker
-                      ? handleColorPicker
-                      : undefined,
-                    onShare: features.export ? handleShare : undefined,
-                    onMobileSettings: handleMobileSettings,
-                    onPdfExport: features.export ? handlePdfExport : undefined,
-                    onClearBinder: features.clearBinder
-                      ? handleClearBinder
-                      : undefined,
-                  }
-                : {}
-            }
+            toolbarActions={toolbarActions}
             isToolbarOpen={isMobileToolbarOpen}
             onToggleToolbar={() => setIsMobileToolbarOpen(!isMobileToolbarOpen)}
             onCardDelete={features.deleteCards ? handleCardDelete : undefined}
           />
         )}
       </DragProvider>
+
+      {/* Selection Action Bar */}
+      {features.modals && isSelectionMode && (
+        <SelectionActionBar
+          selectedCount={selectedCards.size}
+          onDeselectAll={onDeselectAll}
+          onSelectAll={onSelectAll}
+          onBulkDelete={onBulkDelete}
+          onDone={onToggleSelectionMode} // "Done" button exits selection mode
+        />
+      )}
 
       {/* Sidebar Toggle Button - only show on desktop */}
       {features.sidebar && !isMobile && (
@@ -765,6 +804,15 @@ BinderContainer.propTypes = {
   shareUrl: PropTypes.string,
   showQRCode: PropTypes.bool,
   onToggleQRCode: PropTypes.func,
+  // Selection mode props
+  isSelectionMode: PropTypes.bool,
+  selectedCards: PropTypes.object, // Set object
+  onToggleSelectionMode: PropTypes.func,
+  onCardSelect: PropTypes.func,
+  onSelectAll: PropTypes.func,
+  onDeselectAll: PropTypes.func,
+  onBulkMove: PropTypes.func,
+  onBulkDelete: PropTypes.func,
 };
 
 export default BinderContainer;

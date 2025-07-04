@@ -11,6 +11,7 @@ const BinderCore = ({
   onCardInteraction = {},
   dragHandlers = {},
   activeCard = null,
+  dropTarget = null,
   className = "",
   style = {},
   children,
@@ -21,6 +22,10 @@ const BinderCore = ({
   shareUrl = null,
   showQRCode = false,
   onToggleQRCode = null,
+  // Selection mode props
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onCardSelect,
 }) => {
   const {
     onCardClick = () => {},
@@ -49,6 +54,7 @@ const BinderCore = ({
         onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
         onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
         getCardsForPage={getCardsForPage}
+        dropTarget={dropTarget}
         // Public view specific props
         isPublicView={isPublicView}
         binderOwner={binderOwner}
@@ -56,6 +62,10 @@ const BinderCore = ({
         shareUrl={shareUrl}
         showQRCode={showQRCode}
         onToggleQRCode={onToggleQRCode}
+        // Selection mode props
+        isSelectionMode={isSelectionMode}
+        selectedCards={selectedCards}
+        onCardSelect={onCardSelect}
       />
       {children}
     </div>
@@ -96,6 +106,7 @@ BinderCore.propTypes = {
     onDragOver: PropTypes.func,
   }),
   activeCard: PropTypes.object,
+  dropTarget: PropTypes.object,
   className: PropTypes.string,
   style: PropTypes.object,
   children: PropTypes.node,
@@ -106,6 +117,10 @@ BinderCore.propTypes = {
   shareUrl: PropTypes.string,
   showQRCode: PropTypes.bool,
   onToggleQRCode: PropTypes.func,
+  // Selection mode props
+  isSelectionMode: PropTypes.bool,
+  selectedCards: PropTypes.object, // Set object
+  onCardSelect: PropTypes.func,
 };
 
 export default BinderCore;

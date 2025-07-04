@@ -18,8 +18,13 @@ const DroppableSlot = ({
   isMissing = false,
   isReadOnly = false, // Extract isReadOnly to prevent it from passing to DOM
   isMobile = false, // Extract isMobile to prevent it from passing to DOM
+  isDropTarget = false, // For drop preview
   showCardBackForEmpty = false, // New prop for showing card back in empty slots
   showCardBackForMissing = false, // New prop for showing card back for missing cards
+  // Selection mode props
+  isSelectionMode = false,
+  isSelected = false,
+  onCardSelect,
   ...props
 }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -69,7 +74,9 @@ const DroppableSlot = ({
       className={`
         relative aspect-card rounded-md border-2 transition-all duration-200
         ${
-          isSwapHover
+          isDropTarget
+            ? "border-green-400 bg-green-100 dark:bg-green-900 border-solid shadow-lg scale-105" // Drop target preview
+            : isSwapHover
             ? "border-orange-400 bg-orange-50 dark:bg-orange-950 border-solid shadow-lg" // Swap indicator
             : isEmptySlotHover
             ? "border-blue-400 bg-blue-50 dark:bg-blue-950 border-dashed" // Empty slot drop indicator
@@ -218,6 +225,10 @@ const DroppableSlot = ({
               }
               isMissing={isMissing}
               isReadOnly={isReadOnly}
+              // Selection mode props
+              isSelectionMode={isSelectionMode}
+              isSelected={isSelected}
+              onCardSelect={onCardSelect}
               className={`w-full h-full transition-all duration-200 ${
                 isSwapHover ? "scale-95 opacity-75" : ""
               } ${isMissing ? "opacity-50 grayscale" : ""}`}

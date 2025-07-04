@@ -51,6 +51,7 @@
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.6.2",
     "tailwind-merge": "^3.3.0",
+    "use-long-press": "^3.3.0",
     "zod": "^3.25.56",
     "zustand": "^5.0.5"
   },

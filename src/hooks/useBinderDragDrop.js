@@ -20,10 +20,17 @@ export const useBinderDragDrop = ({
   navigation,
   onDragStateChange,
   enableDrag = true,
+  // Selection mode props for bulk operations
+  isSelectionMode = false,
+  selectedCards = new Set(),
+  onBulkMove,
+  onDeselectAll,
 }) => {
   // Drag state
   const [activeCard, setActiveCard] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [selectedCardsData, setSelectedCardsData] = useState([]);
+  const [dropTarget, setDropTarget] = useState(null); // For drop preview
 
   // Edge navigation state
   const [currentEdgeZone, setCurrentEdgeZone] = useState(null);
@@ -127,6 +134,7 @@ export const useBinderDragDrop = ({
   const clearDragState = useCallback(() => {
     setActiveCard(null);
     setIsDragging(false);
+    setSelectedCardsData([]);
     activeDragDataRef.current = null;
 
     // Clear navigation timer
@@ -154,6 +162,24 @@ export const useBinderDragDrop = ({
         setIsDragging(true);
         activeDragDataRef.current = cardData;
 
+        // Handle bulk drag for selected cards
+        if (cardData.isBulkDrag && isSelectionMode && selectedCards.size > 0) {
+          // Get all selected cards data for bulk operation
+          const bulkCardsData = Array.from(selectedCards).map(
+            (selectionKey) => {
+              const [pageIndex, slotIndex] = selectionKey
+                .split("-")
+                .map(Number);
+              // You would need to get the card data from binder here
+              // For now, we'll store the selection keys and resolve cards in drop handler
+              return { selectionKey, pageIndex, slotIndex };
+            }
+          );
+          setSelectedCardsData(bulkCardsData);
+        } else {
+          setSelectedCardsData([]);
+        }
+
         // Prevent document scrolling during drag
         document.body.style.overflow = "hidden";
         document.body.style.touchAction = "none";
@@ -163,7 +189,7 @@ export const useBinderDragDrop = ({
         onDragStateChange?.(true);
       }
     },
-    [enableDrag, onDragStateChange]
+    [enableDrag, onDragStateChange, isSelectionMode, selectedCards]
   );
 
   // Drag over handler for edge navigation
@@ -199,6 +225,24 @@ export const useBinderDragDrop = ({
     [currentEdgeZone, clearNavigationTimer, startNavigationTimer]
   );
 
+  // Drag move handler for previewing drop location
+  const handleDragMove = useCallback(
+    (event) => {
+      const { over } = event;
+      if (isSelectionMode && selectedCards.size > 0) {
+        if (over && over.data.current?.type === "slot") {
+          setDropTarget({
+            position: over.data.current.position,
+            count: selectedCards.size,
+          });
+        } else {
+          setDropTarget(null);
+        }
+      }
+    },
+    [isSelectionMode, selectedCards.size]
+  );
+
   // Drag end handler
   const handleDragEnd = useCallback(
     async (event) => {
@@ -215,6 +259,7 @@ export const useBinderDragDrop = ({
       // Clear active card state
       setActiveCard(null);
       setIsDragging(false);
+      setDropTarget(null);
 
       if (!active || !binder) {
         clearDragState();
@@ -261,7 +306,20 @@ export const useBinderDragDrop = ({
         const fromPosition = activeData.position;
         const toPosition = overData.position;
 
-        if (fromPosition !== toPosition) {
+        // Handle bulk move for selected cards
+        if (activeData.isBulkDrag && selectedCardsData.length > 0) {
+          try {
+            // Use the parent's bulk move handler which should handle the logic
+            await onBulkMove?.(toPosition);
+            // Clear selection after successful bulk move
+            onDeselectAll?.();
+            toast.success(`Moved ${selectedCardsData.length} cards`);
+          } catch (error) {
+            console.error("Failed to move selected cards:", error);
+            toast.error("Failed to move selected cards");
+          }
+        } else if (fromPosition !== toPosition) {
+          // Handle single card move
           try {
             await moveCard(binder.id, fromPosition, toPosition);
           } catch (error) {
@@ -288,12 +346,15 @@ export const useBinderDragDrop = ({
   // Drag cancel handler
   const handleDragCancel = useCallback(() => {
     clearDragState();
+    setDropTarget(null);
   }, [clearDragState]);
 
   return {
     // State
     activeCard,
     isDragging,
+    selectedCardsData,
+    dropTarget,
 
     // Edge navigation state
     currentEdgeZone,
@@ -304,6 +365,7 @@ export const useBinderDragDrop = ({
     handleDragEnd,
     handleDragCancel,
     handleDragOver,
+    handleDragMove,
 
     // Utilities
     clearDragState,

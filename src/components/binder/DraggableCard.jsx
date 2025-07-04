@@ -13,6 +13,10 @@ const DraggableCard = ({
   className = "",
   isDragging = false,
   isReadOnly = false,
+  // Selection mode props
+  isSelectionMode = false,
+  isSelected = false,
+  onCardSelect,
   ...props
 }) => {
   const {
@@ -27,14 +31,24 @@ const DraggableCard = ({
       type: "card",
       card,
       position,
+      // Include selection data for bulk operations
+      isSelectionMode,
+      isSelected,
+      isBulkDrag: isSelectionMode && isSelected,
     },
-    disabled: isReadOnly, // Disable dragging in read-only mode
+    disabled: isReadOnly || (isSelectionMode && !isSelected), // Only allow dragging selected cards in selection mode
   });
+
+  const isDraggable = !isReadOnly && (!isSelectionMode || isSelected);
 
   const style = {
     transform: CSS.Translate.toString(transform),
     opacity: isCurrentlyDragging ? 0.5 : 1,
-    cursor: isReadOnly ? "default" : isCurrentlyDragging ? "grabbing" : "grab",
+    cursor: isDraggable
+      ? isCurrentlyDragging
+        ? "grabbing"
+        : "grab"
+      : "default",
     // Ensure drag doesn't go off-screen
     zIndex: isCurrentlyDragging ? 1000 : 1,
   };
@@ -61,8 +75,12 @@ const DraggableCard = ({
         isMissing={isMissing}
         isReadOnly={isReadOnly}
         dragHandleProps={
-          isReadOnly ? undefined : { ...attributes, ...listeners }
+          isDraggable ? { ...attributes, ...listeners } : undefined
         }
+        // Selection mode props
+        isSelectionMode={isSelectionMode}
+        isSelected={isSelected}
+        onSelect={onCardSelect}
         className={`
           touch-none select-none ${
             isCurrentlyDragging ? "pointer-events-none" : ""
