@@ -5,6 +5,7 @@ import {
   LockClosedIcon,
   ArrowPathIcon,
   QrCodeIcon,
+  CursorArrowRaysIcon,
 } from "@heroicons/react/24/outline";
 import { Eye, EyeOff } from "lucide-react";
 import { useBinderContext } from "../../contexts/BinderContext";
@@ -422,6 +423,13 @@ const CoverPage = ({
       title: "Drag & Drop",
       description:
         "Simply drag cards between slots to reorganize your collection",
+      // applies to both
+    },
+    {
+      icon: <CursorArrowRaysIcon className="w-4 h-4 text-green-600" />,
+      title: "Select Multiple Cards",
+      description:
+        "Use the selection button in the toolbar to select and move multiple cards at the same time",
       // applies to both
     },
     {
