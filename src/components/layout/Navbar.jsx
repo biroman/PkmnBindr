@@ -226,12 +226,12 @@ const Navbar = () => {
       let mobileClasses;
       if (item.isAdmin) {
         mobileClasses = item.active
-          ? "flex items-center px-4 py-3 text-base font-medium rounded-xl bg-amber-50 text-amber-800 border-l-4 border-amber-500"
-          : "flex items-center px-4 py-3 text-base font-medium rounded-xl text-amber-700 hover:bg-amber-50 hover:text-amber-800";
+          ? "flex items-center px-4 py-3 text-base font-medium rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 border-l-4 border-amber-500 dark:border-amber-400"
+          : "flex items-center px-4 py-3 text-base font-medium rounded-xl text-amber-700 dark:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-900/30 hover:text-amber-800 dark:hover:text-amber-200";
       } else {
         mobileClasses = item.active
-          ? "flex items-center px-4 py-3 text-base font-medium rounded-xl bg-blue-50 text-blue-700 border-l-4 border-blue-600"
-          : "flex items-center px-4 py-3 text-base font-medium rounded-xl text-gray-700 hover:bg-gray-50 hover:text-gray-900";
+          ? "flex items-center px-4 py-3 text-base font-medium rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border-l-4 border-blue-600 dark:border-blue-400"
+          : "flex items-center px-4 py-3 text-base font-medium rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/60 hover:text-gray-900 dark:hover:text-white";
       }
 
       return (

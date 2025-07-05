@@ -14,6 +14,8 @@ import {
   EllipsisVerticalIcon,
   ShareIcon,
   CursorArrowRaysIcon,
+  ArrowsPointingInIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -352,6 +354,24 @@ const BinderNavigation = ({
                                 <span>Customize</span>
                               </button>
                             )}
+                            {toolbarActions.onCompactPage && (
+                              <button
+                                onClick={toolbarActions.onCompactPage}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <ArrowsPointingInIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Compact Page</span>
+                              </button>
+                            )}
+                            {toolbarActions.onCompactBinder && (
+                              <button
+                                onClick={toolbarActions.onCompactBinder}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <BookOpenIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Compact Binder</span>
+                              </button>
+                            )}
                             {toolbarActions.onMobileSettings && (
                               <button
                                 onClick={toolbarActions.onMobileSettings}
@@ -477,12 +497,14 @@ BinderNavigation.propTypes = {
   toolbarActions: PropTypes.shape({
     onAddCard: PropTypes.func,
     onPageOverview: PropTypes.func,
+    onShare: PropTypes.func,
     onColorPicker: PropTypes.func,
     onMobileSettings: PropTypes.func,
-    onPdfExport: PropTypes.func,
-    onClearBinder: PropTypes.func,
     onToggleSelectionMode: PropTypes.func,
     selectionMode: PropTypes.bool,
+    onClearBinder: PropTypes.func,
+    onCompactPage: PropTypes.func,
+    onCompactBinder: PropTypes.func,
   }),
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,

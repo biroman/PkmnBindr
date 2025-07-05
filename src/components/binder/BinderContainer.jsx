@@ -720,6 +720,8 @@ export const BinderContainer = ({
                       : undefined,
                     onToggleSelectionMode: toggleSelectionMode,
                     selectionMode,
+                    onCompactPage: handleCompactCurrentPage,
+                    onCompactBinder: handleCompactEntireBinder,
                   }
                 : {}
             }
