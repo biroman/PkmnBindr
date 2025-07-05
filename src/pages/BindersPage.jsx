@@ -96,7 +96,7 @@ const BindersPage = () => {
         setLimits({
           binders: {
             current: binderCount,
-            limit: binderCheck.limit || (user ? 5 : 10), // Default: 5 for users, 10 for local
+            limit: binderCheck.limit || (user ? 7 : 10), // Default: 5 for users, 10 for local
             canCreate: binderCheck.allowed !== false,
             percentage: binderCheck.limit
               ? (binderCount / binderCheck.limit) * 100
