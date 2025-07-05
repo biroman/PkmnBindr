@@ -183,6 +183,16 @@ const AnnouncementWidget = ({ className = "" }) => {
     return null;
   };
 
+  // Utility: convert URLs in plain text into clickable links (opens new tab)
+  const linkify = (text) => {
+    if (!text) return "";
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, (url) => {
+      const safeUrl = url.replace(/\)/g, "%29"); // Basic escaping for parentheses
+      return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:underline">${url}</a>`;
+    });
+  };
+
   // Show max 2 announcements initially, all when showAll is true
   const displayedAnnouncements = showAll
     ? announcements
@@ -270,9 +280,12 @@ const AnnouncementWidget = ({ className = "" }) => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-2 line-clamp-4">
-                    {announcement.content}
-                  </p>
+                  <p
+                    className="text-gray-600 dark:text-gray-400 text-sm mb-2 line-clamp-4 break-words"
+                    dangerouslySetInnerHTML={{
+                      __html: linkify(announcement.content),
+                    }}
+                  />
 
                   <div className="text-xs text-gray-500 dark:text-gray-500">
                     {formatTimeAgo(announcement.createdAt)}
