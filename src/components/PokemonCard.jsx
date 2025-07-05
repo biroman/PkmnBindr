@@ -161,7 +161,7 @@ const PokemonCard = forwardRef(
       <div
         ref={ref}
         className={`
-        group relative aspect-[5/7] rounded-lg shadow-md overflow-hidden
+        group relative aspect-[5/7] rounded-[4%] shadow-md overflow-hidden
         ${
           disableHover
             ? ""

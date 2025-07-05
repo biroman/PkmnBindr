@@ -28,8 +28,12 @@ const BinderDisplay = ({
     return null;
   }
 
+  // Ensure the binder (cover + card pages) never exceeds the calculated height.
+  // This fixes the issue where the cover page could extend behind the top navigation bar.
   const containerStyle = {
     width: `${dimensions.width}px`,
+    height: `${dimensions.height}px`,
+    maxHeight: "100%", // Prevent accidental overflow
     ...style,
   };
 
