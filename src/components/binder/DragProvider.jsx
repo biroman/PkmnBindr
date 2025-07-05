@@ -4,7 +4,10 @@ import {
   DndContext,
   DragOverlay,
   pointerWithin,
-  rectIntersection,
+  useSensor,
+  useSensors,
+  PointerSensor,
+  TouchSensor,
 } from "@dnd-kit/core";
 import PokemonCard from "../PokemonCard";
 
@@ -38,6 +41,20 @@ export const DragProvider = ({
     onDragOver = () => {},
   } = dragHandlers;
 
+  // Configure sensors with small activation distance to avoid accidental drags
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        distance: 15,
+      },
+    })
+  );
+
   // Don't render DndContext if drag is disabled
   if (disabled) {
     return <div className={className}>{children}</div>;
@@ -45,6 +62,7 @@ export const DragProvider = ({
 
   return (
     <DndContext
+      sensors={sensors}
       collisionDetection={pointerWithin}
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
@@ -61,7 +79,7 @@ export const DragProvider = ({
               card={activeCard}
               isPlaceholder={false}
               isDragging={true}
-              className="shadow-2xl border-2 border-blue-400"
+              className="shadow-2xl"
             />
           </div>
         ) : null}

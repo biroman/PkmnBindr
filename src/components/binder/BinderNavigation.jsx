@@ -13,6 +13,7 @@ import {
   AdjustmentsHorizontalIcon,
   EllipsisVerticalIcon,
   ShareIcon,
+  CursorArrowRaysIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -360,6 +361,29 @@ const BinderNavigation = ({
                                 <span>Settings</span>
                               </button>
                             )}
+                            {toolbarActions.onToggleSelectionMode && (
+                              <button
+                                onClick={toolbarActions.onToggleSelectionMode}
+                                className={`w-full text-left flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                                  toolbarActions.selectionMode
+                                    ? "text-green-600 dark:text-green-400"
+                                    : "text-gray-700 dark:text-gray-300"
+                                }`}
+                              >
+                                <CursorArrowRaysIcon
+                                  className={`w-5 h-5 ${
+                                    toolbarActions.selectionMode
+                                      ? "text-green-500 dark:text-green-400"
+                                      : "text-gray-500 dark:text-gray-400"
+                                  }`}
+                                />
+                                <span>
+                                  {toolbarActions.selectionMode
+                                    ? "Done Selecting"
+                                    : "Select Cards"}
+                                </span>
+                              </button>
+                            )}
                             <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
                             {toolbarActions.onClearBinder && (
                               <button
@@ -457,6 +481,8 @@ BinderNavigation.propTypes = {
     onMobileSettings: PropTypes.func,
     onPdfExport: PropTypes.func,
     onClearBinder: PropTypes.func,
+    onToggleSelectionMode: PropTypes.func,
+    selectionMode: PropTypes.bool,
   }),
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,

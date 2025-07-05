@@ -13,6 +13,9 @@ const DraggableCard = ({
   className = "",
   isDragging = false,
   isReadOnly = false,
+  dragDisabled = false,
+  isGhost = false,
+  disableHover = false,
   ...props
 }) => {
   const {
@@ -28,18 +31,18 @@ const DraggableCard = ({
       card,
       position,
     },
-    disabled: isReadOnly, // Disable dragging in read-only mode
+    disabled: isReadOnly || dragDisabled, // Disable when read-only or explicitly disabled
   });
 
   const style = {
     transform: CSS.Translate.toString(transform),
-    opacity: isCurrentlyDragging ? 0.5 : 1,
+    opacity: isGhost || isCurrentlyDragging ? 0 : 1,
     cursor: isReadOnly ? "default" : isCurrentlyDragging ? "grabbing" : "grab",
     // Ensure drag doesn't go off-screen
     zIndex: isCurrentlyDragging ? 1000 : 1,
   };
 
-  if (!card) {
+  if (!card || isGhost) {
     return null;
   }
 
@@ -75,6 +78,7 @@ const DraggableCard = ({
           maxWidth: "100%",
           maxHeight: "100%",
         }}
+        disableHover={disableHover}
       />
     </div>
   );

@@ -361,50 +361,89 @@ const CoverPage = ({
     );
   }
 
-  const appTips = [
+  const allTips = [
     {
       icon: "⌨️",
       title: "Arrow Key Navigation",
       description:
         "Use left and right arrow keys to quickly navigate between pages",
+      device: "desktop",
     },
     {
       icon: "🖱️",
       title: "Drag to Navigate",
       description:
         "Drag cards to the left/right edges to quickly switch pages while dragging",
+      device: "desktop",
     },
     {
       icon: "📋",
       title: "Page Overview",
       description:
-        "Click the grid icon in toolbar to see all pages and drag them to reorder",
+        "Tap the grid icon in the toolbar to see all pages and drag them to reorder",
+      // available on both devices
     },
     {
       icon: "➕",
-      title: "Quick Add Cards",
+      title: "Quick Add Cards (Mobile)",
+      description:
+        "Tap any empty slot to instantly add cards to that specific position",
+      device: "mobile",
+    },
+    {
+      icon: "➕",
+      title: "Quick Add Cards (Desktop)",
       description:
         "Click any empty slot to instantly add cards to that specific position",
+      device: "desktop",
     },
     {
       icon: "⚙️",
       title: "Settings Panel",
       description:
-        "Use the settings button (top-right) to change grid size, edit name, and manage pages",
+        "Use the settings button to change grid size, edit name, and manage pages",
+      // neutral tip
     },
     {
       icon: "👁️",
-      title: "Mark Missing Cards",
+      title: "Mark Missing Cards (Desktop)",
       description:
-        "Hover over any card and click the orange button to mark it as missing/collected",
+        "Hover a card and click the orange button to mark it missing/collected",
+      device: "desktop",
+    },
+    {
+      icon: "👆",
+      title: "Mark Missing Cards (Mobile)",
+      description: "Double-tap a card to toggle missing/collected status",
+      device: "mobile",
     },
     {
       icon: "🔄",
       title: "Drag & Drop",
       description:
         "Simply drag cards between slots to reorganize your collection",
+      // applies to both
+    },
+    {
+      icon: "⋮",
+      title: "More Menu (Mobile)",
+      description:
+        "Tap the ⋮ button to access actions like Select, Share, and Clear Binder",
+      device: "mobile",
+    },
+    {
+      icon: "👆",
+      title: "Swipe Page Switch",
+      description:
+        "While dragging a card, move it to the left or right side of the bottom toolbar to flip pages automatically",
+      device: "mobile",
     },
   ];
+
+  const appTips = allTips.filter((tip) => {
+    if (!tip.device) return true;
+    return tip.device === (isMobile ? "mobile" : "desktop");
+  });
 
   const keyboardShortcuts = [
     { key: "← →", action: "Navigate between pages" },

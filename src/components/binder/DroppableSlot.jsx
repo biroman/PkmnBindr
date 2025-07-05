@@ -3,6 +3,8 @@ import { useDroppable } from "@dnd-kit/core";
 import { useState } from "react";
 import { Check, EyeOff, Trash2, Plus } from "lucide-react";
 import DraggableCard from "./DraggableCard";
+import { useSelection } from "../../contexts/selection";
+import { useBinderContext } from "../../contexts/BinderContext";
 
 const CARD_BACK_URL = "https://img.pkmnbindr.com/000.png";
 
@@ -24,6 +26,18 @@ const DroppableSlot = ({
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
+  // Selection context
+  const {
+    selectionMode,
+    toggleCardSelection,
+    isSelected,
+    previewOffset,
+    isBulkDragging,
+    setPreviewOffset,
+  } = useSelection();
+
+  const { currentBinder } = useBinderContext();
+
   const { isOver, setNodeRef, active } = useDroppable({
     id: `slot-${position}`,
     data: {
@@ -41,6 +55,12 @@ const DroppableSlot = ({
   const isEmptySlotHover = isOver && isDraggingCard && !card;
 
   const handleSlotClick = () => {
+    if (selectionMode) {
+      // In selection mode we toggle selection regardless of card presence
+      toggleCardSelection(position);
+      return;
+    }
+
     if (!card && onSlotClick) {
       onSlotClick(position);
     }
@@ -55,6 +75,55 @@ const DroppableSlot = ({
       }
     }
   };
+
+  // Determine if this slot is predicted destination in multi-drag preview
+  const isPreviewDestination =
+    selectionMode &&
+    previewOffset !== null &&
+    !isSelected(position) &&
+    isSelected(position - previewOffset);
+
+  // Compute preview card for destination slots (card that will move here)
+  let previewCard = null;
+  if (isPreviewDestination && currentBinder && previewOffset !== null) {
+    const sourcePos = position - previewOffset;
+    const entry = currentBinder.cards?.[sourcePos?.toString?.()];
+    const data = entry?.cardData;
+    if (data) {
+      previewCard = {
+        id: data.id,
+        name: data.name,
+        image: data.image || data.imageSmall,
+        images: { small: data.imageSmall || data.image, large: data.image },
+        binderMetadata: { instanceId: entry.instanceId },
+      };
+    }
+  }
+
+  // Compute incoming preview for selected (source) slots – show card moving in
+  let incomingCardPreview = null;
+  if (
+    selectionMode &&
+    isSelected(position) &&
+    previewOffset !== null &&
+    currentBinder
+  ) {
+    const destinationPos = position + previewOffset;
+    const destEntry = currentBinder.cards?.[destinationPos?.toString?.()];
+    const destData = destEntry?.cardData;
+    if (destData) {
+      incomingCardPreview = {
+        id: destData.id,
+        name: destData.name,
+        image: destData.image || destData.imageSmall,
+        images: {
+          small: destData.imageSmall || destData.image,
+          large: destData.image,
+        },
+        binderMetadata: { instanceId: destEntry.instanceId },
+      };
+    }
+  }
 
   const shouldShowCardBack =
     (!card && showCardBackForEmpty) ||
@@ -83,6 +152,13 @@ const DroppableSlot = ({
             : ""
         }
         ${className}
+        ${
+          selectionMode && isSelected(position)
+            ? "ring-4 ring-blue-500/70"
+            : isPreviewDestination
+            ? "ring-4 ring-orange-400/70"
+            : ""
+        }
       `}
       onClick={handleSlotClick}
       onMouseEnter={() => setIsHovering(true)}
@@ -212,12 +288,31 @@ const DroppableSlot = ({
               position={position}
               gridSize={gridSize}
               onCardClick={onCardClick}
-              onCardDelete={onCardDelete}
+              onCardDelete={isMobile ? undefined : onCardDelete}
               onToggleMissing={
-                onToggleMissing ? handleToggleMissing : undefined
+                isMobile
+                  ? undefined
+                  : onToggleMissing
+                  ? handleToggleMissing
+                  : undefined
+              }
+              onDoubleClick={
+                isMobile && onToggleMissing
+                  ? (e) => {
+                      e.stopPropagation();
+                      handleToggleMissing();
+                    }
+                  : undefined
               }
               isMissing={isMissing}
               isReadOnly={isReadOnly}
+              dragDisabled={selectionMode && !isSelected(position)}
+              isGhost={
+                isBulkDragging &&
+                ((selectionMode && isSelected(position)) ||
+                  isPreviewDestination)
+              }
+              disableHover={isMobile}
               className={`w-full h-full transition-all duration-200 ${
                 isSwapHover ? "scale-95 opacity-75" : ""
               } ${isMissing ? "opacity-50 grayscale" : ""}`}
@@ -227,7 +322,11 @@ const DroppableSlot = ({
           {isSwapHover && (
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
               <div className="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">
-                ↔️ SWAP
+                {selectionMode && isSelected(position)
+                  ? "✔️ SELECTED"
+                  : selectionMode
+                  ? "↔️ SWAP GROUP"
+                  : "↔️ SWAP"}
               </div>
             </div>
           )}
@@ -238,6 +337,29 @@ const DroppableSlot = ({
                 <EyeOff className="w-3 h-3" />
                 MISSING
               </div>
+            </div>
+          )}
+
+          {/* Preview overlays */}
+          {previewCard && (
+            <div className="absolute inset-0 z-20 pointer-events-none">
+              <img
+                src={previewCard.images?.small || previewCard.image}
+                alt={previewCard.name}
+                className="w-full h-full object-contain opacity-80 rounded-md"
+              />
+            </div>
+          )}
+
+          {incomingCardPreview && (
+            <div className="absolute inset-0 z-20 pointer-events-none">
+              <img
+                src={
+                  incomingCardPreview.images?.small || incomingCardPreview.image
+                }
+                alt={incomingCardPreview.name}
+                className="w-full h-full object-contain opacity-60 grayscale rounded-md"
+              />
             </div>
           )}
         </div>
@@ -288,6 +410,17 @@ const DroppableSlot = ({
         <div className="absolute bottom-0 right-0 bg-black/20 text-white text-xs px-1 rounded-tl">
           {position}
         </div>
+      )}
+
+      {/* Selection overlay */}
+      {selectionMode && isSelected(position) && (
+        <div className="absolute inset-0 bg-blue-500/40 border-4 border-blue-600 rounded-md pointer-events-none flex items-center justify-center">
+          <Check className="w-8 h-8 text-white drop-shadow-lg" />
+        </div>
+      )}
+
+      {isPreviewDestination && (
+        <div className="absolute inset-0 bg-orange-400/40 border-4 border-orange-600 rounded-md pointer-events-none"></div>
       )}
     </div>
   );

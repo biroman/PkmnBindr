@@ -11,6 +11,11 @@ import { toast } from "react-hot-toast";
  * @param {Object} options.navigation - Navigation object from useBinderNavigation
  * @param {Function} options.onDragStateChange - Callback when drag state changes
  * @param {boolean} options.enableDrag - Whether drag functionality is enabled
+ * @param {boolean} options.selectionMode - Whether multi-card selection mode is active
+ * @param {Array} options.selectedPositions - Array of selected card positions
+ * @param {Function} options.clearSelection - Function to clear the selection
+ * @param {Function} options.setPreviewOffset - Function to set the preview offset
+ * @param {Function} options.setIsBulkDragging - Function to set the bulk dragging state
  * @returns {Object} Drag and drop handlers and state
  */
 export const useBinderDragDrop = ({
@@ -20,6 +25,11 @@ export const useBinderDragDrop = ({
   navigation,
   onDragStateChange,
   enableDrag = true,
+  selectionMode = false,
+  selectedPositions = [],
+  clearSelection = () => {},
+  setPreviewOffset = () => {},
+  setIsBulkDragging = () => {},
 }) => {
   // Drag state
   const [activeCard, setActiveCard] = useState(null);
@@ -154,6 +164,12 @@ export const useBinderDragDrop = ({
         setIsDragging(true);
         activeDragDataRef.current = cardData;
 
+        // If we're in selection mode and the dragged card is part of selection, store whole set
+        if (selectionMode && selectedPositions.length > 1) {
+          activeDragDataRef.current.multiPositions = selectedPositions;
+          setIsBulkDragging(true);
+        }
+
         // Prevent document scrolling during drag
         document.body.style.overflow = "hidden";
         document.body.style.touchAction = "none";
@@ -163,10 +179,16 @@ export const useBinderDragDrop = ({
         onDragStateChange?.(true);
       }
     },
-    [enableDrag, onDragStateChange]
+    [
+      enableDrag,
+      onDragStateChange,
+      selectionMode,
+      selectedPositions,
+      setIsBulkDragging,
+    ]
   );
 
-  // Drag over handler for edge navigation
+  // Drag over handler for edge navigation and preview offset
   const handleDragOver = useCallback(
     (event) => {
       if (!event.over) {
@@ -188,15 +210,37 @@ export const useBinderDragDrop = ({
         if (canNavigate && activeEdgeZoneRef.current !== direction) {
           startNavigationTimer(direction);
         }
+      } else if (
+        selectionMode &&
+        activeDragDataRef.current?.multiPositions &&
+        overData?.type === "slot"
+      ) {
+        // Update preview offset for multi-selection
+        const activePos = activeDragDataRef.current.position;
+        const offset = overData.position - activePos;
+        setPreviewOffset(offset);
       } else {
         // Clear edge navigation when over other elements
         if (currentEdgeZone) {
           clearNavigationTimer();
           activeEdgeZoneRef.current = null;
         }
+
+        // Clear preview offset when not over slot
+        if (selectionMode) {
+          setPreviewOffset(null);
+          setIsBulkDragging(false);
+        }
       }
     },
-    [currentEdgeZone, clearNavigationTimer, startNavigationTimer]
+    [
+      currentEdgeZone,
+      clearNavigationTimer,
+      startNavigationTimer,
+      selectionMode,
+      setPreviewOffset,
+      setIsBulkDragging,
+    ]
   );
 
   // Drag end handler
@@ -256,8 +300,38 @@ export const useBinderDragDrop = ({
         return;
       }
 
-      // Only handle card-to-slot drops
-      if (activeData?.type === "card" && overData?.type === "slot") {
+      // Multi-card move when selection mode active
+      if (
+        selectionMode &&
+        activeData?.type === "card" &&
+        overData?.type === "slot" &&
+        selectedPositions.length > 1
+      ) {
+        const fromPosition = activeData.position;
+        const toPosition = overData.position;
+
+        if (fromPosition !== toPosition) {
+          const offset = toPosition - fromPosition;
+
+          // Determine iteration order to avoid overwrite conflicts
+          const ordered = [...selectedPositions].sort((a, b) =>
+            offset > 0 ? b - a : a - b
+          );
+
+          try {
+            for (const pos of ordered) {
+              await moveCard(binder.id, pos, pos + offset);
+            }
+          } catch (error) {
+            console.error("Failed to move cards:", error);
+            toast.error("Failed to move cards");
+          }
+        }
+
+        // Clear selection after operation
+        clearSelection();
+      } else if (activeData?.type === "card" && overData?.type === "slot") {
+        // Single card scenario
         const fromPosition = activeData.position;
         const toPosition = overData.position;
 
@@ -273,6 +347,8 @@ export const useBinderDragDrop = ({
 
       // Clear stored drag data
       clearDragState();
+      if (selectionMode) setPreviewOffset(null);
+      setIsBulkDragging(false);
       onDragStateChange?.(false);
     },
     [
@@ -282,6 +358,11 @@ export const useBinderDragDrop = ({
       clearNavigationTimer,
       clearDragState,
       onDragStateChange,
+      selectionMode,
+      selectedPositions,
+      clearSelection,
+      setPreviewOffset,
+      setIsBulkDragging,
     ]
   );
 

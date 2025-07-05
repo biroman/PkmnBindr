@@ -14,6 +14,7 @@ import useBinderNavigation from "../../hooks/useBinderNavigation";
 import useBinderDragDrop from "../../hooks/useBinderDragDrop";
 import useBinderModals from "../../hooks/useBinderModals";
 import { useBinderContext } from "../../contexts/BinderContext";
+import { useSelection } from "../../contexts/selection";
 import { Button } from "../ui/Button";
 import { pdfExportService } from "../../services/PdfExportService";
 import { Settings } from "lucide-react";
@@ -186,6 +187,16 @@ export const BinderContainer = ({
     binder?.settings?.gridSize || "3x3"
   );
 
+  // Selection context (multi-card selection)
+  const {
+    selectionMode,
+    selectedPositions,
+    toggleSelectionMode,
+    clearSelection,
+    setPreviewOffset,
+    setIsBulkDragging,
+  } = useSelection();
+
   // Core binder hooks
   const {
     getCurrentPageConfig,
@@ -263,6 +274,11 @@ export const BinderContainer = ({
       // Optional: Add any side effects when drag state changes
     },
     enableDrag: features.dragDrop,
+    selectionMode,
+    selectedPositions: Array.from(selectedPositions),
+    clearSelection,
+    setPreviewOffset,
+    setIsBulkDragging,
   });
 
   // Navigation management (receives edge navigation state from drag drop)
@@ -552,6 +568,8 @@ export const BinderContainer = ({
             onColorPicker={handleColorPicker}
             onShare={handleShare}
             onMobileSettings={handleMobileSettings}
+            onToggleSelectionMode={toggleSelectionMode}
+            selectionMode={selectionMode}
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
             isMobile={false}
@@ -666,6 +684,8 @@ export const BinderContainer = ({
                     onClearBinder: features.clearBinder
                       ? handleClearBinder
                       : undefined,
+                    onToggleSelectionMode: toggleSelectionMode,
+                    selectionMode,
                   }
                 : {}
             }

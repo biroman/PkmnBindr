@@ -99,6 +99,7 @@ const PokemonCard = forwardRef(
       // Drag state props (consumed here to prevent DOM warnings)
       isPlaceholder,
       isDragging,
+      disableHover = false,
       ...props
     },
     ref
@@ -161,7 +162,11 @@ const PokemonCard = forwardRef(
         ref={ref}
         className={`
         group relative aspect-[5/7] rounded-lg shadow-md overflow-hidden
-        transition-all duration-200 hover:shadow-lg hover:scale-105
+        ${
+          disableHover
+            ? ""
+            : "transition-all duration-200 hover:shadow-lg hover:scale-105"
+        }
         ${onClick ? "cursor-pointer" : ""}
         ${draggable ? "draggable" : ""}
         ${isReverseHolo ? "ring-2 ring-gradient-to-r ring-purple-400" : ""}

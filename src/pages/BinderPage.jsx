@@ -5,6 +5,7 @@ import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
 import BinderContainer from "../components/binder/BinderContainer";
 import { useRules } from "../contexts/RulesContext";
+import { SelectionProvider } from "../contexts/selection";
 
 /**
  * BinderPage - Slim orchestrator component for binder editing
@@ -99,14 +100,16 @@ const BinderPage = () => {
   }
 
   return (
-    <BinderContainer
-      binder={currentBinder}
-      mode="edit"
-      onCardClick={handleCardClick}
-      onCardDelete={handleCardDelete}
-      onPageChange={handlePageChange}
-      onError={handleError}
-    />
+    <SelectionProvider>
+      <BinderContainer
+        binder={currentBinder}
+        mode="edit"
+        onCardClick={handleCardClick}
+        onCardDelete={handleCardDelete}
+        onPageChange={handlePageChange}
+        onError={handleError}
+      />
+    </SelectionProvider>
   );
 };
 

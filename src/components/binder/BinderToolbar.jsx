@@ -13,6 +13,7 @@ import {
   EllipsisVerticalIcon,
   ArrowPathIcon,
   DocumentTextIcon,
+  CursorArrowRaysIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -69,6 +70,8 @@ const BinderToolbar = ({
   onColorPicker,
   onShare, // New prop for share functionality
   onMobileSettings, // New prop for mobile settings modal
+  onToggleSelectionMode, // Selection mode toggle
+  selectionMode = false, // current mode
   currentBinder,
   isPdfExporting = false,
   isMobile = false,
@@ -138,6 +141,24 @@ const BinderToolbar = ({
             >
               <ShareIcon className="w-4 h-4" />
               <span className="hidden lg:inline">Share</span>
+            </button>
+
+            {/* Selection mode toggle */}
+            <button
+              onClick={onToggleSelectionMode}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                selectionMode
+                  ? "bg-green-500 text-white"
+                  : "text-primary hover:bg-accent"
+              }`}
+              title={
+                selectionMode ? "Exit selection mode" : "Select multiple cards"
+              }
+            >
+              <CursorArrowRaysIcon className="w-4 h-4" />
+              <span className="hidden lg:inline">
+                {selectionMode ? "Selecting" : "Select"}
+              </span>
             </button>
 
             {/* More menu for additional actions */}
@@ -217,8 +238,19 @@ const BinderToolbar = ({
             className="relative"
           />
 
-          {/* Divider */}
-          <div className="h-px bg-white/20 mx-2"></div>
+          {/* Selection Mode */}
+          <ToolbarButton
+            icon={CursorArrowRaysIcon}
+            onClick={onToggleSelectionMode}
+            title={
+              selectionMode ? "Exit selection mode" : "Select multiple cards"
+            }
+            className={
+              selectionMode
+                ? "bg-green-500 text-white"
+                : "text-primary hover:bg-accent"
+            }
+          />
 
           {/* Page Overview */}
           <ToolbarButton
