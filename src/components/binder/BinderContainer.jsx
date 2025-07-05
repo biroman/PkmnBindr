@@ -181,6 +181,7 @@ export const BinderContainer = ({
     sortBinder,
     updateAutoSort,
     addPage,
+    compactBinderCards,
   } = contextValue;
 
   const binderDimensions = useBinderDimensions(
@@ -518,6 +519,37 @@ export const BinderContainer = ({
     }
   };
 
+  // Compaction Handlers
+  const handleCompactEntireBinder = () => {
+    if (!binder) return;
+    compactBinderCards(binder.id, { scope: "binder" });
+  };
+
+  const handleCompactCurrentPage = () => {
+    if (!binder) return;
+
+    const cfg = getCurrentPageConfig;
+    const pageIndices = [];
+
+    if (binderDimensions.isMobile) {
+      // Mobile has single page view
+      if (cfg.type === "cards-single") {
+        pageIndices.push(cfg.leftPage.cardPageIndex);
+      }
+    } else {
+      if (cfg.type === "cover-and-first") {
+        pageIndices.push(cfg.rightPage.cardPageIndex);
+      } else if (cfg.type === "cards-pair") {
+        pageIndices.push(cfg.leftPage.cardPageIndex);
+        pageIndices.push(cfg.rightPage.cardPageIndex);
+      }
+    }
+
+    if (pageIndices.length > 0) {
+      compactBinderCards(binder.id, { scope: "page", pageIndices });
+    }
+  };
+
   const pageConfig = getCurrentPageConfig;
   const isMobile = binderDimensions.isMobile;
   const sidebarWidth =
@@ -573,6 +605,8 @@ export const BinderContainer = ({
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
             isMobile={false}
+            onCompactPage={handleCompactCurrentPage}
+            onCompactBinder={handleCompactEntireBinder}
             disabled={
               !features.addCards && !features.export && !features.clearBinder
             }

@@ -23,6 +23,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { sortCards } from "../utils/binderSorting";
+import { getGridConfig } from "../hooks/useBinderDimensions";
 
 // Grid configuration - centralized to avoid inconsistencies
 const GRID_CONFIGS = {
@@ -3468,6 +3469,118 @@ export const BinderProvider = ({ children }) => {
     [binders, currentBinder, user, invalidateCache]
   );
 
+  // =============================
+  // Card Compaction (Remove Gaps)
+  // =============================
+  const compactBinderCards = useCallback(
+    (
+      binderId,
+      {
+        scope = "binder", // 'binder' | 'page'
+        pageIndices = [], // array of cardPageIndex numbers when scope==='page'
+      } = {}
+    ) => {
+      try {
+        if (!binderId) throw new Error("Binder ID is required");
+
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          // Helper – returns new cards object after compaction
+          const performCompaction = () => {
+            const gridConfig = getGridConfig(
+              binder.settings?.gridSize || "3x3"
+            );
+            const cardsPerPage = gridConfig.total;
+            const originalCards = binder.cards || {};
+
+            // Utility to compact a range [start, end)
+            const compactRange = (cardsObj, start, endExclusive) => {
+              const positionsInRange = Object.keys(cardsObj)
+                .map((p) => parseInt(p, 10))
+                .filter((pos) => pos >= start && pos < endExclusive)
+                .sort((a, b) => a - b);
+
+              let newCardsObj = { ...cardsObj };
+              positionsInRange.forEach((oldPos, idx) => {
+                const newPos = start + idx;
+                if (newPos !== oldPos) {
+                  newCardsObj[newPos.toString()] =
+                    newCardsObj[oldPos.toString()];
+                  delete newCardsObj[oldPos.toString()];
+                }
+              });
+              return newCardsObj;
+            };
+
+            if (scope === "binder") {
+              // Global compaction – move every occupied position to the next free slot starting at 0
+              const occupied = Object.keys(originalCards)
+                .map((p) => parseInt(p, 10))
+                .sort((a, b) => a - b);
+
+              const newCards = {};
+              occupied.forEach((oldPos, idx) => {
+                newCards[idx.toString()] = originalCards[oldPos.toString()];
+              });
+              return newCards;
+            } else if (scope === "page") {
+              if (!pageIndices || pageIndices.length === 0)
+                return originalCards;
+
+              let compacted = { ...originalCards };
+              pageIndices.forEach((pageIdx) => {
+                const start = pageIdx * cardsPerPage;
+                const end = start + cardsPerPage;
+                compacted = compactRange(compacted, start, end);
+              });
+
+              return compacted;
+            }
+
+            return originalCards;
+          };
+
+          const newCards = performCompaction();
+
+          // If no changes, return original binder
+          if (JSON.stringify(newCards) === JSON.stringify(binder.cards)) {
+            return binder;
+          }
+
+          const updatedBinder = {
+            ...binder,
+            cards: newCards,
+          };
+
+          return markBinderAsModified(
+            updatedBinder,
+            "cards_compacted",
+            { scope, pageIndices },
+            binder.ownerId
+          );
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+
+        toast.success(
+          scope === "binder"
+            ? "Binder compacted successfully"
+            : "Page compacted successfully"
+        );
+        return true;
+      } catch (error) {
+        console.error("Failed to compact cards:", error);
+        toast.error("Failed to compact cards");
+        return false;
+      }
+    },
+    [binders, currentBinder]
+  );
+
   const value = {
     // State
     binders: visibleBinders, // Only expose visible binders for current user context
@@ -3494,6 +3607,9 @@ export const BinderProvider = ({ children }) => {
     // Sorting Actions
     sortBinder,
     updateAutoSort,
+
+    // Compaction
+    compactBinderCards,
 
     // Sync Actions
     saveBinderToCloud,

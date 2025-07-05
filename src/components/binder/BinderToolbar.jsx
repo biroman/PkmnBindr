@@ -14,6 +14,8 @@ import {
   ArrowPathIcon,
   DocumentTextIcon,
   CursorArrowRaysIcon,
+  ArrowsPointingInIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -75,9 +77,13 @@ const BinderToolbar = ({
   currentBinder,
   isPdfExporting = false,
   isMobile = false,
+  onCompactPage, // new prop
+  onCompactBinder, // new prop
+  disabled = false,
 }) => {
   const [activeTool, setActiveTool] = useState(null);
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  const [isCompactMenuOpen, setIsCompactMenuOpen] = useState(false);
 
   const handleToolClick = (tool, action) => {
     setActiveTool(tool === activeTool ? null : tool);
@@ -160,6 +166,43 @@ const BinderToolbar = ({
                 {selectionMode ? "Selecting" : "Select"}
               </span>
             </button>
+
+            {/* Compact Tool */}
+            <div className="relative">
+              <ToolbarButton
+                icon={ArrowsPointingInIcon}
+                onClick={() => setIsCompactMenuOpen(!isCompactMenuOpen)}
+                title="Compact Cards (remove empty slots)"
+              />
+
+              {isCompactMenuOpen && (
+                <div
+                  className="absolute left-full ml-3 mt-1 w-56 bg-white dark:bg-gray-800/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl z-50 overflow-hidden"
+                  onMouseLeave={() => setIsCompactMenuOpen(false)}
+                >
+                  <button
+                    onClick={() => {
+                      onCompactPage?.();
+                      setIsCompactMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    <Squares2X2Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                    <span>Compact Current Page</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      onCompactBinder?.();
+                      setIsCompactMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    <BookOpenIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                    <span>Compact Entire Binder</span>
+                  </button>
+                </div>
+              )}
+            </div>
 
             {/* More menu for additional actions */}
             <div className="relative">
@@ -311,6 +354,43 @@ const BinderToolbar = ({
                 </span>
                 {/* Arrow pointing to button */}
                 <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45 border-l border-b border-white/10"></div>
+              </div>
+            )}
+          </div>
+
+          {/* Compact Tool */}
+          <div className="relative">
+            <ToolbarButton
+              icon={ArrowsPointingInIcon}
+              onClick={() => setIsCompactMenuOpen(!isCompactMenuOpen)}
+              title="Compact Cards (remove empty slots)"
+            />
+
+            {isCompactMenuOpen && (
+              <div
+                className="absolute left-full ml-3 mt-1 w-56 bg-white dark:bg-gray-800/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl z-50 overflow-hidden"
+                onMouseLeave={() => setIsCompactMenuOpen(false)}
+              >
+                <button
+                  onClick={() => {
+                    onCompactPage?.();
+                    setIsCompactMenuOpen(false);
+                  }}
+                  className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <Squares2X2Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                  <span>Compact Current Page</span>
+                </button>
+                <button
+                  onClick={() => {
+                    onCompactBinder?.();
+                    setIsCompactMenuOpen(false);
+                  }}
+                  className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <BookOpenIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                  <span>Compact Entire Binder</span>
+                </button>
               </div>
             )}
           </div>
