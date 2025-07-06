@@ -1,4 +1,10 @@
-import { doc, updateDoc, getDoc, setDoc } from "firebase/firestore";
+import {
+  doc,
+  updateDoc,
+  getDoc,
+  setDoc,
+  runTransaction,
+} from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 export class RobustRoleService {
@@ -22,7 +28,6 @@ export class RobustRoleService {
   static async safeCreateOrUpdateUserProfile(user) {
     try {
       const userRef = doc(db, "users", user.uid);
-      const userSnap = await getDoc(userRef);
 
       const baseUserData = {
         uid: user.uid,
@@ -33,41 +38,51 @@ export class RobustRoleService {
         updatedAt: new Date(),
       };
 
-      if (!userSnap.exists()) {
-        // New user - create with default role ONLY if no role exists
-        await setDoc(userRef, {
-          ...baseUserData,
-          role: this.ROLES.USER, // Default for genuinely new users
-          status: "active",
-          createdAt: new Date(),
-          binderCount: 0,
-          cardCount: 0,
-        });
-        console.log("✅ New user profile created:", user.uid);
-      } else {
-        // Existing user - ONLY update safe fields, NEVER touch role
-        const existingData = userSnap.data();
-        const safeUpdateData = {
-          lastSignIn: new Date(),
-          updatedAt: new Date(),
-        };
+      // Use a transaction so we never create-and-overwrite in separate steps
+      await runTransaction(db, async (tx) => {
+        const snap = await tx.get(userRef);
 
-        // Only update if the value has actually changed and isn't sensitive
-        if (user.email && user.email !== existingData.email) {
-          safeUpdateData.email = user.email;
+        if (!snap.exists()) {
+          // Brand-new user – create minimal profile with default role
+          tx.set(
+            userRef,
+            {
+              ...baseUserData,
+              role: this.ROLES.USER, // default only for *truly* new users
+              status: "active",
+              createdAt: new Date(),
+              binderCount: 0,
+              cardCount: 0,
+            },
+            { merge: true }
+          );
+          console.log("✅ New user profile created:", user.uid);
+        } else {
+          // Existing user – update only safe, non-sensitive fields
+          const existingData = snap.data();
+
+          const safeUpdateData = {
+            lastSignIn: new Date(),
+            updatedAt: new Date(),
+          };
+
+          if (user.email && user.email !== existingData.email) {
+            safeUpdateData.email = user.email;
+          }
+
+          if (user.displayName && !existingData.displayName) {
+            safeUpdateData.displayName = user.displayName;
+          }
+
+          if (user.photoURL && !existingData.photoURL) {
+            safeUpdateData.photoURL = user.photoURL;
+          }
+
+          if (Object.keys(safeUpdateData).length) {
+            tx.update(userRef, safeUpdateData);
+          }
         }
-
-        if (user.displayName && !existingData.displayName) {
-          safeUpdateData.displayName = user.displayName;
-        }
-
-        if (user.photoURL && !existingData.photoURL) {
-          safeUpdateData.photoURL = user.photoURL;
-        }
-
-        // 🔒 CRITICAL: Never update role, status, or other sensitive fields
-        await updateDoc(userRef, safeUpdateData);
-      }
+      });
 
       return true;
     } catch (error) {
