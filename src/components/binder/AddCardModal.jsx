@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment, useRef } from "react";
 import { Dialog, Transition, Tab } from "@headlessui/react";
 import { XMarkIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
+import { getGridConfig } from "../../hooks/useBinderDimensions";
 import { toast } from "react-hot-toast";
 import SingleCardTab from "./SingleCardTab";
 import SetTab from "./SetTab";
@@ -12,10 +13,11 @@ const AddCardModal = ({
   currentBinder,
   targetPosition = null,
 }) => {
-  const { addCardToBinder, batchAddCards } = useBinderContext();
+  const { batchAddCards, batchMoveCards } = useBinderContext();
   const [selectedCards, setSelectedCards] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
+  const [isAddingToPage, setIsAddingToPage] = useState(false);
   const closeButtonRef = useRef(null);
 
   // Reset selection when modal closes
@@ -89,6 +91,58 @@ const AddCardModal = ({
 
   const isCardSelected = (cardId) => {
     return selectedCards.some((card) => card.id === cardId);
+  };
+
+  // Add selected cards to the beginning of the current page (with shifting)
+  const handleAddSelectedCardsToPage = async () => {
+    if (!currentBinder || selectedCards.length === 0) return;
+
+    const gridSize = currentBinder.settings?.gridSize || "3x3";
+    const cardsPerPage = getGridConfig(gridSize)?.total || 9;
+
+    // Calculate the first slot index of the current page
+    let pageStartPosition = 0;
+    if (targetPosition !== null) {
+      pageStartPosition =
+        Math.floor(targetPosition / cardsPerPage) * cardsPerPage;
+    }
+
+    try {
+      setIsAddingToPage(true);
+
+      // 1. Shift existing cards forward to make space
+      const shiftCount = selectedCards.length;
+      const occupiedPositions = Object.keys(currentBinder.cards || {})
+        .map((p) => parseInt(p, 10))
+        .filter((pos) => pos >= pageStartPosition)
+        .sort((a, b) => b - a); // Descending
+
+      const moveOperations = occupiedPositions.map((pos) => ({
+        fromPosition: pos,
+        toPosition: pos + shiftCount,
+      }));
+
+      if (moveOperations.length > 0) {
+        await batchMoveCards(currentBinder.id, moveOperations);
+      }
+
+      // 2. Add the new cards starting from pageStartPosition
+      await batchAddCards(currentBinder.id, selectedCards, pageStartPosition);
+
+      toast.success(
+        `Added ${selectedCards.length} card${
+          selectedCards.length > 1 ? "s" : ""
+        } to page starting at slot ${pageStartPosition}`
+      );
+
+      setSelectedCards([]);
+      onClose();
+    } catch (error) {
+      console.error("Failed to add cards to page:", error);
+      toast.error("Failed to add cards to current page");
+    } finally {
+      setIsAddingToPage(false);
+    }
   };
 
   return (
@@ -215,7 +269,7 @@ const AddCardModal = ({
                       <div className="flex items-center space-x-2 min-w-0">
                         {selectedCards.length > 0 && (
                           <div className="flex items-center gap-2">
-                            <span className="text-sm text-slate-600 dark:text-slate-400 flex-shrink-0 font-medium">
+                            <span className="hidden sm:inline text-sm text-slate-600 dark:text-slate-400 flex-shrink-0 font-medium">
                               {selectedCards.length} selected
                             </span>
                             <div className="hidden sm:flex -space-x-2 overflow-hidden">
@@ -246,17 +300,39 @@ const AddCardModal = ({
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex flex-row gap-2">
+                      <div className="flex flex-col sm:flex-row gap-2 w-full">
+                        {/* Cancel Button */}
                         <button
                           onClick={onClose}
-                          className="px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                          className="w-full sm:w-auto px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                         >
                           Cancel
                         </button>
+
+                        {/* Add to current page button */}
+                        <button
+                          onClick={handleAddSelectedCardsToPage}
+                          disabled={
+                            selectedCards.length === 0 || isAddingToPage
+                          }
+                          className="w-full sm:w-auto px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 sm:min-w-[170px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                        >
+                          {isAddingToPage ? (
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                          ) : (
+                            <PlusIcon className="w-4 h-4" />
+                          )}
+                          <span>
+                            {isAddingToPage
+                              ? "Adding..."
+                              : `Add to current page (${selectedCards.length})`}
+                          </span>
+                        </button>
+
                         <button
                           onClick={handleAddSelectedCards}
                           disabled={selectedCards.length === 0 || isAdding}
-                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                          className="w-full sm:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 sm:min-w-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                         >
                           {isAdding ? (
                             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>

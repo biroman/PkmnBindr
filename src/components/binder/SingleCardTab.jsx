@@ -365,8 +365,8 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 min-h-0">
         {/* Search Bar */}
-        <div className="p-6 border-b border-border">
-          <div className="flex gap-2 mb-4">
+        <div className="p-3 sm:p-6 border-b border-border sticky top-0 bg-card-background z-20">
+          <div className="flex gap-2 mb-2 sm:mb-4">
             <div className="relative flex-1">
               <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400 dark:text-slate-500" />
               <input
@@ -375,14 +375,15 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                 value={searchQuery}
                 onChange={(e) => updateSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Search Pokemon cards (e.g., Pika, Sandy Shocks, Pikachu #25, artist:Ken Sugimori)"
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary"
+                placeholder="Search Pokemon cards"
+                className="w-full pl-10 pr-4 py-2 sm:py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary text-sm sm:text-base"
               />
             </div>
+            {/* Large search button hidden on mobile */}
             <button
               onClick={performSearch}
               disabled={!searchQuery && !hasActiveFilters}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center gap-2 font-medium"
+              className="hidden sm:flex px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors items-center gap-2 font-medium"
             >
               <MagnifyingGlassIcon className="w-5 h-5" />
               Search
@@ -390,7 +391,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
           </div>
 
           {/* Sort and Results Info Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 text-sm">
             <div className="flex items-center gap-3">
               <label className="text-sm font-medium text-primary whitespace-nowrap">
                 Sort by:
@@ -443,7 +444,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
 
         {/* Results */}
         <div className="flex-1 overflow-y-auto min-h-0">
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {error && (
               <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
                 <div className="text-red-800 dark:text-red-200 font-medium">
@@ -475,7 +476,7 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
 
             {displayCards.length > 0 && (
               <div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3">
                   {displayCards.map((card) => (
                     <div key={card.id} className="relative">
                       <PokemonCard

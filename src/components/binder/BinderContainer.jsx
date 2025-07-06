@@ -21,6 +21,7 @@ import { Settings } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { getThemeAwareBinderColor } from "../../utils/themeUtils";
 import FloatingSyncControls from "./FloatingSyncControls";
+import { getGridConfig } from "../../hooks/useBinderDimensions";
 
 /**
  * Default feature configuration for different modes
@@ -315,7 +316,27 @@ export const BinderContainer = ({
 
   // Toolbar handlers
   const handleAddCard = () => {
-    if (features.addCards) {
+    if (!features.addCards) return;
+
+    // Determine the starting slot of the current visible card page
+    try {
+      const pageConfig = getCurrentPageConfig;
+      const gridConfig = getGridConfig(binder?.settings?.gridSize || "3x3");
+      const cardsPerPage = gridConfig.total;
+
+      // Prefer left page if it contains cards; otherwise use right
+      let cardPageIndex = 0;
+      if (pageConfig?.leftPage?.type === "cards") {
+        cardPageIndex = pageConfig.leftPage.cardPageIndex ?? 0;
+      } else if (pageConfig?.rightPage?.type === "cards") {
+        cardPageIndex = pageConfig.rightPage.cardPageIndex ?? 0;
+      }
+
+      const pageStartSlot = cardPageIndex * cardsPerPage;
+      binderModals.handlers.openAddCardModal(pageStartSlot);
+    } catch (err) {
+      console.error("Failed to determine page start position:", err);
+      // Fallback to original behaviour
       binderModals.handlers.openAddCardModal(null);
     }
   };
