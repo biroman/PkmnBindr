@@ -676,6 +676,19 @@ const CoverPage = ({
               )}
             </div>
 
+            {/* Support CTA - prominently displayed for logged-in users (moved higher) */}
+            {user && !isReadOnly && (
+              <div className="mb-4 flex flex-col items-center text-center">
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-2 max-w-xs sm:max-w-md">
+                  PkmnBindr is a passion project I run solo in my spare time and
+                  keep completely free. If it helps you, consider supporting me;
+                  your contribution directly covers the monthly costs to keep
+                  the site online.
+                </p>
+                <SupportUsCTA />
+              </div>
+            )}
+
             {/* Main tips - responsive grid */}
             <div
               className={`grid ${
@@ -729,19 +742,6 @@ const CoverPage = ({
                 </div>
               ))}
             </div>
-
-            {/* Support CTA - prominently displayed for logged-in users */}
-            {user && !isReadOnly && (
-              <div className="mb-4 flex flex-col items-center text-center">
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-2 max-w-xs sm:max-w-md">
-                  PkmnBindr is a passion project I run solo in my spare time and
-                  keep completely free. If it helps you, consider supporting me,
-                  your support helps me pay for the monthly costs to run this
-                  website.
-                </p>
-                <SupportUsCTA />
-              </div>
-            )}
 
             {/* Discord Community Section (hidden in read-only mode) */}
             {!isReadOnly && (
