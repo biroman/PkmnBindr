@@ -499,22 +499,6 @@ const Navbar = () => {
 
               <UserSection />
               <ThemeToggle />
-              {/* Buy me a coffee button */}
-              <a
-                href="https://buymeacoffee.com/biroman"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute left-0 flex items-center px-3 py-2 text-sm font-medium text-black hover:bg-yellow-300 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
-                style={{
-                  backgroundColor: "#FFDD00",
-                  color: "#000000",
-                  fontWeight: "600",
-                  boxShadow: "0 4px 6px -2px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span className="mr-2">☕</span>
-                <span>Buy me a coffee?</span>
-              </a>
             </div>
 
             {/* Mobile menu button, sync buttons, and messages */}

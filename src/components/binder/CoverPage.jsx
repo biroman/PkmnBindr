@@ -14,6 +14,7 @@ import { toast } from "react-hot-toast";
 import { QRCodeSVG } from "qrcode.react";
 import ContactModal from "./ContactModal";
 import UserProfileCard from "../ui/UserProfileCard";
+import SupportUsCTA from "../ui/SupportUsCTA";
 // import BinderInteractionButtons from "../ui/BinderInteractionButtons";  // Disabled
 
 const CoverPage = ({
@@ -311,34 +312,36 @@ const CoverPage = ({
 
                   {/* User Already Signed In */}
                   {user && (
-                    <div
-                      className={`bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl ${
-                        isMobile ? "p-4" : "p-6"
-                      } border border-green-100`}
-                    >
-                      <h3
-                        className={`${
-                          isMobile ? "text-lg" : "text-xl"
-                        } font-semibold text-gray-900 mb-3`}
+                    <>
+                      <div
+                        className={`bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl ${
+                          isMobile ? "p-4" : "p-6"
+                        } border border-green-100`}
                       >
-                        Welcome back, {user.displayName || "Collector"}!
-                      </h3>
-                      <p
-                        className={`${
-                          isMobile ? "text-sm" : "text-base"
-                        } text-gray-600 ${isMobile ? "mb-3" : "mb-4"}`}
-                      >
-                        Ready to organize your own collection?
-                      </p>
-                      <button
-                        onClick={() => navigate("/binders")}
-                        className={`${
-                          isMobile ? "px-4 py-2 text-sm" : "px-6 py-3"
-                        } bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium shadow-md`}
-                      >
-                        View My Binders
-                      </button>
-                    </div>
+                        <h3
+                          className={`${
+                            isMobile ? "text-lg" : "text-xl"
+                          } font-semibold text-gray-900 mb-3`}
+                        >
+                          Welcome back, {user.displayName || "Collector"}!
+                        </h3>
+                        <p
+                          className={`${
+                            isMobile ? "text-sm" : "text-base"
+                          } text-gray-600 ${isMobile ? "mb-3" : "mb-4"}`}
+                        >
+                          Ready to organize your own collection?
+                        </p>
+                        <button
+                          onClick={() => navigate("/binders")}
+                          className={`${
+                            isMobile ? "px-4 py-2 text-sm" : "px-6 py-3"
+                          } bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium shadow-md`}
+                        >
+                          View My Binders
+                        </button>
+                      </div>
+                    </>
                   )}
                 </div>
               </div>
@@ -727,6 +730,19 @@ const CoverPage = ({
               ))}
             </div>
 
+            {/* Support CTA - prominently displayed for logged-in users */}
+            {user && !isReadOnly && (
+              <div className="mb-4 flex flex-col items-center text-center">
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-2 max-w-xs sm:max-w-md">
+                  PkmnBindr is a passion project I run solo in my spare time and
+                  keep completely free. If it helps you, consider supporting me,
+                  your support helps me pay for the monthly costs to run this
+                  website.
+                </p>
+                <SupportUsCTA />
+              </div>
+            )}
+
             {/* Discord Community Section (hidden in read-only mode) */}
             {!isReadOnly && (
               <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200 dark:border-gray-700">
@@ -736,8 +752,8 @@ const CoverPage = ({
                       Join Our New Growing Community!
                     </h3>
                     <p className="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300 leading-relaxed mb-3">
-                      Connect with fellow collectors, discuss, share binders,
-                      ask questions, report bugs, and more!
+                      Connect with fellow collectors, request features, discuss,
+                      share binders, ask questions, report bugs, and more!
                     </p>
                   </div>
 
