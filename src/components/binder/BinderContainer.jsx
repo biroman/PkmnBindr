@@ -20,6 +20,7 @@ import { pdfExportService } from "../../services/PdfExportService";
 import { Settings } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { getThemeAwareBinderColor } from "../../utils/themeUtils";
+import FloatingSyncControls from "./FloatingSyncControls";
 
 /**
  * Default feature configuration for different modes
@@ -765,6 +766,11 @@ export const BinderContainer = ({
             </span>
           </button>
         </div>
+      )}
+
+      {/* Floating Save / Revert Controls */}
+      {features.sidebar && !isMobile && isSidebarCollapsed && (
+        <FloatingSyncControls binder={binder} />
       )}
 
       {/* Sidebar - only show on desktop */}
