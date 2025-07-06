@@ -16,6 +16,7 @@ import {
   CursorArrowRaysIcon,
   ArrowsPointingInIcon,
   BookOpenIcon,
+  ArrowsRightLeftIcon,
 } from "@heroicons/react/24/outline";
 
 const ToolbarButton = ({
@@ -73,6 +74,8 @@ const BinderToolbar = ({
   onShare, // New prop for share functionality
   onMobileSettings, // New prop for mobile settings modal
   onToggleSelectionMode, // Selection mode toggle
+  reorderMode = "swap", // 'swap' or 'shift'
+  onToggleReorderMode,
   selectionMode = false, // current mode
   currentBinder,
   isPdfExporting = false,
@@ -164,6 +167,26 @@ const BinderToolbar = ({
               <CursorArrowRaysIcon className="w-4 h-4" />
               <span className="hidden lg:inline">
                 {selectionMode ? "Selecting" : "Select"}
+              </span>
+            </button>
+
+            {/* Reorder mode toggle */}
+            <button
+              onClick={onToggleReorderMode}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                reorderMode === "shift"
+                  ? "bg-purple-500 text-white"
+                  : "text-primary hover:bg-accent"
+              }`}
+              title={
+                reorderMode === "shift"
+                  ? "Shift-reorder active (click to switch to Swap)"
+                  : "Swap-reorder active (click to switch to Shift)"
+              }
+            >
+              <ArrowsRightLeftIcon className="w-4 h-4" />
+              <span className="hidden lg:inline">
+                {reorderMode === "shift" ? "Shift" : "Swap"}
               </span>
             </button>
 
@@ -291,6 +314,22 @@ const BinderToolbar = ({
             className={
               selectionMode
                 ? "bg-green-500 text-white"
+                : "text-primary hover:bg-accent"
+            }
+          />
+
+          {/* Reorder Mode */}
+          <ToolbarButton
+            icon={ArrowsRightLeftIcon}
+            onClick={onToggleReorderMode}
+            title={
+              reorderMode === "shift"
+                ? "Shift-reorder active (click to switch to Swap)"
+                : "Swap-reorder active (click to switch to Shift)"
+            }
+            className={
+              reorderMode === "shift"
+                ? "bg-purple-500 text-white"
                 : "text-primary hover:bg-accent"
             }
           />

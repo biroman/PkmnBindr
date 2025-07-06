@@ -22,6 +22,7 @@ const DroppableSlot = ({
   isMobile = false, // Extract isMobile to prevent it from passing to DOM
   showCardBackForEmpty = false, // New prop for showing card back in empty slots
   showCardBackForMissing = false, // New prop for showing card back for missing cards
+  reorderMode = "swap",
   ...props
 }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -29,6 +30,7 @@ const DroppableSlot = ({
   // Selection context
   const {
     selectionMode,
+    selectedPositions,
     toggleCardSelection,
     isSelected,
     previewOffset,
@@ -76,52 +78,207 @@ const DroppableSlot = ({
     }
   };
 
-  // Determine if this slot is predicted destination in multi-drag preview
-  const isPreviewDestination =
-    selectionMode &&
+  // Determine preview destination for both multi-select and single-card modes
+  const isSinglePreviewDestination =
+    !selectionMode &&
     previewOffset !== null &&
-    !isSelected(position) &&
-    isSelected(position - previewOffset);
+    active?.data?.current?.type === "card" &&
+    position === active.data.current.position + previewOffset;
+
+  const isPreviewDestination =
+    (selectionMode &&
+      previewOffset !== null &&
+      !isSelected(position) &&
+      isSelected(position - previewOffset)) ||
+    isSinglePreviewDestination;
 
   // Compute preview card for destination slots (card that will move here)
   let previewCard = null;
   if (isPreviewDestination && currentBinder && previewOffset !== null) {
-    const sourcePos = position - previewOffset;
-    const entry = currentBinder.cards?.[sourcePos?.toString?.()];
-    const data = entry?.cardData;
-    if (data) {
-      previewCard = {
-        id: data.id,
-        name: data.name,
-        image: data.image || data.imageSmall,
-        images: { small: data.imageSmall || data.image, large: data.image },
-        binderMetadata: { instanceId: entry.instanceId },
-      };
+    if (!selectionMode && isSinglePreviewDestination) {
+      // Single card: preview is the dragged card itself
+      previewCard = active?.data?.current?.card || null;
+    } else {
+      // Multi-select: existing logic
+      const sourcePos = position - previewOffset;
+      const entry = currentBinder.cards?.[sourcePos?.toString?.()];
+      const data = entry?.cardData;
+      if (data) {
+        previewCard = {
+          id: data.id,
+          name: data.name,
+          image: data.image || data.imageSmall,
+          images: { small: data.imageSmall || data.image, large: data.image },
+          binderMetadata: { instanceId: entry.instanceId },
+        };
+      }
     }
   }
 
   // Compute incoming preview for selected (source) slots – show card moving in
   let incomingCardPreview = null;
-  if (
-    selectionMode &&
-    isSelected(position) &&
-    previewOffset !== null &&
-    currentBinder
-  ) {
-    const destinationPos = position + previewOffset;
-    const destEntry = currentBinder.cards?.[destinationPos?.toString?.()];
-    const destData = destEntry?.cardData;
-    if (destData) {
-      incomingCardPreview = {
-        id: destData.id,
-        name: destData.name,
-        image: destData.image || destData.imageSmall,
-        images: {
-          small: destData.imageSmall || destData.image,
-          large: destData.image,
-        },
-        binderMetadata: { instanceId: destEntry.instanceId },
-      };
+  let shiftPreviewCard = null;
+  if (currentBinder && previewOffset !== null) {
+    if (selectionMode && isSelected(position) && previewOffset !== null) {
+      if (reorderMode === "shift") {
+        const selCount = selectedPositions?.size || 0;
+        const sourceNeighborPos =
+          previewOffset > 0 ? position + selCount : position - selCount;
+        const neighborEntry =
+          currentBinder.cards?.[sourceNeighborPos?.toString?.()];
+        const neighborData = neighborEntry?.cardData;
+        if (neighborData) {
+          incomingCardPreview = {
+            id: neighborData.id,
+            name: neighborData.name,
+            image: neighborData.image || neighborData.imageSmall,
+            images: {
+              small: neighborData.imageSmall || neighborData.image,
+              large: neighborData.image,
+            },
+            binderMetadata: { instanceId: neighborEntry.instanceId },
+          };
+        }
+      } else {
+        const destinationPos = position + previewOffset;
+        const destEntry = currentBinder.cards?.[destinationPos?.toString?.()];
+        const destData = destEntry?.cardData;
+        if (destData) {
+          incomingCardPreview = {
+            id: destData.id,
+            name: destData.name,
+            image: destData.image || destData.imageSmall,
+            images: {
+              small: destData.imageSmall || destData.image,
+              large: destData.image,
+            },
+            binderMetadata: { instanceId: destEntry.instanceId },
+          };
+        }
+      }
+    } else if (
+      !selectionMode &&
+      previewOffset !== null &&
+      active?.data?.current?.type === "card"
+    ) {
+      const activePos = active.data.current.position;
+      const destPos = activePos + previewOffset;
+
+      // Incoming preview for the original slot handled earlier
+      if (position === activePos) {
+        const neighborPos = previewOffset > 0 ? activePos + 1 : activePos - 1;
+        const neighborEntry = currentBinder.cards?.[neighborPos?.toString?.()];
+        const neighborData = neighborEntry?.cardData;
+        if (neighborData) {
+          incomingCardPreview = {
+            id: neighborData.id,
+            name: neighborData.name,
+            image: neighborData.image || neighborData.imageSmall,
+            images: {
+              small: neighborData.imageSmall || neighborData.image,
+              large: neighborData.image,
+            },
+            binderMetadata: { instanceId: neighborEntry.instanceId },
+          };
+        }
+      } else {
+        // Determine shift preview for intermediate slots
+        if (previewOffset > 0) {
+          if (position > activePos && position < destPos) {
+            const srcPos = position + 1; // card shifting left
+            const srcEntry = currentBinder.cards?.[srcPos.toString()];
+            const srcData = srcEntry?.cardData;
+            if (srcData) {
+              shiftPreviewCard = {
+                id: srcData.id,
+                name: srcData.name,
+                image: srcData.image || srcData.imageSmall,
+                images: {
+                  small: srcData.imageSmall || srcData.image,
+                  large: srcData.image,
+                },
+                binderMetadata: { instanceId: srcEntry.instanceId },
+              };
+            }
+          }
+        } else if (previewOffset < 0) {
+          if (position < activePos && position > destPos) {
+            const srcPos = position - 1; // card shifting right
+            const srcEntry = currentBinder.cards?.[srcPos.toString()];
+            const srcData = srcEntry?.cardData;
+            if (srcData) {
+              shiftPreviewCard = {
+                id: srcData.id,
+                name: srcData.name,
+                image: srcData.image || srcData.imageSmall,
+                images: {
+                  small: srcData.imageSmall || srcData.image,
+                  large: srcData.image,
+                },
+                binderMetadata: { instanceId: srcEntry.instanceId },
+              };
+            }
+          }
+        }
+      }
+    }
+
+    // Additional shift preview for intermediate slots in bulk mode
+    if (
+      selectionMode &&
+      reorderMode === "shift" &&
+      previewOffset !== null &&
+      selectedPositions?.size > 0
+    ) {
+      const selArray = Array.from(selectedPositions);
+      const selCount = selArray.length;
+      const minSel = Math.min(...selArray);
+      const maxSel = Math.max(...selArray);
+
+      if (
+        !isSelected(position) &&
+        !isPreviewDestination &&
+        previewOffset !== 0
+      ) {
+        if (previewOffset > 0) {
+          // positions shifting left
+          if (position > maxSel && position <= maxSel + previewOffset) {
+            const srcPos = position + selCount;
+            const srcEntry = currentBinder.cards?.[srcPos.toString()];
+            const srcData = srcEntry?.cardData;
+            if (srcData) {
+              shiftPreviewCard = {
+                id: srcData.id,
+                name: srcData.name,
+                image: srcData.image || srcData.imageSmall,
+                images: {
+                  small: srcData.imageSmall || srcData.image,
+                  large: srcData.image,
+                },
+                binderMetadata: { instanceId: srcEntry.instanceId },
+              };
+            }
+          }
+        } else if (previewOffset < 0) {
+          if (position < minSel && position >= minSel + previewOffset) {
+            const srcPos = position - selCount;
+            const srcEntry = currentBinder.cards?.[srcPos.toString()];
+            const srcData = srcEntry?.cardData;
+            if (srcData) {
+              shiftPreviewCard = {
+                id: srcData.id,
+                name: srcData.name,
+                image: srcData.image || srcData.imageSmall,
+                images: {
+                  small: srcData.imageSmall || srcData.image,
+                  large: srcData.image,
+                },
+                binderMetadata: { instanceId: srcEntry.instanceId },
+              };
+            }
+          }
+        }
+      }
     }
   }
 
@@ -307,11 +464,18 @@ const DroppableSlot = ({
               isMissing={isMissing}
               isReadOnly={isReadOnly}
               dragDisabled={selectionMode && !isSelected(position)}
-              isGhost={
-                isBulkDragging &&
-                ((selectionMode && isSelected(position)) ||
-                  isPreviewDestination)
-              }
+              isGhost={(() => {
+                const hasOverlay =
+                  isPreviewDestination ||
+                  shiftPreviewCard ||
+                  incomingCardPreview;
+                if (hasOverlay) return true;
+                // Always hide selected cards while bulk dragging
+                if (isBulkDragging && selectionMode && isSelected(position)) {
+                  return true;
+                }
+                return false;
+              })()}
               disableHover={isMobile}
               className={`w-full h-full transition-all duration-200 ${
                 isSwapHover ? "scale-95 opacity-75" : ""
@@ -351,14 +515,15 @@ const DroppableSlot = ({
             </div>
           )}
 
-          {incomingCardPreview && (
+          {(incomingCardPreview || shiftPreviewCard) && (
             <div className="absolute inset-0 z-20 pointer-events-none">
               <img
                 src={
-                  incomingCardPreview.images?.small || incomingCardPreview.image
+                  (incomingCardPreview || shiftPreviewCard).images?.small ||
+                  (incomingCardPreview || shiftPreviewCard).image
                 }
-                alt={incomingCardPreview.name}
-                className="w-full h-full object-contain opacity-60 grayscale rounded-md"
+                alt={(incomingCardPreview || shiftPreviewCard).name}
+                className="w-full h-full object-contain opacity-70 rounded-md"
               />
             </div>
           )}

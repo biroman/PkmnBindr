@@ -16,6 +16,7 @@ const BinderDisplay = ({
   getCardsForPage = () => [],
   className = "",
   style = {},
+  reorderMode = "swap",
   // Public view specific props
   isPublicView = false,
   binderOwner = null,
@@ -85,6 +86,7 @@ const BinderDisplay = ({
               isMobile={true}
               fullScreen={true}
               dimensions={dimensions}
+              reorderMode={reorderMode}
               showCardBackForEmpty={
                 binder.settings?.showCardBackForEmpty || false
               }
@@ -137,6 +139,7 @@ const BinderDisplay = ({
           showCardBackForMissing={
             binder.settings?.showCardBackForMissing || false
           }
+          reorderMode={reorderMode}
         />
       )}
 
@@ -162,6 +165,7 @@ const BinderDisplay = ({
         showCardBackForMissing={
           binder.settings?.showCardBackForMissing || false
         }
+        reorderMode={reorderMode}
       />
     </div>
   );
@@ -195,6 +199,7 @@ BinderDisplay.propTypes = {
   getCardsForPage: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
+  reorderMode: PropTypes.string,
   // Public view specific props
   isPublicView: PropTypes.bool,
   binderOwner: PropTypes.object,

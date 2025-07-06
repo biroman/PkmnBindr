@@ -16,6 +16,7 @@ import { toast } from "react-hot-toast";
  * @param {Function} options.clearSelection - Function to clear the selection
  * @param {Function} options.setPreviewOffset - Function to set the preview offset
  * @param {Function} options.setIsBulkDragging - Function to set the bulk dragging state
+ * @param {boolean} options.enableShiftPreview - Whether shift preview is enabled
  * @returns {Object} Drag and drop handlers and state
  */
 export const useBinderDragDrop = ({
@@ -25,6 +26,7 @@ export const useBinderDragDrop = ({
   navigation,
   onDragStateChange,
   enableDrag = true,
+  enableShiftPreview = false,
   selectionMode = false,
   selectedPositions = [],
   clearSelection = () => {},
@@ -219,6 +221,21 @@ export const useBinderDragDrop = ({
         const activePos = activeDragDataRef.current.position;
         const offset = overData.position - activePos;
         setPreviewOffset(offset);
+      } else if (
+        enableShiftPreview &&
+        !selectionMode &&
+        activeDragDataRef.current?.type === "card" &&
+        overData?.type === "slot"
+      ) {
+        // Single-card preview: show shift range
+        const activePos = activeDragDataRef.current.position;
+        const offset = overData.position - activePos;
+        // Only set if actually moving to new position
+        if (offset !== 0) {
+          setPreviewOffset(offset);
+        } else {
+          setPreviewOffset(null);
+        }
       } else {
         // Clear edge navigation when over other elements
         if (currentEdgeZone) {
@@ -227,8 +244,8 @@ export const useBinderDragDrop = ({
         }
 
         // Clear preview offset when not over slot
+        setPreviewOffset(null);
         if (selectionMode) {
-          setPreviewOffset(null);
           setIsBulkDragging(false);
         }
       }
@@ -240,6 +257,7 @@ export const useBinderDragDrop = ({
       selectionMode,
       setPreviewOffset,
       setIsBulkDragging,
+      enableShiftPreview,
     ]
   );
 
@@ -320,7 +338,9 @@ export const useBinderDragDrop = ({
 
           try {
             for (const pos of ordered) {
-              await moveCard(binder.id, pos, pos + offset);
+              await moveCard(binder.id, pos, pos + offset, {
+                mode: enableShiftPreview ? "shift" : "swap",
+              });
             }
           } catch (error) {
             console.error("Failed to move cards:", error);
@@ -337,7 +357,9 @@ export const useBinderDragDrop = ({
 
         if (fromPosition !== toPosition) {
           try {
-            await moveCard(binder.id, fromPosition, toPosition);
+            await moveCard(binder.id, fromPosition, toPosition, {
+              mode: enableShiftPreview ? "shift" : "swap",
+            });
           } catch (error) {
             console.error("Failed to move card:", error);
             toast.error("Failed to move card");
@@ -347,7 +369,8 @@ export const useBinderDragDrop = ({
 
       // Clear stored drag data
       clearDragState();
-      if (selectionMode) setPreviewOffset(null);
+      // Always clear preview offset after drag ends
+      setPreviewOffset(null);
       setIsBulkDragging(false);
       onDragStateChange?.(false);
     },
@@ -363,13 +386,15 @@ export const useBinderDragDrop = ({
       clearSelection,
       setPreviewOffset,
       setIsBulkDragging,
+      enableShiftPreview,
     ]
   );
 
   // Drag cancel handler
   const handleDragCancel = useCallback(() => {
     clearDragState();
-  }, [clearDragState]);
+    setPreviewOffset(null);
+  }, [clearDragState, setPreviewOffset]);
 
   return {
     // State

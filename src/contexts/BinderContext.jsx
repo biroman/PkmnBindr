@@ -1122,12 +1122,48 @@ export const BinderProvider = ({ children }) => {
           const updatedCards = { ...binder.cards };
 
           // Swap or move cards
+          const mode = options.mode || "swap"; // 'swap' (default) or 'shift'
+
           if (cardAtDestination) {
-            // Swap cards
-            updatedCards[fromKey] = cardAtDestination;
-            updatedCards[toKey] = cardToMove;
+            if (mode === "shift") {
+              // Shift mode: slide intervening cards
+
+              // Remove the card we're moving from its original slot
+              delete updatedCards[fromKey];
+
+              if (fromPosition < toPosition) {
+                // Moving card to the right – shift intervening cards left by one
+                for (let pos = fromPosition + 1; pos <= toPosition; pos++) {
+                  const currentKey = pos.toString();
+                  const previousKey = (pos - 1).toString();
+                  if (updatedCards[currentKey]) {
+                    updatedCards[previousKey] = updatedCards[currentKey];
+                  } else {
+                    delete updatedCards[previousKey];
+                  }
+                }
+              } else if (fromPosition > toPosition) {
+                // Moving card to the left – shift intervening cards right by one
+                for (let pos = fromPosition - 1; pos >= toPosition; pos--) {
+                  const currentKey = pos.toString();
+                  const nextKey = (pos + 1).toString();
+                  if (updatedCards[currentKey]) {
+                    updatedCards[nextKey] = updatedCards[currentKey];
+                  } else {
+                    delete updatedCards[nextKey];
+                  }
+                }
+              }
+
+              // Finally insert the dragged card at its new index
+              updatedCards[toKey] = cardToMove;
+            } else {
+              // Swap mode: simple swap
+              updatedCards[fromKey] = cardAtDestination;
+              updatedCards[toKey] = cardToMove;
+            }
           } else {
-            // Move to empty slot
+            // Move to empty slot (same in both modes)
             updatedCards[toKey] = cardToMove;
             delete updatedCards[fromKey];
           }

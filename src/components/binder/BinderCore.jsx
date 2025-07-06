@@ -13,6 +13,7 @@ const BinderCore = ({
   activeCard = null,
   className = "",
   style = {},
+  reorderMode = "swap",
   children,
   // Public view specific props
   isPublicView = false,
@@ -49,6 +50,7 @@ const BinderCore = ({
         onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
         onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
         getCardsForPage={getCardsForPage}
+        reorderMode={reorderMode}
         // Public view specific props
         isPublicView={isPublicView}
         binderOwner={binderOwner}
@@ -98,6 +100,7 @@ BinderCore.propTypes = {
   activeCard: PropTypes.object,
   className: PropTypes.string,
   style: PropTypes.object,
+  reorderMode: PropTypes.string,
   children: PropTypes.node,
   // Public view specific props
   isPublicView: PropTypes.bool,

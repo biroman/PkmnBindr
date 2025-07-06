@@ -16,6 +16,7 @@ const CardPage = ({
   isMobile = false, // New prop for mobile mode
   fullScreen = false, // New prop for full-screen mobile mode
   dimensions,
+  reorderMode = "swap",
   // Card back display settings
   showCardBackForEmpty = false,
   showCardBackForMissing = false,
@@ -74,6 +75,7 @@ const CardPage = ({
                   isMobile={isMobile}
                   showCardBackForEmpty={showCardBackForEmpty}
                   showCardBackForMissing={showCardBackForMissing}
+                  reorderMode={reorderMode}
                 />
               );
             })}
@@ -141,6 +143,7 @@ const CardPage = ({
                 isMobile={isMobile}
                 showCardBackForEmpty={showCardBackForEmpty}
                 showCardBackForMissing={showCardBackForMissing}
+                reorderMode={reorderMode}
               />
             );
           })}

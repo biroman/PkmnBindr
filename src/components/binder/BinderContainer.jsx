@@ -167,6 +167,7 @@ export const BinderContainer = ({
   const [isPdfExporting, setIsPdfExporting] = useState(false);
   const [isMobileSettingsOpen, setIsMobileSettingsOpen] = useState(false);
   const [isMobileToolbarOpen, setIsMobileToolbarOpen] = useState(false);
+  const [reorderMode, setReorderMode] = useState("swap"); // 'swap' or 'shift'
 
   // Use external binder context or internal hook
   const contextValue = binderContext || useBinderContext();
@@ -271,9 +272,10 @@ export const BinderContainer = ({
       goToPrevPage,
       goToPage,
     },
-    onDragStateChange: (isDragging) => {
-      // Optional: Add any side effects when drag state changes
+    onDragStateChange: (dragActive) => {
+      // Some styling update
     },
+    enableShiftPreview: reorderMode === "shift",
     enableDrag: features.dragDrop,
     selectionMode,
     selectedPositions: Array.from(selectedPositions),
@@ -569,6 +571,14 @@ export const BinderContainer = ({
     return getThemeAwareBinderColor(binder?.settings?.binderColor, theme);
   })();
 
+  const handleToggleSelectionMode = () => {
+    toggleSelectionMode();
+  };
+
+  const handleToggleReorderMode = () => {
+    setReorderMode((prev) => (prev === "swap" ? "shift" : "swap"));
+  };
+
   return (
     <div
       className={`${
@@ -600,7 +610,9 @@ export const BinderContainer = ({
             onColorPicker={handleColorPicker}
             onShare={handleShare}
             onMobileSettings={handleMobileSettings}
-            onToggleSelectionMode={toggleSelectionMode}
+            onToggleSelectionMode={handleToggleSelectionMode}
+            reorderMode={reorderMode}
+            onToggleReorderMode={handleToggleReorderMode}
             selectionMode={selectionMode}
             currentBinder={binder}
             isPdfExporting={isPdfExporting}
@@ -642,6 +654,7 @@ export const BinderContainer = ({
           dimensions={binderDimensions}
           mode={mode}
           backgroundColor={currentDisplayColor}
+          reorderMode={reorderMode}
           getCardsForPage={getCardsForPage}
           onCardInteraction={{
             onCardClick: handleCardClick,
@@ -718,8 +731,9 @@ export const BinderContainer = ({
                     onClearBinder: features.clearBinder
                       ? handleClearBinder
                       : undefined,
-                    onToggleSelectionMode: toggleSelectionMode,
-                    selectionMode,
+                    onToggleSelectionMode: handleToggleSelectionMode,
+                    reorderMode,
+                    onToggleReorderMode: handleToggleReorderMode,
                     onCompactPage: handleCompactCurrentPage,
                     onCompactBinder: handleCompactEntireBinder,
                   }
