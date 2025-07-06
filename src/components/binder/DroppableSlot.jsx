@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useDroppable } from "@dnd-kit/core";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Check, EyeOff, Trash2, Plus } from "lucide-react";
 import DraggableCard from "./DraggableCard";
 import { useSelection } from "../../contexts/selection";
@@ -119,8 +119,14 @@ const DroppableSlot = ({
   let incomingCardPreview = null;
   let shiftPreviewCard = null;
   if (currentBinder && previewOffset !== null) {
-    if (selectionMode && isSelected(position) && previewOffset !== null) {
+    if (
+      selectionMode &&
+      isSelected(position) &&
+      previewOffset !== null &&
+      previewOffset !== 0
+    ) {
       if (reorderMode === "shift") {
+        // In shift mode, preview the card that will slide into this slot
         const selCount = selectedPositions?.size || 0;
         const sourceNeighborPos =
           previewOffset > 0 ? position + selCount : position - selCount;
@@ -140,20 +146,34 @@ const DroppableSlot = ({
           };
         }
       } else {
-        const destinationPos = position + previewOffset;
-        const destEntry = currentBinder.cards?.[destinationPos?.toString?.()];
-        const destData = destEntry?.cardData;
-        if (destData) {
+        // Determine which card will fill this slot after swap.
+        // Start with direct opposite position (destPos = position + previewOffset).
+        const direction = previewOffset > 0 ? 1 : -1;
+        let sourcePos = position + previewOffset;
+
+        // If the source position is also selected, walk further in the same direction
+        // until we find the first non-selected slot.
+        const visited = new Set();
+        while (selectedPositions.has(sourcePos) && !visited.has(sourcePos)) {
+          visited.add(sourcePos);
+          sourcePos += previewOffset; // move by same offset step
+        }
+
+        const srcEntry = currentBinder.cards?.[sourcePos?.toString?.()];
+        const srcData = srcEntry?.cardData;
+        if (srcData) {
           incomingCardPreview = {
-            id: destData.id,
-            name: destData.name,
-            image: destData.image || destData.imageSmall,
+            id: srcData.id,
+            name: srcData.name,
+            image: srcData.image || srcData.imageSmall,
             images: {
-              small: destData.imageSmall || destData.image,
-              large: destData.image,
+              small: srcData.imageSmall || srcData.image,
+              large: srcData.image,
             },
-            binderMetadata: { instanceId: destEntry.instanceId },
+            binderMetadata: { instanceId: srcEntry.instanceId },
           };
+        } else {
+          incomingCardPreview = null;
         }
       }
     } else if (
@@ -280,6 +300,80 @@ const DroppableSlot = ({
         }
       }
     }
+  }
+
+  /* -------------------------------------------------------
+   * Swap-mode preview simulation
+   * ----------------------------------------------------- */
+  const swapPreviewMap = useMemo(() => {
+    if (
+      !selectionMode ||
+      reorderMode !== "swap" ||
+      previewOffset === null ||
+      selectedPositions.size === 0 ||
+      !currentBinder
+    ) {
+      return null;
+    }
+
+    // Clone current cards layout
+    const tempLayout = { ...currentBinder.cards };
+    const offset = previewOffset;
+    // Order to avoid overwrite conflicts (same as backend)
+    const ordered = Array.from(selectedPositions).sort((a, b) =>
+      offset > 0 ? b - a : a - b
+    );
+
+    ordered.forEach((pos) => {
+      const fromKey = pos.toString();
+      const toKey = (pos + offset).toString();
+      const tmp = tempLayout[fromKey];
+      tempLayout[fromKey] = tempLayout[toKey];
+      tempLayout[toKey] = tmp;
+    });
+
+    return tempLayout;
+  }, [
+    selectionMode,
+    reorderMode,
+    previewOffset,
+    selectedPositions,
+    currentBinder,
+  ]);
+
+  // Destination positions set for quick lookup
+  const destinationPositions = useMemo(() => {
+    if (!selectionMode || previewOffset === null) return new Set();
+    const dest = new Set();
+    selectedPositions.forEach((pos) => dest.add(pos + previewOffset));
+    return dest;
+  }, [selectionMode, previewOffset, selectedPositions]);
+
+  /* Override preview using simulated map for swap-mode multi-select */
+  if (
+    swapPreviewMap &&
+    (isSelected(position) || destinationPositions.has(position))
+  ) {
+    const entry = swapPreviewMap[position?.toString?.()];
+    if (entry && entry.cardData) {
+      const data = entry.cardData;
+      previewCard = {
+        id: data.id,
+        name: data.name,
+        image: data.image || data.imageSmall,
+        images: {
+          small: data.imageSmall || data.image,
+          large: data.image,
+        },
+        binderMetadata: { instanceId: entry.instanceId },
+      };
+    } else {
+      previewCard = null;
+    }
+
+    // Clear other overlay types to avoid conflicts
+    incomingCardPreview = null;
+    shiftPreviewCard = null;
   }
 
   const shouldShowCardBack =
@@ -504,29 +598,7 @@ const DroppableSlot = ({
             </div>
           )}
 
-          {/* Preview overlays */}
-          {previewCard && (
-            <div className="absolute inset-0 z-20 pointer-events-none">
-              <img
-                src={previewCard.images?.small || previewCard.image}
-                alt={previewCard.name}
-                className="w-full h-full object-contain opacity-80 rounded-md"
-              />
-            </div>
-          )}
-
-          {(incomingCardPreview || shiftPreviewCard) && (
-            <div className="absolute inset-0 z-20 pointer-events-none">
-              <img
-                src={
-                  (incomingCardPreview || shiftPreviewCard).images?.small ||
-                  (incomingCardPreview || shiftPreviewCard).image
-                }
-                alt={(incomingCardPreview || shiftPreviewCard).name}
-                className="w-full h-full object-contain opacity-70 rounded-md"
-              />
-            </div>
-          )}
+          {/* (Preview overlays moved below to ensure they render for both filled and empty slots) */}
         </div>
       ) : (
         <div className="w-full h-full flex items-center justify-center group">
@@ -567,6 +639,30 @@ const DroppableSlot = ({
               </span>
             </div>
           ) : null}
+        </div>
+      )}
+
+      {/* Preview overlays (now always rendered, even for empty destination slots) */}
+      {previewCard && (
+        <div className="absolute inset-0 z-20 pointer-events-none">
+          <img
+            src={previewCard.images?.small || previewCard.image}
+            alt={previewCard.name}
+            className="w-full h-full object-contain opacity-80 rounded-md"
+          />
+        </div>
+      )}
+
+      {(incomingCardPreview || shiftPreviewCard) && (
+        <div className="absolute inset-0 z-20 pointer-events-none">
+          <img
+            src={
+              (incomingCardPreview || shiftPreviewCard).images?.small ||
+              (incomingCardPreview || shiftPreviewCard).image
+            }
+            alt={(incomingCardPreview || shiftPreviewCard).name}
+            className="w-full h-full object-contain opacity-70 rounded-md"
+          />
         </div>
       )}
 
