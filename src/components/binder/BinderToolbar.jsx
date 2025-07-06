@@ -267,6 +267,20 @@ const BinderToolbar = ({
                       )}
                       {isPdfExporting ? "Exporting..." : "Export PDF"}
                     </button>
+
+                    {/* Reorder mode toggle (added to mobile More menu) */}
+                    <button
+                      onClick={() => {
+                        onToggleReorderMode?.();
+                        setIsMoreMenuOpen(false);
+                      }}
+                      disabled={disabled}
+                      className="w-full text-left px-4 py-2 text-sm text-primary hover:bg-accent disabled:text-secondary disabled:cursor-not-allowed flex items-center gap-3"
+                    >
+                      <ArrowsRightLeftIcon className="w-4 h-4" />
+                      {reorderMode === "shift" ? "Shift" : "Swap"}
+                    </button>
+
                     <hr className="my-1 border-border" />
                     <button
                       onClick={() => {

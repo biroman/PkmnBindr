@@ -733,6 +733,7 @@ export const BinderContainer = ({
                       ? handleClearBinder
                       : undefined,
                     onToggleSelectionMode: handleToggleSelectionMode,
+                    selectionMode,
                     reorderMode,
                     onToggleReorderMode: handleToggleReorderMode,
                     onCompactPage: handleCompactCurrentPage,

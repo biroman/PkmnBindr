@@ -16,6 +16,7 @@ import {
   CursorArrowRaysIcon,
   ArrowsPointingInIcon,
   BookOpenIcon,
+  ArrowsRightLeftIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -336,51 +337,7 @@ const BinderNavigation = ({
                                 <span>Page Overview</span>
                               </button>
                             )}
-                            {toolbarActions.onShare && (
-                              <button
-                                onClick={toolbarActions.onShare}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                <ShareIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                                <span>Share Binder</span>
-                              </button>
-                            )}
-                            {toolbarActions.onColorPicker && (
-                              <button
-                                onClick={toolbarActions.onColorPicker}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                <SwatchIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                                <span>Customize</span>
-                              </button>
-                            )}
-                            {toolbarActions.onCompactPage && (
-                              <button
-                                onClick={toolbarActions.onCompactPage}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                <ArrowsPointingInIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                                <span>Compact Page</span>
-                              </button>
-                            )}
-                            {toolbarActions.onCompactBinder && (
-                              <button
-                                onClick={toolbarActions.onCompactBinder}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                <BookOpenIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                                <span>Compact Binder</span>
-                              </button>
-                            )}
-                            {toolbarActions.onMobileSettings && (
-                              <button
-                                onClick={toolbarActions.onMobileSettings}
-                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                <Cog6ToothIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                                <span>Settings</span>
-                              </button>
-                            )}
+                            {/* --- Selection & Reorder Group --- */}
                             {toolbarActions.onToggleSelectionMode && (
                               <button
                                 onClick={toolbarActions.onToggleSelectionMode}
@@ -404,7 +361,87 @@ const BinderNavigation = ({
                                 </span>
                               </button>
                             )}
-                            <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            {toolbarActions.onToggleReorderMode && (
+                              <button
+                                onClick={toolbarActions.onToggleReorderMode}
+                                className={`w-full text-left flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                                  toolbarActions.reorderMode === "shift"
+                                    ? "text-purple-600 dark:text-purple-400"
+                                    : "text-gray-700 dark:text-gray-300"
+                                }`}
+                              >
+                                <ArrowsRightLeftIcon
+                                  className={`w-5 h-5 ${
+                                    toolbarActions.reorderMode === "shift"
+                                      ? "text-purple-500 dark:text-purple-400"
+                                      : "text-gray-500 dark:text-gray-400"
+                                  }`}
+                                />
+                                <span>
+                                  {toolbarActions.reorderMode === "shift"
+                                    ? "Shift Mode"
+                                    : "Swap Mode"}
+                                </span>
+                              </button>
+                            )}
+                            {(toolbarActions.onToggleSelectionMode ||
+                              toolbarActions.onToggleReorderMode) && (
+                              <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            )}
+                            {toolbarActions.onCompactPage && (
+                              <button
+                                onClick={toolbarActions.onCompactPage}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <ArrowsPointingInIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Compact Page</span>
+                              </button>
+                            )}
+                            {toolbarActions.onCompactBinder && (
+                              <button
+                                onClick={toolbarActions.onCompactBinder}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <BookOpenIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Compact Binder</span>
+                              </button>
+                            )}
+                            {(toolbarActions.onCompactPage ||
+                              toolbarActions.onCompactBinder) && (
+                              <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            )}
+                            {toolbarActions.onColorPicker && (
+                              <button
+                                onClick={toolbarActions.onColorPicker}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <SwatchIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Customize</span>
+                              </button>
+                            )}
+                            {toolbarActions.onMobileSettings && (
+                              <button
+                                onClick={toolbarActions.onMobileSettings}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <Cog6ToothIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Settings</span>
+                              </button>
+                            )}
+                            {toolbarActions.onShare && (
+                              <button
+                                onClick={toolbarActions.onShare}
+                                className="w-full text-left flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                <ShareIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                                <span>Share Binder</span>
+                              </button>
+                            )}
+                            {(toolbarActions.onColorPicker ||
+                              toolbarActions.onMobileSettings ||
+                              toolbarActions.onShare) && (
+                              <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            )}
                             {toolbarActions.onClearBinder && (
                               <button
                                 onClick={toolbarActions.onClearBinder}
@@ -505,6 +542,8 @@ BinderNavigation.propTypes = {
     onClearBinder: PropTypes.func,
     onCompactPage: PropTypes.func,
     onCompactBinder: PropTypes.func,
+    onToggleReorderMode: PropTypes.func,
+    reorderMode: PropTypes.string,
   }),
   isToolbarOpen: PropTypes.bool,
   onToggleToolbar: PropTypes.func,
