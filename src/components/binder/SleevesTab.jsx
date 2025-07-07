@@ -106,6 +106,7 @@ const ETB_URLS = [
   "https://i.postimg.cc/15fyB1X9/image-81.jpg",
   "https://i.postimg.cc/yYtsrp30/image-82.jpg",
   "https://i.postimg.cc/pV36wwkV/image-9.jpg",
+  "https://i.postimg.cc/cLJsLDrb/etb-pok-destined-rivals-3.jpg",
 ];
 
 const POKEMON_CENTER_URLS = [
