@@ -185,6 +185,8 @@ export const BinderContainer = ({
     updateAutoSort,
     addPage,
     compactBinderCards,
+    batchAddCards,
+    batchMoveCards,
   } = contextValue;
 
   const binderDimensions = useBinderDimensions(
@@ -267,6 +269,8 @@ export const BinderContainer = ({
     binder,
     moveCard: features.dragDrop ? moveCard : undefined,
     removeCard: features.deleteCards ? handleCardDelete : undefined,
+    addCard: batchAddCards,
+    batchMoveCards,
     navigation: {
       canGoNext,
       canGoPrev,
@@ -779,6 +783,16 @@ export const BinderContainer = ({
             onCardDelete={features.deleteCards ? handleCardDelete : undefined}
           />
         )}
+
+        {/* Modals – must live inside same DndContext so drag from modal reaches binder */}
+        {features.modals && (
+          <ModalProvider
+            binder={binder}
+            modals={binderModals.modals}
+            modalData={binderModals.modalData}
+            handlers={binderModals.handlers}
+          />
+        )}
       </DragProvider>
 
       {/* Sidebar Toggle Button - only show on desktop */}
@@ -821,16 +835,6 @@ export const BinderContainer = ({
           onAutoSortChange={handleAutoSortChange}
           onBulkToggleMissing={handleBulkToggleMissing}
           isReadOnly={mode !== "edit"}
-        />
-      )}
-
-      {/* Modals */}
-      {features.modals && (
-        <ModalProvider
-          binder={binder}
-          modals={binderModals.modals}
-          modalData={binderModals.modalData}
-          handlers={binderModals.handlers}
         />
       )}
 

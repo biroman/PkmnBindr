@@ -9,6 +9,7 @@ import {
 import { ChevronRight } from "lucide-react";
 import useCardSearch from "../../hooks/useCardSearch";
 import PokemonCard from "../PokemonCard";
+import DraggableSearchCard from "./DraggableSearchCard";
 import SortDropdown from "../ui/SortDropdown";
 
 const SearchFilters = ({
@@ -20,6 +21,7 @@ const SearchFilters = ({
   isExpanded,
   onToggle,
   isSidebarMode = false,
+  showToggleButton = true,
 }) => {
   // State for mobile modal filters (temporary until saved)
   const [tempFilters, setTempFilters] = useState(filters);
@@ -164,28 +166,30 @@ const SearchFilters = ({
   return (
     <>
       {/* Filter toggle button */}
-      <div className="border-b border-border">
-        <button
-          onClick={onToggle}
-          className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-        >
-          <div className="flex items-center space-x-2">
-            <FunnelIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
-            <span className="font-medium text-primary">Filters</span>
-            {Object.values(filters).some(
-              (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-            ) && (
-              <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
-                Active
-              </span>
-            )}
-          </div>
-          <div className="flex items-center text-slate-400 dark:text-slate-500">
-            <span className="text-sm mr-2">Tap to filter</span>
-            <ChevronRight className="w-5 h-5" />
-          </div>
-        </button>
-      </div>
+      {showToggleButton && (
+        <div className="border-b border-border">
+          <button
+            onClick={onToggle}
+            className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+          >
+            <div className="flex items-center space-x-2">
+              <FunnelIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+              <span className="font-medium text-primary">Filters</span>
+              {Object.values(filters).some(
+                (f) => f && (Array.isArray(f) ? f.length > 0 : true)
+              ) && (
+                <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
+                  Active
+                </span>
+              )}
+            </div>
+            <div className="flex items-center text-slate-400 dark:text-slate-500">
+              <span className="text-sm mr-2">Tap to filter</span>
+              <ChevronRight className="w-5 h-5" />
+            </div>
+          </button>
+        </div>
+      )}
 
       {/* Modal Popup */}
       {isExpanded && (
@@ -312,6 +316,7 @@ const SingleCardTab = ({
   isCardSelected,
   onIncrease,
   onDecrease,
+  compact = false,
 }) => {
   const [filtersExpanded, setFiltersExpanded] = useState(false);
   const searchInputRef = useRef(null);
@@ -368,14 +373,22 @@ const SingleCardTab = ({
   const displayLoading = showFeatured ? featuredLoading : isLoading;
 
   return (
-    <div className="flex flex-col lg:flex-row h-full">
+    <div className={`flex flex-col h-full ${compact ? "" : "lg:flex-row"}`}>
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 min-h-0">
         {/* Search Bar */}
-        <div className="p-3 sm:p-6 border-b border-border sticky top-0 bg-card-background z-20">
+        <div
+          className={`${
+            compact ? "p-2" : "p-3 sm:p-6"
+          } border-b border-border sticky top-0 bg-card-background z-20`}
+        >
           <div className="flex gap-2 mb-2 sm:mb-4">
             <div className="relative flex-1">
-              <MagnifyingGlassIcon className="absolute left-3 top-3 w-5 h-5 text-slate-400 dark:text-slate-500" />
+              <MagnifyingGlassIcon
+                className={`${
+                  compact ? "w-4 h-4 left-2 top-2.5" : "w-5 h-5 left-3 top-3"
+                } absolute text-slate-400 dark:text-slate-500`}
+              />
               <input
                 ref={searchInputRef}
                 type="text"
@@ -383,27 +396,50 @@ const SingleCardTab = ({
                 onChange={(e) => updateSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Search Pokemon cards"
-                className="w-full pl-10 pr-4 py-2 sm:py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary text-sm sm:text-base"
+                className={`w-full border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary ${
+                  compact
+                    ? "pl-8 pr-3 py-1.5 text-xs"
+                    : "pl-10 pr-4 py-2 sm:py-3 text-sm sm:text-base"
+                }`}
               />
             </div>
             {/* Large search button hidden on mobile */}
-            <button
-              onClick={performSearch}
-              disabled={!searchQuery && !hasActiveFilters}
-              className="hidden sm:flex px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors items-center gap-2 font-medium"
-            >
-              <MagnifyingGlassIcon className="w-5 h-5" />
-              Search
-            </button>
+            {!compact && (
+              <button
+                onClick={performSearch}
+                disabled={!searchQuery && !hasActiveFilters}
+                className="hidden sm:flex px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors items-center gap-2 font-medium"
+              >
+                <MagnifyingGlassIcon className="w-5 h-5" />
+                Search
+              </button>
+            )}
           </div>
 
           {/* Sort and Results Info Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 text-sm">
+          <div
+            className={`flex gap-2 text-xs ${
+              compact
+                ? "flex-row items-center justify-between"
+                : "flex-col sm:flex-row sm:items-center sm:justify-between sm:gap-3 text-sm"
+            }`}
+          >
             <div className="flex items-center gap-3">
               <label className="text-sm font-medium text-primary whitespace-nowrap">
                 Sort by:
               </label>
               <SortDropdown value={orderBy} onChange={setOrderBy} />
+
+              {compact && (
+                <button
+                  onClick={() => setFiltersExpanded(!filtersExpanded)}
+                  className="flex items-center gap-1 px-2 py-1 border border-slate-300 dark:border-slate-600 rounded text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                >
+                  <FunnelIcon className="w-4 h-4" />
+                  Filters
+                  {hasActiveFilters && <span className="text-blue-600">•</span>}
+                </button>
+              )}
             </div>
 
             {/* Results Count */}
@@ -437,7 +473,7 @@ const SingleCardTab = ({
         </div>
 
         {/* Mobile/Tablet Filters (show on lg screens and below) */}
-        <div className="lg:hidden">
+        <div className={`${compact ? "" : "lg:hidden"}`}>
           <SearchFilters
             filters={filters}
             availableTypes={availableTypes}
@@ -446,11 +482,12 @@ const SingleCardTab = ({
             onFilterChange={updateFilter}
             isExpanded={filtersExpanded}
             onToggle={() => setFiltersExpanded(!filtersExpanded)}
+            showToggleButton={!compact}
           />
         </div>
 
         {/* Results */}
-        <div className="flex-1 overflow-y-auto min-h-0">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden min-h-0">
           <div className="p-4 sm:p-6">
             {error && (
               <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
@@ -483,18 +520,28 @@ const SingleCardTab = ({
 
             {displayCards.length > 0 && (
               <div>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3">
+                <div
+                  className={`grid gap-2 ${
+                    compact
+                      ? "grid-cols-3"
+                      : "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 sm:gap-3"
+                  }`}
+                >
                   {displayCards.map((card) => (
                     <div key={card.id} className="relative">
-                      <PokemonCard
-                        card={card}
-                        onClick={() => onCardSelect(card)}
-                        className={`cursor-pointer transition-all ${
-                          isCardSelected(card.id)
-                            ? "ring-2 ring-blue-500 scale-105"
-                            : "hover:scale-105"
-                        }`}
-                      />
+                      {compact ? (
+                        <DraggableSearchCard card={card} />
+                      ) : (
+                        <PokemonCard
+                          card={card}
+                          onClick={() => onCardSelect(card)}
+                          className={`cursor-pointer transition-all ${
+                            isCardSelected(card.id)
+                              ? "ring-2 ring-blue-500 scale-105"
+                              : "hover:scale-105"
+                          }`}
+                        />
+                      )}
                       {isCardSelected(card.id) && (
                         <>
                           <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg pointer-events-none" />
@@ -548,17 +595,19 @@ const SingleCardTab = ({
         </div>
       </div>
 
-      {/* Desktop Sidebar Filters (show on lg screens and above) */}
-      <div className="hidden lg:block">
-        <SearchFilters
-          filters={filters}
-          availableTypes={availableTypes}
-          availableSets={availableSets}
-          availableRarities={availableRarities}
-          onFilterChange={updateFilter}
-          isSidebarMode={true}
-        />
-      </div>
+      {/* Desktop Sidebar Filters hidden when compact */}
+      {!compact && (
+        <div className="hidden lg:block">
+          <SearchFilters
+            filters={filters}
+            availableTypes={availableTypes}
+            availableSets={availableSets}
+            availableRarities={availableRarities}
+            onFilterChange={updateFilter}
+            isSidebarMode={true}
+          />
+        </div>
+      )}
     </div>
   );
 };

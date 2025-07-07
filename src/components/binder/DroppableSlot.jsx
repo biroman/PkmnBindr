@@ -27,6 +27,11 @@ const DroppableSlot = ({
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
+  // Preview placeholders (must be declared before any conditional use)
+  let previewCard = null;
+  let incomingCardPreview = null;
+  let shiftPreviewCard = null;
+
   // Selection context
   const {
     selectionMode,
@@ -52,9 +57,40 @@ const DroppableSlot = ({
   // Check if we're dragging a card and hovering over a slot with a card (swap scenario)
   const isDraggingCard =
     active?.data?.current?.type === "card" ||
+    active?.data?.current?.type === "new-card" ||
     (active && !active.data?.current?.type);
-  const isSwapHover = isOver && isDraggingCard && card;
-  const isEmptySlotHover = isOver && isDraggingCard && !card;
+  let isSwapHover = isOver && isDraggingCard && card;
+  let isEmptySlotHover = isOver && isDraggingCard && !card;
+
+  const isNewCardDrag = active?.data?.current?.type === "new-card";
+
+  let isDragWithinModal = false;
+  if (isNewCardDrag && active?.data?.current?.modalBounds) {
+    const mb = active.data.current.modalBounds;
+
+    const currentRectRef = active.rect?.current;
+    let rect = null;
+    if (currentRectRef) {
+      rect = currentRectRef.translated || currentRectRef.initial || null;
+    }
+
+    if (rect) {
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      if (cx >= mb.left && cx <= mb.right && cy >= mb.top && cy <= mb.bottom) {
+        isDragWithinModal = true;
+      }
+    }
+  }
+
+  if (isDragWithinModal) {
+    // Skip all hover/preview logic by setting flags off
+    isSwapHover = false;
+    isEmptySlotHover = false;
+    previewCard = null;
+    incomingCardPreview = null;
+    shiftPreviewCard = null;
+  }
 
   const handleSlotClick = () => {
     if (selectionMode) {
@@ -82,7 +118,7 @@ const DroppableSlot = ({
   const isSinglePreviewDestination =
     !selectionMode &&
     previewOffset !== null &&
-    active?.data?.current?.type === "card" &&
+    ["card", "new-card"].includes(active?.data?.current?.type) &&
     position === active.data.current.position + previewOffset;
 
   const isPreviewDestination =
@@ -93,7 +129,6 @@ const DroppableSlot = ({
     isSinglePreviewDestination;
 
   // Compute preview card for destination slots (card that will move here)
-  let previewCard = null;
   if (isPreviewDestination && currentBinder && previewOffset !== null) {
     if (!selectionMode && isSinglePreviewDestination) {
       // Single card: preview is the dragged card itself
@@ -116,8 +151,6 @@ const DroppableSlot = ({
   }
 
   // Compute incoming preview for selected (source) slots – show card moving in
-  let incomingCardPreview = null;
-  let shiftPreviewCard = null;
   if (currentBinder && previewOffset !== null) {
     if (
       selectionMode &&
@@ -179,7 +212,7 @@ const DroppableSlot = ({
     } else if (
       !selectionMode &&
       previewOffset !== null &&
-      active?.data?.current?.type === "card"
+      ["card", "new-card"].includes(active?.data?.current?.type)
     ) {
       const activePos = active.data.current.position;
       const destPos = activePos + previewOffset;
@@ -374,6 +407,12 @@ const DroppableSlot = ({
     // Clear other overlay types to avoid conflicts
     incomingCardPreview = null;
     shiftPreviewCard = null;
+  }
+
+  // After computing previewCard / incomingCardPreview, override for new-card drags
+  if (isNewCardDrag) {
+    previewCard = null;
+    incomingCardPreview = null;
   }
 
   const shouldShowCardBack =

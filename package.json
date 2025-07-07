@@ -50,6 +50,8 @@
     "react-hot-toast": "^2.5.2",
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.6.2",
+    "react-draggable": "^4.4.6",
+    "jotai": "^2.7.1",
     "tailwind-merge": "^3.3.0",
     "zod": "^3.25.56",
     "zustand": "^5.0.5"

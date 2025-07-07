@@ -8,6 +8,9 @@ import { toast } from "react-hot-toast";
  * @param {Object} options - Configuration options
  * @param {Object} options.binder - Current binder object
  * @param {Function} options.moveCard - Function to move card between positions
+ * @param {Function} options.addCard - Function to add a card to the binder
+ * @param {Function} options.removeCard - Function to remove a card from the binder
+ * @param {Function} options.batchMoveCards - Function to move multiple cards between positions
  * @param {Object} options.navigation - Navigation object from useBinderNavigation
  * @param {Function} options.onDragStateChange - Callback when drag state changes
  * @param {boolean} options.enableDrag - Whether drag functionality is enabled
@@ -22,7 +25,9 @@ import { toast } from "react-hot-toast";
 export const useBinderDragDrop = ({
   binder,
   moveCard,
+  addCard,
   removeCard,
+  batchMoveCards,
   navigation,
   onDragStateChange,
   enableDrag = true,
@@ -161,13 +166,17 @@ export const useBinderDragDrop = ({
       const { active } = event;
       const cardData = active.data.current;
 
-      if (cardData?.type === "card") {
+      if (cardData?.type === "card" || cardData?.type === "new-card") {
         setActiveCard(cardData.card);
         setIsDragging(true);
         activeDragDataRef.current = cardData;
 
         // If we're in selection mode and the dragged card is part of selection, store whole set
-        if (selectionMode && selectedPositions.length > 1) {
+        if (
+          cardData.type === "card" &&
+          selectionMode &&
+          selectedPositions.length > 1
+        ) {
           activeDragDataRef.current.multiPositions = selectedPositions;
           setIsBulkDragging(true);
         }
@@ -222,9 +231,10 @@ export const useBinderDragDrop = ({
         const offset = overData.position - activePos;
         setPreviewOffset(offset);
       } else if (
-        enableShiftPreview &&
         !selectionMode &&
-        activeDragDataRef.current?.type === "card" &&
+        (enableShiftPreview ||
+          activeDragDataRef.current?.type === "new-card") &&
+        ["card", "new-card"].includes(activeDragDataRef.current?.type) &&
         overData?.type === "slot"
       ) {
         // Single-card preview: show shift range
@@ -300,6 +310,34 @@ export const useBinderDragDrop = ({
         return;
       }
 
+      // Cancel drop if new-card still within modal bounds
+      if (
+        activeData?.type === "new-card" &&
+        activeData.modalBounds &&
+        event.active?.rect?.current
+      ) {
+        const mb = activeData.modalBounds;
+        const rect = event.active.rect.current.translated ||
+          event.active.rect.current.initial || {
+            left: 0,
+            top: 0,
+            width: 0,
+            height: 0,
+          };
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        if (
+          cx >= mb.left &&
+          cx <= mb.right &&
+          cy >= mb.top &&
+          cy <= mb.bottom
+        ) {
+          clearDragState();
+          onDragStateChange?.(false);
+          return;
+        }
+      }
+
       // Handle card deletion drops
       if (activeData?.type === "card" && overData?.type === "delete-zone") {
         const cardPosition = activeData.position;
@@ -339,7 +377,12 @@ export const useBinderDragDrop = ({
           try {
             for (const pos of ordered) {
               await moveCard(binder.id, pos, pos + offset, {
-                mode: enableShiftPreview ? "shift" : "swap",
+                mode:
+                  !selectionMode &&
+                  (enableShiftPreview ||
+                    activeDragDataRef.current?.type === "new-card")
+                    ? "shift"
+                    : "swap",
               });
             }
           } catch (error) {
@@ -358,12 +401,48 @@ export const useBinderDragDrop = ({
         if (fromPosition !== toPosition) {
           try {
             await moveCard(binder.id, fromPosition, toPosition, {
-              mode: enableShiftPreview ? "shift" : "swap",
+              mode:
+                !selectionMode &&
+                (enableShiftPreview ||
+                  activeDragDataRef.current?.type === "new-card")
+                  ? "shift"
+                  : "swap",
             });
           } catch (error) {
             console.error("Failed to move card:", error);
             toast.error("Failed to move card");
           }
+        }
+      } else if (
+        activeData?.type === "new-card" &&
+        overData?.type === "slot" &&
+        addCard
+      ) {
+        // Dropping brand new card onto slot
+        try {
+          const targetPos = overData.position;
+
+          // If target slot occupied, shift existing cards forward by 1
+          if (binder.cards && binder.cards[targetPos.toString()]) {
+            const occupiedPositions = Object.keys(binder.cards)
+              .map((p) => parseInt(p, 10))
+              .filter((p) => p >= targetPos)
+              .sort((a, b) => b - a);
+
+            const moveOps = occupiedPositions.map((p) => ({
+              fromPosition: p,
+              toPosition: p + 1,
+            }));
+
+            if (moveOps.length && batchMoveCards) {
+              await batchMoveCards(binder.id, moveOps);
+            }
+          }
+
+          await addCard(binder.id, [activeData.card], targetPos);
+        } catch (error) {
+          console.error("Failed to add card:", error);
+          toast.error("Failed to add card");
         }
       }
 
@@ -378,6 +457,8 @@ export const useBinderDragDrop = ({
       binder,
       moveCard,
       removeCard,
+      addCard,
+      batchMoveCards,
       clearNavigationTimer,
       clearDragState,
       onDragStateChange,

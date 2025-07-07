@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/24/outline";
 import PokemonCard from "../PokemonCard";
+import DraggableSearchCard from "./DraggableSearchCard";
 import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 
@@ -314,6 +315,7 @@ const SleevesTab = ({
   isCardSelected,
   onIncrease,
   onDecrease,
+  compact = false,
 }) => {
   const cardsByCategory = useMemo(() => {
     const result = {};
@@ -351,18 +353,28 @@ const SleevesTab = ({
         {categoryKeys.map((cat) => (
           <Tab.Panel key={cat} className="h-full">
             <div className="flex-1 overflow-y-auto p-3 sm:p-4 h-full">
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3">
+              <div
+                className={`grid gap-2 ${
+                  compact
+                    ? "grid-cols-3"
+                    : "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 sm:gap-3"
+                }`}
+              >
                 {cardsByCategory[cat].map((card) => (
                   <div key={card.id} className="relative">
-                    <PokemonCard
-                      card={card}
-                      onClick={() => onCardSelect(card)}
-                      className={`cursor-pointer transition-all ${
-                        isCardSelected(card.id)
-                          ? "ring-2 ring-blue-500 scale-105"
-                          : "hover:scale-105"
-                      }`}
-                    />
+                    {compact ? (
+                      <DraggableSearchCard card={card} />
+                    ) : (
+                      <PokemonCard
+                        card={card}
+                        onClick={() => onCardSelect(card)}
+                        className={`cursor-pointer transition-all ${
+                          isCardSelected(card.id)
+                            ? "ring-2 ring-blue-500 scale-105"
+                            : "hover:scale-105"
+                        }`}
+                      />
+                    )}
                     {isCardSelected(card.id) && (
                       <>
                         <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg pointer-events-none" />
