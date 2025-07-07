@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import {
   MagnifyingGlassIcon,
   FunnelIcon,
-  CheckIcon,
   XMarkIcon,
+  PlusIcon,
+  MinusIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronRight } from "lucide-react";
 import useCardSearch from "../../hooks/useCardSearch";
@@ -305,7 +306,13 @@ const SearchFilters = ({
   );
 };
 
-const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
+const SingleCardTab = ({
+  selectedMap = {},
+  onCardSelect,
+  isCardSelected,
+  onIncrease,
+  onDecrease,
+}) => {
   const [filtersExpanded, setFiltersExpanded] = useState(false);
   const searchInputRef = useRef(null);
 
@@ -488,15 +495,37 @@ const SingleCardTab = ({ selectedCards, onCardSelect, isCardSelected }) => {
                             : "hover:scale-105"
                         }`}
                       />
-                      {/* Dark overlay for selected cards */}
                       {isCardSelected(card.id) && (
-                        <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg pointer-events-none transition-opacity" />
-                      )}
-                      {/* Checkmark icon */}
-                      {isCardSelected(card.id) && (
-                        <div className="absolute -top-2 -right-2 w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center shadow-lg z-10">
-                          <CheckIcon className="w-5 h-5 text-white font-bold" />
-                        </div>
+                        <>
+                          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg pointer-events-none" />
+                          {/* Quantity badge */}
+                          <div className="absolute top-1 left-1 bg-blue-600 text-white text-xs px-1.5 py-0.5 rounded shadow">
+                            {selectedMap[card.id]?.count || 1}
+                          </div>
+                          {/* Plus / Minus */}
+                          <div className="absolute bottom-1 right-1 flex flex-col gap-0.5 z-20">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onIncrease(card);
+                              }}
+                              className="w-6 h-6 bg-white/90 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow hover:bg-blue-100 dark:hover:bg-slate-600"
+                              aria-label="Increase quantity"
+                            >
+                              <PlusIcon className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onDecrease(card);
+                              }}
+                              className="w-6 h-6 bg-white/90 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow hover:bg-blue-100 dark:hover:bg-slate-600"
+                              aria-label="Decrease quantity"
+                            >
+                              <MinusIcon className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </>
                       )}
                     </div>
                   ))}
