@@ -482,6 +482,12 @@ export const BinderContainer = ({
       );
     }
 
+    if (binder.metadata) {
+      binder.metadata.missingInstances = updatedMissingCards;
+    } else {
+      binder.metadata = { missingInstances: updatedMissingCards };
+    }
+
     try {
       await updateBinderMetadata(binder.id, {
         missingInstances: updatedMissingCards,
@@ -523,6 +529,12 @@ export const BinderContainer = ({
       updatedMissingCards = currentMissingCards.filter(
         (instanceId) => !allCardInstanceIds.includes(instanceId)
       );
+    }
+
+    if (binder.metadata) {
+      binder.metadata.missingInstances = updatedMissingCards;
+    } else {
+      binder.metadata = { missingInstances: updatedMissingCards };
     }
 
     try {
