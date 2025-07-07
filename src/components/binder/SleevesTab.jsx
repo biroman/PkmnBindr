@@ -106,7 +106,8 @@ const ETB_URLS = [
   "https://i.postimg.cc/15fyB1X9/image-81.jpg",
   "https://i.postimg.cc/yYtsrp30/image-82.jpg",
   "https://i.postimg.cc/pV36wwkV/image-9.jpg",
-  "https://i.postimg.cc/cLJsLDrb/etb-pok-destined-rivals-3.jpg",
+  "https://i.postimg.cc/X7sbmwQc/bf98f41deabc58fe5a1bc8ca6ee47fe0.jpg",
+  "https://i.postimg.cc/jq83rZY5/s-l1600.png",
 ];
 
 const POKEMON_CENTER_URLS = [
@@ -232,9 +233,79 @@ const POKEMON_CENTER_URLS = [
   "https://i.postimg.cc/SKzBYmgP/image-99.jpg",
 ];
 
+// Ultra Pro sleeves
+const ULTRA_PRO_URLS = [
+  "https://i.postimg.cc/ZY7mD8fP/image-1.jpg",
+  "https://i.postimg.cc/nLzYTtMG/image-10.jpg",
+  "https://i.postimg.cc/7LW1WQ28/image-11.jpg",
+  "https://i.postimg.cc/fy4cwtC8/image-12.jpg",
+  "https://i.postimg.cc/26LdRFQq/image-13.jpg",
+  "https://i.postimg.cc/gjvvrzBm/image-14.jpg",
+  "https://i.postimg.cc/8PmRSC6b/image-15.jpg",
+  "https://i.postimg.cc/RZCcVz1x/image-16.jpg",
+  "https://i.postimg.cc/Wprm58pC/image-17.jpg",
+  "https://i.postimg.cc/fTNcpdJL/image-18.jpg",
+  "https://i.postimg.cc/TPFm9LzT/image-19.jpg",
+  "https://i.postimg.cc/CL9gwFpz/image-2.jpg",
+  "https://i.postimg.cc/rwh5DYg0/image-20.jpg",
+  "https://i.postimg.cc/bvskkHF6/image-21.jpg",
+  "https://i.postimg.cc/mD996Z4C/image-22.jpg",
+  "https://i.postimg.cc/90j933XS/image-23.jpg",
+  "https://i.postimg.cc/L5B12yns/image-24.jpg",
+  "https://i.postimg.cc/FsNSDQBk/image-25.jpg",
+  "https://i.postimg.cc/J7bJNhPW/image-26.jpg",
+  "https://i.postimg.cc/XvGBpNpm/image-27.jpg",
+  "https://i.postimg.cc/X7LCPDRH/image-28.jpg",
+  "https://i.postimg.cc/SxKMbfqy/image-29.png",
+  "https://i.postimg.cc/KzCNRsGr/image-3.jpg",
+  "https://i.postimg.cc/XYDyjB79/image-30.png",
+  "https://i.postimg.cc/sX5B4nPJ/image-31.png",
+  "https://i.postimg.cc/MHxnPydJ/image-32.png",
+  "https://i.postimg.cc/LscYfdPX/image-33.jpg",
+  "https://i.postimg.cc/x8RcWc4J/image-34.jpg",
+  "https://i.postimg.cc/fWjt3rRz/image-35.jpg",
+  "https://i.postimg.cc/GhLBvx4k/image-36.jpg",
+  "https://i.postimg.cc/x1qc4jy8/image-37.jpg",
+  "https://i.postimg.cc/0y3bRgcf/image-38.jpg",
+  "https://i.postimg.cc/fT8VCSd1/image-39.jpg",
+  "https://i.postimg.cc/zDR7957d/image-4.jpg",
+  "https://i.postimg.cc/nzfrr489/image-40.jpg",
+  "https://i.postimg.cc/5tCjfPrM/image-41.jpg",
+  "https://i.postimg.cc/d1R1yhvH/image-42.jpg",
+  "https://i.postimg.cc/PJtqzd5t/image-43.jpg",
+  "https://i.postimg.cc/Y0bCdTvQ/image-44.png",
+  "https://i.postimg.cc/2895hRRD/image-45.png",
+  "https://i.postimg.cc/593y9Qsj/image-46.jpg",
+  "https://i.postimg.cc/5N20X9rg/image-47.jpg",
+  "https://i.postimg.cc/g2fktV2t/image-48.jpg",
+  "https://i.postimg.cc/43V4DYKf/image-49.jpg",
+  "https://i.postimg.cc/MK7DpDhV/image-5.jpg",
+  "https://i.postimg.cc/htJt0yc7/image-50.jpg",
+  "https://i.postimg.cc/qRGJ7WXW/image-51.jpg",
+  "https://i.postimg.cc/tJCXnDBJ/image-52.jpg",
+  "https://i.postimg.cc/hjn4cKx9/image-53.jpg",
+  "https://i.postimg.cc/Gt7bFYfQ/image-54.jpg",
+  "https://i.postimg.cc/gcNcbF0Z/image-55.jpg",
+  "https://i.postimg.cc/3JqKWXmr/image-56.jpg",
+  "https://i.postimg.cc/rFsV8ndY/image-57.jpg",
+  "https://i.postimg.cc/kgt7S2vQ/image-58.jpg",
+  "https://i.postimg.cc/s2Yynb81/image-59.jpg",
+  "https://i.postimg.cc/hvx0xbhF/image-6.jpg",
+  "https://i.postimg.cc/xdDn396W/image-60.jpg",
+  "https://i.postimg.cc/HnxgknL7/image-61.jpg",
+  "https://i.postimg.cc/9Mc2sJ5b/image-62.jpg",
+  "https://i.postimg.cc/4dwGGVXg/image-63.jpg",
+  "https://i.postimg.cc/wMGdyzt4/image-64.jpg",
+  "https://i.postimg.cc/vH4yR4jJ/image-65.jpg",
+  "https://i.postimg.cc/m2fj4q6T/image-7.jpg",
+  "https://i.postimg.cc/y87TgRH5/image-8.jpg",
+  "https://i.postimg.cc/x1g3Kdjd/image-9.jpg",
+];
+
 const CATEGORY_MAP = {
   ETB: ETB_URLS,
   "Pokemon Center": POKEMON_CENTER_URLS,
+  "Ultra Pro": ULTRA_PRO_URLS,
 };
 
 const SleevesTab = ({
@@ -256,23 +327,25 @@ const SleevesTab = ({
 
   return (
     <Tab.Group as="div" className="flex flex-col h-full">
-      <Tab.List className="flex border-b border-border bg-slate-100 dark:bg-slate-800 flex-shrink-0">
-        {categoryKeys.map((cat) => (
-          <Tab key={cat} as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`flex-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-t-md ${
-                  selected
-                    ? "bg-white dark:bg-slate-700 text-blue-600 shadow-inner border-b-2 border-blue-500"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700"
-                }`}
-              >
-                {cat}
-              </button>
-            )}
-          </Tab>
-        ))}
-      </Tab.List>
+      <div className="p-2 sm:p-3 bg-slate-100 dark:bg-slate-800 border-b border-border">
+        <Tab.List className="flex space-x-1 bg-slate-200 dark:bg-slate-900/80 rounded-lg p-1">
+          {categoryKeys.map((cat) => (
+            <Tab key={cat} as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`w-full py-2 text-sm font-medium leading-5 rounded-lg transition-all focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60 ${
+                    selected
+                      ? "bg-white dark:bg-slate-700 text-blue-700 dark:text-blue-400 shadow"
+                      : "text-slate-700 dark:text-slate-300 hover:bg-white/[0.5] dark:hover:bg-slate-800/[0.5]"
+                  }`}
+                >
+                  {cat}
+                </button>
+              )}
+            </Tab>
+          ))}
+        </Tab.List>
+      </div>
 
       <Tab.Panels className="flex-1 min-h-0">
         {categoryKeys.map((cat) => (
