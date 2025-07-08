@@ -167,9 +167,14 @@ const MobileSyncButtons = ({
         <span className="ml-1.5">
           {isLoading || binderSyncStatus?.status === "saving"
             ? "Saving..."
+            : !user
+            ? "Save"
             : "Save"}
         </span>
       </button>
+
+      {/* Prompt for guests */}
+      {!user && <span className="text-xs text-gray-500">Sign in to save</span>}
 
       {/* Revert Button */}
       {canRevert() && (

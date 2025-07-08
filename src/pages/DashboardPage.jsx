@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth, useOwner } from "../hooks/useAuth";
 import { useBinderContext } from "../contexts/BinderContext";
 import { Button } from "../components/ui/Button";
@@ -25,6 +25,7 @@ import RequestCenter from "../components/RequestCenter";
 const DashboardPage = () => {
   const { user } = useAuth();
   const isOwner = useOwner();
+  const navigate = useNavigate();
   const {
     binders,
     currentBinder,
@@ -112,7 +113,12 @@ const DashboardPage = () => {
   const handleQuickCreateBinder = async () => {
     try {
       const name = `Binder ${stats.total + 1}`;
-      await createBinder(name, "");
+      const newBinder = await createBinder(name, "");
+
+      // After creating, navigate to the new binder's page
+      if (newBinder?.id) {
+        navigate(`/binder/${newBinder.id}`);
+      }
     } catch (error) {
       // Error handled by context
     }

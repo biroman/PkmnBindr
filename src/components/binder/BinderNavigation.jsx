@@ -20,6 +20,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useAuth } from "../../hooks/useAuth";
 
 const BinderNavigation = ({
   navigation,
@@ -44,6 +45,13 @@ const BinderNavigation = ({
   isPublicView = false,
 }) => {
   const { canGoNext, canGoPrev, goToPrevPage, goToNextPage } = navigation;
+
+  // inside component after declarations
+  const { user } = useAuth();
+  const showPulseHint =
+    currentPageConfig &&
+    currentPageConfig.leftPage?.type === "cover" &&
+    canGoNext;
 
   // Mobile more menu state - must be at top level to avoid conditional hook calls
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
@@ -286,7 +294,7 @@ const BinderNavigation = ({
                   showAddPage && !canGoNext
                     ? "border-2 border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 bg-white dark:bg-gray-800"
                     : "bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950 text-gray-700 dark:text-gray-300"
-                }`}
+                } ${showPulseHint ? "animate-pulse ring-2 ring-blue-400" : ""}`}
                 title={showAddPage && !canGoNext ? "Add Page" : "Next Page"}
               >
                 {showAddPage && !canGoNext ? (
