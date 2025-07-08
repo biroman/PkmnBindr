@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 // Import our refactored components
 import BinderContainer from "../components/binder/BinderContainer";
-import StaticBinderSidebar from "../components/binder/StaticBinderSidebar";
+// Sidebar removed to match public view
 
 const StaticBinderPage = () => {
   const navigate = useNavigate();
@@ -13,7 +13,21 @@ const StaticBinderPage = () => {
   const [binderData, setBinderData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  // Card modal state
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (card) => {
+    // Toggle modal on same card click
+    if (selectedCard && selectedCard.id === card.id) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(card);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setSelectedCard(null);
+  };
 
   // Load static binder data
   useEffect(() => {
@@ -185,40 +199,109 @@ const StaticBinderPage = () => {
 
   return (
     <div className="bg-background">
-      {/* Main Content Layout */}
-      <div className="flex h-[calc(100vh-65px)]">
-        {/* Custom Sidebar for Static Binders */}
-        <StaticBinderSidebar
-          binder={binderData}
-          onShare={handleShare}
-          isVisible={isSidebarVisible}
-          onToggleVisibility={() => setIsSidebarVisible(!isSidebarVisible)}
-        />
+      {/* Full-width Binder – identical to share-link view, but accounting for navbar */}
+      <BinderContainer
+        binder={binderData}
+        mode="readonly"
+        hasNavbar={true}
+        features={{
+          toolbar: false,
+          sidebar: false,
+          dragDrop: false,
+          modals: false,
+          keyboard: true,
+          edgeNavigation: true,
+          export: false,
+          addCards: false,
+          deleteCards: false,
+          clearBinder: false,
+          pageManagement: false,
+          sorting: false,
+          autoSort: false,
+        }}
+        onCardClick={handleCardClick}
+        isPublicView={true}
+        binderOwner={null}
+      />
 
-        {/* Main Binder Area using BinderContainer */}
-        <div className="flex-1 flex mt-10 justify-center relative">
-          <BinderContainer
-            binder={binderData}
-            mode="readonly"
-            features={{
-              toolbar: false,
-              sidebar: false, // We handle sidebar separately
-              dragDrop: false,
-              modals: false,
-              keyboard: true, // Keep keyboard navigation
-              edgeNavigation: false,
-              export: false,
-              addCards: false,
-              deleteCards: false,
-              clearBinder: false,
-              pageManagement: false,
-              sorting: false,
-              autoSort: false,
-            }}
-            className="relative"
-          />
+      {/* Card Modal */}
+      {selectedCard && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              handleCloseModal();
+            }
+          }}
+        >
+          {/* Card Image */}
+          <div className="mb-4">
+            {(selectedCard.image || selectedCard.imageSmall) && (
+              <img
+                src={selectedCard.image || selectedCard.imageSmall}
+                alt={selectedCard.name}
+                className="cursor-pointer shadow-2xl rounded-lg"
+                style={{ maxHeight: "60vh" }}
+                onClick={handleCloseModal}
+              />
+            )}
+          </div>
+
+          {/* Info Panel */}
+          <div
+            className="bg-card-background rounded-2xl max-w-lg w-full shadow-2xl transform transition-all duration-300 ease-out cursor-pointer"
+            onClick={handleCloseModal}
+          >
+            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+              <h3 className="text-xl font-bold text-gray-900 truncate">
+                {selectedCard.name}
+              </h3>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCloseModal();
+                }}
+                className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 rounded-full hover:bg-gray-100"
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <div className="p-6 space-y-3 text-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-gray-600">Set</span>
+                <span className="font-semibold text-gray-900">
+                  {selectedCard.set?.name || "Unknown"}
+                </span>
+              </div>
+              {selectedCard.number && (
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Number</span>
+                  <span className="font-semibold text-gray-900">
+                    {selectedCard.number}
+                  </span>
+                </div>
+              )}
+              {selectedCard.rarity && (
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Rarity</span>
+                  <span className="font-semibold text-gray-900">
+                    {selectedCard.rarity}
+                  </span>
+                </div>
+              )}
+              {selectedCard.types && selectedCard.types.length > 0 && (
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Type</span>
+                  <span className="font-semibold text-gray-900">
+                    {selectedCard.types.join(", ")}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

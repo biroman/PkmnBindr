@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBinderContext } from "../contexts/BinderContext";
 import { useAuth } from "../hooks/useAuth";
@@ -61,6 +61,9 @@ const BindersPage = () => {
   const [newBinderName, setNewBinderName] = useState("");
   const [newBinderDescription, setNewBinderDescription] = useState("");
   const [isCreating, setIsCreating] = useState(false);
+
+  // Reference to the binder name input so we can scroll/focus it
+  const binderNameInputRef = useRef(null);
 
   // Delete confirmation modal state
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -125,6 +128,20 @@ const BindersPage = () => {
 
     fetchLimits();
   }, [binders.length, canPerformAction, user]);
+
+  // Auto-scroll to the binder name input when the create form opens on mobile
+  useEffect(() => {
+    if (showCreateForm && binderNameInputRef.current) {
+      const isMobile = window.matchMedia("(max-width: 639px)").matches; // matches Tailwind's sm breakpoint
+      if (isMobile) {
+        binderNameInputRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+      binderNameInputRef.current.focus();
+    }
+  }, [showCreateForm]);
 
   // Helper function to get binder card usage
   const getBinderCardUsage = (binder) => {
@@ -493,6 +510,7 @@ const BindersPage = () => {
                     Binder Name *
                   </label>
                   <input
+                    ref={binderNameInputRef}
                     type="text"
                     value={newBinderName}
                     onChange={(e) => setNewBinderName(e.target.value)}
