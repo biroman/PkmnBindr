@@ -203,7 +203,7 @@ export const BinderContainer = ({
     setIsBulkDragging,
   } = useSelection();
 
-  // Core binder hooks
+  // Core binder hooks for binder pages
   const {
     getCurrentPageConfig,
     goToNextPage,
@@ -213,6 +213,25 @@ export const BinderContainer = ({
     canGoPrev,
     getCardsForPage,
   } = useBinderPages(binder, binderDimensions.isMobile);
+
+  // Also compute total card pages (mobile hook returns cover + card pages)
+  const { totalPages: totalMobilePages } = useBinderPages(binder, true);
+  const totalCardPages = Math.max(1, totalMobilePages - 1);
+
+  // Determine current card page number from pageConfig
+  const currentCardPage = (() => {
+    const cfg = getCurrentPageConfig;
+    if (cfg.leftPage?.type === "cards") return cfg.leftPage.pageNumber;
+    if (cfg.rightPage?.type === "cards") return cfg.rightPage.pageNumber;
+    return 1;
+  })();
+
+  // Map card page to binder page index
+  const goToCardPage = (cardPage) => {
+    const binderPageIndex =
+      cardPage <= 1 ? 0 : 1 + Math.floor((cardPage - 2) / 2);
+    goToPage(binderPageIndex);
+  };
 
   // Modal management
   const binderModals = useBinderModals({
@@ -747,6 +766,9 @@ export const BinderContainer = ({
             activeCard={binderDragDrop.activeCard}
             currentPageConfig={pageConfig}
             isMobile={isMobile}
+            currentCardPage={currentCardPage}
+            totalCardPages={totalCardPages}
+            onGoToCardPage={goToCardPage}
             // Pass down drag state for progress indicator
             navigationProgress={binderDragDrop.navigationProgress}
             currentEdgeZone={binderDragDrop.currentEdgeZone}

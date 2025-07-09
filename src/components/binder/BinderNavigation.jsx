@@ -19,7 +19,12 @@ import {
   ArrowsRightLeftIcon,
 } from "@heroicons/react/24/outline";
 import { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+} from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
 
 const BinderNavigation = ({
@@ -43,7 +48,48 @@ const BinderNavigation = ({
   currentEdgeZone = null,
   // Public view props
   isPublicView = false,
+  // Card page jump props
+  currentCardPage = 1,
+  totalCardPages = 1,
+  onGoToCardPage = () => {},
 }) => {
+  const [inputPage, setInputPage] = useState(currentCardPage);
+  const isNavigatingViaInput = useRef(false);
+
+  // Sync from props ONLY if the navigation was not triggered by this component.
+  useEffect(() => {
+    if (isNavigatingViaInput.current) {
+      // We just navigated via input, so don't overwrite the user's value.
+      // Reset the flag for the next external navigation (e.g., arrows).
+      isNavigatingViaInput.current = false;
+    } else {
+      // Navigation was external, so sync the input to the new page.
+      setInputPage(currentCardPage);
+    }
+  }, [currentCardPage]);
+
+  // Debounce navigation when user types in the input
+  useEffect(() => {
+    const page = parseInt(inputPage, 10);
+
+    // Check if the input is a valid, different page number.
+    if (
+      !isNaN(page) &&
+      page >= 1 &&
+      page <= totalCardPages &&
+      page !== currentCardPage
+    ) {
+      const handler = setTimeout(() => {
+        isNavigatingViaInput.current = true; // Set flag before navigating
+        onGoToCardPage(page);
+      }, 500); // 500ms delay
+
+      return () => {
+        clearTimeout(handler);
+      };
+    }
+  }, [inputPage, totalCardPages, currentCardPage, onGoToCardPage]);
+
   const { canGoNext, canGoPrev, goToPrevPage, goToNextPage } = navigation;
 
   // inside component after declarations
@@ -475,6 +521,74 @@ const BinderNavigation = ({
   // Desktop layout (existing logic)
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
+      {/* Card Page Jump (Desktop) */}
+      {!isMobile && (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 pointer-events-auto flex flex-col items-center gap-2">
+          <p className="text-xs text-gray-500 dark:text-gray-400 select-none">
+            Jump to page
+          </p>
+          <div className="flex items-center space-x-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-full shadow-lg px-2 py-1">
+            <button
+              onClick={() => onGoToCardPage(1)}
+              className="p-1 rounded-full text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              title="First Page"
+            >
+              <ChevronsLeft className="w-5 h-5" />
+            </button>
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const page = parseInt(inputPage, 10);
+                if (!isNaN(page) && page >= 1 && page <= totalCardPages) {
+                  isNavigatingViaInput.current = true; // Set flag
+                  onGoToCardPage(page);
+                }
+              }}
+              className="flex items-center"
+            >
+              <input
+                type="number"
+                min={1}
+                max={totalCardPages}
+                value={inputPage}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === "") {
+                    setInputPage("");
+                  } else {
+                    const num = parseInt(val, 10);
+                    if (!isNaN(num)) {
+                      setInputPage(num);
+                    }
+                  }
+                }}
+                onFocus={(e) => e.target.select()}
+                onBlur={() => {
+                  const page = parseInt(inputPage, 10);
+                  if (isNaN(page) || page < 1 || page > totalCardPages) {
+                    setInputPage(currentCardPage);
+                  }
+                }}
+                className="w-12 h-7 text-sm text-center border-x border-gray-300 dark:border-gray-600 focus:outline-none bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-gray-100 hide-arrows rounded-sm"
+                title="Type page number and press Enter"
+              />
+            </form>
+
+            <span className="text-sm text-gray-500 dark:text-gray-400 px-1">
+              / {totalCardPages}
+            </span>
+
+            <button
+              onClick={() => onGoToCardPage(totalCardPages)}
+              className="p-1 rounded-full text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              title="Last Page"
+            >
+              <ChevronsRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
       {/* Left Navigation Button */}
       <div
         className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-300 pointer-events-auto"
@@ -526,6 +640,7 @@ BinderNavigation.propTypes = {
     canGoPrev: PropTypes.bool.isRequired,
     goToNextPage: PropTypes.func.isRequired,
     goToPrevPage: PropTypes.func.isRequired,
+    goToPage: PropTypes.func.isRequired,
   }).isRequired,
   positions: PropTypes.shape({
     left: PropTypes.string.isRequired,
@@ -538,6 +653,10 @@ BinderNavigation.propTypes = {
   className: PropTypes.string,
   currentPageConfig: PropTypes.object,
   isMobile: PropTypes.bool,
+  // Card page jump props
+  currentCardPage: PropTypes.number,
+  totalCardPages: PropTypes.number,
+  onGoToCardPage: PropTypes.func,
   // Mobile toolbar props
   toolbarActions: PropTypes.shape({
     onAddCard: PropTypes.func,
