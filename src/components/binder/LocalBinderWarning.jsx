@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
-const LocalBinderWarning = () => {
+const LocalBinderWarning = ({ canCreateNewBinder = true }) => {
   const { user } = useAuth();
   const { getLocalOnlyBinders, claimLocalBinder, clearLocalOnlyBinders } =
     useBinderContext();
@@ -21,6 +21,7 @@ const LocalBinderWarning = () => {
   const [isClearing, setIsClearing] = useState(false);
 
   const localOnlyBinders = getLocalOnlyBinders();
+  const canClaim = canCreateNewBinder;
 
   // Don't show if no local binders, user not signed in, or dismissed
   if (!user || localOnlyBinders.length === 0 || isDismissed) {
@@ -138,10 +139,20 @@ const LocalBinderWarning = () => {
                 <div className="flex items-center gap-2 ml-3">
                   <button
                     onClick={() => claimLocalBinder(binder.id)}
-                    className="flex items-center gap-1 px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded-md font-medium transition-colors"
+                    disabled={!canClaim}
+                    className={`flex items-center gap-1 px-2 py-1 rounded-md font-medium text-xs transition-colors ${
+                      canClaim
+                        ? "bg-blue-600 hover:bg-blue-700 text-white"
+                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    }`}
+                    title={
+                      !canClaim
+                        ? "Binder limit reached. Delete a binder to claim."
+                        : "Claim"
+                    }
                   >
                     <CloudIcon className="w-3 h-3" />
-                    Claim
+                    {canClaim ? "Claim" : "Limit Reached"}
                   </button>
                 </div>
               </div>
@@ -153,8 +164,17 @@ const LocalBinderWarning = () => {
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <button
             onClick={handleClaimAll}
-            disabled={isClaimingAll}
-            className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-lg font-medium transition-colors"
+            disabled={isClaimingAll || !canClaim}
+            className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-colors ${
+              canClaim
+                ? "bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white"
+                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            }`}
+            title={
+              !canClaim
+                ? "Binder limit reached. Delete a binder to claim."
+                : "Claim All"
+            }
           >
             {isClaimingAll ? (
               <>

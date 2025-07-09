@@ -492,7 +492,7 @@ const BindersPage = () => {
         </div>
 
         {/* Local Binder Warning */}
-        <LocalBinderWarning />
+        <LocalBinderWarning canCreateNewBinder={limits.binders.canCreate} />
 
         {/* Featured Collections */}
         <PublicBinderShowcase />
@@ -745,23 +745,24 @@ const BindersPage = () => {
                             </button>
                           )}
 
-                          {isLocalOnly && user && (
-                            <button
-                              onClick={() => claimLocalBinder(binder.id)}
-                              className="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded-lg font-medium transition-colors"
-                            >
-                              Claim
-                            </button>
-                          )}
                           {isGuestBinder && user ? (
                             <button
                               onClick={() => claimLocalBinder(binder.id)}
-                              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                              disabled={!limits.binders.canCreate}
+                              className={`px-4 py-2 rounded-lg font-medium transition-colors text-sm ${
+                                limits.binders.canCreate
+                                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                                  : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                              }`}
+                              title={
+                                !limits.binders.canCreate
+                                  ? "Binder limit reached. Delete a binder to claim."
+                                  : "Claim"
+                              }
                             >
-                              <span className="hidden sm:inline">
-                                Claim to Access
-                              </span>
-                              <span className="sm:hidden">Claim</span>
+                              {limits.binders.canCreate
+                                ? "Claim to Access"
+                                : "Limit Reached"}
                             </button>
                           ) : (
                             <button
@@ -812,6 +813,7 @@ const BindersPage = () => {
                   getBinderCardUsage={getBinderCardUsage}
                   limits={limits}
                   user={user}
+                  canCreateNewBinder={limits.binders.canCreate}
                   onCustomize={handleCustomizeBinder}
                 />
               );

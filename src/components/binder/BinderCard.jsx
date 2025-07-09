@@ -41,6 +41,7 @@ const BinderCard = ({
   getBinderCardUsage,
   // External state
   limits,
+  canCreateNewBinder = true,
   user,
   // Owner data for "Created by" feature
   ownerData = null,
@@ -131,6 +132,12 @@ const BinderCard = ({
         return;
       }
 
+      // If no authenticated user, skip fetching customization from Firestore
+      if (!user || !user.uid) {
+        setIsCustomizationReady(true);
+        return;
+      }
+
       console.warn(
         `🔥 FIREBASE READ: BinderCard fetching customization for binder ${binder.id} (cached data not available)`
       );
@@ -157,6 +164,7 @@ const BinderCard = ({
     getHeaderColor,
     loadBinderCustomization,
     cachedCustomization,
+    user,
   ]);
 
   const handleCardClick = (e) => {
@@ -217,6 +225,8 @@ const BinderCard = ({
 
   const handleClaimClick = (e) => {
     e.stopPropagation();
+    const canClaim = canCreateNewBinder;
+    if (!canClaim) return;
     if (onClaim) {
       onClaim(binder.id);
     }
@@ -450,10 +460,20 @@ const BinderCard = ({
               </p>
               <button
                 onClick={handleClaimClick}
-                className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-600 text-white text-sm rounded-lg font-medium transition-colors"
+                disabled={!canCreateNewBinder}
+                className={`w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-colors text-sm ${
+                  canCreateNewBinder
+                    ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-600 text-white"
+                    : "bg-gray-300 dark:bg-gray-600 text-gray-500 cursor-not-allowed"
+                }`}
+                title={
+                  !canCreateNewBinder
+                    ? "Binder limit reached. Delete a binder to claim."
+                    : "Claim Binder"
+                }
               >
                 <CloudIcon className="w-4 h-4" />
-                Claim Binder
+                {canCreateNewBinder ? "Claim Binder" : "Limit Reached"}
               </button>
             </div>
           )}
@@ -464,10 +484,20 @@ const BinderCard = ({
               {isGuestBinder && user && showClaimButton ? (
                 <button
                   onClick={handleClaimClick}
-                  className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg font-medium transition-colors text-sm"
+                  disabled={!canCreateNewBinder}
+                  className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg font-medium transition-colors text-sm ${
+                    canCreateNewBinder
+                      ? "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white"
+                      : "bg-gray-300 dark:bg-gray-600 text-gray-500 cursor-not-allowed"
+                  }`}
+                  title={
+                    !canCreateNewBinder
+                      ? "Binder limit reached. Delete a binder to claim."
+                      : "Claim to Access"
+                  }
                 >
                   <CloudIcon className="w-4 h-4" />
-                  Claim to Access
+                  {canCreateNewBinder ? "Claim to Access" : "Limit Reached"}
                 </button>
               ) : (
                 <button
