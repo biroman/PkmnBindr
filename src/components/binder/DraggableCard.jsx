@@ -16,6 +16,7 @@ const DraggableCard = ({
   dragDisabled = false,
   isGhost = false,
   disableHover = false,
+  showPreviewIcon = false,
   ...props
 }) => {
   const {
@@ -79,6 +80,7 @@ const DraggableCard = ({
           maxHeight: "100%",
         }}
         disableHover={disableHover}
+        showPreviewIcon={showPreviewIcon}
       />
     </div>
   );

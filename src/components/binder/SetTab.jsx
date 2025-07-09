@@ -38,6 +38,8 @@ const SetTab = ({ currentBinder, onAddCards, onSetAdded = () => {} }) => {
   const [addingSetId, setAddingSetId] = useState(null);
   const [addedSetIds, setAddedSetIds] = useState(new Set());
   const [includeReverseHolos, setIncludeReverseHolos] = useState(false);
+  const [reverseHoloPlacement, setReverseHoloPlacement] =
+    useState("interleaved"); // 'interleaved' | 'first' | 'last'
   const [showCapacityModal, setShowCapacityModal] = useState(false);
   const [showClearWarningModal, setShowClearWarningModal] = useState(false);
   const [pendingSet, setPendingSet] = useState(null);
@@ -231,19 +233,34 @@ const SetTab = ({ currentBinder, onAddCards, onSetAdded = () => {} }) => {
       let reverseHoloCount = 0;
 
       if (includeReverseHolos) {
-        // Interleave regular cards with their reverse holo versions
-        cards.forEach((card) => {
-          cardsToAdd.push(card); // Add regular card first
+        const regularCards = [...cards];
+        const reverseCards = [];
 
+        regularCards.forEach((card) => {
           if (canHaveReverseHolo(card.rarity)) {
-            const reverseHoloCard = createReverseHoloCard(card);
-            cardsToAdd.push(reverseHoloCard); // Add reverse holo right after
-            reverseHoloCount++;
+            reverseCards.push(createReverseHoloCard(card));
           }
         });
 
+        reverseHoloCount = reverseCards.length;
+
+        if (reverseHoloPlacement === "first") {
+          cardsToAdd = [...reverseCards, ...regularCards];
+        } else if (reverseHoloPlacement === "last") {
+          cardsToAdd = [...regularCards, ...reverseCards];
+        } else {
+          // interleaved (default)
+          cardsToAdd = [];
+          regularCards.forEach((card) => {
+            cardsToAdd.push(card);
+            if (canHaveReverseHolo(card.rarity)) {
+              cardsToAdd.push(createReverseHoloCard(card));
+            }
+          });
+        }
+
         toast.success(
-          `Added ${cards.length} regular cards and ${reverseHoloCount} reverse holo cards from ${set.name} to ${currentBinder.metadata.name}`
+          `Added ${regularCards.length} regular cards and ${reverseHoloCount} reverse holo cards from ${set.name} to ${currentBinder.metadata.name}`
         );
       } else {
         cardsToAdd = [...cards];
@@ -371,7 +388,7 @@ const SetTab = ({ currentBinder, onAddCards, onSetAdded = () => {} }) => {
           </div>
 
           {/* Reverse Holo Option */}
-          <div className="bg-purple-50 dark:bg-purple-950 rounded-lg p-3 border border-purple-200 dark:border-purple-800">
+          <div className="bg-purple-50 dark:bg-purple-950 rounded-lg p-3 border border-purple-200 dark:border-purple-800 space-y-2">
             <label className="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
@@ -379,17 +396,27 @@ const SetTab = ({ currentBinder, onAddCards, onSetAdded = () => {} }) => {
                 onChange={(e) => setIncludeReverseHolos(e.target.checked)}
                 className="w-4 h-4 text-purple-600 bg-white dark:bg-gray-800 border-purple-300 dark:border-purple-600 rounded focus:ring-purple-500 focus:ring-2"
               />
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-purple-900 dark:text-purple-200">
-                  ✨ Include Reverse Holo Cards
-                </span>
-                {includeReverseHolos && (
-                  <span className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs font-medium px-2 py-1 rounded-full">
-                    Active
-                  </span>
-                )}
-              </div>
+              <span className="text-sm font-medium text-purple-900 dark:text-purple-200">
+                ✨ Include Reverse Holo Cards
+              </span>
             </label>
+
+            {includeReverseHolos && (
+              <div className="pl-7">
+                <label className="block text-xs font-medium text-purple-800 dark:text-purple-300 mb-1">
+                  Placement
+                </label>
+                <select
+                  value={reverseHoloPlacement}
+                  onChange={(e) => setReverseHoloPlacement(e.target.value)}
+                  className="w-full sm:w-auto px-3 py-2 text-sm border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-purple-900 dark:text-purple-200"
+                >
+                  <option value="interleaved">After each card</option>
+                  <option value="first">All reverse holo first</option>
+                  <option value="last">All reverse holo last</option>
+                </select>
+              </div>
+            )}
           </div>
 
           {/* Results Stats */}

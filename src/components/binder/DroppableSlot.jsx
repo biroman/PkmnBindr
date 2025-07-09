@@ -610,6 +610,7 @@ const DroppableSlot = ({
                 return false;
               })()}
               disableHover={isMobile}
+              showPreviewIcon={!isReadOnly}
               className={`w-full h-full transition-all duration-200 ${
                 isSwapHover ? "scale-95 opacity-75" : ""
               } ${isMissing ? "opacity-50 grayscale" : ""}`}

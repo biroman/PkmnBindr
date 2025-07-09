@@ -1,6 +1,7 @@
 import { useState, forwardRef } from "react";
 import PropTypes from "prop-types";
 import { Check, EyeOff, Trash2 } from "lucide-react";
+import { MagnifyingGlassPlusIcon } from "@heroicons/react/24/outline";
 
 // Loading placeholder component
 const CardLoadingScreen = () => (
@@ -92,6 +93,7 @@ const PokemonCard = forwardRef(
       className = "",
       style = {},
       children,
+      showPreviewIcon = false,
       // Drag and drop props
       draggable = false,
       onDragStart,
@@ -250,6 +252,21 @@ const PokemonCard = forwardRef(
             </div>
           )}
         </div>
+
+        {/* Preview Icon Overlay */}
+        {showPreviewIcon && !disableHover && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick?.(card, e);
+            }}
+            className="absolute top-1 left-1 bg-black/40 backdrop-blur-sm rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-auto"
+            title="View larger"
+          >
+            <MagnifyingGlassPlusIcon className="w-4 h-4 text-white" />
+          </button>
+        )}
 
         {/* Reverse Holo Indicator */}
         {isReverseHolo && showDetails && imageLoaded && (
