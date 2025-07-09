@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import {
   MagnifyingGlassIcon,
   PlusIcon,
+  CheckIcon,
   ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 import { Dialog, Transition } from "@headlessui/react";
@@ -35,6 +36,7 @@ const SetTab = ({ currentBinder, onAddCards }) => {
   } = useBinderContext();
 
   const [addingSetId, setAddingSetId] = useState(null);
+  const [addedSetIds, setAddedSetIds] = useState(new Set());
   const [includeReverseHolos, setIncludeReverseHolos] = useState(false);
   const [showCapacityModal, setShowCapacityModal] = useState(false);
   const [showClearWarningModal, setShowClearWarningModal] = useState(false);
@@ -255,6 +257,13 @@ const SetTab = ({ currentBinder, onAddCards }) => {
 
       // Pass isReplacement=true for complete sets to bypass existing card count in limit check
       await onAddCards(cardsToAdd, true);
+
+      // Mark set as added for UI indicator
+      setAddedSetIds((prev) => {
+        const updated = new Set(prev);
+        updated.add(set.id);
+        return updated;
+      });
     } catch (error) {
       console.error("Failed to add set:", error);
       toast.error(`Failed to add cards from ${set.name}`);
@@ -534,28 +543,39 @@ const SetTab = ({ currentBinder, onAddCards }) => {
                         )}
 
                         {/* Action Button */}
-                        <button
-                          onClick={() => handleAddSet(set)}
-                          disabled={addingSetId !== null}
-                          className={`w-full px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 ${
-                            addingSetId === set.id
-                              ? "bg-blue-500 text-white cursor-not-allowed"
-                              : canFit
-                              ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md"
-                              : "bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:shadow-md"
-                          }`}
-                        >
-                          <PlusIcon className="w-4 h-4" />
-                          <span>
-                            {addingSetId === set.id
-                              ? "Adding..."
-                              : canFit
-                              ? `Add ${totalCards} Card${
-                                  totalCards !== 1 ? "s" : ""
-                                }`
-                              : "Expand Capacity"}
-                          </span>
-                        </button>
+                        {addedSetIds.has(set.id) ? (
+                          <div className="w-full px-4 py-2.5 text-sm font-medium rounded-lg bg-green-600 text-white flex items-center justify-center gap-2 cursor-default">
+                            <CheckIcon className="w-4 h-4" />
+                            <span>Added</span>
+                          </div>
+                        ) : (
+                          <button
+                            onClick={() => handleAddSet(set)}
+                            disabled={addingSetId !== null}
+                            className={`w-full px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 flex items-center justify-center gap-2 ${
+                              addingSetId === set.id
+                                ? "bg-blue-500 text-white cursor-not-allowed"
+                                : canFit
+                                ? "bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow-md"
+                                : "bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:shadow-md"
+                            }`}
+                          >
+                            {addingSetId === set.id ? (
+                              <PlusIcon className="w-4 h-4 animate-spin" />
+                            ) : (
+                              <PlusIcon className="w-4 h-4" />
+                            )}
+                            <span>
+                              {addingSetId === set.id
+                                ? "Adding..."
+                                : canFit
+                                ? `Add ${totalCards} Card${
+                                    totalCards !== 1 ? "s" : ""
+                                  }`
+                                : "Expand Capacity"}
+                            </span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   );

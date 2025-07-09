@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment, useRef } from "react";
-import { Dialog, Transition, Tab } from "@headlessui/react";
+import { Dialog, Transition, Tab, Switch } from "@headlessui/react";
 import {
   XMarkIcon,
   PlusIcon,
@@ -29,7 +29,11 @@ const AddCardModal = ({
   const [isAdding, setIsAdding] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [isAddingToPage, setIsAddingToPage] = useState(false);
+  const [addToPage, setAddToPage] = useState(false);
   const closeButtonRef = useRef(null);
+
+  // Detect mobile screen (matches Tailwind sm breakpoint <640px)
+  const isMobileScreen = window.matchMedia("(max-width: 639px)").matches;
 
   // Modal display mode handling (standard vs compact)
   const [modalMode, setModalMode] = useAtom(modalModeAtom);
@@ -42,6 +46,14 @@ const AddCardModal = ({
       setActiveTab(0); // ensure valid tab
     }
   };
+
+  // Ensure compact mode is disabled on mobile
+  useEffect(() => {
+    if (isMobileScreen && modalMode === "compact") {
+      setModalMode("standard");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isMobileScreen]);
 
   // Refs and state for manual dragging in compact mode
   const panelRef = useRef(null);
@@ -61,6 +73,14 @@ const AddCardModal = ({
       setPosition({ x: 0, y: 0 });
     }
   }, [isCompact]);
+
+  const handlePrimaryAddAction = () => {
+    if (addToPage) {
+      handleAddSelectedCardsToPage();
+    } else {
+      handleAddSelectedCards();
+    }
+  };
 
   const handlePointerDown = (e) => {
     if (!isCompact) return;
@@ -301,9 +321,9 @@ const AddCardModal = ({
           }`}
         >
           <div
-            className={`flex min-h-full p-2 sm:p-4 text-center ${
+            className={`flex min-h-full text-center ${
               isCompact
-                ? "items-start justify-start"
+                ? "items-start justify-start p-2 sm:p-4"
                 : "items-center justify-center"
             }`}
           >
@@ -326,10 +346,10 @@ const AddCardModal = ({
               >
                 <Dialog.Panel
                   ref={panelRef}
-                  className={`add-card-modal-panel w-full overflow-hidden rounded-2xl bg-card-background text-left align-middle shadow-xl transition-all flex flex-col ${
+                  className={`add-card-modal-panel w-full overflow-hidden bg-card-background text-left align-middle shadow-xl transition-all flex flex-col relative ${
                     isCompact
-                      ? "max-w-3xl h-[80vh]"
-                      : "max-w-6xl h-[99vh] sm:h-[95vh]"
+                      ? "max-w-3xl h-[80vh] rounded-2xl"
+                      : "w-screen h-screen"
                   }`}
                 >
                   {/* Header */}
@@ -355,28 +375,31 @@ const AddCardModal = ({
                       </Dialog.Title>
                     </div>
                     <div className="flex items-center gap-2">
-                      <button
-                        onClick={handleToggleMode}
-                        className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
-                        aria-label={
-                          isCompact
-                            ? "Switch to fullscreen mode"
-                            : "Switch to compact mode"
-                        }
-                      >
-                        {isCompact ? (
-                          <ArrowsPointingOutIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
-                        ) : (
-                          <ArrowsPointingInIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
-                        )}
-                      </button>
+                      {/* Compact toggle only on screens >= sm */}
+                      {!isMobileScreen && (
+                        <button
+                          onClick={handleToggleMode}
+                          className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                          aria-label={
+                            isCompact
+                              ? "Switch to fullscreen mode"
+                              : "Switch to compact mode"
+                          }
+                        >
+                          {isCompact ? (
+                            <ArrowsPointingOutIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                          ) : (
+                            <ArrowsPointingInIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                          )}
+                        </button>
+                      )}
                       <button
                         ref={closeButtonRef}
                         onClick={onClose}
-                        className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                        className="p-2 sm:p-1.5 bg-slate-100 sm:bg-transparent dark:bg-slate-800 sm:dark:bg-transparent rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 sm:hover:bg-slate-100 sm:dark:hover:bg-slate-700"
                         aria-label="Close modal"
                       >
-                        <XMarkIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                        <XMarkIcon className="w-6 h-6 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400" />
                       </button>
                     </div>
                   </div>
@@ -386,87 +409,67 @@ const AddCardModal = ({
                     selectedIndex={activeTab}
                     onChange={setActiveTab}
                     as="div"
-                    className="flex flex-col flex-1 min-h-0"
+                    className="flex flex-col flex-1 min-h-0 relative z-0"
                   >
-                    <Tab.List
-                      className={`flex flex-shrink-0 border-b border-border bg-secondary ${
-                        isCompact ? "overflow-x-auto scrollbar-thin" : ""
-                      }`}
-                    >
-                      <Tab as={Fragment}>
-                        {({ selected }) => (
-                          <button
-                            className={`flex-1 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
-                              selected
-                                ? "border-b-2 border-blue-500 text-blue-600 bg-card-background"
-                                : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
-                            } ${
-                              isCompact
-                                ? "px-2 py-2 text-xs flex flex-col items-center gap-0.5"
-                                : "px-3 sm:px-4 py-2.5 text-sm font-medium"
-                            }`}
-                          >
-                            <Squares2X2Icon
-                              className={`h-5 w-5 ${isCompact ? "" : "hidden"}`}
-                            />
-                            {isCompact ? (
-                              <span className="sr-only">Single</span>
-                            ) : (
-                              "Single Cards"
-                            )}
-                          </button>
-                        )}
-                      </Tab>
-                      {/* Hide Complete Sets in compact mode */}
-                      {!isCompact && (
+                    <div className="px-3 pt-3">
+                      <Tab.List
+                        className={`flex w-full space-x-1 rounded-xl bg-slate-200 dark:bg-slate-700 p-1 ${
+                          isCompact ? "overflow-x-auto scrollbar-thin" : ""
+                        }`}
+                      >
                         <Tab as={Fragment}>
                           {({ selected }) => (
                             <button
-                              className={`flex-1 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
-                                selected
-                                  ? "border-b-2 border-blue-500 text-blue-600 bg-card-background"
-                                  : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
-                              } ${
-                                isCompact
-                                  ? "px-2 py-2 text-xs flex flex-col items-center gap-0.5"
-                                  : "px-3 sm:px-4 py-2.5 text-sm font-medium"
-                              }`}
+                              className={`w-full rounded-lg py-2 text-sm font-medium leading-5 transition-all duration-200 ease-in-out focus:outline-none ring-white/60 focus:ring-2
+                                ${
+                                  selected
+                                    ? "bg-white dark:bg-slate-800 shadow text-blue-700 dark:text-blue-400"
+                                    : "text-slate-600 dark:text-slate-400 hover:bg-white/[0.5] dark:hover:bg-slate-800/[0.5]"
+                                }
+                              `}
                             >
-                              <RectangleGroupIcon className="h-5 w-5 hidden" />
-                              Complete Sets
+                              Single Cards
                             </button>
                           )}
                         </Tab>
-                      )}
-                      <Tab as={Fragment}>
-                        {({ selected }) => (
-                          <button
-                            className={`flex-1 whitespace-nowrap transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset ${
-                              selected
-                                ? "border-b-2 border-blue-500 text-blue-600 bg-card-background"
-                                : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
-                            } ${
-                              isCompact
-                                ? "px-2 py-2 text-xs flex flex-col items-center gap-0.5"
-                                : "px-3 sm:px-4 py-2.5 text-sm font-medium"
-                            }`}
-                          >
-                            <CubeTransparentIcon
-                              className={`h-5 w-5 ${isCompact ? "" : "hidden"}`}
-                            />
-                            {isCompact ? (
-                              <span className="sr-only">Sleeves</span>
-                            ) : (
-                              "Sleeves (WIP)"
+                        {/* Hide Complete Sets in compact mode */}
+                        {!isCompact && (
+                          <Tab as={Fragment}>
+                            {({ selected }) => (
+                              <button
+                                className={`w-full rounded-lg py-2 text-sm font-medium leading-5 transition-all duration-200 ease-in-out focus:outline-none ring-white/60 focus:ring-2
+                                 ${
+                                   selected
+                                     ? "bg-white dark:bg-slate-800 shadow text-blue-700 dark:text-blue-400"
+                                     : "text-slate-600 dark:text-slate-400 hover:bg-white/[0.5] dark:hover:bg-slate-800/[0.5]"
+                                 }
+                               `}
+                              >
+                                Sets
+                              </button>
                             )}
-                          </button>
+                          </Tab>
                         )}
-                      </Tab>
-                    </Tab.List>
-
-                    <Tab.Panels className="flex-1 min-h-0">
+                        <Tab as={Fragment}>
+                          {({ selected }) => (
+                            <button
+                              className={`w-full rounded-lg py-2 text-sm font-medium leading-5 transition-all duration-200 ease-in-out focus:outline-none ring-white/60 focus:ring-2
+                                ${
+                                  selected
+                                    ? "bg-white dark:bg-slate-800 shadow text-blue-700 dark:text-blue-400"
+                                    : "text-slate-600 dark:text-slate-400 hover:bg-white/[0.5] dark:hover:bg-slate-800/[0.5]"
+                                }
+                              `}
+                            >
+                              Sleeves
+                            </button>
+                          )}
+                        </Tab>
+                      </Tab.List>
+                    </div>
+                    <Tab.Panels className="flex-1 min-h-0 pt-2">
                       <Tab.Panel className="h-full">
-                        <div className="h-full">
+                        <div className={`h-full ${!isCompact ? "pb-20" : ""}`}>
                           <SingleCardTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
@@ -480,7 +483,7 @@ const AddCardModal = ({
                       {/* Complete Sets panel hidden in compact */}
                       {!isCompact && (
                         <Tab.Panel className="h-full">
-                          <div className="h-full">
+                          <div className="h-full pb-20">
                             <SetTab
                               currentBinder={currentBinder}
                               onAddCards={handleAddCards}
@@ -489,7 +492,7 @@ const AddCardModal = ({
                         </Tab.Panel>
                       )}
                       <Tab.Panel className="h-full">
-                        <div className="h-full">
+                        <div className={`h-full ${!isCompact ? "pb-20" : ""}`}>
                           <SleevesTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
@@ -503,127 +506,90 @@ const AddCardModal = ({
                     </Tab.Panels>
                   </Tab.Group>
 
-                  {/* Sticky Footer - Hidden in compact for Single Cards */}
+                  {/* Floating Footer - Hidden in compact for Single Cards */}
                   {!isCompact && (
-                    <div
-                      className={`flex-shrink-0 border-t border-border bg-secondary ${
-                        isCompact ? "p-2" : ""
-                      }`}
-                    >
-                      {(activeTab === 0 || activeTab === 2) && (
-                        /* Footer for single cards tab */
-                        <div className="flex items-center justify-between p-3 sm:p-4 gap-4">
-                          {/* Selected cards info */}
-                          <div className="flex items-center space-x-2 min-w-0">
-                            {selectedTotalCount > 0 && (
-                              <div className="flex items-center gap-2">
-                                <span className="hidden sm:inline text-sm text-slate-600 dark:text-slate-400 flex-shrink-0 font-medium">
-                                  {selectedTotalCount} selected
+                    <div className="absolute bottom-0 left-0 right-0 bg-transparent pointer-events-none z-10">
+                      <div className="pointer-events-auto p-3">
+                        {(activeTab === 0 || activeTab === 2) && (
+                          <div className="space-y-3">
+                            {/* Placement Toggle */}
+                            <Switch.Group
+                              as="div"
+                              className="flex items-center justify-between rounded-lg bg-slate-100 dark:bg-slate-800 p-3"
+                            >
+                              <Switch.Label
+                                as="span"
+                                className="flex-grow flex flex-col mr-4"
+                                passive
+                              >
+                                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
+                                  Add to Current Page
                                 </span>
-                                <div className="hidden sm:flex -space-x-2 overflow-hidden">
-                                  {Object.values(selectedCardsMap)
-                                    .slice(0, 3)
-                                    .map(({ card }) => (
-                                      <div
-                                        key={card.id}
-                                        className="w-8 h-10 bg-slate-200 dark:bg-slate-700 rounded border-2 border-white dark:border-slate-600 shadow-sm overflow-hidden flex-shrink-0"
-                                      >
-                                        {card.image && (
-                                          <img
-                                            src={card.image}
-                                            alt={card.name}
-                                            className="w-full h-full object-cover"
-                                          />
-                                        )}
-                                      </div>
-                                    ))}
-                                  {selectedTotalCount > 3 && (
-                                    <div className="w-8 h-10 bg-slate-300 dark:bg-slate-600 rounded border-2 border-white dark:border-slate-600 shadow-sm flex items-center justify-center flex-shrink-0">
-                                      <span className="text-slate-600 dark:text-slate-300 text-xs">
-                                        +{selectedTotalCount - 3}
-                                      </span>
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            )}
-                          </div>
+                                <span className="text-xs text-slate-500 dark:text-slate-400">
+                                  Shifts existing cards to make space.
+                                </span>
+                              </Switch.Label>
+                              <Switch
+                                checked={addToPage}
+                                onChange={setAddToPage}
+                                className={`${
+                                  addToPage
+                                    ? "bg-blue-600"
+                                    : "bg-gray-200 dark:bg-gray-600"
+                                } relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800`}
+                              >
+                                <span
+                                  className={`${
+                                    addToPage
+                                      ? "translate-x-6"
+                                      : "translate-x-1"
+                                  } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                                />
+                              </Switch>
+                            </Switch.Group>
 
-                          {/* Action Buttons */}
-                          <div className="flex flex-col sm:flex-row gap-2 w-full">
-                            {/* Cancel Button */}
+                            {/* Primary Action Button */}
                             <button
-                              onClick={onClose}
-                              className={`w-full sm:w-auto rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 ${
-                                isCompact ? "px-3 py-1.5 text-xs" : "px-4 py-2"
-                              }`}
-                            >
-                              Cancel
-                            </button>
-
-                            {/* Add to current page button */}
-                            <button
-                              onClick={handleAddSelectedCardsToPage}
+                              onClick={handlePrimaryAddAction}
                               disabled={
-                                selectedTotalCount === 0 || isAddingToPage
+                                selectedTotalCount === 0 ||
+                                isAdding ||
+                                isAddingToPage
                               }
-                              className={`w-full sm:w-auto bg-green-600 hover:bg-green-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${
-                                isCompact
-                                  ? "px-3 py-1.5 text-xs"
-                                  : "px-4 py-2 sm:min-w-[170px]"
-                              }`}
+                              className="w-full flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-200 flex items-center justify-center gap-2 px-3 py-3 text-base font-semibold shadow-lg hover:shadow-xl disabled:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                             >
-                              {isAddingToPage ? (
-                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                              {isAdding || isAddingToPage ? (
+                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                               ) : (
-                                <PlusIcon className="w-4 h-4" />
+                                <PlusIcon className="w-5 h-5" />
                               )}
                               <span>
-                                {isAddingToPage
+                                {isAdding || isAddingToPage
                                   ? "Adding..."
-                                  : `Add to current page (${selectedTotalCount})`}
-                              </span>
-                            </button>
-
-                            <button
-                              onClick={handleAddSelectedCards}
-                              disabled={selectedTotalCount === 0 || isAdding}
-                              className={`w-full sm:w-auto bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${
-                                isCompact
-                                  ? "px-3 py-1.5 text-xs"
-                                  : "px-4 py-2 sm:min-w-[120px]"
-                              }`}
-                            >
-                              {isAdding ? (
-                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                              ) : (
-                                <PlusIcon className="w-4 h-4" />
-                              )}
-                              <span>
-                                {isAdding
-                                  ? "Adding..."
-                                  : `Add ${selectedTotalCount || ""} Card${
+                                  : selectedTotalCount > 0
+                                  ? `Add ${selectedTotalCount} Card${
                                       selectedTotalCount !== 1 ? "s" : ""
-                                    }`}
+                                    }`
+                                  : "Add Cards"}
                               </span>
                             </button>
                           </div>
-                        </div>
-                      )}
+                        )}
 
-                      {activeTab === 1 && (
-                        /* Footer for sets tab */
-                        <div className="p-3 sm:p-4">
-                          <div className="flex justify-end">
-                            <button
-                              onClick={onClose}
-                              className="w-full sm:w-auto px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
-                            >
-                              Close
-                            </button>
+                        {activeTab === 1 && (
+                          /* Footer for sets tab */
+                          <div className="p-3">
+                            <div className="flex justify-center">
+                              <button
+                                onClick={onClose}
+                                className="w-full px-4 py-3 text-base font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                              >
+                                Close
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   )}
                 </Dialog.Panel>

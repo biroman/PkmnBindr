@@ -84,7 +84,7 @@ const SortDropdown = ({ value, onChange }) => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="flex items-center justify-between gap-2 w-full sm:w-48 px-3 py-2 border border-border rounded-lg text-sm bg-card-background text-text-primary hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+        <button className="flex items-center justify-between gap-2 w-40 sm:w-48 px-3 py-2 border border-border rounded-lg text-sm bg-card-background text-text-primary hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
           <div className="flex items-center gap-2">
             {selectedOption.icon}
             <span className="font-medium">{selectedOption.label}</span>

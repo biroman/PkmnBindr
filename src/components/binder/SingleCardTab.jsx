@@ -320,6 +320,9 @@ const SingleCardTab = ({
 }) => {
   const [filtersExpanded, setFiltersExpanded] = useState(false);
   const searchInputRef = useRef(null);
+  // Detect mobile screen (matches Tailwind sm breakpoint)
+  const isMobileScreen = window.matchMedia("(max-width: 639px)").matches;
+  const debounceRef = useRef(null);
 
   const {
     searchQuery,
@@ -361,6 +364,22 @@ const SingleCardTab = ({
       performSearch();
     }
   }, [orderBy]);
+
+  // Debounced search on mobile when query changes
+  useEffect(() => {
+    if (!isMobileScreen) return;
+
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+
+    // Avoid triggering empty searches without filters
+    if (!searchQuery && !hasActiveFilters) return;
+
+    debounceRef.current = setTimeout(() => {
+      performSearch();
+    }, 500); // 500ms debounce delay
+
+    return () => clearTimeout(debounceRef.current);
+  }, [searchQuery, isMobileScreen]);
 
   // Handle Enter key press in search input
   const handleKeyPress = (e) => {
@@ -430,10 +449,12 @@ const SingleCardTab = ({
               </label>
               <SortDropdown value={orderBy} onChange={setOrderBy} />
 
-              {compact && (
+              {(compact || !compact) && (
                 <button
                   onClick={() => setFiltersExpanded(!filtersExpanded)}
-                  className="flex items-center gap-1 px-2 py-1 border border-slate-300 dark:border-slate-600 rounded text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                  className={`flex items-center gap-1 px-2 py-1 border border-slate-300 dark:border-slate-600 rounded text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors ${
+                    compact ? "" : "sm:hidden"
+                  }`}
                 >
                   <FunnelIcon className="w-4 h-4" />
                   Filters
@@ -482,7 +503,7 @@ const SingleCardTab = ({
             onFilterChange={updateFilter}
             isExpanded={filtersExpanded}
             onToggle={() => setFiltersExpanded(!filtersExpanded)}
-            showToggleButton={!compact}
+            showToggleButton={false}
           />
         </div>
 
