@@ -473,7 +473,7 @@ const AddCardModal = ({
                     </div>
                     <Tab.Panels className="flex-1 min-h-0 pt-2">
                       <Tab.Panel className="h-full">
-                        <div className={`h-full ${!isCompact ? "pb-20" : ""}`}>
+                        <div className={`h-full ${!isCompact ? "pb-40" : ""}`}>
                           <SingleCardTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
@@ -487,7 +487,7 @@ const AddCardModal = ({
                       {/* Complete Sets panel hidden in compact */}
                       {!isCompact && (
                         <Tab.Panel className="h-full">
-                          <div className="h-full pb-20">
+                          <div className="h-full pb-40">
                             <SetTab
                               currentBinder={currentBinder}
                               onAddCards={handleAddCards}
@@ -497,7 +497,7 @@ const AddCardModal = ({
                         </Tab.Panel>
                       )}
                       <Tab.Panel className="h-full">
-                        <div className={`h-full ${!isCompact ? "pb-20" : ""}`}>
+                        <div className={`h-full ${!isCompact ? "pb-40" : ""}`}>
                           <SleevesTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
