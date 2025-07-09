@@ -324,7 +324,9 @@ const AddCardModal = ({
             className={`flex min-h-full text-center ${
               isCompact
                 ? "items-start justify-start p-2 sm:p-4"
-                : "items-center justify-center"
+                : isMobileScreen
+                ? "items-center justify-center"
+                : "items-center justify-center p-4"
             }`}
           >
             <Transition.Child
@@ -349,7 +351,9 @@ const AddCardModal = ({
                   className={`add-card-modal-panel w-full overflow-hidden bg-card-background text-left align-middle shadow-xl transition-all flex flex-col relative ${
                     isCompact
                       ? "max-w-3xl h-[80vh] rounded-2xl"
-                      : "w-screen h-screen"
+                      : isMobileScreen
+                      ? "w-screen h-screen"
+                      : "max-w-6xl h-[95vh] sm:h-[90vh] rounded-2xl"
                   }`}
                 >
                   {/* Header */}
@@ -409,7 +413,7 @@ const AddCardModal = ({
                     selectedIndex={activeTab}
                     onChange={setActiveTab}
                     as="div"
-                    className="flex flex-col flex-1 min-h-0 relative z-0"
+                    className="flex flex-col flex-1 min-h-0 relative"
                   >
                     <div className="px-3 pt-3">
                       <Tab.List
@@ -487,6 +491,7 @@ const AddCardModal = ({
                             <SetTab
                               currentBinder={currentBinder}
                               onAddCards={handleAddCards}
+                              onSetAdded={onClose}
                             />
                           </div>
                         </Tab.Panel>
@@ -508,7 +513,7 @@ const AddCardModal = ({
 
                   {/* Floating Footer - Hidden in compact for Single Cards */}
                   {!isCompact && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-transparent pointer-events-none z-10">
+                    <div className="absolute bottom-0 left-0 right-0 bg-transparent pointer-events-none z-30">
                       <div className="pointer-events-auto p-3">
                         {(activeTab === 0 || activeTab === 2) && (
                           <div className="space-y-3">

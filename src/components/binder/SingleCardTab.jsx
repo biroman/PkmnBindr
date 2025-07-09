@@ -196,12 +196,12 @@ const SearchFilters = ({
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[60]"
             onClick={handleCancelFilters}
           />
 
           {/* Modal Content */}
-          <div className="fixed inset-x-4 bottom-4 top-20 bg-card-background rounded-xl shadow-2xl z-50 flex flex-col">
+          <div className="fixed inset-x-4 bottom-4 top-20 bg-card-background rounded-xl shadow-2xl z-[60] flex flex-col">
             {/* Modal Header */}
             <div className="flex items-center justify-between p-4 border-b border-border">
               <h3 className="text-lg font-semibold text-primary">Filters</h3>

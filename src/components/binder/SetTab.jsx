@@ -13,7 +13,7 @@ import { useCardCache } from "../../contexts/CardCacheContext";
 import { toast } from "react-hot-toast";
 import { AlertTriangle } from "lucide-react";
 
-const SetTab = ({ currentBinder, onAddCards }) => {
+const SetTab = ({ currentBinder, onAddCards, onSetAdded = () => {} }) => {
   const { addCardsToCache } = useCardCache();
   const {
     sets,
@@ -264,6 +264,9 @@ const SetTab = ({ currentBinder, onAddCards }) => {
         updated.add(set.id);
         return updated;
       });
+
+      // Notify parent that set was added successfully
+      onSetAdded();
     } catch (error) {
       console.error("Failed to add set:", error);
       toast.error(`Failed to add cards from ${set.name}`);
