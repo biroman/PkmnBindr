@@ -523,10 +523,10 @@ const BinderNavigation = ({
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
       {/* Card Page Jump (Desktop) */}
       {!isMobile && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 pointer-events-auto flex flex-col items-center gap-2">
-          <p className="text-xs text-gray-500 dark:text-gray-400 select-none">
-            Jump to page
-          </p>
+        <div
+          className="absolute bottom-4 transform -translate-x-1/2 pointer-events-auto flex flex-col items-center gap-2"
+          style={{ left: positions.center }}
+        >
           <div className="flex items-center space-x-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-full shadow-lg px-2 py-1">
             <button
               onClick={() => onGoToCardPage(1)}
@@ -645,6 +645,7 @@ BinderNavigation.propTypes = {
   positions: PropTypes.shape({
     left: PropTypes.string.isRequired,
     right: PropTypes.string.isRequired,
+    center: PropTypes.string.isRequired,
   }).isRequired,
   onAddPage: PropTypes.func,
   isReadOnly: PropTypes.bool,

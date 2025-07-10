@@ -65,14 +65,14 @@ const useBinderNavigation = ({
   const getNavigationPositions = useCallback(
     (sidebarWidth = 0) => {
       const navigationAdjustment = sidebarWidth;
+      const centerOffset = `calc(50% - ${navigationAdjustment / 2}px)`;
 
       return {
-        left: `calc((50% - ${navigationAdjustment / 2}px) - ${
-          dimensions.width / 2 + 64
-        }px)`,
+        left: `calc(${centerOffset} - ${dimensions.width / 2 + 64}px)`,
         right: `calc((50% + ${navigationAdjustment / 2}px) - ${
           dimensions.width / 2 + 64
         }px)`,
+        center: centerOffset,
       };
     },
     [dimensions.width]
