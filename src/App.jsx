@@ -46,12 +46,6 @@ import FAQPage from "./pages/FAQPage";
 import MessagesPage from "./pages/MessagesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Clarity from "@microsoft/clarity";
-import Hotjar from "@hotjar/browser";
-
-const siteId = 6448867;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
 
 const projectId = "s6ry57f9wb";
 

@@ -21,6 +21,7 @@ import {
   doc,
   setDoc,
   getDoc,
+  getDocFromServer,
   updateDoc,
   deleteDoc,
   collection,
@@ -102,9 +103,19 @@ export const useAuthStore = create()(
             try {
               if (firebaseUser) {
                 // Get additional user data from Firestore
-                const userDoc = await getDoc(
-                  doc(db, "users", firebaseUser.uid)
-                );
+                // Fetch the user document directly from the server first to avoid stale cache
+                let userDoc;
+                try {
+                  userDoc = await getDocFromServer(
+                    doc(db, "users", firebaseUser.uid)
+                  );
+                } catch (serverErr) {
+                  console.warn(
+                    "Falling back to cached user document due to network issue:",
+                    serverErr.code || serverErr.message
+                  );
+                  userDoc = await getDoc(doc(db, "users", firebaseUser.uid));
+                }
                 const userData = userDoc.exists() ? userDoc.data() : {};
 
                 const user = {
@@ -442,10 +453,19 @@ export const useAuthStore = create()(
               // Reload the Firebase user to get latest data
               await auth.currentUser.reload();
 
-              // Get updated user data from Firestore
-              const userDoc = await getDoc(
-                doc(db, "users", auth.currentUser.uid)
-              );
+              // Get updated user data from Firestore (prefer server to avoid stale cache)
+              let userDoc;
+              try {
+                userDoc = await getDocFromServer(
+                  doc(db, "users", auth.currentUser.uid)
+                );
+              } catch (serverErr) {
+                console.warn(
+                  "Refresh user: falling back to cached user document:",
+                  serverErr.code || serverErr.message
+                );
+                userDoc = await getDoc(doc(db, "users", auth.currentUser.uid));
+              }
               const userData = userDoc.exists() ? userDoc.data() : {};
 
               const updatedUser = {
