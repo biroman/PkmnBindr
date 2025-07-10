@@ -175,7 +175,7 @@ const PokemonCard = forwardRef(
         ${className}
       `}
         style={style}
-        onClick={handleCardClick}
+        onClick={showPreviewIcon ? undefined : handleCardClick}
         draggable={draggable}
         onDragStart={onDragStart}
         onDragEnd={onDragEnd}

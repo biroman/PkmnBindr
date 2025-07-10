@@ -321,6 +321,103 @@ const sortByName = (cardsArray, direction = "asc") => {
   });
 };
 
+// HIGH RARITY THRESHOLD CONSTANT (Rare Holo and above are considered high rarity for multi-level sorting)
+const HIGH_RARITY_WEIGHT = RARITY_HIERARCHY["Rare Holo"] || 4;
+
+/**
+ * Determine if a card's rarity is considered "high rarity" (Rare Holo or above)
+ * @param {string} rarity
+ * @returns {boolean}
+ */
+const isHighRarity = (rarity) => {
+  if (!rarity) return false;
+  const weight = getRarityWeight(rarity);
+  return weight >= HIGH_RARITY_WEIGHT;
+};
+
+/**
+ * Multi-level sort: Rarity (high rarities first) ➜ Type ➜ Card Number
+ * Groups all high-rarity cards (Rare Holo and above) in front, then groups the
+ * remaining cards by their primary Pokémon type so that e.g. all Water commons/
+ * uncommons/regular rares are kept together.
+ *
+ * When direction is "desc" the whole order is reversed (low rarity groups
+ * first, then type reversed, etc.) – keeping behaviour consistent with the
+ * other sort helpers.
+ */
+const sortByRarityThenType = (cardsArray, direction = "asc") => {
+  return cardsArray.sort((a, b) => {
+    // 1) Group by high vs. low rarity
+    const aHigh = isHighRarity(a.cardData?.rarity);
+    const bHigh = isHighRarity(b.cardData?.rarity);
+
+    let comparison = 0;
+    if (aHigh !== bHigh) {
+      comparison = aHigh ? -1 : 1; // high-rarity cards come first
+    } else {
+      // 2) Inside the same rarity group, group by primary type
+      const aTypeWeight = getTypeWeight(a.cardData?.types || []);
+      const bTypeWeight = getTypeWeight(b.cardData?.types || []);
+
+      if (aTypeWeight !== bTypeWeight) {
+        comparison = aTypeWeight - bTypeWeight;
+      } else {
+        // 3) Finally, sort by rarity weight and then card number for stability
+        const aRarityWeight = getRarityWeight(a.cardData?.rarity);
+        const bRarityWeight = getRarityWeight(b.cardData?.rarity);
+
+        if (aRarityWeight !== bRarityWeight) {
+          // Place higher rarity (larger weight) first
+          comparison = bRarityWeight - aRarityWeight;
+        } else {
+          const aNumber = parseCardNumber(a.cardData?.number);
+          const bNumber = parseCardNumber(b.cardData?.number);
+
+          if (aNumber.numeric !== bNumber.numeric) {
+            comparison = aNumber.numeric - bNumber.numeric;
+          } else {
+            comparison = aNumber.suffix.localeCompare(bNumber.suffix);
+          }
+        }
+      }
+    }
+
+    return direction === "asc" ? comparison : -comparison;
+  });
+};
+
+/**
+ * Multi-level sort: Type ➜ Rarity (high to low within each type) ➜ Card Number
+ */
+const sortByTypeThenRarity = (cardsArray, direction = "asc") => {
+  return cardsArray.sort((a, b) => {
+    // 1) Primary: type weight
+    const aTypeWeight = getTypeWeight(a.cardData?.types || []);
+    const bTypeWeight = getTypeWeight(b.cardData?.types || []);
+    let comparison = 0;
+    if (aTypeWeight !== bTypeWeight) {
+      comparison = aTypeWeight - bTypeWeight;
+    } else {
+      // 2) Secondary: rarity (rarer first)
+      const aRarityWeight = getRarityWeight(a.cardData?.rarity);
+      const bRarityWeight = getRarityWeight(b.cardData?.rarity);
+      if (aRarityWeight !== bRarityWeight) {
+        comparison = bRarityWeight - aRarityWeight; // higher weight (rarer) first
+      } else {
+        // 3) Tertiary: card number as stable tie-breaker
+        const aNumber = parseCardNumber(a.cardData?.number);
+        const bNumber = parseCardNumber(b.cardData?.number);
+        if (aNumber.numeric !== bNumber.numeric) {
+          comparison = aNumber.numeric - bNumber.numeric;
+        } else {
+          comparison = aNumber.suffix.localeCompare(bNumber.suffix);
+        }
+      }
+    }
+    return direction === "asc" ? comparison : -comparison;
+  });
+};
+
 /**
  * Main sorting function
  * @param {object} cards - The cards object from the binder
@@ -356,6 +453,12 @@ export const sortCards = (cards, sortBy, sortDirection = "asc") => {
     case "name":
       sortedArray = sortByName(cardsArray, sortDirection); // Pass direction
       break;
+    case "rarityType":
+      sortedArray = sortByRarityThenType(cardsArray, sortDirection);
+      break;
+    case "typeRarity":
+      sortedArray = sortByTypeThenRarity(cardsArray, sortDirection);
+      break;
     case "custom":
     default:
       // For custom, just sort by original position to maintain order
@@ -386,6 +489,8 @@ export const getSortOptions = () => [
   { value: "number", label: "By Card Number", icon: "Hash" },
   { value: "type", label: "By Type", icon: "Tag" },
   { value: "name", label: "By Name (A-Z)", icon: "SortAsc" },
+  { value: "rarityType", label: "By Rarity + Type", icon: "Gem" },
+  { value: "typeRarity", label: "By Type + Rarity", icon: "Tag" },
 ];
 
 /**
@@ -431,6 +536,14 @@ export const getSortDirectionInfo = (sortBy, sortDirection) => {
         label: isAsc ? "A-Z" : "Z-A",
       };
     case "type":
+      return {
+        label: isAsc ? "Default Order" : "Reversed Order",
+      };
+    case "rarityType":
+      return {
+        label: isAsc ? "High ➜ Low" : "Low ➜ High",
+      };
+    case "typeRarity":
       return {
         label: isAsc ? "Default Order" : "Reversed Order",
       };

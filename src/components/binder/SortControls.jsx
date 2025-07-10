@@ -100,8 +100,9 @@ const SortControls = ({
 
   const handleTypeOrderChanged = () => {
     // Trigger a re-sort if currently sorting by type
-    if (currentSortBy === "type") {
-      onSortChange?.("type"); // This will re-apply the sort with new type order
+    if (currentSortBy === "type" || currentSortBy === "typeRarity") {
+      // Re-apply current sort to reflect new custom type order
+      onSortChange?.(currentSortBy);
     }
   };
 
@@ -214,7 +215,7 @@ const SortControls = ({
       <div className="flex items-center justify-between pt-1">
         {/* Type Customizer Button (only shown when sorting by type) */}
         <div>
-          {currentSortBy === "type" && (
+          {(currentSortBy === "type" || currentSortBy === "typeRarity") && (
             <button
               onClick={() => setShowTypeCustomizer(true)}
               disabled={disabled}
