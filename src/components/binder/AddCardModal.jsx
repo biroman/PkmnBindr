@@ -26,6 +26,9 @@ const AddCardModal = ({
 }) => {
   const { batchAddCards, batchMoveCards } = useBinderContext();
   const [selectedCardsMap, setSelectedCardsMap] = useState({});
+
+  // Key for saving selection to localStorage
+  const LOCAL_STORAGE_KEY = "addCardModalSelection";
   const [isAdding, setIsAdding] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [isAddingToPage, setIsAddingToPage] = useState(false);
@@ -60,12 +63,32 @@ const AddCardModal = ({
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const dragOffsetRef = useRef({ x: 0, y: 0 });
 
-  // Reset selection when modal closes
+  // Load saved selection when modal opens
   useEffect(() => {
-    if (!isOpen) {
-      setSelectedCardsMap({});
+    if (isOpen) {
+      try {
+        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          // Basic validation that parsed is an object
+          if (parsed && typeof parsed === "object") {
+            setSelectedCardsMap(parsed);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to parse saved card selection:", err);
+      }
     }
   }, [isOpen]);
+
+  // Persist selection every time it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(selectedCardsMap));
+    } catch (err) {
+      console.error("Failed to save card selection:", err);
+    }
+  }, [selectedCardsMap]);
 
   // Reset position when leaving compact mode (but keep during close animation)
   useEffect(() => {
@@ -198,6 +221,7 @@ const AddCardModal = ({
         } to ${currentBinder.metadata.name}${positionText}`
       );
       setSelectedCardsMap({});
+      localStorage.removeItem(LOCAL_STORAGE_KEY); // Clear saved selection after successful add
       onClose();
     } catch (error) {
       console.error("Failed to add cards:", error);
@@ -277,6 +301,7 @@ const AddCardModal = ({
       );
 
       setSelectedCardsMap({});
+      localStorage.removeItem(LOCAL_STORAGE_KEY); // Clear saved selection after successful add
       onClose();
     } catch (error) {
       console.error("Failed to add cards to page:", error);

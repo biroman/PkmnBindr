@@ -257,8 +257,21 @@ export const pokemonTcgApi = {
       if (query) {
         const trimmedQuery = query.trim();
 
-        // Check if the query is already a formatted API query (contains colon and quotes)
-        if (trimmedQuery.match(/^\w+(\.\w+)?:".*"$/)) {
+        // Support exact name search when the entire query is wrapped in quotes, e.g. "N" or 'N'
+        // This allows users to find cards whose name exactly matches the provided text.
+        if (
+          (trimmedQuery.startsWith('"') && trimmedQuery.endsWith('"')) ||
+          (trimmedQuery.startsWith("'") && trimmedQuery.endsWith("'"))
+        ) {
+          const exactName = trimmedQuery
+            .substring(1, trimmedQuery.length - 1)
+            .trim();
+          if (exactName) {
+            q += `name:"${exactName}"`;
+          }
+        } else if (
+          trimmedQuery.match(/^[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)?:".*"$/)
+        ) {
           // Already formatted query like set.id:"sv7" or name:"Pikachu"
           q += trimmedQuery;
         } else if (trimmedQuery.includes("#")) {
