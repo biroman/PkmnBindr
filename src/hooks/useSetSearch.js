@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { pokemonTcgApi, normalizeCardData } from "../services/pokemonTcgApi";
 import { useCardCache } from "../contexts/CardCacheContext";
 
@@ -9,6 +9,40 @@ const useSetSearch = () => {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredSets, setFilteredSets] = useState([]);
+
+  // Grouped sets for accordion view
+  const groupedSets = useMemo(() => {
+    if (!filteredSets) return {};
+
+    // First, group by series
+    const bySeries = filteredSets.reduce((acc, set) => {
+      const seriesName = set.series || "Other"; // Fallback for sets with no series
+      if (!acc[seriesName]) {
+        acc[seriesName] = [];
+      }
+      acc[seriesName].push(set);
+      return acc;
+    }, {});
+
+    // Then, sort series by the latest release date within each series
+    const sortedSeriesNames = Object.keys(bySeries).sort((a, b) => {
+      const latestA = Math.max(
+        ...bySeries[a].map((s) => new Date(s.releaseDate).getTime())
+      );
+      const latestB = Math.max(
+        ...bySeries[b].map((s) => new Date(s.releaseDate).getTime())
+      );
+      return latestB - latestA; // Descending order
+    });
+
+    // Reconstruct the object with sorted keys
+    const sortedGroupedSets = {};
+    for (const seriesName of sortedSeriesNames) {
+      sortedGroupedSets[seriesName] = bySeries[seriesName];
+    }
+
+    return sortedGroupedSets;
+  }, [filteredSets]);
 
   // Load all sets on mount
   useEffect(() => {
@@ -143,6 +177,7 @@ const useSetSearch = () => {
     resetSearch,
     totalSets: sets.length,
     filteredCount: filteredSets.length,
+    groupedSets,
   };
 };
 

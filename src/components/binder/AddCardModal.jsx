@@ -599,9 +599,7 @@ const AddCardModal = ({
                       {!isCompact && (
                         <Tab.Panel className="h-full">
                           <div
-                            className={`h-full ${
-                              isMobileScreen ? "pb-24" : ""
-                            }`}
+                            className={`h-full ${isMobileScreen ? "pb-0" : ""}`}
                           >
                             <SetTab
                               currentBinder={currentBinder}
@@ -614,7 +612,7 @@ const AddCardModal = ({
                       <Tab.Panel className="h-full">
                         <div
                           className={`h-full ${
-                            !isCompact && isMobileScreen ? "pb-24" : ""
+                            !isCompact && isMobileScreen ? "pb-0" : ""
                           }`}
                         >
                           <SleevesTab
