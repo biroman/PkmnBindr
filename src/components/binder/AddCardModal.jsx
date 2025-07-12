@@ -18,6 +18,8 @@ import SleevesTab from "./SleevesTab";
 import SelectedCardsSidebar from "./SelectedCardsSidebar";
 import { useAtom } from "jotai";
 import { modalModeAtom } from "../../atoms/addCardModalAtoms";
+import useCardSearch from "../../hooks/useCardSearch";
+import useBinderLimits from "../../hooks/useBinderLimits";
 
 const AddCardModal = ({
   isOpen,
@@ -37,6 +39,20 @@ const AddCardModal = ({
   const closeButtonRef = useRef(null);
   const [searchFocused, setSearchFocused] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [isSelectAllLoading, setIsSelectAllLoading] = useState(false);
+
+  const cardSearch = useCardSearch();
+  const { fetchAllCards, totalCount } = cardSearch;
+  const MAX_SELECT_ALL = 250;
+
+  // Binder limits
+  const { limits } = useBinderLimits(currentBinder);
+
+  // Determine remaining card slots robustly
+  const currentCardCount =
+    limits?.cards?.current ?? Object.keys(currentBinder?.cards || {}).length;
+  const binderCardLimit = limits?.cards?.limit ?? 500; // fallback 500
+  const cardRemaining = Math.max(0, binderCardLimit - currentCardCount);
 
   // Reset search focus when modal closes / opens
   useEffect(() => {
@@ -57,6 +73,25 @@ const AddCardModal = ({
     setSelectedCardsMap({});
     // Note: We don't clear localStorage here, to allow recovery if it was a mistake.
     // It will be cleared on successful add.
+  };
+
+  const handleSelectAll = async () => {
+    if (totalCount === 0 || totalCount > MAX_SELECT_ALL) return;
+
+    setIsSelectAllLoading(true);
+    try {
+      const allCards = await fetchAllCards(MAX_SELECT_ALL);
+      const newSelectedCardsMap = allCards.reduce((acc, card) => {
+        acc[card.id] = { card, count: 1 };
+        return acc;
+      }, {});
+      setSelectedCardsMap(newSelectedCardsMap);
+    } catch (error) {
+      console.error("Failed to select all cards:", error);
+      toast.error("An error occurred while selecting all cards.");
+    } finally {
+      setIsSelectAllLoading(false);
+    }
   };
 
   // Detect mobile screen (matches Tailwind sm breakpoint <640px)
@@ -122,6 +157,7 @@ const AddCardModal = ({
   }, [isCompact]);
 
   const handlePrimaryAddAction = () => {
+    if (exceedsLimit) return; // Safety
     if (addToPage) {
       handleAddSelectedCardsToPage();
     } else {
@@ -224,6 +260,8 @@ const AddCardModal = ({
     0
   );
 
+  const exceedsLimit = selectedTotalCount > cardRemaining;
+
   const handleAddSelectedCards = async () => {
     const selectedArray = getSelectedCardsArray();
     if (!currentBinder || selectedArray.length === 0) return;
@@ -249,9 +287,16 @@ const AddCardModal = ({
       onClose();
     } catch (error) {
       console.error("Failed to add cards:", error);
-      toast.error(
-        "Failed to add cards to binder, you might have reached your limit as a guest user."
-      );
+      const errorMessage =
+        error?.message?.includes("limit") ||
+        error?.message?.includes("Cannot add")
+          ? error.message
+          : "Adding these cards would exceed the maximum card limit for this binder.";
+
+      toast.error(errorMessage, {
+        position: isMobileScreen ? "bottom-center" : "bottom-right",
+        id: "add-cards-error",
+      });
     } finally {
       setIsAdding(false);
     }
@@ -329,7 +374,16 @@ const AddCardModal = ({
       onClose();
     } catch (error) {
       console.error("Failed to add cards to page:", error);
-      toast.error("Failed to add cards to current page");
+      const errorMessage =
+        error?.message?.includes("limit") ||
+        error?.message?.includes("Cannot add")
+          ? error.message
+          : "Adding these cards would exceed the maximum card limit for this binder.";
+
+      toast.error(errorMessage, {
+        position: isMobileScreen ? "bottom-center" : "bottom-right",
+        id: "add-cards-page-error",
+      });
     } finally {
       setIsAddingToPage(false);
     }
@@ -526,6 +580,7 @@ const AddCardModal = ({
                           }`}
                         >
                           <SingleCardTab
+                            {...cardSearch}
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
                             isCardSelected={isCardSelected}
@@ -534,6 +589,9 @@ const AddCardModal = ({
                             compact={isCompact}
                             onSearchFocusChange={setSearchFocused}
                             onFiltersVisibilityChange={setFiltersOpen}
+                            onSelectAll={handleSelectAll}
+                            onClearSelection={handleClearAll}
+                            isSelectAllLoading={isSelectAllLoading}
                           />
                         </div>
                       </Tab.Panel>
@@ -583,6 +641,8 @@ const AddCardModal = ({
                       handlePrimaryAddAction={handlePrimaryAddAction}
                       addToPage={addToPage}
                       setAddToPage={setAddToPage}
+                      exceedsLimit={exceedsLimit}
+                      cardRemaining={cardRemaining}
                       selectedTotalCount={selectedTotalCount}
                       isAdding={isAdding}
                       isAddingToPage={isAddingToPage}
@@ -607,12 +667,15 @@ const AddCardModal = ({
                               disabled={
                                 selectedTotalCount === 0 ||
                                 isAddingToPage ||
-                                isAdding
+                                isAdding ||
+                                exceedsLimit
                               }
                               className="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 disabled:opacity-60 disabled:cursor-not-allowed rounded-lg transition-all duration-150 px-3 py-3 text-xs font-semibold shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                             >
                               {isAddingToPage
                                 ? "Shifting..."
+                                : exceedsLimit
+                                ? "Limit Exceeded"
                                 : `Add to Current Page (${selectedTotalCount})`}
                             </button>
 
@@ -622,7 +685,8 @@ const AddCardModal = ({
                               disabled={
                                 selectedTotalCount === 0 ||
                                 isAdding ||
-                                isAddingToPage
+                                isAddingToPage ||
+                                exceedsLimit
                               }
                               className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-150 flex items-center justify-center gap-2 px-3 py-3 text-xs font-semibold shadow-lg hover:shadow-xl disabled:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                             >
@@ -634,6 +698,8 @@ const AddCardModal = ({
                               <span>
                                 {isAdding
                                   ? "Adding..."
+                                  : exceedsLimit
+                                  ? "Limit Exceeded"
                                   : `Add cards (${selectedTotalCount})`}
                               </span>
                             </button>

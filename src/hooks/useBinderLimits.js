@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useRules } from "../contexts/RulesContext";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 const useBinderLimits = (binder) => {
   const { canPerformAction } = useRules();

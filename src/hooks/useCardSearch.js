@@ -150,6 +150,39 @@ const useCardSearch = () => {
     [searchQuery, filters, orderBy, pageSize]
   );
 
+  // Fetch all cards for a query up to a limit
+  const fetchAllCards = useCallback(
+    async (limit) => {
+      const searchParams = {
+        query: searchQuery,
+        page: 1,
+        pageSize: limit,
+        orderBy,
+        filters: {
+          ...filters,
+          ...Object.fromEntries(
+            Object.entries(filters).filter(
+              ([_, value]) =>
+                value && (Array.isArray(value) ? value.length > 0 : true)
+            )
+          ),
+        },
+      };
+
+      try {
+        const response = await pokemonTcgApi.searchCards(searchParams);
+        const normalizedCards = response.cards.map(normalizeCardData);
+        addCardsToCache(normalizedCards);
+        return normalizedCards;
+      } catch (error) {
+        console.error("Fetch all cards failed:", error);
+        setError(error.message);
+        return [];
+      }
+    },
+    [searchQuery, filters, orderBy, addCardsToCache]
+  );
+
   // Load more results
   const loadMoreCards = useCallback(() => {
     if (!hasMore || isLoadingMore) return;
@@ -336,6 +369,7 @@ const useCardSearch = () => {
 
     // Manual search
     performSearch,
+    fetchAllCards,
   };
 };
 

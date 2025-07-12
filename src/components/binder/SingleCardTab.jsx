@@ -6,9 +6,8 @@ import {
   XMarkIcon,
   PlusIcon,
   MinusIcon,
+  CheckCircleIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronRight } from "lucide-react";
-import useCardSearch from "../../hooks/useCardSearch";
 import PokemonCard from "../PokemonCard";
 import DraggableSearchCard from "./DraggableSearchCard";
 import SortDropdown from "../ui/SortDropdown";
@@ -276,38 +275,43 @@ const SingleCardTab = ({
   compact = false,
   onSearchFocusChange = () => {},
   onFiltersVisibilityChange = () => {},
+  onSelectAll,
+  onClearSelection,
+  isSelectAllLoading,
+  // Props from useCardSearch
+  searchQuery,
+  filters,
+  orderBy,
+  cards,
+  totalCount,
+  hasMore,
+  isLoading,
+  isLoadingMore,
+  error,
+  featuredCards,
+  featuredLoading,
+  availableTypes,
+  availableSets,
+  availableRarities,
+  availableSubtypes,
+  loadMoreCards,
+  updateFilter,
+  updateSearchQuery,
+  setOrderBy,
+  hasActiveFilters,
+  isEmpty,
+  showFeatured,
+  performSearch,
 }) => {
-  const [filtersExpanded, setFiltersExpanded] = useState(false);
   const searchInputRef = useRef(null);
   // Detect mobile screen (matches Tailwind sm breakpoint)
   const isMobileScreen = window.matchMedia("(max-width: 639px)").matches;
   const debounceRef = useRef(null);
 
-  const {
-    searchQuery,
-    filters,
-    orderBy,
-    cards,
-    totalCount,
-    hasMore,
-    isLoading,
-    isLoadingMore,
-    error,
-    featuredCards,
-    featuredLoading,
-    availableTypes,
-    availableSets,
-    availableRarities,
-    availableSubtypes,
-    loadMoreCards,
-    updateFilter,
-    updateSearchQuery,
-    setOrderBy,
-    hasActiveFilters,
-    isEmpty,
-    showFeatured,
-    performSearch,
-  } = useCardSearch();
+  const MAX_SELECT_ALL = 250;
+  const canSelectAll =
+    !showFeatured && totalCount > 0 && totalCount <= MAX_SELECT_ALL;
+  const hasSelection = Object.keys(selectedMap).length > 0;
 
   // Determine if any non-search filters are active for showing badge on button
   const hasFilterBadge = (() => {
@@ -406,8 +410,8 @@ const SingleCardTab = ({
             compact ? "p-2" : "p-3 sm:p-6"
           } border-b border-border sticky top-0 bg-card-background z-20`}
         >
-          <div className="flex gap-2 mb-2 sm:mb-4">
-            <div className="relative flex-1">
+          <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
+            <div className="relative flex-1 min-w-[200px]">
               <MagnifyingGlassIcon
                 className={`${
                   compact ? "w-4 h-4 left-2 top-2.5" : "w-5 h-5 left-3 top-3"
@@ -439,6 +443,36 @@ const SingleCardTab = ({
                 <MagnifyingGlassIcon className="w-5 h-5" />
                 Search
               </button>
+            )}
+            {!compact && (canSelectAll || hasSelection) && (
+              <div className="flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto">
+                {canSelectAll && (
+                  <button
+                    onClick={onSelectAll}
+                    disabled={isSelectAllLoading}
+                    className="flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed"
+                  >
+                    {isSelectAllLoading ? (
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                    ) : (
+                      <CheckCircleIcon className="w-5 h-5" />
+                    )}
+                    <span>
+                      {isSelectAllLoading
+                        ? "Selecting..."
+                        : `Select All (${totalCount})`}
+                    </span>
+                  </button>
+                )}
+                {hasSelection && (
+                  <button
+                    onClick={onClearSelection}
+                    className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
+                  >
+                    Clear Selection
+                  </button>
+                )}
+              </div>
             )}
           </div>
 
@@ -497,9 +531,13 @@ const SingleCardTab = ({
               </div>
             )}
           </div>
+          {!compact && totalCount > MAX_SELECT_ALL && !showFeatured && (
+            <div className="text-xs text-yellow-600 dark:text-yellow-400 mt-2">
+              "Select All" is disabled for results over {MAX_SELECT_ALL} cards.
+            </div>
+          )}
         </div>
 
-        {/* Filters are now always in a modal */}
         {/* Results */}
         <div
           ref={resultsRef}

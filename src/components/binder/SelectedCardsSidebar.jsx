@@ -20,6 +20,8 @@ const SelectedCardsSidebar = ({
   isAdding,
   isAddingToPage,
   activeTab,
+  exceedsLimit = false,
+  cardRemaining = null,
 }) => {
   const selectedItems = Object.values(selectedMap);
 
@@ -142,7 +144,12 @@ const SelectedCardsSidebar = ({
             {/* Primary Action Button */}
             <button
               onClick={handlePrimaryAddAction}
-              disabled={selectedTotalCount === 0 || isAdding || isAddingToPage}
+              disabled={
+                selectedTotalCount === 0 ||
+                isAdding ||
+                isAddingToPage ||
+                exceedsLimit
+              }
               className="w-full flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-200 flex items-center justify-center gap-2 px-3 py-3 text-base font-semibold shadow-lg hover:shadow-xl disabled:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
             >
               {isAdding || isAddingToPage ? (
@@ -153,6 +160,8 @@ const SelectedCardsSidebar = ({
               <span>
                 {isAdding || isAddingToPage
                   ? "Adding..."
+                  : exceedsLimit
+                  ? "Limit Exceeded"
                   : selectedTotalCount > 0
                   ? `Add ${selectedTotalCount} Card${
                       selectedTotalCount !== 1 ? "s" : ""
@@ -160,6 +169,15 @@ const SelectedCardsSidebar = ({
                   : "Add Cards"}
               </span>
             </button>
+            {exceedsLimit && (
+              <p className="mt-2 text-xs text-red-600 dark:text-red-400 text-center">
+                Adding these cards would exceed the binder limit.
+                {cardRemaining !== null &&
+                  ` You have ${cardRemaining} slot${
+                    cardRemaining === 1 ? "" : "s"
+                  } remaining.`}
+              </p>
+            )}
           </div>
         </div>
       )}
