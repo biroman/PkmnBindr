@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   MagnifyingGlassIcon,
   FunnelIcon,
@@ -18,295 +19,226 @@ const SearchFilters = ({
   availableSets,
   availableRarities,
   onFilterChange,
-  isExpanded,
-  onToggle,
-  isSidebarMode = false,
-  showToggleButton = true,
+  isMobile,
+  hasActiveFilters,
+  onVisibilityChange = () => {},
 }) => {
-  // State for mobile modal filters (temporary until saved)
+  // State for mobile modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // State for temporary filter selections
   const [tempFilters, setTempFilters] = useState(filters);
 
-  // Update temp filters when actual filters change (from external updates)
+  // Keep temp filters in sync with external changes
   useEffect(() => {
     setTempFilters(filters);
   }, [filters]);
 
-  // Handle temp filter changes in modal
   const handleTempFilterChange = (key, value) => {
-    setTempFilters((prev) => ({
-      ...prev,
-      [key]: value,
-    }));
+    setTempFilters((prev) => ({ ...prev, [key]: value }));
   };
 
-  // Save filters and close modal
-  const handleSaveFilters = () => {
+  const handleApplyFilters = (close) => {
     Object.keys(tempFilters).forEach((key) => {
       onFilterChange(key, tempFilters[key]);
     });
-    onToggle(); // Close modal
+    if (close) close();
   };
 
-  // Cancel and revert to original filters
-  const handleCancelFilters = () => {
-    setTempFilters(filters); // Revert to original
-    onToggle(); // Close modal
-  };
-
-  // Clear all temp filters
-  const handleClearTempFilters = () => {
-    setTempFilters({
-      name: "",
-      types: [],
-      set: "",
-      rarity: "",
+  const handleClearAndApplyFilters = (close) => {
+    const cleared = { name: "", set: "", rarity: "", types: [] };
+    setTempFilters(cleared);
+    Object.keys(cleared).forEach((key) => {
+      onFilterChange(key, cleared[key]);
     });
+    if (close) close();
   };
 
-  if (isSidebarMode) {
-    // Desktop sidebar layout - always expanded
-    return (
-      <div className="bg-secondary border-l border-border p-4 w-80 flex-shrink-0">
-        <div className="mb-4">
-          <h3 className="font-semibold text-primary flex items-center gap-2">
-            <FunnelIcon className="w-5 h-5" />
-            Filters
-            {Object.values(filters).some(
-              (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-            ) && (
-              <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
-                Active
-              </span>
-            )}
-          </h3>
-        </div>
-
-        <div className="space-y-4">
-          {/* Types */}
-          <div>
-            <label className="block text-sm font-medium text-primary mb-2">
-              Type
-            </label>
-            <select
-              value={filters.types[0] || ""}
-              onChange={(e) =>
-                onFilterChange("types", e.target.value ? [e.target.value] : [])
-              }
-              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-            >
-              <option value="">All Types</option>
-              {availableTypes.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Set */}
-          <div>
-            <label className="block text-sm font-medium text-primary mb-2">
-              Set
-            </label>
-            <select
-              value={filters.set}
-              onChange={(e) => onFilterChange("set", e.target.value)}
-              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-            >
-              <option value="">All Sets</option>
-              {availableSets.map((set) => (
-                <option key={set.id} value={set.id}>
-                  {set.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Rarity */}
-          <div>
-            <label className="block text-sm font-medium text-primary mb-2">
-              Rarity
-            </label>
-            <select
-              value={filters.rarity}
-              onChange={(e) => onFilterChange("rarity", e.target.value)}
-              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-            >
-              <option value="">All Rarities</option>
-              {availableRarities.map((rarity) => (
-                <option key={rarity} value={rarity}>
-                  {rarity}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Clear Filters Button */}
-          {Object.values(filters).some(
-            (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-          ) && (
-            <button
-              onClick={() => {
-                onFilterChange("name", "");
-                onFilterChange("types", []);
-                onFilterChange("set", "");
-                onFilterChange("rarity", "");
-              }}
-              className="w-full px-3 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-md transition-colors"
-            >
-              Clear All Filters
-            </button>
-          )}
-        </div>
+  const renderFilterControls = (isPopover = false) => (
+    <div
+      className={`space-y-4 ${
+        isPopover ? "p-4" : "flex-1 overflow-y-auto p-4"
+      }`}
+    >
+      {/* Types */}
+      <div>
+        <label className="block text-sm font-medium text-primary mb-2">
+          Type
+        </label>
+        <select
+          value={tempFilters.types?.[0] || ""}
+          onChange={(e) =>
+            handleTempFilterChange(
+              "types",
+              e.target.value ? [e.target.value] : []
+            )
+          }
+          className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+        >
+          <option value="">All Types</option>
+          {availableTypes.map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
       </div>
+
+      {/* Set */}
+      <div>
+        <label className="block text-sm font-medium text-primary mb-2">
+          Set
+        </label>
+        <select
+          value={tempFilters.set}
+          onChange={(e) => handleTempFilterChange("set", e.target.value)}
+          className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+        >
+          <option value="">All Sets</option>
+          {availableSets.map((set) => (
+            <option key={set.id} value={set.id}>
+              {set.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Rarity */}
+      <div>
+        <label className="block text-sm font-medium text-primary mb-2">
+          Rarity
+        </label>
+        <select
+          value={tempFilters.rarity}
+          onChange={(e) => handleTempFilterChange("rarity", e.target.value)}
+          className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+        >
+          <option value="">All Rarities</option>
+          {availableRarities.map((rarity) => (
+            <option key={rarity} value={rarity}>
+              {rarity}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+  );
+
+  const renderFilterButton = (onClick) => (
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-1.5 px-3 py-1.5 border border-slate-300 dark:border-slate-600 rounded-md text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors ${
+        hasActiveFilters ? "text-blue-600 dark:text-blue-400" : "text-primary"
+      }`}
+    >
+      <FunnelIcon className="w-4 h-4" />
+      <span>Filters</span>
+      {hasActiveFilters && (
+        <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+      )}
+    </button>
+  );
+
+  if (isMobile) {
+    return (
+      <>
+        {renderFilterButton(() => {
+          setIsModalOpen(true);
+          onVisibilityChange(true);
+        })}
+        {isModalOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black bg-opacity-50 z-[60]"
+              onClick={() => {
+                setIsModalOpen(false);
+                onVisibilityChange(false);
+              }}
+            />
+            <div className="fixed inset-x-4 bottom-0 top-20 bg-card-background rounded-t-2xl shadow-2xl z-[60] flex flex-col overflow-hidden">
+              <div className="flex items-center justify-between p-4 border-b border-border">
+                <h3 className="text-lg font-semibold text-primary">Filters</h3>
+                <button
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    onVisibilityChange(false);
+                  }}
+                  className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+                >
+                  <XMarkIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                </button>
+              </div>
+              {renderFilterControls()}
+              <div className="flex items-center gap-3 p-4 border-t border-border">
+                <button
+                  onClick={() => {
+                    handleClearAndApplyFilters(() => setIsModalOpen(false));
+                    onVisibilityChange(false);
+                  }}
+                  className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 rounded-lg transition-colors"
+                >
+                  Clear All
+                </button>
+                <button
+                  onClick={() => {
+                    handleApplyFilters(() => setIsModalOpen(false));
+                    onVisibilityChange(false);
+                  }}
+                  className="flex-1 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                >
+                  Apply Filters
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+      </>
     );
   }
 
-  // Mobile layout - popup modal
+  // Desktop Popover implementation
   return (
-    <>
-      {/* Filter toggle button */}
-      {showToggleButton && (
-        <div className="border-b border-border">
-          <button
-            onClick={onToggle}
-            className="w-full flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-          >
-            <div className="flex items-center space-x-2">
-              <FunnelIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
-              <span className="font-medium text-primary">Filters</span>
-              {Object.values(filters).some(
-                (f) => f && (Array.isArray(f) ? f.length > 0 : true)
-              ) && (
-                <span className="bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
-                  Active
-                </span>
-              )}
-            </div>
-            <div className="flex items-center text-slate-400 dark:text-slate-500">
-              <span className="text-sm mr-2">Tap to filter</span>
-              <ChevronRight className="w-5 h-5" />
-            </div>
-          </button>
-        </div>
-      )}
-
-      {/* Modal Popup */}
-      {isExpanded && (
+    <Popover className="relative">
+      {({ open, close }) => (
         <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-[60]"
-            onClick={handleCancelFilters}
-          />
-
-          {/* Modal Content */}
-          <div className="fixed inset-x-4 bottom-4 top-20 bg-card-background rounded-xl shadow-2xl z-[60] flex flex-col">
-            {/* Modal Header */}
-            <div className="flex items-center justify-between p-4 border-b border-border">
-              <h3 className="text-lg font-semibold text-primary">Filters</h3>
-              <button
-                onClick={handleCancelFilters}
-                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
-              >
-                <XMarkIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
-              </button>
-            </div>
-
-            {/* Modal Body */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {/* Types */}
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">
-                  Type
-                </label>
-                <select
-                  value={tempFilters.types[0] || ""}
-                  onChange={(e) =>
-                    handleTempFilterChange(
-                      "types",
-                      e.target.value ? [e.target.value] : []
-                    )
-                  }
-                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-                >
-                  <option value="">All Types</option>
-                  {availableTypes.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
+          <Popover.Button as={Fragment}>{renderFilterButton()}</Popover.Button>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0 translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 translate-y-1"
+          >
+            <Popover.Panel className="absolute z-30 mt-3 w-80 max-w-sm transform -translate-x-1/2 left-1/2 sm:px-0">
+              <div className="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black ring-opacity-5 bg-card-background">
+                <div className="p-4 border-b border-border">
+                  <h3 className="text-base font-semibold text-primary">
+                    Filters
+                  </h3>
+                </div>
+                {renderFilterControls(true)}
+                <div className="flex items-center justify-between gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-border">
+                  <button
+                    onClick={() => handleClearAndApplyFilters(close)}
+                    className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
+                  >
+                    Clear All
+                  </button>
+                  <button
+                    onClick={() => handleApplyFilters(close)}
+                    className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                  >
+                    Apply Filters
+                  </button>
+                </div>
               </div>
-
-              {/* Set */}
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">
-                  Set
-                </label>
-                <select
-                  value={tempFilters.set}
-                  onChange={(e) =>
-                    handleTempFilterChange("set", e.target.value)
-                  }
-                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-                >
-                  <option value="">All Sets</option>
-                  {availableSets.map((set) => (
-                    <option key={set.id} value={set.id}>
-                      {set.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Rarity */}
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">
-                  Rarity
-                </label>
-                <select
-                  value={tempFilters.rarity}
-                  onChange={(e) =>
-                    handleTempFilterChange("rarity", e.target.value)
-                  }
-                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-                >
-                  <option value="">All Rarities</option>
-                  {availableRarities.map((rarity) => (
-                    <option key={rarity} value={rarity}>
-                      {rarity}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Modal Footer */}
-            <div className="flex gap-3 p-4 border-t border-border">
-              <button
-                onClick={handleClearTempFilters}
-                className="flex-1 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
-              >
-                Clear All
-              </button>
-              <button
-                onClick={handleCancelFilters}
-                className="flex-1 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border border-border rounded-lg transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleSaveFilters}
-                className="flex-1 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-              >
-                Apply Filters
-              </button>
-            </div>
-          </div>
+            </Popover.Panel>
+          </Transition>
         </>
       )}
-    </>
+    </Popover>
   );
 };
 
@@ -317,6 +249,8 @@ const SingleCardTab = ({
   onIncrease,
   onDecrease,
   compact = false,
+  onSearchFocusChange = () => {},
+  onFiltersVisibilityChange = () => {},
 }) => {
   const [filtersExpanded, setFiltersExpanded] = useState(false);
   const searchInputRef = useRef(null);
@@ -350,8 +284,8 @@ const SingleCardTab = ({
   } = useCardSearch();
 
   // Infinite scroll setup
-  const resultsRef = useRef(null);
   const sentinelRef = useRef(null);
+  const resultsRef = useRef(null);
 
   useEffect(() => {
     // Only observe when we can load more and we're not showing featured
@@ -381,12 +315,13 @@ const SingleCardTab = ({
 
   // Focus search input when tab becomes active
   useEffect(() => {
-    if (searchInputRef.current) {
+    // Auto-focus only on larger screens to avoid hiding action buttons on mobile
+    if (!isMobileScreen && searchInputRef.current) {
       setTimeout(() => {
         searchInputRef.current?.focus();
       }, 100);
     }
-  }, []);
+  }, [isMobileScreen]);
 
   // Trigger search when sorting changes (if there are existing results or active filters)
   useEffect(() => {
@@ -420,7 +355,7 @@ const SingleCardTab = ({
   const displayLoading = showFeatured ? featuredLoading : isLoading;
 
   return (
-    <div className={`flex flex-col h-full ${compact ? "" : "lg:flex-row"}`}>
+    <div className={`flex flex-col h-full`}>
       {/* Main Content Area */}
       <div className="flex flex-col flex-1 min-h-0">
         {/* Search Bar */}
@@ -442,6 +377,8 @@ const SingleCardTab = ({
                 value={searchQuery}
                 onChange={(e) => updateSearchQuery(e.target.value)}
                 onKeyPress={handleKeyPress}
+                onFocus={() => onSearchFocusChange(true)}
+                onBlur={() => onSearchFocusChange(false)}
                 placeholder="Search Pokemon cards"
                 className={`w-full border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-card-background text-primary ${
                   compact
@@ -477,18 +414,16 @@ const SingleCardTab = ({
               </label>
               <SortDropdown value={orderBy} onChange={setOrderBy} />
 
-              {(compact || !compact) && (
-                <button
-                  onClick={() => setFiltersExpanded(!filtersExpanded)}
-                  className={`flex items-center gap-1 px-2 py-1 border border-slate-300 dark:border-slate-600 rounded text-xs hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors ${
-                    compact ? "" : "sm:hidden"
-                  }`}
-                >
-                  <FunnelIcon className="w-4 h-4" />
-                  Filters
-                  {hasActiveFilters && <span className="text-blue-600">•</span>}
-                </button>
-              )}
+              <SearchFilters
+                filters={filters}
+                availableTypes={availableTypes}
+                availableSets={availableSets}
+                availableRarities={availableRarities}
+                onFilterChange={updateFilter}
+                isMobile={isMobileScreen}
+                hasActiveFilters={hasActiveFilters}
+                onVisibilityChange={onFiltersVisibilityChange}
+              />
             </div>
 
             {/* Results Count */}
@@ -521,20 +456,7 @@ const SingleCardTab = ({
           </div>
         </div>
 
-        {/* Mobile/Tablet Filters (show on lg screens and below) */}
-        <div className={`${compact ? "" : "lg:hidden"}`}>
-          <SearchFilters
-            filters={filters}
-            availableTypes={availableTypes}
-            availableSets={availableSets}
-            availableRarities={availableRarities}
-            onFilterChange={updateFilter}
-            isExpanded={filtersExpanded}
-            onToggle={() => setFiltersExpanded(!filtersExpanded)}
-            showToggleButton={false}
-          />
-        </div>
-
+        {/* Filters are now always in a modal */}
         {/* Results */}
         <div
           ref={resultsRef}
@@ -576,7 +498,7 @@ const SingleCardTab = ({
                   className={`grid gap-2 ${
                     compact
                       ? "grid-cols-3"
-                      : "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-6 sm:gap-3"
+                      : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 sm:gap-3"
                   }`}
                 >
                   {displayCards.map((card) => (
@@ -601,27 +523,27 @@ const SingleCardTab = ({
                           <div className="absolute top-1 left-1 bg-blue-600 text-white text-xs px-1.5 py-0.5 rounded shadow">
                             {selectedMap[card.id]?.count || 1}
                           </div>
-                          {/* Plus / Minus */}
-                          <div className="absolute bottom-1 right-1 flex flex-col gap-0.5 z-20">
+                          {/* Plus / Minus - Mobile optimized */}
+                          <div className="absolute bottom-1 right-1 flex flex-col gap-1 z-20 sm:gap-0.5">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 onIncrease(card);
                               }}
-                              className="w-6 h-6 bg-white/90 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow hover:bg-blue-100 dark:hover:bg-slate-600"
+                              className="w-8 h-8 sm:w-6 sm:h-6 bg-white/95 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-100 dark:hover:bg-slate-600 hover:scale-110 active:scale-95 transition-all duration-150 border border-white/20"
                               aria-label="Increase quantity"
                             >
-                              <PlusIcon className="w-4 h-4" />
+                              <PlusIcon className="w-5 h-5 sm:w-4 sm:h-4 stroke-2" />
                             </button>
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 onDecrease(card);
                               }}
-                              className="w-6 h-6 bg-white/90 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow hover:bg-blue-100 dark:hover:bg-slate-600"
+                              className="w-8 h-8 sm:w-6 sm:h-6 bg-white/95 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-full flex items-center justify-center shadow-lg hover:bg-red-100 dark:hover:bg-slate-600 hover:scale-110 active:scale-95 transition-all duration-150 border border-white/20"
                               aria-label="Decrease quantity"
                             >
-                              <MinusIcon className="w-4 h-4" />
+                              <MinusIcon className="w-5 h-5 sm:w-4 sm:h-4 stroke-2" />
                             </button>
                           </div>
                         </>
@@ -645,20 +567,6 @@ const SingleCardTab = ({
           </div>
         </div>
       </div>
-
-      {/* Desktop Sidebar Filters hidden when compact */}
-      {!compact && (
-        <div className="hidden lg:block">
-          <SearchFilters
-            filters={filters}
-            availableTypes={availableTypes}
-            availableSets={availableSets}
-            availableRarities={availableRarities}
-            onFilterChange={updateFilter}
-            isSidebarMode={true}
-          />
-        </div>
-      )}
     </div>
   );
 };

@@ -15,6 +15,7 @@ import { toast } from "react-hot-toast";
 import SingleCardTab from "./SingleCardTab";
 import SetTab from "./SetTab";
 import SleevesTab from "./SleevesTab";
+import SelectedCardsSidebar from "./SelectedCardsSidebar";
 import { useAtom } from "jotai";
 import { modalModeAtom } from "../../atoms/addCardModalAtoms";
 
@@ -34,6 +35,29 @@ const AddCardModal = ({
   const [isAddingToPage, setIsAddingToPage] = useState(false);
   const [addToPage, setAddToPage] = useState(false);
   const closeButtonRef = useRef(null);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
+  // Reset search focus when modal closes / opens
+  useEffect(() => {
+    if (!isOpen) {
+      setSearchFocused(false);
+    }
+  }, [isOpen]);
+
+  const handleClearCard = (card) => {
+    setSelectedCardsMap((prev) => {
+      const newMap = { ...prev };
+      delete newMap[card.id];
+      return newMap;
+    });
+  };
+
+  const handleClearAll = () => {
+    setSelectedCardsMap({});
+    // Note: We don't clear localStorage here, to allow recovery if it was a mistake.
+    // It will be cleared on successful add.
+  };
 
   // Detect mobile screen (matches Tailwind sm breakpoint <640px)
   const isMobileScreen = window.matchMedia("(max-width: 639px)").matches;
@@ -363,77 +387,75 @@ const AddCardModal = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div
+              <Dialog.Panel
+                ref={panelRef}
                 style={{
                   transform: isCompact
                     ? `translate(${position.x}px, ${position.y}px)`
                     : "none",
                 }}
-                className="pointer-events-auto"
+                className={`add-card-modal-panel pointer-events-auto w-full overflow-hidden bg-card-background text-left align-middle shadow-xl transition-all flex flex-col relative ${
+                  isCompact
+                    ? "max-w-3xl h-[80vh] rounded-2xl"
+                    : isMobileScreen
+                    ? "w-screen h-screen"
+                    : "max-w-7xl h-[95vh] sm:h-[90vh] rounded-2xl"
+                }`}
               >
-                <Dialog.Panel
-                  ref={panelRef}
-                  className={`add-card-modal-panel w-full overflow-hidden bg-card-background text-left align-middle shadow-xl transition-all flex flex-col relative ${
-                    isCompact
-                      ? "max-w-3xl h-[80vh] rounded-2xl"
-                      : isMobileScreen
-                      ? "w-screen h-screen"
-                      : "max-w-6xl h-[95vh] sm:h-[90vh] rounded-2xl"
+                {/* Header */}
+                <div
+                  className={`flex items-center justify-between border-b border-border flex-shrink-0 add-card-modal-header ${
+                    isCompact ? "p-2" : "p-3 sm:p-4"
                   }`}
+                  style={{ cursor: isCompact ? "move" : "default" }}
+                  onPointerDown={handlePointerDown}
                 >
-                  {/* Header */}
-                  <div
-                    className={`flex items-center justify-between border-b border-border flex-shrink-0 add-card-modal-header ${
-                      isCompact ? "p-2" : "p-3 sm:p-4"
-                    }`}
-                    style={{ cursor: isCompact ? "move" : "default" }}
-                    onPointerDown={handlePointerDown}
-                  >
-                    <div className="min-w-0 flex-1 pr-4">
-                      <Dialog.Title
-                        as="h3"
-                        className="text-sm sm:text-lg font-medium text-primary truncate"
-                      >
-                        Add Cards to {currentBinder?.metadata?.name}
-                        {targetPosition !== null && (
-                          <span className="text-blue-600 font-normal">
-                            {" "}
-                            - Slot {targetPosition}
-                          </span>
-                        )}
-                      </Dialog.Title>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {/* Compact toggle only on screens >= sm */}
-                      {!isMobileScreen && (
-                        <button
-                          onClick={handleToggleMode}
-                          className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
-                          aria-label={
-                            isCompact
-                              ? "Switch to fullscreen mode"
-                              : "Switch to compact mode"
-                          }
-                        >
-                          {isCompact ? (
-                            <ArrowsPointingOutIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
-                          ) : (
-                            <ArrowsPointingInIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
-                          )}
-                        </button>
+                  <div className="min-w-0 flex-1 pr-4">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-sm sm:text-lg font-medium text-primary truncate"
+                    >
+                      Add Cards to {currentBinder?.metadata?.name}
+                      {targetPosition !== null && (
+                        <span className="text-blue-600 font-normal">
+                          {" "}
+                          - Slot {targetPosition}
+                        </span>
                       )}
-                      <button
-                        ref={closeButtonRef}
-                        onClick={onClose}
-                        className="p-2 sm:p-1.5 bg-slate-100 sm:bg-transparent dark:bg-slate-800 sm:dark:bg-transparent rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 sm:hover:bg-slate-100 sm:dark:hover:bg-slate-700"
-                        aria-label="Close modal"
-                      >
-                        <XMarkIcon className="w-6 h-6 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400" />
-                      </button>
-                    </div>
+                    </Dialog.Title>
                   </div>
+                  <div className="flex items-center gap-2">
+                    {/* Compact toggle only on screens >= sm */}
+                    {!isMobileScreen && (
+                      <button
+                        onClick={handleToggleMode}
+                        className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                        aria-label={
+                          isCompact
+                            ? "Switch to fullscreen mode"
+                            : "Switch to compact mode"
+                        }
+                      >
+                        {isCompact ? (
+                          <ArrowsPointingOutIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                        ) : (
+                          <ArrowsPointingInIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+                        )}
+                      </button>
+                    )}
+                    <button
+                      ref={closeButtonRef}
+                      onClick={onClose}
+                      className="p-2 sm:p-1.5 bg-slate-100 sm:bg-transparent dark:bg-slate-800 sm:dark:bg-transparent rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800 sm:hover:bg-slate-100 sm:dark:hover:bg-slate-700"
+                      aria-label="Close modal"
+                    >
+                      <XMarkIcon className="w-6 h-6 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400" />
+                    </button>
+                  </div>
+                </div>
 
-                  {/* Tabs */}
+                {/* Main Content Area */}
+                <div className="flex flex-1 min-h-0">
                   <Tab.Group
                     selectedIndex={activeTab}
                     onChange={setActiveTab}
@@ -498,7 +520,11 @@ const AddCardModal = ({
                     </div>
                     <Tab.Panels className="flex-1 min-h-0 pt-2">
                       <Tab.Panel className="h-full">
-                        <div className={`h-full ${!isCompact ? "pb-40" : ""}`}>
+                        <div
+                          className={`h-full ${
+                            !isCompact && isMobileScreen ? "pb-0" : ""
+                          }`}
+                        >
                           <SingleCardTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
@@ -506,13 +532,19 @@ const AddCardModal = ({
                             onIncrease={handleIncrease}
                             onDecrease={handleDecrease}
                             compact={isCompact}
+                            onSearchFocusChange={setSearchFocused}
+                            onFiltersVisibilityChange={setFiltersOpen}
                           />
                         </div>
                       </Tab.Panel>
                       {/* Complete Sets panel hidden in compact */}
                       {!isCompact && (
                         <Tab.Panel className="h-full">
-                          <div className="h-full pb-40">
+                          <div
+                            className={`h-full ${
+                              isMobileScreen ? "pb-24" : ""
+                            }`}
+                          >
                             <SetTab
                               currentBinder={currentBinder}
                               onAddCards={handleAddCards}
@@ -522,7 +554,11 @@ const AddCardModal = ({
                         </Tab.Panel>
                       )}
                       <Tab.Panel className="h-full">
-                        <div className={`h-full ${!isCompact ? "pb-40" : ""}`}>
+                        <div
+                          className={`h-full ${
+                            !isCompact && isMobileScreen ? "pb-24" : ""
+                          }`}
+                        >
                           <SleevesTab
                             selectedMap={selectedCardsMap}
                             onCardSelect={handleCardSelect}
@@ -536,71 +572,69 @@ const AddCardModal = ({
                     </Tab.Panels>
                   </Tab.Group>
 
-                  {/* Floating Footer - Hidden in compact for Single Cards */}
-                  {!isCompact && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-transparent pointer-events-none z-30">
-                      <div className="pointer-events-auto p-3">
-                        {(activeTab === 0 || activeTab === 2) && (
-                          <div className="space-y-3">
-                            {/* Placement Toggle */}
-                            <Switch.Group
-                              as="div"
-                              className="flex items-center justify-between rounded-lg bg-slate-100 dark:bg-slate-800 p-3"
-                            >
-                              <Switch.Label
-                                as="span"
-                                className="flex-grow flex flex-col mr-4"
-                                passive
-                              >
-                                <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                                  Add to Current Page
-                                </span>
-                                <span className="text-xs text-slate-500 dark:text-slate-400">
-                                  Shifts existing cards to make space.
-                                </span>
-                              </Switch.Label>
-                              <Switch
-                                checked={addToPage}
-                                onChange={setAddToPage}
-                                className={`${
-                                  addToPage
-                                    ? "bg-blue-600"
-                                    : "bg-gray-200 dark:bg-gray-600"
-                                } relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800`}
-                              >
-                                <span
-                                  className={`${
-                                    addToPage
-                                      ? "translate-x-6"
-                                      : "translate-x-1"
-                                  } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
-                                />
-                              </Switch>
-                            </Switch.Group>
+                  {/* Selected Items Sidebar - for desktop only */}
+                  {!isCompact && !isMobileScreen && activeTab !== 1 && (
+                    <SelectedCardsSidebar
+                      selectedMap={selectedCardsMap}
+                      onIncrease={handleIncrease}
+                      onDecrease={handleDecrease}
+                      onClearCard={handleClearCard}
+                      onClearAll={handleClearAll}
+                      handlePrimaryAddAction={handlePrimaryAddAction}
+                      addToPage={addToPage}
+                      setAddToPage={setAddToPage}
+                      selectedTotalCount={selectedTotalCount}
+                      isAdding={isAdding}
+                      isAddingToPage={isAddingToPage}
+                      activeTab={activeTab}
+                    />
+                  )}
+                </div>
 
-                            {/* Primary Action Button */}
+                {/* Floating Footer for Mobile - Hidden in compact mode */}
+                {!isCompact &&
+                  isMobileScreen &&
+                  selectedTotalCount > 0 &&
+                  !searchFocused &&
+                  !filtersOpen && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-transparent pointer-events-none z-30">
+                      <div className="pointer-events-auto p-3 bg-card-background/80 dark:bg-card-background/90">
+                        {(activeTab === 0 || activeTab === 2) && (
+                          <div className="flex items-center gap-3">
+                            {/* Add to Current Page */}
                             <button
-                              onClick={handlePrimaryAddAction}
+                              onClick={handleAddSelectedCardsToPage}
+                              disabled={
+                                selectedTotalCount === 0 ||
+                                isAddingToPage ||
+                                isAdding
+                              }
+                              className="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 disabled:opacity-60 disabled:cursor-not-allowed rounded-lg transition-all duration-150 px-3 py-3 text-xs font-semibold shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                            >
+                              {isAddingToPage
+                                ? "Shifting..."
+                                : `Add to Current Page (${selectedTotalCount})`}
+                            </button>
+
+                            {/* Add to Last Page */}
+                            <button
+                              onClick={handleAddSelectedCards}
                               disabled={
                                 selectedTotalCount === 0 ||
                                 isAdding ||
                                 isAddingToPage
                               }
-                              className="w-full flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-200 flex items-center justify-center gap-2 px-3 py-3 text-base font-semibold shadow-lg hover:shadow-xl disabled:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                              className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-150 flex items-center justify-center gap-2 px-3 py-3 text-xs font-semibold shadow-lg hover:shadow-xl disabled:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
                             >
-                              {isAdding || isAddingToPage ? (
+                              {isAdding ? (
                                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                               ) : (
                                 <PlusIcon className="w-5 h-5" />
                               )}
                               <span>
-                                {isAdding || isAddingToPage
+                                {isAdding
                                   ? "Adding..."
-                                  : selectedTotalCount > 0
-                                  ? `Add ${selectedTotalCount} Card${
-                                      selectedTotalCount !== 1 ? "s" : ""
-                                    }`
-                                  : "Add Cards"}
+                                  : `Add cards (${selectedTotalCount})`}
                               </span>
                             </button>
                           </div>
@@ -622,8 +656,7 @@ const AddCardModal = ({
                       </div>
                     </div>
                   )}
-                </Dialog.Panel>
-              </div>
+              </Dialog.Panel>
             </Transition.Child>
           </div>
         </div>
