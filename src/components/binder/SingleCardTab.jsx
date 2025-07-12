@@ -18,6 +18,7 @@ const SearchFilters = ({
   availableTypes,
   availableSets,
   availableRarities,
+  availableSubtypes = [],
   onFilterChange,
   isMobile,
   hasActiveFilters,
@@ -46,7 +47,7 @@ const SearchFilters = ({
   };
 
   const handleClearAndApplyFilters = (close) => {
-    const cleared = { name: "", set: "", rarity: "", types: [] };
+    const cleared = { name: "", set: "", rarity: "", types: [], subtypes: [] };
     setTempFilters(cleared);
     Object.keys(cleared).forEach((key) => {
       onFilterChange(key, cleared[key]);
@@ -84,20 +85,25 @@ const SearchFilters = ({
         </select>
       </div>
 
-      {/* Set */}
+      {/* Subtype */}
       <div>
         <label className="block text-sm font-medium text-primary mb-2">
-          Set
+          Subtype
         </label>
         <select
-          value={tempFilters.set}
-          onChange={(e) => handleTempFilterChange("set", e.target.value)}
+          value={tempFilters.subtypes?.[0] || ""}
+          onChange={(e) =>
+            handleTempFilterChange(
+              "subtypes",
+              e.target.value ? [e.target.value] : []
+            )
+          }
           className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
         >
-          <option value="">All Sets</option>
-          {availableSets.map((set) => (
-            <option key={set.id} value={set.id}>
-              {set.name}
+          <option value="">All Subtypes</option>
+          {availableSubtypes.map((subtype) => (
+            <option key={subtype} value={subtype}>
+              {subtype}
             </option>
           ))}
         </select>
@@ -117,6 +123,25 @@ const SearchFilters = ({
           {availableRarities.map((rarity) => (
             <option key={rarity} value={rarity}>
               {rarity}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Set */}
+      <div>
+        <label className="block text-sm font-medium text-primary mb-2">
+          Set
+        </label>
+        <select
+          value={tempFilters.set}
+          onChange={(e) => handleTempFilterChange("set", e.target.value)}
+          className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+        >
+          <option value="">All Sets</option>
+          {availableSets.map((set) => (
+            <option key={set.id} value={set.id}>
+              {set.name}
             </option>
           ))}
         </select>
@@ -211,7 +236,7 @@ const SearchFilters = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute z-30 mt-3 w-80 max-w-sm transform -translate-x-1/2 left-1/2 sm:px-0">
+            <Popover.Panel className="absolute z-50 mt-3 w-80 max-w-sm transform -translate-x-1/2 left-1/2 sm:px-0">
               <div className="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black ring-opacity-5 bg-card-background">
                 <div className="p-4 border-b border-border">
                   <h3 className="text-base font-semibold text-primary">
@@ -273,6 +298,7 @@ const SingleCardTab = ({
     availableTypes,
     availableSets,
     availableRarities,
+    availableSubtypes,
     loadMoreCards,
     updateFilter,
     updateSearchQuery,
@@ -419,6 +445,7 @@ const SingleCardTab = ({
                 availableTypes={availableTypes}
                 availableSets={availableSets}
                 availableRarities={availableRarities}
+                availableSubtypes={availableSubtypes}
                 onFilterChange={updateFilter}
                 isMobile={isMobileScreen}
                 hasActiveFilters={hasActiveFilters}
@@ -524,7 +551,7 @@ const SingleCardTab = ({
                             {selectedMap[card.id]?.count || 1}
                           </div>
                           {/* Plus / Minus - Mobile optimized */}
-                          <div className="absolute bottom-1 right-1 flex flex-col gap-1 z-20 sm:gap-0.5">
+                          <div className="absolute bottom-1 right-1 flex flex-col gap-1 z-10 sm:gap-0.5">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();

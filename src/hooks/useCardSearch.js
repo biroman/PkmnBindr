@@ -40,20 +40,23 @@ const useCardSearch = () => {
   const [availableTypes, setAvailableTypes] = useState([]);
   const [availableSets, setAvailableSets] = useState([]);
   const [availableRarities, setAvailableRarities] = useState([]);
+  const [availableSubtypes, setAvailableSubtypes] = useState([]);
 
   // Load filter options on mount
   useEffect(() => {
     const loadFilterOptions = async () => {
       try {
-        const [types, sets, rarities] = await Promise.all([
+        const [types, sets, rarities, subtypes] = await Promise.all([
           pokemonTcgApi.getTypes(),
           pokemonTcgApi.getSets(),
           pokemonTcgApi.getRarities(),
+          pokemonTcgApi.getSubtypes(),
         ]);
 
         setAvailableTypes(types);
         setAvailableSets(sets); // Show all available sets
         setAvailableRarities(rarities);
+        setAvailableSubtypes(subtypes);
       } catch (error) {
         console.error("Failed to load filter options:", error);
       }
@@ -313,6 +316,7 @@ const useCardSearch = () => {
     availableTypes,
     availableSets,
     availableRarities,
+    availableSubtypes,
 
     // Actions
     searchCards,

@@ -500,55 +500,73 @@ export const pokemonTcgApi = {
     }
   },
 
+  // ADD: Get all available subtypes (e.g., BREAK, EX, VMAX)
+  async getSubtypes() {
+    try {
+      // Hard-coded list from Pokémon TCG API docs – using a constant avoids an extra network call and covers current valid values.
+      const pokemonSubtypes = [
+        "BREAK",
+        "Baby",
+        "Basic",
+        "EX",
+        "GX",
+        "Goldenrod Game Corner",
+        "Item",
+        "LEGEND",
+        "Level-Up",
+        "MEGA",
+        "Pokémon Tool",
+        "Pokémon Tool F",
+        "Rapid Strike",
+        "Restored",
+        "Rocket's Secret Machine",
+        "Single Strike",
+        "Special",
+        "Stadium",
+        "Stage 1",
+        "Stage 2",
+        "Supporter",
+        "TAG TEAM",
+        "Technical Machine",
+        "V",
+        "VMAX",
+      ];
+      return pokemonSubtypes;
+    } catch (error) {
+      console.error("Get subtypes failed:", error);
+      throw new Error(`Failed to get subtypes: ${error.message}`);
+    }
+  },
+
   // Get all available rarities
   async getRarities() {
     try {
-      // Use comprehensive list ordered by rarity level (most common to least common)
+      // Hard-coded list narrowed to the rarities requested by the UI requirement.
       const pokemonRarities = [
-        // Standard rarities (most common)
+        "Amazing Rare",
         "Common",
-        "Uncommon",
+        "LEGEND",
+        "Promo",
         "Rare",
-
-        // Holofoil rarities (more rare)
+        "Rare ACE",
+        "Rare BREAK",
         "Rare Holo",
         "Rare Holo EX",
         "Rare Holo GX",
-        "Rare Holo V",
-        "Rare Holo VMAX",
-        "Rare Holo VSTAR",
         "Rare Holo LV.X",
         "Rare Holo Star",
-
-        // Special rarities (very rare)
-        "Double Rare",
-        "Illustration Rare",
-        "Special Illustration Rare",
-        "Ultra Rare",
-        "Rare Ultra",
-        "Hyper Rare",
-
-        // Secret/Rainbow rarities (extremely rare)
-        "Secret Rare",
-        "Rare Secret",
-        "Rare Rainbow",
-
-        // Older special rarities
-        "Amazing Rare",
-        "Rare ACE",
-        "Rare BREAK",
+        "Rare Holo V",
+        "Rare Holo VMAX",
         "Rare Prime",
         "Rare Prism Star",
+        "Rare Rainbow",
+        "Rare Secret",
         "Rare Shining",
         "Rare Shiny",
         "Rare Shiny GX",
-        "Shiny Rare",
-
-        // Promotional/Special (varies)
-        "Promo",
-        "LEGEND",
+        "Rare Ultra",
+        "Uncommon",
       ];
-
       return pokemonRarities;
     } catch (error) {
       console.error("Get rarities failed:", error);
