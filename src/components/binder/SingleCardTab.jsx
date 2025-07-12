@@ -349,6 +349,36 @@ const SingleCardTab = ({
     performSearch,
   } = useCardSearch();
 
+  // Infinite scroll setup
+  const resultsRef = useRef(null);
+  const sentinelRef = useRef(null);
+
+  useEffect(() => {
+    // Only observe when we can load more and we're not showing featured
+    if (!hasMore || showFeatured) return;
+
+    const observerOptions = {
+      root: resultsRef.current,
+      rootMargin: "300px", // start loading a bit before bottom
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const first = entries[0];
+      if (first.isIntersecting && !isLoadingMore && !isLoading) {
+        loadMoreCards();
+      }
+    }, observerOptions);
+
+    const currentSentinel = sentinelRef.current;
+    if (currentSentinel) observer.observe(currentSentinel);
+
+    return () => {
+      if (currentSentinel) observer.unobserve(currentSentinel);
+      observer.disconnect();
+    };
+  }, [hasMore, isLoadingMore, isLoading, loadMoreCards, showFeatured]);
+
   // Focus search input when tab becomes active
   useEffect(() => {
     if (searchInputRef.current) {
@@ -506,7 +536,10 @@ const SingleCardTab = ({
         </div>
 
         {/* Results */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden min-h-0">
+        <div
+          ref={resultsRef}
+          className="flex-1 overflow-y-auto overflow-x-hidden min-h-0"
+        >
           <div className="p-4 sm:p-6">
             {error && (
               <div className="bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
@@ -598,14 +631,13 @@ const SingleCardTab = ({
                 </div>
 
                 {hasMore && !showFeatured && (
-                  <div className="text-center pt-6">
-                    <button
-                      onClick={loadMoreCards}
-                      disabled={isLoadingMore}
-                      className="px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg transition-colors disabled:opacity-50"
-                    >
-                      {isLoadingMore ? "Loading..." : "Load More"}
-                    </button>
+                  <div
+                    ref={sentinelRef}
+                    className="w-full flex items-center justify-center py-6"
+                  >
+                    {isLoadingMore && (
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500" />
+                    )}
                   </div>
                 )}
               </div>
