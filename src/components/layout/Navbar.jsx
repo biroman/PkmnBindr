@@ -498,6 +498,7 @@ const Navbar = () => {
               )}
 
               <UserSection />
+              {/* Language toggle moved to AddCardModal header */}
               <ThemeToggle />
             </div>
 

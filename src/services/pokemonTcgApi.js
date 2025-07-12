@@ -79,6 +79,40 @@ class RateLimit {
 
 const rateLimiter = new RateLimit();
 
+// BEGIN LANGUAGE SUPPORT (inserted after rateLimiter definition)
+const LANG_EN = "en";
+const LANG_JP = "jp";
+const JP_BASE_URL = "https://www.jpn-cards.com/v2";
+
+// Determine initial language preference (defaults to EN)
+let currentLanguage = (() => {
+  try {
+    return localStorage.getItem("apiLanguage") || LANG_EN;
+  } catch {
+    return LANG_EN;
+  }
+})();
+
+export function setLanguage(lang) {
+  currentLanguage = lang === LANG_JP ? LANG_JP : LANG_EN;
+  try {
+    localStorage.setItem("apiLanguage", currentLanguage);
+  } catch {
+    /* storage might be unavailable in some environments */
+  }
+  // Clear caches when switching languages to avoid mixing datasets
+  searchCache.clear();
+  cardCache.clear();
+  setCache.clear();
+}
+
+export function getLanguage() {
+  return currentLanguage;
+}
+
+const jpRateLimiter = new RateLimit();
+// END LANGUAGE SUPPORT
+
 // HTTP client with error handling and retries
 async function apiRequest(endpoint, options = {}) {
   const {
@@ -173,6 +207,70 @@ async function apiRequest(endpoint, options = {}) {
   );
 }
 
+// JP API request helper (mirrors apiRequest but targets the Japanese API)
+async function apiRequestJP(endpoint, options = {}) {
+  const {
+    params = {},
+    retries = API_CONFIG.retries,
+    retryDelay = API_CONFIG.retryDelay,
+  } = options;
+
+  if (!jpRateLimiter.canMakeRequest()) {
+    const waitTime = jpRateLimiter.getTimeUntilReset();
+    throw new Error(
+      `Rate limit exceeded. Try again in ${Math.ceil(waitTime / 1000)} seconds.`
+    );
+  }
+
+  const url = new URL(`${JP_BASE_URL}${endpoint}`);
+
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      url.searchParams.append(key, value);
+    }
+  });
+
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      jpRateLimiter.recordRequest();
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(
+        () => controller.abort(),
+        API_CONFIG.timeout
+      );
+
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) {
+        const delay = retryDelay * Math.pow(2, attempt);
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
+    }
+  }
+
+  throw new Error(
+    `JP API request failed after ${retries + 1} attempts: ${lastError.message}`
+  );
+}
+
 // Helper function to build fuzzy name queries
 function buildFuzzyNameQuery(searchTerm) {
   if (!searchTerm || typeof searchTerm !== "string") {
@@ -212,6 +310,75 @@ function buildFuzzyNameQuery(searchTerm) {
   }
 }
 
+// Helper functions specific to the Japanese API
+async function searchCardsJP({
+  query = "",
+  page = 1,
+  pageSize = DEFAULT_PAGE_SIZE,
+  orderBy = "",
+  filters = {},
+} = {}) {
+  const params = [];
+
+  const trimmedQuery = query.trim();
+  if (trimmedQuery) {
+    params.push(`name=${encodeURIComponent(trimmedQuery)}`);
+  }
+
+  if (filters.name) {
+    params.push(`name=${encodeURIComponent(filters.name)}`);
+  }
+
+  if (filters.types && filters.types.length > 0) {
+    params.push(`type=${encodeURIComponent(filters.types[0])}`);
+  }
+
+  if (filters.set) {
+    params.push(`set_code=${encodeURIComponent(filters.set)}`);
+  }
+
+  if (filters.rarity) {
+    params.push(`rarity=${encodeURIComponent(filters.rarity)}`);
+  }
+
+  if (filters.artist) {
+    params.push(`illustrator=${encodeURIComponent(filters.artist)}`);
+  }
+
+  let endpoint = "/card/";
+  if (params.length > 0) {
+    endpoint += params.join("&");
+  }
+
+  // Pagination query string
+  endpoint +=
+    (endpoint.includes("?") ? "&" : "?") + `page=${page}&pageSize=${pageSize}`;
+
+  const data = await apiRequestJP(endpoint);
+  const cards = data?.data || [];
+  const totalCount = data?.totalCount || cards.length;
+  const hasMore = page * pageSize < totalCount;
+
+  return { cards, totalCount, hasMore };
+}
+
+async function getCardJP(cardId) {
+  const endpoint = `/card/id=${cardId}`;
+  const data = await apiRequestJP(endpoint);
+  if (data?.data && data.data.length > 0) {
+    return data.data[0];
+  }
+  throw new Error("Card not found");
+}
+
+async function getSetsJP() {
+  return await apiRequestJP("/set/");
+}
+
+async function getRaritiesJP() {
+  return await apiRequestJP("/card/rarities");
+}
+
 // Card search functions
 export const pokemonTcgApi = {
   // Add helper method to the API object
@@ -249,6 +416,10 @@ export const pokemonTcgApi = {
     filters = {},
     _isRetry = false,
   } = {}) {
+    // Delegate to Japanese API implementation if language is JP
+    if (currentLanguage === LANG_JP) {
+      return await searchCardsJP({ query, page, pageSize, orderBy, filters });
+    }
     try {
       // Build search query
       let q = "";
@@ -398,6 +569,9 @@ export const pokemonTcgApi = {
 
   // Get a specific card by ID
   async getCard(cardId) {
+    if (currentLanguage === LANG_JP) {
+      return await getCardJP(cardId);
+    }
     try {
       if (!cardId) {
         throw new Error("Card ID is required");
@@ -443,6 +617,9 @@ export const pokemonTcgApi = {
 
   // Get all available sets
   async getSets() {
+    if (currentLanguage === LANG_JP) {
+      return await getSetsJP();
+    }
     try {
       const allSets = [];
       let page = 1;
@@ -502,6 +679,9 @@ export const pokemonTcgApi = {
 
   // Get all available rarities
   async getRarities() {
+    if (currentLanguage === LANG_JP) {
+      return await getRaritiesJP();
+    }
     try {
       // Use comprehensive list ordered by rarity level (most common to least common)
       const pokemonRarities = [
@@ -584,6 +764,9 @@ export const pokemonTcgApi = {
       };
     },
   },
+
+  setLanguage,
+  getLanguage,
 };
 
 // Cards that should use normal size images instead of _hires (they don't have hires versions)
@@ -598,6 +781,30 @@ const CARDS_WITH_NO_HIRES = [
 // Only keeps essential data to reduce storage size
 export function normalizeCardData(card) {
   if (!card) return null;
+
+  // Detect Japanese API card structure (uses setData & imageUrl)
+  if (card.setData) {
+    return {
+      id: card.id,
+      name: card.name,
+      imageSmall: card.imageUrl,
+      image: card.imageUrl,
+      supertype: card.supertype,
+      subtypes: card.subtypes || [],
+      types: card.types || [],
+      rarity: card.rarity,
+      set: {
+        id: card.setData.id || "",
+        name: card.setData.name || "",
+        series: "",
+        symbol: card.setData.image_url || "",
+      },
+      number: card.printedNumber || card.sequenceNumber || "",
+      artist: card.artist,
+      addedAt: new Date().toISOString(),
+      source: "pokemon-tcg-jp",
+    };
+  }
 
   // Determine which image to use for small and large
   let imageSmallUrl = card.images?.small || "";
