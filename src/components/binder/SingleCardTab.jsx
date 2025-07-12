@@ -367,8 +367,6 @@ const SingleCardTab = ({
 
   // Debounced search on mobile when query changes
   useEffect(() => {
-    if (!isMobileScreen) return;
-
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
     // Avoid triggering empty searches without filters

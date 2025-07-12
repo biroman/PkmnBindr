@@ -56,45 +56,63 @@ const useSetSearch = () => {
     }
   }, [searchQuery, sets]);
 
-  // Get all cards from a specific set
+  // Fetch every card in a set (API is limited to 250 cards per request)
   const getSetCards = useCallback(
     async (setId) => {
-      try {
-        console.log("Fetching cards for set ID:", setId);
+      const PAGE_SIZE = 250; // API hard-cap defined in pokemonTcgApi
 
-        // First try with set.id
-        let response = await pokemonTcgApi.searchCards({
-          query: `set.id:"${setId}"`,
-          pageSize: 250, // Get all cards from the set
-          orderBy: "number",
-        });
+      // Helper: paginate through the API until all cards are received
+      const fetchAllCards = async (query) => {
+        let page = 1;
+        let hasMore = true;
+        const collected = [];
 
-        console.log("API response for set.id query:", response);
-        console.log("Cards found with set.id:", response.cards?.length || 0);
+        while (hasMore) {
+          const resp = await pokemonTcgApi.searchCards({
+            query,
+            page,
+            pageSize: PAGE_SIZE,
+            orderBy: "number",
+          });
 
-        // If no cards found with set.id, try with set.name
-        if (!response.cards || response.cards.length === 0) {
-          console.log("No cards found with set.id, trying set.name...");
+          if (Array.isArray(resp.cards)) {
+            collected.push(...resp.cards);
+          }
 
-          // Find the set name from our sets data
-          const setName = sets.find((s) => s.id === setId)?.name;
-          if (setName) {
-            response = await pokemonTcgApi.searchCards({
-              query: `set.name:"${setName}"`,
-              pageSize: 250,
-              orderBy: "number",
-            });
-            console.log("API response for set.name query:", response);
-            console.log(
-              "Cards found with set.name:",
-              response.cards?.length || 0
+          hasMore = resp.hasMore;
+          page += 1;
+
+          // Safety stop to prevent infinite loops in unlikely API failure cases
+          if (page > 100) {
+            console.warn(
+              "Pagination aborted after 100 pages for query:",
+              query
             );
+            break;
           }
         }
 
-        const normalizedCards = (response.cards || []).map(normalizeCardData);
+        return collected;
+      };
 
-        // Add cards to cache
+      try {
+        console.log("Fetching cards for set ID:", setId);
+
+        // Primary attempt: search by set.id
+        let cards = await fetchAllCards(`set.id:"${setId}"`);
+
+        // Fallback: search by set.name if nothing returned
+        if (cards.length === 0) {
+          const setName = sets.find((s) => s.id === setId)?.name;
+          if (setName) {
+            console.log("Fallback to set.name search:", setName);
+            cards = await fetchAllCards(`set.name:"${setName}"`);
+          }
+        }
+
+        const normalizedCards = cards.map(normalizeCardData);
+
+        // Cache the full set before returning
         addCardsToCache(normalizedCards);
 
         return normalizedCards;
