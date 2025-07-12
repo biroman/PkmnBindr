@@ -309,6 +309,22 @@ const SingleCardTab = ({
     performSearch,
   } = useCardSearch();
 
+  // Determine if any non-search filters are active for showing badge on button
+  const hasFilterBadge = (() => {
+    const relevantKeys = [
+      "types",
+      "subtypes",
+      "set",
+      "rarity",
+      "supertype",
+      "artist",
+    ];
+    return relevantKeys.some((key) => {
+      const value = filters[key];
+      return value && (Array.isArray(value) ? value.length > 0 : true);
+    });
+  })();
+
   // Infinite scroll setup
   const sentinelRef = useRef(null);
   const resultsRef = useRef(null);
@@ -448,7 +464,7 @@ const SingleCardTab = ({
                 availableSubtypes={availableSubtypes}
                 onFilterChange={updateFilter}
                 isMobile={isMobileScreen}
-                hasActiveFilters={hasActiveFilters}
+                hasActiveFilters={hasFilterBadge}
                 onVisibilityChange={onFiltersVisibilityChange}
               />
             </div>
