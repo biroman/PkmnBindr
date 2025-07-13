@@ -517,7 +517,7 @@ const SingleCardTab = ({
                       "Searching..."
                     ) : (
                       <>
-                        <span className="font-medium">
+                        <span className="font-medium text-slate-500 dark:text-slate-400">
                           {totalCount.toLocaleString()}
                         </span>
                         <span className="text-slate-500 dark:text-slate-400">
@@ -558,7 +558,9 @@ const SingleCardTab = ({
             {displayLoading && (
               <div className="text-center py-8">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                <div className="text-secondary">Searching for cards...</div>
+                <div className="text-slate-500 dark:text-slate-400">
+                  Searching for cards...
+                </div>
               </div>
             )}
 

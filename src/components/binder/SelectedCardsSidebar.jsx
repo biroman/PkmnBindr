@@ -71,7 +71,7 @@ const SelectedCardsSidebar = ({
                 <p className="text-sm font-medium text-primary truncate">
                   {card.name}
                 </p>
-                <p className="text-xs text-secondary truncate">
+                <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
                   {card.set.name}
                 </p>
               </div>

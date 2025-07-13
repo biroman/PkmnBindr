@@ -59,7 +59,7 @@ const SelectSetStep = ({ onSetSelect }) => {
           />
         </div>
         <div className="flex items-center justify-between text-sm">
-          <span className="text-secondary dark:text-slate-400">
+          <span className="text-slate-500 dark:text-slate-400">
             Showing{" "}
             <span className="font-medium text-primary dark:text-slate-300">
               {filteredCount}
@@ -145,7 +145,7 @@ const SelectSetStep = ({ onSetSelect }) => {
                                   <h3 className="font-semibold text-primary dark:text-slate-100 text-base leading-tight truncate group-hover:text-blue-600 dark:group-hover:text-blue-400">
                                     {set.name}
                                   </h3>
-                                  <p className="text-sm text-secondary dark:text-slate-400 mt-1 truncate">
+                                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 truncate">
                                     {set.series}
                                   </p>
                                 </div>
@@ -162,7 +162,7 @@ const SelectSetStep = ({ onSetSelect }) => {
                               <span className="text-sm font-medium text-primary dark:text-slate-300">
                                 {set.total} cards
                               </span>
-                              <span className="text-xs text-secondary dark:text-slate-500">
+                              <span className="text-xs text-slate-500 dark:text-slate-500">
                                 {set.id.toUpperCase()}
                               </span>
                             </div>

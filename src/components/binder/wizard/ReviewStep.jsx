@@ -111,7 +111,7 @@ const CapacityBar = ({ currentSlots, totalSlots, newSlots }) => {
           style={{ left: `${currentPercent}%`, width: `${newPercent}%` }}
         />
       </div>
-      <div className="flex justify-between text-xs text-secondary dark:text-slate-400">
+      <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
         <span>
           Current: {currentSlots} / {totalSlots}
         </span>
@@ -374,7 +374,7 @@ const ReviewStep = ({
                   </RadioGroup.Label>
                   <RadioGroup.Description
                     as="span"
-                    className="mt-1 text-sm text-secondary dark:text-slate-400"
+                    className="mt-1 text-sm text-slate-500 dark:text-slate-400"
                   >
                     Clears all {usedSlots} cards and adds the new set.
                   </RadioGroup.Description>
@@ -418,7 +418,7 @@ const ReviewStep = ({
                     </RadioGroup.Label>
                     <RadioGroup.Description
                       as="span"
-                      className="mt-1 text-sm text-secondary dark:text-slate-400"
+                      className="mt-1 text-sm text-slate-500 dark:text-slate-400"
                     >
                       Increases binder capacity to fit the new set.
                     </RadioGroup.Description>

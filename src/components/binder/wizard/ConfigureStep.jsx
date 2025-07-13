@@ -62,7 +62,7 @@ const ConfigureStep = ({
               <h2 className="text-xl sm:text-2xl font-bold text-primary dark:text-slate-100">
                 Step 2: Configure {selectedSet?.name}
               </h2>
-              <p className="text-secondary dark:text-slate-400">
+              <p className="text-slate-500 dark:text-slate-400">
                 {selectedSet?.series} &bull; Released {selectedSet?.releaseDate}
               </p>
             </div>
@@ -144,7 +144,7 @@ const ConfigureStep = ({
                               className={`mt-1 flex items-center text-xs ${
                                 checked
                                   ? "text-purple-700 dark:text-purple-400"
-                                  : "text-secondary dark:text-slate-400"
+                                  : "text-slate-500 dark:text-slate-400"
                               }`}
                             >
                               {option.description}
