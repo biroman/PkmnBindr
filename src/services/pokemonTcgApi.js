@@ -360,6 +360,22 @@ export const pokemonTcgApi = {
     }
   },
 
+  async getFeaturedCards(limit = 12) {
+    try {
+      const response = await apiRequest("/cards", {
+        params: {
+          q: 'supertype:Pokémon rarity:"Rare Holo"',
+          pageSize: limit,
+        },
+      });
+
+      return response.data || [];
+    } catch (error) {
+      console.error("Get featured cards failed:", error);
+      throw new Error(`Failed to get featured cards: ${error.message}`);
+    }
+  },
+
   async getSets() {
     try {
       const allSets = [];
