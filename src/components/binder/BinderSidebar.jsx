@@ -2,17 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import {
   Cog6ToothIcon,
   PencilIcon,
-  CheckIcon,
-  XMarkIcon,
-  EyeSlashIcon,
-  EyeIcon,
-  PlusIcon,
-  TrashIcon,
   CloudArrowUpIcon,
   CloudIcon,
   ArrowPathIcon,
   ExclamationTriangleIcon,
   ArrowUturnLeftIcon,
+  EyeIcon,
 } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
 import { useAuth } from "../../hooks/useAuth";
@@ -20,6 +15,7 @@ import { toast } from "react-hot-toast";
 import PageManager from "./PageManager";
 import RevertConfirmationModal from "./RevertConfirmationModal";
 import SortControls from "./SortControls";
+import MissingCardsModal from "./MissingCardsModal";
 import { X } from "lucide-react";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
@@ -142,182 +138,6 @@ const BinderNameEditor = ({ currentName, onNameChange }) => {
           </button>
         </div>
       )}
-    </div>
-  );
-};
-
-const WantListTracker = ({ binder, onToggleCardVisibility }) => {
-  const [newCardNumber, setNewCardNumber] = useState("");
-  const [wantList, setWantList] = useState(binder?.metadata?.wantList || []);
-
-  // Update want list when binder changes
-  useEffect(() => {
-    setWantList(binder?.metadata?.wantList || []);
-  }, [binder?.metadata?.wantList]);
-
-  const handleAddMissingCard = () => {
-    const cardNumber = newCardNumber.trim();
-    if (!cardNumber) return;
-
-    // Parse card number (remove # if present)
-    let cleanNumber = cardNumber.replace("#", "");
-
-    // Validate reverse holo format (allow both "rh" and "RH")
-    const isReverseHolo = /rh$/i.test(cleanNumber);
-    if (isReverseHolo) {
-      // Normalize to lowercase "rh"
-      cleanNumber = cleanNumber.replace(/rh$/i, "rh");
-    }
-
-    if (missingCards.includes(cleanNumber)) {
-      toast.error("Card number already in missing list!");
-      return;
-    }
-
-    const updatedMissingCards = [...missingCards, cleanNumber].sort((a, b) => {
-      // Extract base number and reverse holo flag for sorting
-      const parseCard = (card) => {
-        const isRH = card.endsWith("rh");
-        const baseNum = isRH ? card.slice(0, -2) : card;
-        const num = parseInt(baseNum);
-        return {
-          baseNum: isNaN(num) ? baseNum : num,
-          isRH,
-          isNumeric: !isNaN(num),
-        };
-      };
-
-      const aCard = parseCard(a);
-      const bCard = parseCard(b);
-
-      // First sort by base number
-      if (aCard.isNumeric && bCard.isNumeric) {
-        if (aCard.baseNum !== bCard.baseNum) {
-          return aCard.baseNum - bCard.baseNum;
-        }
-        // Same base number: regular before reverse holo
-        return aCard.isRH - bCard.isRH;
-      } else {
-        // Alphabetical for non-numeric
-        const comparison = String(aCard.baseNum).localeCompare(
-          String(bCard.baseNum)
-        );
-        if (comparison !== 0) return comparison;
-        return aCard.isRH - bCard.isRH;
-      }
-    });
-
-    setMissingCards(updatedMissingCards);
-    onToggleCardVisibility(cleanNumber, true); // true = mark as missing
-    setNewCardNumber("");
-
-    const cardType = isReverseHolo ? "reverse holo" : "regular";
-    const displayNumber = isReverseHolo
-      ? cleanNumber.slice(0, -2)
-      : cleanNumber;
-
-    toast.success(`Card #${displayNumber} (${cardType}) marked as missing`);
-  };
-
-  const handleRemoveMissingCard = (cardNumber) => {
-    const updatedMissingCards = missingCards.filter(
-      (num) => num !== cardNumber
-    );
-    setMissingCards(updatedMissingCards);
-    onToggleCardVisibility(cardNumber, false); // false = mark as collected
-    toast.success(`Card #${cardNumber} marked as collected`);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleAddMissingCard();
-    }
-  };
-
-  return (
-    <div className="space-y-3">
-      <label className="block text-sm font-medium text-primary">
-        Missing Cards Tracker
-      </label>
-
-      {/* Add new missing card */}
-      <div className="flex gap-2">
-        <div className="flex-1 relative">
-          <input
-            type="text"
-            value={newCardNumber}
-            onChange={(e) => setNewCardNumber(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Enter card # (e.g., 25, 25rh for reverse holo)"
-            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
-          />
-        </div>
-        <button
-          onClick={handleAddMissingCard}
-          disabled={!newCardNumber.trim()}
-          className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-slate-400 dark:disabled:bg-slate-600 text-white rounded-lg transition-colors"
-          title="Mark as missing"
-        >
-          <PlusIcon className="w-4 h-4" />
-        </button>
-      </div>
-
-      {/* Missing cards list */}
-      {missingCards.length > 0 && (
-        <div className="space-y-2">
-          <div className="text-xs text-secondary font-medium">
-            Missing Cards ({missingCards.length})
-          </div>
-          <div className="max-h-40 overflow-y-auto space-y-1">
-            {missingCards.map((cardNumber) => {
-              const isReverseHolo = cardNumber.endsWith("rh");
-              const displayNumber = isReverseHolo
-                ? cardNumber.slice(0, -2)
-                : cardNumber;
-              const cardType = isReverseHolo ? "RH" : "";
-
-              return (
-                <div
-                  key={cardNumber}
-                  className="flex items-center justify-between px-3 py-2 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg"
-                >
-                  <div className="flex items-center gap-2">
-                    <EyeSlashIcon className="w-4 h-4 text-red-500" />
-                    <span className="text-sm font-medium text-red-700 dark:text-red-300">
-                      #{displayNumber}
-                      {cardType && (
-                        <span className="text-xs ml-1 text-red-600 dark:text-red-400">
-                          {cardType}
-                        </span>
-                      )}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => handleRemoveMissingCard(cardNumber)}
-                    className="p-1 text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-200 hover:bg-red-100 dark:hover:bg-red-900 rounded transition-colors"
-                    title="Mark as collected"
-                  >
-                    <CheckIcon className="w-4 h-4" />
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {missingCards.length === 0 && (
-        <div className="text-xs text-secondary text-center py-4 bg-secondary rounded-lg border border-dashed border-border">
-          No missing cards tracked yet
-        </div>
-      )}
-
-      <div className="text-xs text-secondary">
-        💡 Add card numbers you're missing to track your collection progress.
-        Cards will be visually marked in the binder.
-        <br />
-        Use "rh" suffix for reverse holos (e.g., #25rh).
-      </div>
     </div>
   );
 };
@@ -584,7 +404,12 @@ const SyncButton = ({ binder, onShowRevertModal, isReverting }) => {
   );
 };
 
-const BulkMissingToggle = ({ binder, onBulkToggleMissing, isReadOnly }) => {
+const BulkMissingToggle = ({
+  binder,
+  onBulkToggleMissing,
+  isReadOnly,
+  onShowMissingCardsModal,
+}) => {
   if (isReadOnly || !onBulkToggleMissing) return null;
 
   const allCardInstanceIds = Object.values(binder?.cards || {})
@@ -688,6 +513,19 @@ const BulkMissingToggle = ({ binder, onBulkToggleMissing, isReadOnly }) => {
             }}
           />
         </div>
+
+        {/* View Missing Cards Button - Only show if there are missing cards */}
+        {missingCount > 0 && (
+          <button
+            onClick={() => onShowMissingCardsModal && onShowMissingCardsModal()}
+            className="w-full mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-gray-300 dark:bg-gray-500 text-gray-700 dark:text-gray-200 font-medium rounded-lg transition-all duration-200 transform hover:bg-gray-400 dark:hover:bg-gray-600"
+          >
+            <EyeIcon className="w-4 h-4" />
+            <span className="text-sm font-medium">
+              View Missing Cards ({missingCount})
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );
@@ -801,33 +639,12 @@ const BinderSidebar = ({
   } = useBinderContext();
   const [showRevertModal, setShowRevertModal] = useState(false);
   const [isReverting, setIsReverting] = useState(false);
+  const [showMissingCardsModal, setShowMissingCardsModal] = useState(false);
 
   const handleToggleCollapse = () => {
     if (onCollapseChange) {
       onCollapseChange(!isCollapsed);
     }
-  };
-
-  const handleToggleCardVisibility = async (cardNumber, isMissing) => {
-    if (!binder) return;
-
-    const currentMissingCards = binder.metadata?.missingCards || [];
-    let updatedMissingCards;
-
-    if (isMissing) {
-      // Add to missing cards
-      updatedMissingCards = [...currentMissingCards, cardNumber];
-    } else {
-      // Remove from missing cards
-      updatedMissingCards = currentMissingCards.filter(
-        (num) => num !== cardNumber
-      );
-    }
-
-    // Update binder metadata
-    await updateBinderMetadata(binder.id, {
-      missingCards: updatedMissingCards,
-    });
   };
 
   const handleConfirmRevert = async () => {
@@ -878,6 +695,25 @@ const BinderSidebar = ({
     }
   };
 
+  const handleMarkAsCollected = (instanceId) => {
+    if (!binder?.id) {
+      toast.error("No binder ID found");
+      return;
+    }
+
+    // Remove the card from missing instances
+    const updatedMissingInstances = (
+      binder.metadata?.missingInstances || []
+    ).filter((id) => id !== instanceId);
+
+    // Update the binder metadata
+    updateBinderMetadata(binder.id, {
+      missingInstances: updatedMissingInstances,
+    });
+
+    toast.success("Card marked as collected!");
+  };
+
   if (!binder) return null;
 
   // Mobile mode: return just the content without fixed positioning
@@ -901,6 +737,7 @@ const BinderSidebar = ({
           binder={binder}
           onBulkToggleMissing={onBulkToggleMissing}
           isReadOnly={isReadOnly}
+          onShowMissingCardsModal={() => setShowMissingCardsModal(true)}
         />
 
         {/* Card Back Settings */}
@@ -944,6 +781,14 @@ const BinderSidebar = ({
           onConfirm={handleConfirmRevert}
           binderName={binder?.metadata?.name || "Unnamed Binder"}
           isLoading={isReverting}
+        />
+
+        {/* Missing Cards Modal */}
+        <MissingCardsModal
+          isOpen={showMissingCardsModal}
+          onClose={() => setShowMissingCardsModal(false)}
+          binder={binder}
+          onMarkAsCollected={handleMarkAsCollected}
         />
       </div>
     );
@@ -992,6 +837,7 @@ const BinderSidebar = ({
             binder={binder}
             onBulkToggleMissing={onBulkToggleMissing}
             isReadOnly={isReadOnly}
+            onShowMissingCardsModal={() => setShowMissingCardsModal(true)}
           />
 
           {/* Card Back Settings */}
@@ -1041,6 +887,14 @@ const BinderSidebar = ({
         onConfirm={handleConfirmRevert}
         binderName={binder?.metadata?.name || "Unnamed Binder"}
         isLoading={isReverting}
+      />
+
+      {/* Missing Cards Modal - rendered outside sidebar */}
+      <MissingCardsModal
+        isOpen={showMissingCardsModal}
+        onClose={() => setShowMissingCardsModal(false)}
+        binder={binder}
+        onMarkAsCollected={handleMarkAsCollected}
       />
     </>
   );

@@ -602,7 +602,7 @@ const CoverPage = ({
                 <h1
                   className={`${
                     isMobile ? "text-xs" : "text-base sm:text-xl md:text-2xl"
-                  } font-bold text-gray-800 leading-tight`}
+                  } font-bold text-gray-800 dark:text-gray-200 leading-tight`}
                 >
                   Binder Quick Guide
                 </h1>
@@ -610,7 +610,7 @@ const CoverPage = ({
               <p
                 className={`${
                   isMobile ? "text-xs" : "text-xs sm:text-sm"
-                } text-gray-600 font-medium`}
+                } text-gray-600 dark:text-gray-400 font-medium`}
               >
                 Tips & Shortcuts for{" "}
                 {binder?.metadata?.name || "Your Collection"}
