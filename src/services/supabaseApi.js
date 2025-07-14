@@ -245,7 +245,33 @@ export const supabaseApi = {
         },
       });
 
-      return response.data?.[0] || null;
+      const card = response.data?.[0] || null;
+
+      // If we have a card with set_id, try to get the set information
+      if (card && card.set_id) {
+        try {
+          const setResponse = await apiRequest(`/sets`, {
+            params: {
+              select: "*",
+              id: `eq.${card.set_id}`,
+              limit: 1,
+            },
+          });
+
+          const set = setResponse.data?.[0] || null;
+          if (set) {
+            // Add set information to the card
+            card.set_name = set.name;
+            card.set_series = set.series;
+            card.set_symbol = set.images?.symbol || "";
+          }
+        } catch (setError) {
+          console.warn("Failed to fetch set information for card:", setError);
+          // Continue without set information
+        }
+      }
+
+      return card;
     } catch (error) {
       console.error("Supabase get card failed:", error);
       throw new Error(`Failed to get card: ${error.message}`);
@@ -306,6 +332,30 @@ export const supabaseApi = {
         const numB = parseInt(b.number, 10) || 0;
         return numA - numB;
       });
+
+      // Add set information to all cards
+      try {
+        const setResponse = await apiRequest(`/sets`, {
+          params: {
+            select: "*",
+            id: `eq.${setId}`,
+            limit: 1,
+          },
+        });
+
+        const set = setResponse.data?.[0] || null;
+        if (set) {
+          // Add set information to all cards
+          sortedCards.forEach((card) => {
+            card.set_name = set.name;
+            card.set_series = set.series;
+            card.set_symbol = set.images?.symbol || "";
+          });
+        }
+      } catch (setError) {
+        console.warn("Failed to fetch set information for cards:", setError);
+        // Continue without set information
+      }
 
       return sortedCards;
     } catch (error) {
