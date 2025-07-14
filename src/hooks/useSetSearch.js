@@ -58,7 +58,7 @@ const useSetSearch = () => {
         // Add total cards count to each set if available
         const setsWithDetails = setsData.map((set) => ({
           ...set,
-          cardCount: set.total || set.totalCount || 0,
+          cardCount: set.total || set.totalCount || set.printedTotal || 0,
           symbol: set.images?.symbol || "",
           logo: set.images?.logo || "",
         }));

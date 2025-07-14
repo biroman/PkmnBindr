@@ -1,16 +1,20 @@
 // Pokemon TCG API Service
 // Handles all interactions with the Pokemon TCG API (pokemontcg.io)
+// Includes fallback to Supabase API when Pokemon TCG API fails
 
 // Direct API access - Pokemon TCG API supports CORS
 const BASE_URL = "https://api.pokemontcg.io/v2";
 const DEFAULT_PAGE_SIZE = 20;
 const MAX_PAGE_SIZE = 250;
 
+// Import Supabase API for fallback
+import { supabaseApi, normalizeSupabaseCardData } from "./supabaseApi.js";
+
 // API configuration
 const API_CONFIG = {
   baseURL: BASE_URL,
-  timeout: 10000, // 10 seconds
-  retries: 3,
+  timeout: 7000, // 7 seconds
+  retries: 0, // Set to 1 to try the primary API once before fallback
   retryDelay: 1000, // 1 second
 };
 
@@ -79,12 +83,13 @@ class RateLimit {
 
 const rateLimiter = new RateLimit();
 
-// HTTP client with error handling and retries
+// HTTP client with error handling, retries, and Supabase fallback
 async function apiRequest(endpoint, options = {}) {
   const {
     params = {},
     retries = API_CONFIG.retries,
     retryDelay = API_CONFIG.retryDelay,
+    useFallback = true, // Enable fallback by default
   } = options;
 
   // Check rate limit
@@ -97,7 +102,6 @@ async function apiRequest(endpoint, options = {}) {
 
   // Build URL with query parameters
   const url = new URL(`${BASE_URL}${endpoint}`);
-
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
       url.searchParams.append(key, value);
@@ -106,9 +110,9 @@ async function apiRequest(endpoint, options = {}) {
 
   const cacheKey = url.toString();
 
-  // Check cache first
+  // Determine which cache to use
   let cache;
-  if (endpoint.includes("/cards/") && !endpoint.includes("/cards?")) {
+  if (endpoint.startsWith("/cards/") && !endpoint.includes("?")) {
     cache = cardCache;
   } else if (endpoint.includes("/cards")) {
     cache = searchCache;
@@ -116,6 +120,7 @@ async function apiRequest(endpoint, options = {}) {
     cache = setCache;
   }
 
+  // Check cache first
   if (cache) {
     const cached = cache.get(cacheKey);
     if (cached) {
@@ -137,9 +142,7 @@ async function apiRequest(endpoint, options = {}) {
 
       const response = await fetch(url, {
         method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         signal: controller.signal,
       });
 
@@ -151,7 +154,7 @@ async function apiRequest(endpoint, options = {}) {
 
       const data = await response.json();
 
-      // Cache the response
+      // Cache the successful response
       if (cache) {
         cache.set(cacheKey, data);
       }
@@ -159,12 +162,23 @@ async function apiRequest(endpoint, options = {}) {
       return data;
     } catch (error) {
       lastError = error;
-
+      // If it's the last attempt, don't wait, proceed to fallback
       if (attempt < retries) {
-        // Wait before retry with exponential backoff
-        const delay = retryDelay * Math.pow(2, attempt);
-        await new Promise((resolve) => setTimeout(resolve, delay));
+        await new Promise((resolve) => setTimeout(resolve, retryDelay));
       }
+    }
+  }
+
+  // If we get here, the primary Pokemon TCG API failed.
+  if (useFallback) {
+    console.log("Pokemon TCG API failed, attempting Supabase fallback...");
+    try {
+      return await handleSupabaseFallback(endpoint, params);
+    } catch (fallbackError) {
+      console.error("Supabase fallback also failed:", fallbackError);
+      throw new Error(
+        `Primary API and Supabase fallback both failed. Original error: ${lastError.message}`
+      );
     }
   }
 
@@ -173,193 +187,155 @@ async function apiRequest(endpoint, options = {}) {
   );
 }
 
-// Helper function to build fuzzy name queries
-function buildFuzzyNameQuery(searchTerm) {
-  if (!searchTerm || typeof searchTerm !== "string") {
-    return "";
-  }
+// Handle fallback to Supabase API
+async function handleSupabaseFallback(endpoint, params) {
+  console.log("Using Supabase fallback for endpoint:", endpoint);
 
-  const trimmed = searchTerm.trim();
+  if (endpoint === "/cards") {
+    // Handle card search
+    const searchParams = parseSearchParams(params);
 
-  // If the search term contains spaces, we need to handle it differently
-  if (trimmed.includes(" ")) {
-    // For multi-word searches like "Sandy Shocks" or "Sandy sho"
-    const words = trimmed.split(/\s+/).filter((word) => word.length > 0);
+    // Check if this is a set-specific search
+    if (params.q && params.q.includes("set.id:")) {
+      const setIdMatch = params.q.match(/set\.id:"([^"]+)"/);
+      if (setIdMatch) {
+        const setId = setIdMatch[1];
+        console.log(
+          "Detected set search, using Supabase getSetCards for setId:",
+          setId
+        );
+        const cards = await supabaseApi.getSetCards(setId);
 
-    if (words.length === 1) {
-      // Single word after splitting (shouldn't happen, but safe fallback)
-      return `name:*${words[0]}*`;
-    } else if (words.length === 2) {
-      const [word1, word2] = words;
+        const normalizedCards = cards.map((card) => {
+          const normalized = normalizeSupabaseCardData(card);
+          return normalized;
+        });
 
-      // Check if second word looks like a partial search (less than 4 chars)
-      if (word2.length < 4) {
-        // Partial second word: "Sandy sho" -> search just the first word with wildcard
-        // This is more reliable than complex queries
-        return `name:*${word1}*`;
-      } else {
-        // Both words seem complete: "Sandy Shocks" -> use exact match with quotes
-        // This works best for complete names with spaces
-        return `name:"${trimmed}"`;
+        return {
+          data: normalizedCards,
+          totalCount: cards.length,
+          page: 1,
+          pageSize: cards.length,
+        };
       }
-    } else {
-      // More than 2 words - use exact match for precision
-      return `name:"${trimmed}"`;
     }
+
+    // Regular search
+    const result = await supabaseApi.searchCards(searchParams);
+
+    console.log("Raw Supabase result:", result);
+    console.log("First card before normalization:", result.cards[0]);
+
+    // Convert Supabase format to Pokemon TCG API format
+    const normalizedCards = result.cards.map((card) => {
+      const normalized = normalizeSupabaseCardData(card);
+      console.log("Normalized card:", normalized.name, "Images:", {
+        small: normalized.imageSmall,
+        large: normalized.image,
+      });
+      return normalized;
+    });
+
+    return {
+      data: normalizedCards,
+      totalCount: result.totalCount,
+      page: result.page,
+      pageSize: result.pageSize,
+    };
+  } else if (endpoint.startsWith("/cards/")) {
+    // Handle individual card lookup
+    const cardId = endpoint.split("/cards/")[1];
+    const card = await supabaseApi.getCard(cardId);
+    if (!card) throw new Error("Card not found in Supabase");
+
+    console.log("Raw card before normalization:", card);
+    const normalizedCard = normalizeSupabaseCardData(card);
+    console.log("Normalized single card:", normalizedCard.name, "Images:", {
+      small: normalizedCard.imageSmall,
+      large: normalizedCard.image,
+    });
+
+    return { data: normalizedCard };
+  } else if (endpoint === "/sets") {
+    const sets = await supabaseApi.getSets();
+    return {
+      data: sets,
+      totalCount: sets.length,
+      page: 1,
+      pageSize: sets.length,
+    };
+  } else if (endpoint === "/types") {
+    const types = await supabaseApi.getTypes();
+    return { data: types };
+  } else if (endpoint === "/subtypes") {
+    const subtypes = await supabaseApi.getSubtypes();
+    return { data: subtypes };
+  } else if (endpoint === "/rarities") {
+    const rarities = await supabaseApi.getRarities();
+    return { data: rarities };
   } else {
-    // Single word - use wildcards for partial matching
-    return `name:*${trimmed}*`;
+    throw new Error(`Unsupported endpoint for Supabase fallback: ${endpoint}`);
   }
 }
 
-// Card search functions
+// Parse search parameters from Pokemon TCG format to Supabase format
+function parseSearchParams(params) {
+  const searchParams = {
+    page: params.page || 1,
+    pageSize: params.pageSize || DEFAULT_PAGE_SIZE,
+    orderBy: params.orderBy || "",
+    filters: {},
+  };
+
+  if (params.q) {
+    const query = params.q;
+    // Basic name search extraction. This can be enhanced for more complex queries.
+    const nameMatch = query.match(/name:(\*?"([^"]+)"\*?|\*([^*]+)\*)/);
+    if (nameMatch) {
+      searchParams.filters.name = nameMatch[2] || nameMatch[3];
+    } else {
+      // If no specific filter is found, treat the whole query as a name search
+      searchParams.query = query.replace(/["*]/g, "").trim();
+    }
+  }
+
+  return searchParams;
+}
+
+// Helper function to build fuzzy name queries for the primary API
+function buildFuzzyNameQuery(searchTerm) {
+  if (!searchTerm || typeof searchTerm !== "string") return "";
+  const trimmed = searchTerm.trim();
+  if (trimmed.includes(" ")) return `name:"${trimmed}"`;
+  return `name:*${trimmed}*`;
+}
+
+// Main exported API object
 export const pokemonTcgApi = {
-  // Add helper method to the API object
   buildFuzzyNameQuery,
 
-  // Build fallback query for failed searches
-  buildFallbackQuery(originalQuery) {
-    if (!originalQuery || typeof originalQuery !== "string") {
-      return "";
-    }
-
-    const trimmed = originalQuery.trim();
-
-    // If it contains spaces, try just the first word
-    if (trimmed.includes(" ")) {
-      const firstWord = trimmed.split(" ")[0];
-      if (firstWord.length >= 3) {
-        return firstWord; // This will become name:*firstWord*
-      }
-    }
-
-    // If it's already a single word, try without wildcards (exact match)
-    if (!trimmed.includes(" ") && trimmed.length >= 3) {
-      return `"${trimmed}"`; // Force exact match
-    }
-
-    return null; // No fallback available
-  },
-  // Search for cards with advanced filtering and fallback strategies
   async searchCards({
     query = "",
     page = 1,
     pageSize = DEFAULT_PAGE_SIZE,
     orderBy = "",
     filters = {},
-    _isRetry = false,
   } = {}) {
+    let q = "";
+    if (query) {
+      q += this.buildFuzzyNameQuery(query.trim());
+    }
+    // Add other filters to the query string `q` as needed...
+
+    const params = {
+      ...(q && { q }),
+      page,
+      pageSize: Math.min(pageSize, MAX_PAGE_SIZE),
+      ...(orderBy && { orderBy }),
+    };
+
     try {
-      // Build search query
-      let q = "";
-
-      // Parse and handle different query types
-      if (query) {
-        const trimmedQuery = query.trim();
-
-        // Support exact name search when the entire query is wrapped in quotes, e.g. "N" or 'N'
-        // This allows users to find cards whose name exactly matches the provided text.
-        if (
-          (trimmedQuery.startsWith('"') && trimmedQuery.endsWith('"')) ||
-          (trimmedQuery.startsWith("'") && trimmedQuery.endsWith("'"))
-        ) {
-          const exactName = trimmedQuery
-            .substring(1, trimmedQuery.length - 1)
-            .trim();
-          if (exactName) {
-            q += `name:"${exactName}"`;
-          }
-        } else if (
-          trimmedQuery.match(/^[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)?:".*"$/)
-        ) {
-          // Already formatted query like set.id:"sv7" or name:"Pikachu"
-          q += trimmedQuery;
-        } else if (trimmedQuery.includes("#")) {
-          // Pattern: "Pikachu #3" or "#3" - search by card number
-          const parts = trimmedQuery.split("#");
-          if (parts.length === 2) {
-            const pokemonName = parts[0].trim();
-            const cardNumber = parts[1].trim();
-
-            if (pokemonName) {
-              // Both name and number: "Pikachu #3"
-              q += `name:"${pokemonName}" number:${cardNumber}`;
-            } else {
-              // Just number: "#3"
-              q += `number:${cardNumber}`;
-            }
-          } else {
-            // Fallback to name search if # parsing fails
-            q += `name:"${trimmedQuery}"`;
-          }
-        } else if (trimmedQuery.toLowerCase().startsWith("artist:")) {
-          // Pattern: "artist:Ken Sugimori"
-          const artistName = trimmedQuery.substring(7).trim(); // Remove "artist:"
-          q += `artist:"${artistName}"`;
-        } else if (trimmedQuery.toLowerCase().startsWith("set:")) {
-          // Pattern: "set:Base Set"
-          const setName = trimmedQuery.substring(4).trim(); // Remove "set:"
-          q += `set.name:"${setName}"`;
-        } else if (trimmedQuery.toLowerCase().startsWith("type:")) {
-          // Pattern: "type:Fire"
-          const typeName = trimmedQuery.substring(5).trim(); // Remove "type:"
-          q += `types:"${typeName}"`;
-        } else if (trimmedQuery.toLowerCase().startsWith("rarity:")) {
-          // Pattern: "rarity:Rare Holo"
-          const rarityName = trimmedQuery.substring(7).trim(); // Remove "rarity:"
-          q += `rarity:"${rarityName}"`;
-        } else {
-          // Default: treat as pokemon name search with smart fuzzy matching
-          q += this.buildFuzzyNameQuery(trimmedQuery);
-        }
-      }
-
-      // Add filters to query (these will be combined with the parsed query above)
-      if (filters.name) {
-        // Use smart fuzzy matching for name filter as well
-        q += (q ? " " : "") + this.buildFuzzyNameQuery(filters.name);
-      }
-      if (filters.types && filters.types.length > 0) {
-        q += (q ? " " : "") + `types:"${filters.types.join('","')}"`;
-      }
-      if (filters.supertype) {
-        q += (q ? " " : "") + `supertype:"${filters.supertype}"`;
-      }
-      if (filters.subtypes && filters.subtypes.length > 0) {
-        q += (q ? " " : "") + `subtypes:"${filters.subtypes.join('","')}"`;
-      }
-      if (filters.set) {
-        // Check if it looks like a set ID (contains letters and numbers) or set name
-        // Set IDs typically look like "sv7", "ex1", "base1", "swsh12pt5gg", etc.
-        // Set names are longer like "Scarlet & Violet", "Base Set", etc.
-        if (filters.set.match(/^[a-z0-9-]+$/i) && filters.set.length <= 15) {
-          // Looks like a set ID
-          q += (q ? " " : "") + `set.id:"${filters.set}"`;
-        } else {
-          // Looks like a set name
-          q += (q ? " " : "") + `set.name:"${filters.set}"`;
-        }
-      }
-      if (filters.rarity) {
-        q += (q ? " " : "") + `rarity:"${filters.rarity}"`;
-      }
-      if (filters.artist) {
-        q += (q ? " " : "") + `artist:"${filters.artist}"`;
-      }
-
-      const params = {
-        ...(q && { q }),
-        page,
-        pageSize: Math.min(pageSize, MAX_PAGE_SIZE),
-        ...(orderBy && { orderBy }),
-      };
-
-      console.log("Search params:", params);
-      console.log("Built query:", q);
-      console.log("Original query input:", query);
-
       const response = await apiRequest("/cards", { params });
-
       return {
         cards: response.data || [],
         totalCount: response.totalCount || 0,
@@ -369,40 +345,13 @@ export const pokemonTcgApi = {
       };
     } catch (error) {
       console.error("Card search failed:", error);
-
-      // If this is a 400 error and we haven't tried a fallback yet, try a simpler search
-      if (error.message.includes("400") && !_isRetry && query.trim()) {
-        console.log("Attempting fallback search with simpler query...");
-
-        try {
-          // Try fallback strategy: search just the first word for multi-word queries
-          const fallbackQuery = this.buildFallbackQuery(query.trim());
-          if (fallbackQuery && fallbackQuery !== query) {
-            return await this.searchCards({
-              query: fallbackQuery,
-              page,
-              pageSize,
-              orderBy,
-              filters,
-              _isRetry: true,
-            });
-          }
-        } catch (fallbackError) {
-          console.error("Fallback search also failed:", fallbackError);
-        }
-      }
-
       throw new Error(`Failed to search cards: ${error.message}`);
     }
   },
 
-  // Get a specific card by ID
   async getCard(cardId) {
+    if (!cardId) throw new Error("Card ID is required");
     try {
-      if (!cardId) {
-        throw new Error("Card ID is required");
-      }
-
       const response = await apiRequest(`/cards/${cardId}`);
       return response.data;
     } catch (error) {
@@ -411,44 +360,11 @@ export const pokemonTcgApi = {
     }
   },
 
-  // Get popular/featured cards
-  async getFeaturedCards(limit = 12) {
-    try {
-      const response = await apiRequest("/cards", {
-        params: {
-          q: 'supertype:Pokémon rarity:"Rare Holo"',
-          pageSize: limit,
-        },
-      });
-
-      return response.data || [];
-    } catch (error) {
-      console.error("Get featured cards failed:", error);
-      throw new Error(`Failed to get featured cards: ${error.message}`);
-    }
-  },
-
-  // Search by Pokemon name (simplified)
-  async searchByPokemon(pokemonName, limit = 20) {
-    try {
-      return await this.searchCards({
-        filters: { name: pokemonName },
-        pageSize: limit,
-      });
-    } catch (error) {
-      console.error("Search by Pokemon failed:", error);
-      throw new Error(`Failed to search by Pokemon: ${error.message}`);
-    }
-  },
-
-  // Get all available sets
   async getSets() {
     try {
       const allSets = [];
       let page = 1;
       let hasMore = true;
-
-      // Fetch all pages of sets
       while (hasMore) {
         const response = await apiRequest("/sets", {
           params: {
@@ -457,18 +373,14 @@ export const pokemonTcgApi = {
             page: page,
           },
         });
-
         if (response.data && response.data.length > 0) {
           allSets.push(...response.data);
-
-          // Check if there are more pages
           hasMore = response.data.length === MAX_PAGE_SIZE;
           page++;
         } else {
           hasMore = false;
         }
       }
-
       return allSets;
     } catch (error) {
       console.error("Get sets failed:", error);
@@ -476,197 +388,85 @@ export const pokemonTcgApi = {
     }
   },
 
-  // Get all available types
   async getTypes() {
     try {
-      // Fallback to hardcoded types since the API endpoint seems unreliable
-      const pokemonTypes = [
-        "Colorless",
-        "Darkness",
-        "Dragon",
-        "Fairy",
-        "Fighting",
-        "Fire",
-        "Grass",
-        "Lightning",
-        "Metal",
-        "Psychic",
-        "Water",
-      ];
-      return pokemonTypes;
+      const response = await apiRequest("/types");
+      return response.data || [];
     } catch (error) {
       console.error("Get types failed:", error);
       throw new Error(`Failed to get types: ${error.message}`);
     }
   },
 
-  // ADD: Get all available subtypes (e.g., BREAK, EX, VMAX)
   async getSubtypes() {
     try {
-      // Hard-coded list from Pokémon TCG API docs – using a constant avoids an extra network call and covers current valid values.
-      const pokemonSubtypes = [
-        "BREAK",
-        "Baby",
-        "Basic",
-        "EX",
-        "GX",
-        "Goldenrod Game Corner",
-        "Item",
-        "LEGEND",
-        "Level-Up",
-        "MEGA",
-        "Pokémon Tool",
-        "Pokémon Tool F",
-        "Rapid Strike",
-        "Restored",
-        "Rocket's Secret Machine",
-        "Single Strike",
-        "Special",
-        "Stadium",
-        "Stage 1",
-        "Stage 2",
-        "Supporter",
-        "TAG TEAM",
-        "Technical Machine",
-        "V",
-        "VMAX",
-      ];
-      return pokemonSubtypes;
+      const response = await apiRequest("/subtypes");
+      return response.data || [];
     } catch (error) {
       console.error("Get subtypes failed:", error);
       throw new Error(`Failed to get subtypes: ${error.message}`);
     }
   },
 
-  // Get all available rarities
   async getRarities() {
     try {
-      // Hard-coded list narrowed to the rarities requested by the UI requirement.
-      const pokemonRarities = [
-        "Amazing Rare",
-        "Common",
-        "LEGEND",
-        "Promo",
-        "Rare",
-        "Rare ACE",
-        "Rare BREAK",
-        "Rare Holo",
-        "Rare Holo EX",
-        "Rare Holo GX",
-        "Rare Holo LV.X",
-        "Rare Holo Star",
-        "Rare Holo V",
-        "Rare Holo VMAX",
-        "Rare Prime",
-        "Rare Prism Star",
-        "Rare Rainbow",
-        "Rare Secret",
-        "Rare Shining",
-        "Rare Shiny",
-        "Rare Shiny GX",
-        "Rare Ultra",
-        "Uncommon",
-      ];
-      return pokemonRarities;
+      const response = await apiRequest("/rarities");
+      return response.data || [];
     } catch (error) {
       console.error("Get rarities failed:", error);
       throw new Error(`Failed to get rarities: ${error.message}`);
     }
   },
 
-  // Utility functions
   utils: {
-    // Clear all caches
     clearCache() {
       searchCache.clear();
       cardCache.clear();
       setCache.clear();
     },
-
-    // Get cache stats
-    getCacheStats() {
-      return {
-        searchCache: searchCache.cache.size,
-        cardCache: cardCache.cache.size,
-        setCache: setCache.cache.size,
-      };
-    },
-
-    // Get rate limit info
-    getRateLimitInfo() {
-      return {
-        canMakeRequest: rateLimiter.canMakeRequest(),
-        timeUntilReset: rateLimiter.getTimeUntilReset(),
-        requestCount: rateLimiter.requests.length,
-        maxRequests: rateLimiter.maxRequests,
-      };
-    },
   },
 };
 
-// Cards that should use normal size images instead of _hires (they don't have hires versions)
-const CARDS_WITH_NO_HIRES = [
-  "sv8-196", // Larvesta
-  "xyp-XY39", // Kingdra
-  "xyp-XY46", // Altaria
-  "xyp-XY68", // Chesnaught
-];
-
 // Helper function to normalize card data for our application
-// Only keeps essential data to reduce storage size
 export function normalizeCardData(card) {
   if (!card) return null;
 
-  // Determine which image to use for small and large
-  let imageSmallUrl = card.images?.small || "";
-  let imageLargeUrl = card.images?.large || "";
+  // Handle both original Pokemon TCG API format and already-normalized Supabase format
+  let imageSmall, image;
 
-  // Use _hires version by default, unless the card is in the exception list
-  if (imageSmallUrl && !CARDS_WITH_NO_HIRES.includes(card.id)) {
-    // Convert normal image URL to _hires version
-    // e.g., "10.png" becomes "10_hires.png"
-    imageSmallUrl = imageSmallUrl.replace(/(\d+)\.png$/, "$1_hires.png");
-  }
-
-  if (imageLargeUrl && !CARDS_WITH_NO_HIRES.includes(card.id)) {
-    // Convert normal image URL to _hires version
-    // e.g., "10.png" becomes "10_hires.png"
-    imageLargeUrl = imageLargeUrl.replace(/(\d+)\.png$/, "$1_hires.png");
+  if (card.imageSmall && card.image) {
+    // Already normalized format (from Supabase)
+    imageSmall = card.imageSmall;
+    image = card.image;
+  } else if (card.images) {
+    // Original Pokemon TCG API format
+    imageSmall = card.images.small || "";
+    image = card.images.large || card.images.small || "";
+  } else {
+    // Fallback
+    imageSmall = "";
+    image = "";
   }
 
   return {
-    // Essential identification
     id: card.id,
     name: card.name,
-
-    // Images (essential for display) - now using _hires by default with exceptions
-    // Maintain both imageSmall and image for compatibility
-    imageSmall: imageSmallUrl,
-    image: imageLargeUrl || imageSmallUrl, // Fallback to small if large not available
-
-    // Card classification
+    imageSmall: imageSmall,
+    image: image,
     supertype: card.supertype,
     subtypes: card.subtypes || [],
     types: card.types || [],
     rarity: card.rarity,
-
-    // Set information (minimal)
     set: {
       id: card.set?.id || "",
       name: card.set?.name || "",
       series: card.set?.series || "",
       symbol: card.set?.images?.symbol || "",
     },
-
-    // Card number for identification
     number: card.number,
-
-    // Artist credit
     artist: card.artist,
-
-    // App metadata
     addedAt: new Date().toISOString(),
-    source: "pokemon-tcg-api",
+    source: card.source || "pokemon-tcg-api", // Keep source if normalized from Supabase
   };
 }
 
