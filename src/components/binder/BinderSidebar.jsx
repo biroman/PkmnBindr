@@ -652,6 +652,43 @@ const BulkMissingToggle = ({ binder, onBulkToggleMissing, isReadOnly }) => {
           {missingCount} of {allCardInstanceIds.length} cards marked as missing
         </div>
       </div>
+      <div className="text-xs text-gray-500 dark:text-gray-400">
+        {/*add percentage collected right side of the progress bar*/}
+        <div className="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-bold text-gray-700 dark:text-gray-300 flex-shrink-0">
+              {allCardInstanceIds.length - missingCount}
+            </span>{" "}
+            <span className="text-sm font-semibold text-gray-500 dark:text-gray-500">
+              / {allCardInstanceIds.length} collected
+            </span>
+          </div>
+          {/*show only 2 decimal places*/}
+          <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+            {(() => {
+              const percentage =
+                ((allCardInstanceIds.length - missingCount) /
+                  allCardInstanceIds.length) *
+                100;
+              return percentage >= 100 ? "100" : percentage.toFixed(2);
+            })()}
+            %
+          </span>
+        </div>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 flex-1">
+          {/*Progress bar gradient color*/}
+          <div
+            className=" h-2 rounded-full transition-all duration-300 ease-in-out bg-gradient-to-r from-blue-400 to-green-400 dark:from-blue-500 dark:to-green-500"
+            style={{
+              width: `${
+                ((allCardInstanceIds.length - missingCount) /
+                  allCardInstanceIds.length) *
+                100
+              }%`,
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 };
