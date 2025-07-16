@@ -139,8 +139,17 @@ const MissingCardsModal = ({ isOpen, onClose, binder, onMarkAsCollected }) => {
                           return (
                             <div
                               key={cardEntry.instanceId}
-                              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                              className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors relative"
                             >
+                              {/* Reverse Holo Indicator */}
+                              {cardData.reverseHolo && (
+                                <div className="absolute top-2 right-2">
+                                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg">
+                                    R
+                                  </div>
+                                </div>
+                              )}
+
                               <div className="flex items-start gap-3">
                                 <div className="flex-shrink-0">
                                   {cardData.image || cardData.imageSmall ? (
