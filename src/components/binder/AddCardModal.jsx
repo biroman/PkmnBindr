@@ -308,11 +308,12 @@ const AddCardModal = ({
 
     try {
       // Use batch add for much better performance
+      // When replacing (adding complete sets), always start from position 0
       // Pass isReplacement for complete sets to bypass existing card count in limit check
       await batchAddCards(
         currentBinder.id,
         cards,
-        targetPosition,
+        isReplacement ? 0 : targetPosition,
         {},
         isReplacement
       );
