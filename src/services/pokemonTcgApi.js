@@ -289,13 +289,69 @@ function parseSearchParams(params) {
 
   if (params.q) {
     const query = params.q;
-    // Basic name search extraction. This can be enhanced for more complex queries.
-    const nameMatch = query.match(/name:(\*?"([^"]+)"\*?|\*([^*]+)\*)/);
+
+    // Parse different filter types from the Pokemon TCG API query format
+
+    // Name search - handle both quoted and wildcard formats
+    const nameMatch = query.match(
+      /name:(\*?"([^"]+)"\*?|\*([^*\s]+)\*|"([^"]+)"|([^*\s]+))/
+    );
     if (nameMatch) {
-      searchParams.filters.name = nameMatch[2] || nameMatch[3];
-    } else {
-      // If no specific filter is found, treat the whole query as a name search
-      searchParams.query = query.replace(/["*]/g, "").trim();
+      const nameValue =
+        nameMatch[2] || nameMatch[3] || nameMatch[4] || nameMatch[5];
+      if (nameValue) {
+        searchParams.filters.name = nameValue;
+      }
+    }
+
+    // Set filter - set.id:xyz
+    const setMatch = query.match(/set\.id:([^\s]+)/);
+    if (setMatch) {
+      searchParams.filters.set = setMatch[1];
+    }
+
+    // Types filter - types:fire
+    const typesMatch = query.match(/types:([^\s]+)/);
+    if (typesMatch) {
+      searchParams.filters.types = [typesMatch[1]];
+    }
+
+    // Subtypes filter - subtypes:pokemon
+    const subtypesMatch = query.match(/subtypes:([^\s]+)/);
+    if (subtypesMatch) {
+      searchParams.filters.subtypes = [subtypesMatch[1]];
+    }
+
+    // Rarity filter - rarity:"Rare Holo" or rarity:common
+    const rarityMatch = query.match(/rarity:(?:"([^"]+)"|([^\s]+))/);
+    if (rarityMatch) {
+      searchParams.filters.rarity = rarityMatch[1] || rarityMatch[2];
+    }
+
+    // Supertype filter - supertype:Pokemon
+    const supertypeMatch = query.match(/supertype:([^\s]+)/);
+    if (supertypeMatch) {
+      searchParams.filters.supertype = supertypeMatch[1];
+    }
+
+    // Artist filter - artist:"Ken Sugimori"
+    const artistMatch = query.match(/artist:(?:"([^"]+)"|([^\s]+))/);
+    if (artistMatch) {
+      searchParams.filters.artist = artistMatch[1] || artistMatch[2];
+    }
+
+    // If no specific filters were found but there's still query content,
+    // treat remaining content as a general name search
+    if (Object.keys(searchParams.filters).length === 0 && query.trim()) {
+      // Remove any remaining filter-like patterns and use as name search
+      const cleanQuery = query
+        .replace(/\w+:[^\s]+/g, "") // Remove any unrecognized filter patterns
+        .replace(/["*]/g, "") // Remove quotes and wildcards
+        .trim();
+
+      if (cleanQuery) {
+        searchParams.query = cleanQuery;
+      }
     }
   }
 
@@ -325,7 +381,48 @@ export const pokemonTcgApi = {
     if (query) {
       q += this.buildFuzzyNameQuery(query.trim());
     }
-    // Add other filters to the query string `q` as needed...
+
+    // Add filters to the query string
+    const filterParts = [];
+
+    // Set filter - most important for the user's request
+    if (filters.set) {
+      filterParts.push(`set.id:${filters.set}`);
+    }
+
+    // Type filter
+    if (filters.types && filters.types.length > 0) {
+      filterParts.push(`types:${filters.types[0]}`);
+    }
+
+    // Subtype filter
+    if (filters.subtypes && filters.subtypes.length > 0) {
+      filterParts.push(`subtypes:${filters.subtypes[0]}`);
+    }
+
+    // Rarity filter
+    if (filters.rarity) {
+      filterParts.push(`rarity:"${filters.rarity}"`);
+    }
+
+    // Supertype filter
+    if (filters.supertype) {
+      filterParts.push(`supertype:${filters.supertype}`);
+    }
+
+    // Artist filter
+    if (filters.artist) {
+      filterParts.push(`artist:"${filters.artist}"`);
+    }
+
+    // Combine query and filters
+    if (filterParts.length > 0) {
+      if (q) {
+        q += " " + filterParts.join(" ");
+      } else {
+        q = filterParts.join(" ");
+      }
+    }
 
     const params = {
       ...(q && { q }),
