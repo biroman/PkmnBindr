@@ -13,6 +13,7 @@ const BinderDisplay = ({
   onCardDelete = () => {},
   onSlotClick = () => {},
   onToggleMissing = () => {},
+  onToggleReverseHolo = () => {},
   getCardsForPage = () => [],
   className = "",
   style = {},
@@ -79,6 +80,7 @@ const BinderDisplay = ({
               onCardDelete={isReadOnly ? undefined : onCardDelete}
               onSlotClick={isReadOnly ? undefined : onSlotClick}
               onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+              onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
               cardPageIndex={currentPageConfig.leftPage.cardPageIndex}
               missingPositions={binder.metadata?.missingInstances || []}
               backgroundColor={backgroundColor}
@@ -131,6 +133,7 @@ const BinderDisplay = ({
           onCardDelete={isReadOnly ? undefined : onCardDelete}
           onSlotClick={isReadOnly ? undefined : onSlotClick}
           onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+          onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
           cardPageIndex={currentPageConfig.leftPage.cardPageIndex}
           missingPositions={binder.metadata?.missingInstances || []}
           backgroundColor={backgroundColor}
@@ -157,6 +160,7 @@ const BinderDisplay = ({
         onCardDelete={isReadOnly ? undefined : onCardDelete}
         onSlotClick={isReadOnly ? undefined : onSlotClick}
         onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+        onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
         cardPageIndex={currentPageConfig.rightPage.cardPageIndex}
         missingPositions={binder.metadata?.missingInstances || []}
         backgroundColor={backgroundColor}
@@ -196,6 +200,7 @@ BinderDisplay.propTypes = {
   onCardDelete: PropTypes.func,
   onSlotClick: PropTypes.func,
   onToggleMissing: PropTypes.func,
+  onToggleReverseHolo: PropTypes.func,
   getCardsForPage: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,

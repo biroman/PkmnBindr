@@ -16,6 +16,7 @@ const DroppableSlot = ({
   onCardDelete,
   onSlotClick,
   onToggleMissing, // New prop to handle missing/collected toggle
+  onToggleReverseHolo, // New prop to handle reverse holo toggle
   className = "",
   isMissing = false,
   isReadOnly = false, // Extract isReadOnly to prevent it from passing to DOM
@@ -585,6 +586,9 @@ const DroppableSlot = ({
                   : onToggleMissing
                   ? handleToggleMissing
                   : undefined
+              }
+              onToggleReverseHolo={
+                isMobile ? undefined : onToggleReverseHolo
               }
               onDoubleClick={
                 isMobile && onToggleMissing

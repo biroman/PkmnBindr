@@ -9,6 +9,7 @@ const CardPage = ({
   onCardDelete,
   onSlotClick,
   onToggleMissing, // New prop for toggling missing status
+  onToggleReverseHolo, // New prop for toggling reverse holo status
   cardPageIndex = 0, // For calculating global positions
   missingPositions = [], // Array of missing instance IDs
   isReadOnly = false, // New prop for read-only mode
@@ -69,6 +70,7 @@ const CardPage = ({
                   onCardDelete={isReadOnly ? undefined : onCardDelete}
                   onSlotClick={isReadOnly ? undefined : onSlotClick}
                   onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+                  onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
                   className="w-full h-full"
                   isMissing={isMissing}
                   isReadOnly={isReadOnly}
@@ -137,6 +139,7 @@ const CardPage = ({
                 onCardDelete={isReadOnly ? undefined : onCardDelete}
                 onSlotClick={isReadOnly ? undefined : onSlotClick}
                 onToggleMissing={isReadOnly ? undefined : onToggleMissing}
+                onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
                 className="w-full h-full"
                 isMissing={isMissing}
                 isReadOnly={isReadOnly}

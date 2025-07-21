@@ -177,6 +177,7 @@ export const BinderContainer = ({
     updateBinderSettings,
     updateBinder,
     updateBinderMetadata,
+    updateCardInBinder,
     exportBinderData,
     moveCard,
     removeCardFromBinder,
@@ -526,6 +527,46 @@ export const BinderContainer = ({
     }
   };
 
+  const handleToggleReverseHolo = async (card, position, reverseHolo) => {
+    if (!binder || !features.deleteCards) return; // Use deleteCards feature flag as it indicates edit mode
+
+    try {
+      // Update the card's reverse holo status in all possible locations
+      const cardUpdates = {
+        reverseHolo: reverseHolo,
+      };
+
+      // Get the existing card from the binder to see what structure it has
+      const existingCard = binder.cards[position.toString()];
+      
+      // If the card has cardData, update it there too
+      if (existingCard?.cardData || card.cardData) {
+        cardUpdates.cardData = {
+          ...(existingCard?.cardData || card.cardData || {}),
+          reverseHolo: reverseHolo,
+        };
+      }
+
+      // If the card has binderMetadata, update it there too
+      if (existingCard?.binderMetadata || card.binderMetadata) {
+        cardUpdates.binderMetadata = {
+          ...(existingCard?.binderMetadata || card.binderMetadata || {}),
+          reverseHolo: reverseHolo,
+        };
+      }
+
+      await updateCardInBinder(binder.id, position, cardUpdates);
+      
+      toast.success(
+        reverseHolo ? "Card set as Reverse Holo" : "Reverse Holo removed"
+      );
+      onBinderChange?.(binder);
+    } catch (error) {
+      console.error("Failed to update reverse holo status:", error);
+      onError?.(error);
+    }
+  };
+
   const handleBulkToggleMissing = async (markAsMissing) => {
     if (!binder?.cards) return;
 
@@ -718,6 +759,7 @@ export const BinderContainer = ({
             onCardDelete: features.deleteCards ? handleCardDelete : undefined,
             onSlotClick: features.addCards ? handleSlotClick : undefined,
             onToggleMissing: handleToggleMissing,
+            onToggleReverseHolo: features.deleteCards ? handleToggleReverseHolo : undefined,
           }}
           dragHandlers={
             features.dragDrop

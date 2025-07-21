@@ -1084,6 +1084,78 @@ export const BinderProvider = ({ children }) => {
     [currentBinder]
   );
 
+  // Update card properties (e.g., reverse holo status)
+  const updateCardInBinder = useCallback(
+    async (binderId, position, cardUpdates) => {
+      try {
+        const updateBinder = (binder) => {
+          if (binder.id !== binderId) return binder;
+
+          const positionKey = position.toString();
+          const existingCard = binder.cards[positionKey];
+
+          if (!existingCard) return binder; // No card to update
+
+          const updatedCard = {
+            ...existingCard,
+            ...cardUpdates,
+          };
+
+          // If updating cardData, merge it properly
+          if (cardUpdates.cardData) {
+            updatedCard.cardData = {
+              ...(existingCard.cardData || {}),
+              ...cardUpdates.cardData,
+            };
+          }
+
+          // If updating binderMetadata, merge it properly
+          if (cardUpdates.binderMetadata) {
+            updatedCard.binderMetadata = {
+              ...(existingCard.binderMetadata || {}),
+              ...cardUpdates.binderMetadata,
+            };
+          }
+
+          const updatedCards = {
+            ...binder.cards,
+            [positionKey]: updatedCard,
+          };
+
+          const updatedBinder = {
+            ...binder,
+            cards: updatedCards,
+          };
+
+          // Use markBinderAsModified to properly track changes and sync status
+          return markBinderAsModified(
+            updatedBinder,
+            "card_updated",
+            {
+              position,
+              cardId: existingCard.cardId,
+              updates: cardUpdates,
+              previousValue: existingCard,
+            },
+            binder.ownerId
+          );
+        };
+
+        setBinders((prev) => prev.map(updateBinder));
+
+        // Update current binder if it's the one being updated
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder((prev) => updateBinder(prev));
+        }
+      } catch (error) {
+        console.error("Failed to update card in binder:", error);
+        toast.error("Failed to update card");
+        throw error;
+      }
+    },
+    [currentBinder]
+  );
+
   // Move card within binder (enhanced for drag and drop)
   const moveCard = useCallback(
     async (binderId, fromPosition, toPosition, options = {}) => {
@@ -3635,6 +3707,7 @@ export const BinderProvider = ({ children }) => {
     addCardToBinder,
     batchAddCards,
     removeCardFromBinder,
+    updateCardInBinder,
     clearBinderCards,
     moveCard,
     moveCardOptimistic,

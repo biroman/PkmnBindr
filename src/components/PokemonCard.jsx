@@ -81,12 +81,14 @@ const PokemonCard = forwardRef(
       onClick,
       onDelete,
       onToggleMissing,
+      onToggleReverseHolo,
       onImageLoad,
       onImageError,
       showDetails = true,
       showAddButton = false,
       showDeleteButton = false,
       showMissingButton = false,
+      showReverseHoloToggle = false,
       isMissing = false,
       dragHandleProps,
       isReadOnly = false,
@@ -156,8 +158,12 @@ const PokemonCard = forwardRef(
       onClick?.(card, e);
     };
 
-    // Check if this is a reverse holo card
-    const isReverseHolo = card.reverseHolo || false;
+    // Check if this is a reverse holo card - check multiple possible locations
+    const isReverseHolo = 
+      card.reverseHolo || 
+      card.cardData?.reverseHolo || 
+      card.binderMetadata?.reverseHolo || 
+      false;
 
     return (
       <div
@@ -271,9 +277,52 @@ const PokemonCard = forwardRef(
         {/* Reverse Holo Indicator */}
         {isReverseHolo && showDetails && imageLoaded && (
           <div className="absolute top-1 right-1">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg">
+            {showReverseHoloToggle && onToggleReverseHolo ? (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  onToggleReverseHolo(card, false);
+                }}
+                onMouseDown={(e) => {
+                  e.stopPropagation();
+                }}
+                onTouchStart={(e) => {
+                  e.stopPropagation();
+                }}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gray-400 text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg transition-all duration-200 pointer-events-auto"
+                title="Remove Reverse Holo"
+              >
+                R
+              </button>
+            ) : (
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg">
+                R
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Reverse Holo Toggle Button - Show when hovering and card is NOT reverse holo */}
+        {showReverseHoloToggle && onToggleReverseHolo && !isReverseHolo && imageLoaded && (
+          <div className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onToggleReverseHolo(card, true);
+              }}
+              onMouseDown={(e) => {
+                e.stopPropagation();
+              }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+              }}
+              className="bg-gray-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 text-white text-xs font-bold px-1.5 py-0.5 rounded shadow-lg transition-all duration-200 pointer-events-auto"
+              title="Set as Reverse Holo"
+            >
               R
-            </div>
+            </button>
           </div>
         )}
 

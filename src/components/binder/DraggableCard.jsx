@@ -9,6 +9,7 @@ const DraggableCard = ({
   onCardClick,
   onCardDelete,
   onToggleMissing,
+  onToggleReverseHolo,
   isMissing = false,
   className = "",
   isDragging = false,
@@ -60,8 +61,10 @@ const DraggableCard = ({
         onClick={() => onCardClick && onCardClick(card, position)}
         onDelete={onCardDelete ? () => onCardDelete(card, position) : undefined}
         onToggleMissing={onToggleMissing ? () => onToggleMissing() : undefined}
+        onToggleReverseHolo={onToggleReverseHolo ? (card, reverseHolo) => onToggleReverseHolo(card, position, reverseHolo) : undefined}
         showDeleteButton={!!onCardDelete && !isCurrentlyDragging}
         showMissingButton={!!onToggleMissing && !isCurrentlyDragging}
+        showReverseHoloToggle={!!onToggleReverseHolo && !isCurrentlyDragging && !isReadOnly}
         isMissing={isMissing}
         isReadOnly={isReadOnly}
         dragHandleProps={

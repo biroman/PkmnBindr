@@ -28,6 +28,7 @@ const BinderCore = ({
     onCardDelete = () => {},
     onSlotClick = () => {},
     onToggleMissing = () => {},
+    onToggleReverseHolo = () => {},
   } = onCardInteraction;
 
   const isReadOnly = mode === "readonly" || mode === "admin";
@@ -49,6 +50,7 @@ const BinderCore = ({
         onCardDelete={isDragDropEnabled ? onCardDelete : undefined}
         onSlotClick={isDragDropEnabled ? onSlotClick : undefined}
         onToggleMissing={mode === "readonly" ? undefined : onToggleMissing}
+        onToggleReverseHolo={isDragDropEnabled ? onToggleReverseHolo : undefined}
         getCardsForPage={getCardsForPage}
         reorderMode={reorderMode}
         // Public view specific props
@@ -90,6 +92,7 @@ BinderCore.propTypes = {
     onCardDelete: PropTypes.func,
     onSlotClick: PropTypes.func,
     onToggleMissing: PropTypes.func,
+    onToggleReverseHolo: PropTypes.func,
   }),
   dragHandlers: PropTypes.shape({
     onDragStart: PropTypes.func,
