@@ -35,7 +35,7 @@ const useBinderLimits = (binder) => {
         setLimits({
           cards: {
             current: currentCardCount,
-            limit: cardCheck.limit || 500,
+            limit: cardCheck.limit || 700,
             canAdd: cardCheck.allowed,
             remaining: cardCheck.limit
               ? Math.max(0, cardCheck.limit - currentCardCount)

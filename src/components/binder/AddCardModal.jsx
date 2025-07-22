@@ -303,17 +303,47 @@ const AddCardModal = ({
   };
 
   // Handle adding multiple cards (from sets) - now uses batch add
-  const handleAddCards = async (cards, isReplacement = false) => {
+  const handleAddCards = async (
+    cards,
+    isReplacement = false,
+    startPosition = null,
+    shouldShift = false
+  ) => {
     if (!currentBinder || !Array.isArray(cards) || cards.length === 0) return;
 
     try {
+      // Determine the position to start adding cards
+      let addPosition = startPosition;
+      if (addPosition === null) {
+        // If no position specified, use targetPosition or default behavior
+        addPosition = isReplacement ? 0 : targetPosition;
+      }
+
+      // Handle shifting existing cards if needed (for "start" placement)
+      if (shouldShift && addPosition !== null) {
+        const shiftCount = cards.length;
+        const occupiedPositions = Object.keys(currentBinder.cards || {})
+          .map((p) => parseInt(p, 10))
+          .filter((pos) => pos >= addPosition)
+          .sort((a, b) => b - a); // Descending
+
+        const moveOperations = occupiedPositions.map((pos) => ({
+          fromPosition: pos,
+          toPosition: pos + shiftCount,
+        }));
+
+        if (moveOperations.length > 0) {
+          await batchMoveCards(currentBinder.id, moveOperations);
+        }
+      }
+
       // Use batch add for much better performance
       // When replacing (adding complete sets), always start from position 0
       // Pass isReplacement for complete sets to bypass existing card count in limit check
       await batchAddCards(
         currentBinder.id,
         cards,
-        isReplacement ? 0 : targetPosition,
+        addPosition,
         {},
         isReplacement
       );

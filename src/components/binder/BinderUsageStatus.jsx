@@ -26,7 +26,7 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
         console.log("Page check result:", pageCheck);
 
         // Use fallback limits if rules don't provide them
-        const cardLimit = cardCheck.limit || 500;
+        const cardLimit = cardCheck.limit || 700;
         const pageLimit = pageCheck.limit || 50;
 
         // Always calculate percentage, even if limit is not returned

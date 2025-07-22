@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { PlusIcon, MinusIcon, BookOpenIcon } from "@heroicons/react/24/outline";
+import { PlusIcon, MinusIcon } from "@heroicons/react/24/outline";
 import { useBinderContext } from "../../contexts/BinderContext";
 import BinderUsageStatus from "./BinderUsageStatus";
 
@@ -20,11 +20,7 @@ const PageManager = ({ binder, className = "" }) => {
   const maxPages = binder.settings?.maxPages || 100;
   const autoExpand = binder.settings?.autoExpand;
 
-  // Calculate total card pages based on binder page count
   const calculateCardPages = () => {
-    // First binder page has cover + 1 card page = 1 card page
-    // Each additional binder page has 2 card pages
-    // Formula: 1 + (binderPages - 1) * 2
     return currentPageCount === 0 ? 0 : 1 + (currentPageCount - 1) * 2;
   };
 

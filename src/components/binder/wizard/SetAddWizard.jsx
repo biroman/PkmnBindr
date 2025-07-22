@@ -10,6 +10,8 @@ const SetAddWizard = ({ currentBinder, onAddCards, onWizardComplete }) => {
   const [configuration, setConfiguration] = useState({
     includeReverseHolos: false,
     placement: "interleaved",
+    binderPlacement: "replace", // new option: "replace", "start", "end"
+    bufferPages: 0, // number of empty pages before the set when adding to end
   });
 
   const steps = [

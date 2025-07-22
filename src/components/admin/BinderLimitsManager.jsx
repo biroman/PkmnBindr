@@ -440,7 +440,7 @@ const BinderLimitsManager = () => {
               </button>
               <button
                 onClick={() =>
-                  setLimits((prev) => ({ ...prev, maxCardsPerBinder: 500 }))
+                  setLimits((prev) => ({ ...prev, maxCardsPerBinder: 700 }))
                 }
                 className="px-2 py-1 text-xs bg-green-100 hover:bg-green-200 text-green-700 rounded transition-colors"
               >
