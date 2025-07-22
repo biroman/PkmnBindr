@@ -132,8 +132,7 @@ const UserProfileCard = ({
       {showBanner && (
         <div className="relative mb-2">
           <div
-            className={`${config.banner} relative overflow-hidden group ${
-              editable ? "cursor-pointer" : ""
+            className={`${config.banner} relative overflow-hidden group 
             }`}
             style={BannerColorService.getBannerStyle(user?.bannerColor)}
             onClick={handleBannerClick}
@@ -142,14 +141,14 @@ const UserProfileCard = ({
             <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/20"></div>
 
             {/* Edit banner overlay */}
-            {editable && (
+            {/* {editable && (
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center justify-center">
                 <div className="bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2 border border-white/30">
                   <CameraIcon className="w-4 h-4" />
                   Change Banner
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Profile Picture - Positioned over banner */}
