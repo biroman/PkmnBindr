@@ -273,6 +273,9 @@ async function handleSupabaseFallback(endpoint, params) {
   } else if (endpoint === "/rarities") {
     const rarities = await supabaseApi.getRarities();
     return { data: rarities };
+  } else if (endpoint === "/supertypes") {
+    const supertypes = await supabaseApi.getSupertypes();
+    return { data: supertypes };
   } else {
     throw new Error(`Unsupported endpoint for Supabase fallback: ${endpoint}`);
   }
@@ -528,6 +531,16 @@ export const pokemonTcgApi = {
     } catch (error) {
       console.error("Get rarities failed:", error);
       throw new Error(`Failed to get rarities: ${error.message}`);
+    }
+  },
+
+  async getSupertypes() {
+    try {
+      const response = await apiRequest("/supertypes");
+      return response.data || [];
+    } catch (error) {
+      console.error("Get supertypes failed:", error);
+      throw new Error(`Failed to get supertypes: ${error.message}`);
     }
   },
 

@@ -527,6 +527,23 @@ export const supabaseApi = {
     }
   },
 
+  // Get all available supertypes
+  async getSupertypes() {
+    try {
+      const response = await apiRequest("/supertypes", {
+        params: {
+          select: "name",
+        },
+      });
+
+      return response.data?.map((supertype) => supertype.name) || [];
+    } catch (error) {
+      console.error("Supabase get supertypes failed:", error);
+      // Fallback to hardcoded supertypes (from Pokemon TCG API docs)
+      return ["Energy", "Pokémon", "Trainer"];
+    }
+  },
+
   // Utility functions
   utils: {
     // Clear all caches

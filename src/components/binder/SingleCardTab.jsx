@@ -18,6 +18,7 @@ const SearchFilters = ({
   availableSets,
   availableRarities,
   availableSubtypes = [],
+  availableSupertypes = [],
   onFilterChange,
   isMobile,
   hasActiveFilters,
@@ -46,7 +47,14 @@ const SearchFilters = ({
   };
 
   const handleClearAndApplyFilters = (close) => {
-    const cleared = { name: "", set: "", rarity: "", types: [], subtypes: [] };
+    const cleared = {
+      name: "",
+      set: "",
+      rarity: "",
+      types: [],
+      subtypes: [],
+      supertype: "",
+    };
     setTempFilters(cleared);
     Object.keys(cleared).forEach((key) => {
       onFilterChange(key, cleared[key]);
@@ -60,6 +68,25 @@ const SearchFilters = ({
         isPopover ? "p-4" : "flex-1 overflow-y-auto p-4"
       }`}
     >
+      {/* Supertype */}
+      <div>
+        <label className="block text-sm font-medium text-primary mb-2">
+          Supertype
+        </label>
+        <select
+          value={tempFilters.supertype || ""}
+          onChange={(e) => handleTempFilterChange("supertype", e.target.value)}
+          className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-card-background text-primary"
+        >
+          <option value="">All Supertypes</option>
+          {availableSupertypes.map((supertype) => (
+            <option key={supertype} value={supertype}>
+              {supertype}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {/* Types */}
       <div>
         <label className="block text-sm font-medium text-primary mb-2">
@@ -294,6 +321,7 @@ const SingleCardTab = ({
   availableSets,
   availableRarities,
   availableSubtypes,
+  availableSupertypes,
   loadMoreCards,
   updateFilter,
   updateSearchQuery,
@@ -496,6 +524,7 @@ const SingleCardTab = ({
                 availableSets={availableSets}
                 availableRarities={availableRarities}
                 availableSubtypes={availableSubtypes}
+                availableSupertypes={availableSupertypes}
                 onFilterChange={updateFilter}
                 isMobile={isMobileScreen}
                 hasActiveFilters={hasFilterBadge}
