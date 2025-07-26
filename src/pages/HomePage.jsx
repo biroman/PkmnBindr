@@ -133,6 +133,33 @@ const HomePage = () => {
                   manage their card collection online. Choose how you want to
                   get started below.
                 </p>
+                <div className="flex-shrink-0 flex items-center space-x-2">
+                  <img
+                    src="/frontpage-images/bb.png"
+                    alt="Black Bolt set logo"
+                    className="h-24 w-auto"
+                  />
+                  <img
+                    src="/frontpage-images/wf.png"
+                    alt="White Flare set logo"
+                    className="h-24 w-auto"
+                  />
+                </div>
+                {/* New Set Announcement */}
+                <div className="mb-8 rounded-lg border-l-4 border-yellow-400 bg-yellow-50 p-4 dark:border-yellow-600 dark:bg-yellow-900/20">
+                  <div className="flex items-center">
+                    <div className="ml-4 flex-1">
+                      <p className="text-base font-bold text-yellow-800 dark:text-yellow-200">
+                        Now featuring Black Bolt & White Flare!
+                      </p>
+                      <p className="mt-1 text-sm text-yellow-700 dark:text-yellow-300">
+                        The latest Pokémon TCG sets are now available. Start
+                        organizing your new cards today.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/auth/register">
                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
