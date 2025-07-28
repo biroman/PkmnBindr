@@ -376,18 +376,46 @@ export class BinderSyncService {
 
       const binders = [];
 
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
+      // Use for...of to allow await inside the loop when fetching cards
+      for (const docSnap of querySnapshot.docs) {
+        const data = docSnap.data();
 
         // Manual filter if we're using fallback
         const isArchived = data.metadata?.isArchived;
         if (isArchived === true) {
-          return;
+          continue;
         }
 
-        const { serverTimestamp, ...binder } = data;
+        const { serverTimestamp, cardCount, ...binderMeta } = data;
+
+        // Deep copy binderMeta to avoid mutation when adding cards later
+        const binder = { ...binderMeta };
+
+        // If binder stores cards in subcollection, fetch them now so the caller
+        // receives a complete binder object ready for use.
+        if (binder.cardsStorage === "subcollection") {
+          try {
+            const cardsSnap = await getDocs(collection(docSnap.ref, "cards"));
+            const cards = {};
+            cardsSnap.forEach((cardDoc) => {
+              cards[cardDoc.id] = cardDoc.data();
+            });
+            binder.cards = cards;
+          } catch (cardsErr) {
+            console.warn(
+              `Failed to fetch card subcollection for binder ${binder.id}:`,
+              cardsErr
+            );
+            // Fallback to empty object – ensure property exists
+            binder.cards = {};
+          }
+        } else {
+          // Embedded storage – ensure cards field exists (may be large)
+          binder.cards = binder.cards || {};
+        }
+
         binders.push(binder);
-      });
+      }
 
       return binders.sort((a, b) => {
         const aDate = new Date(a.metadata?.createdAt || 0);
