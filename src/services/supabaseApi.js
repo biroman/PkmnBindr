@@ -52,6 +52,8 @@ class ApiCache {
 const searchCache = new ApiCache(5 * 60 * 1000); // 5 minutes for search results
 const cardCache = new ApiCache(30 * 60 * 1000); // 30 minutes for individual cards
 const setCache = new ApiCache(60 * 60 * 1000); // 1 hour for sets
+// Cache for rarely changing metadata endpoints (types, rarities, etc.)
+const metaCache = new ApiCache(2 * 60 * 60 * 1000); // 2 hours
 
 // HTTP client with error handling and retries
 async function apiRequest(endpoint, options = {}) {
@@ -72,7 +74,7 @@ async function apiRequest(endpoint, options = {}) {
 
   const cacheKey = url.toString();
 
-  // Check cache first
+  // Determine which cache to use
   let cache;
   if (endpoint.includes("/cards") && !endpoint.includes("?")) {
     cache = cardCache;
@@ -80,6 +82,13 @@ async function apiRequest(endpoint, options = {}) {
     cache = searchCache;
   } else if (endpoint.includes("/sets")) {
     cache = setCache;
+  } else if (
+    endpoint === "/types" ||
+    endpoint === "/subtypes" ||
+    endpoint === "/rarities" ||
+    endpoint === "/supertypes"
+  ) {
+    cache = metaCache;
   }
 
   if (cache) {
@@ -385,27 +394,27 @@ export const supabaseApi = {
   // Get all available sets with card counts
   async getSets() {
     try {
-      const response = await apiRequest("/sets", {
+      // Fetch from the SQL view that already contains the aggregate card counts.
+      // The view must be created in Supabase as `public.sets_with_counts` (see docs).
+      const response = await apiRequest("/sets_with_counts", {
         params: {
           select: "*",
           order: "release_date.desc",
         },
       });
 
-      const sets = response.data || [];
-
-      // Add card counts to each set
-      const setsWithCounts = await Promise.all(
-        sets.map(async (set) => {
-          const cardCount = await this.getSetCardCount(set.id);
-          return {
-            ...set,
-            total: cardCount,
-            totalCount: cardCount,
-            printedTotal: cardCount, // For compatibility with Pokemon TCG API format
-          };
-        })
-      );
+      const setsWithCounts = (response.data || []).map((set) => {
+        const total =
+          set.total_count /* from view */ ??
+          set.totalCount /* fallback for older data */ ??
+          0;
+        return {
+          ...set,
+          total,
+          totalCount: total,
+          printedTotal: total, // Maintain compatibility with the previous shape
+        };
+      });
 
       return setsWithCounts;
     } catch (error) {
@@ -551,6 +560,7 @@ export const supabaseApi = {
       searchCache.clear();
       cardCache.clear();
       setCache.clear();
+      metaCache.clear();
     },
 
     // Get cache stats

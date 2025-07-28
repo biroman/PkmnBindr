@@ -4,8 +4,8 @@ import { auth } from "../lib/firebase";
 import shareService from "../services/ShareService";
 import { toast } from "react-hot-toast";
 import BinderContainer from "../components/binder/BinderContainer";
+import CardModal from "../components/ui/CardModal";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import { X } from "lucide-react";
 import { useDocumentHead } from "../hooks/useDocumentHead";
 
 /**
@@ -369,94 +369,13 @@ const SharedBinderPage = () => {
       />
 
       {/* Card Modal */}
-      {selectedCard && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4"
-          onClick={(e) => {
-            // Close modal when clicking outside
-            if (e.target === e.currentTarget) {
-              handleCloseModal();
-            }
-          }}
-        >
-          {/* Card Image - No background */}
-          <div className="mb-4">
-            {(selectedCard.image || selectedCard.imageSmall) && (
-              <img
-                src={selectedCard.image || selectedCard.imageSmall}
-                alt={selectedCard.name}
-                className="cursor-pointer shadow-2xl rounded-lg"
-                onClick={handleCloseModal}
-                style={{ maxHeight: "60vh" }}
-              />
-            )}
-          </div>
-
-          {/* White Info Panel Below */}
-          <div
-            className="bg-card-background rounded-2xl max-w-lg w-full shadow-2xl transform transition-all duration-300 ease-out cursor-pointer"
-            onClick={handleCloseModal}
-          >
-            {/* Header */}
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-              <h3 className="text-xl font-bold text-gray-900 truncate">
-                {selectedCard.name}
-              </h3>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCloseModal();
-                }}
-                className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 rounded-full hover:bg-gray-100"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Card Details */}
-            <div className="p-6">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-600">Set</span>
-                  <span className="text-sm font-semibold text-gray-900">
-                    {selectedCard.set?.name || "Unknown"}
-                  </span>
-                </div>
-                {selectedCard.number && (
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
-                      Number
-                    </span>
-                    <span className="text-sm font-semibold text-gray-900">
-                      {selectedCard.number}
-                    </span>
-                  </div>
-                )}
-                {selectedCard.rarity && (
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
-                      Rarity
-                    </span>
-                    <span className="text-sm font-semibold text-gray-900">
-                      {selectedCard.rarity}
-                    </span>
-                  </div>
-                )}
-                {selectedCard.types && selectedCard.types.length > 0 && (
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
-                      Type
-                    </span>
-                    <span className="text-sm font-semibold text-gray-900">
-                      {selectedCard.types.join(", ")}
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <CardModal
+        selectedCard={selectedCard}
+        onClose={handleCloseModal}
+        showArtist={true}
+        showTypes={true}
+        showNotes={false}
+      />
     </>
   );
 };

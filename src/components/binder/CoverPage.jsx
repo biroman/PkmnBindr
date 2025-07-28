@@ -697,7 +697,7 @@ const CoverPage = ({
             )}
 
             {/* Main tips - responsive grid */}
-            <div
+            {/* <div
               className={`grid ${
                 isMobile
                   ? "grid-cols-1 gap-1 mb-2"
@@ -748,7 +748,7 @@ const CoverPage = ({
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Discord Community Section (hidden in read-only mode) */}
             {!isReadOnly && (
@@ -756,11 +756,13 @@ const CoverPage = ({
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-md sm:rounded-lg p-3 sm:p-4 border border-indigo-200 dark:border-indigo-800">
                   <div className="text-center mb-3 sm:mb-4">
                     <h3 className="text-sm sm:text-base font-semibold text-indigo-900 dark:text-indigo-200 mb-1">
-                      Join Our New Growing Community!
+                      Bugs to report? or just want to chat? Join Our New Growing
+                      Community!
                     </h3>
                     <p className="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300 leading-relaxed mb-3">
-                      Connect with fellow collectors, request features, discuss,
-                      share binders, ask questions, report bugs, and more!
+                      Connect with fellow collectors, share binders, discuss
+                      strategies, report bugs and get quick assistance from the
+                      community and developer!
                     </p>
                   </div>
 
@@ -780,52 +782,6 @@ const CoverPage = ({
                       </svg>
                       Open Discord
                     </a>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Contact Section - Encourage feedback (hidden in read-only mode) */}
-            {!isReadOnly && (
-              <div className="mt-3 sm:mt-4 md:mt-6 pt-2 sm:pt-3 md:pt-4 border-t border-gray-200 dark:border-gray-700">
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-md sm:rounded-lg p-3 sm:p-4 border border-amber-200 dark:border-amber-800">
-                  <div className="text-center mb-2 sm:mb-3">
-                    <h3 className="text-sm sm:text-base font-semibold text-amber-900 dark:text-amber-200 mb-1">
-                      Help us improve! 💡
-                    </h3>
-                    <p className="text-xs sm:text-sm text-amber-700 dark:text-amber-300 leading-relaxed">
-                      Experience bugs? Missing features? Ideas for improvement?
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-2 justify-center">
-                    <button
-                      onClick={() =>
-                        setContactModal({ isOpen: true, type: "bug" })
-                      }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
-                    >
-                      <span>🐛</span>
-                      Report Bug
-                    </button>
-                    <button
-                      onClick={() =>
-                        setContactModal({ isOpen: true, type: "feature" })
-                      }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
-                    >
-                      <span>✨</span>
-                      Request Feature
-                    </button>
-                    <button
-                      onClick={() =>
-                        setContactModal({ isOpen: true, type: "message" })
-                      }
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 hover:bg-amber-200 dark:hover:bg-amber-800 border border-amber-300 dark:border-amber-700 rounded-md transition-colors duration-200"
-                    >
-                      <span>💭</span>
-                      Share Feedback
-                    </button>
                   </div>
                 </div>
               </div>

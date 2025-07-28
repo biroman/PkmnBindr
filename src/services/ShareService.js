@@ -242,6 +242,26 @@ class ShareService {
   }
 
   /**
+   * Internal helper – fetch cards subcollection if binder uses subcollection storage.
+   */
+  async _attachCards(binderRef, binderMeta) {
+    if (binderMeta.cardsStorage !== "subcollection") {
+      return binderMeta; // old embedded model
+    }
+
+    const cardsSnap = await getDocs(collection(binderRef, "cards"));
+    const cards = {};
+    cardsSnap.forEach((doc) => {
+      cards[doc.id] = doc.data();
+    });
+
+    return {
+      ...binderMeta,
+      cards,
+    };
+  }
+
+  /**
    * Get binder data by share token (for public viewing)
    * @param {string} shareToken - The share token
    * @returns {Promise<Object>} - Binder data and owner info
@@ -279,7 +299,12 @@ class ShareService {
         throw new Error("Binder not found");
       }
 
-      const binderData = binderSnap.data();
+      let binderData = binderSnap.data();
+
+      // If using subcollection storage load cards separately
+      if (binderData.cardsStorage === "subcollection") {
+        binderData = await this._attachCards(binderRef, binderData);
+      }
 
       // Verify binder is still public
       if (!binderData.permissions?.public) {

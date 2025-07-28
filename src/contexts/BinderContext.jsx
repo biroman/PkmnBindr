@@ -214,6 +214,9 @@ const createNewBinder = (name, description = "", ownerId = "local_user") => ({
       data: { name, description },
     },
   ],
+
+  // Card storage mode (embedded vs subcollection). New binders default to subcollection for unlimited cards.
+  cardsStorage: "subcollection", // "embedded" (legacy) | "subcollection" (recommended)
 });
 
 // Position utilities
@@ -3295,11 +3298,21 @@ export const BinderProvider = ({ children }) => {
         throw new Error("Binder not found");
       }
 
-      const binderData = binderSnap.data();
+      let binderData = binderSnap.data();
 
       // Check if binder is public
       if (!binderData.permissions?.public) {
         throw new Error("Binder is private");
+      }
+
+      // If using subcollection storage, load cards separately
+      if (binderData.cardsStorage === "subcollection") {
+        const cardsSnap = await getDocs(collection(binderRef, "cards"));
+        const cards = {};
+        cardsSnap.forEach((cardDoc) => {
+          cards[cardDoc.id] = cardDoc.data();
+        });
+        binderData = { ...binderData, cards };
       }
 
       // Remove server timestamp before returning

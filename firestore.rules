@@ -269,6 +269,32 @@ service cloud.firestore {
                                  request.resource.data.permissions.public is bool));
     }
 
+    // ---------------------------------------------------------------------
+    //  Cards sub-collection for binders (new scalable storage model)
+    //  Path example: user_binders/{userId_binderId}/cards/{position}
+    // ---------------------------------------------------------------------
+    match /user_binders/{docId}/cards/{cardPos} {
+      // Read rules
+      allow read: if (
+        // Owner (authenticated) reading own cards
+        (request.auth != null && docId.matches('^' + request.auth.uid + '_.*')) ||
+        // Site owner / admin
+        isOwner() ||
+        // Public binder – anyone can read
+        (get(/databases/$(database)/documents/user_binders/$(docId)).data.permissions.public == true)
+      );
+
+      // Write / delete rules – restrict to owner or site owner
+      allow write, delete: if (request.auth != null && docId.matches('^' + request.auth.uid + '_.*')) || isOwner();
+
+      // Basic create/update validation – ensure cardId and addedAt exist and are strings
+      allow create, update: if request.auth != null &&
+                              docId.matches('^' + request.auth.uid + '_.*') &&
+                              request.resource.data.keys().hasAny(['cardId']) &&
+                              request.resource.data.cardId is string &&
+                              request.resource.data.cardId.size() <= 50;
+    }
+
     // Share links for public binders
     match /publicShares/{shareToken} {
       // ANYONE can read a share link document. This is how share links work.

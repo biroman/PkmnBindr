@@ -538,7 +538,7 @@ export const BinderContainer = ({
 
       // Get the existing card from the binder to see what structure it has
       const existingCard = binder.cards[position.toString()];
-      
+
       // If the card has cardData, update it there too
       if (existingCard?.cardData || card.cardData) {
         cardUpdates.cardData = {
@@ -556,7 +556,7 @@ export const BinderContainer = ({
       }
 
       await updateCardInBinder(binder.id, position, cardUpdates);
-      
+
       toast.success(
         reverseHolo ? "Card set as Reverse Holo" : "Reverse Holo removed"
       );
@@ -759,7 +759,9 @@ export const BinderContainer = ({
             onCardDelete: features.deleteCards ? handleCardDelete : undefined,
             onSlotClick: features.addCards ? handleSlotClick : undefined,
             onToggleMissing: handleToggleMissing,
-            onToggleReverseHolo: features.deleteCards ? handleToggleReverseHolo : undefined,
+            onToggleReverseHolo: features.deleteCards
+              ? handleToggleReverseHolo
+              : undefined,
           }}
           dragHandlers={
             features.dragDrop

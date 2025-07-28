@@ -158,9 +158,14 @@ const ReviewStep = ({
   // --- Memoized Calculations ---
   const estimatedReverseCount = useMemo(() => {
     if (!configuration.includeReverseHolos) return 0;
-    // Rough 60% estimate as before
-    return Math.floor(selectedSet.printedTotal * 0.6);
-  }, [configuration.includeReverseHolos, selectedSet.printedTotal]);
+    // Rough 60% estimate as before, multiplied by number of copies
+    const baseReverseHolos = Math.floor(selectedSet.printedTotal * 0.6);
+    return baseReverseHolos * (configuration.reverseHoloCopies || 1);
+  }, [
+    configuration.includeReverseHolos,
+    selectedSet.printedTotal,
+    configuration.reverseHoloCopies,
+  ]);
 
   const numCardsToAdd = selectedSet.printedTotal + estimatedReverseCount;
   const hasExistingCards = Object.keys(currentBinder?.cards || {}).length > 0;
@@ -255,9 +260,10 @@ const ReviewStep = ({
       setProgress({ message: "Fetching card data...", percentage: 60 });
       const apiCards = await getSetCards(selectedSet.id);
 
-      const createReverseHoloCard = (card) => ({
+      const createReverseHoloCard = (card, copyIndex = 0) => ({
         ...card,
-        id: `${card.id}-rh`,
+        id:
+          copyIndex === 0 ? `${card.id}-rh` : `${card.id}-rh-${copyIndex + 1}`,
         originalId: card.id,
         reverseHolo: true,
         addedAt: new Date().toISOString(),
@@ -266,19 +272,31 @@ const ReviewStep = ({
       let cardsToAdd = [];
       if (configuration.includeReverseHolos) {
         const regular = [...apiCards];
-        const reverses = regular
+        const reverseHoloCopies = configuration.reverseHoloCopies || 1;
+
+        // Create all reverse holo copies
+        const reverses = [];
+        regular
           .filter((c) => canHaveReverseHolo(c.rarity))
-          .map(createReverseHoloCard);
+          .forEach((card) => {
+            for (let i = 0; i < reverseHoloCopies; i++) {
+              reverses.push(createReverseHoloCard(card, i));
+            }
+          });
 
         if (configuration.placement === "first")
           cardsToAdd = [...reverses, ...regular];
         else if (configuration.placement === "last")
           cardsToAdd = [...regular, ...reverses];
         else {
+          // Interleaved: regular card followed by all its reverse holo copies
           regular.forEach((card) => {
             cardsToAdd.push(card);
-            if (canHaveReverseHolo(card.rarity))
-              cardsToAdd.push(createReverseHoloCard(card));
+            if (canHaveReverseHolo(card.rarity)) {
+              for (let i = 0; i < reverseHoloCopies; i++) {
+                cardsToAdd.push(createReverseHoloCard(card, i));
+              }
+            }
           });
         }
       } else {

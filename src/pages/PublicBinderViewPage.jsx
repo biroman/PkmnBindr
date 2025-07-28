@@ -11,9 +11,9 @@ import {
 
 import { toast } from "react-hot-toast";
 import BinderContainer from "../components/binder/BinderContainer";
+import CardModal from "../components/ui/CardModal";
 import PublicBreadcrumb from "../components/ui/PublicBreadcrumb";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
-import { X } from "lucide-react";
 
 const PublicBinderViewPage = () => {
   const { binderId, userId: urlUserId } = useParams();
@@ -245,130 +245,13 @@ const PublicBinderViewPage = () => {
       />
 
       {/* Card Modal */}
-      {selectedCard && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4"
-          onClick={(e) => {
-            // Close modal when clicking outside
-            if (e.target === e.currentTarget) {
-              handleCloseModal();
-            }
-          }}
-        >
-          {/* Card Image - No background */}
-          <div className="mb-4">
-            {(selectedCard.image || selectedCard.imageSmall) && (
-              <img
-                src={selectedCard.image || selectedCard.imageSmall}
-                alt={selectedCard.name}
-                className=" cursor-pointer shadow-2xl rounded-lg"
-                onClick={handleCloseModal}
-                style={{ maxHeight: "60vh" }}
-              />
-            )}
-          </div>
-
-          {/* White Info Panel Below */}
-          <div className="bg-card-background rounded-2xl max-w-lg w-full shadow-2xl transform transition-all duration-300 ease-out cursor-pointer"
-            onClick={handleCloseModal}
-          >
-            {/* Header */}
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-              <h3 className="text-xl font-bold text-gray-900 truncate">
-                {selectedCard.name}
-              </h3>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCloseModal();
-                }}
-                className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 rounded-full hover:bg-gray-100"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Card Details */}
-            <div className="p-6">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-600">Set</span>
-                  <span className="text-sm font-semibold text-gray-900">
-                    {selectedCard.set?.name || "Unknown"}
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-600">
-                    Number
-                  </span>
-                  <span className="text-sm font-semibold text-gray-900">
-                    {selectedCard.number || "N/A"}
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-600">
-                    Rarity
-                  </span>
-                  <span className="text-sm font-semibold text-gray-900">
-                    {selectedCard.rarity || "Unknown"}
-                  </span>
-                </div>
-
-                {selectedCard.artist && (
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
-                      Artist
-                    </span>
-                    <span className="text-sm font-semibold text-gray-900">
-                      {selectedCard.artist}
-                    </span>
-                  </div>
-                )}
-
-                {selectedCard.types && selectedCard.types.length > 0 && (
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-600">
-                      Types
-                    </span>
-                    <div className="flex gap-1">
-                      {selectedCard.types.map((type, index) => (
-                        <span
-                          key={index}
-                          className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
-                        >
-                          {type}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {selectedCard.binderMetadata?.notes && (
-                  <div className="pt-3 border-t border-gray-200">
-                    <div className="pt-2">
-                      <span className="text-sm font-medium text-gray-600 block mb-1">
-                        Notes
-                      </span>
-                      <p className="text-sm text-gray-900 bg-gray-50 p-2 rounded-lg">
-                        {selectedCard.binderMetadata.notes}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Click to close hint */}
-              <div className="mt-4 text-center">
-                <p className="text-xs text-gray-500">
-                  Click the card or outside to close
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <CardModal
+        selectedCard={selectedCard}
+        onClose={handleCloseModal}
+        showArtist={true}
+        showTypes={true}
+        showNotes={true}
+      />
     </>
   );
 };

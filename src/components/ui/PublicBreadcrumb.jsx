@@ -26,7 +26,7 @@ const PublicBreadcrumb = ({
 
   return (
     <nav
-        className={`flex items-center space-x-2 text-sm text-text-secondary mb-4 ${className}`}
+      className={`flex items-center space-x-2 text-sm text-text-secondary mb-4 ${className}`}
     >
       {/* Home */}
       <button
@@ -59,7 +59,7 @@ const PublicBreadcrumb = ({
       {contentName && (
         <>
           <ChevronRightIcon className="w-4 h-4 text-border" />
-          <span className="text-gray-900 font-medium truncate max-w-xs">
+          <span className="text-gray-900 dark:text-gray-100 font-medium truncate max-w-xs">
             {contentName}
           </span>
         </>

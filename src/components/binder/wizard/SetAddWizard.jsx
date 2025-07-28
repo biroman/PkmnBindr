@@ -12,6 +12,7 @@ const SetAddWizard = ({ currentBinder, onAddCards, onWizardComplete }) => {
     placement: "interleaved",
     binderPlacement: "replace", // new option: "replace", "start", "end"
     bufferPages: 0, // number of empty pages before the set when adding to end
+    reverseHoloCopies: 1, // number of copies per reverse holo card (1, 2, or 3)
   });
 
   const steps = [

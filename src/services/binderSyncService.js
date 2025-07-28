@@ -147,22 +147,94 @@ export class BinderSyncService {
     };
 
     // Remove undefined values to prevent Firebase errors
-    const cleanedBinder = removeUndefinedValues(syncedBinder);
+    const isSubcollection = syncedBinder.cardsStorage === "subcollection";
+
+    // Prepare document payload. For subcollection mode we exclude the heavy cards field and
+    // store only a lightweight count summary on the parent document.
+    let docData = { ...syncedBinder };
+    if (isSubcollection) {
+      docData.cardCount = Object.keys(syncedBinder.cards || {}).length;
+      delete docData.cards; // Prevent oversized parent document
+    }
+
+    const cleanedDocData = removeUndefinedValues(docData);
 
     console.log("Saving binder to Firebase:", {
       docId: binderRef.id,
-      ownerId: cleanedBinder.ownerId,
-      binderId: cleanedBinder.id,
-      binderName: cleanedBinder.metadata?.name,
+      ownerId: cleanedDocData.ownerId,
+      binderId: cleanedDocData.id,
+      binderName: cleanedDocData.metadata?.name,
+      storageMode: isSubcollection ? "subcollection" : "embedded",
+      cardCount: isSubcollection
+        ? Object.keys(syncedBinder.cards || {}).length
+        : undefined,
     });
 
-    await setDoc(binderRef, cleanedBinder);
+    // Save binder metadata document first
+    await setDoc(binderRef, cleanedDocData);
+
+    // Persist cards to subcollection if required
+    if (isSubcollection) {
+      await this._saveCardsSubcollection(binderRef, syncedBinder.cards || {});
+    }
 
     return {
       success: true,
-      binder: cleanedBinder,
+      binder: syncedBinder,
       message: "Binder synced successfully",
     };
+  }
+
+  /**
+   * Persist card entries to a 'cards' subcollection beneath the binder document.
+   * Splits writes into chunks below Firestore's 500-writes per batch limit.
+   */
+  async _saveCardsSubcollection(binderRef, cardsObj) {
+    if (cardsObj === undefined || cardsObj === null) return;
+
+    // Fetch existing card docs to identify deletions
+    const existingSnap = await getDocs(collection(binderRef, "cards"));
+    const existingIds = new Set();
+    existingSnap.forEach((d) => existingIds.add(d.id));
+
+    const entries = Object.entries(cardsObj);
+    // Remove ids that will remain (or be updated)
+    entries.forEach(([pos]) => existingIds.delete(pos));
+
+    // Create batched writes combining sets and deletes, chunked to stay <500 ops
+    const CHUNK_SIZE = 400;
+    let buffer = [];
+    const flushBuffer = async () => {
+      if (buffer.length === 0) return;
+      const batch = writeBatch(db);
+      buffer.forEach(({ type, ref, data }) => {
+        if (type === "set") batch.set(ref, data);
+        else batch.delete(ref);
+      });
+      await batch.commit();
+      buffer = [];
+    };
+
+    // Queue sets
+    for (const [position, cardData] of entries) {
+      buffer.push({
+        type: "set",
+        ref: doc(collection(binderRef, "cards"), position),
+        data: cardData,
+      });
+      if (buffer.length >= CHUNK_SIZE) await flushBuffer();
+    }
+
+    // Queue deletes
+    for (const position of existingIds) {
+      buffer.push({
+        type: "delete",
+        ref: doc(collection(binderRef, "cards"), position),
+      });
+      if (buffer.length >= CHUNK_SIZE) await flushBuffer();
+    }
+
+    await flushBuffer();
   }
 
   async _retrySync(binder, userId, options, lastError) {
@@ -232,13 +304,24 @@ export class BinderSyncService {
     const now = new Date().toISOString();
 
     // Remove server timestamp before returning
-    const { serverTimestamp, ...binder } = cloudBinder;
+    const { serverTimestamp, cardCount, ...binderMeta } = cloudBinder;
 
-    // Ensure the downloaded binder has clean sync status (no pending changes)
+    let cardsData = binderMeta.cards || {};
+
+    // If binder uses subcollection storage, fetch cards separately
+    if (binderMeta.cardsStorage === "subcollection") {
+      cardsData = {};
+      const cardsSnap = await getDocs(collection(binderRef, "cards"));
+      cardsSnap.forEach((cardDoc) => {
+        cardsData[cardDoc.id] = cardDoc.data();
+      });
+    }
+
     const cleanBinder = {
-      ...binder,
+      ...binderMeta,
+      cards: cardsData,
       sync: {
-        ...binder.sync,
+        ...binderMeta.sync,
         status: "synced",
         lastSynced: now,
         pendingChanges: [],
@@ -376,7 +459,9 @@ export class BinderSyncService {
 
     // Content conflict (different cards)
     const localCardCount = Object.keys(localBinder.cards || {}).length;
-    const cloudCardCount = Object.keys(cloudBinder.cards || {}).length;
+    const cloudCardCount = cloudBinder.cards
+      ? Object.keys(cloudBinder.cards || {}).length
+      : cloudBinder.cardCount || 0;
 
     if (localCardCount !== cloudCardCount) {
       conflict.hasConflict = true;
@@ -500,7 +585,20 @@ export class BinderSyncService {
       throw new Error("Binder not found in cloud");
     }
 
-    // Hard delete - completely remove the document
+    // If binder uses subcollection storage, delete card docs first to avoid orphaned documents
+    try {
+      const cardsSnap = await getDocs(collection(binderRef, "cards"));
+      if (!cardsSnap.empty) {
+        const batch = writeBatch(db);
+        cardsSnap.forEach((cardDoc) => batch.delete(cardDoc.ref));
+        await batch.commit();
+      }
+    } catch (cardsErr) {
+      console.warn("Failed to delete card subcollection:", cardsErr);
+      // continue to delete main doc regardless
+    }
+
+    // Finally delete the parent binder document
     await deleteDoc(binderRef);
 
     return { success: true, message: "Binder permanently deleted from cloud" };

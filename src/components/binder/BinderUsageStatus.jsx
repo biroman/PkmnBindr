@@ -26,8 +26,8 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
         console.log("Page check result:", pageCheck);
 
         // Use fallback limits if rules don't provide them
-        const cardLimit = cardCheck.limit || 700;
-        const pageLimit = pageCheck.limit || 50;
+        const cardLimit = cardCheck.limit || 1000;
+        const pageLimit = pageCheck.limit || 100;
 
         // Always calculate percentage, even if limit is not returned
         const cardPercentage = (currentCardCount / cardLimit) * 100;
@@ -50,21 +50,21 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
       } catch (error) {
         console.error("Rules system error, using fallback:", error);
         // Fallback if rules system fails entirely
-        const cardPercentage = (currentCardCount / 500) * 100;
-        const pagePercentage = (currentPageCount / 50) * 100;
+        const cardPercentage = (currentCardCount / 1000) * 100;
+        const pagePercentage = (currentPageCount / 100) * 100;
 
         setUsage({
           cards: {
             current: currentCardCount,
-            limit: 500,
+            limit: 1000,
             percentage: cardPercentage,
-            canAdd: currentCardCount < 500,
+            canAdd: currentCardCount < 1000,
           },
           pages: {
             current: currentPageCount,
-            limit: 50,
+            limit: 100,
             percentage: pagePercentage,
-            canAdd: currentPageCount < 50,
+            canAdd: currentPageCount < 100,
           },
         });
       }

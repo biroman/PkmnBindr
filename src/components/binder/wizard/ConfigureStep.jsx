@@ -2,10 +2,11 @@ import { Switch, RadioGroup } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 // A rough estimation until we fetch the full card list with rarities.
-const estimateReverseHoloCount = (set) => {
+const estimateReverseHoloCount = (set, copies = 1) => {
   if (!set) return 0;
   // Estimate that ~60% of non-secret rare cards can have a reverse holo.
-  return Math.floor(set.printedTotal * 0.6);
+  const baseReverseHolos = Math.floor(set.printedTotal * 0.6);
+  return baseReverseHolos * copies;
 };
 
 const ConfigureStep = ({
@@ -20,9 +21,13 @@ const ConfigureStep = ({
     placement,
     binderPlacement,
     bufferPages = 0,
+    reverseHoloCopies = 1,
   } = configuration;
 
-  const estimatedRhCount = estimateReverseHoloCount(selectedSet);
+  const estimatedRhCount = estimateReverseHoloCount(
+    selectedSet,
+    reverseHoloCopies
+  );
   const totalCards =
     (selectedSet?.printedTotal || 0) +
     (includeReverseHolos ? estimatedRhCount : 0);
@@ -85,10 +90,12 @@ const ConfigureStep = ({
                   className="flex flex-col cursor-pointer flex-1 pr-4"
                 >
                   <span className="text-base font-medium text-purple-800 dark:text-purple-300">
-                    ✨ Include Reverse Holo Cards
+                    Include Reverse Holo Cards
                   </span>
                   <span className="text-sm text-purple-600 dark:text-purple-400">
-                    Adds an estimated {estimatedRhCount} reverse holos.
+                    Adds an estimated {estimatedRhCount} reverse holos (
+                    {reverseHoloCopies} cop
+                    {reverseHoloCopies === 1 ? "y" : "ies"} each).
                   </span>
                 </label>
                 <Switch
@@ -112,11 +119,71 @@ const ConfigureStep = ({
               </div>
 
               {includeReverseHolos && (
-                <div className="p-4 border-t border-border dark:border-slate-700/80">
+                <div className="p-4 border-t border-border dark:border-slate-700/80 space-y-4">
+                  {/* Number of Copies Selection */}
+                  <RadioGroup
+                    value={reverseHoloCopies}
+                    onChange={(value) =>
+                      onConfigChange({ reverseHoloCopies: value })
+                    }
+                  >
+                    <RadioGroup.Label className="text-sm font-medium text-primary dark:text-slate-300">
+                      Copies per Reverse Holo (Pokeball or Master Ball etc.)
+                    </RadioGroup.Label>
+                    <div className="mt-2 grid grid-cols-3 gap-2">
+                      {[1, 2, 3].map((copies) => (
+                        <RadioGroup.Option
+                          key={copies}
+                          value={copies}
+                          className={({ active, checked }) =>
+                            `${
+                              checked
+                                ? "border-purple-500 ring-2 ring-purple-500 bg-purple-50 dark:bg-purple-950/30"
+                                : "border-border dark:border-slate-600 bg-card-background dark:bg-slate-800"
+                            } relative flex cursor-pointer rounded-lg border p-3 shadow-sm focus:outline-none transition-all hover:border-purple-400`
+                          }
+                        >
+                          {({ checked }) => (
+                            <>
+                              <div className="flex flex-1 flex-col text-center">
+                                <RadioGroup.Label
+                                  as="span"
+                                  className={`block text-lg font-bold ${
+                                    checked
+                                      ? "text-purple-900 dark:text-purple-200"
+                                      : "text-primary dark:text-slate-200"
+                                  }`}
+                                >
+                                  {copies}
+                                </RadioGroup.Label>
+                                <RadioGroup.Description
+                                  as="span"
+                                  className={`mt-1 text-xs ${
+                                    checked
+                                      ? "text-purple-700 dark:text-purple-400"
+                                      : "text-slate-500 dark:text-slate-400"
+                                  }`}
+                                >
+                                  extra cop{copies === 1 ? "y" : "ies"}
+                                </RadioGroup.Description>
+                              </div>
+                              {checked && (
+                                <CheckCircleIcon
+                                  className="h-4 w-4 text-purple-600 absolute top-1 right-1"
+                                  aria-hidden="true"
+                                />
+                              )}
+                            </>
+                          )}
+                        </RadioGroup.Option>
+                      ))}
+                    </div>
+                  </RadioGroup>
+
+                  {/* Placement Selection */}
                   <RadioGroup
                     value={placement}
                     onChange={(value) => onConfigChange({ placement: value })}
-                    className="mt-2"
                   >
                     <RadioGroup.Label className="text-sm font-medium text-primary dark:text-slate-300">
                       Reverse Holo Placement
@@ -181,7 +248,7 @@ const ConfigureStep = ({
             <div className="bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-border dark:border-slate-700/80">
               <div className="p-4">
                 <h3 className="text-base font-medium text-blue-800 dark:text-blue-300 mb-3">
-                  🎯 Binder Placement
+                  Binder Placement
                 </h3>
                 <RadioGroup
                   value={binderPlacement}
@@ -335,7 +402,7 @@ const ConfigureStep = ({
                     htmlFor="buffer-pages-input"
                   >
                     <span className="text-base font-medium text-green-800 dark:text-green-300">
-                      🗂️ Buffer Pages
+                      Buffer Pages
                     </span>
                     <span className="text-sm text-green-700 dark:text-green-400">
                       {binderPlacement === "end"

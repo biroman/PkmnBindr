@@ -54,6 +54,8 @@ class ApiCache {
 const searchCache = new ApiCache(5 * 60 * 1000); // 5 minutes for search results
 const cardCache = new ApiCache(30 * 60 * 1000); // 30 minutes for individual cards
 const setCache = new ApiCache(60 * 60 * 1000); // 1 hour for sets
+// Cache for rarely changing metadata endpoints (types, rarities, etc.)
+const metaCache = new ApiCache(2 * 60 * 60 * 1000); // 2 hours
 
 // Rate limiting
 class RateLimit {
@@ -118,6 +120,13 @@ async function apiRequest(endpoint, options = {}) {
     cache = searchCache;
   } else if (endpoint.includes("/sets")) {
     cache = setCache;
+  } else if (
+    endpoint === "/types" ||
+    endpoint === "/subtypes" ||
+    endpoint === "/rarities" ||
+    endpoint === "/supertypes"
+  ) {
+    cache = metaCache;
   }
 
   // Check cache first
@@ -173,7 +182,15 @@ async function apiRequest(endpoint, options = {}) {
   if (useFallback) {
     console.log("Pokemon TCG API failed, attempting Supabase fallback...");
     try {
-      return await handleSupabaseFallback(endpoint, params);
+      const fallbackData = await handleSupabaseFallback(endpoint, params);
+
+      // Cache the fallback response so subsequent calls in the same session
+      // can reuse it without hitting the fallback path again.
+      if (cache) {
+        cache.set(cacheKey, fallbackData);
+      }
+
+      return fallbackData;
     } catch (fallbackError) {
       console.error("Supabase fallback also failed:", fallbackError);
       throw new Error(
@@ -549,6 +566,7 @@ export const pokemonTcgApi = {
       searchCache.clear();
       cardCache.clear();
       setCache.clear();
+      metaCache.clear();
     },
   },
 };

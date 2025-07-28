@@ -70,7 +70,9 @@ const CardPage = ({
                   onCardDelete={isReadOnly ? undefined : onCardDelete}
                   onSlotClick={isReadOnly ? undefined : onSlotClick}
                   onToggleMissing={isReadOnly ? undefined : onToggleMissing}
-                  onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
+                  onToggleReverseHolo={
+                    isReadOnly ? undefined : onToggleReverseHolo
+                  }
                   className="w-full h-full"
                   isMissing={isMissing}
                   isReadOnly={isReadOnly}
@@ -139,7 +141,9 @@ const CardPage = ({
                 onCardDelete={isReadOnly ? undefined : onCardDelete}
                 onSlotClick={isReadOnly ? undefined : onSlotClick}
                 onToggleMissing={isReadOnly ? undefined : onToggleMissing}
-                onToggleReverseHolo={isReadOnly ? undefined : onToggleReverseHolo}
+                onToggleReverseHolo={
+                  isReadOnly ? undefined : onToggleReverseHolo
+                }
                 className="w-full h-full"
                 isMissing={isMissing}
                 isReadOnly={isReadOnly}
