@@ -212,8 +212,29 @@ export const supabaseApi = {
       }
 
       // Add ordering and pagination
+      // Convert the UI / Pokemon-TCG style order strings (e.g. "-set.releaseDate")
+      // into PostgREST syntax understood by Supabase (e.g. "release_date.desc").
       if (orderBy) {
-        params.order = orderBy;
+        // Determine sort direction
+        let direction = "asc";
+        let field = orderBy;
+
+        if (orderBy.startsWith("-")) {
+          direction = "desc";
+          field = orderBy.slice(1); // Remove the leading dash
+        }
+
+        // Map incoming field names to actual DB columns on the cards table
+        // We only need to map the ones that differ between the two APIs.
+        const fieldMap = {
+          "set.releaseDate": "release_date", // UI uses set.releaseDate
+          releaseDate: "release_date", // Fallback – just in case
+        };
+
+        const supabaseField = fieldMap[field] || field;
+
+        // Compose the PostgREST `order` parameter (e.g. `release_date.desc`).
+        params.order = `${supabaseField}.${direction}`;
       }
       params.limit = Math.min(pageSize, MAX_PAGE_SIZE);
       params.offset = (page - 1) * Math.min(pageSize, MAX_PAGE_SIZE);

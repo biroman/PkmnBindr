@@ -132,7 +132,15 @@ const useCardSearch = () => {
           setCards(normalizedCards);
           setCurrentPage(1);
         } else {
-          setCards((prev) => [...prev, ...normalizedCards]);
+          // Merge and deduplicate by card.id to avoid duplicate React keys
+          setCards((prev) => {
+            const map = new Map();
+            // Preserve existing order for previously loaded cards
+            prev.forEach((card) => map.set(card.id, card));
+            // Append new cards (later pages) while preventing duplicates
+            normalizedCards.forEach((card) => map.set(card.id, card));
+            return Array.from(map.values());
+          });
           setCurrentPage(page);
         }
 
