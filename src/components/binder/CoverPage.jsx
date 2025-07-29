@@ -689,7 +689,7 @@ const CoverPage = ({
                 <span className="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">
                   Supported by{" "}
                   <span className="font-semibold text-gray-700 dark:text-gray-200">
-                    2
+                    3
                   </span>{" "}
                   amazing collectors
                 </span>
