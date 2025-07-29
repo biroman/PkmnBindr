@@ -240,8 +240,6 @@ export const supabaseApi = {
       params.offset = (page - 1) * Math.min(pageSize, MAX_PAGE_SIZE);
       // --- END OF FIX ---
 
-      console.log("Supabase search params:", params);
-
       const response = await apiRequest("/cards", { params });
 
       const totalCount = response.totalCount || 0;

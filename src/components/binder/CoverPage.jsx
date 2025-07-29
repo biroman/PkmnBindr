@@ -604,7 +604,7 @@ const CoverPage = ({
                     isMobile ? "text-xs" : "text-base sm:text-xl md:text-2xl"
                   } font-bold text-gray-800 dark:text-gray-200 leading-tight`}
                 >
-                  Binder Quick Guide
+                  PkmnBindr
                 </h1>
               </div>
               <p
