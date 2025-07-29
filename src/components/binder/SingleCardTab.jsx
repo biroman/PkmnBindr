@@ -7,10 +7,12 @@ import {
   PlusIcon,
   MinusIcon,
   CheckCircleIcon,
+  MagnifyingGlassPlusIcon,
 } from "@heroicons/react/24/outline";
 import PokemonCard from "../PokemonCard";
 import DraggableSearchCard from "./DraggableSearchCard";
 import SortDropdown from "../ui/SortDropdown";
+import CardModal from "../ui/CardModal";
 
 const SearchFilters = ({
   filters,
@@ -332,6 +334,7 @@ const SingleCardTab = ({
   performSearch,
 }) => {
   const searchInputRef = useRef(null);
+  const [previewCard, setPreviewCard] = useState(null);
   // Detect mobile screen (matches Tailwind sm breakpoint)
   const isMobileScreen = window.matchMedia("(max-width: 639px)").matches;
   const debounceRef = useRef(null);
@@ -614,19 +617,33 @@ const SingleCardTab = ({
                   }`}
                 >
                   {displayCards.map((card) => (
-                    <div key={card.id} className="relative">
+                    <div key={card.id} className="relative group">
                       {compact ? (
                         <DraggableSearchCard card={card} />
                       ) : (
                         <PokemonCard
                           card={card}
                           onClick={() => onCardSelect(card)}
-                          className={`cursor-pointer transition-all ${
+                          className={`cursor-pointer transition-all hover:scale-100 hover:ring-2 hover:ring-blue-300 hover:shadow-md ${
                             isCardSelected(card.id)
-                              ? "ring-2 ring-blue-500 scale-105"
-                              : "hover:scale-105"
+                              ? "ring-2 ring-blue-500"
+                              : ""
                           }`}
                         />
+                      )}
+                      {/* Preview icon overlay - placed after card for proper z-index */}
+                      {!compact && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setPreviewCard(card);
+                          }}
+                          className="absolute top-1 left-1 bg-black/50 backdrop-blur-sm rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-auto z-20"
+                          title="View details"
+                        >
+                          <MagnifyingGlassPlusIcon className="w-4 h-4 text-white" />
+                        </button>
                       )}
                       {isCardSelected(card.id) && (
                         <>
@@ -679,6 +696,11 @@ const SingleCardTab = ({
           </div>
         </div>
       </div>
+      {/* Card detail modal */}
+      <CardModal
+        selectedCard={previewCard}
+        onClose={() => setPreviewCard(null)}
+      />
     </div>
   );
 };

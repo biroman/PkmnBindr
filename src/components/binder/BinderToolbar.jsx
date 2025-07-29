@@ -362,8 +362,8 @@ const BinderToolbar = ({
             title="Customize Binder Color"
           />
 
-          {/* Share - Only show for public binders */}
-          {currentBinder?.permissions?.public && onShare && (
+          {/* Share Binder */}
+          {onShare && (
             <ToolbarButton
               icon={ShareIcon}
               onClick={() => handleToolClick("share", onShare)}

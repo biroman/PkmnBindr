@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../hooks/useAuth";
+import { useBinderContext } from "../../contexts/BinderContext";
 import shareService from "../../services/ShareService";
 import QRCodePdfService from "../../services/QRCodePdfService";
 import { toast } from "react-hot-toast";
@@ -42,6 +43,7 @@ const expirationOptions = [
 
 const ShareLinkModal = ({ isOpen, onClose, binder }) => {
   const { user } = useAuth();
+  const { updateBinder } = useBinderContext();
   const [shareLinks, setShareLinks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [creating, setCreating] = useState(false);
@@ -50,6 +52,7 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
   const [selectedExpiration, setSelectedExpiration] = useState("never");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [visibleQRCodes, setVisibleQRCodes] = useState(new Set());
+  const [publishing, setPublishing] = useState(false);
 
   // Refs for gesture handling
   const modalRef = useRef(null);
@@ -410,6 +413,29 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
       day: "numeric",
       year: "numeric",
     });
+  };
+
+  // ---- Make Binder Public Handler ----
+  const handleMakePublic = async () => {
+    if (!binder || publishing) return;
+
+    try {
+      setPublishing(true);
+
+      await updateBinder(binder.id, {
+        permissions: {
+          ...(binder.permissions || {}),
+          public: true,
+        },
+      });
+
+      toast.success("Binder is now public!");
+    } catch (error) {
+      console.error("Error making binder public:", error);
+      toast.error(error.message || "Failed to make binder public");
+    } finally {
+      setPublishing(false);
+    }
   };
 
   // Don't render if modal is not open
@@ -812,9 +838,24 @@ const ShareLinkModal = ({ isOpen, onClose, binder }) => {
                     Binder is Private
                   </h3>
                   <p className="text-sm text-yellow-700 mt-2">
-                    Make your binder public first to create share links. You can
-                    change this in your binder settings.
+                    Make your binder public first to create share links.
                   </p>
+
+                  {/* Make Public Button */}
+                  <button
+                    onClick={handleMakePublic}
+                    disabled={publishing}
+                    className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    {publishing ? (
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                      <ShieldCheckIcon className="w-4 h-4" />
+                    )}
+                    <span>
+                      {publishing ? "Making Public..." : "Make Public"}
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
