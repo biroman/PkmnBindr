@@ -1,5 +1,22 @@
 import { Switch, RadioGroup } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import { useEffect, useState } from "react";
+
+const fetchSetCardStats = async (setId, lang = "en") => {
+  try {
+    const url = `${import.meta.env.BASE_URL || "/"}cards/${lang}/${setId}.json`;
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error("not found");
+    const cards = await resp.json();
+    const reverseEligibleRarities = ["Common", "Uncommon", "Rare", "Rare Holo"];
+    const reversibleCount = cards.filter((c) =>
+      reverseEligibleRarities.includes(c.rarity)
+    ).length;
+    return { total: cards.length, reversible: reversibleCount };
+  } catch {
+    return null;
+  }
+};
 
 // A rough estimation until we fetch the full card list with rarities.
 const estimateReverseHoloCount = (set, copies = 1) => {
@@ -24,13 +41,28 @@ const ConfigureStep = ({
     reverseHoloCopies = 1,
   } = configuration;
 
-  const estimatedRhCount = estimateReverseHoloCount(
-    selectedSet,
-    reverseHoloCopies
-  );
-  const totalCards =
-    (selectedSet?.printedTotal || 0) +
-    (includeReverseHolos ? estimatedRhCount : 0);
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    if (selectedSet) {
+      fetchSetCardStats(selectedSet.id).then((res) => {
+        if (isMounted) setStats(res);
+      });
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedSet]);
+
+  const accurateRhCount = stats
+    ? stats.reversible * (includeReverseHolos ? reverseHoloCopies : 0)
+    : estimateReverseHoloCount(selectedSet, reverseHoloCopies);
+
+  const totalCards = stats
+    ? stats.total + (includeReverseHolos ? accurateRhCount : 0)
+    : (selectedSet?.printedTotal || 0) +
+      (includeReverseHolos ? accurateRhCount : 0);
 
   const placementOptions = [
     {
@@ -93,8 +125,8 @@ const ConfigureStep = ({
                     Include Reverse Holo Cards
                   </span>
                   <span className="text-sm text-purple-600 dark:text-purple-400">
-                    Adds an estimated {estimatedRhCount} reverse holos (
-                    {reverseHoloCopies} cop
+                    Adds {stats ? accurateRhCount : `~${accurateRhCount}`}{" "}
+                    reverse holos ({reverseHoloCopies} cop
                     {reverseHoloCopies === 1 ? "y" : "ies"} each).
                   </span>
                 </label>

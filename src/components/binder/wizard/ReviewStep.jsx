@@ -155,19 +155,44 @@ const ReviewStep = ({
     batchMoveCards,
   } = useBinderContext();
 
-  // --- Memoized Calculations ---
-  const estimatedReverseCount = useMemo(() => {
-    if (!configuration.includeReverseHolos) return 0;
-    // Rough 60% estimate as before, multiplied by number of copies
-    const baseReverseHolos = Math.floor(selectedSet.printedTotal * 0.6);
-    return baseReverseHolos * (configuration.reverseHoloCopies || 1);
-  }, [
-    configuration.includeReverseHolos,
-    selectedSet.printedTotal,
-    configuration.reverseHoloCopies,
-  ]);
+  const fetchSetCardStats = async (setId, lang = "en") => {
+    try {
+      const url = `${
+        import.meta.env.BASE_URL || "/"
+      }cards/${lang}/${setId}.json`;
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error("not found");
+      const cards = await resp.json();
+      const reverseEligible = cards.filter((c) =>
+        canHaveReverseHolo(c.rarity)
+      ).length;
+      return { total: cards.length, reversible: reverseEligible };
+    } catch {
+      return null;
+    }
+  };
 
-  const numCardsToAdd = selectedSet.printedTotal + estimatedReverseCount;
+  // --- Memoized Calculations ---
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+    fetchSetCardStats(selectedSet.id).then((s) => mounted && setStats(s));
+    return () => {
+      mounted = false;
+    };
+  }, [selectedSet]);
+
+  const accurateReverseCount = stats
+    ? stats.reversible *
+      (configuration.includeReverseHolos
+        ? configuration.reverseHoloCopies || 1
+        : 0)
+    : 0;
+
+  const numCardsToAdd = stats
+    ? stats.total + accurateReverseCount
+    : selectedSet.printedTotal + accurateReverseCount;
   const hasExistingCards = Object.keys(currentBinder?.cards || {}).length > 0;
   const { binderPlacement, bufferPages = 0 } = configuration;
 
@@ -373,6 +398,8 @@ const ReviewStep = ({
     }
   };
 
+  const MAX_BINDER_CARDS = 1000;
+
   if (isProcessing) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center p-4">
@@ -406,6 +433,7 @@ const ReviewStep = ({
 
   const { totalSlots, usedSlots } = capacityInfo;
   const willItFitAfterReplace = totalCardsAfterAdd <= totalSlots;
+  const exceedsHardLimit = totalCardsAfterAdd > MAX_BINDER_CARDS;
 
   return (
     <div className="flex flex-col h-full">
@@ -621,6 +649,7 @@ const ReviewStep = ({
           onClick={handleFinalConfirm}
           disabled={
             isProcessing ||
+            exceedsHardLimit ||
             (addMode === "replace" && !willItFitAfterReplace) ||
             (addMode === "expand" && !selectedExpansion)
           }
@@ -628,6 +657,12 @@ const ReviewStep = ({
         >
           {isProcessing ? "Applying..." : `Confirm & Add to Binder`}
         </button>
+        {exceedsHardLimit && (
+          <p className="text-red-600 dark:text-red-400 text-sm mt-2 text-center">
+            Cannot add: Binder limit of {MAX_BINDER_CARDS} cards would be
+            exceeded.
+          </p>
+        )}
       </div>
     </div>
   );

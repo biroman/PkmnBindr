@@ -2,6 +2,9 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import { pokemonTcgApi, normalizeCardData } from "../services/pokemonTcgApi";
 import { useCardCache } from "../contexts/CardCacheContext";
 
+// In-memory cache for locally fetched set card files to avoid duplicate network hits across components
+const localSetCache = new Map();
+
 const useSetSearch = () => {
   const { addCardsToCache } = useCardCache();
   const [sets, setSets] = useState([]);
@@ -24,14 +27,17 @@ const useSetSearch = () => {
       return acc;
     }, {});
 
+    // Sort the sets inside each series by releaseDate (latest first)
+    Object.keys(bySeries).forEach((series) => {
+      bySeries[series].sort(
+        (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
+      );
+    });
+
     // Then, sort series by the latest release date within each series
     const sortedSeriesNames = Object.keys(bySeries).sort((a, b) => {
-      const latestA = Math.max(
-        ...bySeries[a].map((s) => new Date(s.releaseDate).getTime())
-      );
-      const latestB = Math.max(
-        ...bySeries[b].map((s) => new Date(s.releaseDate).getTime())
-      );
+      const latestA = new Date(bySeries[a][0].releaseDate).getTime();
+      const latestB = new Date(bySeries[b][0].releaseDate).getTime();
       return latestB - latestA; // Descending order
     });
 
@@ -63,8 +69,13 @@ const useSetSearch = () => {
           logo: set.images?.logo || "",
         }));
 
-        setSets(setsWithDetails);
-        setFilteredSets(setsWithDetails);
+        // Sort by releaseDate (latest first)
+        const sortedByDate = [...setsWithDetails].sort(
+          (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
+        );
+
+        setSets(sortedByDate);
+        setFilteredSets(sortedByDate);
       } catch (err) {
         console.error("Failed to load sets:", err);
         setError(err.message);
@@ -131,6 +142,33 @@ const useSetSearch = () => {
 
       try {
         console.log("Fetching cards for set ID:", setId);
+
+        if (localSetCache.has(setId)) {
+          const cached = localSetCache.get(setId);
+          addCardsToCache(cached);
+          return cached;
+        }
+
+        try {
+          const localUrl = `${
+            import.meta.env.BASE_URL || "/"
+          }cards/en/${setId}.json`;
+          const localResp = await fetch(localUrl);
+          if (localResp.ok) {
+            const localData = await localResp.json();
+            const normalizedLocal = localData.map(normalizeCardData);
+            // Cache and return
+            localSetCache.set(setId, normalizedLocal);
+            addCardsToCache(normalizedLocal);
+            return normalizedLocal;
+          }
+        } catch (localErr) {
+          // Just warn; we'll fall back to API
+          console.warn(
+            `Local JSON for set ${setId} not found or invalid`,
+            localErr
+          );
+        }
 
         // Primary attempt: search by set.id
         let cards = await fetchAllCards(`set.id:"${setId}"`);

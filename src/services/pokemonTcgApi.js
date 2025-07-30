@@ -9,6 +9,7 @@ const MAX_PAGE_SIZE = 250;
 
 // Import Supabase API for fallback
 import { supabaseApi, normalizeSupabaseCardData } from "./supabaseApi.js";
+import localSetsData from "../data/pokemonSets.json"; // keep for getSets()
 
 // API configuration
 const API_CONFIG = {
@@ -56,6 +57,66 @@ const cardCache = new ApiCache(30 * 60 * 1000); // 30 minutes for individual car
 const setCache = new ApiCache(60 * 60 * 1000); // 1 hour for sets
 // Cache for rarely changing metadata endpoints (types, rarities, etc.)
 const metaCache = new ApiCache(2 * 60 * 60 * 1000); // 2 hours
+
+// Cache for locally loaded set card files
+const localCardsCache = new Map();
+
+function applyLocalFilters(cards, { query, filters }) {
+  return cards.filter((card) => {
+    // Name filter (basic contains, case-insensitive)
+    if (query) {
+      const term = query.toLowerCase();
+      if (!card.name?.toLowerCase().includes(term)) return false;
+    }
+    // Supertype
+    if (filters.supertype && card.supertype !== filters.supertype) return false;
+    // Types
+    if (filters.types && filters.types.length > 0) {
+      if (!card.types || !card.types.includes(filters.types[0])) return false;
+    }
+    // Subtypes
+    if (filters.subtypes && filters.subtypes.length > 0) {
+      if (!card.subtypes || !card.subtypes.includes(filters.subtypes[0]))
+        return false;
+    }
+    // Rarity
+    if (filters.rarity && card.rarity !== filters.rarity) return false;
+    // Artist
+    if (filters.artist && card.artist !== filters.artist) return false;
+    return true;
+  });
+}
+
+function sortCards(cards, orderBy) {
+  if (!orderBy) return cards;
+  const desc = orderBy.startsWith("-");
+  const field = desc ? orderBy.slice(1) : orderBy;
+  const accessor = (card) => {
+    switch (field) {
+      case "number":
+        return parseInt(card.number, 10) || 0;
+      case "name":
+        return card.name?.toLowerCase() || "";
+      case "rarity":
+        return card.rarity || "";
+      case "set.releaseDate": {
+        return card.set?.releaseDate
+          ? new Date(card.set.releaseDate).getTime()
+          : 0;
+      }
+      default:
+        return 0;
+    }
+  };
+  const sorted = [...cards].sort((a, b) => {
+    const av = accessor(a);
+    const bv = accessor(b);
+    if (av < bv) return desc ? 1 : -1;
+    if (av > bv) return desc ? -1 : 1;
+    return 0;
+  });
+  return sorted;
+}
 
 // Rate limiting
 class RateLimit {
@@ -397,6 +458,93 @@ export const pokemonTcgApi = {
     orderBy = "",
     filters = {},
   } = {}) {
+    /* ---------- LOCAL JSON SHORT-CIRCUIT (global file) ---------- */
+    if (!filters.set) {
+      const langFolder = filters.lang || "en";
+      const cacheKey = `${langFolder}_ALL`;
+      let allCards;
+      try {
+        const allUrl = `${
+          import.meta.env.BASE_URL || "/"
+        }cards/${langFolder}/all.json`;
+        const allResp = await fetch(allUrl);
+        if (allResp.ok) {
+          allCards = await allResp.json();
+          localCardsCache.set(cacheKey, allCards);
+        } else {
+          throw new Error("all.json missing");
+        }
+      } catch (_) {
+        /* ---------- Fallback: aggregate all per-set files ---------- */
+        if (!localCardsCache.has(cacheKey)) {
+          // Gather set IDs from localSetsData
+          const setIds = localSetsData.map((s) => s.id);
+          const fetchPromises = setIds.map((id) =>
+            fetch(
+              `${import.meta.env.BASE_URL || "/"}cards/${langFolder}/${id}.json`
+            )
+              .then((res) => (res.ok ? res.json() : []))
+              .catch(() => [])
+          );
+          const results = await Promise.all(fetchPromises);
+          allCards = results.flat();
+          localCardsCache.set(cacheKey, allCards);
+        } else {
+          allCards = localCardsCache.get(cacheKey);
+        }
+      }
+      if (allCards) {
+        const filtered = applyLocalFilters(allCards, { query, filters });
+        const sorted = sortCards(filtered, orderBy);
+        const startIdx = (page - 1) * pageSize;
+        const paginated = sorted.slice(startIdx, startIdx + pageSize);
+        return {
+          cards: paginated.map(normalizeCardData),
+          totalCount: sorted.length,
+          page,
+          pageSize,
+          hasMore: startIdx + pageSize < sorted.length,
+        };
+      }
+    }
+
+    /* ---------- LOCAL JSON SHORT-CIRCUIT (set-specific) ---------- */
+    if (filters.set) {
+      const langFolder = filters.lang || "en"; // allow optional language filter
+      const cacheKey = `${langFolder}_${filters.set}`;
+      let allCards;
+      if (localCardsCache.has(cacheKey)) {
+        allCards = localCardsCache.get(cacheKey);
+      } else {
+        try {
+          const localUrl = `${
+            import.meta.env.BASE_URL || "/"
+          }cards/${langFolder}/${filters.set}.json`;
+          const resp = await fetch(localUrl);
+          if (resp.ok) {
+            allCards = await resp.json();
+            localCardsCache.set(cacheKey, allCards);
+          }
+        } catch (_) {
+          // ignore, will fall back to API path below
+        }
+      }
+      if (allCards) {
+        const filtered = applyLocalFilters(allCards, { query, filters });
+        const sorted = sortCards(filtered, orderBy);
+        const startIdx = (page - 1) * pageSize;
+        const paginated = sorted.slice(startIdx, startIdx + pageSize);
+        return {
+          cards: paginated.map(normalizeCardData),
+          totalCount: sorted.length,
+          page,
+          pageSize,
+          hasMore: startIdx + pageSize < sorted.length,
+        };
+      }
+    }
+
+    /* ---------- EXISTING REMOTE FLOW ---------- */
     let q = "";
     if (query) {
       q += this.buildFuzzyNameQuery(query.trim());
@@ -495,29 +643,28 @@ export const pokemonTcgApi = {
 
   async getSets() {
     try {
-      const allSets = [];
-      let page = 1;
-      let hasMore = true;
-      while (hasMore) {
+      // Prefer local JSON dataset to eliminate external API dependency
+      // This data is compiled into the bundle, avoiding network latency and failures.
+      // If you need to update the list, simply replace `src/data/pokemonSets.json`.
+      return localSetsData;
+    } catch (localError) {
+      console.warn(
+        "Local set data unavailable, falling back to remote API",
+        localError
+      );
+      try {
         const response = await apiRequest("/sets", {
           params: {
             orderBy: "-releaseDate",
             pageSize: MAX_PAGE_SIZE,
-            page: page,
+            page: 1,
           },
         });
-        if (response.data && response.data.length > 0) {
-          allSets.push(...response.data);
-          hasMore = response.data.length === MAX_PAGE_SIZE;
-          page++;
-        } else {
-          hasMore = false;
-        }
+        return response.data || [];
+      } catch (error) {
+        console.error("Get sets failed (remote fallback):", error);
+        throw new Error(`Failed to get sets: ${error.message}`);
       }
-      return allSets;
-    } catch (error) {
-      console.error("Get sets failed:", error);
-      throw new Error(`Failed to get sets: ${error.message}`);
     }
   },
 
@@ -606,6 +753,7 @@ export function normalizeCardData(card) {
       name: card.set?.name || "",
       series: card.set?.series || "",
       symbol: card.set?.images?.symbol || "",
+      releaseDate: card.set?.releaseDate || "",
     },
     number: card.number,
     artist: card.artist,
