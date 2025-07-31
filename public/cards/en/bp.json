@@ -46,6 +46,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -60,12 +77,38 @@
       "small": "https://images.pokemontcg.io/bp/1.png",
       "large": "https://images.pokemontcg.io/bp/1_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 17.42,
+          "mid": 24.47,
+          "high": 48.43,
+          "market": 17.49,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36.66,
+        "lowPrice": 15.99,
+        "trendPrice": 25.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.01,
+        "lowPriceExPlus": 24.99,
+        "avg1": 30,
+        "avg7": 27.34,
+        "avg30": 20.72,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 19.16,
+        "reverseHoloAvg30": 11.11
       }
     }
   },
@@ -77,7 +120,7 @@
       "Basic"
     ],
     "level": "33",
-    "hp": "60",
+    "hp": "70",
     "types": [
       "Fighting"
     ],
@@ -114,6 +157,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -128,38 +188,38 @@
       "small": "https://images.pokemontcg.io/bp/2.png",
       "large": "https://images.pokemontcg.io/bp/2_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 23.98,
+          "mid": 27,
+          "high": 37.99,
+          "market": 23.88,
+          "directLow": 24.95
+        }
       }
-    }
-  },
-  {
-    "id": "bp-3",
-    "name": "Professor Elm",
-    "supertype": "Trainer",
-    "rules": [
-      "Shuffle your hand into your deck. Then, draw 7 cards. You can't play any more Trainer cards this turn."
-    ],
-    "number": "3",
-    "artist": "Ken Sugimori",
-    "rarity": "Promo",
-    "legalities": {
-      "unlimited": "Legal"
     },
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/3.png",
-      "large": "https://images.pokemontcg.io/bp/3_hires.png"
-    },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 44,
+        "trendPrice": 16.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 29.99,
+        "avg7": 41.66,
+        "avg30": 41.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -213,6 +273,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "4",
     "artist": "K Hoshiba",
     "rarity": "Promo",
@@ -226,12 +303,217 @@
       "small": "https://images.pokemontcg.io/bp/4.png",
       "large": "https://images.pokemontcg.io/bp/4_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 19.69,
+          "mid": 28.95,
+          "high": 55,
+          "market": 27.64,
+          "directLow": 24.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 47.98,
+        "lowPrice": 10.95,
+        "trendPrice": 20.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.49,
+        "lowPriceExPlus": 10.95,
+        "avg1": 10.95,
+        "avg7": 21.68,
+        "avg30": 14.53,
+        "reverseHoloAvg1": 3.49,
+        "reverseHoloAvg7": 3.49,
+        "reverseHoloAvg30": 3.49
+      }
+    }
+  },
+  {
+    "id": "bp-3",
+    "name": "Professor Elm",
+    "supertype": "Trainer",
+    "rules": [
+      "Shuffle your hand into your deck. Then, draw 7 cards. You can't play any more Trainer cards this turn."
+    ],
     "set": {
       "id": "bp",
-      "releaseDate": "2002/12/01",
       "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
+    "number": "3",
+    "artist": "Ken Sugimori",
+    "rarity": "Promo",
+    "legalities": {
+      "unlimited": "Legal"
+    },
+    "images": {
+      "small": "https://images.pokemontcg.io/bp/3.png",
+      "large": "https://images.pokemontcg.io/bp/3_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 7.89,
+          "mid": 12.89,
+          "high": 19.95,
+          "market": 10.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.99,
+        "lowPrice": 12,
+        "trendPrice": 13.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.1,
+        "lowPriceExPlus": 14.9,
+        "avg1": 9.99,
+        "avg7": 12.61,
+        "avg30": 15.12,
+        "reverseHoloAvg1": 19.97,
+        "reverseHoloAvg7": 15.21,
+        "reverseHoloAvg30": 9.89
+      }
+    }
+  },
+  {
+    "id": "bp-6",
+    "name": "Dark Ivysaur",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "hp": "50",
+    "types": [
+      "Grass"
+    ],
+    "evolvesFrom": "Bulbasaur",
+    "evolvesTo": [
+      "Dark Venusaur"
+    ],
+    "abilities": [
+      {
+        "name": "Vine Pull",
+        "text": "Once during your turn when Dark Ivysaur retreats, choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+        "type": "Poké-Body"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "Fury Strikes",
+        "cost": [
+          "Grass",
+          "Grass"
+        ],
+        "convertedEnergyCost": 2,
+        "damage": "",
+        "text": "Your opponent puts 3 markers onto his or her Pokémon (divided as he or she chooses). (More than 1 marker can be put on the same Pokémon.) Then, this attack does 10 damage to each Pokémon for each marker on it. Don't apply Weakness and Resistance. Remove the markers at the end of the turn."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
+    "number": "6",
+    "artist": "Shin-ichi Yoshida",
+    "rarity": "Promo",
+    "nationalPokedexNumbers": [
+      2
+    ],
+    "legalities": {
+      "unlimited": "Legal"
+    },
+    "images": {
+      "small": "https://images.pokemontcg.io/bp/6.png",
+      "large": "https://images.pokemontcg.io/bp/6_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 19.99,
+          "mid": 21.86,
+          "high": 50,
+          "market": 18.48,
+          "directLow": 17.91
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 39.99,
+        "lowPrice": 27,
+        "trendPrice": 21.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.98,
+        "lowPriceExPlus": 27,
+        "avg1": 39.99,
+        "avg7": 24.15,
+        "avg30": 18.13,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 4.32,
+        "reverseHoloAvg30": 4.32
       }
     }
   },
@@ -283,6 +565,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Katsura Tabata",
     "rarity": "Promo",
@@ -296,79 +595,38 @@
       "small": "https://images.pokemontcg.io/bp/5.png",
       "large": "https://images.pokemontcg.io/bp/5_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.49,
+          "mid": 23.48,
+          "high": 24.99,
+          "market": 7.52,
+          "directLow": 23.48
+        }
       }
-    }
-  },
-  {
-    "id": "bp-6",
-    "name": "Dark Ivysaur",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Stage 1"
-    ],
-    "hp": "50",
-    "types": [
-      "Grass"
-    ],
-    "evolvesFrom": "Bulbasaur",
-    "evolvesTo": [
-      "Dark Venusaur"
-    ],
-    "abilities": [
-      {
-        "name": "Vine Pull",
-        "text": "Once during your turn when Dark Ivysaur retreats, choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
-        "type": "Poké-Body"
-      }
-    ],
-    "attacks": [
-      {
-        "name": "Fury Strikes",
-        "cost": [
-          "Grass",
-          "Grass"
-        ],
-        "convertedEnergyCost": 2,
-        "damage": "",
-        "text": "Your opponent puts 3 markers onto his or her Pokémon (divided as he or she chooses). (More than 1 marker can be put on the same Pokémon.) Then, this attack does 10 damage to each Pokémon for each marker on it. Don't apply Weakness and Resistance. Remove the markers at the end of the turn."
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fire",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "6",
-    "artist": "Shin-ichi Yoshida",
-    "rarity": "Promo",
-    "nationalPokedexNumbers": [
-      2
-    ],
-    "legalities": {
-      "unlimited": "Legal"
     },
-    "images": {
-      "small": "https://images.pokemontcg.io/bp/6.png",
-      "large": "https://images.pokemontcg.io/bp/6_hires.png"
-    },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36.98,
+        "lowPrice": 6,
+        "trendPrice": 26.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.75,
+        "lowPriceExPlus": 6,
+        "avg1": 70,
+        "avg7": 23.39,
+        "avg30": 17.55,
+        "reverseHoloAvg1": 2.75,
+        "reverseHoloAvg7": 2.75,
+        "reverseHoloAvg30": 2.75
       }
     }
   },
@@ -408,6 +666,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Promo",
@@ -421,12 +696,38 @@
       "small": "https://images.pokemontcg.io/bp/7.png",
       "large": "https://images.pokemontcg.io/bp/7_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 93.99,
+          "mid": 94.98,
+          "high": 129.99,
+          "market": 81.83,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 59.36,
+        "lowPrice": 21.99,
+        "trendPrice": 23.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.95,
+        "lowPriceExPlus": 57.5,
+        "avg1": 60,
+        "avg7": 50.58,
+        "avg30": 57.22,
+        "reverseHoloAvg1": 8.95,
+        "reverseHoloAvg7": 9.45,
+        "reverseHoloAvg30": 9.45
       }
     }
   },
@@ -486,6 +787,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Promo",
@@ -499,12 +817,38 @@
       "small": "https://images.pokemontcg.io/bp/8.png",
       "large": "https://images.pokemontcg.io/bp/8_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 116,
+          "mid": 196.2,
+          "high": 276.4,
+          "market": 269.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 150,
+        "lowPrice": 120,
+        "trendPrice": 367.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 92.64,
+        "lowPriceExPlus": 199.95,
+        "avg1": 125,
+        "avg7": 451.89,
+        "avg30": 196.87,
+        "reverseHoloAvg1": 180,
+        "reverseHoloAvg7": 87.64,
+        "reverseHoloAvg30": 43.31
       }
     }
   },
@@ -552,6 +896,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bp",
+      "name": "Best of Game",
+      "series": "Other",
+      "printedTotal": 9,
+      "total": 9,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BP",
+      "releaseDate": "2002/12/01",
+      "updatedAt": "2021/10/16 09:52:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bp/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -565,12 +926,38 @@
       "small": "https://images.pokemontcg.io/bp/9.png",
       "large": "https://images.pokemontcg.io/bp/9_hires.png"
     },
-    "set": {
-      "id": "bp",
-      "releaseDate": "2002/12/01",
-      "name": "Best of Game",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bp-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 93,
+          "mid": 93,
+          "high": 98.69,
+          "market": 103.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bp-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 74.96,
+        "lowPrice": 50,
+        "trendPrice": 74.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 48.73,
+        "lowPriceExPlus": 75,
+        "avg1": 80,
+        "avg7": 70.53,
+        "avg30": 65.97,
+        "reverseHoloAvg1": 95,
+        "reverseHoloAvg7": 55.41,
+        "reverseHoloAvg30": 29.2
       }
     }
   }

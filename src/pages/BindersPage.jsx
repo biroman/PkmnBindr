@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useBinderContext } from "../contexts/BinderContext";
 import { useAuth } from "../hooks/useAuth";
 import { useRules } from "../contexts/RulesContext";
+import { GLOBAL_CARD_LIMIT } from "../lib/globalRules.js";
 import { toast } from "react-hot-toast";
 import LocalBinderWarning from "../components/binder/LocalBinderWarning";
 import DeleteBinderModal from "../components/binder/DeleteBinderModal";
@@ -120,7 +121,7 @@ const BindersPage = () => {
             percentage: 0,
           },
           cardsPerBinder: {
-            limit: 500,
+            limit: GLOBAL_CARD_LIMIT,
           },
         });
       }

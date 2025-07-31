@@ -44,6 +44,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV1",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Shiny",
@@ -59,12 +76,38 @@
       "small": "https://images.pokemontcg.io/sma/SV1.png",
       "large": "https://images.pokemontcg.io/sma/SV1_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.7,
+          "mid": 5.09,
+          "high": 20,
+          "market": 4.51,
+          "directLow": 4.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.34,
+        "lowPrice": 3,
+        "trendPrice": 7.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 6,
+        "reverseHoloTrend": 6.62,
+        "lowPriceExPlus": 3,
+        "avg1": 8.05,
+        "avg7": 4.81,
+        "avg30": 5.25,
+        "reverseHoloAvg1": 5.49,
+        "reverseHoloAvg7": 7.72,
+        "reverseHoloAvg30": 10.59
       }
     }
   },
@@ -113,6 +156,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV2",
     "artist": "sui",
     "rarity": "Rare Shiny",
@@ -128,12 +188,38 @@
       "small": "https://images.pokemontcg.io/sma/SV2.png",
       "large": "https://images.pokemontcg.io/sma/SV2_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.75,
+          "mid": 2.62,
+          "high": 89,
+          "market": 2.45,
+          "directLow": 3.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.52,
+        "lowPrice": 1.23,
+        "trendPrice": 2.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 4.46,
+        "lowPriceExPlus": 1.23,
+        "avg1": 2,
+        "avg7": 2.28,
+        "avg30": 2.5,
+        "reverseHoloAvg1": 3.7,
+        "reverseHoloAvg7": 4.16,
+        "reverseHoloAvg30": 3.69
       }
     }
   },
@@ -184,6 +270,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV3",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Shiny",
@@ -199,12 +302,38 @@
       "small": "https://images.pokemontcg.io/sma/SV3.png",
       "large": "https://images.pokemontcg.io/sma/SV3_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.18,
+          "mid": 1.79,
+          "high": 5,
+          "market": 1.39,
+          "directLow": 1.45
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.97,
+        "lowPrice": 0.99,
+        "trendPrice": 1.95,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2,
+        "reverseHoloLow": 3,
+        "reverseHoloTrend": 1.29,
+        "lowPriceExPlus": 0.99,
+        "avg1": 1.85,
+        "avg7": 2.15,
+        "avg30": 1.96,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 2.67,
+        "reverseHoloAvg30": 3.66
       }
     }
   },
@@ -254,6 +383,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV4",
     "artist": "SATOSHI NAKAI",
     "rarity": "Rare Shiny",
@@ -269,12 +415,38 @@
       "small": "https://images.pokemontcg.io/sma/SV4.png",
       "large": "https://images.pokemontcg.io/sma/SV4_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.59,
+          "high": 9.95,
+          "market": 1.3,
+          "directLow": 1.45
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.49,
+        "lowPrice": 0.88,
+        "trendPrice": 1.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.73,
+        "lowPriceExPlus": 0.88,
+        "avg1": 1.5,
+        "avg7": 1.19,
+        "avg30": 1.79,
+        "reverseHoloAvg1": 1.29,
+        "reverseHoloAvg7": 2.44,
+        "reverseHoloAvg30": 3.02
       }
     }
   },
@@ -318,6 +490,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV5",
     "artist": "Mizue",
     "rarity": "Rare Shiny",
@@ -333,12 +522,38 @@
       "small": "https://images.pokemontcg.io/sma/SV5.png",
       "large": "https://images.pokemontcg.io/sma/SV5_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.5,
+          "mid": 4.89,
+          "high": 89,
+          "market": 4.45,
+          "directLow": 4.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.65,
+        "lowPrice": 2,
+        "trendPrice": 2.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4,
+        "reverseHoloTrend": 4.43,
+        "lowPriceExPlus": 2,
+        "avg1": 3.09,
+        "avg7": 2.73,
+        "avg30": 3.05,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 3.95,
+        "reverseHoloAvg30": 3.24
       }
     }
   },
@@ -379,6 +594,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV6",
     "artist": "kirisAki",
     "rarity": "Rare Shiny",
@@ -394,12 +626,38 @@
       "small": "https://images.pokemontcg.io/sma/SV6.png",
       "large": "https://images.pokemontcg.io/sma/SV6_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14.63,
+          "mid": 16.9,
+          "high": 77.03,
+          "market": 14.5,
+          "directLow": 16.64
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15,
+        "lowPrice": 4,
+        "trendPrice": 15.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 28.96,
+        "lowPriceExPlus": 8.5,
+        "avg1": 12,
+        "avg7": 12.97,
+        "avg30": 14.65,
+        "reverseHoloAvg1": 11.95,
+        "reverseHoloAvg7": 31.26,
+        "reverseHoloAvg30": 30.52
       }
     }
   },
@@ -449,6 +707,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV7",
     "artist": "nagimiso",
     "rarity": "Rare Shiny",
@@ -464,12 +739,38 @@
       "small": "https://images.pokemontcg.io/sma/SV7.png",
       "large": "https://images.pokemontcg.io/sma/SV7_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.69,
+          "mid": 11,
+          "high": 25,
+          "market": 8.58,
+          "directLow": 10.88
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.72,
+        "lowPrice": 8.46,
+        "trendPrice": 17.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 14,
+        "reverseHoloTrend": 15.68,
+        "lowPriceExPlus": 8.5,
+        "avg1": 9.74,
+        "avg7": 11.28,
+        "avg30": 14.88,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 31.37,
+        "reverseHoloAvg30": 43.51
       }
     }
   },
@@ -516,6 +817,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV8",
     "artist": "Kouki Saitou",
     "rarity": "Rare Shiny",
@@ -531,12 +849,38 @@
       "small": "https://images.pokemontcg.io/sma/SV8.png",
       "large": "https://images.pokemontcg.io/sma/SV8_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.31,
+          "mid": 6.45,
+          "high": 89,
+          "market": 5.97,
+          "directLow": 4.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.86,
+        "lowPrice": 2.44,
+        "trendPrice": 4.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4.69,
+        "reverseHoloTrend": 4.27,
+        "lowPriceExPlus": 2.44,
+        "avg1": 3.25,
+        "avg7": 3.47,
+        "avg30": 3.88,
+        "reverseHoloAvg1": 3.95,
+        "reverseHoloAvg7": 3.83,
+        "reverseHoloAvg30": 4.32
       }
     }
   },
@@ -585,6 +929,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV9",
     "artist": "Misa Tsutsui",
     "rarity": "Rare Shiny",
@@ -600,12 +961,38 @@
       "small": "https://images.pokemontcg.io/sma/SV9.png",
       "large": "https://images.pokemontcg.io/sma/SV9_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.07,
+          "mid": 8.99,
+          "high": 15,
+          "market": 7.53,
+          "directLow": 8.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.35,
+        "lowPrice": 1.19,
+        "trendPrice": 3.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.7,
+        "lowPriceExPlus": 1.99,
+        "avg1": 3.78,
+        "avg7": 3.64,
+        "avg30": 3.33,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 4.32,
+        "reverseHoloAvg30": 4.55
       }
     }
   },
@@ -652,6 +1039,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV10",
     "artist": "Saya Tsuruta",
     "rarity": "Rare Shiny",
@@ -667,12 +1071,38 @@
       "small": "https://images.pokemontcg.io/sma/SV10.png",
       "large": "https://images.pokemontcg.io/sma/SV10_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 7.5,
+          "high": 89,
+          "market": 6.47,
+          "directLow": 7.67
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.48,
+        "lowPrice": 0.99,
+        "trendPrice": 5.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 10,
+        "reverseHoloTrend": 2.85,
+        "lowPriceExPlus": 2.2,
+        "avg1": 18.95,
+        "avg7": 5.35,
+        "avg30": 3.63,
+        "reverseHoloAvg1": 3.25,
+        "reverseHoloAvg7": 2.73,
+        "reverseHoloAvg30": 4.18
       }
     }
   },
@@ -719,6 +1149,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV11",
     "artist": "sui",
     "rarity": "Rare Shiny",
@@ -734,12 +1181,38 @@
       "small": "https://images.pokemontcg.io/sma/SV11.png",
       "large": "https://images.pokemontcg.io/sma/SV11_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.25,
+          "mid": 2.58,
+          "high": 14.55,
+          "market": 2.47,
+          "directLow": 1.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.94,
+        "lowPrice": 1,
+        "trendPrice": 1.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 2.05,
+        "lowPriceExPlus": 1,
+        "avg1": 1.6,
+        "avg7": 1.99,
+        "avg30": 1.89,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 2.66,
+        "reverseHoloAvg30": 3.11
       }
     }
   },
@@ -786,6 +1259,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV12",
     "artist": "Anesaki Dynamic",
     "rarity": "Rare Shiny",
@@ -801,12 +1291,38 @@
       "small": "https://images.pokemontcg.io/sma/SV12.png",
       "large": "https://images.pokemontcg.io/sma/SV12_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 2.99,
+          "high": 11.64,
+          "market": 2.59,
+          "directLow": 3.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.26,
+        "lowPrice": 1,
+        "trendPrice": 1.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4.5,
+        "reverseHoloTrend": 5.39,
+        "lowPriceExPlus": 1,
+        "avg1": 2.5,
+        "avg7": 2.41,
+        "avg30": 3,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 6.6,
+        "reverseHoloAvg30": 4.29
       }
     }
   },
@@ -859,6 +1375,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV13",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Shiny",
@@ -874,12 +1407,38 @@
       "small": "https://images.pokemontcg.io/sma/SV13.png",
       "large": "https://images.pokemontcg.io/sma/SV13_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.84,
+          "mid": 2.61,
+          "high": 7,
+          "market": 2.17,
+          "directLow": 2.72
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.29,
+        "lowPrice": 2,
+        "trendPrice": 2.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4,
+        "reverseHoloTrend": 2.34,
+        "lowPriceExPlus": 2,
+        "avg1": 4.24,
+        "avg7": 4.01,
+        "avg30": 3.75,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.33,
+        "reverseHoloAvg30": 5.53
       }
     }
   },
@@ -933,6 +1492,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV14",
     "artist": "Naoki Saito",
     "rarity": "Rare Shiny",
@@ -948,12 +1524,38 @@
       "small": "https://images.pokemontcg.io/sma/SV14.png",
       "large": "https://images.pokemontcg.io/sma/SV14_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.96,
+          "mid": 2.74,
+          "high": 89,
+          "market": 2.29,
+          "directLow": 2.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.24,
+        "lowPrice": 1,
+        "trendPrice": 2.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.88,
+        "lowPriceExPlus": 1,
+        "avg1": 2.9,
+        "avg7": 2.23,
+        "avg30": 2.77,
+        "reverseHoloAvg1": 1.8,
+        "reverseHoloAvg7": 2.64,
+        "reverseHoloAvg30": 3.02
       }
     }
   },
@@ -999,6 +1601,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV15",
     "artist": "SATOSHI NAKAI",
     "rarity": "Rare Shiny",
@@ -1014,12 +1633,38 @@
       "small": "https://images.pokemontcg.io/sma/SV15.png",
       "large": "https://images.pokemontcg.io/sma/SV15_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 1.9,
+          "high": 9.95,
+          "market": 1.37,
+          "directLow": 1.53
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.32,
+        "lowPrice": 1,
+        "trendPrice": 4.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.95,
+        "reverseHoloTrend": 2.46,
+        "lowPriceExPlus": 1.2,
+        "avg1": 1.95,
+        "avg7": 3.84,
+        "avg30": 2.26,
+        "reverseHoloAvg1": 1.45,
+        "reverseHoloAvg7": 3.05,
+        "reverseHoloAvg30": 3.4
       }
     }
   },
@@ -1074,6 +1719,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV16",
     "artist": "sui",
     "rarity": "Rare Shiny",
@@ -1089,12 +1751,38 @@
       "small": "https://images.pokemontcg.io/sma/SV16.png",
       "large": "https://images.pokemontcg.io/sma/SV16_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.2,
+          "mid": 2,
+          "high": 25,
+          "market": 1.74,
+          "directLow": 2.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.98,
+        "lowPrice": 1.4,
+        "trendPrice": 1.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.68,
+        "lowPriceExPlus": 1.4,
+        "avg1": 1.89,
+        "avg7": 1.95,
+        "avg30": 2.03,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.62,
+        "reverseHoloAvg30": 3.31
       }
     }
   },
@@ -1133,6 +1821,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV17",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Shiny",
@@ -1148,12 +1853,38 @@
       "small": "https://images.pokemontcg.io/sma/SV17.png",
       "large": "https://images.pokemontcg.io/sma/SV17_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.78,
+          "high": 5,
+          "market": 1.61,
+          "directLow": 1.62
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.15,
+        "lowPrice": 0.75,
+        "trendPrice": 1.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.5,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 0.99,
+        "lowPriceExPlus": 0.85,
+        "avg1": 1.5,
+        "avg7": 1.7,
+        "avg30": 2.04,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 1,
+        "reverseHoloAvg30": 2.37
       }
     }
   },
@@ -1200,6 +1931,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV18",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare Shiny",
@@ -1215,12 +1963,38 @@
       "small": "https://images.pokemontcg.io/sma/SV18.png",
       "large": "https://images.pokemontcg.io/sma/SV18_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.49,
+          "mid": 2.12,
+          "high": 20,
+          "market": 1.75,
+          "directLow": 2.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.82,
+        "lowPrice": 1.29,
+        "trendPrice": 1.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 2.01,
+        "lowPriceExPlus": 1.45,
+        "avg1": 1.5,
+        "avg7": 1.82,
+        "avg30": 2.02,
+        "reverseHoloAvg1": 0.97,
+        "reverseHoloAvg7": 2.56,
+        "reverseHoloAvg30": 3.32
       }
     }
   },
@@ -1270,6 +2044,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV19",
     "artist": "Akira Komayama",
     "rarity": "Rare Shiny",
@@ -1285,12 +2076,38 @@
       "small": "https://images.pokemontcg.io/sma/SV19.png",
       "large": "https://images.pokemontcg.io/sma/SV19_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.07,
+          "mid": 3.05,
+          "high": 10.99,
+          "market": 2.56,
+          "directLow": 3.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.51,
+        "lowPrice": 1,
+        "trendPrice": 2.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4,
+        "reverseHoloTrend": 2.01,
+        "lowPriceExPlus": 1,
+        "avg1": 3.95,
+        "avg7": 2.29,
+        "avg30": 2.42,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.71,
+        "reverseHoloAvg30": 3.4
       }
     }
   },
@@ -1335,6 +2152,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV20",
     "artist": "Kyoko Umemoto",
     "rarity": "Rare Shiny",
@@ -1350,12 +2184,38 @@
       "small": "https://images.pokemontcg.io/sma/SV20.png",
       "large": "https://images.pokemontcg.io/sma/SV20_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.5,
+          "mid": 2.51,
+          "high": 25,
+          "market": 2.14,
+          "directLow": 2.57
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.94,
+        "lowPrice": 1.35,
+        "trendPrice": 1.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.5,
+        "reverseHoloTrend": 3.74,
+        "lowPriceExPlus": 1.35,
+        "avg1": 1,
+        "avg7": 1.73,
+        "avg30": 2.36,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 3.42,
+        "reverseHoloAvg30": 3.85
       }
     }
   },
@@ -1403,6 +2263,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV21",
     "artist": "Misa Tsutsui",
     "rarity": "Rare Shiny",
@@ -1418,12 +2295,38 @@
       "small": "https://images.pokemontcg.io/sma/SV21.png",
       "large": "https://images.pokemontcg.io/sma/SV21_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 4.99,
+          "high": 19.69,
+          "market": 4.39,
+          "directLow": 4.55
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.69,
+        "lowPrice": 1.98,
+        "trendPrice": 6.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 2.22,
+        "lowPriceExPlus": 3,
+        "avg1": 3.2,
+        "avg7": 4.33,
+        "avg30": 6.6,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 4.5,
+        "reverseHoloAvg30": 7.68
       }
     }
   },
@@ -1468,6 +2371,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV22",
     "artist": "Kouki Saitou",
     "rarity": "Rare Shiny",
@@ -1483,12 +2403,38 @@
       "small": "https://images.pokemontcg.io/sma/SV22.png",
       "large": "https://images.pokemontcg.io/sma/SV22_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.99,
+          "mid": 10,
+          "high": 25.99,
+          "market": 9.71,
+          "directLow": 9.36
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.51,
+        "lowPrice": 3.49,
+        "trendPrice": 6.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 6,
+        "reverseHoloTrend": 8.15,
+        "lowPriceExPlus": 3.49,
+        "avg1": 5.93,
+        "avg7": 6.51,
+        "avg30": 7.71,
+        "reverseHoloAvg1": 12.99,
+        "reverseHoloAvg7": 9.98,
+        "reverseHoloAvg30": 15.42
       }
     }
   },
@@ -1528,6 +2474,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV23",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Shiny",
@@ -1543,12 +2506,38 @@
       "small": "https://images.pokemontcg.io/sma/SV23.png",
       "large": "https://images.pokemontcg.io/sma/SV23_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.6,
+          "mid": 2.71,
+          "high": 5,
+          "market": 2.21,
+          "directLow": 2.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.25,
+        "lowPrice": 0.99,
+        "trendPrice": 2.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 2.01,
+        "lowPriceExPlus": 0.99,
+        "avg1": 1.3,
+        "avg7": 2.79,
+        "avg30": 2.18,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 2.32,
+        "reverseHoloAvg30": 2.64
       }
     }
   },
@@ -1597,6 +2586,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV24",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Shiny",
@@ -1612,12 +2618,38 @@
       "small": "https://images.pokemontcg.io/sma/SV24.png",
       "large": "https://images.pokemontcg.io/sma/SV24_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.3,
+          "mid": 2.53,
+          "high": 89,
+          "market": 2.39,
+          "directLow": 3.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.28,
+        "lowPrice": 1,
+        "trendPrice": 2.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 1.84,
+        "lowPriceExPlus": 1,
+        "avg1": 1.49,
+        "avg7": 1.87,
+        "avg30": 2.05,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.34,
+        "reverseHoloAvg30": 2.89
       }
     }
   },
@@ -1672,6 +2704,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV25",
     "artist": "Saya Tsuruta",
     "rarity": "Rare Shiny",
@@ -1687,12 +2736,38 @@
       "small": "https://images.pokemontcg.io/sma/SV25.png",
       "large": "https://images.pokemontcg.io/sma/SV25_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6,
+          "mid": 8.48,
+          "high": 29.99,
+          "market": 7.53,
+          "directLow": 8.54
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.99,
+        "lowPrice": 2.78,
+        "trendPrice": 6.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 3.86,
+        "lowPriceExPlus": 3,
+        "avg1": 3.99,
+        "avg7": 5.29,
+        "avg30": 5.14,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 3.87,
+        "reverseHoloAvg30": 4.61
       }
     }
   },
@@ -1741,6 +2816,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV26",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Shiny",
@@ -1756,12 +2848,38 @@
       "small": "https://images.pokemontcg.io/sma/SV26.png",
       "large": "https://images.pokemontcg.io/sma/SV26_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 2.99,
+          "high": 89,
+          "market": 2.52,
+          "directLow": 2.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.65,
+        "lowPrice": 1.45,
+        "trendPrice": 2.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.7,
+        "reverseHoloTrend": 2.36,
+        "lowPriceExPlus": 1.45,
+        "avg1": 2.34,
+        "avg7": 2.18,
+        "avg30": 2.33,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 2.55,
+        "reverseHoloAvg30": 3.53
       }
     }
   },
@@ -1815,6 +2933,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV27",
     "artist": "SATOSHI NAKAI",
     "rarity": "Rare Shiny",
@@ -1830,12 +2965,38 @@
       "small": "https://images.pokemontcg.io/sma/SV27.png",
       "large": "https://images.pokemontcg.io/sma/SV27_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.2,
+          "mid": 1.99,
+          "high": 89,
+          "market": 1.64,
+          "directLow": 1.47
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.87,
+        "lowPrice": 0.9,
+        "trendPrice": 2.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.99,
+        "reverseHoloLow": 2.5,
+        "reverseHoloTrend": 1.95,
+        "lowPriceExPlus": 0.9,
+        "avg1": 2.75,
+        "avg7": 2.16,
+        "avg30": 1.75,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 1.91,
+        "reverseHoloAvg30": 3.04
       }
     }
   },
@@ -1893,6 +3054,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV28",
     "artist": "Kyoko Umemoto",
     "rarity": "Rare Shiny",
@@ -1908,12 +3086,38 @@
       "small": "https://images.pokemontcg.io/sma/SV28.png",
       "large": "https://images.pokemontcg.io/sma/SV28_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.99,
+          "mid": 2.54,
+          "high": 89,
+          "market": 2.31,
+          "directLow": 3.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.11,
+        "lowPrice": 1.2,
+        "trendPrice": 0.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.49,
+        "reverseHoloTrend": 1.4,
+        "lowPriceExPlus": 1.2,
+        "avg1": 3.13,
+        "avg7": 2.53,
+        "avg30": 4.41,
+        "reverseHoloAvg1": 1.95,
+        "reverseHoloAvg7": 3.21,
+        "reverseHoloAvg30": 5.15
       }
     }
   },
@@ -1967,6 +3171,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV29",
     "artist": "Misa Tsutsui",
     "rarity": "Rare Shiny",
@@ -1982,12 +3203,38 @@
       "small": "https://images.pokemontcg.io/sma/SV29.png",
       "large": "https://images.pokemontcg.io/sma/SV29_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 2.67,
+          "high": 89,
+          "market": 2.23,
+          "directLow": 2.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.22,
+        "lowPrice": 1.5,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.95,
+        "lowPriceExPlus": 1.7,
+        "avg1": 2,
+        "avg7": 2.14,
+        "avg30": 3.07,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.05,
+        "reverseHoloAvg30": 3.75
       }
     }
   },
@@ -2032,6 +3279,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV30",
     "artist": "Mizue",
     "rarity": "Rare Shiny",
@@ -2047,12 +3311,38 @@
       "small": "https://images.pokemontcg.io/sma/SV30.png",
       "large": "https://images.pokemontcg.io/sma/SV30_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.9,
+          "mid": 1.8,
+          "high": 89,
+          "market": 1.39,
+          "directLow": 1.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.57,
+        "lowPrice": 0.5,
+        "trendPrice": 2.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.99,
+        "reverseHoloLow": 14.98,
+        "reverseHoloTrend": 1.38,
+        "lowPriceExPlus": 0.5,
+        "avg1": 8,
+        "avg7": 2.39,
+        "avg30": 1.7,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.33,
+        "reverseHoloAvg30": 2.64
       }
     }
   },
@@ -2111,6 +3401,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV31",
     "artist": "Saya Tsuruta",
     "rarity": "Rare Shiny",
@@ -2126,12 +3433,38 @@
       "small": "https://images.pokemontcg.io/sma/SV31.png",
       "large": "https://images.pokemontcg.io/sma/SV31_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.46,
+          "mid": 2.25,
+          "high": 89,
+          "market": 2.09,
+          "directLow": 2.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.14,
+        "lowPrice": 0.95,
+        "trendPrice": 3.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.5,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.34,
+        "lowPriceExPlus": 1.49,
+        "avg1": 2.9,
+        "avg7": 3.57,
+        "avg30": 3.47,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.78,
+        "reverseHoloAvg30": 3.55
       }
     }
   },
@@ -2181,6 +3514,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV32",
     "artist": "Kouki Saitou",
     "rarity": "Rare Shiny",
@@ -2196,12 +3546,38 @@
       "small": "https://images.pokemontcg.io/sma/SV32.png",
       "large": "https://images.pokemontcg.io/sma/SV32_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.64,
+          "mid": 2.63,
+          "high": 89,
+          "market": 1.99,
+          "directLow": 3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.51,
+        "lowPrice": 1,
+        "trendPrice": 2.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.39,
+        "reverseHoloLow": 3.5,
+        "reverseHoloTrend": 1.96,
+        "lowPriceExPlus": 1.2,
+        "avg1": 1.5,
+        "avg7": 2,
+        "avg30": 2.3,
+        "reverseHoloAvg1": 1.39,
+        "reverseHoloAvg7": 1.88,
+        "reverseHoloAvg30": 2.6
       }
     }
   },
@@ -2245,6 +3621,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV33",
     "artist": "Anesaki Dynamic",
     "rarity": "Rare Shiny",
@@ -2260,12 +3653,38 @@
       "small": "https://images.pokemontcg.io/sma/SV33.png",
       "large": "https://images.pokemontcg.io/sma/SV33_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.4,
+          "mid": 2.21,
+          "high": 5,
+          "market": 2.1,
+          "directLow": 2.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.84,
+        "lowPrice": 0.89,
+        "trendPrice": 1.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 29.5,
+        "reverseHoloTrend": 2.37,
+        "lowPriceExPlus": 0.89,
+        "avg1": 1.5,
+        "avg7": 2.06,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.54,
+        "reverseHoloAvg30": 2.81
       }
     }
   },
@@ -2310,6 +3729,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV34",
     "artist": "Kyoko Umemoto",
     "rarity": "Rare Shiny",
@@ -2325,12 +3761,38 @@
       "small": "https://images.pokemontcg.io/sma/SV34.png",
       "large": "https://images.pokemontcg.io/sma/SV34_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.9,
+          "mid": 2.99,
+          "high": 12,
+          "market": 2.4,
+          "directLow": 2.52
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.64,
+        "lowPrice": 1,
+        "trendPrice": 1.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.3,
+        "lowPriceExPlus": 1,
+        "avg1": 2,
+        "avg7": 1.92,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.66,
+        "reverseHoloAvg30": 2.77
       }
     }
   },
@@ -2387,6 +3849,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV35",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare Shiny",
@@ -2402,12 +3881,38 @@
       "small": "https://images.pokemontcg.io/sma/SV35.png",
       "large": "https://images.pokemontcg.io/sma/SV35_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.2,
+          "mid": 3.98,
+          "high": 89,
+          "market": 3.25,
+          "directLow": 4.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.59,
+        "lowPrice": 1.25,
+        "trendPrice": 4.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.45,
+        "reverseHoloTrend": 3.55,
+        "lowPriceExPlus": 2,
+        "avg1": 3.75,
+        "avg7": 3.98,
+        "avg30": 3.38,
+        "reverseHoloAvg1": 3.5,
+        "reverseHoloAvg7": 3.45,
+        "reverseHoloAvg30": 4.52
       }
     }
   },
@@ -2459,6 +3964,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV36",
     "artist": "Akira Komayama",
     "rarity": "Rare Shiny",
@@ -2474,12 +3996,38 @@
       "small": "https://images.pokemontcg.io/sma/SV36.png",
       "large": "https://images.pokemontcg.io/sma/SV36_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.5,
+          "mid": 2.45,
+          "high": 9,
+          "market": 2.14,
+          "directLow": 2.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.21,
+        "lowPrice": 0.5,
+        "trendPrice": 2.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 2.81,
+        "lowPriceExPlus": 1.5,
+        "avg1": 1.25,
+        "avg7": 2.17,
+        "avg30": 2.27,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 3.33,
+        "reverseHoloAvg30": 3.02
       }
     }
   },
@@ -2524,6 +4072,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV37",
     "artist": "kirisAki",
     "rarity": "Rare Shiny",
@@ -2539,12 +4104,38 @@
       "small": "https://images.pokemontcg.io/sma/SV37.png",
       "large": "https://images.pokemontcg.io/sma/SV37_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.8,
+          "mid": 4.13,
+          "high": 89,
+          "market": 3.54,
+          "directLow": 3.53
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.27,
+        "lowPrice": 2.99,
+        "trendPrice": 4.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.99,
+        "reverseHoloTrend": 6.7,
+        "lowPriceExPlus": 2.99,
+        "avg1": 3,
+        "avg7": 3.72,
+        "avg30": 4.92,
+        "reverseHoloAvg1": 2.3,
+        "reverseHoloAvg7": 6.2,
+        "reverseHoloAvg30": 5.07
       }
     }
   },
@@ -2583,6 +4174,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV38",
     "artist": "Saya Tsuruta",
     "rarity": "Rare Shiny",
@@ -2598,12 +4206,38 @@
       "small": "https://images.pokemontcg.io/sma/SV38.png",
       "large": "https://images.pokemontcg.io/sma/SV38_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.25,
+          "mid": 3.25,
+          "high": 89,
+          "market": 2.81,
+          "directLow": 3.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.03,
+        "lowPrice": 0.2,
+        "trendPrice": 1.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5.99,
+        "reverseHoloTrend": 1.68,
+        "lowPriceExPlus": 1.4,
+        "avg1": 1.95,
+        "avg7": 1.88,
+        "avg30": 2.09,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 1.81,
+        "reverseHoloAvg30": 3.23
       }
     }
   },
@@ -2653,6 +4287,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV39",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Shiny",
@@ -2668,12 +4319,38 @@
       "small": "https://images.pokemontcg.io/sma/SV39.png",
       "large": "https://images.pokemontcg.io/sma/SV39_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.15,
+          "mid": 2.99,
+          "high": 15.99,
+          "market": 2.83,
+          "directLow": 4.28
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.53,
+        "lowPrice": 1.5,
+        "trendPrice": 2.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 3.95,
+        "reverseHoloTrend": 4.65,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.99,
+        "avg7": 2.94,
+        "avg30": 2.73,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 5.71,
+        "reverseHoloAvg30": 6.4
       }
     }
   },
@@ -2718,6 +4395,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV40",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Shiny",
@@ -2733,12 +4427,38 @@
       "small": "https://images.pokemontcg.io/sma/SV40.png",
       "large": "https://images.pokemontcg.io/sma/SV40_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 5.99,
+          "high": 19.69,
+          "market": 5.35,
+          "directLow": 5.91
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.24,
+        "lowPrice": 1.25,
+        "trendPrice": 4.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 12,
+        "reverseHoloTrend": 3.1,
+        "lowPriceExPlus": 2.5,
+        "avg1": 3.8,
+        "avg7": 4.14,
+        "avg30": 4.58,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 5.7,
+        "reverseHoloAvg30": 8.8
       }
     }
   },
@@ -2792,6 +4512,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV41",
     "artist": "kirisAki",
     "rarity": "Rare Shiny",
@@ -2807,12 +4544,38 @@
       "small": "https://images.pokemontcg.io/sma/SV41.png",
       "large": "https://images.pokemontcg.io/sma/SV41_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 31.18,
+          "mid": 35.68,
+          "high": 70,
+          "market": 32.11,
+          "directLow": 32.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.64,
+        "lowPrice": 5,
+        "trendPrice": 25.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 25,
+        "reverseHoloTrend": 17.72,
+        "lowPriceExPlus": 17,
+        "avg1": 20.75,
+        "avg7": 27.82,
+        "avg30": 24.28,
+        "reverseHoloAvg1": 23.99,
+        "reverseHoloAvg7": 22.28,
+        "reverseHoloAvg30": 28.1
       }
     }
   },
@@ -2867,6 +4630,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV42",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Shiny",
@@ -2882,12 +4662,38 @@
       "small": "https://images.pokemontcg.io/sma/SV42.png",
       "large": "https://images.pokemontcg.io/sma/SV42_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.23,
+          "high": 12,
+          "market": 3.08,
+          "directLow": 4.34
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.57,
+        "lowPrice": 1.55,
+        "trendPrice": 2.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.66,
+        "lowPriceExPlus": 1.55,
+        "avg1": 2.5,
+        "avg7": 2.4,
+        "avg30": 2.63,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.48,
+        "reverseHoloAvg30": 3.92
       }
     }
   },
@@ -2932,6 +4738,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV43",
     "artist": "Mizue",
     "rarity": "Rare Shiny",
@@ -2947,12 +4770,38 @@
       "small": "https://images.pokemontcg.io/sma/SV43.png",
       "large": "https://images.pokemontcg.io/sma/SV43_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.49,
+          "mid": 2.19,
+          "high": 5,
+          "market": 1.86,
+          "directLow": 2.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.09,
+        "lowPrice": 1.4,
+        "trendPrice": 2.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 3,
+        "reverseHoloTrend": 2.12,
+        "lowPriceExPlus": 1.4,
+        "avg1": 1.99,
+        "avg7": 1.78,
+        "avg30": 1.97,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 2.45,
+        "reverseHoloAvg30": 3.04
       }
     }
   },
@@ -2998,6 +4847,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV44",
     "artist": "Akira Komayama",
     "rarity": "Rare Shiny",
@@ -3013,12 +4879,38 @@
       "small": "https://images.pokemontcg.io/sma/SV44.png",
       "large": "https://images.pokemontcg.io/sma/SV44_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.79,
+          "high": 6.95,
+          "market": 1.29,
+          "directLow": 1.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.95,
+        "lowPrice": 1,
+        "trendPrice": 3.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4.5,
+        "reverseHoloTrend": 2.9,
+        "lowPriceExPlus": 1,
+        "avg1": 2.99,
+        "avg7": 1.62,
+        "avg30": 2.32,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 2.71,
+        "reverseHoloAvg30": 3.23
       }
     }
   },
@@ -3067,6 +4959,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV45",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Shiny",
@@ -3082,12 +4991,38 @@
       "small": "https://images.pokemontcg.io/sma/SV45.png",
       "large": "https://images.pokemontcg.io/sma/SV45_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.75,
+          "mid": 2.95,
+          "high": 9.99,
+          "market": 2.57,
+          "directLow": 3.28
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.9,
+        "lowPrice": 1.69,
+        "trendPrice": 3.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.43,
+        "lowPriceExPlus": 1.77,
+        "avg1": 3,
+        "avg7": 2.82,
+        "avg30": 2.56,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.06,
+        "reverseHoloAvg30": 3.18
       }
     }
   },
@@ -3147,6 +5082,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV46",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3161,12 +5113,38 @@
       "small": "https://images.pokemontcg.io/sma/SV46.png",
       "large": "https://images.pokemontcg.io/sma/SV46_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 55.95,
+          "mid": 64.5,
+          "high": 100,
+          "market": 54.14,
+          "directLow": 59.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 53.47,
+        "lowPrice": 22.99,
+        "trendPrice": 55.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 55.27,
+        "lowPriceExPlus": 39,
+        "avg1": 49.88,
+        "avg7": 52.4,
+        "avg30": 48.23,
+        "reverseHoloAvg1": 18.5,
+        "reverseHoloAvg7": 51.42,
+        "reverseHoloAvg30": 63.48
       }
     }
   },
@@ -3226,6 +5204,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV47",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3240,12 +5235,38 @@
       "small": "https://images.pokemontcg.io/sma/SV47.png",
       "large": "https://images.pokemontcg.io/sma/SV47_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13,
+          "mid": 15.91,
+          "high": 39.69,
+          "market": 13.71,
+          "directLow": 13.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.03,
+        "lowPrice": 6.5,
+        "trendPrice": 8.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.09,
+        "lowPriceExPlus": 6.5,
+        "avg1": 6.75,
+        "avg7": 10.26,
+        "avg30": 9.5,
+        "reverseHoloAvg1": 13.44,
+        "reverseHoloAvg7": 13.02,
+        "reverseHoloAvg30": 14.32
       }
     }
   },
@@ -3310,6 +5331,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV48",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3324,12 +5362,38 @@
       "small": "https://images.pokemontcg.io/sma/SV48.png",
       "large": "https://images.pokemontcg.io/sma/SV48_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.51,
+          "mid": 8.5,
+          "high": 19.99,
+          "market": 7.66,
+          "directLow": 7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.46,
+        "lowPrice": 2,
+        "trendPrice": 6.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.41,
+        "lowPriceExPlus": 3.5,
+        "avg1": 9,
+        "avg7": 5.87,
+        "avg30": 6.99,
+        "reverseHoloAvg1": 8.14,
+        "reverseHoloAvg7": 7.71,
+        "reverseHoloAvg30": 8.89
       }
     }
   },
@@ -3397,6 +5461,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV49",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3411,12 +5492,38 @@
       "small": "https://images.pokemontcg.io/sma/SV49.png",
       "large": "https://images.pokemontcg.io/sma/SV49_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 420.99,
+          "mid": 527.34,
+          "high": 700,
+          "market": 523.49,
+          "directLow": 529.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 519.57,
+        "lowPrice": 180,
+        "trendPrice": 523.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 570.11,
+        "lowPriceExPlus": 348.99,
+        "avg1": 386.66,
+        "avg7": 484.58,
+        "avg30": 469.04,
+        "reverseHoloAvg1": 500,
+        "reverseHoloAvg7": 582.77,
+        "reverseHoloAvg30": 546.75
       }
     }
   },
@@ -3488,6 +5595,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV50",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3502,12 +5626,38 @@
       "small": "https://images.pokemontcg.io/sma/SV50.png",
       "large": "https://images.pokemontcg.io/sma/SV50_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 23.01,
+          "mid": 39.99,
+          "high": 1578.04,
+          "market": 30.02,
+          "directLow": 32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.5,
+        "lowPrice": 12,
+        "trendPrice": 32.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 31.42,
+        "lowPriceExPlus": 18.95,
+        "avg1": 26,
+        "avg7": 25.78,
+        "avg30": 30.34,
+        "reverseHoloAvg1": 30,
+        "reverseHoloAvg7": 30.73,
+        "reverseHoloAvg30": 33.87
       }
     }
   },
@@ -3572,6 +5722,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV51",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Shiny GX",
@@ -3586,12 +5753,38 @@
       "small": "https://images.pokemontcg.io/sma/SV51.png",
       "large": "https://images.pokemontcg.io/sma/SV51_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 40,
+          "mid": 59.97,
+          "high": 125,
+          "market": 52.01,
+          "directLow": 57.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 38.72,
+        "lowPrice": 29.9,
+        "trendPrice": 39.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.02,
+        "lowPriceExPlus": 29.9,
+        "avg1": 28,
+        "avg7": 39.1,
+        "avg30": 35.38,
+        "reverseHoloAvg1": 17.13,
+        "reverseHoloAvg7": 18.71,
+        "reverseHoloAvg30": 19.27
       }
     }
   },
@@ -3654,6 +5847,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV52",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3668,12 +5878,38 @@
       "small": "https://images.pokemontcg.io/sma/SV52.png",
       "large": "https://images.pokemontcg.io/sma/SV52_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.29,
+          "mid": 6.23,
+          "high": 20,
+          "market": 5.64,
+          "directLow": 5.51
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.4,
+        "lowPrice": 3.9,
+        "trendPrice": 5.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.76,
+        "lowPriceExPlus": 3.9,
+        "avg1": 3,
+        "avg7": 5.5,
+        "avg30": 5.17,
+        "reverseHoloAvg1": 13.88,
+        "reverseHoloAvg7": 13.33,
+        "reverseHoloAvg30": 15.27
       }
     }
   },
@@ -3736,6 +5972,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV53",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3750,12 +6003,38 @@
       "small": "https://images.pokemontcg.io/sma/SV53.png",
       "large": "https://images.pokemontcg.io/sma/SV53_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 23.26,
+          "mid": 34,
+          "high": 55.55,
+          "market": 27.97,
+          "directLow": 36.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.95,
+        "lowPrice": 13,
+        "trendPrice": 25.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 23.91,
+        "lowPriceExPlus": 17,
+        "avg1": 14.99,
+        "avg7": 24.11,
+        "avg30": 24.37,
+        "reverseHoloAvg1": 25.7,
+        "reverseHoloAvg7": 22.27,
+        "reverseHoloAvg30": 24.93
       }
     }
   },
@@ -3814,6 +6093,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV54",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3828,12 +6124,38 @@
       "small": "https://images.pokemontcg.io/sma/SV54.png",
       "large": "https://images.pokemontcg.io/sma/SV54_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 31.66,
+          "mid": 35.9,
+          "high": 94.99,
+          "market": 31.66,
+          "directLow": 32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.21,
+        "lowPrice": 10,
+        "trendPrice": 31.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 32.17,
+        "lowPriceExPlus": 19,
+        "avg1": 21.98,
+        "avg7": 25.74,
+        "avg30": 27.85,
+        "reverseHoloAvg1": 31.84,
+        "reverseHoloAvg7": 33.01,
+        "reverseHoloAvg30": 34.58
       }
     }
   },
@@ -3895,6 +6217,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV55",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3909,12 +6248,38 @@
       "small": "https://images.pokemontcg.io/sma/SV55.png",
       "large": "https://images.pokemontcg.io/sma/SV55_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 38,
+          "mid": 48.5,
+          "high": 99.99,
+          "market": 40.4,
+          "directLow": 39.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 42.12,
+        "lowPrice": 28.5,
+        "trendPrice": 50.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 32.26,
+        "lowPriceExPlus": 28.9,
+        "avg1": 37.99,
+        "avg7": 37.16,
+        "avg30": 40.27,
+        "reverseHoloAvg1": 25,
+        "reverseHoloAvg7": 29.64,
+        "reverseHoloAvg30": 35.85
       }
     }
   },
@@ -3976,6 +6341,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV56",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -3990,12 +6372,38 @@
       "small": "https://images.pokemontcg.io/sma/SV56.png",
       "large": "https://images.pokemontcg.io/sma/SV56_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 59.99,
+          "mid": 72,
+          "high": 118,
+          "market": 57.25,
+          "directLow": 59.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 34.09,
+        "lowPrice": 30,
+        "trendPrice": 36.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 31.67,
+        "lowPriceExPlus": 30,
+        "avg1": 42,
+        "avg7": 34.88,
+        "avg30": 45.19,
+        "reverseHoloAvg1": 34.98,
+        "reverseHoloAvg7": 30.25,
+        "reverseHoloAvg30": 35.47
       }
     }
   },
@@ -4060,6 +6468,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV57",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4074,12 +6499,38 @@
       "small": "https://images.pokemontcg.io/sma/SV57.png",
       "large": "https://images.pokemontcg.io/sma/SV57_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.99,
+          "mid": 13.49,
+          "high": 29.29,
+          "market": 10.7,
+          "directLow": 9.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.21,
+        "lowPrice": 7,
+        "trendPrice": 8.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.88,
+        "lowPriceExPlus": 7,
+        "avg1": 6.79,
+        "avg7": 8.32,
+        "avg30": 8.3,
+        "reverseHoloAvg1": 19.99,
+        "reverseHoloAvg7": 18.99,
+        "reverseHoloAvg30": 20.25
       }
     }
   },
@@ -4145,6 +6596,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV58",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4159,12 +6627,38 @@
       "small": "https://images.pokemontcg.io/sma/SV58.png",
       "large": "https://images.pokemontcg.io/sma/SV58_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.13,
+          "mid": 14.76,
+          "high": 33.33,
+          "market": 13.92,
+          "directLow": 20.92
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.69,
+        "lowPrice": 5,
+        "trendPrice": 9.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.22,
+        "lowPriceExPlus": 5,
+        "avg1": 8.89,
+        "avg7": 10.44,
+        "avg30": 7.58,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 10.24,
+        "reverseHoloAvg30": 12.03
       }
     }
   },
@@ -4226,6 +6720,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV59",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4240,12 +6751,38 @@
       "small": "https://images.pokemontcg.io/sma/SV59.png",
       "large": "https://images.pokemontcg.io/sma/SV59_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 49.86,
+          "mid": 74.44,
+          "high": 99.99,
+          "market": 67.18,
+          "directLow": 66.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 79.53,
+        "lowPrice": 30,
+        "trendPrice": 86.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 64.82,
+        "lowPriceExPlus": 48,
+        "avg1": 75,
+        "avg7": 80.66,
+        "avg30": 70.21,
+        "reverseHoloAvg1": 74.95,
+        "reverseHoloAvg7": 70.16,
+        "reverseHoloAvg30": 82.35
       }
     }
   },
@@ -4308,6 +6845,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV60",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4322,12 +6876,38 @@
       "small": "https://images.pokemontcg.io/sma/SV60.png",
       "large": "https://images.pokemontcg.io/sma/SV60_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 98.71,
+          "mid": 121.5,
+          "high": 500,
+          "market": 105,
+          "directLow": 124.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 89.13,
+        "lowPrice": 48.49,
+        "trendPrice": 96.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 97.98,
+        "lowPriceExPlus": 50,
+        "avg1": 70,
+        "avg7": 90.61,
+        "avg30": 83.57,
+        "reverseHoloAvg1": 92.99,
+        "reverseHoloAvg7": 91,
+        "reverseHoloAvg30": 98.42
       }
     }
   },
@@ -4390,6 +6970,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV61",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4404,12 +7001,38 @@
       "small": "https://images.pokemontcg.io/sma/SV61.png",
       "large": "https://images.pokemontcg.io/sma/SV61_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.93,
+          "mid": 10.53,
+          "high": 22.22,
+          "market": 9.81,
+          "directLow": 8.93
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.19,
+        "lowPrice": 3,
+        "trendPrice": 9.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.39,
+        "lowPriceExPlus": 4.5,
+        "avg1": 4.45,
+        "avg7": 10.13,
+        "avg30": 7.77,
+        "reverseHoloAvg1": 8.37,
+        "reverseHoloAvg7": 8.44,
+        "reverseHoloAvg30": 9.72
       }
     }
   },
@@ -4471,6 +7094,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV62",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4485,12 +7125,38 @@
       "small": "https://images.pokemontcg.io/sma/SV62.png",
       "large": "https://images.pokemontcg.io/sma/SV62_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.25,
+          "mid": 18,
+          "high": 33.33,
+          "market": 14.84,
+          "directLow": 18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.21,
+        "lowPrice": 6.89,
+        "trendPrice": 8.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.79,
+        "lowPriceExPlus": 6.89,
+        "avg1": 8.45,
+        "avg7": 8.31,
+        "avg30": 8.23,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 11.14,
+        "reverseHoloAvg30": 12.86
       }
     }
   },
@@ -4554,6 +7220,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV63",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4568,12 +7251,38 @@
       "small": "https://images.pokemontcg.io/sma/SV63.png",
       "large": "https://images.pokemontcg.io/sma/SV63_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.2,
+          "mid": 10.16,
+          "high": 29.99,
+          "market": 8.47,
+          "directLow": 7.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.62,
+        "lowPrice": 4.85,
+        "trendPrice": 7.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.76,
+        "lowPriceExPlus": 4.89,
+        "avg1": 9.99,
+        "avg7": 6.75,
+        "avg30": 5.99,
+        "reverseHoloAvg1": 13.39,
+        "reverseHoloAvg7": 10.85,
+        "reverseHoloAvg30": 10.35
       }
     }
   },
@@ -4636,6 +7345,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV64",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4650,12 +7376,38 @@
       "small": "https://images.pokemontcg.io/sma/SV64.png",
       "large": "https://images.pokemontcg.io/sma/SV64_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 43.99,
+          "mid": 59.92,
+          "high": 96.54,
+          "market": 46.38,
+          "directLow": 54.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 47.31,
+        "lowPrice": 20,
+        "trendPrice": 56.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 21.65,
+        "lowPriceExPlus": 26,
+        "avg1": 25,
+        "avg7": 48.22,
+        "avg30": 36.4,
+        "reverseHoloAvg1": 23.5,
+        "reverseHoloAvg7": 25.34,
+        "reverseHoloAvg30": 31.42
       }
     }
   },
@@ -4722,6 +7474,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV65",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4736,12 +7505,38 @@
       "small": "https://images.pokemontcg.io/sma/SV65.png",
       "large": "https://images.pokemontcg.io/sma/SV65_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19.25,
+          "mid": 24.94,
+          "high": 100,
+          "market": 21.05,
+          "directLow": 22.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.39,
+        "lowPrice": 7.6,
+        "trendPrice": 11.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.42,
+        "lowPriceExPlus": 8,
+        "avg1": 9.99,
+        "avg7": 11.97,
+        "avg30": 13.9,
+        "reverseHoloAvg1": 7.9,
+        "reverseHoloAvg7": 8.95,
+        "reverseHoloAvg30": 10.55
       }
     }
   },
@@ -4802,6 +7597,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV66",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4816,12 +7628,38 @@
       "small": "https://images.pokemontcg.io/sma/SV66.png",
       "large": "https://images.pokemontcg.io/sma/SV66_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.59,
+          "mid": 12.76,
+          "high": 22.22,
+          "market": 9.99,
+          "directLow": 11.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.53,
+        "lowPrice": 5.49,
+        "trendPrice": 9.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.93,
+        "lowPriceExPlus": 6,
+        "avg1": 10,
+        "avg7": 8.65,
+        "avg30": 7.88,
+        "reverseHoloAvg1": 9.25,
+        "reverseHoloAvg7": 10.04,
+        "reverseHoloAvg30": 14.59
       }
     }
   },
@@ -4881,6 +7719,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV67",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4895,12 +7750,38 @@
       "small": "https://images.pokemontcg.io/sma/SV67.png",
       "large": "https://images.pokemontcg.io/sma/SV67_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.22,
+          "mid": 13.47,
+          "high": 27.27,
+          "market": 12.18,
+          "directLow": 15.67
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.89,
+        "lowPrice": 5,
+        "trendPrice": 6.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.14,
+        "lowPriceExPlus": 5,
+        "avg1": 5.99,
+        "avg7": 7.67,
+        "avg30": 8.06,
+        "reverseHoloAvg1": 11.89,
+        "reverseHoloAvg7": 13.43,
+        "reverseHoloAvg30": 14.96
       }
     }
   },
@@ -4964,6 +7845,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV68",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -4978,12 +7876,38 @@
       "small": "https://images.pokemontcg.io/sma/SV68.png",
       "large": "https://images.pokemontcg.io/sma/SV68_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7,
+          "mid": 9.99,
+          "high": 24.95,
+          "market": 8.02,
+          "directLow": 12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.98,
+        "lowPrice": 4.49,
+        "trendPrice": 6.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.99,
+        "lowPriceExPlus": 4.49,
+        "avg1": 4.78,
+        "avg7": 6.42,
+        "avg30": 5.86,
+        "reverseHoloAvg1": 7.25,
+        "reverseHoloAvg7": 7.01,
+        "reverseHoloAvg30": 8.17
       }
     }
   },
@@ -5052,6 +7976,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV69",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5066,12 +8007,38 @@
       "small": "https://images.pokemontcg.io/sma/SV69.png",
       "large": "https://images.pokemontcg.io/sma/SV69_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 189.7,
+          "mid": 245.4,
+          "high": 1000,
+          "market": 225.59,
+          "directLow": 223.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 214.48,
+        "lowPrice": 100,
+        "trendPrice": 211.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 171.79,
+        "lowPriceExPlus": 140,
+        "avg1": 189.99,
+        "avg7": 215,
+        "avg30": 197.48,
+        "reverseHoloAvg1": 143.33,
+        "reverseHoloAvg7": 148.39,
+        "reverseHoloAvg30": 159.45
       }
     }
   },
@@ -5138,6 +8105,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV70",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5152,12 +8136,38 @@
       "small": "https://images.pokemontcg.io/sma/SV70.png",
       "large": "https://images.pokemontcg.io/sma/SV70_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 42,
+          "mid": 44.77,
+          "high": 111.11,
+          "market": 43.24,
+          "directLow": 42
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 38.42,
+        "lowPrice": 30,
+        "trendPrice": 41.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 41.03,
+        "lowPriceExPlus": 30,
+        "avg1": 36.99,
+        "avg7": 39.01,
+        "avg30": 39.89,
+        "reverseHoloAvg1": 47.95,
+        "reverseHoloAvg7": 40.88,
+        "reverseHoloAvg30": 48.45
       }
     }
   },
@@ -5233,6 +8243,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV71",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5247,12 +8274,38 @@
       "small": "https://images.pokemontcg.io/sma/SV71.png",
       "large": "https://images.pokemontcg.io/sma/SV71_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.24,
+          "mid": 10.15,
+          "high": 24.68,
+          "market": 10.14,
+          "directLow": 15.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.59,
+        "lowPrice": 3.9,
+        "trendPrice": 5.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.57,
+        "lowPriceExPlus": 3.9,
+        "avg1": 5,
+        "avg7": 6.22,
+        "avg30": 5.87,
+        "reverseHoloAvg1": 7.8,
+        "reverseHoloAvg7": 9.27,
+        "reverseHoloAvg30": 10.61
       }
     }
   },
@@ -5318,6 +8371,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV72",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5332,12 +8402,38 @@
       "small": "https://images.pokemontcg.io/sma/SV72.png",
       "large": "https://images.pokemontcg.io/sma/SV72_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 45,
+          "mid": 70.08,
+          "high": 179,
+          "market": 47.58,
+          "directLow": 53.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.34,
+        "lowPrice": 24.99,
+        "trendPrice": 37.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 42.32,
+        "lowPriceExPlus": 25,
+        "avg1": 109.99,
+        "avg7": 34.64,
+        "avg30": 28.88,
+        "reverseHoloAvg1": 35.65,
+        "reverseHoloAvg7": 38.23,
+        "reverseHoloAvg30": 44.91
       }
     }
   },
@@ -5402,6 +8498,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV73",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5416,12 +8529,38 @@
       "small": "https://images.pokemontcg.io/sma/SV73.png",
       "large": "https://images.pokemontcg.io/sma/SV73_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.83,
+          "mid": 8.24,
+          "high": 22.22,
+          "market": 7.12,
+          "directLow": 5.83
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.68,
+        "lowPrice": 3.33,
+        "trendPrice": 6.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.4,
+        "lowPriceExPlus": 3.85,
+        "avg1": 3.62,
+        "avg7": 6.55,
+        "avg30": 5.84,
+        "reverseHoloAvg1": 6.25,
+        "reverseHoloAvg7": 6.21,
+        "reverseHoloAvg30": 8.76
       }
     }
   },
@@ -5490,6 +8629,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV74",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5504,12 +8660,38 @@
       "small": "https://images.pokemontcg.io/sma/SV74.png",
       "large": "https://images.pokemontcg.io/sma/SV74_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7,
+          "mid": 8.74,
+          "high": 22.22,
+          "market": 7.88,
+          "directLow": 8.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.21,
+        "lowPrice": 4.99,
+        "trendPrice": 8.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.79,
+        "lowPriceExPlus": 4.99,
+        "avg1": 8.75,
+        "avg7": 8.73,
+        "avg30": 7.83,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 11.7,
+        "reverseHoloAvg30": 14.31
       }
     }
   },
@@ -5573,6 +8755,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV75",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5587,12 +8786,38 @@
       "small": "https://images.pokemontcg.io/sma/SV75.png",
       "large": "https://images.pokemontcg.io/sma/SV75_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 42,
+          "mid": 49.99,
+          "high": 111.11,
+          "market": 34.88,
+          "directLow": 42
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 34.25,
+        "lowPrice": 15,
+        "trendPrice": 33.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 43.06,
+        "lowPriceExPlus": 24,
+        "avg1": 34,
+        "avg7": 27.28,
+        "avg30": 31.25,
+        "reverseHoloAvg1": 37.88,
+        "reverseHoloAvg7": 35.2,
+        "reverseHoloAvg30": 43.76
       }
     }
   },
@@ -5662,6 +8887,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV76",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5676,12 +8918,38 @@
       "small": "https://images.pokemontcg.io/sma/SV76.png",
       "large": "https://images.pokemontcg.io/sma/SV76_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 145.02,
+          "mid": 174.94,
+          "high": 249.99,
+          "market": 142.92,
+          "directLow": 155
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 111.03,
+        "lowPrice": 64,
+        "trendPrice": 123.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 77.21,
+        "lowPriceExPlus": 65,
+        "avg1": 240,
+        "avg7": 109.4,
+        "avg30": 92.68,
+        "reverseHoloAvg1": 64.89,
+        "reverseHoloAvg7": 69.2,
+        "reverseHoloAvg30": 77.41
       }
     }
   },
@@ -5744,6 +9012,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV77",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5758,12 +9043,38 @@
       "small": "https://images.pokemontcg.io/sma/SV77.png",
       "large": "https://images.pokemontcg.io/sma/SV77_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15,
+          "mid": 34.7,
+          "high": 39.99,
+          "market": 14.93,
+          "directLow": 35.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.94,
+        "lowPrice": 11.4,
+        "trendPrice": 19.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.48,
+        "lowPriceExPlus": 12.9,
+        "avg1": 13.5,
+        "avg7": 20.82,
+        "avg30": 15.98,
+        "reverseHoloAvg1": 17.98,
+        "reverseHoloAvg7": 22.35,
+        "reverseHoloAvg30": 26.14
       }
     }
   },
@@ -5823,6 +9134,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV78",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5837,12 +9165,38 @@
       "small": "https://images.pokemontcg.io/sma/SV78.png",
       "large": "https://images.pokemontcg.io/sma/SV78_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.18,
+          "mid": 12.5,
+          "high": 20,
+          "market": 10.4,
+          "directLow": 13.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.95,
+        "lowPrice": 5,
+        "trendPrice": 11.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 22.43,
+        "lowPriceExPlus": 9,
+        "avg1": 8.83,
+        "avg7": 9.37,
+        "avg30": 11.37,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 20.52,
+        "reverseHoloAvg30": 22.46
       }
     }
   },
@@ -5904,6 +9258,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV79",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5918,12 +9289,38 @@
       "small": "https://images.pokemontcg.io/sma/SV79.png",
       "large": "https://images.pokemontcg.io/sma/SV79_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.5,
+          "mid": 11.19,
+          "high": 22.22,
+          "market": 8.9,
+          "directLow": 11.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.43,
+        "lowPrice": 7,
+        "trendPrice": 8.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.14,
+        "lowPriceExPlus": 7,
+        "avg1": 7.95,
+        "avg7": 8.28,
+        "avg30": 8.77,
+        "reverseHoloAvg1": 17.98,
+        "reverseHoloAvg7": 16.61,
+        "reverseHoloAvg30": 20.27
       }
     }
   },
@@ -5984,6 +9381,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV80",
     "artist": "5ban Graphics",
     "rarity": "Rare Shiny GX",
@@ -5998,12 +9412,38 @@
       "small": "https://images.pokemontcg.io/sma/SV80.png",
       "large": "https://images.pokemontcg.io/sma/SV80_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.72,
+          "mid": 8.75,
+          "high": 22.22,
+          "market": 7.99,
+          "directLow": 7.82
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.76,
+        "lowPrice": 4.9,
+        "trendPrice": 4.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.67,
+        "lowPriceExPlus": 4.9,
+        "avg1": 4.99,
+        "avg7": 5.22,
+        "avg30": 7,
+        "reverseHoloAvg1": 13.41,
+        "reverseHoloAvg7": 13.58,
+        "reverseHoloAvg30": 13.36
       }
     }
   },
@@ -6018,6 +9458,23 @@
       "Put 3 Pokémon that have \"Alolan\" in their names from your discard pile into your hand.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV81",
     "artist": "take",
     "rarity": "Rare Ultra",
@@ -6029,12 +9486,38 @@
       "small": "https://images.pokemontcg.io/sma/SV81.png",
       "large": "https://images.pokemontcg.io/sma/SV81_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.1,
+          "mid": 9.63,
+          "high": 29,
+          "market": 8.89,
+          "directLow": 8.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.26,
+        "lowPrice": 6.42,
+        "trendPrice": 13.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.94,
+        "lowPriceExPlus": 8,
+        "avg1": 11.95,
+        "avg7": 13.11,
+        "avg30": 11.2,
+        "reverseHoloAvg1": 12.17,
+        "reverseHoloAvg7": 15.56,
+        "reverseHoloAvg30": 17.7
       }
     }
   },
@@ -6049,6 +9532,23 @@
       "Shuffle your hand into your deck. Then, draw 6 cards.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV82",
     "artist": "Yusuke Ohmura",
     "rarity": "Rare Ultra",
@@ -6060,12 +9560,38 @@
       "small": "https://images.pokemontcg.io/sma/SV82.png",
       "large": "https://images.pokemontcg.io/sma/SV82_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 144.96,
+          "mid": 176.76,
+          "high": 399.99,
+          "market": 162.85,
+          "directLow": 174.61
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 147.42,
+        "lowPrice": 75,
+        "trendPrice": 177.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 65.65,
+        "lowPriceExPlus": 109,
+        "avg1": 340,
+        "avg7": 145.45,
+        "avg30": 133.46,
+        "reverseHoloAvg1": 65.99,
+        "reverseHoloAvg7": 66.88,
+        "reverseHoloAvg30": 68.89
       }
     }
   },
@@ -6080,6 +9606,23 @@
       "Put 4 basic Energy cards from your discard pile into your hand.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV83",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Ultra",
@@ -6091,12 +9634,38 @@
       "small": "https://images.pokemontcg.io/sma/SV83.png",
       "large": "https://images.pokemontcg.io/sma/SV83_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3,
+          "mid": 5.35,
+          "high": 35,
+          "market": 4.69,
+          "directLow": 6.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.86,
+        "lowPrice": 0.95,
+        "trendPrice": 6.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 16.15,
+        "lowPriceExPlus": 4.94,
+        "avg1": 5,
+        "avg7": 5.84,
+        "avg30": 6.98,
+        "reverseHoloAvg1": 13.94,
+        "reverseHoloAvg7": 14.2,
+        "reverseHoloAvg30": 15.46
       }
     }
   },
@@ -6111,6 +9680,23 @@
       "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. If you do, switch your Active Pokémon with 1 of your Benched Pokémon.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV84",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Ultra",
@@ -6122,12 +9708,38 @@
       "small": "https://images.pokemontcg.io/sma/SV84.png",
       "large": "https://images.pokemontcg.io/sma/SV84_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 20,
+          "mid": 24.49,
+          "high": 50,
+          "market": 22.66,
+          "directLow": 22.66
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.91,
+        "lowPrice": 13.39,
+        "trendPrice": 16.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.63,
+        "lowPriceExPlus": 13.39,
+        "avg1": 14.99,
+        "avg7": 15.6,
+        "avg30": 16.71,
+        "reverseHoloAvg1": 19.99,
+        "reverseHoloAvg7": 16.31,
+        "reverseHoloAvg30": 20.9
       }
     }
   },
@@ -6142,6 +9754,23 @@
       "Look at the top 5 cards of either player's deck and choose 1 of them. That player shuffles the other cards back into their deck. Then, put the card you chose on top of that deck.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV85",
     "artist": "Naoki Saito",
     "rarity": "Rare Ultra",
@@ -6153,12 +9782,38 @@
       "small": "https://images.pokemontcg.io/sma/SV85.png",
       "large": "https://images.pokemontcg.io/sma/SV85_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.22,
+          "mid": 3.49,
+          "high": 23,
+          "market": 3.11,
+          "directLow": 4.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.38,
+        "lowPrice": 2,
+        "trendPrice": 5.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.07,
+        "lowPriceExPlus": 3.49,
+        "avg1": 3.99,
+        "avg7": 4.36,
+        "avg30": 4.45,
+        "reverseHoloAvg1": 9.25,
+        "reverseHoloAvg7": 11.19,
+        "reverseHoloAvg30": 12.59
       }
     }
   },
@@ -6173,6 +9828,23 @@
       "Search your deck for up to 4 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV86",
     "artist": "Kanako Eo",
     "rarity": "Rare Ultra",
@@ -6184,12 +9856,38 @@
       "small": "https://images.pokemontcg.io/sma/SV86.png",
       "large": "https://images.pokemontcg.io/sma/SV86_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13,
+          "mid": 16.85,
+          "high": 39.69,
+          "market": 14.58,
+          "directLow": 16.48
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.41,
+        "lowPrice": 7,
+        "trendPrice": 15.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.88,
+        "lowPriceExPlus": 11.99,
+        "avg1": 14.75,
+        "avg7": 17.52,
+        "avg30": 15.19,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 17.87,
+        "reverseHoloAvg30": 20.36
       }
     }
   },
@@ -6204,6 +9902,23 @@
       "Basic Grass and Basic Lightning Pokémon (both yours and your opponent's) take 30 less damage from the opponent's attacks (after applying Weakness and Resistance).",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV87",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6215,12 +9930,38 @@
       "small": "https://images.pokemontcg.io/sma/SV87.png",
       "large": "https://images.pokemontcg.io/sma/SV87_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.47,
+          "mid": 7.99,
+          "high": 19.69,
+          "market": 6.71,
+          "directLow": 9.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.95,
+        "lowPrice": 6.99,
+        "trendPrice": 9.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 26.67,
+        "lowPriceExPlus": 8.5,
+        "avg1": 10,
+        "avg7": 10.11,
+        "avg30": 10.15,
+        "reverseHoloAvg1": 26.23,
+        "reverseHoloAvg7": 23.48,
+        "reverseHoloAvg30": 26.23
       }
     }
   },
@@ -6235,6 +9976,23 @@
       "Once during each player's turn, that player may search their deck for a Basic Water Pokémon or Basic Fighting Pokémon and, put it onto their Bench, and shuffle their deck.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV88",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6246,12 +10004,38 @@
       "small": "https://images.pokemontcg.io/sma/SV88.png",
       "large": "https://images.pokemontcg.io/sma/SV88_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.29,
+          "mid": 16,
+          "high": 39.99,
+          "market": 13.31,
+          "directLow": 16.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.77,
+        "lowPrice": 13.5,
+        "trendPrice": 13.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 22.68,
+        "lowPriceExPlus": 13.5,
+        "avg1": 12.49,
+        "avg7": 14.21,
+        "avg30": 15.01,
+        "reverseHoloAvg1": 22.49,
+        "reverseHoloAvg7": 21.35,
+        "reverseHoloAvg30": 24
       }
     }
   },
@@ -6266,6 +10050,23 @@
       "Once during each player's turn, that player may put 2 Metal Energy cards from their discard pile into their hand.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV89",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6277,12 +10078,38 @@
       "small": "https://images.pokemontcg.io/sma/SV89.png",
       "large": "https://images.pokemontcg.io/sma/SV89_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.99,
+          "mid": 9.74,
+          "high": 89,
+          "market": 8.49,
+          "directLow": 8.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.48,
+        "lowPrice": 8.95,
+        "trendPrice": 9.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.52,
+        "lowPriceExPlus": 9,
+        "avg1": 11,
+        "avg7": 9.93,
+        "avg30": 10.78,
+        "reverseHoloAvg1": 14.49,
+        "reverseHoloAvg7": 20.74,
+        "reverseHoloAvg30": 26.71
       }
     }
   },
@@ -6297,6 +10124,23 @@
       "Between turns, put 1 damage counter on each Pokémon-GX and Pokémon-EX (both yours and your opponent's).",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV90",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6308,12 +10152,38 @@
       "small": "https://images.pokemontcg.io/sma/SV90.png",
       "large": "https://images.pokemontcg.io/sma/SV90_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.79,
+          "mid": 5.42,
+          "high": 15,
+          "market": 4.54,
+          "directLow": 6.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.33,
+        "lowPrice": 3.95,
+        "trendPrice": 11.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 21.67,
+        "lowPriceExPlus": 4.5,
+        "avg1": 6.49,
+        "avg7": 13.34,
+        "avg30": 9.14,
+        "reverseHoloAvg1": 17.99,
+        "reverseHoloAvg7": 17.56,
+        "reverseHoloAvg30": 26.86
       }
     }
   },
@@ -6371,6 +10241,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV91",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6385,12 +10272,38 @@
       "small": "https://images.pokemontcg.io/sma/SV91.png",
       "large": "https://images.pokemontcg.io/sma/SV91_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.85,
+          "mid": 12,
+          "high": 89,
+          "market": 10.2,
+          "directLow": 10.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.31,
+        "lowPrice": 11.9,
+        "trendPrice": 13.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 32.98,
+        "lowPriceExPlus": 11.9,
+        "avg1": 12.75,
+        "avg7": 15.27,
+        "avg30": 13.76,
+        "reverseHoloAvg1": 30,
+        "reverseHoloAvg7": 36.91,
+        "reverseHoloAvg30": 50.68
       }
     }
   },
@@ -6444,6 +10357,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV92",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6458,12 +10388,38 @@
       "small": "https://images.pokemontcg.io/sma/SV92.png",
       "large": "https://images.pokemontcg.io/sma/SV92_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.27,
+          "mid": 14.36,
+          "high": 29.99,
+          "market": 11.09,
+          "directLow": 12.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.38,
+        "lowPrice": 5,
+        "trendPrice": 12.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 44,
+        "lowPriceExPlus": 9.99,
+        "avg1": 12,
+        "avg7": 14.05,
+        "avg30": 16,
+        "reverseHoloAvg1": 49.5,
+        "reverseHoloAvg7": 48.55,
+        "reverseHoloAvg30": 58.52
       }
     }
   },
@@ -6518,6 +10474,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV93",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6532,12 +10505,38 @@
       "small": "https://images.pokemontcg.io/sma/SV93.png",
       "large": "https://images.pokemontcg.io/sma/SV93_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14.27,
+          "mid": 15.25,
+          "high": 35.69,
+          "market": 14.52,
+          "directLow": 14.94
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.79,
+        "lowPrice": 8,
+        "trendPrice": 19.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 45.7,
+        "lowPriceExPlus": 13.99,
+        "avg1": 13.98,
+        "avg7": 20.46,
+        "avg30": 17.45,
+        "reverseHoloAvg1": 40.98,
+        "reverseHoloAvg7": 48.26,
+        "reverseHoloAvg30": 58.66
       }
     }
   },
@@ -6588,6 +10587,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sma",
+      "name": "Hidden Fates Shiny Vault",
+      "series": "Sun & Moon",
+      "printedTotal": 94,
+      "total": 94,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sma/symbol.png",
+        "logo": "https://images.pokemontcg.io/sma/logo.png"
+      }
+    },
     "number": "SV94",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -6602,12 +10618,38 @@
       "small": "https://images.pokemontcg.io/sma/SV94.png",
       "large": "https://images.pokemontcg.io/sma/SV94_hires.png"
     },
-    "set": {
-      "id": "sma",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates Shiny Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sma/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sma-SV94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.99,
+          "mid": 18.79,
+          "high": 79.99,
+          "market": 14.29,
+          "directLow": 15.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sma-SV94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.06,
+        "lowPrice": 14.95,
+        "trendPrice": 16.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 54.8,
+        "lowPriceExPlus": 14.95,
+        "avg1": 15.25,
+        "avg7": 18.36,
+        "avg30": 18.62,
+        "reverseHoloAvg1": 39.98,
+        "reverseHoloAvg7": 49.29,
+        "reverseHoloAvg30": 56.03
       }
     }
   }

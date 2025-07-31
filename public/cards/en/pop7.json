@@ -50,6 +50,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -64,12 +80,45 @@
       "small": "https://images.pokemontcg.io/pop7/1.png",
       "large": "https://images.pokemontcg.io/pop7/1_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.76,
+          "mid": 5.41,
+          "high": 10.96,
+          "market": 7.07,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 6,
+          "mid": 8.9,
+          "high": 15.23,
+          "market": 9.81,
+          "directLow": 8.52
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.98,
+        "lowPrice": 1.89,
+        "trendPrice": 9.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.07,
+        "lowPriceExPlus": 7.98,
+        "avg1": 25,
+        "avg7": 9.98,
+        "avg30": 7.58,
+        "reverseHoloAvg1": 2.25,
+        "reverseHoloAvg7": 2.52,
+        "reverseHoloAvg30": 2.96
       }
     }
   },
@@ -120,6 +169,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Daisuke Ito",
     "rarity": "Rare",
@@ -134,12 +199,45 @@
       "small": "https://images.pokemontcg.io/pop7/2.png",
       "large": "https://images.pokemontcg.io/pop7/2_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 8.76,
+          "mid": 10.77,
+          "high": 20,
+          "market": 8.07,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 2.17,
+          "mid": 12.88,
+          "high": 29.99,
+          "market": 13.74,
+          "directLow": 29.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.83,
+        "lowPrice": 0.25,
+        "trendPrice": 5.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 3,
+        "reverseHoloTrend": 5.04,
+        "lowPriceExPlus": 3.9,
+        "avg1": 2.5,
+        "avg7": 5.42,
+        "avg30": 6.12,
+        "reverseHoloAvg1": 4.9,
+        "reverseHoloAvg7": 5.35,
+        "reverseHoloAvg30": 6.44
       }
     }
   },
@@ -193,6 +291,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Daisuke Ito",
     "rarity": "Rare",
@@ -207,12 +321,45 @@
       "small": "https://images.pokemontcg.io/pop7/3.png",
       "large": "https://images.pokemontcg.io/pop7/3_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5.5,
+          "mid": 8.66,
+          "high": 14,
+          "market": 9.17,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 2.83,
+          "mid": 7.7,
+          "high": 89,
+          "market": 9.99,
+          "directLow": 8.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.54,
+        "lowPrice": 0.8,
+        "trendPrice": 6.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 4.95,
+        "reverseHoloTrend": 5.26,
+        "lowPriceExPlus": 2.5,
+        "avg1": 4.4,
+        "avg7": 6.12,
+        "avg30": 4.62,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 4.92,
+        "reverseHoloAvg30": 2.86
       }
     }
   },
@@ -268,6 +415,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Daisuke Ito",
     "rarity": "Rare",
@@ -282,12 +445,45 @@
       "small": "https://images.pokemontcg.io/pop7/4.png",
       "large": "https://images.pokemontcg.io/pop7/4_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.97,
+          "mid": 3.5,
+          "high": 10.55,
+          "market": 8.12,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 5.22,
+          "mid": 11.24,
+          "high": 69.99,
+          "market": 10.18,
+          "directLow": 2.76
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.19,
+        "lowPrice": 0.4,
+        "trendPrice": 5.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 8.75,
+        "reverseHoloTrend": 5.96,
+        "lowPriceExPlus": 2.49,
+        "avg1": 15,
+        "avg7": 6.19,
+        "avg30": 5.28,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 5.14,
+        "reverseHoloAvg30": 3.54
       }
     }
   },
@@ -335,6 +531,22 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Kazuyuki Kano",
     "rarity": "Rare",
@@ -349,12 +561,45 @@
       "small": "https://images.pokemontcg.io/pop7/5.png",
       "large": "https://images.pokemontcg.io/pop7/5_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.66,
+          "mid": 1.65,
+          "high": 4.99,
+          "market": 0.66,
+          "directLow": 1.35
+        },
+        "holofoil": {
+          "low": 0.86,
+          "mid": 1,
+          "high": 5.24,
+          "market": 1.52,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.49,
+        "lowPrice": 0.58,
+        "trendPrice": 2.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.74,
+        "lowPriceExPlus": 2.35,
+        "avg1": 2.49,
+        "avg7": 1.94,
+        "avg30": 2.68,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 2.43,
+        "reverseHoloAvg30": 2.49
       }
     }
   },
@@ -398,6 +643,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Masakazu Fukuda",
     "rarity": "Uncommon",
@@ -412,12 +673,38 @@
       "small": "https://images.pokemontcg.io/pop7/6.png",
       "large": "https://images.pokemontcg.io/pop7/6_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 7.69,
+          "mid": 14.5,
+          "high": 20,
+          "market": 14.33,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.25,
+        "lowPrice": 5.5,
+        "trendPrice": 5.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.95,
+        "lowPriceExPlus": 5.5,
+        "avg1": 5,
+        "avg7": 4.78,
+        "avg30": 4.24,
+        "reverseHoloAvg1": 0.95,
+        "reverseHoloAvg7": 0.95,
+        "reverseHoloAvg30": 0.95
       }
     }
   },
@@ -475,6 +762,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -489,12 +792,38 @@
       "small": "https://images.pokemontcg.io/pop7/7.png",
       "large": "https://images.pokemontcg.io/pop7/7_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5,
+          "mid": 6.32,
+          "high": 10.68,
+          "market": 6.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.75,
+        "lowPrice": 6.99,
+        "trendPrice": 8.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7.5,
+        "avg1": 8.5,
+        "avg7": 7.78,
+        "avg30": 6.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -547,6 +876,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Masakazu Fukuda",
     "rarity": "Uncommon",
@@ -561,12 +906,45 @@
       "small": "https://images.pokemontcg.io/pop7/8.png",
       "large": "https://images.pokemontcg.io/pop7/8_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.27,
+          "mid": 4.34,
+          "high": 9.5,
+          "market": 5.48,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 7.94,
+          "mid": 12.06,
+          "high": 13.62,
+          "market": 13.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.98,
+        "lowPrice": 1.99,
+        "trendPrice": 3.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.46,
+        "lowPriceExPlus": 3,
+        "avg1": 0.98,
+        "avg7": 3.3,
+        "avg30": 4.79,
+        "reverseHoloAvg1": 0.9,
+        "reverseHoloAvg7": 1.55,
+        "reverseHoloAvg30": 2.16
       }
     }
   },
@@ -611,6 +989,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Kouki Saitou",
     "rarity": "Uncommon",
@@ -625,12 +1019,38 @@
       "small": "https://images.pokemontcg.io/pop7/9.png",
       "large": "https://images.pokemontcg.io/pop7/9_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.12,
+          "mid": 5.53,
+          "high": 9,
+          "market": 3.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.3,
+        "lowPrice": 5.72,
+        "trendPrice": 6.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5.72,
+        "avg1": 4,
+        "avg7": 5.31,
+        "avg30": 3.84,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -683,6 +1103,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -697,12 +1133,38 @@
       "small": "https://images.pokemontcg.io/pop7/10.png",
       "large": "https://images.pokemontcg.io/pop7/10_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.79,
+          "mid": 4.12,
+          "high": 6,
+          "market": 2.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.5,
+        "lowPrice": 2,
+        "trendPrice": 4.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 5,
+        "avg7": 4.01,
+        "avg30": 3.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -750,6 +1212,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -764,12 +1242,38 @@
       "small": "https://images.pokemontcg.io/pop7/11.png",
       "large": "https://images.pokemontcg.io/pop7/11_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.32,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.79,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.35,
+        "trendPrice": 0.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 0.5,
+        "avg7": 0.64,
+        "avg30": 0.72,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -817,6 +1321,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -831,12 +1351,38 @@
       "small": "https://images.pokemontcg.io/pop7/12.png",
       "large": "https://images.pokemontcg.io/pop7/12_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.39,
+          "mid": 0.65,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.83,
+        "lowPrice": 0.44,
+        "trendPrice": 0.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.44,
+        "avg1": 0.5,
+        "avg7": 0.68,
+        "avg30": 0.75,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -886,6 +1432,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -900,12 +1462,38 @@
       "small": "https://images.pokemontcg.io/pop7/13.png",
       "large": "https://images.pokemontcg.io/pop7/13_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.59,
+          "high": 2,
+          "market": 0.91,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.35,
+        "trendPrice": 0.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.19,
+        "lowPriceExPlus": 0.35,
+        "avg1": 0.5,
+        "avg7": 0.89,
+        "avg30": 0.65,
+        "reverseHoloAvg1": 0.19,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -961,6 +1549,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -975,12 +1579,38 @@
       "small": "https://images.pokemontcg.io/pop7/14.png",
       "large": "https://images.pokemontcg.io/pop7/14_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.63,
+          "mid": 0.9,
+          "high": 2.5,
+          "market": 1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.13,
+        "lowPrice": 0.8,
+        "trendPrice": 1.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.49,
+        "avg1": 1,
+        "avg7": 1.08,
+        "avg30": 1.14,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1029,6 +1659,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -1043,12 +1689,38 @@
       "small": "https://images.pokemontcg.io/pop7/15.png",
       "large": "https://images.pokemontcg.io/pop7/15_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.47,
+          "mid": 0.57,
+          "high": 2,
+          "market": 1.22,
+          "directLow": 1.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.58,
+        "lowPrice": 0.39,
+        "trendPrice": 1.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.95,
+        "avg1": 0.9,
+        "avg7": 0.95,
+        "avg30": 1.24,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1097,6 +1769,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -1111,12 +1799,38 @@
       "small": "https://images.pokemontcg.io/pop7/16.png",
       "large": "https://images.pokemontcg.io/pop7/16_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.64,
+          "high": 1.98,
+          "market": 0.83,
+          "directLow": 0.53
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.59,
+        "lowPrice": 0.49,
+        "trendPrice": 1.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 0.59,
+        "avg7": 0.87,
+        "avg30": 1.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1162,6 +1876,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop7",
+      "name": "POP Series 7",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/03/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop7/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop7/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -1176,12 +1906,38 @@
       "small": "https://images.pokemontcg.io/pop7/17.png",
       "large": "https://images.pokemontcg.io/pop7/17_hires.png"
     },
-    "set": {
-      "id": "pop7",
-      "releaseDate": "2008/03/01",
-      "name": "POP Series 7",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop7/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop7-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.4,
+          "mid": 0.74,
+          "high": 2,
+          "market": 1.07,
+          "directLow": 0.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop7-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.48,
+        "lowPrice": 0.29,
+        "trendPrice": 1.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.8,
+        "avg1": 0.95,
+        "avg7": 0.9,
+        "avg30": 1.04,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

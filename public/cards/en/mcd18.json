@@ -1,63 +1,69 @@
 [
   {
-    "id": "mcd18-1",
-    "name": "Growlithe",
+    "id": "mcd18-3",
+    "name": "Horsea",
     "supertype": "Pokémon",
     "subtypes": [
       "Basic"
     ],
-    "hp": "80",
+    "hp": "60",
     "types": [
-      "Fire"
+      "Water"
     ],
     "evolvesTo": [
-      "Arcanine"
+      "Seadra"
     ],
     "attacks": [
       {
-        "name": "Take Down",
+        "name": "Water Arrow",
         "cost": [
-          "Fire",
-          "Colorless",
-          "Colorless"
+          "Water"
         ],
-        "convertedEnergyCost": 3,
-        "damage": "60",
-        "text": "This Pokémon does 20 damage to itself."
+        "convertedEnergyCost": 1,
+        "damage": "",
+        "text": "This attack does 10 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
     ],
     "weaknesses": [
       {
-        "type": "Water",
+        "type": "Grass",
         "value": "×2"
       }
     ],
     "retreatCost": [
-      "Colorless",
       "Colorless"
     ],
-    "convertedRetreatCost": 2,
-    "number": "1",
-    "artist": "MAHOU",
-    "flavorText": "It's both clever and loyal, but if a stranger tries to invade its territory, it barks threateningly.",
+    "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
+    "number": "3",
+    "artist": "Saya Tsuruta",
+    "flavorText": "Known to shoot down flying bugs with precision blasts of ink from the surface of the water.",
     "nationalPokedexNumbers": [
-      58
+      116
     ],
     "legalities": {
       "unlimited": "Legal",
       "expanded": "Legal"
     },
     "images": {
-      "small": "https://images.pokemontcg.io/mcd18/1.png",
-      "large": "https://images.pokemontcg.io/mcd18/1_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
+      "small": "https://images.pokemontcg.io/mcd18/3.png",
+      "large": "https://images.pokemontcg.io/mcd18/3_hires.png"
     }
   },
   {
@@ -96,6 +102,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Shibuzoh.",
     "flavorText": "As a result of headaches so fierce they cause it to cry, it sometimes uses psychokinesis without meaning to.",
@@ -109,72 +132,76 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/2.png",
       "large": "https://images.pokemontcg.io/mcd18/2_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
-    "id": "mcd18-3",
-    "name": "Horsea",
+    "id": "mcd18-1",
+    "name": "Growlithe",
     "supertype": "Pokémon",
     "subtypes": [
       "Basic"
     ],
-    "hp": "60",
+    "hp": "80",
     "types": [
-      "Water"
+      "Fire"
     ],
     "evolvesTo": [
-      "Seadra"
+      "Arcanine"
     ],
     "attacks": [
       {
-        "name": "Water Arrow",
+        "name": "Take Down",
         "cost": [
-          "Water"
+          "Fire",
+          "Colorless",
+          "Colorless"
         ],
-        "convertedEnergyCost": 1,
-        "damage": "",
-        "text": "This attack does 10 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        "convertedEnergyCost": 3,
+        "damage": "60",
+        "text": "This Pokémon does 20 damage to itself."
       }
     ],
     "weaknesses": [
       {
-        "type": "Grass",
+        "type": "Water",
         "value": "×2"
       }
     ],
     "retreatCost": [
+      "Colorless",
       "Colorless"
     ],
-    "convertedRetreatCost": 1,
-    "number": "3",
-    "artist": "Saya Tsuruta",
-    "flavorText": "Known to shoot down flying bugs with precision blasts of ink from the surface of the water.",
+    "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
+    "number": "1",
+    "artist": "MAHOU",
+    "flavorText": "It's both clever and loyal, but if a stranger tries to invade its territory, it barks threateningly.",
     "nationalPokedexNumbers": [
-      116
+      58
     ],
     "legalities": {
       "unlimited": "Legal",
       "expanded": "Legal"
     },
     "images": {
-      "small": "https://images.pokemontcg.io/mcd18/3.png",
-      "large": "https://images.pokemontcg.io/mcd18/3_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
+      "small": "https://images.pokemontcg.io/mcd18/1.png",
+      "large": "https://images.pokemontcg.io/mcd18/1_hires.png"
     }
   },
   {
@@ -228,6 +255,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Shibuzoh.",
     "flavorText": "A plan was recently announced to gather many Pikachu and make an electric power plant.",
@@ -241,14 +285,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/4.png",
       "large": "https://images.pokemontcg.io/mcd18/4_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -300,6 +336,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Mina Nakai",
     "flavorText": "Its long tail often breaks off. It doesn't really feel any pain, though, and the tail grows back, so Slowpoke isn't particularly bothered.",
@@ -313,14 +366,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/5.png",
       "large": "https://images.pokemontcg.io/mcd18/5_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -360,6 +405,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Masakazu Fukuda",
     "flavorText": "It loves working out. As it gazes at its muscles, which continue to swell day by day, it becomes more and more dedicated to its training.",
@@ -373,14 +435,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/6.png",
       "large": "https://images.pokemontcg.io/mcd18/6_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -429,6 +483,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "7",
     "artist": "sui",
     "flavorText": "When it thinks of its deceased mother, it weeps loudly. Mandibuzz that hear its cries will attack it from the air.",
@@ -442,14 +513,87 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/7.png",
       "large": "https://images.pokemontcg.io/mcd18/7_hires.png"
-    },
+    }
+  },
+  {
+    "id": "mcd18-10",
+    "name": "Chansey",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic"
+    ],
+    "hp": "110",
+    "types": [
+      "Colorless"
+    ],
+    "evolvesTo": [
+      "Blissey"
+    ],
+    "attacks": [
+      {
+        "name": "Bind Wound",
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "convertedEnergyCost": 2,
+        "damage": "",
+        "text": "Flip a coin. If heads, heal 30 damage from 1 of your Pokémon."
+      },
+      {
+        "name": "Hammer In",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "convertedEnergyCost": 4,
+        "damage": "80",
+        "text": ""
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
     "set": {
       "id": "mcd18",
-      "releaseDate": "2018/10/16",
       "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
       }
+    },
+    "number": "10",
+    "artist": "Megumi Mizutani",
+    "flavorText": "The eggs laid by Chansey are rich in nutrients and a favorite food of many Pokémon.",
+    "nationalPokedexNumbers": [
+      113
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "expanded": "Legal"
+    },
+    "images": {
+      "small": "https://images.pokemontcg.io/mcd18/10.png",
+      "large": "https://images.pokemontcg.io/mcd18/10_hires.png"
     }
   },
   {
@@ -502,6 +646,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "8",
     "artist": "MAHOU",
     "flavorText": "It sends out electromagnetic waves, which let it float through the air. Touching it while it's eating electricity will give you a full-body shock.",
@@ -515,14 +676,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/8.png",
       "large": "https://images.pokemontcg.io/mcd18/8_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -570,6 +723,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Naoyo Kimura",
     "flavorText": "After a 10-hour struggle, a fisherman was able to pull one up and confirm its existence.",
@@ -583,86 +753,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/9.png",
       "large": "https://images.pokemontcg.io/mcd18/9_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "mcd18-10",
-    "name": "Chansey",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic"
-    ],
-    "hp": "110",
-    "types": [
-      "Colorless"
-    ],
-    "evolvesTo": [
-      "Blissey"
-    ],
-    "attacks": [
-      {
-        "name": "Bind Wound",
-        "cost": [
-          "Colorless",
-          "Colorless"
-        ],
-        "convertedEnergyCost": 2,
-        "damage": "",
-        "text": "Flip a coin. If heads, heal 30 damage from 1 of your Pokémon."
-      },
-      {
-        "name": "Hammer In",
-        "cost": [
-          "Colorless",
-          "Colorless",
-          "Colorless",
-          "Colorless"
-        ],
-        "convertedEnergyCost": 4,
-        "damage": "80",
-        "text": ""
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fighting",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "10",
-    "artist": "Megumi Mizutani",
-    "flavorText": "The eggs laid by Chansey are rich in nutrients and a favorite food of many Pokémon.",
-    "nationalPokedexNumbers": [
-      113
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "images": {
-      "small": "https://images.pokemontcg.io/mcd18/10.png",
-      "large": "https://images.pokemontcg.io/mcd18/10_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -715,6 +805,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Shibuzoh.",
     "flavorText": "Possessing an unbalanced and unstable genetic makeup, it conceals many possible evolutions.",
@@ -728,14 +835,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/11.png",
       "large": "https://images.pokemontcg.io/mcd18/11_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   },
   {
@@ -782,6 +881,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd18",
+      "name": "McDonald's Collection 2018",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2018/10/16",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd18/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Shin Nagasawa",
     "flavorText": "Roughly 20 years ago, it was artificially created, utilizing the latest technology of the time.",
@@ -795,14 +911,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/mcd18/12.png",
       "large": "https://images.pokemontcg.io/mcd18/12_hires.png"
-    },
-    "set": {
-      "id": "mcd18",
-      "releaseDate": "2018/10/16",
-      "name": "McDonald's Collection 2018",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd18/symbol.png"
-      }
     }
   }
 ]

@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import { useRules } from "./RulesContext";
 import { useAuth } from "../hooks/useAuth";
 import { binderSyncService } from "../services/binderSyncService";
+import { GLOBAL_CARD_LIMIT } from "../lib/globalRules.js";
 import { PublicCollectionsCacheService } from "../services/PublicCollectionsCacheService";
 import shareService from "../services/ShareService";
 import { db } from "../lib/firebase";
@@ -882,7 +883,7 @@ export const BinderProvider = ({ children }) => {
 
         if (!canAdd.allowed) {
           const currentCards = Object.keys(targetBinder.cards || {}).length;
-          const limit = canAdd.limit || 500;
+          const limit = canAdd.limit || GLOBAL_CARD_LIMIT;
           throw new Error(
             canAdd.reason ||
               `Card limit reached! You have ${currentCards}/${limit} cards in this binder.`
@@ -1325,7 +1326,7 @@ export const BinderProvider = ({ children }) => {
         );
 
         if (!canAdd.allowed) {
-          const limit = canAdd.limit || 500;
+          const limit = canAdd.limit || GLOBAL_CARD_LIMIT;
           const remainingSpace = Math.max(0, limit - currentCards);
           throw new Error(
             canAdd.reason ||

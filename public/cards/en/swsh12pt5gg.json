@@ -41,6 +41,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG01",
     "artist": "HYOGONOSUKE",
     "rarity": "Trainer Gallery Rare Holo",
@@ -58,12 +77,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG01.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG01_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.89,
+          "mid": 1.49,
+          "high": 999.99,
+          "market": 1.27,
+          "directLow": 1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.55,
+        "lowPrice": 0.4,
+        "trendPrice": 1.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.89,
+        "avg1": 1.72,
+        "avg7": 1.57,
+        "avg30": 1.6,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -108,6 +153,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG02",
     "artist": "Nurikabe",
     "rarity": "Trainer Gallery Rare Holo",
@@ -125,12 +189,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG02.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG02_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.25,
+          "mid": 2.49,
+          "high": 999.99,
+          "market": 2.18,
+          "directLow": 1.94
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.51,
+        "lowPrice": 2.89,
+        "trendPrice": 3.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.89,
+        "avg1": 3.23,
+        "avg7": 3.24,
+        "avg30": 3.46,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -181,6 +271,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG03",
     "artist": "Saya Tsuruta",
     "rarity": "Trainer Gallery Rare Holo",
@@ -198,12 +307,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG03.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG03_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 5.99,
+          "high": 20,
+          "market": 5.46,
+          "directLow": 4.87
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.45,
+        "lowPrice": 4.3,
+        "trendPrice": 6.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.3,
+        "avg1": 6.54,
+        "avg7": 6.3,
+        "avg30": 6.42,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -248,6 +383,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG04",
     "artist": "Tomokazu Komiya",
     "rarity": "Trainer Gallery Rare Holo",
@@ -257,6 +411,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -264,12 +419,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG04.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG04_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.7,
+          "mid": 1.61,
+          "high": 89,
+          "market": 1.37,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.79,
+        "lowPrice": 0.85,
+        "trendPrice": 1.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.85,
+        "avg1": 1.7,
+        "avg7": 1.89,
+        "avg30": 1.85,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -308,6 +489,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG05",
     "artist": "zig",
     "rarity": "Trainer Gallery Rare Holo",
@@ -325,12 +525,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG05.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG05_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.55,
+          "mid": 8.53,
+          "high": 45.99,
+          "market": 7.72,
+          "directLow": 6.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.29,
+        "lowPrice": 5,
+        "trendPrice": 10.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6,
+        "avg1": 10.13,
+        "avg7": 9.86,
+        "avg30": 10.33,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -373,6 +599,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG06",
     "artist": "Taira Akitsu",
     "rarity": "Trainer Gallery Rare Holo",
@@ -390,12 +635,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG06.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG06_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.16,
+          "high": 31,
+          "market": 2.87,
+          "directLow": 2.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.78,
+        "lowPrice": 2.5,
+        "trendPrice": 3.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.5,
+        "avg1": 3.96,
+        "avg7": 3.83,
+        "avg30": 3.79,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -441,6 +712,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG07",
     "artist": "KEIICHIRO ITO",
     "rarity": "Trainer Gallery Rare Holo",
@@ -458,12 +748,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG07.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG07_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3,
+          "mid": 5.76,
+          "high": 89,
+          "market": 5.31,
+          "directLow": 4.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.76,
+        "lowPrice": 5,
+        "trendPrice": 6.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 5.92,
+        "avg7": 6.75,
+        "avg30": 6.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -513,6 +829,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG08",
     "artist": "Mina Nakai",
     "rarity": "Trainer Gallery Rare Holo",
@@ -530,12 +865,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG08.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG08_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.11,
+          "mid": 5.28,
+          "high": 89,
+          "market": 4.78,
+          "directLow": 4.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.43,
+        "lowPrice": 2.5,
+        "trendPrice": 5.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4,
+        "avg1": 4.61,
+        "avg7": 5.7,
+        "avg30": 5.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -583,6 +944,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG09",
     "artist": "Nelnal",
     "rarity": "Trainer Gallery Rare Holo",
@@ -592,6 +972,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -599,12 +980,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG09.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG09_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.25,
+          "mid": 1.72,
+          "high": 999.99,
+          "market": 1.25,
+          "directLow": 1.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.52,
+        "lowPrice": 1,
+        "trendPrice": 1.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 1.47,
+        "avg7": 1.68,
+        "avg30": 1.54,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -654,6 +1061,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG10",
     "artist": "Ryota Murayama",
     "rarity": "Trainer Gallery Rare Holo",
@@ -663,6 +1089,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -670,12 +1097,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG10.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG10_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19,
+          "mid": 24.96,
+          "high": 90,
+          "market": 20.13,
+          "directLow": 20
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20.45,
+        "lowPrice": 14.9,
+        "trendPrice": 25.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 17.5,
+        "avg1": 23.07,
+        "avg7": 26.53,
+        "avg30": 21.86,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -728,6 +1181,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG11",
     "artist": "sowsow",
     "rarity": "Trainer Gallery Rare Holo",
@@ -745,12 +1217,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG11.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG11_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.4,
+          "mid": 3.2,
+          "high": 999.99,
+          "market": 3.06,
+          "directLow": 2.84
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.1,
+        "lowPrice": 2.95,
+        "trendPrice": 4.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.95,
+        "avg1": 4.99,
+        "avg7": 4.59,
+        "avg30": 4.24,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -797,6 +1295,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG12",
     "artist": "Scav",
     "rarity": "Trainer Gallery Rare Holo",
@@ -806,6 +1323,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -813,12 +1331,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG12.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG12_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 6.55,
+          "high": 999.99,
+          "market": 5.92,
+          "directLow": 5.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.96,
+        "lowPrice": 5.49,
+        "trendPrice": 6.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5.49,
+        "avg1": 6.21,
+        "avg7": 6.94,
+        "avg30": 6.96,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -861,6 +1405,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG13",
     "artist": "Haruko Ichikawa",
     "rarity": "Trainer Gallery Rare Holo",
@@ -878,12 +1441,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG13.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG13_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.24,
+          "mid": 2.11,
+          "high": 999.99,
+          "market": 1.79,
+          "directLow": 1.85
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.08,
+        "lowPrice": 0.25,
+        "trendPrice": 3.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.99,
+        "avg1": 2.22,
+        "avg7": 2.07,
+        "avg30": 2.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -927,6 +1516,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG14",
     "artist": "Yano Keiji",
     "rarity": "Trainer Gallery Rare Holo",
@@ -944,12 +1552,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG14.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG14_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.8,
+          "mid": 1.49,
+          "high": 89,
+          "market": 1.33,
+          "directLow": 1.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.41,
+        "lowPrice": 0.8,
+        "trendPrice": 1.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.8,
+        "avg1": 1.41,
+        "avg7": 1.54,
+        "avg30": 1.46,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -993,6 +1627,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG15",
     "artist": "Nobuhiro Imagawa",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1010,12 +1663,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG15.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG15_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.49,
+          "mid": 2.48,
+          "high": 89,
+          "market": 2.25,
+          "directLow": 2.11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.06,
+        "lowPrice": 1.9,
+        "trendPrice": 3.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.9,
+        "avg1": 3.4,
+        "avg7": 3.36,
+        "avg30": 3.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1061,6 +1740,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG16",
     "artist": "Uta",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1078,12 +1776,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG16.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG16_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.45,
+          "mid": 3.75,
+          "high": 89,
+          "market": 3.32,
+          "directLow": 2.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.91,
+        "lowPrice": 3.15,
+        "trendPrice": 4.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.15,
+        "avg1": 4.86,
+        "avg7": 4.78,
+        "avg30": 4.94,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1129,6 +1853,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG17",
     "artist": "NC Empire",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1146,12 +1889,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG17.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG17_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.85,
+          "mid": 1.65,
+          "high": 15,
+          "market": 1.52,
+          "directLow": 1.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.69,
+        "lowPrice": 0.99,
+        "trendPrice": 1.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.99,
+        "avg1": 2.22,
+        "avg7": 1.84,
+        "avg30": 1.69,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1204,6 +1973,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG18",
     "artist": "Shinya Komatsu",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1221,12 +2009,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG18.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG18_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.8,
+          "mid": 2.55,
+          "high": 19.99,
+          "market": 2.44,
+          "directLow": 2.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.07,
+        "lowPrice": 1.9,
+        "trendPrice": 3.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.99,
+        "avg1": 3.17,
+        "avg7": 3.22,
+        "avg30": 3.12,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1261,6 +2075,25 @@
         "text": ""
       }
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG19",
     "artist": "Asako Ito",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1270,6 +2103,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1277,12 +2111,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG19.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG19_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.67,
+          "high": 89,
+          "market": 3.09,
+          "directLow": 3.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.57,
+        "lowPrice": 1.8,
+        "trendPrice": 3.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.8,
+        "avg1": 4.71,
+        "avg7": 3.74,
+        "avg30": 3.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1322,6 +2182,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG20",
     "artist": "Teeziro",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1331,6 +2210,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1338,12 +2218,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG20.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG20_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.5,
+          "mid": 8.99,
+          "high": 89,
+          "market": 7.54,
+          "directLow": 7.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.31,
+        "lowPrice": 7.95,
+        "trendPrice": 12.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7.95,
+        "avg1": 10.29,
+        "avg7": 10.37,
+        "avg30": 11.3,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1385,6 +2291,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG21",
     "artist": "You Iribi",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1402,12 +2327,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG21.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG21_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 1.77,
+          "high": 999.99,
+          "market": 1.69,
+          "directLow": 1.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.91,
+        "lowPrice": 1,
+        "trendPrice": 1.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 1.75,
+        "avg7": 1.91,
+        "avg30": 1.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1439,6 +2390,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG22",
     "artist": "Miki Tanaka",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1456,12 +2426,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG22.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG22_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.35,
+          "mid": 4.5,
+          "high": 999.99,
+          "market": 4.39,
+          "directLow": 3.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.83,
+        "lowPrice": 2.5,
+        "trendPrice": 4.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.9,
+        "avg1": 3.86,
+        "avg7": 4.17,
+        "avg30": 3.92,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1505,6 +2501,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG23",
     "artist": "Kurata So",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1514,6 +2529,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1521,12 +2537,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG23.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG23_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.88,
+          "mid": 1.5,
+          "high": 89,
+          "market": 1.22,
+          "directLow": 1.21
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.59,
+        "lowPrice": 0.95,
+        "trendPrice": 1.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.64,
+        "avg7": 1.8,
+        "avg30": 1.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1571,6 +2613,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG24",
     "artist": "Yuu Nishida",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1588,12 +2649,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG24.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG24_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.59,
+          "mid": 3.57,
+          "high": 999.99,
+          "market": 3.09,
+          "directLow": 3.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.54,
+        "lowPrice": 2,
+        "trendPrice": 4.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 4.12,
+        "avg7": 4.08,
+        "avg30": 3.79,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1640,6 +2727,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG25",
     "artist": "Amelicart",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1657,12 +2763,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG25.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG25_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.2,
+          "mid": 1.99,
+          "high": 19.99,
+          "market": 1.65,
+          "directLow": 1.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.31,
+        "lowPrice": 1,
+        "trendPrice": 2.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 2.3,
+        "avg7": 2.27,
+        "avg30": 2.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1702,6 +2834,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG26",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1719,12 +2870,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG26.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG26_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.79,
+          "mid": 3.95,
+          "high": 999.99,
+          "market": 3.65,
+          "directLow": 3.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.53,
+        "lowPrice": 3,
+        "trendPrice": 4.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.5,
+        "avg1": 4.99,
+        "avg7": 4.65,
+        "avg30": 4.6,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1769,6 +2946,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG27",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1778,6 +2974,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1785,12 +2982,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG27.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG27_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.49,
+          "mid": 2.56,
+          "high": 999.99,
+          "market": 2.2,
+          "directLow": 1.94
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.99,
+        "lowPrice": 2,
+        "trendPrice": 3.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 2.91,
+        "avg7": 2.95,
+        "avg30": 3.02,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1835,6 +3058,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG28",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1852,12 +3094,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG28.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG28_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.4,
+          "mid": 2.49,
+          "high": 89,
+          "market": 2.2,
+          "directLow": 1.7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.88,
+        "lowPrice": 2,
+        "trendPrice": 3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.1,
+        "avg1": 3.25,
+        "avg7": 3.03,
+        "avg30": 2.98,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1904,6 +3172,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG29",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1921,12 +3208,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG29.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG29_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.99,
+          "mid": 2.75,
+          "high": 19.99,
+          "market": 2.42,
+          "directLow": 2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.13,
+        "lowPrice": 2,
+        "trendPrice": 2.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 2.96,
+        "avg7": 3.02,
+        "avg30": 3.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1974,6 +3287,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG30",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -1991,12 +3323,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG30.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG30_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.25,
+          "mid": 13.32,
+          "high": 89,
+          "market": 10.84,
+          "directLow": 12.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.15,
+        "lowPrice": 4.95,
+        "trendPrice": 16.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 12,
+        "avg1": 15.48,
+        "avg7": 17.1,
+        "avg30": 15.89,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2046,6 +3404,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG31",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -2063,12 +3440,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG31.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG31_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.1,
+          "mid": 4.48,
+          "high": 999.99,
+          "market": 3.79,
+          "directLow": 3.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.34,
+        "lowPrice": 2,
+        "trendPrice": 4.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 4.78,
+        "avg7": 4.36,
+        "avg30": 4.39,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2108,6 +3511,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG32",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -2125,12 +3547,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG32.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG32_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.29,
+          "mid": 2.6,
+          "high": 999.99,
+          "market": 2.22,
+          "directLow": 2.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.51,
+        "lowPrice": 1.49,
+        "trendPrice": 3.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.49,
+        "avg1": 3.76,
+        "avg7": 3.84,
+        "avg30": 3.55,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2179,6 +3627,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG33",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -2196,12 +3663,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG33.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG33_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.79,
+          "mid": 2.6,
+          "high": 999.99,
+          "market": 2.38,
+          "directLow": 2.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.7,
+        "lowPrice": 1.89,
+        "trendPrice": 2.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.99,
+        "avg1": 3.03,
+        "avg7": 2.89,
+        "avg30": 2.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2250,6 +3743,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG34",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -2259,6 +3771,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -2266,12 +3779,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG34.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG34_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.25,
+          "mid": 3.12,
+          "high": 10,
+          "market": 3.14,
+          "directLow": 2.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.41,
+        "lowPrice": 2,
+        "trendPrice": 3.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 3.93,
+        "avg7": 3.66,
+        "avg30": 3.54,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2321,6 +3860,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG35",
     "artist": "Jiro Sasumo",
     "rarity": "Rare Holo VSTAR",
@@ -2337,12 +3895,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG35.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG35_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 39.9,
+          "mid": 46.99,
+          "high": 100,
+          "market": 42.64,
+          "directLow": 42.64
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 52.89,
+        "lowPrice": 40,
+        "trendPrice": 48.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 40,
+        "avg1": 46.5,
+        "avg7": 51.27,
+        "avg30": 52.26,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2392,6 +3976,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG36",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Holo V",
@@ -2408,12 +4011,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG36.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG36_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 25.62,
+          "mid": 29.99,
+          "high": 100,
+          "market": 27.05,
+          "directLow": 26.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.1,
+        "lowPrice": 17,
+        "trendPrice": 31.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 23,
+        "avg1": 30.66,
+        "avg7": 35.76,
+        "avg30": 33.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2465,6 +4094,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG37",
     "artist": "nagano",
     "rarity": "Rare Holo VSTAR",
@@ -2481,12 +4129,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG37.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG37_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15.14,
+          "mid": 18.52,
+          "high": 39.95,
+          "market": 17.59,
+          "directLow": 17.84
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.4,
+        "lowPrice": 8,
+        "trendPrice": 13.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8,
+        "avg1": 12.5,
+        "avg7": 14.15,
+        "avg30": 13.19,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2535,6 +4209,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG38",
     "artist": "Atsushi Furusawa",
     "rarity": "Rare Holo V",
@@ -2543,6 +4236,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -2550,12 +4244,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG38.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG38_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 30,
+          "mid": 35.71,
+          "high": 99.99,
+          "market": 32.52,
+          "directLow": 32.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 44.28,
+        "lowPrice": 20,
+        "trendPrice": 38.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 27,
+        "avg1": 36.72,
+        "avg7": 39.5,
+        "avg30": 43.95,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2604,6 +4324,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG39",
     "artist": "Jerky",
     "rarity": "Rare Holo V",
@@ -2620,12 +4359,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG39.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG39_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.5,
+          "mid": 11,
+          "high": 100,
+          "market": 9.73,
+          "directLow": 9.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.66,
+        "lowPrice": 7,
+        "trendPrice": 11.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7,
+        "avg1": 13.36,
+        "avg7": 11.43,
+        "avg30": 11.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2679,6 +4444,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG40",
     "artist": "Gemi",
     "rarity": "Rare Holo VSTAR",
@@ -2695,12 +4479,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG40.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG40_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 32.79,
+          "mid": 41.03,
+          "high": 179,
+          "market": 36.77,
+          "directLow": 32.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 51.02,
+        "lowPrice": 37,
+        "trendPrice": 54.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 37,
+        "avg1": 49.66,
+        "avg7": 55.17,
+        "avg30": 51.85,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2748,6 +4558,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG41",
     "artist": "nagimiso",
     "rarity": "Rare Holo V",
@@ -2764,12 +4593,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG41.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG41_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 21.85,
+          "mid": 28,
+          "high": 521.88,
+          "market": 24.43,
+          "directLow": 24.56
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 37.65,
+        "lowPrice": 23.9,
+        "trendPrice": 37.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 24.99,
+        "avg1": 54.24,
+        "avg7": 46.02,
+        "avg30": 40.35,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2822,6 +4677,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG42",
     "artist": "aoki",
     "rarity": "Rare Holo VMAX",
@@ -2838,12 +4712,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG42.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG42_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10,
+          "mid": 12.5,
+          "high": 89,
+          "market": 10.97,
+          "directLow": 11.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.53,
+        "lowPrice": 12,
+        "trendPrice": 17.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 12,
+        "avg1": 21.32,
+        "avg7": 17.16,
+        "avg30": 16.76,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2893,6 +4793,25 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG43",
     "artist": "Ligton",
     "rarity": "Rare Holo VSTAR",
@@ -2909,12 +4828,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG43.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG43_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.51,
+          "mid": 13,
+          "high": 34.99,
+          "market": 11.8,
+          "directLow": 11.7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.53,
+        "lowPrice": 13,
+        "trendPrice": 16.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 13.99,
+        "avg1": 21.46,
+        "avg7": 18.67,
+        "avg30": 18.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2972,6 +4917,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG44",
     "artist": "GOSSAN",
     "rarity": "Rare Holo VSTAR",
@@ -2988,12 +4952,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG44.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG44_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 99,
+          "mid": 125,
+          "high": 300,
+          "market": 108.75,
+          "directLow": 112.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 128.34,
+        "lowPrice": 78.95,
+        "trendPrice": 126.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 78.95,
+        "avg1": 158.25,
+        "avg7": 132.04,
+        "avg30": 131.61,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3050,6 +5040,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG45",
     "artist": "Akira Komayama",
     "rarity": "Rare Holo VMAX",
@@ -3066,12 +5075,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG45.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG45_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 30,
+          "mid": 39.66,
+          "high": 179,
+          "market": 33.15,
+          "directLow": 30
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.74,
+        "lowPrice": 15,
+        "trendPrice": 25.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 20,
+        "avg1": 26.8,
+        "avg7": 24.59,
+        "avg30": 25.8,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3129,6 +5164,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG46",
     "artist": "DOM",
     "rarity": "Rare Holo VSTAR",
@@ -3145,12 +5199,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG46.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG46_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19.59,
+          "mid": 23,
+          "high": 89,
+          "market": 20.83,
+          "directLow": 19.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 23.8,
+        "lowPrice": 15,
+        "trendPrice": 22.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 19.49,
+        "avg1": 20.17,
+        "avg7": 23.08,
+        "avg30": 23.26,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3206,6 +5286,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG47",
     "artist": "sui",
     "rarity": "Rare Holo VMAX",
@@ -3222,12 +5321,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG47.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG47_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.39,
+          "mid": 4.5,
+          "high": 89,
+          "market": 3.92,
+          "directLow": 3.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.19,
+        "lowPrice": 3,
+        "trendPrice": 6.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.4,
+        "avg1": 7.36,
+        "avg7": 7,
+        "avg30": 6.47,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3277,6 +5402,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG48",
     "artist": "Hataya",
     "rarity": "Rare Holo V",
@@ -3285,6 +5429,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -3292,12 +5437,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG48.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG48_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14.94,
+          "mid": 17.99,
+          "high": 150,
+          "market": 15.34,
+          "directLow": 18.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.05,
+        "lowPrice": 17.99,
+        "trendPrice": 22.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 18.5,
+        "avg1": 22.13,
+        "avg7": 25.37,
+        "avg30": 25.24,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3348,6 +5519,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG49",
     "artist": "Yuka Morii",
     "rarity": "Rare Holo V",
@@ -3364,12 +5554,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG49.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG49_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.95,
+          "mid": 4.3,
+          "high": 20,
+          "market": 3.89,
+          "directLow": 3.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.49,
+        "lowPrice": 4,
+        "trendPrice": 4.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4,
+        "avg1": 4.33,
+        "avg7": 4.75,
+        "avg30": 5.42,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3418,6 +5634,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG50",
     "artist": "Pani Kobayashi",
     "rarity": "Rare Holo VSTAR",
@@ -3434,12 +5669,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG50.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG50_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 28,
+          "mid": 33.99,
+          "high": 100,
+          "market": 31.17,
+          "directLow": 30.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 40.89,
+        "lowPrice": 26.99,
+        "trendPrice": 41.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 35,
+        "avg1": 40.5,
+        "avg7": 41.99,
+        "avg30": 41.52,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3491,6 +5752,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG51",
     "artist": "kodama",
     "rarity": "Rare Holo V",
@@ -3507,12 +5787,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG51.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG51_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8,
+          "mid": 10.12,
+          "high": 48.1,
+          "market": 9.15,
+          "directLow": 8.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.5,
+        "lowPrice": 7.5,
+        "trendPrice": 11.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8,
+        "avg1": 9.5,
+        "avg7": 12.55,
+        "avg30": 12.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3561,6 +5867,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG52",
     "artist": "Shibuzoh.",
     "rarity": "Rare Holo VSTAR",
@@ -3577,12 +5902,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG52.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG52_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 7.48,
+          "high": 35,
+          "market": 6.8,
+          "directLow": 6.57
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.35,
+        "lowPrice": 7.5,
+        "trendPrice": 9.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8.31,
+        "avg1": 8.83,
+        "avg7": 9.96,
+        "avg30": 9.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3633,6 +5984,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG53",
     "artist": "OKACHEKE",
     "rarity": "Rare Holo V",
@@ -3641,6 +6011,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -3648,12 +6019,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG53.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG53_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 6.99,
+          "high": 28.49,
+          "market": 5.94,
+          "directLow": 5.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.73,
+        "lowPrice": 5,
+        "trendPrice": 8.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6.65,
+        "avg1": 8,
+        "avg7": 8.84,
+        "avg30": 8.98,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3709,6 +6106,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG54",
     "artist": "Haru Akasaka",
     "rarity": "Rare Holo V",
@@ -3725,12 +6141,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG54.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG54_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9,
+          "mid": 13.99,
+          "high": 89,
+          "market": 12.26,
+          "directLow": 12.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 21.23,
+        "lowPrice": 14.95,
+        "trendPrice": 18.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 15.9,
+        "avg1": 22.5,
+        "avg7": 19.89,
+        "avg30": 20.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3782,6 +6224,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG55",
     "artist": "Aya Kusube",
     "rarity": "Rare Holo VSTAR",
@@ -3798,12 +6259,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG55.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG55_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.5,
+          "mid": 11.59,
+          "high": 100,
+          "market": 10.56,
+          "directLow": 10
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.92,
+        "lowPrice": 12,
+        "trendPrice": 21.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 12.4,
+        "avg1": 14.49,
+        "avg7": 19.27,
+        "avg30": 17.58,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3852,6 +6339,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG56",
     "artist": "SIE NANAHARA",
     "rarity": "Rare Holo VSTAR",
@@ -3868,12 +6374,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG56.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG56_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 18.99,
+          "mid": 23.36,
+          "high": 100,
+          "market": 20.27,
+          "directLow": 21.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 31.56,
+        "lowPrice": 20,
+        "trendPrice": 42.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 23.99,
+        "avg1": 34.25,
+        "avg7": 30.18,
+        "avg30": 31.83,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3888,6 +6420,25 @@
       "You can use this card only if you discard 2 Metal Energy cards from your hand. Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG57",
     "artist": "Naoki Saito",
     "rarity": "Rare Ultra",
@@ -3901,12 +6452,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG57.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG57_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.75,
+          "high": 89,
+          "market": 3.02,
+          "directLow": 3.08
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.32,
+        "lowPrice": 3.5,
+        "trendPrice": 4.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.9,
+        "avg1": 4.47,
+        "avg7": 4.57,
+        "avg30": 5.17,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3921,6 +6498,25 @@
       "Put 1 of your Colorless Pokémon that has any damage counters on it and all attached cards into your hand.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG58",
     "artist": "chibi",
     "rarity": "Rare Ultra",
@@ -3934,12 +6530,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG58.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG58_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.5,
+          "mid": 2.72,
+          "high": 14,
+          "market": 2.08,
+          "directLow": 2.08
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.64,
+        "lowPrice": 3,
+        "trendPrice": 4.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 6.51,
+        "avg7": 5.19,
+        "avg30": 4.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3954,6 +6576,25 @@
       "Look at the top 5 cards of your deck and put 3 of them into your hand. Put the other cards in the Lost Zone.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG59",
     "artist": "kantaro",
     "rarity": "Rare Ultra",
@@ -3967,12 +6608,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG59.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG59_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.4,
+          "mid": 3,
+          "high": 89,
+          "market": 2.32,
+          "directLow": 2.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.58,
+        "lowPrice": 3,
+        "trendPrice": 4.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 4.35,
+        "avg7": 4.31,
+        "avg30": 4.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3987,6 +6654,25 @@
       "Draw cards until you have 5 cards in your hand. If any of your Pokémon were Knocked Out during your opponent's last turn, draw cards until you have 8 cards in your hand instead.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG60",
     "artist": "Atsuya Uki",
     "rarity": "Rare Ultra",
@@ -4000,12 +6686,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG60.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG60_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.92,
+          "mid": 17,
+          "high": 100,
+          "market": 15.26,
+          "directLow": 15.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.95,
+        "lowPrice": 12.9,
+        "trendPrice": 19.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 16,
+        "avg1": 18.78,
+        "avg7": 18.94,
+        "avg30": 19.64,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4020,6 +6732,25 @@
       "Draw 2 cards. If you drew any cards in this way, attach up to 2 Grass Energy cards from your hand to 1 of your Benched Pokémon.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG61",
     "artist": "Yoriyuki Ikegami",
     "rarity": "Rare Ultra",
@@ -4033,12 +6764,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG61.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG61_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.7,
+          "mid": 10,
+          "high": 89,
+          "market": 9.32,
+          "directLow": 7.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.01,
+        "lowPrice": 8,
+        "trendPrice": 10.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8,
+        "avg1": 11.03,
+        "avg7": 10.19,
+        "avg30": 10.16,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4053,6 +6810,25 @@
       "During this turn, your Fighting Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). During your turn, if this Grant is in your discard pile, you may discard 2 cards, except any Grant, from your hand. If you do, put this Grant into your hand. (This effect doesn't use up your Supporter card for the turn.)",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG62",
     "artist": "Oswaldo KATO",
     "rarity": "Rare Ultra",
@@ -4066,12 +6842,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG62.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG62_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.3,
+          "mid": 2,
+          "high": 12,
+          "market": 1.76,
+          "directLow": 1.51
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.15,
+        "lowPrice": 2,
+        "trendPrice": 3.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.2,
+        "avg1": 4.09,
+        "avg7": 3.39,
+        "avg30": 3.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4086,6 +6888,25 @@
       "Search your deck for a Water Pokémon and an Item card, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG63",
     "artist": "Naoki Saito",
     "rarity": "Rare Ultra",
@@ -4099,12 +6920,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG63.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG63_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.25,
+          "mid": 7.59,
+          "high": 506.12,
+          "market": 6.4,
+          "directLow": 5.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.91,
+        "lowPrice": 4.2,
+        "trendPrice": 8.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.49,
+        "avg1": 6.49,
+        "avg7": 9.56,
+        "avg30": 7.97,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4119,11 +6966,31 @@
       "Attach a Water Energy card from your discard pile to 1 of your Pokémon V. If you do, draw 3 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG64",
     "artist": "saino misaki",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -4131,12 +6998,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG64.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG64_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.5,
+          "mid": 5,
+          "high": 29.95,
+          "market": 4.43,
+          "directLow": 4.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.04,
+        "lowPrice": 3.89,
+        "trendPrice": 4.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4,
+        "avg1": 5.7,
+        "avg7": 4.94,
+        "avg30": 5.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4151,11 +7044,31 @@
       "You can play this card only if any of your Pokémon were Knocked Out during your opponent's last turn. Attach a basic Energy card from your discard pile to 1 of your Pokémon. If you do, search your deck for a card and put it into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG65",
     "artist": "GIDORA",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -4163,12 +7076,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG65.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG65_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.29,
+          "high": 999.99,
+          "market": 2.86,
+          "directLow": 2.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.76,
+        "lowPrice": 2.5,
+        "trendPrice": 5.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.7,
+        "avg1": 4.39,
+        "avg7": 4.67,
+        "avg30": 4.8,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4183,6 +7122,25 @@
       "You can use this card only if your opponent has 3 or fewer Prize cards remaining. Each player shuffles their hand into their deck. Then, you draw 6 cards, and your opponent draws 2 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG66",
     "artist": "Toshinao Aoki",
     "rarity": "Rare Ultra",
@@ -4196,12 +7154,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG66.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG66_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.45,
+          "mid": 4.16,
+          "high": 89,
+          "market": 3.32,
+          "directLow": 3.41
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.54,
+        "lowPrice": 3,
+        "trendPrice": 6.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 5.68,
+        "avg7": 6.06,
+        "avg30": 5.55,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4250,6 +7234,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG67",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Secret",
@@ -4266,12 +7269,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG67.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG67_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 60.46,
+          "mid": 75.04,
+          "high": 299.99,
+          "market": 66.48,
+          "directLow": 63.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 87.77,
+        "lowPrice": 65,
+        "trendPrice": 83.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 65,
+        "avg1": 81.88,
+        "avg7": 82.49,
+        "avg30": 85.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4332,6 +7361,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG68",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Secret",
@@ -4348,12 +7396,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG68.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG68_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 62.24,
+          "mid": 78.99,
+          "high": 199.96,
+          "market": 70.01,
+          "directLow": 71.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 82.3,
+        "lowPrice": 65,
+        "trendPrice": 86.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 70,
+        "avg1": 89.85,
+        "avg7": 89.53,
+        "avg30": 85.35,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4400,6 +7474,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG69",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Secret",
@@ -4416,12 +7509,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG69.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG69_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 150,
+          "mid": 190,
+          "high": 1000,
+          "market": 164.07,
+          "directLow": 179.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 185.62,
+        "lowPrice": 115,
+        "trendPrice": 190.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 125,
+        "avg1": 239.66,
+        "avg7": 186.94,
+        "avg30": 184.46,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4471,6 +7590,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh12pt5gg",
+      "name": "Crown Zenith Galarian Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 70,
+      "total": 70,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CRZ",
+      "releaseDate": "2023/01/20",
+      "updatedAt": "2023/01/19 15:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh12pt5gg/logo.png"
+      }
+    },
     "number": "GG70",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Secret",
@@ -4487,12 +7625,38 @@
       "small": "https://images.pokemontcg.io/swsh12pt5gg/GG70.png",
       "large": "https://images.pokemontcg.io/swsh12pt5gg/GG70_hires.png"
     },
-    "set": {
-      "id": "swsh12pt5gg",
-      "releaseDate": "2023/01/20",
-      "name": "Crown Zenith Galarian Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh12pt5gg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh12pt5gg-GG70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 90,
+          "mid": 112.08,
+          "high": 199.95,
+          "market": 94.75,
+          "directLow": 100.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh12pt5gg-GG70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 134.08,
+        "lowPrice": 109.89,
+        "trendPrice": 133.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 109.89,
+        "avg1": 181.67,
+        "avg7": 143.2,
+        "avg30": 138.15,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

@@ -36,6 +36,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Akira Komayama",
     "rarity": "Common",
@@ -51,12 +69,45 @@
       "small": "https://images.pokemontcg.io/dc1/1.png",
       "large": "https://images.pokemontcg.io/dc1/1_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.5,
+          "mid": 0.79,
+          "high": 4.95,
+          "market": 0.8,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.5,
+          "mid": 3.38,
+          "high": 89,
+          "market": 3.13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.36,
+        "lowPrice": 1.3,
+        "trendPrice": 1.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 11.41,
+        "lowPriceExPlus": 1.5,
+        "avg1": 4,
+        "avg7": 2.81,
+        "avg30": 4.64,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 11.71,
+        "reverseHoloAvg30": 7.52
       }
     }
   },
@@ -104,6 +155,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -119,12 +188,45 @@
       "small": "https://images.pokemontcg.io/dc1/2.png",
       "large": "https://images.pokemontcg.io/dc1/2_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1,
+          "high": 3.3,
+          "market": 1.07,
+          "directLow": 2.48
+        },
+        "reverseHolofoil": {
+          "low": 1,
+          "mid": 2.59,
+          "high": 3.04,
+          "market": 3.12,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.12,
+        "lowPrice": 0.91,
+        "trendPrice": 4.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.6,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 6.46,
+        "lowPriceExPlus": 3,
+        "avg1": 3.93,
+        "avg7": 4.4,
+        "avg30": 3.41,
+        "reverseHoloAvg1": 5.85,
+        "reverseHoloAvg7": 6.14,
+        "reverseHoloAvg30": 5.68
       }
     }
   },
@@ -164,6 +266,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Sanosuke Sakuma",
     "rarity": "Common",
@@ -179,12 +299,45 @@
       "small": "https://images.pokemontcg.io/dc1/3.png",
       "large": "https://images.pokemontcg.io/dc1/3_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.66,
+          "mid": 1.5,
+          "high": 2,
+          "market": 1.62,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10.5,
+          "mid": 14.99,
+          "high": 16,
+          "market": 6.14,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.46,
+        "lowPrice": 1,
+        "trendPrice": 6.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 10,
+        "reverseHoloLow": 1.25,
+        "reverseHoloTrend": 7.82,
+        "lowPriceExPlus": 2.49,
+        "avg1": 6.97,
+        "avg7": 6.79,
+        "avg30": 5.19,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 8.48,
+        "reverseHoloAvg30": 8.62
       }
     }
   },
@@ -238,6 +391,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Naoki Saito",
     "rarity": "Common",
@@ -253,12 +424,45 @@
       "small": "https://images.pokemontcg.io/dc1/4.png",
       "large": "https://images.pokemontcg.io/dc1/4_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.33,
+          "mid": 0.67,
+          "high": 4.95,
+          "market": 0.75,
+          "directLow": 0.41
+        },
+        "reverseHolofoil": {
+          "low": 3.22,
+          "mid": 5,
+          "high": 6.47,
+          "market": 6.49,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.46,
+        "lowPrice": 0.2,
+        "trendPrice": 2.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 10,
+        "reverseHoloLow": 5.5,
+        "reverseHoloTrend": 8.14,
+        "lowPriceExPlus": 1,
+        "avg1": 3,
+        "avg7": 2.71,
+        "avg30": 2.07,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 8.2,
+        "reverseHoloAvg30": 6.07
       }
     }
   },
@@ -310,6 +514,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Holo",
@@ -325,12 +547,45 @@
       "small": "https://images.pokemontcg.io/dc1/5.png",
       "large": "https://images.pokemontcg.io/dc1/5_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.67,
+          "mid": 1.53,
+          "high": 89,
+          "market": 1.55,
+          "directLow": 1.25
+        },
+        "reverseHolofoil": {
+          "low": 2,
+          "mid": 4.37,
+          "high": 5.05,
+          "market": 4.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.46,
+        "lowPrice": 1.2,
+        "trendPrice": 3.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.89,
+        "reverseHoloLow": 1.38,
+        "reverseHoloTrend": 5.12,
+        "lowPriceExPlus": 1.99,
+        "avg1": 5,
+        "avg7": 3.68,
+        "avg30": 3.33,
+        "reverseHoloAvg1": 9.89,
+        "reverseHoloAvg7": 5.51,
+        "reverseHoloAvg30": 5.42
       }
     }
   },
@@ -383,6 +638,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "6",
     "artist": "nagimiso",
     "rarity": "Rare Ultra",
@@ -397,12 +670,38 @@
       "small": "https://images.pokemontcg.io/dc1/6.png",
       "large": "https://images.pokemontcg.io/dc1/6_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 264.57,
+          "mid": 458.91,
+          "high": 999.99,
+          "market": 337.43,
+          "directLow": 249.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 795,
+        "lowPrice": 48.99,
+        "trendPrice": 452.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 40.79,
+        "lowPriceExPlus": 200,
+        "avg1": 335,
+        "avg7": 472.14,
+        "avg30": 236.03,
+        "reverseHoloAvg1": 89.95,
+        "reverseHoloAvg7": 39.69,
+        "reverseHoloAvg30": 30.02
       }
     }
   },
@@ -453,6 +752,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "7",
     "artist": "kawayoo",
     "rarity": "Common",
@@ -468,12 +785,45 @@
       "small": "https://images.pokemontcg.io/dc1/7.png",
       "large": "https://images.pokemontcg.io/dc1/7_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1,
+          "mid": 1.74,
+          "high": 89,
+          "market": 2.01,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.39,
+          "mid": 4.48,
+          "high": 89,
+          "market": 4.72,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.54,
+        "lowPrice": 0.8,
+        "trendPrice": 3.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 11.5,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 7.56,
+        "lowPriceExPlus": 1,
+        "avg1": 1.95,
+        "avg7": 4.17,
+        "avg30": 3.63,
+        "reverseHoloAvg1": 14,
+        "reverseHoloAvg7": 7.98,
+        "reverseHoloAvg30": 6.43
       }
     }
   },
@@ -521,6 +871,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -536,12 +904,45 @@
       "small": "https://images.pokemontcg.io/dc1/8.png",
       "large": "https://images.pokemontcg.io/dc1/8_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.68,
+          "high": 3,
+          "market": 1.7,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.25,
+          "mid": 2.99,
+          "high": 3.71,
+          "market": 3.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.72,
+        "lowPrice": 0.75,
+        "trendPrice": 3.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 9.84,
+        "reverseHoloTrend": 7.67,
+        "lowPriceExPlus": 2,
+        "avg1": 3.4,
+        "avg7": 4.26,
+        "avg30": 4.6,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 6.62,
+        "reverseHoloAvg30": 5.95
       }
     }
   },
@@ -587,6 +988,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Naoki Saito",
     "rarity": "Common",
@@ -602,12 +1021,45 @@
       "small": "https://images.pokemontcg.io/dc1/9.png",
       "large": "https://images.pokemontcg.io/dc1/9_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.4,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.77,
+          "directLow": 0.71
+        },
+        "reverseHolofoil": {
+          "low": 2.86,
+          "mid": 4.04,
+          "high": 33.55,
+          "market": 7.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.48,
+        "lowPrice": 0.4,
+        "trendPrice": 2.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 7.74,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2.95,
+        "avg7": 2.72,
+        "avg30": 1.94,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 6.46,
+        "reverseHoloAvg30": 5.14
       }
     }
   },
@@ -647,6 +1099,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -662,12 +1132,45 @@
       "small": "https://images.pokemontcg.io/dc1/10.png",
       "large": "https://images.pokemontcg.io/dc1/10_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.18,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": 0.26
+        },
+        "reverseHolofoil": {
+          "low": 1.7,
+          "mid": 1.78,
+          "high": 2.5,
+          "market": 2.21,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.17,
+        "lowPrice": 0.2,
+        "trendPrice": 1.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.75,
+        "reverseHoloLow": 2.5,
+        "reverseHoloTrend": 5.59,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.99,
+        "avg7": 1.92,
+        "avg30": 1.32,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4.55,
+        "reverseHoloAvg30": 4.45
       }
     }
   },
@@ -714,6 +1217,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo",
@@ -729,12 +1250,45 @@
       "small": "https://images.pokemontcg.io/dc1/11.png",
       "large": "https://images.pokemontcg.io/dc1/11_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.44,
+          "mid": 0.99,
+          "high": 89,
+          "market": 1.14,
+          "directLow": 0.44
+        },
+        "reverseHolofoil": {
+          "low": 1,
+          "mid": 1.61,
+          "high": 6.34,
+          "market": 2.21,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.93,
+        "lowPrice": 1.9,
+        "trendPrice": 2.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.75,
+        "reverseHoloLow": 2.95,
+        "reverseHoloTrend": 4.72,
+        "lowPriceExPlus": 1.9,
+        "avg1": 3.95,
+        "avg7": 2.84,
+        "avg30": 2.73,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 3.93,
+        "reverseHoloAvg30": 4.69
       }
     }
   },
@@ -774,6 +1328,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Akira Komayama",
     "rarity": "Common",
@@ -789,12 +1361,45 @@
       "small": "https://images.pokemontcg.io/dc1/12.png",
       "large": "https://images.pokemontcg.io/dc1/12_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.45,
+          "mid": 1.24,
+          "high": 2,
+          "market": 1.29,
+          "directLow": 0.33
+        },
+        "reverseHolofoil": {
+          "low": 2.5,
+          "mid": 3.15,
+          "high": 3.99,
+          "market": 4.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.1,
+        "lowPrice": 0.9,
+        "trendPrice": 3.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.65,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 8.75,
+        "lowPriceExPlus": 1,
+        "avg1": 2.49,
+        "avg7": 3.09,
+        "avg30": 2.3,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 7.63,
+        "reverseHoloAvg30": 7.65
       }
     }
   },
@@ -848,6 +1453,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -863,12 +1486,45 @@
       "small": "https://images.pokemontcg.io/dc1/13.png",
       "large": "https://images.pokemontcg.io/dc1/13_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.76,
+          "high": 4.95,
+          "market": 0.8,
+          "directLow": 0.76
+        },
+        "reverseHolofoil": {
+          "low": 2.44,
+          "mid": 4.17,
+          "high": 6.29,
+          "market": 4.02,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.49,
+        "lowPrice": 0.7,
+        "trendPrice": 1.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.75,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 6.27,
+        "lowPriceExPlus": 1,
+        "avg1": 0.99,
+        "avg7": 1.57,
+        "avg30": 1.63,
+        "reverseHoloAvg1": 3.75,
+        "reverseHoloAvg7": 4.54,
+        "reverseHoloAvg30": 4.89
       }
     }
   },
@@ -921,6 +1577,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "14",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -936,12 +1610,45 @@
       "small": "https://images.pokemontcg.io/dc1/14.png",
       "large": "https://images.pokemontcg.io/dc1/14_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.06,
+          "mid": 1.92,
+          "high": 89,
+          "market": 2.51,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.8,
+          "mid": 5.99,
+          "high": 7.09,
+          "market": 5.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.98,
+        "lowPrice": 1,
+        "trendPrice": 6.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 20,
+        "reverseHoloLow": 1.2,
+        "reverseHoloTrend": 7.31,
+        "lowPriceExPlus": 3,
+        "avg1": 7,
+        "avg7": 7.55,
+        "avg30": 6.47,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 7.65,
+        "reverseHoloAvg30": 7.1
       }
     }
   },
@@ -994,6 +1701,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "15",
     "artist": "nagimiso",
     "rarity": "Rare Ultra",
@@ -1008,12 +1733,38 @@
       "small": "https://images.pokemontcg.io/dc1/15.png",
       "large": "https://images.pokemontcg.io/dc1/15_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 249.99,
+          "mid": 344.75,
+          "high": 999.99,
+          "market": 322.13,
+          "directLow": 299.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 398.64,
+        "lowPrice": 44.99,
+        "trendPrice": 316.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 62.42,
+        "lowPriceExPlus": 120,
+        "avg1": 600,
+        "avg7": 439.76,
+        "avg30": 256.53,
+        "reverseHoloAvg1": 65,
+        "reverseHoloAvg7": 67.06,
+        "reverseHoloAvg30": 32.01
       }
     }
   },
@@ -1068,6 +1819,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -1083,12 +1852,45 @@
       "small": "https://images.pokemontcg.io/dc1/16.png",
       "large": "https://images.pokemontcg.io/dc1/16_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.29,
+          "mid": 0.76,
+          "high": 4.95,
+          "market": 0.88,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.17,
+          "mid": 3,
+          "high": 5,
+          "market": 3.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.99,
+        "lowPrice": 0.8,
+        "trendPrice": 1.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.99,
+        "reverseHoloLow": 4.63,
+        "reverseHoloTrend": 6.43,
+        "lowPriceExPlus": 1,
+        "avg1": 1.99,
+        "avg7": 1.54,
+        "avg30": 1.83,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 5.76,
+        "reverseHoloAvg30": 6.11
       }
     }
   },
@@ -1143,6 +1945,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "17",
     "artist": "TOKIYA",
     "rarity": "Common",
@@ -1158,12 +1978,45 @@
       "small": "https://images.pokemontcg.io/dc1/17.png",
       "large": "https://images.pokemontcg.io/dc1/17_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.41,
+          "mid": 1.01,
+          "high": 2,
+          "market": 1.29,
+          "directLow": 1.79
+        },
+        "reverseHolofoil": {
+          "low": 4.13,
+          "mid": 8.17,
+          "high": 10.13,
+          "market": 7.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.58,
+        "lowPrice": 0.6,
+        "trendPrice": 3.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 6,
+        "reverseHoloTrend": 8.04,
+        "lowPriceExPlus": 3.5,
+        "avg1": 3.95,
+        "avg7": 4.14,
+        "avg30": 4.13,
+        "reverseHoloAvg1": 9.5,
+        "reverseHoloAvg7": 8.42,
+        "reverseHoloAvg30": 5.83
       }
     }
   },
@@ -1218,6 +2071,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -1233,12 +2104,45 @@
       "small": "https://images.pokemontcg.io/dc1/18.png",
       "large": "https://images.pokemontcg.io/dc1/18_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.75,
+          "mid": 1.22,
+          "high": 99,
+          "market": 1.29,
+          "directLow": 0.93
+        },
+        "reverseHolofoil": {
+          "low": 2.72,
+          "mid": 3.25,
+          "high": 6.29,
+          "market": 4.49,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.97,
+        "lowPrice": 0.99,
+        "trendPrice": 3.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 12.07,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 8.09,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.7,
+        "avg7": 3.53,
+        "avg30": 2.99,
+        "reverseHoloAvg1": 12.07,
+        "reverseHoloAvg7": 9.7,
+        "reverseHoloAvg30": 7.62
       }
     }
   },
@@ -1293,6 +2197,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Hitoshi Ariga",
     "rarity": "Common",
@@ -1308,12 +2230,45 @@
       "small": "https://images.pokemontcg.io/dc1/19.png",
       "large": "https://images.pokemontcg.io/dc1/19_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.54,
+          "mid": 0.93,
+          "high": 1.25,
+          "market": 1.03,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.97,
+          "mid": 5.82,
+          "high": 9.46,
+          "market": 7.55,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.83,
+        "lowPrice": 0.5,
+        "trendPrice": 3.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 11.5,
+        "reverseHoloLow": 6.5,
+        "reverseHoloTrend": 7.55,
+        "lowPriceExPlus": 1.5,
+        "avg1": 5,
+        "avg7": 3.95,
+        "avg30": 3.05,
+        "reverseHoloAvg1": 11.5,
+        "reverseHoloAvg7": 7.92,
+        "reverseHoloAvg30": 7.37
       }
     }
   },
@@ -1352,6 +2307,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Sanosuke Sakuma",
     "rarity": "Common",
@@ -1367,12 +2340,45 @@
       "small": "https://images.pokemontcg.io/dc1/20.png",
       "large": "https://images.pokemontcg.io/dc1/20_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.28,
+          "mid": 0.53,
+          "high": 4.95,
+          "market": 0.56,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.77,
+          "mid": 3.16,
+          "high": 4.99,
+          "market": 4.54,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.96,
+        "lowPrice": 0.5,
+        "trendPrice": 2.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 7.67,
+        "lowPriceExPlus": 1.5,
+        "avg1": 1,
+        "avg7": 2.19,
+        "avg30": 1.77,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 6.5,
+        "reverseHoloAvg30": 6.55
       }
     }
   },
@@ -1414,6 +2420,24 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "21",
     "artist": "kawayoo",
     "rarity": "Rare Holo",
@@ -1429,12 +2453,45 @@
       "small": "https://images.pokemontcg.io/dc1/21.png",
       "large": "https://images.pokemontcg.io/dc1/21_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.48,
+          "mid": 2.52,
+          "high": 89,
+          "market": 2.65,
+          "directLow": 1.67
+        },
+        "reverseHolofoil": {
+          "low": 3.99,
+          "mid": 4.4,
+          "high": 11.5,
+          "market": 5.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.4,
+        "lowPrice": 0.8,
+        "trendPrice": 5.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 19.95,
+        "reverseHoloLow": 1.39,
+        "reverseHoloTrend": 10.15,
+        "lowPriceExPlus": 3,
+        "avg1": 4.85,
+        "avg7": 5.88,
+        "avg30": 5.29,
+        "reverseHoloAvg1": 19.95,
+        "reverseHoloAvg7": 8.75,
+        "reverseHoloAvg30": 8.12
       }
     }
   },
@@ -1481,6 +2538,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Shin Nagasawa",
     "rarity": "Common",
@@ -1496,12 +2571,45 @@
       "small": "https://images.pokemontcg.io/dc1/22.png",
       "large": "https://images.pokemontcg.io/dc1/22_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.49,
+          "mid": 0.7,
+          "high": 4.95,
+          "market": 0.72,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 1.89,
+          "mid": 3,
+          "high": 31.35,
+          "market": 5.95,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.24,
+        "lowPrice": 0.8,
+        "trendPrice": 2.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.8,
+        "reverseHoloLow": 9.9,
+        "reverseHoloTrend": 11.31,
+        "lowPriceExPlus": 1.8,
+        "avg1": 2,
+        "avg7": 3.24,
+        "avg30": 2.72,
+        "reverseHoloAvg1": 1.8,
+        "reverseHoloAvg7": 7.04,
+        "reverseHoloAvg30": 6.88
       }
     }
   },
@@ -1528,6 +2636,24 @@
         "text": "Your opponent's Active Pokémon is now Confused and Poisoned."
       }
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -1539,12 +2665,45 @@
       "small": "https://images.pokemontcg.io/dc1/23.png",
       "large": "https://images.pokemontcg.io/dc1/23_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 0.94,
+          "high": 4.19,
+          "market": 1.46,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.61,
+        "lowPrice": 0.99,
+        "trendPrice": 1.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 8.36,
+        "lowPriceExPlus": 0.99,
+        "avg1": 0.74,
+        "avg7": 1.52,
+        "avg30": 1.73,
+        "reverseHoloAvg1": 11.99,
+        "reverseHoloAvg7": 6.21,
+        "reverseHoloAvg30": 4.59
       }
     }
   },
@@ -1571,6 +2730,24 @@
         "text": "This attack does 20 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -1582,12 +2759,45 @@
       "small": "https://images.pokemontcg.io/dc1/24.png",
       "large": "https://images.pokemontcg.io/dc1/24_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.14,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.53,
+          "directLow": 0.27
+        },
+        "reverseHolofoil": {
+          "low": 0.49,
+          "mid": 0.81,
+          "high": 2.23,
+          "market": 0.94,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.05,
+        "lowPrice": 0.19,
+        "trendPrice": 1.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.5,
+        "reverseHoloLow": 3.25,
+        "reverseHoloTrend": 6.59,
+        "lowPriceExPlus": 0.7,
+        "avg1": 0.79,
+        "avg7": 0.98,
+        "avg30": 1.08,
+        "reverseHoloAvg1": 9.5,
+        "reverseHoloAvg7": 5.88,
+        "reverseHoloAvg30": 4
       }
     }
   },
@@ -1602,6 +2812,24 @@
       "Attach a basic Energy card from your discard pile to your Active Team Aqua Pokémon.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "25",
     "artist": "GAME FREAK inc.",
     "rarity": "Uncommon",
@@ -1613,12 +2841,45 @@
       "small": "https://images.pokemontcg.io/dc1/25.png",
       "large": "https://images.pokemontcg.io/dc1/25_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.61,
+          "high": 4.95,
+          "market": 0.64,
+          "directLow": 0.78
+        },
+        "reverseHolofoil": {
+          "low": 1.1,
+          "mid": 1.94,
+          "high": 3.94,
+          "market": 2.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.21,
+        "lowPrice": 0.35,
+        "trendPrice": 1.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 3.99,
+        "reverseHoloTrend": 5.85,
+        "lowPriceExPlus": 0.45,
+        "avg1": 0.99,
+        "avg7": 1.11,
+        "avg30": 0.98,
+        "reverseHoloAvg1": 6,
+        "reverseHoloAvg7": 4.07,
+        "reverseHoloAvg30": 3.85
       }
     }
   },
@@ -1633,6 +2894,24 @@
       "Discard a card from your hand. (If you can't discard a card, you can't play this card.) Draw 3 cards. If you discarded a Team Aqua Pokémon, draw 1 more card.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "26",
     "artist": "GAME FREAK inc.",
     "rarity": "Uncommon",
@@ -1644,12 +2923,45 @@
       "small": "https://images.pokemontcg.io/dc1/26.png",
       "large": "https://images.pokemontcg.io/dc1/26_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.22,
+          "mid": 0.51,
+          "high": 4.95,
+          "market": 0.54,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.3,
+          "mid": 4.88,
+          "high": 5.66,
+          "market": 5.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.27,
+        "lowPrice": 0.94,
+        "trendPrice": 1.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 9.78,
+        "lowPriceExPlus": 0.99,
+        "avg1": 1,
+        "avg7": 1.97,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 8.5,
+        "reverseHoloAvg7": 7.56,
+        "reverseHoloAvg30": 5.75
       }
     }
   },
@@ -1664,6 +2976,24 @@
       "Search your deck for a Basic Team Aqua Pokémon and a basic Water Energy card, reveal them, and put them into your hand. Shuffle your deck afterward.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -1675,12 +3005,45 @@
       "small": "https://images.pokemontcg.io/dc1/27.png",
       "large": "https://images.pokemontcg.io/dc1/27_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.68,
+          "mid": 0.98,
+          "high": 2.8,
+          "market": 0.97,
+          "directLow": 0.96
+        },
+        "reverseHolofoil": {
+          "low": 2.9,
+          "mid": 4.78,
+          "high": 5.94,
+          "market": 4.56,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.85,
+        "lowPrice": 0.7,
+        "trendPrice": 1.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.95,
+        "reverseHoloLow": 2.95,
+        "reverseHoloTrend": 7.57,
+        "lowPriceExPlus": 1.8,
+        "avg1": 1,
+        "avg7": 1.95,
+        "avg30": 2.16,
+        "reverseHoloAvg1": 9.95,
+        "reverseHoloAvg7": 6.28,
+        "reverseHoloAvg30": 4.6
       }
     }
   },
@@ -1695,6 +3058,24 @@
       "The Retreat Cost of each Pokémon in play (except for Team Aqua Pokémon) is Colorless more.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -1706,12 +3087,45 @@
       "small": "https://images.pokemontcg.io/dc1/28.png",
       "large": "https://images.pokemontcg.io/dc1/28_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.3,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.78,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 2.44,
+          "high": 89,
+          "market": 2.78,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.31,
+        "lowPrice": 0.3,
+        "trendPrice": 1.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 6.74,
+        "lowPriceExPlus": 0.88,
+        "avg1": 1.07,
+        "avg7": 1.32,
+        "avg30": 1.26,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 6.69,
+        "reverseHoloAvg30": 4.74
       }
     }
   },
@@ -1726,6 +3140,24 @@
       "Put up to 3 Team Magma Pokémon from your discard pile into your hand.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "29",
     "artist": "GAME FREAK inc.",
     "rarity": "Uncommon",
@@ -1737,12 +3169,45 @@
       "small": "https://images.pokemontcg.io/dc1/29.png",
       "large": "https://images.pokemontcg.io/dc1/29_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.61,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.82,
+          "mid": 2.4,
+          "high": 10.47,
+          "market": 2.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.01,
+        "lowPrice": 0.15,
+        "trendPrice": 1.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.65,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 7.71,
+        "lowPriceExPlus": 0.8,
+        "avg1": 0.99,
+        "avg7": 1.54,
+        "avg30": 1.23,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 5.55,
+        "reverseHoloAvg30": 5.46
       }
     }
   },
@@ -1757,6 +3222,24 @@
       "Discard a card from your hand. (If you can't discard a card, you can't play this card.) Draw 3 cards. If you discarded a Team Magma Pokémon, draw 1 more card.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "30",
     "artist": "GAME FREAK inc.",
     "rarity": "Uncommon",
@@ -1768,12 +3251,45 @@
       "small": "https://images.pokemontcg.io/dc1/30.png",
       "large": "https://images.pokemontcg.io/dc1/30_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.44,
+          "mid": 0.99,
+          "high": 2.74,
+          "market": 1.38,
+          "directLow": 1.97
+        },
+        "reverseHolofoil": {
+          "low": 1.16,
+          "mid": 2.21,
+          "high": 89,
+          "market": 2.48,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.11,
+        "lowPrice": 0.6,
+        "trendPrice": 1.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.75,
+        "reverseHoloTrend": 6.69,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.49,
+        "avg7": 2.02,
+        "avg30": 2.19,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 5.23,
+        "reverseHoloAvg30": 5.23
       }
     }
   },
@@ -1788,6 +3304,24 @@
       "Search your deck for a Basic Team Magma Pokémon and a basic Fighting Energy card, reveal them, and put them into your hand. Shuffle your deck afterward.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -1799,12 +3333,45 @@
       "small": "https://images.pokemontcg.io/dc1/31.png",
       "large": "https://images.pokemontcg.io/dc1/31_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.99,
+          "mid": 5.12,
+          "high": 5.55,
+          "market": 5.61,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.5,
+          "mid": 3.5,
+          "high": 3.5,
+          "market": 10,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.05,
+        "lowPrice": 4.2,
+        "trendPrice": 5.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 8.45,
+        "reverseHoloTrend": 8.1,
+        "lowPriceExPlus": 4.2,
+        "avg1": 10.5,
+        "avg7": 7.86,
+        "avg30": 6.93,
+        "reverseHoloAvg1": 13,
+        "reverseHoloAvg7": 8.71,
+        "reverseHoloAvg30": 7.28
       }
     }
   },
@@ -1819,6 +3386,24 @@
       "Whenever any player puts a Basic Pokémon (except for Team Magma Pokémon) from his or her hand onto his or her Bench, put 2 damage counters on that Pokémon.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -1830,12 +3415,45 @@
       "small": "https://images.pokemontcg.io/dc1/32.png",
       "large": "https://images.pokemontcg.io/dc1/32_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.5,
+          "mid": 2.61,
+          "high": 89,
+          "market": 3.21,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.25,
+          "mid": 4.43,
+          "high": 9.99,
+          "market": 4.69,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.07,
+        "lowPrice": 0.1,
+        "trendPrice": 4.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.97,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 7.56,
+        "lowPriceExPlus": 1.5,
+        "avg1": 4.75,
+        "avg7": 5.07,
+        "avg30": 3.88,
+        "reverseHoloAvg1": 3.97,
+        "reverseHoloAvg7": 7.64,
+        "reverseHoloAvg30": 6.53
       }
     }
   },
@@ -1851,6 +3469,24 @@
       "This card provides WaterWater Energy only while it is attached to a Team Aqua Pokémon.",
       "(If this card is attached to anything other than a Team Aqua Pokémon, discard this card.)"
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "33",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -1862,12 +3498,45 @@
       "small": "https://images.pokemontcg.io/dc1/33.png",
       "large": "https://images.pokemontcg.io/dc1/33_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.26,
+          "mid": 0.7,
+          "high": 4.95,
+          "market": 0.79,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.9,
+          "mid": 2.87,
+          "high": 5.21,
+          "market": 2.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.73,
+        "lowPrice": 1,
+        "trendPrice": 2.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 8.94,
+        "lowPriceExPlus": 1,
+        "avg1": 3.19,
+        "avg7": 2.42,
+        "avg30": 2.49,
+        "reverseHoloAvg1": 6,
+        "reverseHoloAvg7": 5.2,
+        "reverseHoloAvg30": 6.3
       }
     }
   },
@@ -1883,6 +3552,24 @@
       "This card provides FightingFighting Energy only while it is attached to a Team Magma Pokémon.",
       "(If this card is attached to anything other than a Team Magma Pokémon, discard this card.)"
     ],
+    "set": {
+      "id": "dc1",
+      "name": "Double Crisis",
+      "series": "XY",
+      "printedTotal": 34,
+      "total": 34,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DCR",
+      "releaseDate": "2015/03/25",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dc1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dc1/logo.png"
+      }
+    },
     "number": "34",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -1894,12 +3581,45 @@
       "small": "https://images.pokemontcg.io/dc1/34.png",
       "large": "https://images.pokemontcg.io/dc1/34_hires.png"
     },
-    "set": {
-      "id": "dc1",
-      "releaseDate": "2015/03/25",
-      "name": "Double Crisis",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dc1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dc1-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.62,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.54,
+          "mid": 1.04,
+          "high": 2.16,
+          "market": 2.08,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dc1-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.32,
+        "lowPrice": 0.25,
+        "trendPrice": 1.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2.95,
+        "reverseHoloTrend": 5.21,
+        "lowPriceExPlus": 0.35,
+        "avg1": 0.94,
+        "avg7": 1.32,
+        "avg30": 1.4,
+        "reverseHoloAvg1": 2.9,
+        "reverseHoloAvg7": 4.42,
+        "reverseHoloAvg30": 3.18
       }
     }
   }

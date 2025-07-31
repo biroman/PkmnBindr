@@ -51,6 +51,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Kagemaru Himeno",
     "flavorText": "They avoid attacks by sinking into the shadows of thick foliage. They retaliate with masterful whipping techniques.",
@@ -65,12 +82,38 @@
       "small": "https://images.pokemontcg.io/mcd12/1.png",
       "large": "https://images.pokemontcg.io/mcd12/1_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.89,
+          "mid": 4,
+          "high": 7,
+          "market": 4.12,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16,
+        "lowPrice": 5,
+        "trendPrice": 10.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.85,
+        "lowPriceExPlus": 14.9,
+        "avg1": 16,
+        "avg7": 11.49,
+        "avg30": 11.96,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 4.39,
+        "reverseHoloAvg30": 4.39
       }
     }
   },
@@ -125,6 +168,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Kouki Saitou",
     "flavorText": "This Pokémon dwells deep in the forest. Eating a leaf from its head whisks weariness away as if by magic.",
@@ -139,12 +199,38 @@
       "small": "https://images.pokemontcg.io/mcd12/2.png",
       "large": "https://images.pokemontcg.io/mcd12/2_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.04,
+          "mid": 3.74,
+          "high": 5.39,
+          "market": 3.55,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.9,
+        "lowPrice": 9.95,
+        "trendPrice": 9.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.01,
+        "lowPriceExPlus": 40,
+        "avg1": 11.9,
+        "avg7": 8.91,
+        "avg30": 8.26,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 3,
+        "reverseHoloAvg30": 3
       }
     }
   },
@@ -194,6 +280,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "3",
     "artist": "MAHOU",
     "flavorText": "The Pokémon can easily melt holes in hard rocks with a liquid secreted from its mouth.",
@@ -208,12 +311,38 @@
       "small": "https://images.pokemontcg.io/mcd12/3.png",
       "large": "https://images.pokemontcg.io/mcd12/3_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.39,
+          "mid": 6.03,
+          "high": 14.01,
+          "market": 6.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 49.99,
+        "trendPrice": 21.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.32,
+        "lowPriceExPlus": 0,
+        "avg1": 20,
+        "avg7": 21.37,
+        "avg30": 18.52,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 2.61,
+        "reverseHoloAvg30": 2.61
       }
     }
   },
@@ -266,6 +395,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Kouki Saitou",
     "flavorText": "When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke.",
@@ -280,12 +426,38 @@
       "small": "https://images.pokemontcg.io/mcd12/4.png",
       "large": "https://images.pokemontcg.io/mcd12/4_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.63,
+          "mid": 6.19,
+          "high": 10.99,
+          "market": 6.44,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.49,
+        "lowPrice": 19.5,
+        "trendPrice": 16.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.63,
+        "lowPriceExPlus": 19.99,
+        "avg1": 24.99,
+        "avg7": 14.29,
+        "avg30": 13.69,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 5.33,
+        "reverseHoloAvg30": 5.33
       }
     }
   },
@@ -337,6 +509,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Masakazu Fukuda",
     "flavorText": "Scalchop techniques differ from one Dewott to another. It never neglects maintaining its scalchops.",
@@ -351,12 +540,38 @@
       "small": "https://images.pokemontcg.io/mcd12/5.png",
       "large": "https://images.pokemontcg.io/mcd12/5_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.56,
+          "mid": 4.78,
+          "high": 7.45,
+          "market": 4.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10,
+        "lowPrice": 7,
+        "trendPrice": 8.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.26,
+        "lowPriceExPlus": 7,
+        "avg1": 10,
+        "avg7": 9.71,
+        "avg30": 10.55,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4.04,
+        "reverseHoloAvg30": 4.04
       }
     }
   },
@@ -398,6 +613,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Kouki Saitou",
     "flavorText": "The energy made in its cheeks' electric pouches is stored inside its membranes and released while it is gliding.",
@@ -412,12 +644,38 @@
       "small": "https://images.pokemontcg.io/mcd12/6.png",
       "large": "https://images.pokemontcg.io/mcd12/6_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.5,
+          "mid": 7.88,
+          "high": 17.99,
+          "market": 7.27,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20,
+        "lowPrice": 16,
+        "trendPrice": 14.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.67,
+        "lowPriceExPlus": 22.49,
+        "avg1": 20,
+        "avg7": 15.12,
+        "avg30": 10.53,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 7.3,
+        "reverseHoloAvg30": 7.3
       }
     }
   },
@@ -457,6 +715,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Masakazu Fukuda",
     "flavorText": "Its habitat is dark forests and caves. It emits ultrasonic waves from its nose to learn about its surroundings.",
@@ -471,12 +746,38 @@
       "small": "https://images.pokemontcg.io/mcd12/7.png",
       "large": "https://images.pokemontcg.io/mcd12/7_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 5.31,
+          "high": 15,
+          "market": 5.32,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 30,
+        "lowPrice": 7,
+        "trendPrice": 12.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7,
+        "lowPriceExPlus": 7,
+        "avg1": 30,
+        "avg7": 11.99,
+        "avg30": 9.39,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 4.9,
+        "reverseHoloAvg30": 4.9
       }
     }
   },
@@ -523,6 +824,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "8",
     "artist": "match",
     "flavorText": "It can dig through the ground at a speed of 30 mph. It could give a car running aboveground a good race.",
@@ -537,12 +855,38 @@
       "small": "https://images.pokemontcg.io/mcd12/8.png",
       "large": "https://images.pokemontcg.io/mcd12/8_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.75,
+          "mid": 2.89,
+          "high": 9,
+          "market": 2.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.63,
+        "lowPrice": 7,
+        "trendPrice": 13.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.7,
+        "lowPriceExPlus": 7,
+        "avg1": 17.45,
+        "avg7": 12.85,
+        "avg30": 9.74,
+        "reverseHoloAvg1": 6.99,
+        "reverseHoloAvg7": 3.97,
+        "reverseHoloAvg30": 3.97
       }
     }
   },
@@ -588,6 +932,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Atsuko Nishida",
     "flavorText": "They steal from people for fun, but their victims can't help but forgive them. Their deceptively cute act is perfect.",
@@ -602,12 +963,38 @@
       "small": "https://images.pokemontcg.io/mcd12/9.png",
       "large": "https://images.pokemontcg.io/mcd12/9_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.49,
+          "mid": 12.1,
+          "high": 14.58,
+          "market": 11.47,
+          "directLow": 2.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18,
+        "lowPrice": 25,
+        "trendPrice": 16.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.72,
+        "lowPriceExPlus": 0,
+        "avg1": 18,
+        "avg7": 12.85,
+        "avg30": 13.11,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 5.95,
+        "reverseHoloAvg30": 5.95
       }
     }
   },
@@ -652,6 +1039,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Masakazu Fukuda",
     "flavorText": "Its skin has a rubbery elasticity, so it can reduce damage by defensively pulling its skin up to its neck.",
@@ -666,12 +1070,38 @@
       "small": "https://images.pokemontcg.io/mcd12/10.png",
       "large": "https://images.pokemontcg.io/mcd12/10_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.06,
+          "mid": 10,
+          "high": 11.69,
+          "market": 9.04,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17,
+        "lowPrice": 35,
+        "trendPrice": 11.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.18,
+        "lowPriceExPlus": 35,
+        "avg1": 17,
+        "avg7": 11.92,
+        "avg30": 12.05,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 5,
+        "reverseHoloAvg30": 5
       }
     }
   },
@@ -728,6 +1158,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Kouki Saitou",
     "flavorText": "Spinning minigears are rotated at high speed and repeatedly fired away. It is dangerous if the gears don't return.",
@@ -742,12 +1189,38 @@
       "small": "https://images.pokemontcg.io/mcd12/11.png",
       "large": "https://images.pokemontcg.io/mcd12/11_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.59,
+          "mid": 3,
+          "high": 5.74,
+          "market": 3.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.9,
+        "lowPrice": 5,
+        "trendPrice": 14.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.43,
+        "lowPriceExPlus": 7,
+        "avg1": 16.9,
+        "avg7": 14.09,
+        "avg30": 13.67,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 7.5,
+        "reverseHoloAvg30": 7.5
       }
     }
   },
@@ -780,6 +1253,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd12",
+      "name": "McDonald's Collection 2012",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2012/06/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd12/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Atsuko Nishida",
     "flavorText": "They use their tusks to crush the berries they eat. Repeated regrowth makes their tusks strong and sharp.",
@@ -794,12 +1284,38 @@
       "small": "https://images.pokemontcg.io/mcd12/12.png",
       "large": "https://images.pokemontcg.io/mcd12/12_hires.png"
     },
-    "set": {
-      "id": "mcd12",
-      "releaseDate": "2012/06/15",
-      "name": "McDonald's Collection 2012",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd12-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.75,
+          "mid": 4.75,
+          "high": 9.07,
+          "market": 5.33,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd12-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 29.99,
+        "lowPrice": 15,
+        "trendPrice": 13.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.31,
+        "lowPriceExPlus": 49.99,
+        "avg1": 29.99,
+        "avg7": 12.56,
+        "avg30": 8.99,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 3.63,
+        "reverseHoloAvg30": 3.63
       }
     }
   }

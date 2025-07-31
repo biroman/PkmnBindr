@@ -50,6 +50,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -59,6 +78,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -66,12 +86,151 @@
       "small": "https://images.pokemontcg.io/cel25/1.png",
       "large": "https://images.pokemontcg.io/cel25/1_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.02,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.1,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-4",
+    "name": "Palkia",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic"
+    ],
+    "hp": "130",
+    "types": [
+      "Water"
+    ],
+    "abilities": [
+      {
+        "type": "Ability",
+        "name": "Absolute Space",
+        "text": "As long as this Pokémon is in the Active Spot, your opponent can't play any Stadium cards from their hand."
+      }
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Water",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "Overdrive Smash",
+        "damage": "80+",
+        "text": "During your next turn, this Pokémon's Overdrive Smash attack does 80 more damage (before applying Weakness and Resistance).",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
     "set": {
       "id": "cel25",
-      "releaseDate": "2021/10/08",
       "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "4",
+    "artist": "5ban Graphics",
+    "rarity": "Rare",
+    "flavorText": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.",
+    "nationalPokedexNumbers": [
+      484
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/4.png",
+      "large": "https://images.pokemontcg.io/cel25/4_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -121,6 +280,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -130,6 +308,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -137,12 +316,151 @@
       "small": "https://images.pokemontcg.io/cel25/2.png",
       "large": "https://images.pokemontcg.io/cel25/2_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.23,
+          "high": 10,
+          "market": 0.21,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.06,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-7",
+    "name": "Flying Pikachu VMAX",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "VMAX"
+    ],
+    "hp": "310",
+    "types": [
+      "Lightning"
+    ],
+    "evolvesFrom": "Flying Pikachu V",
+    "evolvesTo": [
+      "Raichu"
+    ],
+    "rules": [
+      "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Lightning",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "Max Balloon",
+        "damage": "160",
+        "text": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "×2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    ],
     "set": {
       "id": "cel25",
-      "releaseDate": "2021/10/08",
       "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "7",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo VMAX",
+    "nationalPokedexNumbers": [
+      25
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/7.png",
+      "large": "https://images.pokemontcg.io/cel25/7_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.99,
+          "mid": 4.69,
+          "high": 999.99,
+          "market": 4.12,
+          "directLow": 3.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.89,
+        "lowPrice": 1.25,
+        "trendPrice": 3.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.99,
+        "avg1": 3,
+        "avg7": 2.52,
+        "avg30": 2.91,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -194,6 +512,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Ryuta Fuse",
     "rarity": "Rare",
@@ -203,6 +540,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -210,564 +548,38 @@
       "small": "https://images.pokemontcg.io/cel25/3.png",
       "large": "https://images.pokemontcg.io/cel25/3_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.14
+        }
       }
-    }
-  },
-  {
-    "id": "cel25-4",
-    "name": "Palkia",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic"
-    ],
-    "hp": "130",
-    "types": [
-      "Water"
-    ],
-    "abilities": [
-      {
-        "type": "Ability",
-        "name": "Absolute Space",
-        "text": "As long as this Pokémon is in the Active Spot, your opponent can't play any Stadium cards from their hand."
-      }
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Water",
-          "Colorless",
-          "Colorless"
-        ],
-        "name": "Overdrive Smash",
-        "damage": "80+",
-        "text": "During your next turn, this Pokémon's Overdrive Smash attack does 80 more damage (before applying Weakness and Resistance).",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Lightning",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "4",
-    "artist": "5ban Graphics",
-    "rarity": "Rare",
-    "flavorText": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.",
-    "nationalPokedexNumbers": [
-      484
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
     },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/4.png",
-      "large": "https://images.pokemontcg.io/cel25/4_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-5",
-    "name": "Pikachu",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic"
-    ],
-    "hp": "60",
-    "types": [
-      "Lightning"
-    ],
-    "evolvesTo": [
-      "Raichu"
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Colorless"
-        ],
-        "name": "Gnaw",
-        "damage": "10",
-        "text": "",
-        "convertedEnergyCost": 1
-      },
-      {
-        "cost": [
-          "Lightning",
-          "Colorless"
-        ],
-        "name": "Thunder Jolt",
-        "damage": "30",
-        "text": "Flip a coin. If tails, this Pokémon also does 10 damage to itself.",
-        "convertedEnergyCost": 2
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fighting",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "5",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare Holo",
-    "flavorText": "It has small electric sacs on both its cheeks. If threatened, it looses electric charges from the sacs.",
-    "nationalPokedexNumbers": [
-      25
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/5.png",
-      "large": "https://images.pokemontcg.io/cel25/5_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-6",
-    "name": "Flying Pikachu V",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic",
-      "V"
-    ],
-    "hp": "190",
-    "types": [
-      "Lightning"
-    ],
-    "evolvesTo": [
-      "Raichu"
-    ],
-    "rules": [
-      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Lightning"
-        ],
-        "name": "Thunder Shock",
-        "damage": "20",
-        "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
-        "convertedEnergyCost": 1
-      },
-      {
-        "cost": [
-          "Colorless",
-          "Colorless",
-          "Colorless"
-        ],
-        "name": "Fly",
-        "damage": "120",
-        "text": "Flip a coin. If tails, this attack does nothing. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Lightning",
-        "value": "×2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "Fighting",
-        "value": "-30"
-      }
-    ],
-    "number": "6",
-    "artist": "aky CG Works",
-    "rarity": "Rare Holo V",
-    "nationalPokedexNumbers": [
-      25
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/6.png",
-      "large": "https://images.pokemontcg.io/cel25/6_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-7",
-    "name": "Flying Pikachu VMAX",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "VMAX"
-    ],
-    "hp": "310",
-    "types": [
-      "Lightning"
-    ],
-    "evolvesFrom": "Flying Pikachu V",
-    "evolvesTo": [
-      "Raichu"
-    ],
-    "rules": [
-      "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Lightning",
-          "Colorless",
-          "Colorless"
-        ],
-        "name": "Max Balloon",
-        "damage": "160",
-        "text": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Lightning",
-        "value": "×2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "Fighting",
-        "value": "-30"
-      }
-    ],
-    "number": "7",
-    "artist": "aky CG Works",
-    "rarity": "Rare Holo VMAX",
-    "nationalPokedexNumbers": [
-      25
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/7.png",
-      "large": "https://images.pokemontcg.io/cel25/7_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-8",
-    "name": "Surfing Pikachu V",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic",
-      "V"
-    ],
-    "hp": "200",
-    "types": [
-      "Lightning"
-    ],
-    "evolvesTo": [
-      "Raichu"
-    ],
-    "rules": [
-      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Water",
-          "Water",
-          "Water"
-        ],
-        "name": "Surf",
-        "damage": "150",
-        "text": "",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fighting",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "8",
-    "artist": "aky CG Works",
-    "rarity": "Rare Holo V",
-    "nationalPokedexNumbers": [
-      25
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/8.png",
-      "large": "https://images.pokemontcg.io/cel25/8_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-9",
-    "name": "Surfing Pikachu VMAX",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "VMAX"
-    ],
-    "hp": "310",
-    "types": [
-      "Lightning"
-    ],
-    "evolvesFrom": "Surfing Pikachu V",
-    "evolvesTo": [
-      "Raichu"
-    ],
-    "rules": [
-      "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Water",
-          "Water",
-          "Water"
-        ],
-        "name": "Max Surfer",
-        "damage": "160",
-        "text": "This attack also does 30 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fighting",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "9",
-    "artist": "aky CG Works",
-    "rarity": "Rare Holo VMAX",
-    "nationalPokedexNumbers": [
-      25
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/9.png",
-      "large": "https://images.pokemontcg.io/cel25/9_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-10",
-    "name": "Zekrom",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic"
-    ],
-    "hp": "130",
-    "types": [
-      "Lightning"
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Colorless",
-          "Colorless"
-        ],
-        "name": "Field Crush",
-        "damage": "30",
-        "text": "If your opponent has a Stadium in play, discard it.",
-        "convertedEnergyCost": 2
-      },
-      {
-        "cost": [
-          "Lightning",
-          "Lightning",
-          "Colorless"
-        ],
-        "name": "White Thunder",
-        "damage": "80+",
-        "text": "If Reshiram is on your Bench, this attack does 80 more damage.",
-        "convertedEnergyCost": 3
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fighting",
-        "value": "×2"
-      }
-    ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "10",
-    "artist": "Aya Kusube",
-    "rarity": "Rare",
-    "flavorText": "Concealing itself in lightning clouds, it flies throughout the Unova region. It creates electricity in its tail.",
-    "nationalPokedexNumbers": [
-      644
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/10.png",
-      "large": "https://images.pokemontcg.io/cel25/10_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
-      }
-    }
-  },
-  {
-    "id": "cel25-11",
-    "name": "Mew",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Basic"
-    ],
-    "hp": "60",
-    "types": [
-      "Psychic"
-    ],
-    "abilities": [
-      {
-        "type": "Ability",
-        "name": "Mysterious Tail",
-        "text": "Once during your turn, if this Pokémon is in the Active Spot, you may look at the top 6 cards of your deck, reveal an Item card you find there, and put it into your hand. Shuffle the other cards back into your deck."
-      }
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Psychic",
-          "Colorless"
-        ],
-        "name": "Psyshot",
-        "damage": "30",
-        "text": "",
-        "convertedEnergyCost": 2
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Darkness",
-        "value": "×2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "Fighting",
-        "value": "-30"
-      }
-    ],
-    "retreatCost": [
-      "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "11",
-    "artist": "Yuu Nishida",
-    "rarity": "Rare Holo",
-    "flavorText": "Its DNA is said to contain the genetic codes of all Pokémon, so it can use all kinds of techniques.",
-    "nationalPokedexNumbers": [
-      151
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
-    },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/11.png",
-      "large": "https://images.pokemontcg.io/cel25/11_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -816,6 +628,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "12",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare",
@@ -825,6 +656,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -832,78 +664,149 @@
       "small": "https://images.pokemontcg.io/cel25/12.png",
       "large": "https://images.pokemontcg.io/cel25/12_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 5.03,
+          "market": 0.19,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.06,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
   {
-    "id": "cel25-13",
-    "name": "Cosmog",
+    "id": "cel25-8",
+    "name": "Surfing Pikachu V",
     "supertype": "Pokémon",
     "subtypes": [
-      "Basic"
+      "Basic",
+      "V"
     ],
-    "hp": "60",
+    "hp": "200",
     "types": [
-      "Psychic"
+      "Lightning"
     ],
     "evolvesTo": [
-      "Cosmoem"
+      "Raichu"
+    ],
+    "rules": [
+      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
     ],
     "attacks": [
       {
         "cost": [
-          "Colorless"
+          "Water",
+          "Water",
+          "Water"
         ],
-        "name": "Star Protection",
-        "damage": "",
-        "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks.",
-        "convertedEnergyCost": 1
+        "name": "Surf",
+        "damage": "150",
+        "text": "",
+        "convertedEnergyCost": 3
       }
     ],
     "weaknesses": [
       {
-        "type": "Darkness",
-        "value": "×2"
-      }
-    ],
-    "resistances": [
-      {
         "type": "Fighting",
-        "value": "-30"
+        "value": "×2"
       }
     ],
     "retreatCost": [
       "Colorless"
     ],
     "convertedRetreatCost": 1,
-    "number": "13",
-    "artist": "kirisAki",
-    "rarity": "Rare",
-    "flavorText": "Whether or not it's a Pokémon from this world is a mystery. When it's in a jam, it warps away to a safe place to hide.",
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "8",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo V",
     "nationalPokedexNumbers": [
-      789
+      25
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
     "images": {
-      "small": "https://images.pokemontcg.io/cel25/13.png",
-      "large": "https://images.pokemontcg.io/cel25/13_hires.png"
+      "small": "https://images.pokemontcg.io/cel25/8.png",
+      "large": "https://images.pokemontcg.io/cel25/8_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2,
+          "high": 99.99,
+          "market": 1.95,
+          "directLow": 1.73
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.52,
+        "lowPrice": 0.99,
+        "trendPrice": 1.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.99,
+        "avg1": 1.36,
+        "avg7": 1.44,
+        "avg30": 1.51,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -952,6 +855,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "14",
     "artist": "kirisAki",
     "rarity": "Rare",
@@ -961,6 +883,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -968,12 +891,149 @@
       "small": "https://images.pokemontcg.io/cel25/14.png",
       "large": "https://images.pokemontcg.io/cel25/14_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.11,
+        "avg7": 0.06,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-9",
+    "name": "Surfing Pikachu VMAX",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "VMAX"
+    ],
+    "hp": "310",
+    "types": [
+      "Lightning"
+    ],
+    "evolvesFrom": "Surfing Pikachu V",
+    "evolvesTo": [
+      "Raichu"
+    ],
+    "rules": [
+      "VMAX rule: When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards."
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Water",
+          "Water",
+          "Water"
+        ],
+        "name": "Max Surfer",
+        "damage": "160",
+        "text": "This attack also does 30 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless"
+    ],
+    "convertedRetreatCost": 1,
     "set": {
       "id": "cel25",
-      "releaseDate": "2021/10/08",
       "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "9",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo VMAX",
+    "nationalPokedexNumbers": [
+      25
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/9.png",
+      "large": "https://images.pokemontcg.io/cel25/9_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.1,
+          "mid": 4.8,
+          "high": 999.99,
+          "market": 4.1,
+          "directLow": 4.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.87,
+        "lowPrice": 1.9,
+        "trendPrice": 3.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.95,
+        "avg1": 3.12,
+        "avg7": 2.73,
+        "avg30": 2.93,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1029,6 +1089,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "15",
     "artist": "kirisAki",
     "rarity": "Rare Holo",
@@ -1038,6 +1117,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1045,82 +1125,155 @@
       "small": "https://images.pokemontcg.io/cel25/15.png",
       "large": "https://images.pokemontcg.io/cel25/15_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 5.03,
+          "market": 0.22,
+          "directLow": 0.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.1,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
   {
-    "id": "cel25-16",
-    "name": "Zacian V",
+    "id": "cel25-10",
+    "name": "Zekrom",
     "supertype": "Pokémon",
     "subtypes": [
-      "Basic",
-      "V"
+      "Basic"
     ],
-    "hp": "220",
+    "hp": "130",
     "types": [
-      "Psychic"
-    ],
-    "rules": [
-      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
-    ],
-    "abilities": [
-      {
-        "type": "Ability",
-        "name": "Roar of the Sword",
-        "text": "Once during your turn, you may search your deck for a Psychic Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck. If you use this Ability, your turn ends."
-      }
+      "Lightning"
     ],
     "attacks": [
       {
         "cost": [
           "Colorless",
-          "Colorless",
           "Colorless"
         ],
-        "name": "Storm Slash",
-        "damage": "60+",
-        "text": "This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",
+        "name": "Field Crush",
+        "damage": "30",
+        "text": "If your opponent has a Stadium in play, discard it.",
+        "convertedEnergyCost": 2
+      },
+      {
+        "cost": [
+          "Lightning",
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "White Thunder",
+        "damage": "80+",
+        "text": "If Reshiram is on your Bench, this attack does 80 more damage.",
         "convertedEnergyCost": 3
       }
     ],
     "weaknesses": [
       {
-        "type": "Metal",
+        "type": "Fighting",
         "value": "×2"
       }
     ],
     "retreatCost": [
       "Colorless",
+      "Colorless",
       "Colorless"
     ],
-    "convertedRetreatCost": 2,
-    "number": "16",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare Holo V",
+    "convertedRetreatCost": 3,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "10",
+    "artist": "Aya Kusube",
+    "rarity": "Rare",
+    "flavorText": "Concealing itself in lightning clouds, it flies throughout the Unova region. It creates electricity in its tail.",
     "nationalPokedexNumbers": [
-      888
+      644
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
     "images": {
-      "small": "https://images.pokemontcg.io/cel25/16.png",
-      "large": "https://images.pokemontcg.io/cel25/16_hires.png"
+      "small": "https://images.pokemontcg.io/cel25/10.png",
+      "large": "https://images.pokemontcg.io/cel25/10_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.23,
+          "high": 5,
+          "market": 0.17,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.06,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1172,6 +1325,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Ryuta Fuse",
     "rarity": "Rare",
@@ -1181,6 +1353,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1188,54 +1361,160 @@
       "small": "https://images.pokemontcg.io/cel25/17.png",
       "large": "https://images.pokemontcg.io/cel25/17_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.24,
+          "high": 5,
+          "market": 0.22,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
   {
-    "id": "cel25-18",
-    "name": "Zamazenta V",
-    "supertype": "Pokémon",
+    "id": "cel25-23",
+    "name": "Professor's Research (Professor Oak)",
+    "supertype": "Trainer",
     "subtypes": [
-      "Basic",
-      "V"
-    ],
-    "hp": "220",
-    "types": [
-      "Fighting"
+      "Supporter"
     ],
     "rules": [
-      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
+      "Discard your hand and draw 7 cards.",
+      "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "23",
+    "artist": "KIYOTAKA OSHIYAMA",
+    "rarity": "Rare Holo",
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "D",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/23.png",
+      "large": "https://images.pokemontcg.io/cel25/23_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 4.99,
+          "market": 0.23,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.15,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.14,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-21",
+    "name": "Solgaleo",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "hp": "170",
+    "types": [
+      "Metal"
+    ],
+    "evolvesFrom": "Cosmoem",
     "abilities": [
       {
         "type": "Ability",
-        "name": "Growl of the Shield",
-        "text": "All of your Fighting Pokémon take 20 less damage from attacks from your opponent's Pokémon VMAX (after applying Weakness and Resistance). You can't apply more than 1 Growl of the Shield Ability at a time."
+        "name": "Rush In",
+        "text": "Once during your turn, if this Pokémon is on your Bench, you may switch it with your Active Pokémon."
       }
     ],
     "attacks": [
       {
         "cost": [
-          "Fighting",
-          "Fighting",
+          "Colorless",
           "Colorless"
         ],
-        "name": "Heavy Impact",
-        "damage": "150",
-        "text": "",
-        "convertedEnergyCost": 3
+        "name": "Solar Geyser",
+        "damage": "100",
+        "text": "Attach up to 2 basic Energy cards from your discard pile to 1 of your Benched Pokémon.",
+        "convertedEnergyCost": 2
       }
     ],
     "weaknesses": [
       {
-        "type": "Psychic",
+        "type": "Fire",
         "value": "×2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "Grass",
+        "value": "-30"
       }
     ],
     "retreatCost": [
@@ -1243,61 +1522,342 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
-    "number": "18",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare Holo V",
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "21",
+    "artist": "kirisAki",
+    "rarity": "Rare Holo",
+    "flavorText": "In writings from the distant past, it's called by the name \"the beast that devours the sun.\"",
     "nationalPokedexNumbers": [
-      889
+      791
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
     "images": {
-      "small": "https://images.pokemontcg.io/cel25/18.png",
-      "large": "https://images.pokemontcg.io/cel25/18_hires.png"
+      "small": "https://images.pokemontcg.io/cel25/21.png",
+      "large": "https://images.pokemontcg.io/cel25/21_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.02,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.1,
+        "avg30": 0.13,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
   {
-    "id": "cel25-19",
-    "name": "Yveltal",
+    "id": "cel25-13",
+    "name": "Cosmog",
     "supertype": "Pokémon",
     "subtypes": [
       "Basic"
     ],
-    "hp": "120",
+    "hp": "60",
     "types": [
-      "Darkness"
+      "Psychic"
+    ],
+    "evolvesTo": [
+      "Cosmoem"
     ],
     "attacks": [
       {
         "cost": [
-          "Colorless",
           "Colorless"
         ],
-        "name": "Cry of Destruction",
+        "name": "Star Protection",
         "damage": "",
-        "text": "Discard up to 3 Special Energy from your opponent's Pokémon.",
-        "convertedEnergyCost": 2
+        "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks.",
+        "convertedEnergyCost": 1
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "×2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    ],
+    "retreatCost": [
+      "Colorless"
+    ],
+    "convertedRetreatCost": 1,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "13",
+    "artist": "kirisAki",
+    "rarity": "Rare",
+    "flavorText": "Whether or not it's a Pokémon from this world is a mystery. When it's in a jam, it warps away to a safe place to hide.",
+    "nationalPokedexNumbers": [
+      789
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/13.png",
+      "large": "https://images.pokemontcg.io/cel25/13_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.22,
+          "high": 4.99,
+          "market": 0.22,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.11,
+        "avg7": 0.06,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-5",
+    "name": "Pikachu",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic"
+    ],
+    "hp": "60",
+    "types": [
+      "Lightning"
+    ],
+    "evolvesTo": [
+      "Raichu"
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "Gnaw",
+        "damage": "10",
+        "text": "",
+        "convertedEnergyCost": 1
       },
       {
         "cost": [
-          "Darkness",
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "Thunder Jolt",
+        "damage": "30",
+        "text": "Flip a coin. If tails, this Pokémon also does 10 damage to itself.",
+        "convertedEnergyCost": 2
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless"
+    ],
+    "convertedRetreatCost": 1,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "5",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo",
+    "flavorText": "It has small electric sacs on both its cheeks. If threatened, it looses electric charges from the sacs.",
+    "nationalPokedexNumbers": [
+      25
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/5.png",
+      "large": "https://images.pokemontcg.io/cel25/5_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 7.62,
+          "high": 200,
+          "market": 7.17,
+          "directLow": 1.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.98,
+        "lowPrice": 0.48,
+        "trendPrice": 4.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 3.64,
+        "avg7": 3.56,
+        "avg30": 3.04,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-6",
+    "name": "Flying Pikachu V",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "hp": "190",
+    "types": [
+      "Lightning"
+    ],
+    "evolvesTo": [
+      "Raichu"
+    ],
+    "rules": [
+      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Lightning"
+        ],
+        "name": "Thunder Shock",
+        "damage": "20",
+        "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+        "convertedEnergyCost": 1
+      },
+      {
+        "cost": [
+          "Colorless",
           "Colorless",
           "Colorless"
         ],
-        "name": "Dark Feather",
-        "damage": "100",
-        "text": "",
+        "name": "Fly",
+        "damage": "120",
+        "text": "Flip a coin. If tails, this attack does nothing. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
         "convertedEnergyCost": 3
       }
     ],
@@ -1313,33 +1873,190 @@
         "value": "-30"
       }
     ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "19",
-    "artist": "AKIRA EGAWA",
-    "rarity": "Rare",
-    "flavorText": "When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more.",
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "6",
+    "artist": "aky CG Works",
+    "rarity": "Rare Holo V",
     "nationalPokedexNumbers": [
-      717
+      25
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
     "images": {
-      "small": "https://images.pokemontcg.io/cel25/19.png",
-      "large": "https://images.pokemontcg.io/cel25/19_hires.png"
+      "small": "https://images.pokemontcg.io/cel25/6.png",
+      "large": "https://images.pokemontcg.io/cel25/6_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.64,
+          "mid": 1.87,
+          "high": 99.99,
+          "market": 1.79,
+          "directLow": 1.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.36,
+        "lowPrice": 0.3,
+        "trendPrice": 1.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.45,
+        "avg1": 1.39,
+        "avg7": 1.25,
+        "avg30": 1.36,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-11",
+    "name": "Mew",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic"
+    ],
+    "hp": "60",
+    "types": [
+      "Psychic"
+    ],
+    "abilities": [
+      {
+        "type": "Ability",
+        "name": "Mysterious Tail",
+        "text": "Once during your turn, if this Pokémon is in the Active Spot, you may look at the top 6 cards of your deck, reveal an Item card you find there, and put it into your hand. Shuffle the other cards back into your deck."
+      }
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Psychic",
+          "Colorless"
+        ],
+        "name": "Psyshot",
+        "damage": "30",
+        "text": "",
+        "convertedEnergyCost": 2
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "×2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    ],
+    "retreatCost": [
+      "Colorless"
+    ],
+    "convertedRetreatCost": 1,
     "set": {
       "id": "cel25",
-      "releaseDate": "2021/10/08",
       "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "11",
+    "artist": "Yuu Nishida",
+    "rarity": "Rare Holo",
+    "flavorText": "Its DNA is said to contain the genetic codes of all Pokémon, so it can use all kinds of techniques.",
+    "nationalPokedexNumbers": [
+      151
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/11.png",
+      "large": "https://images.pokemontcg.io/cel25/11_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.4,
+          "mid": 1,
+          "high": 9.99,
+          "market": 1.24,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.47,
+        "lowPrice": 0.02,
+        "trendPrice": 0.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.29,
+        "avg7": 0.54,
+        "avg30": 0.46,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1393,6 +2110,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "20",
     "artist": "5ban Graphics",
     "rarity": "Rare",
@@ -1402,6 +2138,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1409,85 +2146,38 @@
       "small": "https://images.pokemontcg.io/cel25/20.png",
       "large": "https://images.pokemontcg.io/cel25/20_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.99,
+          "market": 0.16,
+          "directLow": 0.09
+        }
       }
-    }
-  },
-  {
-    "id": "cel25-21",
-    "name": "Solgaleo",
-    "supertype": "Pokémon",
-    "subtypes": [
-      "Stage 2"
-    ],
-    "hp": "170",
-    "types": [
-      "Metal"
-    ],
-    "evolvesFrom": "Cosmoem",
-    "abilities": [
-      {
-        "type": "Ability",
-        "name": "Rush In",
-        "text": "Once during your turn, if this Pokémon is on your Bench, you may switch it with your Active Pokémon."
-      }
-    ],
-    "attacks": [
-      {
-        "cost": [
-          "Colorless",
-          "Colorless"
-        ],
-        "name": "Solar Geyser",
-        "damage": "100",
-        "text": "Attach up to 2 basic Energy cards from your discard pile to 1 of your Benched Pokémon.",
-        "convertedEnergyCost": 2
-      }
-    ],
-    "weaknesses": [
-      {
-        "type": "Fire",
-        "value": "×2"
-      }
-    ],
-    "resistances": [
-      {
-        "type": "Grass",
-        "value": "-30"
-      }
-    ],
-    "retreatCost": [
-      "Colorless",
-      "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "21",
-    "artist": "kirisAki",
-    "rarity": "Rare Holo",
-    "flavorText": "In writings from the distant past, it's called by the name \"the beast that devours the sun.\"",
-    "nationalPokedexNumbers": [
-      791
-    ],
-    "legalities": {
-      "unlimited": "Legal",
-      "expanded": "Legal"
     },
-    "regulationMark": "E",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/21.png",
-      "large": "https://images.pokemontcg.io/cel25/21_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1543,6 +2233,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -1552,6 +2261,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1559,45 +2269,38 @@
       "small": "https://images.pokemontcg.io/cel25/22.png",
       "large": "https://images.pokemontcg.io/cel25/22_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.02,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.02
+        }
       }
-    }
-  },
-  {
-    "id": "cel25-23",
-    "name": "Professor's Research (Professor Oak)",
-    "supertype": "Trainer",
-    "subtypes": [
-      "Supporter"
-    ],
-    "rules": [
-      "Discard your hand and draw 7 cards.",
-      "You may play only 1 Supporter card during your turn."
-    ],
-    "number": "23",
-    "artist": "KIYOTAKA OSHIYAMA",
-    "rarity": "Rare Holo",
-    "legalities": {
-      "unlimited": "Legal",
-      "standard": "Legal",
-      "expanded": "Legal"
     },
-    "regulationMark": "D",
-    "images": {
-      "small": "https://images.pokemontcg.io/cel25/23.png",
-      "large": "https://images.pokemontcg.io/cel25/23_hires.png"
-    },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.12,
+        "lowPrice": 0.02,
+        "trendPrice": 0.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.1,
+        "avg30": 0.11,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1612,6 +2315,25 @@
       "Discard your hand and draw 7 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Ken Sugimori",
     "rarity": "Rare Ultra",
@@ -1625,12 +2347,392 @@
       "small": "https://images.pokemontcg.io/cel25/24.png",
       "large": "https://images.pokemontcg.io/cel25/24_hires.png"
     },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.75,
+          "high": 99.99,
+          "market": 1.47,
+          "directLow": 1.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.48,
+        "lowPrice": 0.4,
+        "trendPrice": 1.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.4,
+        "avg1": 1.1,
+        "avg7": 1.39,
+        "avg30": 1.47,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-16",
+    "name": "Zacian V",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "hp": "220",
+    "types": [
+      "Psychic"
+    ],
+    "rules": [
+      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
+    ],
+    "abilities": [
+      {
+        "type": "Ability",
+        "name": "Roar of the Sword",
+        "text": "Once during your turn, you may search your deck for a Psychic Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck. If you use this Ability, your turn ends."
+      }
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "Storm Slash",
+        "damage": "60+",
+        "text": "This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
     "set": {
       "id": "cel25",
-      "releaseDate": "2021/10/08",
       "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
       "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "16",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo V",
+    "nationalPokedexNumbers": [
+      888
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/16.png",
+      "large": "https://images.pokemontcg.io/cel25/16_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.2,
+          "mid": 0.8,
+          "high": 89,
+          "market": 0.6,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.71,
+        "lowPrice": 0.1,
+        "trendPrice": 0.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.64,
+        "avg7": 0.59,
+        "avg30": 0.72,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-18",
+    "name": "Zamazenta V",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic",
+      "V"
+    ],
+    "hp": "220",
+    "types": [
+      "Fighting"
+    ],
+    "rules": [
+      "V rule: When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards."
+    ],
+    "abilities": [
+      {
+        "type": "Ability",
+        "name": "Growl of the Shield",
+        "text": "All of your Fighting Pokémon take 20 less damage from attacks from your opponent's Pokémon VMAX (after applying Weakness and Resistance). You can't apply more than 1 Growl of the Shield Ability at a time."
+      }
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "name": "Heavy Impact",
+        "damage": "150",
+        "text": "",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Psychic",
+        "value": "×2"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "18",
+    "artist": "Mitsuhiro Arita",
+    "rarity": "Rare Holo V",
+    "nationalPokedexNumbers": [
+      889
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/18.png",
+      "large": "https://images.pokemontcg.io/cel25/18_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.2,
+          "mid": 0.89,
+          "high": 89,
+          "market": 0.8,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.61,
+        "lowPrice": 0.05,
+        "trendPrice": 0.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.43,
+        "avg7": 0.6,
+        "avg30": 0.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "cel25-19",
+    "name": "Yveltal",
+    "supertype": "Pokémon",
+    "subtypes": [
+      "Basic"
+    ],
+    "hp": "120",
+    "types": [
+      "Darkness"
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "Cry of Destruction",
+        "damage": "",
+        "text": "Discard up to 3 Special Energy from your opponent's Pokémon.",
+        "convertedEnergyCost": 2
+      },
+      {
+        "cost": [
+          "Darkness",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "Dark Feather",
+        "damage": "100",
+        "text": "",
+        "convertedEnergyCost": 3
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "×2"
+      }
+    ],
+    "resistances": [
+      {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    ],
+    "retreatCost": [
+      "Colorless",
+      "Colorless"
+    ],
+    "convertedRetreatCost": 2,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
+    "number": "19",
+    "artist": "AKIRA EGAWA",
+    "rarity": "Rare",
+    "flavorText": "When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more.",
+    "nationalPokedexNumbers": [
+      717
+    ],
+    "legalities": {
+      "unlimited": "Legal",
+      "standard": "Legal",
+      "expanded": "Legal"
+    },
+    "regulationMark": "E",
+    "images": {
+      "small": "https://images.pokemontcg.io/cel25/19.png",
+      "large": "https://images.pokemontcg.io/cel25/19_hires.png"
+    },
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.99,
+          "market": 0.16,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.07,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1680,6 +2782,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "cel25",
+      "name": "Celebrations",
+      "series": "Sword & Shield",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CEL",
+      "releaseDate": "2021/10/08",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/cel25/symbol.png",
+        "logo": "https://images.pokemontcg.io/cel25/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Saki Hayashiro",
     "rarity": "Rare Holo",
@@ -1689,6 +2810,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1696,12 +2818,38 @@
       "small": "https://images.pokemontcg.io/cel25/25.png",
       "large": "https://images.pokemontcg.io/cel25/25_hires.png"
     },
-    "set": {
-      "id": "cel25",
-      "releaseDate": "2021/10/08",
-      "name": "Celebrations",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/cel25/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/cel25-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 34.99,
+          "mid": 44.95,
+          "high": 5000,
+          "market": 35.85,
+          "directLow": 39.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/cel25-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 48.23,
+        "lowPrice": 28,
+        "trendPrice": 41.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 37.48,
+        "avg1": 39.99,
+        "avg7": 42.68,
+        "avg30": 46.61,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

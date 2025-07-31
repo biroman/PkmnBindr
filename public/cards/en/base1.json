@@ -44,6 +44,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -58,12 +75,45 @@
       "small": "https://images.pokemontcg.io/base1/1.png",
       "large": "https://images.pokemontcg.io/base1/1_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 29.99,
+          "mid": 48.82,
+          "high": 149.99,
+          "market": 51.57,
+          "directLow": 35
+        },
+        "1stEditionHolofoil": {
+          "low": 999,
+          "mid": 999,
+          "high": 999,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 129.97,
+        "lowPrice": 32.5,
+        "trendPrice": 156.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 85,
+        "avg1": 129.99,
+        "avg7": 156.11,
+        "avg30": 170.21,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -112,6 +162,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -126,12 +193,38 @@
       "small": "https://images.pokemontcg.io/base1/2.png",
       "large": "https://images.pokemontcg.io/base1/2_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 105,
+          "mid": 151.75,
+          "high": 499.99,
+          "market": 161.58,
+          "directLow": 79.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 110.84,
+        "lowPrice": 22,
+        "trendPrice": 116.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 73.51,
+        "lowPriceExPlus": 49.99,
+        "avg1": 70.15,
+        "avg7": 109.43,
+        "avg30": 110.76,
+        "reverseHoloAvg1": 100,
+        "reverseHoloAvg7": 50.43,
+        "reverseHoloAvg30": 64.46
       }
     }
   },
@@ -190,6 +283,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -204,12 +314,38 @@
       "small": "https://images.pokemontcg.io/base1/3.png",
       "large": "https://images.pokemontcg.io/base1/3_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15.14,
+          "mid": 25,
+          "high": 71.99,
+          "market": 34.58,
+          "directLow": 17.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.42,
+        "lowPrice": 3.75,
+        "trendPrice": 16.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 21.43,
+        "lowPriceExPlus": 19.99,
+        "avg1": 20.13,
+        "avg7": 17.25,
+        "avg30": 23.68,
+        "reverseHoloAvg1": 17.45,
+        "reverseHoloAvg7": 21.22,
+        "reverseHoloAvg30": 19.23
       }
     }
   },
@@ -265,6 +401,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -279,12 +432,38 @@
       "small": "https://images.pokemontcg.io/base1/4.png",
       "large": "https://images.pokemontcg.io/base1/4_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 375,
+          "mid": 456.35,
+          "high": 1249.99,
+          "market": 450.32,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3500,
+        "lowPrice": 700,
+        "trendPrice": 4167.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1000,
+        "avg1": 1693,
+        "avg7": 3756.14,
+        "avg30": 2555.42,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -341,6 +520,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -355,12 +551,38 @@
       "small": "https://images.pokemontcg.io/base1/5.png",
       "large": "https://images.pokemontcg.io/base1/5_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14,
+          "mid": 23.21,
+          "high": 49.99,
+          "market": 27.69,
+          "directLow": 11.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.74,
+        "lowPrice": 4.95,
+        "trendPrice": 29.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 14,
+        "lowPriceExPlus": 12,
+        "avg1": 23.12,
+        "avg7": 23.32,
+        "avg30": 24.6,
+        "reverseHoloAvg1": 16.81,
+        "reverseHoloAvg7": 11.97,
+        "reverseHoloAvg30": 19.63
       }
     }
   },
@@ -420,6 +642,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -434,12 +673,38 @@
       "small": "https://images.pokemontcg.io/base1/6.png",
       "large": "https://images.pokemontcg.io/base1/6_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10,
+          "mid": 25,
+          "high": 97.98,
+          "market": 29.19,
+          "directLow": 9.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.06,
+        "lowPrice": 1,
+        "trendPrice": 13.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 14.3,
+        "lowPriceExPlus": 9.5,
+        "avg1": 23.49,
+        "avg7": 18.4,
+        "avg30": 16.11,
+        "reverseHoloAvg1": 12.94,
+        "reverseHoloAvg7": 13.88,
+        "reverseHoloAvg30": 12.87
       }
     }
   },
@@ -488,6 +753,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -502,12 +784,38 @@
       "small": "https://images.pokemontcg.io/base1/7.png",
       "large": "https://images.pokemontcg.io/base1/7_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8,
+          "mid": 15,
+          "high": 999.99,
+          "market": 19.83,
+          "directLow": 5.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 37.99,
+        "lowPrice": 19.99,
+        "trendPrice": 67.95,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 39.51,
+        "avg1": 335,
+        "avg7": 79.06,
+        "avg30": 64.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -557,6 +865,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -571,12 +896,29 @@
       "small": "https://images.pokemontcg.io/base1/8.png",
       "large": "https://images.pokemontcg.io/base1/8_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-8",
+      "updatedAt": "2023/03/27"
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 122.49,
+        "lowPrice": 17,
+        "trendPrice": 93.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 46,
+        "avg1": 199.99,
+        "avg7": 106.38,
+        "avg30": 79.57,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -631,6 +973,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare Holo",
@@ -645,12 +1004,38 @@
       "small": "https://images.pokemontcg.io/base1/9.png",
       "large": "https://images.pokemontcg.io/base1/9_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10,
+          "mid": 16.84,
+          "high": 649.99,
+          "market": 18.04,
+          "directLow": 7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18.55,
+        "lowPrice": 3,
+        "trendPrice": 28.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.94,
+        "lowPriceExPlus": 14.5,
+        "avg1": 31.89,
+        "avg7": 25.55,
+        "avg30": 20.66,
+        "reverseHoloAvg1": 8.8,
+        "reverseHoloAvg7": 13.69,
+        "reverseHoloAvg30": 12.92
       }
     }
   },
@@ -700,6 +1085,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -714,12 +1116,38 @@
       "small": "https://images.pokemontcg.io/base1/10.png",
       "large": "https://images.pokemontcg.io/base1/10_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19,
+          "mid": 33.1,
+          "high": 75,
+          "market": 39.3,
+          "directLow": 10.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 168.32,
+        "lowPrice": 34.95,
+        "trendPrice": 144.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 90,
+        "avg1": 549.99,
+        "avg7": 175.56,
+        "avg30": 131.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -772,6 +1200,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -786,12 +1231,38 @@
       "small": "https://images.pokemontcg.io/base1/11.png",
       "large": "https://images.pokemontcg.io/base1/11_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.99,
+          "mid": 25.9,
+          "high": 79.99,
+          "market": 27.21,
+          "directLow": 17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 124.99,
+        "lowPrice": 30,
+        "trendPrice": 46.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 79,
+        "avg1": 124.99,
+        "avg7": 101.55,
+        "avg30": 109.85,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -842,6 +1313,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -856,12 +1344,38 @@
       "small": "https://images.pokemontcg.io/base1/12.png",
       "large": "https://images.pokemontcg.io/base1/12_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.4,
+          "mid": 15.03,
+          "high": 79.98,
+          "market": 23.44,
+          "directLow": 7.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.44,
+        "lowPrice": 1,
+        "trendPrice": 10.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.81,
+        "lowPriceExPlus": 9,
+        "avg1": 15.05,
+        "avg7": 10.06,
+        "avg30": 10.63,
+        "reverseHoloAvg1": 11.14,
+        "reverseHoloAvg7": 11.53,
+        "reverseHoloAvg30": 12.92
       }
     }
   },
@@ -915,6 +1429,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -929,12 +1460,38 @@
       "small": "https://images.pokemontcg.io/base1/13.png",
       "large": "https://images.pokemontcg.io/base1/13_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13,
+          "mid": 20.78,
+          "high": 59.99,
+          "market": 22.6,
+          "directLow": 8.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.88,
+        "lowPrice": 3.99,
+        "trendPrice": 16.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.78,
+        "lowPriceExPlus": 15,
+        "avg1": 48.86,
+        "avg7": 30.03,
+        "avg30": 34.12,
+        "reverseHoloAvg1": 8.96,
+        "reverseHoloAvg7": 22.07,
+        "reverseHoloAvg30": 19.08
       }
     }
   },
@@ -986,6 +1543,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -1000,12 +1574,38 @@
       "small": "https://images.pokemontcg.io/base1/14.png",
       "large": "https://images.pokemontcg.io/base1/14_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 25,
+          "mid": 45.45,
+          "high": 999.99,
+          "market": 50.54,
+          "directLow": 17.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 59.99,
+        "lowPrice": 36.5,
+        "trendPrice": 73.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 75,
+        "avg1": 59.99,
+        "avg7": 76.1,
+        "avg30": 98.9,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1054,6 +1654,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -1068,12 +1685,38 @@
       "small": "https://images.pokemontcg.io/base1/15.png",
       "large": "https://images.pokemontcg.io/base1/15_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 65,
+          "mid": 117.49,
+          "high": 249.98,
+          "market": 114.43,
+          "directLow": 108.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 317.98,
+        "lowPrice": 149.95,
+        "trendPrice": 306.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 210,
+        "avg1": 500,
+        "avg7": 235.55,
+        "avg30": 395.67,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1127,6 +1770,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -1141,12 +1801,38 @@
       "small": "https://images.pokemontcg.io/base1/16.png",
       "large": "https://images.pokemontcg.io/base1/16_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 18.21,
+          "mid": 33.25,
+          "high": 72.94,
+          "market": 37.59,
+          "directLow": 16.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36.54,
+        "lowPrice": 3,
+        "trendPrice": 26.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 16.02,
+        "lowPriceExPlus": 19,
+        "avg1": 20.43,
+        "avg7": 27.74,
+        "avg30": 35.63,
+        "reverseHoloAvg1": 13.17,
+        "reverseHoloAvg7": 21.35,
+        "reverseHoloAvg30": 21.65
       }
     }
   },
@@ -1199,6 +1885,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -1213,12 +1916,38 @@
       "small": "https://images.pokemontcg.io/base1/17.png",
       "large": "https://images.pokemontcg.io/base1/17_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.56,
+          "mid": 2.16,
+          "high": 9999,
+          "market": 4.15,
+          "directLow": 1.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 60,
+        "lowPrice": 9,
+        "trendPrice": 33.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 21.99,
+        "avg1": 20,
+        "avg7": 28.78,
+        "avg30": 22.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1274,6 +2003,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -1288,12 +2034,38 @@
       "small": "https://images.pokemontcg.io/base1/18.png",
       "large": "https://images.pokemontcg.io/base1/18_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5,
+          "mid": 8.8,
+          "high": 199.99,
+          "market": 15.42,
+          "directLow": 3.55
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 30,
+        "lowPrice": 17.5,
+        "trendPrice": 49.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 299.99,
+        "avg1": 225,
+        "avg7": 65.62,
+        "avg30": 63.68,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1352,6 +2124,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -1366,12 +2155,38 @@
       "small": "https://images.pokemontcg.io/base1/19.png",
       "large": "https://images.pokemontcg.io/base1/19_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3,
+          "mid": 4.81,
+          "high": 14.95,
+          "market": 6.81,
+          "directLow": 4.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.6,
+        "lowPrice": 0.5,
+        "trendPrice": 6.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.9,
+        "lowPriceExPlus": 6.48,
+        "avg1": 4.3,
+        "avg7": 7.02,
+        "avg30": 8.58,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 2.45,
+        "reverseHoloAvg30": 2.18
       }
     }
   },
@@ -1422,6 +2237,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -1436,12 +2268,38 @@
       "small": "https://images.pokemontcg.io/base1/20.png",
       "large": "https://images.pokemontcg.io/base1/20_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.32,
+          "mid": 5.48,
+          "high": 18.99,
+          "market": 6.73,
+          "directLow": 2.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.16,
+        "lowPrice": 0.17,
+        "trendPrice": 6.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.62,
+        "lowPriceExPlus": 4,
+        "avg1": 3.88,
+        "avg7": 7.45,
+        "avg30": 6.3,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 5.28,
+        "reverseHoloAvg30": 3.14
       }
     }
   },
@@ -1488,6 +2346,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -1502,12 +2377,38 @@
       "small": "https://images.pokemontcg.io/base1/21.png",
       "large": "https://images.pokemontcg.io/base1/21_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2,
+          "mid": 4.5,
+          "high": 9999,
+          "market": 5.5,
+          "directLow": 2.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22,
+        "lowPrice": 14.45,
+        "trendPrice": 26.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 35,
+        "avg1": 20,
+        "avg7": 16.5,
+        "avg30": 22.91,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1566,6 +2467,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -1580,12 +2498,38 @@
       "small": "https://images.pokemontcg.io/base1/22.png",
       "large": "https://images.pokemontcg.io/base1/22_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.33,
+          "mid": 5.42,
+          "high": 22.99,
+          "market": 8.99,
+          "directLow": 2.97
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.63,
+        "lowPrice": 11.95,
+        "trendPrice": 35.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 49,
+        "avg1": 24.99,
+        "avg7": 22.55,
+        "avg30": 29.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1639,6 +2583,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1653,12 +2614,38 @@
       "small": "https://images.pokemontcg.io/base1/23.png",
       "large": "https://images.pokemontcg.io/base1/23_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.86,
+          "mid": 2,
+          "high": 52,
+          "market": 2.57,
+          "directLow": 2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.19,
+        "lowPrice": 0.1,
+        "trendPrice": 2.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.48,
+        "lowPriceExPlus": 1.99,
+        "avg1": 3.36,
+        "avg7": 3.08,
+        "avg30": 4.26,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 2.81,
+        "reverseHoloAvg30": 2.81
       }
     }
   },
@@ -1712,6 +2699,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -1726,12 +2730,38 @@
       "small": "https://images.pokemontcg.io/base1/24.png",
       "large": "https://images.pokemontcg.io/base1/24_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 1.12,
+          "high": 9999,
+          "market": 1.77,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.7,
+        "lowPrice": 0.02,
+        "trendPrice": 2.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.83,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.79,
+        "avg7": 1.17,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 5.5,
+        "reverseHoloAvg7": 10.64,
+        "reverseHoloAvg30": 7.85
       }
     }
   },
@@ -1785,6 +2815,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -1799,12 +2846,38 @@
       "small": "https://images.pokemontcg.io/base1/25.png",
       "large": "https://images.pokemontcg.io/base1/25_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.7,
+          "mid": 1.46,
+          "high": 7.95,
+          "market": 1.94,
+          "directLow": 0.81
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.62,
+        "lowPrice": 3.49,
+        "trendPrice": 10.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 26.25,
+        "avg7": 11.7,
+        "avg30": 12.01,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1844,6 +2917,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1858,12 +2948,38 @@
       "small": "https://images.pokemontcg.io/base1/26.png",
       "large": "https://images.pokemontcg.io/base1/26_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.91,
+          "high": 15.99,
+          "market": 1.58,
+          "directLow": 0.33
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.07,
+        "lowPrice": 2.95,
+        "trendPrice": 5.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6.5,
+        "avg1": 59.99,
+        "avg7": 13.46,
+        "avg30": 14.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1920,6 +3036,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1934,12 +3067,38 @@
       "small": "https://images.pokemontcg.io/base1/27.png",
       "large": "https://images.pokemontcg.io/base1/27_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.75,
+          "high": 6.49,
+          "market": 0.87,
+          "directLow": 0.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.34,
+        "lowPrice": 0.02,
+        "trendPrice": 0.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.04,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.65,
+        "avg7": 0.66,
+        "avg30": 1.31,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 5.76,
+        "reverseHoloAvg30": 5.76
       }
     }
   },
@@ -1980,6 +3139,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1994,12 +3170,38 @@
       "small": "https://images.pokemontcg.io/base1/28.png",
       "large": "https://images.pokemontcg.io/base1/28_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.75,
+          "high": 9999,
+          "market": 0.91,
+          "directLow": 0.33
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.28,
+        "lowPrice": 1.5,
+        "trendPrice": 4.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.9,
+        "avg1": 6,
+        "avg7": 4.08,
+        "avg30": 4.55,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2050,6 +3252,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -2064,12 +3283,38 @@
       "small": "https://images.pokemontcg.io/base1/29.png",
       "large": "https://images.pokemontcg.io/base1/29_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.33,
+          "mid": 1,
+          "high": 89,
+          "market": 1.27,
+          "directLow": 0.47
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.51,
+        "lowPrice": 0.5,
+        "trendPrice": 1.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.89,
+        "avg1": 5.95,
+        "avg7": 6.43,
+        "avg30": 11.59,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2123,6 +3368,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2137,12 +3399,38 @@
       "small": "https://images.pokemontcg.io/base1/30.png",
       "large": "https://images.pokemontcg.io/base1/30_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.72,
+          "mid": 2,
+          "high": 9999,
+          "market": 2.35,
+          "directLow": 1.28
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.35,
+        "lowPrice": 0.02,
+        "trendPrice": 3.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.43,
+        "lowPriceExPlus": 0.8,
+        "avg1": 2.71,
+        "avg7": 2.55,
+        "avg30": 4.33,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 3.04,
+        "reverseHoloAvg30": 3.04
       }
     }
   },
@@ -2191,6 +3479,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2205,12 +3510,38 @@
       "small": "https://images.pokemontcg.io/base1/31.png",
       "large": "https://images.pokemontcg.io/base1/31_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.65,
+          "high": 9999,
+          "market": 0.84,
+          "directLow": 0.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1,
+        "lowPrice": 0.02,
+        "trendPrice": 1.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.35,
+        "lowPriceExPlus": 0.02,
+        "avg1": 1.24,
+        "avg7": 0.84,
+        "avg30": 1.04,
+        "reverseHoloAvg1": 0.35,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -2265,6 +3596,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2279,12 +3627,38 @@
       "small": "https://images.pokemontcg.io/base1/32.png",
       "large": "https://images.pokemontcg.io/base1/32_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.99,
+          "high": 9999,
+          "market": 1.28,
+          "directLow": 0.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18.37,
+        "lowPrice": 2.5,
+        "trendPrice": 8.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8.8,
+        "avg1": 14,
+        "avg7": 16.55,
+        "avg30": 20.06,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2337,6 +3711,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -2351,12 +3742,38 @@
       "small": "https://images.pokemontcg.io/base1/33.png",
       "large": "https://images.pokemontcg.io/base1/33_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.82,
+          "high": 89,
+          "market": 0.87,
+          "directLow": 0.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.09,
+        "lowPrice": 1.49,
+        "trendPrice": 3.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 7.95,
+        "avg7": 3.92,
+        "avg30": 5.06,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2413,6 +3830,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2427,12 +3861,38 @@
       "small": "https://images.pokemontcg.io/base1/34.png",
       "large": "https://images.pokemontcg.io/base1/34_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.6,
+          "high": 9999,
+          "market": 0.68,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.24,
+        "lowPrice": 0.02,
+        "trendPrice": 1.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.2,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.58,
+        "avg7": 1.14,
+        "avg30": 1.38,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -2481,6 +3941,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -2495,12 +3972,38 @@
       "small": "https://images.pokemontcg.io/base1/35.png",
       "large": "https://images.pokemontcg.io/base1/35_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.5,
+          "mid": 1.5,
+          "high": 89,
+          "market": 2.22,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.25,
+        "lowPrice": 0.02,
+        "trendPrice": 1.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.2,
+        "lowPriceExPlus": 0.4,
+        "avg1": 2,
+        "avg7": 1.15,
+        "avg30": 2.33,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 3.82,
+        "reverseHoloAvg30": 3.82
       }
     }
   },
@@ -2553,6 +4056,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2567,12 +4087,38 @@
       "small": "https://images.pokemontcg.io/base1/36.png",
       "large": "https://images.pokemontcg.io/base1/36_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.4,
+          "mid": 1.74,
+          "high": 89,
+          "market": 2.56,
+          "directLow": 0.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.18,
+        "lowPrice": 2,
+        "trendPrice": 20.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 12,
+        "avg1": 39.99,
+        "avg7": 21.98,
+        "avg30": 15.14,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2627,6 +4173,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -2641,12 +4204,38 @@
       "small": "https://images.pokemontcg.io/base1/37.png",
       "large": "https://images.pokemontcg.io/base1/37_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.75,
+          "mid": 1.49,
+          "high": 89,
+          "market": 2.04,
+          "directLow": 0.7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.83,
+        "lowPrice": 0.02,
+        "trendPrice": 2.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.24,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.5,
+        "avg7": 2.34,
+        "avg30": 3.81,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 1.93,
+        "reverseHoloAvg30": 1.93
       }
     }
   },
@@ -2700,6 +4289,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2714,12 +4320,38 @@
       "small": "https://images.pokemontcg.io/base1/38.png",
       "large": "https://images.pokemontcg.io/base1/38_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.82,
+          "high": 9999,
+          "market": 1.05,
+          "directLow": 0.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.77,
+        "lowPrice": 0.02,
+        "trendPrice": 0.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 43.68,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.22,
+        "avg7": 1.23,
+        "avg30": 1.93,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 22.54,
+        "reverseHoloAvg30": 22.54
       }
     }
   },
@@ -2775,6 +4407,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "39",
     "artist": "Tomoaki Imakuni",
     "rarity": "Uncommon",
@@ -2789,12 +4438,38 @@
       "small": "https://images.pokemontcg.io/base1/39.png",
       "large": "https://images.pokemontcg.io/base1/39_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.74,
+          "mid": 1.85,
+          "high": 9.95,
+          "market": 2.14,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.51,
+        "lowPrice": 1.94,
+        "trendPrice": 6.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5.44,
+        "avg1": 24.97,
+        "avg7": 11.57,
+        "avg30": 13.98,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2829,7 +4504,7 @@
           "Colorless"
         ],
         "convertedEnergyCost": 3,
-        "damage": "?",
+        "damage": "",
         "text": "Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10)."
       }
     ],
@@ -2849,6 +4524,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2863,12 +4555,38 @@
       "small": "https://images.pokemontcg.io/base1/40.png",
       "large": "https://images.pokemontcg.io/base1/40_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.46,
+          "mid": 1.35,
+          "high": 21.99,
+          "market": 1.87,
+          "directLow": 0.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.31,
+        "lowPrice": 4,
+        "trendPrice": 8.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.95,
+        "avg1": 21.97,
+        "avg7": 11.54,
+        "avg30": 8.12,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2908,6 +4626,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2922,12 +4657,38 @@
       "small": "https://images.pokemontcg.io/base1/41.png",
       "large": "https://images.pokemontcg.io/base1/41_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.3,
+          "mid": 0.79,
+          "high": 89,
+          "market": 0.86,
+          "directLow": 0.85
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.5,
+        "lowPrice": 0.02,
+        "trendPrice": 1.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.5,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.38,
+        "avg7": 1.93,
+        "avg30": 2.05,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.5,
+        "reverseHoloAvg30": 0.5
       }
     }
   },
@@ -2980,6 +4741,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2994,12 +4772,38 @@
       "small": "https://images.pokemontcg.io/base1/42.png",
       "large": "https://images.pokemontcg.io/base1/42_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.87,
+          "mid": 2,
+          "high": 89,
+          "market": 3.26,
+          "directLow": 0.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.3,
+        "lowPrice": 4.95,
+        "trendPrice": 11.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 10.99,
+        "avg1": 6.95,
+        "avg7": 13.05,
+        "avg30": 17.99,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3035,6 +4839,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3049,12 +4870,38 @@
       "small": "https://images.pokemontcg.io/base1/43.png",
       "large": "https://images.pokemontcg.io/base1/43_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.56,
+          "high": 9999,
+          "market": 0.6,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.86,
+        "lowPrice": 0.48,
+        "trendPrice": 8.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.49,
+        "avg1": 4.95,
+        "avg7": 5.86,
+        "avg30": 5.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3095,6 +4942,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3109,12 +4973,38 @@
       "small": "https://images.pokemontcg.io/base1/44.png",
       "large": "https://images.pokemontcg.io/base1/44_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 1.42,
+          "high": 89,
+          "market": 1.48,
+          "directLow": 0.71
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.9,
+        "lowPrice": 0.2,
+        "trendPrice": 2.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.9,
+        "avg1": 2.5,
+        "avg7": 2.86,
+        "avg30": 3.26,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3154,6 +5044,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3169,12 +5076,38 @@
       "small": "https://images.pokemontcg.io/base1/45.png",
       "large": "https://images.pokemontcg.io/base1/45_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.8,
+          "high": 84.99,
+          "market": 0.92,
+          "directLow": 0.56
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.59,
+        "lowPrice": 0.02,
+        "trendPrice": 0.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.35,
+        "lowPriceExPlus": 0.12,
+        "avg1": 1.54,
+        "avg7": 0.91,
+        "avg30": 1.67,
+        "reverseHoloAvg1": 0.35,
+        "reverseHoloAvg7": 0.32,
+        "reverseHoloAvg30": 0.32
       }
     }
   },
@@ -3224,6 +5157,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3238,12 +5188,38 @@
       "small": "https://images.pokemontcg.io/base1/46.png",
       "large": "https://images.pokemontcg.io/base1/46_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 1.06,
+          "high": 89,
+          "market": 1.32,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.26,
+        "lowPrice": 1.99,
+        "trendPrice": 28.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 7,
+        "avg7": 9.72,
+        "avg30": 18.99,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3295,6 +5271,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "47",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -3309,12 +5302,38 @@
       "small": "https://images.pokemontcg.io/base1/47.png",
       "large": "https://images.pokemontcg.io/base1/47_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.12,
+          "mid": 0.4,
+          "high": 25,
+          "market": 0.39,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.53,
+        "lowPrice": 0.35,
+        "trendPrice": 9.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.35,
+        "avg1": 39.99,
+        "avg7": 5.83,
+        "avg30": 3.95,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3356,6 +5375,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3370,12 +5406,38 @@
       "small": "https://images.pokemontcg.io/base1/48.png",
       "large": "https://images.pokemontcg.io/base1/48_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.61,
+          "high": 44.99,
+          "market": 0.61,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.46,
+        "lowPrice": 0.02,
+        "trendPrice": 1.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.02,
+        "lowPriceExPlus": 0.15,
+        "avg1": 2.16,
+        "avg7": 1.53,
+        "avg30": 1.49,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -3425,6 +5487,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3439,12 +5518,38 @@
       "small": "https://images.pokemontcg.io/base1/49.png",
       "large": "https://images.pokemontcg.io/base1/49_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.49,
+          "high": 10,
+          "market": 0.51,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.95,
+        "lowPrice": 1,
+        "trendPrice": 6.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.88,
+        "avg1": 1,
+        "avg7": 5.35,
+        "avg30": 4.87,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3490,6 +5595,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -3504,12 +5626,38 @@
       "small": "https://images.pokemontcg.io/base1/50.png",
       "large": "https://images.pokemontcg.io/base1/50_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.59,
+          "high": 89,
+          "market": 0.64,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.22,
+        "lowPrice": 0.99,
+        "trendPrice": 19.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.29,
+        "avg1": 39.99,
+        "avg7": 23.25,
+        "avg30": 11.68,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3550,6 +5698,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3564,12 +5729,38 @@
       "small": "https://images.pokemontcg.io/base1/51.png",
       "large": "https://images.pokemontcg.io/base1/51_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.45,
+          "high": 9999,
+          "market": 0.46,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.73,
+        "lowPrice": 0.02,
+        "trendPrice": 0.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.2,
+        "lowPriceExPlus": 0.02,
+        "avg1": 1.22,
+        "avg7": 0.73,
+        "avg30": 0.75,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.11,
+        "reverseHoloAvg30": 0.11
       }
     }
   },
@@ -3609,6 +5800,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3623,12 +5831,38 @@
       "small": "https://images.pokemontcg.io/base1/52.png",
       "large": "https://images.pokemontcg.io/base1/52_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.38,
+          "high": 21,
+          "market": 0.38,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.46,
+        "lowPrice": 0.02,
+        "trendPrice": 1.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.84,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.51,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 5.03,
+        "reverseHoloAvg30": 5.03
       }
     }
   },
@@ -3678,6 +5912,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -3692,12 +5943,38 @@
       "small": "https://images.pokemontcg.io/base1/53.png",
       "large": "https://images.pokemontcg.io/base1/53_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.17,
+          "mid": 0.49,
+          "high": 9999,
+          "market": 0.49,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.59,
+        "lowPrice": 0.49,
+        "trendPrice": 9.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.35,
+        "avg1": 21.49,
+        "avg7": 11.85,
+        "avg30": 5.92,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3750,6 +6027,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3764,12 +6058,38 @@
       "small": "https://images.pokemontcg.io/base1/54.png",
       "large": "https://images.pokemontcg.io/base1/54_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.21,
+          "mid": 0.55,
+          "high": 9999,
+          "market": 0.57,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.59,
+        "lowPrice": 0.95,
+        "trendPrice": 5.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.95,
+        "avg1": 24.44,
+        "avg7": 9.6,
+        "avg30": 7.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3809,6 +6129,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "55",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3823,12 +6160,38 @@
       "small": "https://images.pokemontcg.io/base1/55.png",
       "large": "https://images.pokemontcg.io/base1/55_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.46,
+          "high": 89,
+          "market": 0.46,
+          "directLow": 0.21
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.69,
+        "lowPrice": 0.02,
+        "trendPrice": 0.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.42,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.99,
+        "avg7": 0.53,
+        "avg30": 0.73,
+        "reverseHoloAvg1": 25,
+        "reverseHoloAvg7": 4.06,
+        "reverseHoloAvg30": 4.06
       }
     }
   },
@@ -3880,6 +6243,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3894,12 +6274,38 @@
       "small": "https://images.pokemontcg.io/base1/56.png",
       "large": "https://images.pokemontcg.io/base1/56_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.5,
+          "high": 34.99,
+          "market": 0.49,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.97,
+        "lowPrice": 0.02,
+        "trendPrice": 0.85,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.02,
+        "lowPriceExPlus": 0.07,
+        "avg1": 1.98,
+        "avg7": 0.74,
+        "avg30": 1.1,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -3946,6 +6352,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -3960,12 +6383,38 @@
       "small": "https://images.pokemontcg.io/base1/57.png",
       "large": "https://images.pokemontcg.io/base1/57_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.23,
+          "mid": 0.66,
+          "high": 12.99,
+          "market": 0.85,
+          "directLow": 0.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.69,
+        "lowPrice": 0.5,
+        "trendPrice": 8.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.95,
+        "avg1": 44.99,
+        "avg7": 8.91,
+        "avg30": 5.36,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4015,6 +6464,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4029,12 +6495,38 @@
       "small": "https://images.pokemontcg.io/base1/58.png",
       "large": "https://images.pokemontcg.io/base1/58_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.6,
+          "mid": 2.66,
+          "high": 9999,
+          "market": 2.65,
+          "directLow": 0.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.68,
+        "lowPrice": 6.66,
+        "trendPrice": 8.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6.94,
+        "avg1": 5,
+        "avg7": 9.24,
+        "avg30": 12.39,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4074,6 +6566,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -4088,12 +6597,38 @@
       "small": "https://images.pokemontcg.io/base1/59.png",
       "large": "https://images.pokemontcg.io/base1/59_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.46,
+          "high": 9999,
+          "market": 0.46,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.13,
+        "lowPrice": 2.35,
+        "trendPrice": 3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.75,
+        "avg1": 3.4,
+        "avg7": 4.15,
+        "avg30": 9.64,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4144,6 +6679,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -4158,12 +6710,38 @@
       "small": "https://images.pokemontcg.io/base1/60.png",
       "large": "https://images.pokemontcg.io/base1/60_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.12,
+          "mid": 0.37,
+          "high": 29.99,
+          "market": 0.39,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.17,
+        "lowPrice": 0.45,
+        "trendPrice": 4.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.45,
+        "avg1": 18.47,
+        "avg7": 8.85,
+        "avg30": 9.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4205,6 +6783,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4219,12 +6814,38 @@
       "small": "https://images.pokemontcg.io/base1/61.png",
       "large": "https://images.pokemontcg.io/base1/61_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.47,
+          "high": 23,
+          "market": 0.61,
+          "directLow": 0.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.01,
+        "lowPrice": 0.35,
+        "trendPrice": 2.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 2.95,
+        "avg7": 3.01,
+        "avg30": 6.02,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4270,6 +6891,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -4284,12 +6922,38 @@
       "small": "https://images.pokemontcg.io/base1/62.png",
       "large": "https://images.pokemontcg.io/base1/62_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.65,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.98,
+        "lowPriceExPlus": 0.06,
+        "avg1": 1.21,
+        "avg7": 0.84,
+        "avg30": 1.13,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 5.84,
+        "reverseHoloAvg30": 5.84
       }
     }
   },
@@ -4339,6 +7003,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4353,12 +7034,38 @@
       "small": "https://images.pokemontcg.io/base1/63.png",
       "large": "https://images.pokemontcg.io/base1/63_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.7,
+          "mid": 2.05,
+          "high": 149.99,
+          "market": 2.19,
+          "directLow": 1.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.74,
+        "lowPrice": 0.02,
+        "trendPrice": 2.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 92.04,
+        "lowPriceExPlus": 0.2,
+        "avg1": 2.11,
+        "avg7": 6.19,
+        "avg30": 7.73,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 87.31,
+        "reverseHoloAvg30": 61.41
       }
     }
   },
@@ -4408,6 +7115,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -4422,12 +7146,38 @@
       "small": "https://images.pokemontcg.io/base1/64.png",
       "large": "https://images.pokemontcg.io/base1/64_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.44,
+          "directLow": 0.13
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.49,
+        "lowPrice": 0.5,
+        "trendPrice": 5.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.25,
+        "avg1": 15.53,
+        "avg7": 6.79,
+        "avg30": 6.84,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4467,6 +7217,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -4481,12 +7248,38 @@
       "small": "https://images.pokemontcg.io/base1/65.png",
       "large": "https://images.pokemontcg.io/base1/65_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.54,
+        "lowPrice": 0.02,
+        "trendPrice": 0.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.49,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.57,
+        "avg7": 0.51,
+        "avg30": 0.57,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.49,
+        "reverseHoloAvg30": 0.49
       }
     }
   },
@@ -4539,6 +7332,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4553,12 +7363,38 @@
       "small": "https://images.pokemontcg.io/base1/66.png",
       "large": "https://images.pokemontcg.io/base1/66_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.12,
+          "mid": 0.53,
+          "high": 89,
+          "market": 0.57,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.27,
+        "lowPrice": 0.65,
+        "trendPrice": 8.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.45,
+        "avg1": 44.99,
+        "avg7": 10.76,
+        "avg30": 7.39,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4598,6 +7434,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "67",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -4612,12 +7465,38 @@
       "small": "https://images.pokemontcg.io/base1/67.png",
       "large": "https://images.pokemontcg.io/base1/67_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.33,
+          "mid": 1.2,
+          "high": 89,
+          "market": 1.26,
+          "directLow": 0.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.09,
+        "lowPrice": 0.02,
+        "trendPrice": 1.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.99,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2.38,
+        "avg7": 2.12,
+        "avg30": 2.08,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 1.61,
+        "reverseHoloAvg30": 1.61
       }
     }
   },
@@ -4658,6 +7537,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "68",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -4672,12 +7568,38 @@
       "small": "https://images.pokemontcg.io/base1/68.png",
       "large": "https://images.pokemontcg.io/base1/68_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.55,
+          "high": 79.99,
+          "market": 0.74,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.99,
+        "lowPrice": 0.95,
+        "trendPrice": 14.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.99,
+        "avg1": 6.95,
+        "avg7": 11.99,
+        "avg30": 8.83,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4717,6 +7639,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "69",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4732,12 +7671,38 @@
       "small": "https://images.pokemontcg.io/base1/69.png",
       "large": "https://images.pokemontcg.io/base1/69_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.47,
+          "high": 5.45,
+          "market": 0.48,
+          "directLow": 0.21
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.58,
+        "lowPrice": 0.02,
+        "trendPrice": 0.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.57,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.56,
+        "avg7": 0.71,
+        "avg30": 0.61,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 5.92,
+        "reverseHoloAvg30": 5.92
       }
     }
   },
@@ -4747,8 +7712,25 @@
     "supertype": "Trainer",
     "hp": "10",
     "rules": [
-      "Play Clefairy Doll as if it were a Basic Pokémon. While in play, Clefairy Doll counts as a Pokémon (instead of a Trainer card). Clefairy Doll has no attacks, can't retreat, and can't be Asleep, Confused, Paralyzed, or Poisoned. If Clefairy Doll is Knocked Out, it doesn't count as a Knocked Out Pokémon. At any time during your turn before your attack, you may discard Clefairy Doll."
+      "Play Clefairy Doll as if it were a Basic Pokémon. While in play, Clefairy Doll counts a a Pokémon (instead of a Trainer card). Clefairy Doll has no attacks, can't retreat, and can't be Asleep, Confused, Paralyzed, or Poisoned. If Clefairy Doll is Knocked Out, it doesn't count as a Knocked Out Pokémon. At any time during your turn before your attack, you may discard Clefairy Doll."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "70",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4759,12 +7741,38 @@
       "small": "https://images.pokemontcg.io/base1/70.png",
       "large": "https://images.pokemontcg.io/base1/70_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.68,
+          "mid": 4.68,
+          "high": 89,
+          "market": 5.62,
+          "directLow": 2.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.53,
+        "lowPrice": 0.5,
+        "trendPrice": 6.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.02,
+        "lowPriceExPlus": 4.5,
+        "avg1": 4.68,
+        "avg7": 7.63,
+        "avg30": 7.39,
+        "reverseHoloAvg1": 0.88,
+        "reverseHoloAvg7": 2.33,
+        "reverseHoloAvg30": 2.33
       }
     }
   },
@@ -4775,6 +7783,23 @@
     "rules": [
       "Discard 2 of the other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "71",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4785,12 +7810,38 @@
       "small": "https://images.pokemontcg.io/base1/71.png",
       "large": "https://images.pokemontcg.io/base1/71_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1,
+          "mid": 3.23,
+          "high": 89,
+          "market": 3.51,
+          "directLow": 1.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.2,
+        "lowPrice": 1.5,
+        "trendPrice": 31.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 12,
+        "avg1": 10,
+        "avg7": 35.17,
+        "avg30": 22.31,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4801,6 +7852,23 @@
     "rules": [
       "Choose 1 of your own Pokémon in play and a Stage of Evolution. Discard all Evolution cards of that Stage or higher attached to that Pokémon. That Pokémon is no longer Asleep, Confused, Paralyzed, Poisoned, or anything else that might be the result of an attack (just as if you had evolved it)."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "72",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4811,12 +7879,38 @@
       "small": "https://images.pokemontcg.io/base1/72.png",
       "large": "https://images.pokemontcg.io/base1/72_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1,
+          "mid": 2.75,
+          "high": 9999,
+          "market": 4.27,
+          "directLow": 1.77
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.77,
+        "lowPrice": 1,
+        "trendPrice": 5.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.25,
+        "lowPriceExPlus": 4,
+        "avg1": 2.91,
+        "avg7": 6.41,
+        "avg30": 7.65,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.97,
+        "reverseHoloAvg30": 0.97
       }
     }
   },
@@ -4827,6 +7921,23 @@
     "rules": [
       "Your opponent shuffles his or her hand into his or her deck, then draws 7 cards."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "73",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -4837,12 +7948,38 @@
       "small": "https://images.pokemontcg.io/base1/73.png",
       "large": "https://images.pokemontcg.io/base1/73_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.15,
+          "mid": 4.88,
+          "high": 30,
+          "market": 6.61,
+          "directLow": 2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20,
+        "lowPrice": 39.95,
+        "trendPrice": 27.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 99.99,
+        "avg1": 20,
+        "avg7": 24.99,
+        "avg30": 20.31,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4853,6 +7990,23 @@
     "rules": [
       "Discard 2 of the other cards from your hand in order to put a Trainer card from your discard pile into your hand."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "74",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4863,12 +8017,38 @@
       "small": "https://images.pokemontcg.io/base1/74.png",
       "large": "https://images.pokemontcg.io/base1/74_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 6.92,
+          "mid": 9.74,
+          "high": 29.95,
+          "market": 10.28,
+          "directLow": 6.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.38,
+        "lowPrice": 1.5,
+        "trendPrice": 5.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.62,
+        "lowPriceExPlus": 5,
+        "avg1": 6.88,
+        "avg7": 8.83,
+        "avg30": 9.12,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.22,
+        "reverseHoloAvg30": 1.22
       }
     }
   },
@@ -4879,6 +8059,23 @@
     "rules": [
       "You and your opponent show each other your hands, then shuffle all the Trainer cards from your hands into your decks."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "75",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -4889,12 +8086,38 @@
       "small": "https://images.pokemontcg.io/base1/75.png",
       "large": "https://images.pokemontcg.io/base1/75_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1,
+          "mid": 2.6,
+          "high": 9.95,
+          "market": 2.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.25,
+        "lowPrice": 5.49,
+        "trendPrice": 16.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8.99,
+        "avg1": 27.5,
+        "avg7": 14.57,
+        "avg30": 17.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4905,6 +8128,23 @@
     "rules": [
       "Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "76",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -4915,12 +8155,38 @@
       "small": "https://images.pokemontcg.io/base1/76.png",
       "large": "https://images.pokemontcg.io/base1/76_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.62,
+          "mid": 5.33,
+          "high": 89,
+          "market": 7.6,
+          "directLow": 3.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.34,
+        "lowPrice": 1.99,
+        "trendPrice": 4.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.04,
+        "lowPriceExPlus": 5.99,
+        "avg1": 10,
+        "avg7": 8.9,
+        "avg30": 9.36,
+        "reverseHoloAvg1": 1.98,
+        "reverseHoloAvg7": 1.52,
+        "reverseHoloAvg30": 1.52
       }
     }
   },
@@ -4931,6 +8197,23 @@
     "rules": [
       "Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "77",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -4941,12 +8224,38 @@
       "small": "https://images.pokemontcg.io/base1/77.png",
       "large": "https://images.pokemontcg.io/base1/77_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.85,
+          "mid": 4.48,
+          "high": 89,
+          "market": 4.57,
+          "directLow": 2.41
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 26.57,
+        "lowPrice": 6.95,
+        "trendPrice": 23.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 17.99,
+        "avg1": 44,
+        "avg7": 22.31,
+        "avg30": 18.5,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4957,6 +8266,23 @@
     "rules": [
       "Choose 1 of your Pokémon in play and return its Basic Pokémon card to your hand. (Discard all cards attached to that card.)"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "78",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4967,12 +8293,38 @@
       "small": "https://images.pokemontcg.io/base1/78.png",
       "large": "https://images.pokemontcg.io/base1/78_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.5,
+          "mid": 7.09,
+          "high": 89,
+          "market": 7.35,
+          "directLow": 5.36
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12,
+        "lowPrice": 12.94,
+        "trendPrice": 19.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 55.99,
+        "avg1": 12,
+        "avg7": 20.21,
+        "avg30": 16.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4983,6 +8335,23 @@
     "rules": [
       "Discard 1 Energy card attached to 1 of your Pokémon in order to choose 1 of your opponent's Pokémon and up to 2 Energy cards attached to it. Discard those Energy cards."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "79",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare",
@@ -4993,12 +8362,38 @@
       "small": "https://images.pokemontcg.io/base1/79.png",
       "large": "https://images.pokemontcg.io/base1/79_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.2,
+          "mid": 3.11,
+          "high": 9999,
+          "market": 3.35,
+          "directLow": 1.57
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.44,
+        "lowPrice": 0.1,
+        "trendPrice": 2.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.49,
+        "lowPriceExPlus": 1.49,
+        "avg1": 1.64,
+        "avg7": 2.71,
+        "avg30": 3.28,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 0.68,
+        "reverseHoloAvg30": 0.68
       }
     }
   },
@@ -5009,6 +8404,23 @@
     "rules": [
       "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance)."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "80",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5019,12 +8431,38 @@
       "small": "https://images.pokemontcg.io/base1/80.png",
       "large": "https://images.pokemontcg.io/base1/80_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.27,
+          "mid": 0.87,
+          "high": 89,
+          "market": 1.22,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.82,
+        "lowPrice": 4.97,
+        "trendPrice": 6.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 5.5,
+        "avg7": 4.03,
+        "avg30": 6.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5035,6 +8473,23 @@
     "rules": [
       "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "81",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5047,12 +8502,38 @@
       "small": "https://images.pokemontcg.io/base1/81.png",
       "large": "https://images.pokemontcg.io/base1/81_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.5,
+          "high": 5.57,
+          "market": 0.74,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.72,
+        "lowPrice": 0.02,
+        "trendPrice": 0.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.04,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.37,
+        "avg7": 0.39,
+        "avg30": 0.64,
+        "reverseHoloAvg1": 0.04,
+        "reverseHoloAvg7": 0.04,
+        "reverseHoloAvg30": 0.04
       }
     }
   },
@@ -5063,6 +8544,23 @@
     "rules": [
       "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "82",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5073,12 +8571,38 @@
       "small": "https://images.pokemontcg.io/base1/82.png",
       "large": "https://images.pokemontcg.io/base1/82_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.85,
+          "high": 89,
+          "market": 0.8,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.91,
+        "lowPrice": 3.99,
+        "trendPrice": 4.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4,
+        "avg1": 7,
+        "avg7": 4.06,
+        "avg30": 4.39,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5089,6 +8613,23 @@
     "rules": [
       "Shuffle 2 of the other cards from your hand into your deck in order to draw a card."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "83",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5100,12 +8641,38 @@
       "small": "https://images.pokemontcg.io/base1/83.png",
       "large": "https://images.pokemontcg.io/base1/83_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.65,
+          "mid": 1.78,
+          "high": 89,
+          "market": 1.92,
+          "directLow": 0.77
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.6,
+        "lowPrice": 0.1,
+        "trendPrice": 2.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.23,
+        "avg7": 2.55,
+        "avg30": 2.55,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.13,
+        "reverseHoloAvg30": 1.13
       }
     }
   },
@@ -5116,6 +8683,23 @@
     "rules": [
       "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "84",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5127,12 +8711,38 @@
       "small": "https://images.pokemontcg.io/base1/84.png",
       "large": "https://images.pokemontcg.io/base1/84_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.61,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.95,
+        "lowPrice": 1.75,
+        "trendPrice": 6.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.3,
+        "avg1": 9.45,
+        "avg7": 6.67,
+        "avg30": 4.44,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5143,6 +8753,23 @@
     "rules": [
       "Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "85",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5153,12 +8780,38 @@
       "small": "https://images.pokemontcg.io/base1/85.png",
       "large": "https://images.pokemontcg.io/base1/85_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.32,
+          "mid": 1.09,
+          "high": 8.45,
+          "market": 1.33,
+          "directLow": 0.56
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.89,
+        "lowPrice": 1.25,
+        "trendPrice": 9.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 6.94,
+        "avg7": 10.92,
+        "avg30": 10.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5169,6 +8822,23 @@
     "rules": [
       "Choose 1 Basic Pokémon card from your opponent's discard pile and put it onto his or her Bench. (You can't play Pokémon Flute if your opponent's Bench is full.)"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "86",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5179,12 +8849,38 @@
       "small": "https://images.pokemontcg.io/base1/86.png",
       "large": "https://images.pokemontcg.io/base1/86_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.65,
+          "mid": 1.51,
+          "high": 109.99,
+          "market": 1.86,
+          "directLow": 0.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.83,
+        "lowPrice": 0.05,
+        "trendPrice": 1.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.34,
+        "avg7": 3.03,
+        "avg30": 3.64,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5195,6 +8891,23 @@
     "rules": [
       "Look at up to 5 cards from the top of your deck and rearrange them as you like."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "87",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5206,12 +8919,38 @@
       "small": "https://images.pokemontcg.io/base1/87.png",
       "large": "https://images.pokemontcg.io/base1/87_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.37,
+          "high": 9.99,
+          "market": 0.44,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.85,
+        "lowPrice": 0.02,
+        "trendPrice": 0.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.05,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.38,
+        "avg7": 0.64,
+        "avg30": 0.85,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -5222,6 +8961,23 @@
     "rules": [
       "Discard your hand, then draw 7 cards."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "88",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -5232,12 +8988,38 @@
       "small": "https://images.pokemontcg.io/base1/88.png",
       "large": "https://images.pokemontcg.io/base1/88_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.31,
+          "mid": 1.05,
+          "high": 4.95,
+          "market": 1.37,
+          "directLow": 0.44
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.9,
+        "avg7": 0.92,
+        "avg30": 1.07,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 2.5,
+        "reverseHoloAvg30": 2.5
       }
     }
   },
@@ -5248,6 +9030,23 @@
     "rules": [
       "Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its HP (rounded down to the nearest 10). (You can't play Revive if your Bench is full.)"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "89",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5258,12 +9057,38 @@
       "small": "https://images.pokemontcg.io/base1/89.png",
       "large": "https://images.pokemontcg.io/base1/89_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.75,
+          "mid": 1.69,
+          "high": 89,
+          "market": 2.13,
+          "directLow": 0.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.31,
+        "lowPrice": 23,
+        "trendPrice": 13.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 23.95,
+        "avg1": 12.5,
+        "avg7": 12.78,
+        "avg30": 12.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5274,6 +9099,23 @@
     "rules": [
       "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "90",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5284,12 +9126,38 @@
       "small": "https://images.pokemontcg.io/base1/90.png",
       "large": "https://images.pokemontcg.io/base1/90_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 38.99,
+          "market": 0.26,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.46,
+        "lowPrice": 0.02,
+        "trendPrice": 0.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.05,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.29,
+        "avg7": 0.35,
+        "avg30": 0.46,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -5300,6 +9168,23 @@
     "rules": [
       "Draw 2 cards."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "91",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -5310,12 +9195,38 @@
       "small": "https://images.pokemontcg.io/base1/91.png",
       "large": "https://images.pokemontcg.io/base1/91_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.32,
+          "high": 19.99,
+          "market": 0.34,
+          "directLow": 0.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.86,
+        "lowPrice": 0.1,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.2,
+        "avg7": 1.22,
+        "avg30": 3.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5326,6 +9237,23 @@
     "rules": [
       "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "92",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -5336,12 +9264,38 @@
       "small": "https://images.pokemontcg.io/base1/92.png",
       "large": "https://images.pokemontcg.io/base1/92_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.39,
+          "high": 89,
+          "market": 0.46,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.18,
+        "lowPrice": 0.15,
+        "trendPrice": 2.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 3.45,
+        "avg7": 2.09,
+        "avg30": 3.07,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5352,6 +9306,23 @@
     "rules": [
       "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "93",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -5362,12 +9333,38 @@
       "small": "https://images.pokemontcg.io/base1/93.png",
       "large": "https://images.pokemontcg.io/base1/93_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.28,
+          "high": 325,
+          "market": 0.33,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.29,
+        "lowPrice": 0.85,
+        "trendPrice": 1.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 2.45,
+        "avg7": 3.37,
+        "avg30": 3.07,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5378,6 +9375,23 @@
     "rules": [
       "Remove up to 2 damage counters from 1 of your Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "94",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -5390,12 +9404,38 @@
       "small": "https://images.pokemontcg.io/base1/94.png",
       "large": "https://images.pokemontcg.io/base1/94_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.22,
+          "high": 25,
+          "market": 0.17,
+          "directLow": 0.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.02,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.26,
+        "avg30": 0.39,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -5406,6 +9446,23 @@
     "rules": [
       "Switch 1 of your own Benched Pokémon with your Active Pokémon."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "95",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -5418,12 +9475,38 @@
       "small": "https://images.pokemontcg.io/base1/95.png",
       "large": "https://images.pokemontcg.io/base1/95_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-95",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.07,
+          "mid": 0.3,
+          "high": 89,
+          "market": 0.3,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-95",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.01,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.26,
+        "avg7": 0.27,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 0.89,
+        "reverseHoloAvg7": 0.69,
+        "reverseHoloAvg30": 0.69
       }
     }
   },
@@ -5437,6 +9520,23 @@
     "rules": [
       "Provides ColorlessColorless energy.\nDoesn't count as a basic Energy card."
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "96",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -5448,12 +9548,38 @@
       "small": "https://images.pokemontcg.io/base1/96.png",
       "large": "https://images.pokemontcg.io/base1/96_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-96",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.98,
+          "mid": 4.15,
+          "high": 44.99,
+          "market": 4.6,
+          "directLow": 1.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-96",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36,
+        "lowPrice": 10.99,
+        "trendPrice": 18.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 34.99,
+        "avg1": 8.48,
+        "avg7": 18.3,
+        "avg30": 12.02,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5464,6 +9590,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "97",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5475,12 +9618,38 @@
       "small": "https://images.pokemontcg.io/base1/97.png",
       "large": "https://images.pokemontcg.io/base1/97_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-97",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 19.99,
+          "market": 0.27,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-97",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.42,
+        "lowPrice": 0.02,
+        "trendPrice": 0.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.06,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.13,
+        "avg7": 0.17,
+        "avg30": 0.41,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 3.67,
+        "reverseHoloAvg30": 3.67
       }
     }
   },
@@ -5491,6 +9660,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "98",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5502,12 +9688,38 @@
       "small": "https://images.pokemontcg.io/base1/98.png",
       "large": "https://images.pokemontcg.io/base1/98_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-98",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.38,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-98",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.6,
+        "lowPrice": 0.35,
+        "trendPrice": 4.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.45,
+        "avg7": 5.07,
+        "avg30": 1.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5518,6 +9730,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "99",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5529,12 +9758,38 @@
       "small": "https://images.pokemontcg.io/base1/99.png",
       "large": "https://images.pokemontcg.io/base1/99_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-99",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.3,
+          "high": 19.99,
+          "market": 0.3,
+          "directLow": 0.11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-99",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.49,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.05,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.22,
+        "avg30": 0.47,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 3.16,
+        "reverseHoloAvg30": 3.16
       }
     }
   },
@@ -5545,6 +9800,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "100",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5556,12 +9828,38 @@
       "small": "https://images.pokemontcg.io/base1/100.png",
       "large": "https://images.pokemontcg.io/base1/100_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-100",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.14,
+          "mid": 0.38,
+          "high": 19.99,
+          "market": 0.39,
+          "directLow": 0.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-100",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.9,
+        "lowPrice": 0.7,
+        "trendPrice": 3.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.2,
+        "avg1": 0.75,
+        "avg7": 2.75,
+        "avg30": 1.49,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -5572,6 +9870,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "101",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5583,12 +9898,38 @@
       "small": "https://images.pokemontcg.io/base1/101.png",
       "large": "https://images.pokemontcg.io/base1/101_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-101",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.33,
+          "high": 9.99,
+          "market": 0.39,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-101",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.91,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.27,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.5,
+        "reverseHoloAvg30": 2.61
       }
     }
   },
@@ -5599,6 +9940,23 @@
     "subtypes": [
       "Basic"
     ],
+    "set": {
+      "id": "base1",
+      "name": "Base",
+      "series": "Base",
+      "printedTotal": 102,
+      "total": 102,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "BS",
+      "releaseDate": "1999/01/09",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+        "logo": "https://images.pokemontcg.io/base1/logo.png"
+      }
+    },
     "number": "102",
     "artist": "Keiji Kinebuchi",
     "legalities": {
@@ -5610,12 +9968,38 @@
       "small": "https://images.pokemontcg.io/base1/102.png",
       "large": "https://images.pokemontcg.io/base1/102_hires.png"
     },
-    "set": {
-      "id": "base1",
-      "releaseDate": "1999/01/09",
-      "name": "Base",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/base1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/base1-102",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.29,
+          "high": 6.27,
+          "market": 0.31,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/base1-102",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.47,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.66,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.13,
+        "avg7": 0.22,
+        "avg30": 0.45,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 0.83,
+        "reverseHoloAvg30": 0.92
       }
     }
   }

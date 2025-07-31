@@ -3,6 +3,7 @@ import { useBinderContext } from "../../../contexts/BinderContext";
 import useSetSearch from "../../../hooks/useSetSearch";
 import { getGridConfig } from "../../../hooks/useBinderDimensions";
 import { toast } from "react-hot-toast";
+import { GLOBAL_CARD_LIMIT } from "../../../lib/globalRules.js";
 import { RadioGroup } from "@headlessui/react";
 import {
   CheckCircleIcon,
@@ -398,7 +399,7 @@ const ReviewStep = ({
     }
   };
 
-  const MAX_BINDER_CARDS = 1000;
+  const MAX_BINDER_CARDS = GLOBAL_CARD_LIMIT;
 
   if (isProcessing) {
     return (

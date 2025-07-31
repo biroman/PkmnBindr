@@ -47,6 +47,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -61,12 +77,45 @@
       "small": "https://images.pokemontcg.io/pop8/1.png",
       "large": "https://images.pokemontcg.io/pop8/1_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.5,
+          "mid": 0.99,
+          "high": 4.19,
+          "market": 1.56,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 1,
+          "mid": 3.5,
+          "high": 5.39,
+          "market": 4.55,
+          "directLow": 1.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.12,
+        "lowPrice": 0.45,
+        "trendPrice": 3.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 0.82,
+        "lowPriceExPlus": 1,
+        "avg1": 3.95,
+        "avg7": 4.32,
+        "avg30": 3.22,
+        "reverseHoloAvg1": 0.75,
+        "reverseHoloAvg7": 0.72,
+        "reverseHoloAvg30": 0.69
       }
     }
   },
@@ -116,6 +165,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Kent Kanetsuna",
     "rarity": "Rare",
@@ -130,12 +195,45 @@
       "small": "https://images.pokemontcg.io/pop8/2.png",
       "large": "https://images.pokemontcg.io/pop8/2_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.01,
+          "mid": 12.01,
+          "high": 20,
+          "market": 4.54,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 3.06,
+          "mid": 5.45,
+          "high": 35,
+          "market": 6.77,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.25,
+        "lowPrice": 1,
+        "trendPrice": 5.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 15,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.87,
+        "lowPriceExPlus": 3.5,
+        "avg1": 4,
+        "avg7": 5.99,
+        "avg30": 5.81,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 5.22,
+        "reverseHoloAvg30": 2.53
       }
     }
   },
@@ -189,6 +287,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -203,12 +317,45 @@
       "small": "https://images.pokemontcg.io/pop8/3.png",
       "large": "https://images.pokemontcg.io/pop8/3_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.99,
+          "mid": 6.47,
+          "high": 10,
+          "market": 5.11,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 4.28,
+          "mid": 7.18,
+          "high": 22.99,
+          "market": 7.07,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.17,
+        "lowPrice": 0.3,
+        "trendPrice": 2.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.48,
+        "lowPriceExPlus": 1.99,
+        "avg1": 1.5,
+        "avg7": 2.59,
+        "avg30": 2.82,
+        "reverseHoloAvg1": 2.4,
+        "reverseHoloAvg7": 5.47,
+        "reverseHoloAvg30": 2.38
       }
     }
   },
@@ -266,6 +413,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -280,12 +443,45 @@
       "small": "https://images.pokemontcg.io/pop8/4.png",
       "large": "https://images.pokemontcg.io/pop8/4_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.5,
+          "mid": 1.95,
+          "high": 20,
+          "market": 1.92,
+          "directLow": 3.44
+        },
+        "holofoil": {
+          "low": 1.25,
+          "mid": 1.5,
+          "high": 6.97,
+          "market": 1.61,
+          "directLow": 2.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.48,
+        "lowPrice": 1,
+        "trendPrice": 3.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.95,
+        "lowPriceExPlus": 2.5,
+        "avg1": 3,
+        "avg7": 4.93,
+        "avg30": 4.17,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 2.95,
+        "reverseHoloAvg30": 2.95
       }
     }
   },
@@ -337,6 +533,22 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -351,12 +563,45 @@
       "small": "https://images.pokemontcg.io/pop8/5.png",
       "large": "https://images.pokemontcg.io/pop8/5_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.5,
+          "mid": 3.45,
+          "high": 9.89,
+          "market": 3.83,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 2,
+          "mid": 8.03,
+          "high": 13.18,
+          "market": 8.48,
+          "directLow": 2.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.9,
+        "lowPrice": 0.49,
+        "trendPrice": 1.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.76,
+        "lowPriceExPlus": 0.9,
+        "avg1": 0.3,
+        "avg7": 1.89,
+        "avg30": 2.09,
+        "reverseHoloAvg1": 9,
+        "reverseHoloAvg7": 2.21,
+        "reverseHoloAvg30": 1.22
       }
     }
   },
@@ -411,6 +656,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Atsuko Nishida",
     "rarity": "Uncommon",
@@ -425,12 +686,45 @@
       "small": "https://images.pokemontcg.io/pop8/6.png",
       "large": "https://images.pokemontcg.io/pop8/6_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.59,
+          "mid": 1.96,
+          "high": 5,
+          "market": 1.76,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.36,
+          "mid": 5,
+          "high": 7.11,
+          "market": 7.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.14,
+        "lowPrice": 0.25,
+        "trendPrice": 0.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 0.82,
+        "lowPriceExPlus": 0.8,
+        "avg1": 2.49,
+        "avg7": 0.86,
+        "avg30": 1.62,
+        "reverseHoloAvg1": 0.35,
+        "reverseHoloAvg7": 0.9,
+        "reverseHoloAvg30": 0.89
       }
     }
   },
@@ -484,6 +778,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Kouki Saitou",
     "rarity": "Uncommon",
@@ -498,12 +808,45 @@
       "small": "https://images.pokemontcg.io/pop8/7.png",
       "large": "https://images.pokemontcg.io/pop8/7_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.5,
+          "mid": 1.98,
+          "high": 7,
+          "market": 2.71,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 1.45,
+          "mid": 2.52,
+          "high": 5.5,
+          "market": 2.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.35,
+        "lowPrice": 0.75,
+        "trendPrice": 2.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 14.56,
+        "lowPriceExPlus": 1.5,
+        "avg1": 6,
+        "avg7": 2.93,
+        "avg30": 2.12,
+        "reverseHoloAvg1": 14.95,
+        "reverseHoloAvg7": 6.97,
+        "reverseHoloAvg30": 6.97
       }
     }
   },
@@ -556,6 +899,22 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -570,12 +929,45 @@
       "small": "https://images.pokemontcg.io/pop8/8.png",
       "large": "https://images.pokemontcg.io/pop8/8_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.55,
+          "mid": 4.07,
+          "high": 7.49,
+          "market": 3.81,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 1.05,
+          "mid": 4.18,
+          "high": 8.47,
+          "market": 6.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.75,
+        "lowPrice": 0.39,
+        "trendPrice": 1.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.87,
+        "reverseHoloLow": 0.39,
+        "reverseHoloTrend": 0.95,
+        "lowPriceExPlus": 1,
+        "avg1": 1,
+        "avg7": 1.69,
+        "avg30": 2.25,
+        "reverseHoloAvg1": 0.87,
+        "reverseHoloAvg7": 0.77,
+        "reverseHoloAvg30": 0.94
       }
     }
   },
@@ -589,6 +981,22 @@
     "rules": [
       "Search your discard pile for up to 3 in any combination of Pokémon and basic Energy cards. Show them to your opponent and shuffle them into your deck."
     ],
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -599,12 +1007,38 @@
       "small": "https://images.pokemontcg.io/pop8/9.png",
       "large": "https://images.pokemontcg.io/pop8/9_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.25,
+          "mid": 2.82,
+          "high": 7.24,
+          "market": 2.64,
+          "directLow": 1.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.5,
+        "lowPrice": 1.29,
+        "trendPrice": 2.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.5,
+        "avg1": 2.5,
+        "avg7": 3.02,
+        "avg30": 3.49,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -618,6 +1052,22 @@
     "rules": [
       "Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
     ],
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -630,12 +1080,38 @@
       "small": "https://images.pokemontcg.io/pop8/10.png",
       "large": "https://images.pokemontcg.io/pop8/10_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5.5,
+          "mid": 7.94,
+          "high": 9.99,
+          "market": 7.4,
+          "directLow": 4.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.75,
+        "lowPrice": 0.2,
+        "trendPrice": 4.97,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1,
+        "lowPriceExPlus": 3.75,
+        "avg1": 4.5,
+        "avg7": 3.75,
+        "avg30": 4.13,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.65,
+        "reverseHoloAvg30": 1.65
       }
     }
   },
@@ -650,6 +1126,22 @@
       "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
       "Search your deck for up to 2 in any combination of Basic Pokémon and basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward."
     ],
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Kanako Eo",
     "rarity": "Uncommon",
@@ -660,12 +1152,38 @@
       "small": "https://images.pokemontcg.io/pop8/11.png",
       "large": "https://images.pokemontcg.io/pop8/11_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.96,
+          "mid": 6.87,
+          "high": 8,
+          "market": 6.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 1,
+        "trendPrice": 1.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.3,
+        "avg1": 0.9,
+        "avg7": 1.23,
+        "avg30": 2.23,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -713,6 +1231,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -727,12 +1261,45 @@
       "small": "https://images.pokemontcg.io/pop8/12.png",
       "large": "https://images.pokemontcg.io/pop8/12_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.29,
+          "mid": 0.71,
+          "high": 4.95,
+          "market": 0.73,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10.04,
+          "mid": 14.01,
+          "high": 17.97,
+          "market": 8.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.53,
+        "lowPrice": 0.1,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 20,
+        "lowPriceExPlus": 0.27,
+        "avg1": 0.1,
+        "avg7": 0.48,
+        "avg30": 0.92,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 12,
+        "reverseHoloAvg30": 12
       }
     }
   },
@@ -782,6 +1349,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -796,12 +1379,45 @@
       "small": "https://images.pokemontcg.io/pop8/13.png",
       "large": "https://images.pokemontcg.io/pop8/13_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.47,
+          "high": 4.95,
+          "market": 0.45,
+          "directLow": 0.43
+        },
+        "holofoil": {
+          "low": 1.5,
+          "mid": 3.34,
+          "high": 6.79,
+          "market": 8.99,
+          "directLow": 2.61
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.1,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.9,
+        "reverseHoloLow": 0.35,
+        "reverseHoloTrend": 0.89,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.49,
+        "avg7": 0.45,
+        "avg30": 0.47,
+        "reverseHoloAvg1": 0.9,
+        "reverseHoloAvg7": 1.06,
+        "reverseHoloAvg30": 0.83
       }
     }
   },
@@ -846,6 +1462,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -860,12 +1492,45 @@
       "small": "https://images.pokemontcg.io/pop8/14.png",
       "large": "https://images.pokemontcg.io/pop8/14_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.39,
+          "mid": 2.58,
+          "high": 3.99,
+          "market": 2.49,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 1.42,
+          "mid": 2.87,
+          "high": 9.99,
+          "market": 2.94,
+          "directLow": 9.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.14,
+        "lowPrice": 0.1,
+        "trendPrice": 1.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.21,
+        "lowPriceExPlus": 1,
+        "avg1": 2.5,
+        "avg7": 1.43,
+        "avg30": 1.33,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.1,
+        "reverseHoloAvg30": 0.85
       }
     }
   },
@@ -913,6 +1578,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -927,12 +1608,38 @@
       "small": "https://images.pokemontcg.io/pop8/15.png",
       "large": "https://images.pokemontcg.io/pop8/15_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.55,
+          "mid": 1.95,
+          "high": 3.25,
+          "market": 1.74,
+          "directLow": 1.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.8,
+        "lowPrice": 0.3,
+        "trendPrice": 0.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.09,
+        "lowPriceExPlus": 0.85,
+        "avg1": 0.85,
+        "avg7": 0.88,
+        "avg30": 0.76,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.09
       }
     }
   },
@@ -979,6 +1686,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -993,12 +1716,45 @@
       "small": "https://images.pokemontcg.io/pop8/16.png",
       "large": "https://images.pokemontcg.io/pop8/16_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.4,
+          "mid": 0.69,
+          "high": 1.13,
+          "market": 0.84,
+          "directLow": 0.65
+        },
+        "reverseHolofoil": {
+          "low": 0.99,
+          "mid": 3.29,
+          "high": 5.58,
+          "market": 7.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.09,
+        "trendPrice": 0.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.09,
+        "lowPriceExPlus": 0.13,
+        "avg1": 0.3,
+        "avg7": 0.86,
+        "avg30": 0.82,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 1.49,
+        "reverseHoloAvg30": 1.49
       }
     }
   },
@@ -1052,6 +1808,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop8",
+      "name": "POP Series 8",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2008/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop8/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop8/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -1066,12 +1838,38 @@
       "small": "https://images.pokemontcg.io/pop8/17.png",
       "large": "https://images.pokemontcg.io/pop8/17_hires.png"
     },
-    "set": {
-      "id": "pop8",
-      "releaseDate": "2008/09/01",
-      "name": "POP Series 8",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop8/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop8-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.75,
+          "mid": 1.1,
+          "high": 4.47,
+          "market": 1.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop8-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.45,
+        "lowPrice": 0.05,
+        "trendPrice": 0.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.1,
+        "lowPriceExPlus": 0.48,
+        "avg1": 0.45,
+        "avg7": 0.68,
+        "avg30": 0.72,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.1
       }
     }
   }

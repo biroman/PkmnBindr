@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { GLOBAL_CARD_LIMIT } from "./globalRules.js";
 
 // =====================================
 // ROLE SYSTEM (What you can DO)
@@ -66,7 +67,7 @@ export const SUBSCRIPTION_TIERS = {
       // Core limits
       maxBinders: 2,
       maxCardsPerBinder: 500,
-      totalCardsLimit: 1000, // 2 binders × 500 cards
+      totalCardsLimit: GLOBAL_CARD_LIMIT, // 2 binders × 500 cards
 
       // Storage (covers basic Firebase usage)
       storageLimit: 100 * 1024 * 1024, // 100MB
@@ -83,7 +84,7 @@ export const SUBSCRIPTION_TIERS = {
     restrictions: {
       // Very generous limits for free users
       binderCreation: 2,
-      cardAddition: 1000,
+      cardAddition: GLOBAL_CARD_LIMIT,
       exports: 10,
     },
     badges: ["🆓", "Perfect for starters"],

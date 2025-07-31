@@ -305,18 +305,14 @@ const useCardSearch = () => {
 
   // Auto-search only for filters changes, not searchQuery
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      // Only auto-search when filters change, not when searchQuery changes
-      if (
-        Object.values(filters).some(
-          (value) => value && (Array.isArray(value) ? value.length > 0 : true)
-        )
-      ) {
-        searchCards({ resetResults: true });
-      }
-    }, 500); // 500ms debounce
-
-    return () => clearTimeout(timeoutId);
+    // Run immediately (no debounce) when filters change.
+    if (
+      Object.values(filters).some(
+        (value) => value && (Array.isArray(value) ? value.length > 0 : true)
+      )
+    ) {
+      searchCards({ resetResults: true });
+    }
   }, [searchCards, filters]); // Removed searchQuery from dependencies
 
   // Computed values

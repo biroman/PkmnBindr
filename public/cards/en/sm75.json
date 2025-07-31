@@ -36,6 +36,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "1",
     "artist": "tetsuya koizumi",
     "rarity": "Common",
@@ -51,12 +69,45 @@
       "small": "https://images.pokemontcg.io/sm75/1.png",
       "large": "https://images.pokemontcg.io/sm75/1_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 5.73,
+          "mid": 9.16,
+          "high": 17.85,
+          "market": 10.07,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.6,
+          "mid": 1.01,
+          "high": 4.99,
+          "market": 1.23,
+          "directLow": 0.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.3,
+        "lowPrice": 0.3,
+        "trendPrice": 1.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 11.37,
+        "reverseHoloLow": 4,
+        "reverseHoloTrend": 8.95,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1.95,
+        "avg7": 1.19,
+        "avg30": 1.11,
+        "reverseHoloAvg1": 7.49,
+        "reverseHoloAvg7": 9.11,
+        "reverseHoloAvg30": 7
       }
     }
   },
@@ -106,6 +157,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "2",
     "artist": "kodama",
     "rarity": "Uncommon",
@@ -121,12 +190,45 @@
       "small": "https://images.pokemontcg.io/sm75/2.png",
       "large": "https://images.pokemontcg.io/sm75/2_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 1.8,
+          "mid": 2.56,
+          "high": 3.99,
+          "market": 2.59,
+          "directLow": 3.59
+        },
+        "normal": {
+          "low": 0.42,
+          "mid": 0.78,
+          "high": 4.95,
+          "market": 0.84,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.18,
+        "lowPrice": 0.2,
+        "trendPrice": 0.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.62,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 4.03,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.95,
+        "avg7": 0.87,
+        "avg30": 0.89,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 4.58,
+        "reverseHoloAvg30": 3.32
       }
     }
   },
@@ -173,6 +275,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Ryota Murayama",
     "rarity": "Rare Holo",
@@ -188,12 +308,45 @@
       "small": "https://images.pokemontcg.io/sm75/3.png",
       "large": "https://images.pokemontcg.io/sm75/3_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 10.77,
+          "mid": 39.99,
+          "high": 89,
+          "market": 12.19,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 3.99,
+          "mid": 5.57,
+          "high": 11.11,
+          "market": 5.41,
+          "directLow": 5.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.91,
+        "lowPrice": 1.5,
+        "trendPrice": 4.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.49,
+        "avg1": 4.99,
+        "avg7": 4.92,
+        "avg30": 4.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -232,6 +385,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -247,12 +418,45 @@
       "small": "https://images.pokemontcg.io/sm75/4.png",
       "large": "https://images.pokemontcg.io/sm75/4_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.23
+        },
+        "reverseHolofoil": {
+          "low": 0.64,
+          "mid": 0.82,
+          "high": 4.95,
+          "market": 0.75,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.97,
+        "reverseHoloLow": 0.12,
+        "reverseHoloTrend": 1.53,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.12,
+        "avg30": 0.18,
+        "reverseHoloAvg1": 1.75,
+        "reverseHoloAvg7": 1.72,
+        "reverseHoloAvg30": 1.27
       }
     }
   },
@@ -300,6 +504,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -315,12 +537,45 @@
       "small": "https://images.pokemontcg.io/sm75/5.png",
       "large": "https://images.pokemontcg.io/sm75/5_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.46,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.02,
+        "trendPrice": 0.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.35,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.74,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.2,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.79,
+        "reverseHoloAvg30": 1.25
       }
     }
   },
@@ -367,6 +622,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -382,12 +655,45 @@
       "small": "https://images.pokemontcg.io/sm75/6.png",
       "large": "https://images.pokemontcg.io/sm75/6_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 5.09,
+          "mid": 6.37,
+          "high": 9.5,
+          "market": 4.41,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.56,
+          "high": 37.19,
+          "market": 1.53,
+          "directLow": 2.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.46,
+        "lowPrice": 0.23,
+        "trendPrice": 1.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.48,
+        "reverseHoloLow": 0.7,
+        "reverseHoloTrend": 4.92,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.45,
+        "avg7": 0.9,
+        "avg30": 1.29,
+        "reverseHoloAvg1": 2.66,
+        "reverseHoloAvg7": 4.67,
+        "reverseHoloAvg30": 4.13
       }
     }
   },
@@ -428,6 +734,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Prism Star",
@@ -443,12 +767,38 @@
       "small": "https://images.pokemontcg.io/sm75/7.png",
       "large": "https://images.pokemontcg.io/sm75/7_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.25,
+          "mid": 2.53,
+          "high": 5,
+          "market": 2.56,
+          "directLow": 4.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.63,
+        "lowPrice": 0.5,
+        "trendPrice": 2.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.99,
+        "reverseHoloLow": 1.6,
+        "reverseHoloTrend": 2.18,
+        "lowPriceExPlus": 0.99,
+        "avg1": 3,
+        "avg7": 2.6,
+        "avg30": 2.68,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 2.71,
+        "reverseHoloAvg30": 2.83
       }
     }
   },
@@ -489,6 +839,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -504,12 +872,45 @@
       "small": "https://images.pokemontcg.io/sm75/8.png",
       "large": "https://images.pokemontcg.io/sm75/8_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.23,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.39,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.56,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.69,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.09,
+        "avg30": 0.15,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.77,
+        "reverseHoloAvg30": 0.58
       }
     }
   },
@@ -558,6 +959,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Masakazu Fukuda",
     "rarity": "Uncommon",
@@ -573,12 +992,45 @@
       "small": "https://images.pokemontcg.io/sm75/9.png",
       "large": "https://images.pokemontcg.io/sm75/9_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": 0.21
+        },
+        "reverseHolofoil": {
+          "low": 0.26,
+          "mid": 0.71,
+          "high": 4.95,
+          "market": 0.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.27,
+        "lowPrice": 0.02,
+        "trendPrice": 0.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.94,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.24,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.95,
+        "reverseHoloAvg30": 0.86
       }
     }
   },
@@ -625,6 +1077,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -640,12 +1110,45 @@
       "small": "https://images.pokemontcg.io/sm75/10.png",
       "large": "https://images.pokemontcg.io/sm75/10_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.06,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.19
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.83,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.2,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.87,
+        "reverseHoloLow": 0.16,
+        "reverseHoloTrend": 0.65,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.18,
+        "avg30": 0.23,
+        "reverseHoloAvg1": 0.75,
+        "reverseHoloAvg7": 0.65,
+        "reverseHoloAvg30": 0.82
       }
     }
   },
@@ -710,6 +1213,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "11",
     "artist": "PLANETA Otani",
     "rarity": "Rare Holo GX",
@@ -724,12 +1245,38 @@
       "small": "https://images.pokemontcg.io/sm75/11.png",
       "large": "https://images.pokemontcg.io/sm75/11_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.99,
+          "mid": 6,
+          "high": 10,
+          "market": 5.22,
+          "directLow": 6.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.36,
+        "lowPrice": 2.5,
+        "trendPrice": 5.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.6,
+        "lowPriceExPlus": 3.33,
+        "avg1": 4.99,
+        "avg7": 7.34,
+        "avg30": 7.73,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.28,
+        "reverseHoloAvg30": 5.59
       }
     }
   },
@@ -768,6 +1315,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Ryota Murayama",
     "rarity": "Common",
@@ -783,12 +1348,45 @@
       "small": "https://images.pokemontcg.io/sm75/12.png",
       "large": "https://images.pokemontcg.io/sm75/12_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 0.7,
+          "high": 4.95,
+          "market": 0.7,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.11,
+          "mid": 0.27,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.96,
+        "reverseHoloLow": 0.14,
+        "reverseHoloTrend": 1.61,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.1,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.63,
+        "reverseHoloAvg30": 1.04
       }
     }
   },
@@ -837,6 +1435,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "13",
     "artist": "MAHOU",
     "rarity": "Common",
@@ -852,12 +1468,45 @@
       "small": "https://images.pokemontcg.io/sm75/13.png",
       "large": "https://images.pokemontcg.io/sm75/13_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.65,
+          "mid": 1.15,
+          "high": 1.75,
+          "market": 1.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.62,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 1.63,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.1,
+        "avg30": 0.15,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.76,
+        "reverseHoloAvg30": 0.88
       }
     }
   },
@@ -904,6 +1553,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Naoki Saito",
     "rarity": "Uncommon",
@@ -919,12 +1586,45 @@
       "small": "https://images.pokemontcg.io/sm75/14.png",
       "large": "https://images.pokemontcg.io/sm75/14_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.18,
+          "mid": 0.29,
+          "high": 1.49,
+          "market": 0.23,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.45,
+          "mid": 0.67,
+          "high": 4.95,
+          "market": 0.67,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.25,
+        "lowPrice": 0.02,
+        "trendPrice": 0.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.44,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.26,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.61,
+        "reverseHoloAvg30": 1.09
       }
     }
   },
@@ -963,6 +1663,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -978,12 +1696,45 @@
       "small": "https://images.pokemontcg.io/sm75/15.png",
       "large": "https://images.pokemontcg.io/sm75/15_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.73,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.15,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.83,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 0.71,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.14,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 4.9,
+        "reverseHoloAvg7": 1.02,
+        "reverseHoloAvg30": 0.87
       }
     }
   },
@@ -1022,6 +1773,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Mizue",
     "rarity": "Common",
@@ -1037,12 +1806,45 @@
       "small": "https://images.pokemontcg.io/sm75/16.png",
       "large": "https://images.pokemontcg.io/sm75/16_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.73,
+          "mid": 0.93,
+          "high": 1.21,
+          "market": 0.97,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.11,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.53,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 0.49,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.11,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.53,
+        "reverseHoloAvg30": 0.72
       }
     }
   },
@@ -1082,6 +1884,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Yumi",
     "rarity": "Uncommon",
@@ -1097,12 +1917,45 @@
       "small": "https://images.pokemontcg.io/sm75/17.png",
       "large": "https://images.pokemontcg.io/sm75/17_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.32,
+          "directLow": 0.32
+        },
+        "reverseHolofoil": {
+          "low": 0.55,
+          "mid": 1.18,
+          "high": 2.48,
+          "market": 1.23,
+          "directLow": 1.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.05,
+        "trendPrice": 0.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.25,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.51,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.1,
+        "avg7": 0.26,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 0.86,
+        "reverseHoloAvg30": 1.29
       }
     }
   },
@@ -1162,6 +2015,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "18",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -1176,12 +2047,38 @@
       "small": "https://images.pokemontcg.io/sm75/18.png",
       "large": "https://images.pokemontcg.io/sm75/18_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.12,
+          "high": 5.99,
+          "market": 2.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.01,
+        "lowPrice": 1.5,
+        "trendPrice": 5.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.78,
+        "lowPriceExPlus": 2,
+        "avg1": 4.99,
+        "avg7": 4.92,
+        "avg30": 4.37,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 4.09,
+        "reverseHoloAvg30": 3.9
       }
     }
   },
@@ -1220,6 +2117,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Sekio",
     "rarity": "Common",
@@ -1235,12 +2150,38 @@
       "small": "https://images.pokemontcg.io/sm75/19.png",
       "large": "https://images.pokemontcg.io/sm75/19_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.35,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 2.61,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.25,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 2.51,
+        "reverseHoloAvg30": 2.52
       }
     }
   },
@@ -1289,6 +2230,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "20",
     "artist": "kawayoo",
     "rarity": "Rare Holo",
@@ -1304,12 +2263,45 @@
       "small": "https://images.pokemontcg.io/sm75/20.png",
       "large": "https://images.pokemontcg.io/sm75/20_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.78,
+          "mid": 1.42,
+          "high": 3,
+          "market": 1.48,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.37,
+          "mid": 3.28,
+          "high": 5.04,
+          "market": 4.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.07,
+        "lowPrice": 0.5,
+        "trendPrice": 0.85,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 4.21,
+        "lowPriceExPlus": 0.5,
+        "avg1": 0.5,
+        "avg7": 1.01,
+        "avg30": 1.32,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 3.89,
+        "reverseHoloAvg30": 3.81
       }
     }
   },
@@ -1357,6 +2349,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Saya Tsuruta",
     "rarity": "Uncommon",
@@ -1372,12 +2382,45 @@
       "small": "https://images.pokemontcg.io/sm75/21.png",
       "large": "https://images.pokemontcg.io/sm75/21_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.44,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2,
+          "mid": 2,
+          "high": 2.5,
+          "market": 2.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.74,
+        "lowPrice": 0.05,
+        "trendPrice": 0.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.27,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 4.69,
+        "lowPriceExPlus": 0.05,
+        "avg1": 1,
+        "avg7": 0.9,
+        "avg30": 0.6,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 5.27,
+        "reverseHoloAvg30": 3.91
       }
     }
   },
@@ -1425,6 +2468,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Hironobu Yoshida",
     "rarity": "Common",
@@ -1440,12 +2501,45 @@
       "small": "https://images.pokemontcg.io/sm75/22.png",
       "large": "https://images.pokemontcg.io/sm75/22_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.33,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": 0.35
+        },
+        "reverseHolofoil": {
+          "low": 1.05,
+          "mid": 1.23,
+          "high": 2.27,
+          "market": 1.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.7,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 1.96,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.27,
+        "avg7": 0.29,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.23,
+        "reverseHoloAvg30": 2.47
       }
     }
   },
@@ -1498,6 +2592,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1513,12 +2625,45 @@
       "small": "https://images.pokemontcg.io/sm75/23.png",
       "large": "https://images.pokemontcg.io/sm75/23_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.36,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": 0.36
+        },
+        "reverseHolofoil": {
+          "low": 0.48,
+          "mid": 0.9,
+          "high": 4.95,
+          "market": 0.72,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.25,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.46,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.44,
+        "avg7": 0.33,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.62,
+        "reverseHoloAvg30": 1.86
       }
     }
   },
@@ -1565,6 +2710,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -1580,12 +2743,45 @@
       "small": "https://images.pokemontcg.io/sm75/24.png",
       "large": "https://images.pokemontcg.io/sm75/24_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 2.68,
+          "mid": 3.62,
+          "high": 10.37,
+          "market": 2.98,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.86,
+          "high": 11,
+          "market": 0.75,
+          "directLow": 0.78
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.12,
+        "lowPrice": 0.25,
+        "trendPrice": 1.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 12.5,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 5.6,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1.5,
+        "avg7": 1.22,
+        "avg30": 1.08,
+        "reverseHoloAvg1": 4.22,
+        "reverseHoloAvg7": 7.1,
+        "reverseHoloAvg30": 4.7
       }
     }
   },
@@ -1634,6 +2830,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Shibuzoh.",
     "rarity": "Common",
@@ -1649,12 +2863,45 @@
       "small": "https://images.pokemontcg.io/sm75/25.png",
       "large": "https://images.pokemontcg.io/sm75/25_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.47,
+          "high": 4.95,
+          "market": 0.64,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2,
+          "mid": 2,
+          "high": 2,
+          "market": 1.82,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.92,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 2.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.24,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.7,
+        "reverseHoloAvg7": 2.53,
+        "reverseHoloAvg30": 1.63
       }
     }
   },
@@ -1701,6 +2948,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -1716,12 +2981,45 @@
       "small": "https://images.pokemontcg.io/sm75/26.png",
       "large": "https://images.pokemontcg.io/sm75/26_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 3.1,
+          "mid": 4.78,
+          "high": 5.99,
+          "market": 3.06,
+          "directLow": 4.77
+        },
+        "normal": {
+          "low": 0.27,
+          "mid": 0.66,
+          "high": 4.95,
+          "market": 0.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.78,
+        "lowPrice": 0.05,
+        "trendPrice": 0.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.49,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 2.42,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.6,
+        "avg7": 0.65,
+        "avg30": 0.71,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 2.49,
+        "reverseHoloAvg30": 2.18
       }
     }
   },
@@ -1760,6 +3058,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -1775,12 +3091,45 @@
       "small": "https://images.pokemontcg.io/sm75/27.png",
       "large": "https://images.pokemontcg.io/sm75/27_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.11,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.23
+        },
+        "reverseHolofoil": {
+          "low": 0.36,
+          "mid": 0.78,
+          "high": 4.95,
+          "market": 0.86,
+          "directLow": 0.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.02,
+        "trendPrice": 0.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.18,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 1.97,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.22,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 2.32,
+        "reverseHoloAvg30": 0.99
       }
     }
   },
@@ -1826,6 +3175,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Shin Nagasawa",
     "rarity": "Common",
@@ -1841,12 +3208,45 @@
       "small": "https://images.pokemontcg.io/sm75/28.png",
       "large": "https://images.pokemontcg.io/sm75/28_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.23,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": 0.31
+        },
+        "reverseHolofoil": {
+          "low": 1.31,
+          "mid": 1.92,
+          "high": 2.56,
+          "market": 2.05,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.75,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.61,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.36,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.57,
+        "reverseHoloAvg30": 0.71
       }
     }
   },
@@ -1894,6 +3294,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "29",
     "artist": "hatachu",
     "rarity": "Uncommon",
@@ -1909,12 +3327,45 @@
       "small": "https://images.pokemontcg.io/sm75/29.png",
       "large": "https://images.pokemontcg.io/sm75/29_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.46,
+          "mid": 0.99,
+          "high": 1.79,
+          "market": 1.15,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.15,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.32,
+          "directLow": 0.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.03,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.45,
+        "reverseHoloLow": 0.74,
+        "reverseHoloTrend": 1.28,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.05,
+        "avg7": 0.35,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 1.22,
+        "reverseHoloAvg30": 1.28
       }
     }
   },
@@ -1958,6 +3409,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "30",
     "artist": "kawayoo",
     "rarity": "Uncommon",
@@ -1973,12 +3442,45 @@
       "small": "https://images.pokemontcg.io/sm75/30.png",
       "large": "https://images.pokemontcg.io/sm75/30_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.48,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.15,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.32,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.27,
+        "lowPrice": 0.05,
+        "trendPrice": 0.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.91,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.7,
+        "lowPriceExPlus": 0.07,
+        "avg1": 0.1,
+        "avg7": 0.28,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.68,
+        "reverseHoloAvg30": 0.68
       }
     }
   },
@@ -2021,6 +3523,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -2036,12 +3556,45 @@
       "small": "https://images.pokemontcg.io/sm75/31.png",
       "large": "https://images.pokemontcg.io/sm75/31_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.3,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.44,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.72,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 1.7,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.55,
+        "avg7": 0.26,
+        "avg30": 0.18,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 1.94,
+        "reverseHoloAvg30": 0.97
       }
     }
   },
@@ -2080,6 +3633,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -2095,12 +3666,45 @@
       "small": "https://images.pokemontcg.io/sm75/32.png",
       "large": "https://images.pokemontcg.io/sm75/32_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.26,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.53,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.55,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.73,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.15,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.57,
+        "reverseHoloAvg30": 0.6
       }
     }
   },
@@ -2153,6 +3757,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo",
@@ -2168,12 +3790,45 @@
       "small": "https://images.pokemontcg.io/sm75/33.png",
       "large": "https://images.pokemontcg.io/sm75/33_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.29,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.52,
+          "directLow": 0.49
+        },
+        "reverseHolofoil": {
+          "low": 0.94,
+          "mid": 1.2,
+          "high": 4.47,
+          "market": 1.13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.71,
+        "lowPrice": 0.15,
+        "trendPrice": 0.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.99,
+        "reverseHoloLow": 0.8,
+        "reverseHoloTrend": 1.65,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.2,
+        "avg7": 0.68,
+        "avg30": 0.68,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 1.77,
+        "reverseHoloAvg30": 1.57
       }
     }
   },
@@ -2213,6 +3868,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Ayaka Yoshida",
     "rarity": "Common",
@@ -2228,12 +3901,45 @@
       "small": "https://images.pokemontcg.io/sm75/34.png",
       "large": "https://images.pokemontcg.io/sm75/34_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.15
+        },
+        "reverseHolofoil": {
+          "low": 1.5,
+          "mid": 1.7,
+          "high": 3.59,
+          "market": 1.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.28,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.59,
+        "reverseHoloLow": 1.6,
+        "reverseHoloTrend": 1.95,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.21,
+        "avg30": 0.27,
+        "reverseHoloAvg1": 1.96,
+        "reverseHoloAvg7": 2.03,
+        "reverseHoloAvg30": 2.29
       }
     }
   },
@@ -2274,6 +3980,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Anesaki Dynamic",
     "rarity": "Common",
@@ -2289,12 +4013,45 @@
       "small": "https://images.pokemontcg.io/sm75/35.png",
       "large": "https://images.pokemontcg.io/sm75/35_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 1.24,
+          "mid": 1.58,
+          "high": 3.59,
+          "market": 1.82,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.09,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.83,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 2.81,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.11,
+        "avg7": 0.15,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 2.51,
+        "reverseHoloAvg30": 3.54
       }
     }
   },
@@ -2349,6 +4106,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "36",
     "artist": "sui",
     "rarity": "Uncommon",
@@ -2364,12 +4139,45 @@
       "small": "https://images.pokemontcg.io/sm75/36.png",
       "large": "https://images.pokemontcg.io/sm75/36_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.51,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.6,
+          "mid": 4.75,
+          "high": 6.95,
+          "market": 4.79,
+          "directLow": 4.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.69,
+        "lowPrice": 0.04,
+        "trendPrice": 0.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.8,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 3.7,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.05,
+        "avg7": 1.08,
+        "avg30": 0.56,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 3.31,
+        "reverseHoloAvg30": 4.26
       }
     }
   },
@@ -2435,6 +4243,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "37",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -2449,12 +4275,38 @@
       "small": "https://images.pokemontcg.io/sm75/37.png",
       "large": "https://images.pokemontcg.io/sm75/37_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11.67,
+          "mid": 16.16,
+          "high": 29.97,
+          "market": 15.76,
+          "directLow": 24.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.6,
+        "lowPrice": 1.9,
+        "trendPrice": 8.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.82,
+        "lowPriceExPlus": 4.95,
+        "avg1": 5,
+        "avg7": 8.47,
+        "avg30": 7.91,
+        "reverseHoloAvg1": 5.99,
+        "reverseHoloAvg7": 7.11,
+        "reverseHoloAvg30": 7.59
       }
     }
   },
@@ -2495,6 +4347,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -2510,12 +4380,45 @@
       "small": "https://images.pokemontcg.io/sm75/38.png",
       "large": "https://images.pokemontcg.io/sm75/38_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.34,
+          "mid": 0.7,
+          "high": 4.95,
+          "market": 0.77,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.9,
+        "reverseHoloLow": 0.24,
+        "reverseHoloTrend": 0.74,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.39,
+        "avg7": 0.12,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.9,
+        "reverseHoloAvg7": 0.66,
+        "reverseHoloAvg30": 0.79
       }
     }
   },
@@ -2561,6 +4464,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "39",
     "artist": "Shigenori Negishi",
     "rarity": "Uncommon",
@@ -2576,12 +4497,45 @@
       "small": "https://images.pokemontcg.io/sm75/39.png",
       "large": "https://images.pokemontcg.io/sm75/39_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.14,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.74,
+          "mid": 0.99,
+          "high": 4.95,
+          "market": 0.83,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.25,
+        "lowPrice": 0.02,
+        "trendPrice": 0.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.08,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 1.03,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.23,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 0.18,
+        "reverseHoloAvg7": 0.96,
+        "reverseHoloAvg30": 1.23
       }
     }
   },
@@ -2626,6 +4580,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Kyoko Umemoto",
     "rarity": "Rare Holo",
@@ -2641,12 +4613,45 @@
       "small": "https://images.pokemontcg.io/sm75/40.png",
       "large": "https://images.pokemontcg.io/sm75/40_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.76,
+          "high": 4.95,
+          "market": 0.75,
+          "directLow": 0.79
+        },
+        "reverseHolofoil": {
+          "low": 0.93,
+          "mid": 1.32,
+          "high": 1.89,
+          "market": 1.83,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.07,
+        "lowPrice": 0.15,
+        "trendPrice": 0.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.23,
+        "reverseHoloTrend": 1.13,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.49,
+        "avg7": 0.82,
+        "avg30": 0.8,
+        "reverseHoloAvg1": 0.9,
+        "reverseHoloAvg7": 2.02,
+        "reverseHoloAvg30": 2
       }
     }
   },
@@ -2691,6 +4696,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "40a",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -2706,12 +4729,25 @@
       "small": "https://images.pokemontcg.io/sm75/40a.png",
       "large": "https://images.pokemontcg.io/sm75/40a_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-40a",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.58,
+        "lowPrice": 0.35,
+        "trendPrice": 1.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.32,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2,
+        "avg7": 1.67,
+        "avg30": 1.67,
+        "reverseHoloAvg1": 1.3,
+        "reverseHoloAvg7": 1.4,
+        "reverseHoloAvg30": 1.41
       }
     }
   },
@@ -2774,6 +4810,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "41",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -2788,12 +4842,38 @@
       "small": "https://images.pokemontcg.io/sm75/41.png",
       "large": "https://images.pokemontcg.io/sm75/41_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.48,
+          "mid": 2.99,
+          "high": 12.83,
+          "market": 2.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.53,
+        "lowPrice": 1,
+        "trendPrice": 4.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.01,
+        "lowPriceExPlus": 1.49,
+        "avg1": 1,
+        "avg7": 3.53,
+        "avg30": 4.51,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 3.81,
+        "reverseHoloAvg30": 3.57
       }
     }
   },
@@ -2842,6 +4922,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -2857,12 +4955,45 @@
       "small": "https://images.pokemontcg.io/sm75/42.png",
       "large": "https://images.pokemontcg.io/sm75/42_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.93,
+          "high": 4.95,
+          "market": 1.01,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.9,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.21,
+        "avg30": 0.17,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.86,
+        "reverseHoloAvg30": 1.03
       }
     }
   },
@@ -2911,6 +5042,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Yuka Morii",
     "rarity": "Uncommon",
@@ -2926,12 +5075,45 @@
       "small": "https://images.pokemontcg.io/sm75/43.png",
       "large": "https://images.pokemontcg.io/sm75/43_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 1.25,
+          "mid": 1.68,
+          "high": 2.47,
+          "market": 1.43,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.21,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": 0.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.28,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.5,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 1.35,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.47,
+        "avg7": 0.29,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 1.31,
+        "reverseHoloAvg30": 1.05
       }
     }
   },
@@ -2994,6 +5176,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "44",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -3008,12 +5208,38 @@
       "small": "https://images.pokemontcg.io/sm75/44.png",
       "large": "https://images.pokemontcg.io/sm75/44_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.87,
+          "mid": 5.58,
+          "high": 14.99,
+          "market": 5.56,
+          "directLow": 4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.27,
+        "lowPrice": 0.9,
+        "trendPrice": 5.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.66,
+        "lowPriceExPlus": 3.5,
+        "avg1": 2,
+        "avg7": 4.84,
+        "avg30": 6.71,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 3.72,
+        "reverseHoloAvg30": 4.31
       }
     }
   },
@@ -3058,6 +5284,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -3073,12 +5317,45 @@
       "small": "https://images.pokemontcg.io/sm75/45.png",
       "large": "https://images.pokemontcg.io/sm75/45_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.72,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.11,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.38,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.24,
+        "lowPrice": 0.02,
+        "trendPrice": 0.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.75,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 0.36,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.18,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.49,
+        "reverseHoloAvg30": 0.91
       }
     }
   },
@@ -3130,6 +5407,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Hasuno",
     "rarity": "Rare Holo",
@@ -3145,12 +5440,45 @@
       "small": "https://images.pokemontcg.io/sm75/46.png",
       "large": "https://images.pokemontcg.io/sm75/46_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.84,
+          "mid": 1.58,
+          "high": 2,
+          "market": 1.79,
+          "directLow": 1.65
+        },
+        "holofoil": {
+          "low": 0.37,
+          "mid": 0.77,
+          "high": 5,
+          "market": 0.73,
+          "directLow": 0.52
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.19,
+        "lowPrice": 0.25,
+        "trendPrice": 1.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9,
+        "reverseHoloLow": 0.45,
+        "reverseHoloTrend": 2.11,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.35,
+        "avg7": 1.2,
+        "avg30": 0.9,
+        "reverseHoloAvg1": 9,
+        "reverseHoloAvg7": 2.19,
+        "reverseHoloAvg30": 1.48
       }
     }
   },
@@ -3199,6 +5527,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "47",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -3214,12 +5560,45 @@
       "small": "https://images.pokemontcg.io/sm75/47.png",
       "large": "https://images.pokemontcg.io/sm75/47_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.2,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.55,
+          "directLow": 0.38
+        },
+        "reverseHolofoil": {
+          "low": 1.29,
+          "mid": 1.79,
+          "high": 1.99,
+          "market": 1.87,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.89,
+        "lowPrice": 0.13,
+        "trendPrice": 0.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.75,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.35,
+        "avg7": 0.95,
+        "avg30": 0.84,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 1.74,
+        "reverseHoloAvg30": 1.63
       }
     }
   },
@@ -3284,6 +5663,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "48",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -3298,12 +5695,38 @@
       "small": "https://images.pokemontcg.io/sm75/48.png",
       "large": "https://images.pokemontcg.io/sm75/48_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.49,
+          "mid": 4.26,
+          "high": 7.99,
+          "market": 4.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.47,
+        "lowPrice": 2,
+        "trendPrice": 6.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.03,
+        "lowPriceExPlus": 3,
+        "avg1": 5.23,
+        "avg7": 6.37,
+        "avg30": 6.19,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.27,
+        "reverseHoloAvg30": 4.43
       }
     }
   },
@@ -3352,6 +5775,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Misa Tsutsui",
     "rarity": "Uncommon",
@@ -3367,12 +5808,45 @@
       "small": "https://images.pokemontcg.io/sm75/49.png",
       "large": "https://images.pokemontcg.io/sm75/49_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": 0.2
+        },
+        "reverseHolofoil": {
+          "low": 0.66,
+          "mid": 1.42,
+          "high": 4,
+          "market": 2.05,
+          "directLow": 2.97
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.24,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 1.78,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.35,
+        "avg7": 0.29,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 2.49,
+        "reverseHoloAvg7": 1.96,
+        "reverseHoloAvg30": 1.37
       }
     }
   },
@@ -3412,6 +5886,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Uncommon",
@@ -3427,12 +5919,45 @@
       "small": "https://images.pokemontcg.io/sm75/50.png",
       "large": "https://images.pokemontcg.io/sm75/50_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.28,
+          "mid": 0.65,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 0.5,
+        "trendPrice": 0,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 0,
+        "avg7": 0,
+        "avg30": 0,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3479,6 +6004,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Sanosuke Sakuma",
     "rarity": "Uncommon",
@@ -3494,12 +6037,45 @@
       "small": "https://images.pokemontcg.io/sm75/51.png",
       "large": "https://images.pokemontcg.io/sm75/51_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.33,
+          "mid": 0.88,
+          "high": 4.95,
+          "market": 0.69,
+          "directLow": 0.62
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.16,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.75,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 1.02,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.17,
+        "avg7": 0.2,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.11,
+        "reverseHoloAvg30": 0.81
       }
     }
   },
@@ -3548,6 +6124,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Yusuke Ohmura",
     "rarity": "Common",
@@ -3563,12 +6157,45 @@
       "small": "https://images.pokemontcg.io/sm75/52.png",
       "large": "https://images.pokemontcg.io/sm75/52_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.08
+        },
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.81,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.4,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.43,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.18,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.34,
+        "reverseHoloAvg30": 0.53
       }
     }
   },
@@ -3621,6 +6248,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "53",
     "artist": "hatachu",
     "rarity": "Common",
@@ -3636,12 +6281,45 @@
       "small": "https://images.pokemontcg.io/sm75/53.png",
       "large": "https://images.pokemontcg.io/sm75/53_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 0.87,
+          "high": 1.19,
+          "market": 0.92,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.24,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.9,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.45,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.26,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 4.9,
+        "reverseHoloAvg7": 1.22,
+        "reverseHoloAvg30": 0.98
       }
     }
   },
@@ -3691,6 +6369,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "54",
     "artist": "so-taro",
     "rarity": "Rare Holo",
@@ -3706,12 +6402,45 @@
       "small": "https://images.pokemontcg.io/sm75/54.png",
       "large": "https://images.pokemontcg.io/sm75/54_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.39,
+          "mid": 0.74,
+          "high": 4.95,
+          "market": 0.72,
+          "directLow": 0.6
+        },
+        "reverseHolofoil": {
+          "low": 0.89,
+          "mid": 1.09,
+          "high": 2.22,
+          "market": 1.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.66,
+        "lowPrice": 0.15,
+        "trendPrice": 0.85,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.12,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 4.18,
+        "lowPriceExPlus": 0.15,
+        "avg1": 1.45,
+        "avg7": 0.91,
+        "avg30": 0.75,
+        "reverseHoloAvg1": 1.74,
+        "reverseHoloAvg7": 4.02,
+        "reverseHoloAvg30": 2.56
       }
     }
   },
@@ -3769,6 +6498,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "55",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -3784,12 +6531,45 @@
       "small": "https://images.pokemontcg.io/sm75/55.png",
       "large": "https://images.pokemontcg.io/sm75/55_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.32
+        },
+        "reverseHolofoil": {
+          "low": 0.3,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.48,
+          "directLow": 0.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.15,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.49,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 0.54,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.2,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.84
       }
     }
   },
@@ -3844,6 +6624,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -3859,12 +6657,45 @@
       "small": "https://images.pokemontcg.io/sm75/56.png",
       "large": "https://images.pokemontcg.io/sm75/56_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.72,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.3,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 1.15,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.23,
+        "avg30": 0.15,
+        "reverseHoloAvg1": 1.25,
+        "reverseHoloAvg7": 1.17,
+        "reverseHoloAvg30": 0.83
       }
     }
   },
@@ -3909,6 +6740,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Shibuzoh.",
     "rarity": "Common",
@@ -3924,12 +6773,45 @@
       "small": "https://images.pokemontcg.io/sm75/57.png",
       "large": "https://images.pokemontcg.io/sm75/57_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.33,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.58,
+          "mid": 1.04,
+          "high": 1.5,
+          "market": 1.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.74,
+        "reverseHoloLow": 0.25,
+        "reverseHoloTrend": 1.96,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.4,
+        "avg7": 0.23,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.14,
+        "reverseHoloAvg30": 1.22
       }
     }
   },
@@ -3945,6 +6827,24 @@
       "Draw 2 cards for each Fire Pokémon you have in play.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -3956,12 +6856,45 @@
       "small": "https://images.pokemontcg.io/sm75/58.png",
       "large": "https://images.pokemontcg.io/sm75/58_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": 0.29
+        },
+        "holofoil": {
+          "low": 0.05,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.27,
+        "lowPrice": 0.06,
+        "trendPrice": 0.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.53,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.51,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.17,
+        "avg7": 0.23,
+        "avg30": 0.3,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.61,
+        "reverseHoloAvg30": 0.6
       }
     }
   },
@@ -3977,6 +6910,24 @@
       "If the Dragon Pokémon this card is attached to is your Active Pokémon and is damaged by an opponent's attack (even if that Pokémon is Knocked Out), put 3 damage counters on the Attacking Pokémon.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -3988,12 +6939,45 @@
       "small": "https://images.pokemontcg.io/sm75/59.png",
       "large": "https://images.pokemontcg.io/sm75/59_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.86,
+          "high": 4.95,
+          "market": 0.86,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.2,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.32,
+          "directLow": 0.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.02,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.08,
+        "reverseHoloLow": 0.18,
+        "reverseHoloTrend": 0.92,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.16,
+        "avg7": 0.25,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0.38,
+        "reverseHoloAvg7": 0.89,
+        "reverseHoloAvg30": 0.64
       }
     }
   },
@@ -4009,6 +6993,24 @@
       "Search your deck for up to 4 Fire Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Eske Yoshinob",
     "rarity": "Uncommon",
@@ -4020,12 +7022,45 @@
       "small": "https://images.pokemontcg.io/sm75/60.png",
       "large": "https://images.pokemontcg.io/sm75/60_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.75,
+          "mid": 1.38,
+          "high": 2.97,
+          "market": 1.41,
+          "directLow": 1.65
+        },
+        "normal": {
+          "low": 0.2,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.53,
+          "directLow": 0.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 2,
+        "trendPrice": 0,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 0,
+        "avg7": 0,
+        "avg30": 0,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4041,6 +7076,24 @@
       "Search your deck for up to 4 Fire Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "60a",
     "artist": "Yoshinobu Saito",
     "rarity": "Uncommon",
@@ -4052,12 +7105,25 @@
       "small": "https://images.pokemontcg.io/sm75/60a.png",
       "large": "https://images.pokemontcg.io/sm75/60a_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-60a",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.08,
+        "trendPrice": 0.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.42,
+        "lowPriceExPlus": 0.08,
+        "avg1": 1,
+        "avg7": 0.15,
+        "avg30": 0.4,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -4075,6 +7141,24 @@
       "You may play only 1 Supporter card during your turn (before your attack).",
       "◇ (Prism Star) Rule: You can't have more than 1 ◇ card with the same name in your deck. If a ◇ card would go to the discard pile, put it in the Lost Zone instead."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "61",
     "artist": "kodama",
     "rarity": "Rare Prism Star",
@@ -4086,12 +7170,38 @@
       "small": "https://images.pokemontcg.io/sm75/61.png",
       "large": "https://images.pokemontcg.io/sm75/61_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.65,
+          "mid": 1.73,
+          "high": 4.99,
+          "market": 1.72,
+          "directLow": 2.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.97,
+        "lowPrice": 0.4,
+        "trendPrice": 1.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.5,
+        "reverseHoloLow": 0.45,
+        "reverseHoloTrend": 2.61,
+        "lowPriceExPlus": 0.4,
+        "avg1": 1.24,
+        "avg7": 1.4,
+        "avg30": 1.14,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.49,
+        "reverseHoloAvg30": 1.83
       }
     }
   },
@@ -4106,6 +7216,24 @@
       "Switch your Active Water Pokémon with 1 of your Benched Pokémon. If you do, heal 30 damage from the Pokémon you moved to your Bench.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Yoshinobu Saito",
     "rarity": "Uncommon",
@@ -4117,12 +7245,45 @@
       "small": "https://images.pokemontcg.io/sm75/62.png",
       "large": "https://images.pokemontcg.io/sm75/62_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 2.75,
+          "mid": 2.99,
+          "high": 5.29,
+          "market": 3.47,
+          "directLow": 5.29
+        },
+        "normal": {
+          "low": 1.83,
+          "mid": 2.11,
+          "high": 5.49,
+          "market": 2.11,
+          "directLow": 2.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.44,
+        "lowPrice": 0.02,
+        "trendPrice": 0.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.07,
+        "reverseHoloLow": 0.23,
+        "reverseHoloTrend": 2.87,
+        "lowPriceExPlus": 0.07,
+        "avg1": 0.45,
+        "avg7": 0.45,
+        "avg30": 0.72,
+        "reverseHoloAvg1": 1.15,
+        "reverseHoloAvg7": 2.18,
+        "reverseHoloAvg30": 1.79
       }
     }
   },
@@ -4137,6 +7298,24 @@
       "Whenever a player flips a coin for the Special Condition Burned between turns, that Special Condition isn't removed even if the result is heads.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "63",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -4148,12 +7327,45 @@
       "small": "https://images.pokemontcg.io/sm75/63.png",
       "large": "https://images.pokemontcg.io/sm75/63_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.11,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.3,
+          "directLow": 0.3
+        },
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.63,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.75,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.8,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.23,
+        "avg30": 0.27,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.77,
+        "reverseHoloAvg30": 0.69
       }
     }
   },
@@ -4169,6 +7381,24 @@
       "Attach up to 2 basic Energy cards from your hand to 1 of your Dragon Pokémon.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -4180,12 +7410,45 @@
       "small": "https://images.pokemontcg.io/sm75/64.png",
       "large": "https://images.pokemontcg.io/sm75/64_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 0.94,
+          "high": 4.95,
+          "market": 0.93,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.11,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.37,
+        "lowPrice": 0.02,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.33,
+        "reverseHoloTrend": 1.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.3,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 1.24,
+        "reverseHoloAvg30": 0.97
       }
     }
   },
@@ -4250,6 +7513,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "65",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Ultra",
@@ -4264,12 +7545,38 @@
       "small": "https://images.pokemontcg.io/sm75/65.png",
       "large": "https://images.pokemontcg.io/sm75/65_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 22,
+          "mid": 54.95,
+          "high": 89.99,
+          "market": 26.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.98,
+        "lowPrice": 7.99,
+        "trendPrice": 16.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.33,
+        "lowPriceExPlus": 10,
+        "avg1": 14.99,
+        "avg7": 18.8,
+        "avg30": 14.99,
+        "reverseHoloAvg1": 18,
+        "reverseHoloAvg7": 12.69,
+        "reverseHoloAvg30": 11.24
       }
     }
   },
@@ -4329,6 +7636,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "66",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4343,12 +7668,38 @@
       "small": "https://images.pokemontcg.io/sm75/66.png",
       "large": "https://images.pokemontcg.io/sm75/66_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.75,
+          "mid": 6.68,
+          "high": 12.87,
+          "market": 6.11,
+          "directLow": 6.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.41,
+        "lowPrice": 2,
+        "trendPrice": 9.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.62,
+        "lowPriceExPlus": 3.45,
+        "avg1": 8.75,
+        "avg7": 9.31,
+        "avg30": 10.05,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 9.21,
+        "reverseHoloAvg30": 7.31
       }
     }
   },
@@ -4414,6 +7765,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "67",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4428,12 +7797,38 @@
       "small": "https://images.pokemontcg.io/sm75/67.png",
       "large": "https://images.pokemontcg.io/sm75/67_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 30.04,
+          "mid": 49.99,
+          "high": 149.95,
+          "market": 30.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36.33,
+        "lowPrice": 11.5,
+        "trendPrice": 37.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 26.75,
+        "lowPriceExPlus": 16,
+        "avg1": 25,
+        "avg7": 31.5,
+        "avg30": 28.8,
+        "reverseHoloAvg1": 39.98,
+        "reverseHoloAvg7": 22.2,
+        "reverseHoloAvg30": 15.01
       }
     }
   },
@@ -4496,6 +7891,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "68",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4510,12 +7923,38 @@
       "small": "https://images.pokemontcg.io/sm75/68.png",
       "large": "https://images.pokemontcg.io/sm75/68_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.14,
+          "mid": 8.8,
+          "high": 33.33,
+          "market": 8.6,
+          "directLow": 8.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.48,
+        "lowPrice": 4,
+        "trendPrice": 9.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.96,
+        "lowPriceExPlus": 6,
+        "avg1": 10.95,
+        "avg7": 10.89,
+        "avg30": 10.42,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 9.38,
+        "reverseHoloAvg30": 8.83
       }
     }
   },
@@ -4531,6 +7970,24 @@
       "Draw 2 cards for each Fire Pokémon you have in play.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "69",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Ultra",
@@ -4542,12 +7999,38 @@
       "small": "https://images.pokemontcg.io/sm75/69.png",
       "large": "https://images.pokemontcg.io/sm75/69_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 21.99,
+          "mid": 26.78,
+          "high": 37.99,
+          "market": 22.54,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.43,
+        "lowPrice": 5,
+        "trendPrice": 19.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.4,
+        "lowPriceExPlus": 9.99,
+        "avg1": 15,
+        "avg7": 20.49,
+        "avg30": 18.68,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 14.11,
+        "reverseHoloAvg30": 12.61
       }
     }
   },
@@ -4563,6 +8046,24 @@
       "Attach up to 2 basic Energy cards from your hand to 1 of your Dragon Pokémon.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "70",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare Ultra",
@@ -4574,12 +8075,38 @@
       "small": "https://images.pokemontcg.io/sm75/70.png",
       "large": "https://images.pokemontcg.io/sm75/70_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 69.99,
+          "mid": 74.95,
+          "high": 99.99,
+          "market": 71.21,
+          "directLow": 72
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 54.12,
+        "lowPrice": 14.98,
+        "trendPrice": 58.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 27.02,
+        "lowPriceExPlus": 26.6,
+        "avg1": 49.48,
+        "avg7": 54.12,
+        "avg30": 49.66,
+        "reverseHoloAvg1": 32,
+        "reverseHoloAvg7": 21.93,
+        "reverseHoloAvg30": 21.04
       }
     }
   },
@@ -4644,6 +8171,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "71",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Rainbow",
@@ -4658,12 +8203,38 @@
       "small": "https://images.pokemontcg.io/sm75/71.png",
       "large": "https://images.pokemontcg.io/sm75/71_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 87.99,
+          "mid": 102.49,
+          "high": 139.99,
+          "market": 61.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.3,
+        "lowPrice": 9.5,
+        "trendPrice": 32.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 35.03,
+        "lowPriceExPlus": 18.9,
+        "avg1": 44.95,
+        "avg7": 46.8,
+        "avg30": 34.36,
+        "reverseHoloAvg1": 49.89,
+        "reverseHoloAvg7": 35.12,
+        "reverseHoloAvg30": 27.71
       }
     }
   },
@@ -4726,6 +8297,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "72",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4740,12 +8329,38 @@
       "small": "https://images.pokemontcg.io/sm75/72.png",
       "large": "https://images.pokemontcg.io/sm75/72_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 25.14,
+          "mid": 35,
+          "high": 50,
+          "market": 24.65,
+          "directLow": 34.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 23.98,
+        "lowPrice": 12.5,
+        "trendPrice": 23.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 21.93,
+        "lowPriceExPlus": 15.95,
+        "avg1": 25,
+        "avg7": 28.09,
+        "avg30": 19.69,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 17.29,
+        "reverseHoloAvg30": 16.39
       }
     }
   },
@@ -4808,6 +8423,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "73",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4822,12 +8455,38 @@
       "small": "https://images.pokemontcg.io/sm75/73.png",
       "large": "https://images.pokemontcg.io/sm75/73_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 34.51,
+          "mid": 41.13,
+          "high": 70.2,
+          "market": 41.25,
+          "directLow": 44.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 140,
+        "lowPrice": 14.5,
+        "trendPrice": 46.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 34.52,
+        "lowPriceExPlus": 19.99,
+        "avg1": 140,
+        "avg7": 47.31,
+        "avg30": 39.83,
+        "reverseHoloAvg1": 29.99,
+        "reverseHoloAvg7": 30.92,
+        "reverseHoloAvg30": 21.5
       }
     }
   },
@@ -4892,6 +8551,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "74",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4906,12 +8583,38 @@
       "small": "https://images.pokemontcg.io/sm75/74.png",
       "large": "https://images.pokemontcg.io/sm75/74_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 79.99,
+          "mid": 80,
+          "high": 80,
+          "market": 30.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 42.66,
+        "lowPrice": 11.61,
+        "trendPrice": 39.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 35.41,
+        "lowPriceExPlus": 29,
+        "avg1": 49.95,
+        "avg7": 45.52,
+        "avg30": 45.54,
+        "reverseHoloAvg1": 37,
+        "reverseHoloAvg7": 36.28,
+        "reverseHoloAvg30": 23.91
       }
     }
   },
@@ -4927,6 +8630,24 @@
       "If the Dragon Pokémon this card is attached to is your Active Pokémon and is damaged by an opponent's attack (even if that Pokémon is Knocked Out), put 3 damage counters on the Attacking Pokémon.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "75",
     "artist": "Toyste Beach",
     "rarity": "Rare Secret",
@@ -4938,12 +8659,38 @@
       "small": "https://images.pokemontcg.io/sm75/75.png",
       "large": "https://images.pokemontcg.io/sm75/75_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.99,
+          "mid": 8,
+          "high": 14.99,
+          "market": 7.93,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18.43,
+        "lowPrice": 10,
+        "trendPrice": 17.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.41,
+        "lowPriceExPlus": 10,
+        "avg1": 18.43,
+        "avg7": 18.55,
+        "avg30": 21.03,
+        "reverseHoloAvg1": 7.49,
+        "reverseHoloAvg7": 19.71,
+        "reverseHoloAvg30": 18.12
       }
     }
   },
@@ -4959,6 +8706,24 @@
       "Search your deck for up to 4 Fire Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "76",
     "artist": "Eske Yoshinob",
     "rarity": "Rare Secret",
@@ -4970,12 +8735,38 @@
       "small": "https://images.pokemontcg.io/sm75/76.png",
       "large": "https://images.pokemontcg.io/sm75/76_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.23,
+          "mid": 10.52,
+          "high": 22.99,
+          "market": 10.52,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20.47,
+        "lowPrice": 9.98,
+        "trendPrice": 18.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.93,
+        "lowPriceExPlus": 11,
+        "avg1": 23.46,
+        "avg7": 19.83,
+        "avg30": 17.83,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 25.24,
+        "reverseHoloAvg30": 21.61
       }
     }
   },
@@ -4990,6 +8781,24 @@
       "Switch your Active Water Pokémon with 1 of your Benched Pokémon. If you do, heal 30 damage from the Pokémon you moved to your Bench.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "77",
     "artist": "Yoshinobu Saito",
     "rarity": "Rare Secret",
@@ -5001,12 +8810,38 @@
       "small": "https://images.pokemontcg.io/sm75/77.png",
       "large": "https://images.pokemontcg.io/sm75/77_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.12,
+          "mid": 14.9,
+          "high": 24.97,
+          "market": 14.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.68,
+        "lowPrice": 13.95,
+        "trendPrice": 21.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.06,
+        "lowPriceExPlus": 17,
+        "avg1": 23.04,
+        "avg7": 24,
+        "avg30": 26.36,
+        "reverseHoloAvg1": 45,
+        "reverseHoloAvg7": 21.41,
+        "reverseHoloAvg30": 17.53
       }
     }
   },
@@ -5059,6 +8894,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm75",
+      "name": "Dragon Majesty",
+      "series": "Sun & Moon",
+      "printedTotal": 70,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRM",
+      "releaseDate": "2018/09/07",
+      "updatedAt": "2018/10/01 21:54:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm75/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm75/logo.png"
+      }
+    },
     "number": "78",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Secret",
@@ -5073,12 +8926,38 @@
       "small": "https://images.pokemontcg.io/sm75/78.png",
       "large": "https://images.pokemontcg.io/sm75/78_hires.png"
     },
-    "set": {
-      "id": "sm75",
-      "releaseDate": "2018/09/07",
-      "name": "Dragon Majesty",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm75/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm75-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 84.36,
+          "mid": 92.27,
+          "high": 108.19,
+          "market": 81.38,
+          "directLow": 108.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm75-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 118.71,
+        "lowPrice": 30,
+        "trendPrice": 108.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 135.4,
+        "lowPriceExPlus": 64.99,
+        "avg1": 29,
+        "avg7": 98.46,
+        "avg30": 96.77,
+        "reverseHoloAvg1": 157,
+        "reverseHoloAvg7": 133.54,
+        "reverseHoloAvg30": 105.01
       }
     }
   }

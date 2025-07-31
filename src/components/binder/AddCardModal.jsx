@@ -51,7 +51,7 @@ const AddCardModal = ({
   // Determine remaining card slots robustly
   const currentCardCount =
     limits?.cards?.current ?? Object.keys(currentBinder?.cards || {}).length;
-  const binderCardLimit = limits?.cards?.limit ?? 500; // fallback 500
+  const binderCardLimit = limits?.cards?.limit ?? 1000; // fallback 1000
   const cardRemaining = Math.max(0, binderCardLimit - currentCardCount);
 
   // Reset search focus when modal closes / opens

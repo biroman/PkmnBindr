@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useRules } from "../contexts/RulesContext";
 import { useAuth } from "../hooks/useAuth";
+import { GLOBAL_CARD_LIMIT } from "../lib/globalRules.js";
 
 const useBinderLimits = (binder) => {
   const { canPerformAction } = useRules();
@@ -35,7 +36,7 @@ const useBinderLimits = (binder) => {
         setLimits({
           cards: {
             current: currentCardCount,
-            limit: cardCheck.limit || 700,
+            limit: cardCheck.limit || GLOBAL_CARD_LIMIT,
             canAdd: cardCheck.allowed,
             remaining: cardCheck.limit
               ? Math.max(0, cardCheck.limit - currentCardCount)

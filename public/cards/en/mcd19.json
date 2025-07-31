@@ -34,6 +34,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Sekio",
     "flavorText": "When attacked by bird Pokémon, it resists by releasing a terrifically strong odor from its antennae, but it often becomes their prey.",
@@ -48,12 +65,38 @@
       "small": "https://images.pokemontcg.io/mcd19/1.png",
       "large": "https://images.pokemontcg.io/mcd19/1_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.99,
+          "mid": 8.14,
+          "high": 15.88,
+          "market": 10.25,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.35,
+        "lowPrice": 0.25,
+        "trendPrice": 1.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.71,
+        "lowPriceExPlus": 1.5,
+        "avg1": 4,
+        "avg7": 1.71,
+        "avg30": 1.58,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 1.71,
+        "reverseHoloAvg30": 1.37
       }
     }
   },
@@ -92,6 +135,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Satoshi Shirai",
     "flavorText": "As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.",
@@ -106,12 +166,38 @@
       "small": "https://images.pokemontcg.io/mcd19/2.png",
       "large": "https://images.pokemontcg.io/mcd19/2_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.79,
+          "mid": 4,
+          "high": 10,
+          "market": 5.01,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.22,
+        "lowPrice": 0.15,
+        "trendPrice": 1.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.2,
+        "lowPriceExPlus": 0.79,
+        "avg1": 0.15,
+        "avg7": 1.08,
+        "avg30": 1.34,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 2.23,
+        "reverseHoloAvg30": 1.54
       }
     }
   },
@@ -162,6 +248,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Yumi",
     "flavorText": "When angered, it spouts brilliant fire from all over its body. It doesn't calm down until its opponent has burned to ash.",
@@ -176,12 +279,38 @@
       "small": "https://images.pokemontcg.io/mcd19/3.png",
       "large": "https://images.pokemontcg.io/mcd19/3_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.48,
+          "mid": 9.59,
+          "high": 15.55,
+          "market": 9.13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.03,
+        "lowPrice": 0.35,
+        "trendPrice": 2.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.63,
+        "lowPriceExPlus": 0.6,
+        "avg1": 6,
+        "avg7": 2.78,
+        "avg30": 1.75,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.86,
+        "reverseHoloAvg30": 1.69
       }
     }
   },
@@ -218,6 +347,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Shin Nagasawa",
     "flavorText": "An ancient tradition of Alolan festivals, still carried on to this day, is a competition to slide Sandshrew across ice as far as one can.",
@@ -232,12 +378,38 @@
       "small": "https://images.pokemontcg.io/mcd19/4.png",
       "large": "https://images.pokemontcg.io/mcd19/4_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.53,
+          "high": 5.56,
+          "market": 3.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.77,
+        "lowPrice": 0.3,
+        "trendPrice": 0.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.21,
+        "lowPriceExPlus": 0.3,
+        "avg1": 0.4,
+        "avg7": 0.72,
+        "avg30": 0.68,
+        "reverseHoloAvg1": 1.39,
+        "reverseHoloAvg7": 2.36,
+        "reverseHoloAvg30": 1.67
       }
     }
   },
@@ -285,6 +457,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Saya Tsuruta",
     "flavorText": "These Pokémon were once near extinction due to poaching. Following protective regulations, there is now an overabundance of them.",
@@ -299,12 +488,38 @@
       "small": "https://images.pokemontcg.io/mcd19/5.png",
       "large": "https://images.pokemontcg.io/mcd19/5_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15.28,
+          "mid": 22.64,
+          "high": 30,
+          "market": 10.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.01,
+        "lowPrice": 0.6,
+        "trendPrice": 2.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.7,
+        "lowPriceExPlus": 2,
+        "avg1": 0.77,
+        "avg7": 2.01,
+        "avg30": 2.58,
+        "reverseHoloAvg1": 5.25,
+        "reverseHoloAvg7": 3.89,
+        "reverseHoloAvg30": 3.37
       }
     }
   },
@@ -349,6 +564,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Kagemaru Himeno",
     "flavorText": "A plan was recently announced to gather many Pikachu and make an electric power plant.",
@@ -363,12 +595,38 @@
       "small": "https://images.pokemontcg.io/mcd19/6.png",
       "large": "https://images.pokemontcg.io/mcd19/6_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 10,
+          "high": 33.43,
+          "market": 21.58,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.59,
+        "lowPrice": 1,
+        "trendPrice": 5.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.67,
+        "lowPriceExPlus": 3.5,
+        "avg1": 7.5,
+        "avg7": 3.83,
+        "avg30": 6.02,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 11.67,
+        "reverseHoloAvg30": 9.23
       }
     }
   },
@@ -413,6 +671,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Shibuzoh.",
     "flavorText": "Should a strange light be seen flickering in an abandoned building, Gastly is lurking there.",
@@ -427,12 +702,38 @@
       "small": "https://images.pokemontcg.io/mcd19/7.png",
       "large": "https://images.pokemontcg.io/mcd19/7_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.49,
+          "mid": 28.39,
+          "high": 30.87,
+          "market": 9.61,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.53,
+        "lowPrice": 0.5,
+        "trendPrice": 2.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.36,
+        "lowPriceExPlus": 1,
+        "avg1": 0.7,
+        "avg7": 2.56,
+        "avg30": 2.34,
+        "reverseHoloAvg1": 0.9,
+        "reverseHoloAvg7": 2.36,
+        "reverseHoloAvg30": 2.18
       }
     }
   },
@@ -471,6 +772,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Miki Tanaka",
     "flavorText": "It can spontaneously become enraged. Everyone near it clears out as it rampages, and the resulting loneliness makes it angrier still.",
@@ -485,12 +803,38 @@
       "small": "https://images.pokemontcg.io/mcd19/8.png",
       "large": "https://images.pokemontcg.io/mcd19/8_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.45,
+          "mid": 4.82,
+          "high": 9.15,
+          "market": 4.67,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.24,
+        "lowPrice": 0.2,
+        "trendPrice": 1.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.13,
+        "lowPriceExPlus": 0.85,
+        "avg1": 1,
+        "avg7": 2.15,
+        "avg30": 1.93,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.34,
+        "reverseHoloAvg30": 1.94
       }
     }
   },
@@ -540,6 +884,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Mitsuhiro Arita",
     "flavorText": "It usually lives underground. It searches for food while boring its way through the ground at 50 miles per hour.",
@@ -554,12 +915,38 @@
       "small": "https://images.pokemontcg.io/mcd19/9.png",
       "large": "https://images.pokemontcg.io/mcd19/9_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 6.07,
+          "high": 13.81,
+          "market": 6.07,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.51,
+        "lowPrice": 0.1,
+        "trendPrice": 1.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.24,
+        "lowPriceExPlus": 0.5,
+        "avg1": 4,
+        "avg7": 1.58,
+        "avg30": 1.19,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.42,
+        "reverseHoloAvg30": 1.89
       }
     }
   },
@@ -602,6 +989,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Akira Komayama",
     "flavorText": "When its delicate pride is wounded, or when the gold coin on its forehead is dirtied, it flies into a hysterical rage.",
@@ -616,12 +1020,38 @@
       "small": "https://images.pokemontcg.io/mcd19/10.png",
       "large": "https://images.pokemontcg.io/mcd19/10_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.69,
+          "mid": 7.35,
+          "high": 16.09,
+          "market": 9.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.95,
+        "lowPrice": 0.25,
+        "trendPrice": 1.95,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.31,
+        "lowPriceExPlus": 0.8,
+        "avg1": 5,
+        "avg7": 1.46,
+        "avg30": 1.3,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.36,
+        "reverseHoloAvg30": 2.09
       }
     }
   },
@@ -662,6 +1092,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Megumi Mizutani",
     "flavorText": "This Pokémon are cherished in the Alola region, where they are thought to be feminine deities of the land incarnate.",
@@ -676,12 +1123,38 @@
       "small": "https://images.pokemontcg.io/mcd19/11.png",
       "large": "https://images.pokemontcg.io/mcd19/11_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 5,
+          "high": 22,
+          "market": 6.81,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.32,
+        "lowPrice": 0.29,
+        "trendPrice": 1.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.31,
+        "lowPriceExPlus": 1,
+        "avg1": 1.36,
+        "avg7": 1.17,
+        "avg30": 1.48,
+        "reverseHoloAvg1": 2.75,
+        "reverseHoloAvg7": 1.69,
+        "reverseHoloAvg30": 1.34
       }
     }
   },
@@ -727,6 +1200,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "mcd19",
+      "name": "McDonald's Collection 2019",
+      "series": "Other",
+      "printedTotal": 12,
+      "total": 12,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "releaseDate": "2019/10/15",
+      "updatedAt": "2022/10/10 15:12:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png",
+        "logo": "https://images.pokemontcg.io/mcd19/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Atsuko Nishida",
     "flavorText": "Current studies show it can evolve into an incredible eight different species of Pokémon.",
@@ -741,12 +1231,38 @@
       "small": "https://images.pokemontcg.io/mcd19/12.png",
       "large": "https://images.pokemontcg.io/mcd19/12_hires.png"
     },
-    "set": {
-      "id": "mcd19",
-      "releaseDate": "2019/10/15",
-      "name": "McDonald's Collection 2019",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/mcd19/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/mcd19-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12,
+          "mid": 19.14,
+          "high": 19.99,
+          "market": 17.19,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/mcd19-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.57,
+        "lowPrice": 0.99,
+        "trendPrice": 4.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.76,
+        "lowPriceExPlus": 3,
+        "avg1": 1.47,
+        "avg7": 3.49,
+        "avg30": 4.67,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 3.25,
+        "reverseHoloAvg30": 3
       }
     }
   }

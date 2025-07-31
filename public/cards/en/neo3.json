@@ -47,6 +47,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Toshinao Aoki",
     "rarity": "Rare Holo",
@@ -61,12 +78,45 @@
       "small": "https://images.pokemontcg.io/neo3/1.png",
       "large": "https://images.pokemontcg.io/neo3/1_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 76,
+          "mid": 117.27,
+          "high": 159.99,
+          "market": 136.95,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 29.74,
+          "mid": 47.5,
+          "high": 99.99,
+          "market": 49,
+          "directLow": 79.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.58,
+        "lowPrice": 3.9,
+        "trendPrice": 25.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 16,
+        "lowPriceExPlus": 23,
+        "avg1": 24.9,
+        "avg7": 24.42,
+        "avg30": 25.21,
+        "reverseHoloAvg1": 24.19,
+        "reverseHoloAvg7": 18.31,
+        "reverseHoloAvg30": 14.84
       }
     }
   },
@@ -121,6 +171,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Yuka Morii",
     "rarity": "Rare Holo",
@@ -135,12 +202,45 @@
       "small": "https://images.pokemontcg.io/neo3/2.png",
       "large": "https://images.pokemontcg.io/neo3/2_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 199.99,
+          "mid": 225,
+          "high": 225,
+          "market": 92.17,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 28.15,
+          "mid": 34.99,
+          "high": 39.95,
+          "market": 36.86,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 28.84,
+        "lowPrice": 4,
+        "trendPrice": 25.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.84,
+        "lowPriceExPlus": 30,
+        "avg1": 5,
+        "avg7": 21.94,
+        "avg30": 28.43,
+        "reverseHoloAvg1": 6.45,
+        "reverseHoloAvg7": 13.8,
+        "reverseHoloAvg30": 16.97
       }
     }
   },
@@ -184,6 +284,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare Holo",
@@ -198,12 +315,45 @@
       "small": "https://images.pokemontcg.io/neo3/3.png",
       "large": "https://images.pokemontcg.io/neo3/3_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 80,
+          "mid": 107.99,
+          "high": 249.99,
+          "market": 195.75,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 65.5,
+          "mid": 98.28,
+          "high": 144.88,
+          "market": 93.6,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 52.58,
+        "lowPrice": 17,
+        "trendPrice": 46.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 47.59,
+        "lowPriceExPlus": 45,
+        "avg1": 84.95,
+        "avg7": 59.92,
+        "avg30": 58.3,
+        "reverseHoloAvg1": 34.99,
+        "reverseHoloAvg7": 71.32,
+        "reverseHoloAvg30": 46.49
       }
     }
   },
@@ -254,6 +404,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare Holo",
@@ -268,12 +435,45 @@
       "small": "https://images.pokemontcg.io/neo3/4.png",
       "large": "https://images.pokemontcg.io/neo3/4_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 49.94,
+          "mid": 49.94,
+          "high": 49.94,
+          "market": 66.73,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 37.59,
+          "mid": 39.26,
+          "high": 50,
+          "market": 37.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 33.66,
+        "lowPrice": 9,
+        "trendPrice": 35.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.06,
+        "lowPriceExPlus": 22.5,
+        "avg1": 9.99,
+        "avg7": 25.66,
+        "avg30": 29.7,
+        "reverseHoloAvg1": 19.09,
+        "reverseHoloAvg7": 18.54,
+        "reverseHoloAvg30": 15.68
       }
     }
   },
@@ -317,6 +517,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Tomokazu Komiya",
     "rarity": "Rare Holo",
@@ -331,12 +548,45 @@
       "small": "https://images.pokemontcg.io/neo3/5.png",
       "large": "https://images.pokemontcg.io/neo3/5_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 44.23,
+          "mid": 53.53,
+          "high": 57.6,
+          "market": 51.11,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 23.74,
+          "mid": 27,
+          "high": 59.99,
+          "market": 31.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 30.3,
+        "lowPrice": 14,
+        "trendPrice": 28.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.71,
+        "lowPriceExPlus": 23.99,
+        "avg1": 29.99,
+        "avg7": 29.04,
+        "avg30": 31.82,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 16.04,
+        "reverseHoloAvg30": 13.45
       }
     }
   },
@@ -382,6 +632,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -396,12 +663,45 @@
       "small": "https://images.pokemontcg.io/neo3/6.png",
       "large": "https://images.pokemontcg.io/neo3/6_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 289.96,
+          "mid": 324.35,
+          "high": 374.01,
+          "market": 324.35,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 124.99,
+          "mid": 200,
+          "high": 500,
+          "market": 155.15,
+          "directLow": 179.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 63.97,
+        "lowPrice": 19.99,
+        "trendPrice": 60.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 71.29,
+        "lowPriceExPlus": 70.25,
+        "avg1": 99.99,
+        "avg7": 64.04,
+        "avg30": 74.77,
+        "reverseHoloAvg1": 99.99,
+        "reverseHoloAvg7": 80.43,
+        "reverseHoloAvg30": 48.47
       }
     }
   },
@@ -469,6 +769,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo",
@@ -483,12 +800,45 @@
       "small": "https://images.pokemontcg.io/neo3/7.png",
       "large": "https://images.pokemontcg.io/neo3/7_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 160,
+          "mid": 170,
+          "high": 499.99,
+          "market": 475,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 146,
+          "mid": 195.99,
+          "high": 550,
+          "market": 188.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 88.83,
+        "lowPrice": 20,
+        "trendPrice": 64.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 105.04,
+        "lowPriceExPlus": 99.99,
+        "avg1": 30,
+        "avg7": 85.44,
+        "avg30": 111.54,
+        "reverseHoloAvg1": 139.99,
+        "reverseHoloAvg7": 97.74,
+        "reverseHoloAvg30": 65.36
       }
     }
   },
@@ -537,6 +887,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -551,12 +918,45 @@
       "small": "https://images.pokemontcg.io/neo3/8.png",
       "large": "https://images.pokemontcg.io/neo3/8_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 220,
+          "mid": 220.5,
+          "high": 221,
+          "market": 388.33,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 100,
+          "mid": 119.99,
+          "high": 299.99,
+          "market": 196.03,
+          "directLow": 203.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 69.32,
+        "lowPrice": 12,
+        "trendPrice": 57.85,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 36.23,
+        "lowPriceExPlus": 75,
+        "avg1": 35,
+        "avg7": 72.99,
+        "avg30": 74.81,
+        "reverseHoloAvg1": 37.66,
+        "reverseHoloAvg7": 39.5,
+        "reverseHoloAvg30": 44.17
       }
     }
   },
@@ -605,6 +1005,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -619,12 +1036,45 @@
       "small": "https://images.pokemontcg.io/neo3/9.png",
       "large": "https://images.pokemontcg.io/neo3/9_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 46.01,
+          "mid": 50.51,
+          "high": 55,
+          "market": 45.26,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 22.95,
+          "mid": 24,
+          "high": 31,
+          "market": 20.14,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.44,
+        "lowPrice": 2.75,
+        "trendPrice": 15.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.88,
+        "lowPriceExPlus": 19.9,
+        "avg1": 12.95,
+        "avg7": 17.39,
+        "avg30": 15.78,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 10.39,
+        "reverseHoloAvg30": 9.4
       }
     }
   },
@@ -681,6 +1131,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "10",
     "artist": "\"Big Mama\" Tagawa, CR CG gangs",
     "rarity": "Rare Holo",
@@ -695,12 +1162,45 @@
       "small": "https://images.pokemontcg.io/neo3/10.png",
       "large": "https://images.pokemontcg.io/neo3/10_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 54.31,
+          "mid": 79.21,
+          "high": 96.53,
+          "market": 73.3,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 23,
+          "mid": 31.5,
+          "high": 50.74,
+          "market": 21.95,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.43,
+        "lowPrice": 3.99,
+        "trendPrice": 14.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.26,
+        "lowPriceExPlus": 15,
+        "avg1": 19.99,
+        "avg7": 17.57,
+        "avg30": 23,
+        "reverseHoloAvg1": 15.31,
+        "reverseHoloAvg7": 11.99,
+        "reverseHoloAvg30": 12.33
       }
     }
   },
@@ -751,6 +1251,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -765,12 +1282,45 @@
       "small": "https://images.pokemontcg.io/neo3/11.png",
       "large": "https://images.pokemontcg.io/neo3/11_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 83.76,
+          "mid": 96.21,
+          "high": 96.46,
+          "market": 96.46,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 32.6,
+          "mid": 38.99,
+          "high": 60,
+          "market": 40.7,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 39.54,
+        "lowPrice": 8,
+        "trendPrice": 34.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.08,
+        "lowPriceExPlus": 24,
+        "avg1": 149.99,
+        "avg7": 51.39,
+        "avg30": 42.31,
+        "reverseHoloAvg1": 19.32,
+        "reverseHoloAvg7": 17.72,
+        "reverseHoloAvg30": 17
       }
     }
   },
@@ -826,6 +1376,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Keiji Kinebuchi",
     "rarity": "Rare Holo",
@@ -840,12 +1407,45 @@
       "small": "https://images.pokemontcg.io/neo3/12.png",
       "large": "https://images.pokemontcg.io/neo3/12_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 78.91,
+          "mid": 82,
+          "high": 135.95,
+          "market": 80.01,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 28.87,
+          "mid": 48.76,
+          "high": 79.99,
+          "market": 40.88,
+          "directLow": 43.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.43,
+        "lowPrice": 6.99,
+        "trendPrice": 22.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.08,
+        "lowPriceExPlus": 14,
+        "avg1": 25,
+        "avg7": 19.63,
+        "avg30": 24.76,
+        "reverseHoloAvg1": 19.24,
+        "reverseHoloAvg7": 15.28,
+        "reverseHoloAvg30": 12.55
       }
     }
   },
@@ -891,6 +1491,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -905,12 +1522,45 @@
       "small": "https://images.pokemontcg.io/neo3/13.png",
       "large": "https://images.pokemontcg.io/neo3/13_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 149,
+          "mid": 179.05,
+          "high": 433.99,
+          "market": 310,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 124.95,
+          "mid": 210.5,
+          "high": 249.99,
+          "market": 211.09,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 81.74,
+        "lowPrice": 11.5,
+        "trendPrice": 84.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 70.09,
+        "lowPriceExPlus": 90,
+        "avg1": 104,
+        "avg7": 73.57,
+        "avg30": 80.41,
+        "reverseHoloAvg1": 33.32,
+        "reverseHoloAvg7": 54.62,
+        "reverseHoloAvg30": 42.4
       }
     }
   },
@@ -956,6 +1606,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Ken Sugimori",
     "rarity": "Rare Holo",
@@ -970,12 +1637,45 @@
       "small": "https://images.pokemontcg.io/neo3/14.png",
       "large": "https://images.pokemontcg.io/neo3/14_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 459.99,
+          "mid": 459.99,
+          "high": 459.99,
+          "market": 459.99,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 99,
+          "mid": 119.87,
+          "high": 149.99,
+          "market": 122.18,
+          "directLow": 137.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 72.22,
+        "lowPrice": 19,
+        "trendPrice": 75.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 70.86,
+        "lowPriceExPlus": 80,
+        "avg1": 85,
+        "avg7": 45.53,
+        "avg30": 63.41,
+        "reverseHoloAvg1": 59.5,
+        "reverseHoloAvg7": 59.99,
+        "reverseHoloAvg30": 49.24
       }
     }
   },
@@ -1029,6 +1729,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare",
@@ -1043,12 +1760,45 @@
       "small": "https://images.pokemontcg.io/neo3/15.png",
       "large": "https://images.pokemontcg.io/neo3/15_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 10.77,
+          "mid": 13.93,
+          "high": 20.85,
+          "market": 13.15,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 3.55,
+          "mid": 4.9,
+          "high": 9.99,
+          "market": 5.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.76,
+        "lowPrice": 0.95,
+        "trendPrice": 8.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.42,
+        "lowPriceExPlus": 3.5,
+        "avg1": 4.58,
+        "avg7": 8.55,
+        "avg30": 6.9,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 19.76,
+        "reverseHoloAvg30": 9.55
       }
     }
   },
@@ -1086,6 +1836,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -1100,12 +1867,45 @@
       "small": "https://images.pokemontcg.io/neo3/16.png",
       "large": "https://images.pokemontcg.io/neo3/16_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 12.19,
+          "mid": 12.2,
+          "high": 22.24,
+          "market": 23.53,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 6,
+          "mid": 10.92,
+          "high": 17,
+          "market": 9.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.51,
+        "lowPrice": 2,
+        "trendPrice": 9.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 29.77,
+        "lowPriceExPlus": 5.5,
+        "avg1": 9,
+        "avg7": 8.85,
+        "avg30": 9.02,
+        "reverseHoloAvg1": 34,
+        "reverseHoloAvg7": 26.75,
+        "reverseHoloAvg30": 17.81
       }
     }
   },
@@ -1147,6 +1947,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -1161,12 +1978,45 @@
       "small": "https://images.pokemontcg.io/neo3/17.png",
       "large": "https://images.pokemontcg.io/neo3/17_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 19.8,
+          "mid": 25.02,
+          "high": 34,
+          "market": 29.3,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 9,
+          "mid": 12.35,
+          "high": 25.99,
+          "market": 14,
+          "directLow": 5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.93,
+        "lowPrice": 0.98,
+        "trendPrice": 8.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.26,
+        "lowPriceExPlus": 5.99,
+        "avg1": 10.49,
+        "avg7": 8.19,
+        "avg30": 10.89,
+        "reverseHoloAvg1": 28.99,
+        "reverseHoloAvg7": 8.78,
+        "reverseHoloAvg30": 6.83
       }
     }
   },
@@ -1213,6 +2063,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1227,12 +2094,45 @@
       "small": "https://images.pokemontcg.io/neo3/18.png",
       "large": "https://images.pokemontcg.io/neo3/18_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 24.06,
+          "mid": 32.79,
+          "high": 50.98,
+          "market": 29.53,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 9.89,
+          "mid": 12.45,
+          "high": 44.28,
+          "market": 12.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.77,
+        "lowPrice": 2,
+        "trendPrice": 13.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.84,
+        "lowPriceExPlus": 6,
+        "avg1": 10.99,
+        "avg7": 9.75,
+        "avg30": 11.85,
+        "reverseHoloAvg1": 16.69,
+        "reverseHoloAvg7": 14.58,
+        "reverseHoloAvg30": 10.82
       }
     }
   },
@@ -1277,6 +2177,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -1291,12 +2208,45 @@
       "small": "https://images.pokemontcg.io/neo3/19.png",
       "large": "https://images.pokemontcg.io/neo3/19_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 9,
+          "mid": 15.27,
+          "high": 19.27,
+          "market": 9.13,
+          "directLow": 15.27
+        },
+        "unlimited": {
+          "low": 4,
+          "mid": 5.75,
+          "high": 10.99,
+          "market": 6.37,
+          "directLow": 5.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.01,
+        "lowPrice": 0.7,
+        "trendPrice": 4.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.96,
+        "lowPriceExPlus": 3,
+        "avg1": 2.5,
+        "avg7": 3.77,
+        "avg30": 4.96,
+        "reverseHoloAvg1": 3.9,
+        "reverseHoloAvg7": 8.92,
+        "reverseHoloAvg30": 6.9
       }
     }
   },
@@ -1343,6 +2293,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1357,12 +2324,45 @@
       "small": "https://images.pokemontcg.io/neo3/20.png",
       "large": "https://images.pokemontcg.io/neo3/20_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 23.8,
+          "mid": 37,
+          "high": 50.2,
+          "market": 53.59,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 24.5,
+          "mid": 28.35,
+          "high": 31,
+          "market": 21.78,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.84,
+        "lowPrice": 2.99,
+        "trendPrice": 24.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.66,
+        "lowPriceExPlus": 14.99,
+        "avg1": 39.95,
+        "avg7": 21.97,
+        "avg30": 18.53,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 4.59,
+        "reverseHoloAvg30": 4.59
       }
     }
   },
@@ -1412,6 +2412,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Masako Yamashita",
     "rarity": "Rare",
@@ -1426,12 +2443,45 @@
       "small": "https://images.pokemontcg.io/neo3/21.png",
       "large": "https://images.pokemontcg.io/neo3/21_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 13.57,
+          "mid": 17.08,
+          "high": 35,
+          "market": 17.1,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 5.29,
+          "mid": 8.68,
+          "high": 12.31,
+          "market": 7.95,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.84,
+        "lowPrice": 0.94,
+        "trendPrice": 5.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.41,
+        "lowPriceExPlus": 4,
+        "avg1": 3.5,
+        "avg7": 5.81,
+        "avg30": 5.7,
+        "reverseHoloAvg1": 2.25,
+        "reverseHoloAvg7": 3.58,
+        "reverseHoloAvg30": 3.58
       }
     }
   },
@@ -1473,6 +2523,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -1487,12 +2554,45 @@
       "small": "https://images.pokemontcg.io/neo3/22.png",
       "large": "https://images.pokemontcg.io/neo3/22_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 38.42,
+          "mid": 40.07,
+          "high": 73.97,
+          "market": 36.74,
+          "directLow": 66.57
+        },
+        "unlimited": {
+          "low": 8.25,
+          "mid": 11.02,
+          "high": 25.99,
+          "market": 12,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.1,
+        "lowPrice": 1,
+        "trendPrice": 8.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.81,
+        "lowPriceExPlus": 6,
+        "avg1": 6,
+        "avg7": 7.58,
+        "avg30": 8.62,
+        "reverseHoloAvg1": 3.5,
+        "reverseHoloAvg7": 4.34,
+        "reverseHoloAvg30": 4.34
       }
     }
   },
@@ -1547,6 +2647,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1561,12 +2678,45 @@
       "small": "https://images.pokemontcg.io/neo3/23.png",
       "large": "https://images.pokemontcg.io/neo3/23_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 10.29,
+          "mid": 12.5,
+          "high": 20,
+          "market": 11.63,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 4.49,
+          "mid": 5.77,
+          "high": 15.99,
+          "market": 6.72,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.52,
+        "lowPrice": 0.5,
+        "trendPrice": 5.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.16,
+        "lowPriceExPlus": 3.95,
+        "avg1": 6,
+        "avg7": 3.59,
+        "avg30": 5.04,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.39,
+        "reverseHoloAvg30": 2.39
       }
     }
   },
@@ -1612,6 +2762,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -1626,12 +2793,45 @@
       "small": "https://images.pokemontcg.io/neo3/24.png",
       "large": "https://images.pokemontcg.io/neo3/24_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 4.94,
+          "mid": 7.98,
+          "high": 12.12,
+          "market": 7.95,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.74,
+          "mid": 4.38,
+          "high": 10.99,
+          "market": 4.34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.03,
+        "lowPrice": 0.55,
+        "trendPrice": 4.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 3,
+        "avg7": 4.05,
+        "avg30": 4.44,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1680,6 +2880,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Keita Komatsuya, CR CG gangs",
     "rarity": "Rare",
@@ -1694,12 +2911,45 @@
       "small": "https://images.pokemontcg.io/neo3/25.png",
       "large": "https://images.pokemontcg.io/neo3/25_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 4.68,
+          "mid": 9.38,
+          "high": 15,
+          "market": 8.52,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2,
+          "mid": 3.15,
+          "high": 10.99,
+          "market": 3.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.7,
+        "lowPrice": 0.4,
+        "trendPrice": 2.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.47,
+        "lowPriceExPlus": 1.5,
+        "avg1": 0.8,
+        "avg7": 2.77,
+        "avg30": 3.14,
+        "reverseHoloAvg1": 13,
+        "reverseHoloAvg7": 10.56,
+        "reverseHoloAvg30": 5.52
       }
     }
   },
@@ -1746,6 +2996,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -1760,12 +3027,45 @@
       "small": "https://images.pokemontcg.io/neo3/26.png",
       "large": "https://images.pokemontcg.io/neo3/26_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 7.36,
+          "mid": 12.97,
+          "high": 14.92,
+          "market": 14.21,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.99,
+          "mid": 5.49,
+          "high": 10,
+          "market": 5.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.92,
+        "lowPrice": 1,
+        "trendPrice": 6.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.5,
+        "lowPriceExPlus": 2,
+        "avg1": 12,
+        "avg7": 5.28,
+        "avg30": 5.76,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 1.5,
+        "reverseHoloAvg30": 1.5
       }
     }
   },
@@ -1807,6 +3107,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -1821,12 +3138,45 @@
       "small": "https://images.pokemontcg.io/neo3/27.png",
       "large": "https://images.pokemontcg.io/neo3/27_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 37.59,
+          "mid": 41.06,
+          "high": 62.99,
+          "market": 41.97,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 9,
+          "mid": 15.21,
+          "high": 25.99,
+          "market": 15.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.62,
+        "lowPrice": 2,
+        "trendPrice": 11.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.9,
+        "lowPriceExPlus": 9.5,
+        "avg1": 9.98,
+        "avg7": 12.39,
+        "avg30": 10.66,
+        "reverseHoloAvg1": 15.99,
+        "reverseHoloAvg7": 4.77,
+        "reverseHoloAvg30": 4.77
       }
     }
   },
@@ -1878,6 +3228,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Toshinao Aoki",
     "rarity": "Uncommon",
@@ -1892,12 +3259,45 @@
       "small": "https://images.pokemontcg.io/neo3/28.png",
       "large": "https://images.pokemontcg.io/neo3/28_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.36,
+          "mid": 2.94,
+          "high": 89,
+          "market": 2.88,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.67,
+          "mid": 1.5,
+          "high": 2.88,
+          "market": 1.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.13,
+        "lowPrice": 0.02,
+        "trendPrice": 1.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.12,
+        "avg7": 0.99,
+        "avg30": 1.09,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1950,6 +3350,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Masako Yamashita",
     "rarity": "Uncommon",
@@ -1964,12 +3381,45 @@
       "small": "https://images.pokemontcg.io/neo3/29.png",
       "large": "https://images.pokemontcg.io/neo3/29_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.19,
+          "mid": 2.26,
+          "high": 5,
+          "market": 2.13,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.4,
+          "mid": 0.97,
+          "high": 89,
+          "market": 1.21,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.71,
+        "lowPrice": 0.02,
+        "trendPrice": 0.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.25,
+        "avg1": 1.58,
+        "avg7": 0.82,
+        "avg30": 0.92,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2023,6 +3473,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Yukiko Baba",
     "rarity": "Uncommon",
@@ -2037,12 +3504,45 @@
       "small": "https://images.pokemontcg.io/neo3/30.png",
       "large": "https://images.pokemontcg.io/neo3/30_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.02,
+          "mid": 1.99,
+          "high": 5,
+          "market": 1.71,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.31,
+          "mid": 0.79,
+          "high": 4.95,
+          "market": 0.8,
+          "directLow": 0.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.95,
+        "lowPrice": 0.02,
+        "trendPrice": 0.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.4,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.2,
+        "avg7": 0.67,
+        "avg30": 0.95,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.4
       }
     }
   },
@@ -2090,6 +3590,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Tomokazu Komiya",
     "rarity": "Uncommon",
@@ -2104,12 +3621,45 @@
       "small": "https://images.pokemontcg.io/neo3/31.png",
       "large": "https://images.pokemontcg.io/neo3/31_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.85,
+          "mid": 3.6,
+          "high": 5.99,
+          "market": 3.62,
+          "directLow": 3.72
+        },
+        "unlimited": {
+          "low": 0.6,
+          "mid": 1.2,
+          "high": 89,
+          "market": 1.38,
+          "directLow": 1.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.33,
+        "lowPrice": 0.04,
+        "trendPrice": 2.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.19,
+        "avg1": 4,
+        "avg7": 2.01,
+        "avg30": 1.73,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2157,6 +3707,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -2171,12 +3738,45 @@
       "small": "https://images.pokemontcg.io/neo3/32.png",
       "large": "https://images.pokemontcg.io/neo3/32_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.07,
+          "mid": 2.5,
+          "high": 4.99,
+          "market": 2.22,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.45,
+          "mid": 0.87,
+          "high": 2.5,
+          "market": 1.07,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.88,
+        "lowPrice": 0.02,
+        "trendPrice": 0.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.4,
+        "avg7": 0.75,
+        "avg30": 0.8,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2225,6 +3825,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Uncommon",
@@ -2239,12 +3856,45 @@
       "small": "https://images.pokemontcg.io/neo3/33.png",
       "large": "https://images.pokemontcg.io/neo3/33_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.32,
+          "mid": 2.77,
+          "high": 4,
+          "market": 3.03,
+          "directLow": 3.86
+        },
+        "unlimited": {
+          "low": 0.35,
+          "mid": 1.51,
+          "high": 89,
+          "market": 1.59,
+          "directLow": 1.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.82,
+        "lowPrice": 0.04,
+        "trendPrice": 0.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1,
+        "avg7": 0.63,
+        "avg30": 0.86,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2294,6 +3944,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Tomokazu Komiya",
     "rarity": "Uncommon",
@@ -2308,12 +3975,45 @@
       "small": "https://images.pokemontcg.io/neo3/34.png",
       "large": "https://images.pokemontcg.io/neo3/34_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 2.06,
+          "mid": 3.77,
+          "high": 9.24,
+          "market": 2.68,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.81,
+          "mid": 1.42,
+          "high": 89,
+          "market": 1.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.56,
+        "lowPrice": 0.02,
+        "trendPrice": 0.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.39,
+        "avg1": 0.32,
+        "avg7": 1.28,
+        "avg30": 1.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2360,6 +4060,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Atsuko Nishida",
     "rarity": "Uncommon",
@@ -2374,12 +4091,45 @@
       "small": "https://images.pokemontcg.io/neo3/35.png",
       "large": "https://images.pokemontcg.io/neo3/35_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.28,
+          "mid": 2.54,
+          "high": 4.99,
+          "market": 2.46,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.5,
+          "mid": 0.93,
+          "high": 181578.71,
+          "market": 1.18,
+          "directLow": 0.51
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.81,
+        "lowPrice": 0.05,
+        "trendPrice": 0.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.4,
+        "avg7": 0.9,
+        "avg30": 0.82,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2441,6 +4191,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Atsuko Nishida",
     "rarity": "Uncommon",
@@ -2455,12 +4222,45 @@
       "small": "https://images.pokemontcg.io/neo3/36.png",
       "large": "https://images.pokemontcg.io/neo3/36_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.21,
+          "mid": 2.19,
+          "high": 5.99,
+          "market": 1.82,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.45,
+          "mid": 0.91,
+          "high": 1.99,
+          "market": 1.04,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.86,
+        "lowPrice": 0.04,
+        "trendPrice": 0.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.99,
+        "avg7": 0.74,
+        "avg30": 0.9,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2508,6 +4308,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Miki Tanaka",
     "rarity": "Uncommon",
@@ -2522,12 +4339,45 @@
       "small": "https://images.pokemontcg.io/neo3/37.png",
       "large": "https://images.pokemontcg.io/neo3/37_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1,
+          "mid": 2,
+          "high": 3.45,
+          "market": 1.71,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.18,
+          "mid": 0.92,
+          "high": 4.7,
+          "market": 0.92,
+          "directLow": 0.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.73,
+        "lowPrice": 0.02,
+        "trendPrice": 0.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.29,
+        "avg7": 0.95,
+        "avg30": 0.72,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2581,6 +4431,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Yukiko Baba",
     "rarity": "Uncommon",
@@ -2595,12 +4462,45 @@
       "small": "https://images.pokemontcg.io/neo3/38.png",
       "large": "https://images.pokemontcg.io/neo3/38_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.89,
+          "mid": 1.58,
+          "high": 4.99,
+          "market": 1.44,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.8,
+          "high": 4.95,
+          "market": 0.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.83,
+        "lowPrice": 0.05,
+        "trendPrice": 0.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.17,
+        "avg7": 0.6,
+        "avg30": 0.7,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2647,6 +4547,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "39",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -2661,12 +4578,45 @@
       "small": "https://images.pokemontcg.io/neo3/39.png",
       "large": "https://images.pokemontcg.io/neo3/39_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.4,
+          "mid": 2.49,
+          "high": 3.99,
+          "market": 2.49,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.84,
+          "high": 4.99,
+          "market": 1.21,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.96,
+        "lowPrice": 0.09,
+        "trendPrice": 0.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1.4,
+        "avg7": 0.63,
+        "avg30": 0.93,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2713,6 +4663,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "40",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -2727,12 +4694,45 @@
       "small": "https://images.pokemontcg.io/neo3/40.png",
       "large": "https://images.pokemontcg.io/neo3/40_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.27,
+          "mid": 2.99,
+          "high": 5,
+          "market": 2.58,
+          "directLow": 3.37
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 1.05,
+          "high": 3.99,
+          "market": 1.45,
+          "directLow": 1.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.18,
+        "lowPrice": 0.05,
+        "trendPrice": 1.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 2.28,
+        "avg7": 1.07,
+        "avg30": 1.15,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2784,6 +4784,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -2798,12 +4815,45 @@
       "small": "https://images.pokemontcg.io/neo3/41.png",
       "large": "https://images.pokemontcg.io/neo3/41_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.75,
+          "mid": 1.13,
+          "high": 12,
+          "market": 1,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.23,
+          "mid": 0.47,
+          "high": 4.95,
+          "market": 0.51,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.43,
+        "lowPrice": 0.02,
+        "trendPrice": 0.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.25,
+        "avg7": 0.33,
+        "avg30": 0.48,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2852,6 +4902,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -2866,12 +4933,45 @@
       "small": "https://images.pokemontcg.io/neo3/42.png",
       "large": "https://images.pokemontcg.io/neo3/42_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.67,
+          "mid": 1.05,
+          "high": 4.99,
+          "market": 1.12,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.41,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.35,
+        "lowPrice": 0.02,
+        "trendPrice": 0.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.1,
+        "avg7": 0.22,
+        "avg30": 0.36,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2928,6 +5028,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -2942,12 +5059,45 @@
       "small": "https://images.pokemontcg.io/neo3/43.png",
       "large": "https://images.pokemontcg.io/neo3/43_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.88,
+          "mid": 1.42,
+          "high": 13,
+          "market": 1.42,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.44,
+          "high": 89,
+          "market": 0.44,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.38,
+        "lowPrice": 0.02,
+        "trendPrice": 1.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.76,
+        "avg7": 0.32,
+        "avg30": 0.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2987,6 +5137,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Masako Yamashita",
     "rarity": "Common",
@@ -3001,12 +5168,45 @@
       "small": "https://images.pokemontcg.io/neo3/44.png",
       "large": "https://images.pokemontcg.io/neo3/44_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.7,
+          "mid": 1.16,
+          "high": 4.99,
+          "market": 1.16,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.19,
+          "mid": 0.43,
+          "high": 23,
+          "market": 0.52,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.32,
+        "lowPrice": 0.02,
+        "trendPrice": 0.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.19,
+        "avg7": 0.31,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3042,6 +5242,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -3056,12 +5273,45 @@
       "small": "https://images.pokemontcg.io/neo3/45.png",
       "large": "https://images.pokemontcg.io/neo3/45_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.85,
+          "mid": 1.28,
+          "high": 4.99,
+          "market": 1.21,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.64,
+          "directLow": 0.44
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.02,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.65,
+        "avg7": 0.36,
+        "avg30": 0.44,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3107,6 +5357,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Hironobu Yoshida",
     "rarity": "Common",
@@ -3121,12 +5388,45 @@
       "small": "https://images.pokemontcg.io/neo3/46.png",
       "large": "https://images.pokemontcg.io/neo3/46_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.59,
+          "mid": 1.49,
+          "high": 4.23,
+          "market": 1.64,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.8,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.49,
+        "lowPrice": 0.02,
+        "trendPrice": 0.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.63,
+        "avg7": 0.32,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.25,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -3176,6 +5476,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "47",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -3190,12 +5507,45 @@
       "small": "https://images.pokemontcg.io/neo3/47.png",
       "large": "https://images.pokemontcg.io/neo3/47_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.68,
+          "mid": 1.19,
+          "high": 4.99,
+          "market": 1.18,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.44,
+          "high": 23,
+          "market": 0.52,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.51,
+        "lowPrice": 0.02,
+        "trendPrice": 1.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.5,
+        "avg7": 1.29,
+        "avg30": 0.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3253,6 +5603,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -3267,12 +5634,45 @@
       "small": "https://images.pokemontcg.io/neo3/48.png",
       "large": "https://images.pokemontcg.io/neo3/48_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 2.07,
+          "mid": 2.5,
+          "high": 3.5,
+          "market": 2.1,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.82,
+          "high": 89,
+          "market": 1.57,
+          "directLow": 0.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.58,
+        "lowPrice": 0.03,
+        "trendPrice": 0.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.65,
+        "avg7": 0.45,
+        "avg30": 0.57,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3319,6 +5719,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -3333,12 +5750,45 @@
       "small": "https://images.pokemontcg.io/neo3/49.png",
       "large": "https://images.pokemontcg.io/neo3/49_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.7,
+          "mid": 1.14,
+          "high": 4.43,
+          "market": 1.14,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.22,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": 0.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.42,
+        "lowPrice": 0.02,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.59,
+        "avg7": 0.43,
+        "avg30": 0.42,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3374,6 +5824,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -3388,12 +5855,45 @@
       "small": "https://images.pokemontcg.io/neo3/50.png",
       "large": "https://images.pokemontcg.io/neo3/50_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.7,
+          "mid": 1.06,
+          "high": 6.06,
+          "market": 1.01,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.42,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.4,
+        "lowPrice": 0.02,
+        "trendPrice": 0.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.35,
+        "avg7": 0.28,
+        "avg30": 0.38,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3438,6 +5938,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -3452,12 +5969,45 @@
       "small": "https://images.pokemontcg.io/neo3/51.png",
       "large": "https://images.pokemontcg.io/neo3/51_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.29,
+          "mid": 2.35,
+          "high": 3.49,
+          "market": 2.42,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.48,
+          "mid": 1,
+          "high": 8.13,
+          "market": 1.32,
+          "directLow": 1.97
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.45,
+        "lowPrice": 0.02,
+        "trendPrice": 0.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.14,
+        "avg1": 0.15,
+        "avg7": 0.38,
+        "avg30": 0.47,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3509,6 +6059,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3523,12 +6090,45 @@
       "small": "https://images.pokemontcg.io/neo3/52.png",
       "large": "https://images.pokemontcg.io/neo3/52_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.7,
+          "mid": 1,
+          "high": 2.25,
+          "market": 1.04,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.47,
+          "high": 89,
+          "market": 0.53,
+          "directLow": 0.34
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.34,
+        "lowPrice": 0.02,
+        "trendPrice": 0.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.5,
+        "avg7": 0.24,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3579,6 +6179,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -3593,12 +6210,45 @@
       "small": "https://images.pokemontcg.io/neo3/53.png",
       "large": "https://images.pokemontcg.io/neo3/53_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.84,
+          "mid": 1.1,
+          "high": 99.31,
+          "market": 1.07,
+          "directLow": 0.88
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.49,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.9,
+        "avg7": 0.55,
+        "avg30": 0.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3631,6 +6281,23 @@
         "text": "Flip a coin. If heads, choose a Special Energy card attached to 1 of your opponent's Pokémon. Your opponent shuffles that card into his or her deck."
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -3645,12 +6312,45 @@
       "small": "https://images.pokemontcg.io/neo3/54.png",
       "large": "https://images.pokemontcg.io/neo3/54_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.94,
+          "mid": 1.81,
+          "high": 2.81,
+          "market": 1.75,
+          "directLow": 1.69
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.83,
+          "high": 23,
+          "market": 0.99,
+          "directLow": 0.63
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.8,
+        "lowPrice": 0.02,
+        "trendPrice": 0.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.15,
+        "avg7": 0.3,
+        "avg30": 0.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3706,6 +6406,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "55",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -3720,12 +6437,45 @@
       "small": "https://images.pokemontcg.io/neo3/55.png",
       "large": "https://images.pokemontcg.io/neo3/55_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.25,
+          "mid": 1.5,
+          "high": 2.97,
+          "market": 1.43,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.48,
+          "high": 4.95,
+          "market": 0.58,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.48,
+        "lowPrice": 0.02,
+        "trendPrice": 0.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.08,
+        "avg1": 0.4,
+        "avg7": 0.35,
+        "avg30": 0.51,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3774,6 +6524,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -3788,12 +6555,45 @@
       "small": "https://images.pokemontcg.io/neo3/56.png",
       "large": "https://images.pokemontcg.io/neo3/56_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.8,
+          "mid": 1.49,
+          "high": 4.99,
+          "market": 1.19,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.46,
+          "high": 89,
+          "market": 0.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.02,
+        "trendPrice": 0.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.07,
+        "avg1": 0.37,
+        "avg7": 0.32,
+        "avg30": 0.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3849,6 +6649,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -3863,12 +6680,45 @@
       "small": "https://images.pokemontcg.io/neo3/57.png",
       "large": "https://images.pokemontcg.io/neo3/57_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.5,
+          "mid": 1.14,
+          "high": 4.99,
+          "market": 1.26,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.89,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.35,
+        "avg7": 0.28,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3915,6 +6765,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "58",
     "artist": "CR CG gangs",
     "rarity": "Common",
@@ -3929,12 +6796,45 @@
       "small": "https://images.pokemontcg.io/neo3/58.png",
       "large": "https://images.pokemontcg.io/neo3/58_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.78,
+          "mid": 1.49,
+          "high": 10.47,
+          "market": 1.49,
+          "directLow": 1.04
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.54,
+          "directLow": 0.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.55,
+        "lowPrice": 0.02,
+        "trendPrice": 0.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.12,
+        "avg7": 0.33,
+        "avg30": 0.54,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3985,6 +6885,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -3999,12 +6916,45 @@
       "small": "https://images.pokemontcg.io/neo3/59.png",
       "large": "https://images.pokemontcg.io/neo3/59_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.69,
+          "mid": 1.25,
+          "high": 2.3,
+          "market": 1.32,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.4,
+          "high": 23,
+          "market": 0.49,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.32,
+        "lowPrice": 0.02,
+        "trendPrice": 0.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.4,
+        "avg7": 0.31,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4019,6 +6969,23 @@
       "Attach Balloon Berry to 1 of your Pokémon that doesn't have a Pokémon Tool attached to it.",
       "When the Pokémon Balloon Berry is attached to retreats, discard Balloon Berry instead of discarding Energy cards."
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -4029,12 +6996,45 @@
       "small": "https://images.pokemontcg.io/neo3/60.png",
       "large": "https://images.pokemontcg.io/neo3/60_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.5,
+          "mid": 1,
+          "high": 89,
+          "market": 0.77,
+          "directLow": 0.69
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.56,
+          "high": 4.95,
+          "market": 0.65,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.6,
+        "lowPrice": 0.02,
+        "trendPrice": 0.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.5,
+        "avg7": 0.53,
+        "avg30": 0.54,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4049,6 +7049,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play.",
       "Once during each player's turn, he or she may flip a coin. If heads, that player removes 2 damage counters from his or her Active Pokémon (1 if it only has 1)."
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -4059,12 +7076,45 @@
       "small": "https://images.pokemontcg.io/neo3/61.png",
       "large": "https://images.pokemontcg.io/neo3/61_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.75,
+          "mid": 1.66,
+          "high": 4.99,
+          "market": 2.05,
+          "directLow": 3.04
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.75,
+          "high": 89,
+          "market": 0.86,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.61,
+        "lowPrice": 0.05,
+        "trendPrice": 0.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.38,
+        "avg7": 0.7,
+        "avg30": 0.73,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4075,6 +7125,23 @@
     "rules": [
       "Flip a coin for 1 or 2 of your non-Baby Pokémon that can evolve. For each heads, search your deck for a later-Stage card that matches that Pokémon. Then put that card into your hand. Shuffle your deck afterward."
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -4085,12 +7152,45 @@
       "small": "https://images.pokemontcg.io/neo3/62.png",
       "large": "https://images.pokemontcg.io/neo3/62_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.5,
+          "mid": 1.48,
+          "high": 3.5,
+          "market": 2.44,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.64,
+          "high": 4.95,
+          "market": 0.78,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.69,
+        "lowPrice": 0.06,
+        "trendPrice": 0.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.56,
+        "avg7": 0.63,
+        "avg30": 0.73,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4105,6 +7205,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play.",
       "Each Pokémon in play with Dark in its name (even your opponent's) gets +20 HP."
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Keiji Kinebuchi",
     "rarity": "Uncommon",
@@ -4115,12 +7232,45 @@
       "small": "https://images.pokemontcg.io/neo3/63.png",
       "large": "https://images.pokemontcg.io/neo3/63_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 4.01,
+          "mid": 8.49,
+          "high": 9.95,
+          "market": 7.59,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.5,
+          "mid": 1.02,
+          "high": 2.99,
+          "market": 1.81,
+          "directLow": 0.93
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.79,
+        "lowPrice": 0.02,
+        "trendPrice": 1.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.68,
+        "avg7": 1.11,
+        "avg30": 0.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4131,6 +7281,23 @@
     "rules": [
       "Flip 2 coins. If both are heads, put a Baby Pokémon, Basic Pokémon, or Evolution card from your discard pile into your hand. If both are tails, put a Trainer card from your discard pile into your hand."
     ],
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Keiji Kinebuchi",
     "rarity": "Common",
@@ -4141,12 +7308,45 @@
       "small": "https://images.pokemontcg.io/neo3/64.png",
       "large": "https://images.pokemontcg.io/neo3/64_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.2,
+          "mid": 0.7,
+          "high": 4.99,
+          "market": 0.68,
+          "directLow": 0.4
+        },
+        "unlimited": {
+          "low": 0.15,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.25,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.25,
+        "avg7": 0.18,
+        "avg30": 0.23,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4208,6 +7408,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Ken Sugimori",
     "rarity": "Rare Shining",
@@ -4222,12 +7439,38 @@
       "small": "https://images.pokemontcg.io/neo3/65.png",
       "large": "https://images.pokemontcg.io/neo3/65_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "unlimitedHolofoil": {
+          "low": 346.2,
+          "mid": 349.99,
+          "high": 799.99,
+          "market": 600.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 335.45,
+        "lowPrice": 70,
+        "trendPrice": 346.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 73.71,
+        "lowPriceExPlus": 300,
+        "avg1": 650,
+        "avg7": 314.5,
+        "avg30": 323.56,
+        "reverseHoloAvg1": 85,
+        "reverseHoloAvg7": 100.95,
+        "reverseHoloAvg30": 110.06
       }
     }
   },
@@ -4279,6 +7522,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo3",
+      "name": "Neo Revelation",
+      "series": "Neo",
+      "printedTotal": 64,
+      "total": 66,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N3",
+      "releaseDate": "2001/09/21",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo3/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo3/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Ken Sugimori",
     "rarity": "Rare Shining",
@@ -4293,12 +7553,38 @@
       "small": "https://images.pokemontcg.io/neo3/66.png",
       "large": "https://images.pokemontcg.io/neo3/66_hires.png"
     },
-    "set": {
-      "id": "neo3",
-      "releaseDate": "2001/09/21",
-      "name": "Neo Revelation",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo3-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "unlimitedHolofoil": {
+          "low": 272,
+          "mid": 480,
+          "high": 700,
+          "market": 407.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo3-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 218.5,
+        "lowPrice": 55,
+        "trendPrice": 226.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 85.59,
+        "lowPriceExPlus": 109,
+        "avg1": 300,
+        "avg7": 184.44,
+        "avg30": 211.64,
+        "reverseHoloAvg1": 55,
+        "reverseHoloAvg7": 120.9,
+        "reverseHoloAvg30": 126.4
       }
     }
   }

@@ -41,6 +41,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Atsuko Nishida",
     "rarity": "Rare Holo",
@@ -55,12 +72,45 @@
       "small": "https://images.pokemontcg.io/neo2/1.png",
       "large": "https://images.pokemontcg.io/neo2/1_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 395,
+          "mid": 397.5,
+          "high": 399.99,
+          "market": 299,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 112.86,
+          "mid": 220.19,
+          "high": 499.99,
+          "market": 220.37,
+          "directLow": 499.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 114.7,
+        "lowPrice": 20,
+        "trendPrice": 127.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 35.99,
+        "lowPriceExPlus": 70,
+        "avg1": 272,
+        "avg7": 157.03,
+        "avg30": 93.45,
+        "reverseHoloAvg1": 19.99,
+        "reverseHoloAvg7": 33.84,
+        "reverseHoloAvg30": 43.63
       }
     }
   },
@@ -115,6 +165,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "2",
     "artist": "CR CG gangs",
     "rarity": "Rare Holo",
@@ -129,12 +196,45 @@
       "small": "https://images.pokemontcg.io/neo2/2.png",
       "large": "https://images.pokemontcg.io/neo2/2_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 49.5,
+          "mid": 59.22,
+          "high": 88.51,
+          "market": 52.03,
+          "directLow": 54.47
+        },
+        "unlimitedHolofoil": {
+          "low": 13.1,
+          "mid": 18.26,
+          "high": 32.45,
+          "market": 19.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.24,
+        "lowPrice": 2.5,
+        "trendPrice": 10.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.83,
+        "lowPriceExPlus": 13,
+        "avg1": 7.49,
+        "avg7": 12.1,
+        "avg30": 13.56,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 8.52,
+        "reverseHoloAvg30": 10.37
       }
     }
   },
@@ -182,6 +282,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare Holo",
@@ -196,12 +313,45 @@
       "small": "https://images.pokemontcg.io/neo2/3.png",
       "large": "https://images.pokemontcg.io/neo2/3_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 72.95,
+          "mid": 84.28,
+          "high": 85.2,
+          "market": 84.28,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 7.99,
+          "mid": 11.29,
+          "high": 349.99,
+          "market": 11.33,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.36,
+        "lowPrice": 0.5,
+        "trendPrice": 5.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.06,
+        "lowPriceExPlus": 4,
+        "avg1": 3.95,
+        "avg7": 6.44,
+        "avg30": 5.27,
+        "reverseHoloAvg1": 2.75,
+        "reverseHoloAvg7": 8.75,
+        "reverseHoloAvg30": 7.14
       }
     }
   },
@@ -252,6 +402,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare Holo",
@@ -266,12 +433,45 @@
       "small": "https://images.pokemontcg.io/neo2/4.png",
       "large": "https://images.pokemontcg.io/neo2/4_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 130.2,
+          "mid": 130.2,
+          "high": 130.2,
+          "market": 160.55,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 35.08,
+          "mid": 69.36,
+          "high": 99.99,
+          "market": 67.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.27,
+        "lowPrice": 4,
+        "trendPrice": 17.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 43.01,
+        "lowPriceExPlus": 15,
+        "avg1": 33.5,
+        "avg7": 30.5,
+        "avg30": 28.41,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 42.98,
+        "reverseHoloAvg30": 29.88
       }
     }
   },
@@ -321,6 +521,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Aya Kusube",
     "rarity": "Rare Holo",
@@ -335,12 +552,45 @@
       "small": "https://images.pokemontcg.io/neo2/5.png",
       "large": "https://images.pokemontcg.io/neo2/5_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 57.96,
+          "mid": 117.05,
+          "high": 149.49,
+          "market": 209.99,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 42,
+          "mid": 70,
+          "high": 129.99,
+          "market": 57.98,
+          "directLow": 44.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.07,
+        "lowPrice": 8.9,
+        "trendPrice": 19.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 16.92,
+        "lowPriceExPlus": 23.27,
+        "avg1": 25,
+        "avg7": 23.33,
+        "avg30": 27.85,
+        "reverseHoloAvg1": 34.95,
+        "reverseHoloAvg7": 16.93,
+        "reverseHoloAvg30": 16.82
       }
     }
   },
@@ -388,6 +638,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo",
@@ -402,12 +669,45 @@
       "small": "https://images.pokemontcg.io/neo2/6.png",
       "large": "https://images.pokemontcg.io/neo2/6_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 60,
+          "mid": 64.05,
+          "high": 125,
+          "market": 134.84,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 59.99,
+          "mid": 79.25,
+          "high": 179.99,
+          "market": 48.08,
+          "directLow": 42.7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.73,
+        "lowPrice": 3,
+        "trendPrice": 20.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 32.03,
+        "lowPriceExPlus": 29.95,
+        "avg1": 21.75,
+        "avg7": 25.42,
+        "avg30": 28.06,
+        "reverseHoloAvg1": 10.2,
+        "reverseHoloAvg7": 30.64,
+        "reverseHoloAvg30": 25.58
       }
     }
   },
@@ -463,6 +763,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "7",
     "artist": "K. Hoshiba, CR CG gangs",
     "rarity": "Rare Holo",
@@ -477,12 +794,45 @@
       "small": "https://images.pokemontcg.io/neo2/7.png",
       "large": "https://images.pokemontcg.io/neo2/7_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 60,
+          "mid": 66.97,
+          "high": 67.78,
+          "market": 68.58,
+          "directLow": 66.97
+        },
+        "unlimitedHolofoil": {
+          "low": 12.9,
+          "mid": 19.83,
+          "high": 49.99,
+          "market": 18.34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.16,
+        "lowPrice": 2.6,
+        "trendPrice": 11.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 23.05,
+        "lowPriceExPlus": 10.5,
+        "avg1": 5,
+        "avg7": 12.11,
+        "avg30": 12.76,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 7.94,
+        "reverseHoloAvg30": 16.89
       }
     }
   },
@@ -532,6 +882,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Tomokazu Komiya",
     "rarity": "Rare Holo",
@@ -546,12 +913,45 @@
       "small": "https://images.pokemontcg.io/neo2/8.png",
       "large": "https://images.pokemontcg.io/neo2/8_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 101.52,
+          "mid": 101.52,
+          "high": 101.52,
+          "market": 142.09,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 29.5,
+          "mid": 39.17,
+          "high": 49.99,
+          "market": 34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.91,
+        "lowPrice": 7,
+        "trendPrice": 27.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.86,
+        "lowPriceExPlus": 19.99,
+        "avg1": 17.25,
+        "avg7": 30.61,
+        "avg30": 23.64,
+        "reverseHoloAvg1": 25,
+        "reverseHoloAvg7": 15.92,
+        "reverseHoloAvg30": 16.22
       }
     }
   },
@@ -603,6 +1003,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare Holo",
@@ -617,12 +1034,45 @@
       "small": "https://images.pokemontcg.io/neo2/9.png",
       "large": "https://images.pokemontcg.io/neo2/9_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 39.69,
+          "mid": 47.41,
+          "high": 90.14,
+          "market": 81.95,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 15,
+          "mid": 25.01,
+          "high": 34.99,
+          "market": 18.93,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.72,
+        "lowPrice": 3.99,
+        "trendPrice": 20.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.81,
+        "lowPriceExPlus": 10,
+        "avg1": 6.7,
+        "avg7": 16.02,
+        "avg30": 16.72,
+        "reverseHoloAvg1": 25,
+        "reverseHoloAvg7": 8.37,
+        "reverseHoloAvg30": 11.08
       }
     }
   },
@@ -646,7 +1096,7 @@
           "Metal"
         ],
         "convertedEnergyCost": 1,
-        "damage": "?",
+        "damage": "",
         "text": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10)."
       },
       {
@@ -678,6 +1128,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo",
@@ -692,12 +1159,45 @@
       "small": "https://images.pokemontcg.io/neo2/10.png",
       "large": "https://images.pokemontcg.io/neo2/10_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 126.49,
+          "mid": 136.37,
+          "high": 146.25,
+          "market": 140.63,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 40,
+          "mid": 72.89,
+          "high": 96.97,
+          "market": 39.36,
+          "directLow": 33
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18.68,
+        "lowPrice": 4,
+        "trendPrice": 18.97,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.19,
+        "lowPriceExPlus": 24,
+        "avg1": 22.95,
+        "avg7": 21.74,
+        "avg30": 21.85,
+        "reverseHoloAvg1": 16.99,
+        "reverseHoloAvg7": 15.94,
+        "reverseHoloAvg30": 22
       }
     }
   },
@@ -741,6 +1241,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare Holo",
@@ -755,12 +1272,45 @@
       "small": "https://images.pokemontcg.io/neo2/11.png",
       "large": "https://images.pokemontcg.io/neo2/11_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 38,
+          "mid": 68.17,
+          "high": 117.5,
+          "market": 115.99,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 25.99,
+          "mid": 38,
+          "high": 49.99,
+          "market": 37.85,
+          "directLow": 39.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 23.33,
+        "lowPrice": 4,
+        "trendPrice": 24.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.11,
+        "lowPriceExPlus": 15,
+        "avg1": 18.33,
+        "avg7": 24.87,
+        "avg30": 18.62,
+        "reverseHoloAvg1": 15.99,
+        "reverseHoloAvg7": 7.78,
+        "reverseHoloAvg30": 15.05
       }
     }
   },
@@ -814,6 +1364,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare Holo",
@@ -828,12 +1395,45 @@
       "small": "https://images.pokemontcg.io/neo2/12.png",
       "large": "https://images.pokemontcg.io/neo2/12_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 126.83,
+          "mid": 127.39,
+          "high": 127.95,
+          "market": 412.2,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 86.61,
+          "mid": 138.84,
+          "high": 449.99,
+          "market": 121.97,
+          "directLow": 136.96
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 54.79,
+        "lowPrice": 9.99,
+        "trendPrice": 50.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 62.57,
+        "lowPriceExPlus": 47.5,
+        "avg1": 34,
+        "avg7": 49.61,
+        "avg30": 66.36,
+        "reverseHoloAvg1": 50,
+        "reverseHoloAvg7": 33.14,
+        "reverseHoloAvg30": 44.21
       }
     }
   },
@@ -883,6 +1483,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo",
@@ -897,12 +1514,45 @@
       "small": "https://images.pokemontcg.io/neo2/13.png",
       "large": "https://images.pokemontcg.io/neo2/13_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 1799.99,
+          "mid": 1799.99,
+          "high": 1799.99,
+          "market": 525,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 299.85,
+          "mid": 397,
+          "high": 499.99,
+          "market": 333.8,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 279.93,
+        "lowPrice": 28.99,
+        "trendPrice": 251.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 66,
+        "lowPriceExPlus": 160,
+        "avg1": 85,
+        "avg7": 220.88,
+        "avg30": 214.48,
+        "reverseHoloAvg1": 35,
+        "reverseHoloAvg7": 63.79,
+        "reverseHoloAvg30": 62.88
       }
     }
   },
@@ -949,6 +1599,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "14",
     "artist": "CR CG gangs",
     "rarity": "Rare Holo",
@@ -963,12 +1630,45 @@
       "small": "https://images.pokemontcg.io/neo2/14.png",
       "large": "https://images.pokemontcg.io/neo2/14_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 47.79,
+          "mid": 65.02,
+          "high": 79.99,
+          "market": 59.55,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 7.69,
+          "mid": 10.2,
+          "high": 19.99,
+          "market": 10.73,
+          "directLow": 12.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.28,
+        "lowPrice": 1,
+        "trendPrice": 5.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.83,
+        "lowPriceExPlus": 4.5,
+        "avg1": 3.42,
+        "avg7": 4.32,
+        "avg30": 7.02,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 9.32,
+        "reverseHoloAvg30": 6.76
       }
     }
   },
@@ -1027,6 +1727,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Naoyo Kimura",
     "rarity": "Rare Holo",
@@ -1041,12 +1758,45 @@
       "small": "https://images.pokemontcg.io/neo2/15.png",
       "large": "https://images.pokemontcg.io/neo2/15_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 67.95,
+          "mid": 79.12,
+          "high": 199.99,
+          "market": 91.2,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 22,
+          "mid": 32.2,
+          "high": 59.99,
+          "market": 31.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.84,
+        "lowPrice": 5,
+        "trendPrice": 10.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 26.28,
+        "lowPriceExPlus": 14,
+        "avg1": 12,
+        "avg7": 12.04,
+        "avg30": 18.36,
+        "reverseHoloAvg1": 107.5,
+        "reverseHoloAvg7": 35.32,
+        "reverseHoloAvg30": 18.33
       }
     }
   },
@@ -1085,6 +1835,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare Holo",
@@ -1099,12 +1866,45 @@
       "small": "https://images.pokemontcg.io/neo2/16.png",
       "large": "https://images.pokemontcg.io/neo2/16_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 27.48,
+          "mid": 57.87,
+          "high": 73.98,
+          "market": 67.22,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 21.59,
+          "mid": 23.4,
+          "high": 79.99,
+          "market": 23.02,
+          "directLow": 22.66
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.29,
+        "lowPrice": 2.5,
+        "trendPrice": 10.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 16.21,
+        "lowPriceExPlus": 12,
+        "avg1": 14.61,
+        "avg7": 11.57,
+        "avg30": 17.37,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 9.05,
+        "reverseHoloAvg30": 12.77
       }
     }
   },
@@ -1157,6 +1957,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Atsuko Nishida",
     "rarity": "Rare Holo",
@@ -1171,12 +1988,45 @@
       "small": "https://images.pokemontcg.io/neo2/17.png",
       "large": "https://images.pokemontcg.io/neo2/17_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEditionHolofoil": {
+          "low": 51.25,
+          "mid": 60.2,
+          "high": 120,
+          "market": 53,
+          "directLow": null
+        },
+        "unlimitedHolofoil": {
+          "low": 13.5,
+          "mid": 20.39,
+          "high": 89,
+          "market": 22.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.88,
+        "lowPrice": 3.99,
+        "trendPrice": 15.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.94,
+        "lowPriceExPlus": 8,
+        "avg1": 6.9,
+        "avg7": 17.2,
+        "avg30": 12.28,
+        "reverseHoloAvg1": 2.9,
+        "reverseHoloAvg7": 12.1,
+        "reverseHoloAvg30": 9.08
       }
     }
   },
@@ -1227,6 +2077,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1241,12 +2108,45 @@
       "small": "https://images.pokemontcg.io/neo2/18.png",
       "large": "https://images.pokemontcg.io/neo2/18_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 16.99,
+          "mid": 18.65,
+          "high": 21.67,
+          "market": 20.73,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 3.49,
+          "mid": 5.02,
+          "high": 11,
+          "market": 6.38,
+          "directLow": 6.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4,
+        "lowPrice": 0.75,
+        "trendPrice": 5.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.64,
+        "lowPriceExPlus": 3.75,
+        "avg1": 2.93,
+        "avg7": 6.16,
+        "avg30": 5.07,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 12.7,
+        "reverseHoloAvg30": 7.92
       }
     }
   },
@@ -1298,6 +2198,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Atsuko Nishida",
     "rarity": "Rare",
@@ -1312,12 +2229,45 @@
       "small": "https://images.pokemontcg.io/neo2/19.png",
       "large": "https://images.pokemontcg.io/neo2/19_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 9.5,
+          "mid": 10.3,
+          "high": 15.95,
+          "market": 11.15,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 1.7,
+          "mid": 2.73,
+          "high": 5,
+          "market": 2.81,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.34,
+        "lowPrice": 0.2,
+        "trendPrice": 2.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.33,
+        "lowPriceExPlus": 1,
+        "avg1": 3.48,
+        "avg7": 2.86,
+        "avg30": 2.29,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 16.35,
+        "reverseHoloAvg30": 8.73
       }
     }
   },
@@ -1367,6 +2317,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -1381,12 +2348,45 @@
       "small": "https://images.pokemontcg.io/neo2/20.png",
       "large": "https://images.pokemontcg.io/neo2/20_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 40.49,
+          "mid": 63.91,
+          "high": 89.99,
+          "market": 88.3,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 10.85,
+          "mid": 17.5,
+          "high": 55,
+          "market": 11.42,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.72,
+        "lowPrice": 0.5,
+        "trendPrice": 8.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.17,
+        "lowPriceExPlus": 6,
+        "avg1": 4.33,
+        "avg7": 9.86,
+        "avg30": 9.74,
+        "reverseHoloAvg1": 6,
+        "reverseHoloAvg7": 4.85,
+        "reverseHoloAvg30": 4.83
       }
     }
   },
@@ -1441,6 +2441,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "21",
     "artist": "CR CG gangs",
     "rarity": "Rare",
@@ -1455,12 +2472,45 @@
       "small": "https://images.pokemontcg.io/neo2/21.png",
       "large": "https://images.pokemontcg.io/neo2/21_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 5.52,
+          "mid": 8.45,
+          "high": 11.78,
+          "market": 5.52,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 3.09,
+          "mid": 4.22,
+          "high": 19.16,
+          "market": 4.24,
+          "directLow": 4.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.13,
+        "lowPrice": 0.7,
+        "trendPrice": 7.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.27,
+        "lowPriceExPlus": 4,
+        "avg1": 3.15,
+        "avg7": 7.28,
+        "avg30": 5.76,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 6.35,
+        "reverseHoloAvg30": 3.96
       }
     }
   },
@@ -1508,6 +2558,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -1522,12 +2589,45 @@
       "small": "https://images.pokemontcg.io/neo2/22.png",
       "large": "https://images.pokemontcg.io/neo2/22_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 8.95,
+          "mid": 9,
+          "high": 10.49,
+          "market": 9.34,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.4,
+          "mid": 3.24,
+          "high": 17.81,
+          "market": 4.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.44,
+        "lowPrice": 0.4,
+        "trendPrice": 3.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.26,
+        "lowPriceExPlus": 2.94,
+        "avg1": 1.74,
+        "avg7": 3.17,
+        "avg30": 3.85,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 3.3,
+        "reverseHoloAvg30": 3.94
       }
     }
   },
@@ -1578,6 +2678,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare",
@@ -1592,12 +2709,45 @@
       "small": "https://images.pokemontcg.io/neo2/23.png",
       "large": "https://images.pokemontcg.io/neo2/23_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 18.8,
+          "mid": 20.52,
+          "high": 79.99,
+          "market": 20.51,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 4.5,
+          "mid": 6.87,
+          "high": 19.99,
+          "market": 7.18,
+          "directLow": 19.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.81,
+        "lowPrice": 0.5,
+        "trendPrice": 5.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.9,
+        "lowPriceExPlus": 4,
+        "avg1": 4.71,
+        "avg7": 3.76,
+        "avg30": 6.03,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 5,
+        "reverseHoloAvg30": 4.93
       }
     }
   },
@@ -1647,6 +2797,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1661,12 +2828,45 @@
       "small": "https://images.pokemontcg.io/neo2/24.png",
       "large": "https://images.pokemontcg.io/neo2/24_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 12.99,
+          "mid": 14.99,
+          "high": 16.97,
+          "market": 15.36,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 6.99,
+          "mid": 8.46,
+          "high": 12.33,
+          "market": 9.32,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.59,
+        "lowPrice": 0.6,
+        "trendPrice": 3.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.82,
+        "lowPriceExPlus": 4.5,
+        "avg1": 4.5,
+        "avg7": 4.16,
+        "avg30": 6.61,
+        "reverseHoloAvg1": 1.9,
+        "reverseHoloAvg7": 11.04,
+        "reverseHoloAvg30": 8.66
       }
     }
   },
@@ -1714,6 +2914,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Kimiya Masago",
     "rarity": "Rare",
@@ -1728,12 +2945,45 @@
       "small": "https://images.pokemontcg.io/neo2/25.png",
       "large": "https://images.pokemontcg.io/neo2/25_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 12.97,
+          "mid": 14.54,
+          "high": 27,
+          "market": 15.38,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.99,
+          "mid": 6.56,
+          "high": 30,
+          "market": 6.36,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.51,
+        "lowPrice": 0.95,
+        "trendPrice": 6.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.85,
+        "lowPriceExPlus": 5,
+        "avg1": 4.75,
+        "avg7": 6.55,
+        "avg30": 6.05,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 12.64,
+        "reverseHoloAvg30": 8.15
       }
     }
   },
@@ -1789,6 +3039,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "26",
     "artist": "K. Hoshiba, CR CG gangs",
     "rarity": "Rare",
@@ -1803,12 +3070,45 @@
       "small": "https://images.pokemontcg.io/neo2/26.png",
       "large": "https://images.pokemontcg.io/neo2/26_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 5.61,
+          "mid": 8.6,
+          "high": 10.89,
+          "market": 7.33,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 3.05,
+          "mid": 5,
+          "high": 16.78,
+          "market": 4.56,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.49,
+        "lowPrice": 0.29,
+        "trendPrice": 4.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.34,
+        "lowPriceExPlus": 2.99,
+        "avg1": 3.36,
+        "avg7": 6.1,
+        "avg30": 4.67,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 8.07,
+        "reverseHoloAvg30": 6.1
       }
     }
   },
@@ -1858,6 +3158,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Tomokazu Komiya",
     "rarity": "Rare",
@@ -1872,12 +3189,45 @@
       "small": "https://images.pokemontcg.io/neo2/27.png",
       "large": "https://images.pokemontcg.io/neo2/27_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 13.77,
+          "mid": 21.89,
+          "high": 30,
+          "market": 18.2,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 6.53,
+          "mid": 6.6,
+          "high": 13.5,
+          "market": 10.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.73,
+        "lowPrice": 1.1,
+        "trendPrice": 4.75,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.99,
+        "lowPriceExPlus": 4.49,
+        "avg1": 3.5,
+        "avg7": 4.31,
+        "avg30": 5.86,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 9.67,
+        "reverseHoloAvg30": 5.4
       }
     }
   },
@@ -1929,6 +3279,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Rare",
@@ -1943,12 +3310,45 @@
       "small": "https://images.pokemontcg.io/neo2/28.png",
       "large": "https://images.pokemontcg.io/neo2/28_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 7.85,
+          "mid": 13.1,
+          "high": 124,
+          "market": 10.06,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.38,
+          "mid": 3.63,
+          "high": 5,
+          "market": 3.73,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.65,
+        "lowPrice": 0.5,
+        "trendPrice": 2.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.81,
+        "lowPriceExPlus": 1.55,
+        "avg1": 3.6,
+        "avg7": 4.18,
+        "avg30": 4.21,
+        "reverseHoloAvg1": 5.99,
+        "reverseHoloAvg7": 5.81,
+        "reverseHoloAvg30": 3.54
       }
     }
   },
@@ -1972,7 +3372,7 @@
           "Metal"
         ],
         "convertedEnergyCost": 1,
-        "damage": "?",
+        "damage": "",
         "text": "Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10)."
       },
       {
@@ -2004,6 +3404,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Kimiya Masago",
     "rarity": "Rare",
@@ -2018,12 +3435,45 @@
       "small": "https://images.pokemontcg.io/neo2/29.png",
       "large": "https://images.pokemontcg.io/neo2/29_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 21,
+          "mid": 31.8,
+          "high": 31.93,
+          "market": 25.79,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 5,
+          "mid": 6.68,
+          "high": 13.07,
+          "market": 8.43,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.85,
+        "lowPrice": 0.79,
+        "trendPrice": 4.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.86,
+        "lowPriceExPlus": 4,
+        "avg1": 2.99,
+        "avg7": 6.05,
+        "avg30": 7.2,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 10.27,
+        "reverseHoloAvg30": 6.49
       }
     }
   },
@@ -2067,6 +3517,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare",
@@ -2081,12 +3548,45 @@
       "small": "https://images.pokemontcg.io/neo2/30.png",
       "large": "https://images.pokemontcg.io/neo2/30_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 8.5,
+          "mid": 15,
+          "high": 15.17,
+          "market": 13.41,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 3.97,
+          "mid": 5.8,
+          "high": 14.97,
+          "market": 6.09,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.76,
+        "lowPrice": 0.5,
+        "trendPrice": 2.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.55,
+        "lowPriceExPlus": 2,
+        "avg1": 3.25,
+        "avg7": 4.34,
+        "avg30": 5.92,
+        "reverseHoloAvg1": 9.9,
+        "reverseHoloAvg7": 12.13,
+        "reverseHoloAvg30": 5.97
       }
     }
   },
@@ -2140,6 +3640,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare",
@@ -2154,12 +3671,45 @@
       "small": "https://images.pokemontcg.io/neo2/31.png",
       "large": "https://images.pokemontcg.io/neo2/31_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 37.79,
+          "mid": 41.47,
+          "high": 70,
+          "market": 42.75,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 10,
+          "mid": 13.01,
+          "high": 21.98,
+          "market": 14.17,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.25,
+        "lowPrice": 0.7,
+        "trendPrice": 9.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.22,
+        "lowPriceExPlus": 5,
+        "avg1": 4.5,
+        "avg7": 11.12,
+        "avg30": 8.87,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 11.82,
+        "reverseHoloAvg30": 17.52
       }
     }
   },
@@ -2209,6 +3759,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -2223,12 +3790,45 @@
       "small": "https://images.pokemontcg.io/neo2/32.png",
       "large": "https://images.pokemontcg.io/neo2/32_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 162.48,
+          "mid": 181.24,
+          "high": 199.99,
+          "market": 123.6,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 39,
+          "mid": 47.01,
+          "high": 99.99,
+          "market": 51.24,
+          "directLow": 45.76
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.76,
+        "lowPrice": 7,
+        "trendPrice": 15.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.94,
+        "lowPriceExPlus": 23,
+        "avg1": 20,
+        "avg7": 23.72,
+        "avg30": 31,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 6.75,
+        "reverseHoloAvg30": 5.53
       }
     }
   },
@@ -2275,6 +3875,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "33",
     "artist": "CR CG gangs",
     "rarity": "Rare",
@@ -2289,12 +3906,45 @@
       "small": "https://images.pokemontcg.io/neo2/33.png",
       "large": "https://images.pokemontcg.io/neo2/33_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 13.91,
+          "mid": 14.7,
+          "high": 19.79,
+          "market": 10.53,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 4,
+          "mid": 5.15,
+          "high": 7.02,
+          "market": 6.38,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.69,
+        "lowPrice": 0.85,
+        "trendPrice": 4.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.92,
+        "lowPriceExPlus": 5,
+        "avg1": 3.99,
+        "avg7": 4.53,
+        "avg30": 5.34,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 4.4,
+        "reverseHoloAvg30": 3.12
       }
     }
   },
@@ -2353,6 +4003,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Naoyo Kimura",
     "rarity": "Rare",
@@ -2367,12 +4034,45 @@
       "small": "https://images.pokemontcg.io/neo2/34.png",
       "large": "https://images.pokemontcg.io/neo2/34_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 5.24,
+          "mid": 9.5,
+          "high": 24.97,
+          "market": 8.34,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.88,
+          "mid": 4.56,
+          "high": 10,
+          "market": 4.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.45,
+        "lowPrice": 0.5,
+        "trendPrice": 4.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.28,
+        "lowPriceExPlus": 4,
+        "avg1": 2.12,
+        "avg7": 3.72,
+        "avg30": 5.64,
+        "reverseHoloAvg1": 2.49,
+        "reverseHoloAvg7": 6,
+        "reverseHoloAvg30": 4.8
       }
     }
   },
@@ -2411,6 +4111,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Hironobu Yoshida",
     "rarity": "Rare",
@@ -2425,12 +4142,45 @@
       "small": "https://images.pokemontcg.io/neo2/35.png",
       "large": "https://images.pokemontcg.io/neo2/35_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 7.49,
+          "mid": 9.66,
+          "high": 12.29,
+          "market": 8.1,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.99,
+          "mid": 4.53,
+          "high": 10,
+          "market": 4.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.24,
+        "lowPrice": 0.75,
+        "trendPrice": 2.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.88,
+        "lowPriceExPlus": 3,
+        "avg1": 2.5,
+        "avg7": 3.47,
+        "avg30": 4.75,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 4.1,
+        "reverseHoloAvg30": 2.53
       }
     }
   },
@@ -2483,6 +4233,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Atsuko Nishida",
     "rarity": "Rare",
@@ -2497,12 +4264,45 @@
       "small": "https://images.pokemontcg.io/neo2/36.png",
       "large": "https://images.pokemontcg.io/neo2/36_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 8.5,
+          "mid": 13.17,
+          "high": 21.97,
+          "market": 9.01,
+          "directLow": 19.77
+        },
+        "unlimited": {
+          "low": 3,
+          "mid": 4.93,
+          "high": 8.05,
+          "market": 5.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.46,
+        "lowPrice": 0.99,
+        "trendPrice": 5.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.63,
+        "lowPriceExPlus": 3.25,
+        "avg1": 3.25,
+        "avg7": 4.99,
+        "avg30": 5.37,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 6.34,
+        "reverseHoloAvg30": 5.61
       }
     }
   },
@@ -2552,6 +4352,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Yuka Morii",
     "rarity": "Uncommon",
@@ -2566,12 +4383,45 @@
       "small": "https://images.pokemontcg.io/neo2/37.png",
       "large": "https://images.pokemontcg.io/neo2/37_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.97,
+          "mid": 2.73,
+          "high": 2.99,
+          "market": 2.8,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.5,
+          "mid": 1.05,
+          "high": 8.35,
+          "market": 1.33,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.75,
+        "lowPrice": 0.02,
+        "trendPrice": 0.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.99,
+        "lowPriceExPlus": 0.15,
+        "avg1": 2.58,
+        "avg7": 1.05,
+        "avg30": 0.82,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 9.99,
+        "reverseHoloAvg30": 9.99
       }
     }
   },
@@ -2631,6 +4481,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Aya Kusube",
     "rarity": "Uncommon",
@@ -2645,12 +4512,45 @@
       "small": "https://images.pokemontcg.io/neo2/38.png",
       "large": "https://images.pokemontcg.io/neo2/38_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 13.98,
+          "mid": 15.34,
+          "high": 17.03,
+          "market": 15.55,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 2.31,
+          "mid": 3.6,
+          "high": 15,
+          "market": 3.77,
+          "directLow": 2.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.36,
+        "lowPrice": 0.02,
+        "trendPrice": 3.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.48,
+        "avg1": 1.7,
+        "avg7": 2.41,
+        "avg30": 3.16,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2700,6 +4600,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "39",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Uncommon",
@@ -2714,12 +4631,45 @@
       "small": "https://images.pokemontcg.io/neo2/39.png",
       "large": "https://images.pokemontcg.io/neo2/39_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 2.11,
+          "mid": 3,
+          "high": 5.18,
+          "market": 3.65,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.66,
+          "mid": 1.18,
+          "high": 3.25,
+          "market": 1.31,
+          "directLow": 0.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.54,
+        "lowPrice": 0.02,
+        "trendPrice": 1.71,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.92,
+        "avg7": 0.85,
+        "avg30": 1.55,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2748,6 +4698,23 @@
         "type": "Pokémon Power"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Miki Tanaka",
     "rarity": "Uncommon",
@@ -2762,12 +4729,45 @@
       "small": "https://images.pokemontcg.io/neo2/40.png",
       "large": "https://images.pokemontcg.io/neo2/40_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 5.2,
+          "mid": 6.2,
+          "high": 11.69,
+          "market": 6.2,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 1.07,
+          "mid": 2.36,
+          "high": 89,
+          "market": 2.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.09,
+        "lowPrice": 0.02,
+        "trendPrice": 2.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.02,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.43,
+        "avg7": 1.3,
+        "avg30": 1.88,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -2810,6 +4810,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Yukiko Baba",
     "rarity": "Uncommon",
@@ -2824,12 +4841,45 @@
       "small": "https://images.pokemontcg.io/neo2/41.png",
       "large": "https://images.pokemontcg.io/neo2/41_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.27,
+          "mid": 1.74,
+          "high": 4.99,
+          "market": 1.74,
+          "directLow": 2.52
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.61,
+          "high": 181579.72,
+          "market": 0.78,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.69,
+        "lowPrice": 0.04,
+        "trendPrice": 0.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1.83,
+        "avg7": 0.93,
+        "avg30": 0.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2882,6 +4932,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Uncommon",
@@ -2896,12 +4963,45 @@
       "small": "https://images.pokemontcg.io/neo2/42.png",
       "large": "https://images.pokemontcg.io/neo2/42_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.31,
+          "mid": 1.49,
+          "high": 6.5,
+          "market": 1.46,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.3,
+          "mid": 0.6,
+          "high": 8.81,
+          "market": 0.74,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.63,
+        "lowPrice": 0.03,
+        "trendPrice": 0.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.15,
+        "avg1": 1.47,
+        "avg7": 0.68,
+        "avg30": 0.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2951,6 +5051,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Shin-ichi Yoshida",
     "rarity": "Uncommon",
@@ -2965,12 +5082,45 @@
       "small": "https://images.pokemontcg.io/neo2/43.png",
       "large": "https://images.pokemontcg.io/neo2/43_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.19,
+          "mid": 2.15,
+          "high": 4.99,
+          "market": 2.57,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.3,
+          "mid": 0.73,
+          "high": 4.95,
+          "market": 0.73,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.55,
+        "lowPrice": 0.02,
+        "trendPrice": 0.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.9,
+        "lowPriceExPlus": 0.15,
+        "avg1": 1.41,
+        "avg7": 0.7,
+        "avg30": 0.54,
+        "reverseHoloAvg1": 3.9,
+        "reverseHoloAvg7": 3.9,
+        "reverseHoloAvg30": 3.9
       }
     }
   },
@@ -3023,6 +5173,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -3037,12 +5204,45 @@
       "small": "https://images.pokemontcg.io/neo2/44.png",
       "large": "https://images.pokemontcg.io/neo2/44_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.94,
+          "mid": 2.41,
+          "high": 4.99,
+          "market": 2.3,
+          "directLow": 2.49
+        },
+        "unlimited": {
+          "low": 0.65,
+          "mid": 1,
+          "high": 4.7,
+          "market": 1.05,
+          "directLow": 0.8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.8,
+        "lowPrice": 0.05,
+        "trendPrice": 1.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.05,
+        "lowPriceExPlus": 0.14,
+        "avg1": 0.82,
+        "avg7": 0.64,
+        "avg30": 0.77,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.05,
+        "reverseHoloAvg30": 0.05
       }
     }
   },
@@ -3100,6 +5300,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Hironobu Yoshida",
     "rarity": "Uncommon",
@@ -3114,12 +5331,45 @@
       "small": "https://images.pokemontcg.io/neo2/45.png",
       "large": "https://images.pokemontcg.io/neo2/45_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.6,
+          "mid": 2.35,
+          "high": 6.98,
+          "market": 2.32,
+          "directLow": 2.49
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.73,
+          "high": 22.5,
+          "market": 0.83,
+          "directLow": 0.53
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.63,
+        "lowPrice": 0.02,
+        "trendPrice": 0.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.47,
+        "avg7": 0.54,
+        "avg30": 0.67,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3166,6 +5416,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Kimiya Masago",
     "rarity": "Uncommon",
@@ -3180,12 +5447,45 @@
       "small": "https://images.pokemontcg.io/neo2/46.png",
       "large": "https://images.pokemontcg.io/neo2/46_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 2.5,
+          "mid": 3.9,
+          "high": 4.95,
+          "market": 3.9,
+          "directLow": 4.64
+        },
+        "unlimited": {
+          "low": 0.5,
+          "mid": 0.99,
+          "high": 2.99,
+          "market": 1.11,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.71,
+        "lowPrice": 0.02,
+        "trendPrice": 0.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1.18,
+        "avg7": 0.64,
+        "avg30": 0.75,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3232,6 +5532,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "47",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -3246,12 +5563,45 @@
       "small": "https://images.pokemontcg.io/neo2/47.png",
       "large": "https://images.pokemontcg.io/neo2/47_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.41,
+          "mid": 1.93,
+          "high": 4.99,
+          "market": 1.91,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.4,
+          "mid": 0.77,
+          "high": 89,
+          "market": 0.93,
+          "directLow": 0.72
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.86,
+        "lowPrice": 0.05,
+        "trendPrice": 1.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.75,
+        "avg7": 1,
+        "avg30": 0.81,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3298,6 +5648,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "48",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -3312,12 +5679,45 @@
       "small": "https://images.pokemontcg.io/neo2/48.png",
       "large": "https://images.pokemontcg.io/neo2/48_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.69,
+          "mid": 2.31,
+          "high": 4.99,
+          "market": 2.11,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.33,
+          "mid": 0.93,
+          "high": 7,
+          "market": 1.25,
+          "directLow": 0.94
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.67,
+        "lowPrice": 0.03,
+        "trendPrice": 0.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.43,
+        "avg7": 0.41,
+        "avg30": 0.62,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3364,6 +5764,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "49",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -3378,12 +5795,45 @@
       "small": "https://images.pokemontcg.io/neo2/49.png",
       "large": "https://images.pokemontcg.io/neo2/49_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.3,
+          "mid": 2.5,
+          "high": 4.99,
+          "market": 2.63,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.3,
+          "mid": 0.94,
+          "high": 7,
+          "market": 1.24,
+          "directLow": 0.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.78,
+        "lowPrice": 0.02,
+        "trendPrice": 0.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.79,
+        "avg7": 0.91,
+        "avg30": 0.84,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3430,6 +5880,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "50",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -3444,12 +5911,45 @@
       "small": "https://images.pokemontcg.io/neo2/50.png",
       "large": "https://images.pokemontcg.io/neo2/50_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.25,
+          "mid": 2.05,
+          "high": 4.99,
+          "market": 2.13,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.4,
+          "mid": 0.76,
+          "high": 89,
+          "market": 0.78,
+          "directLow": 0.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.52,
+        "lowPrice": 0.02,
+        "trendPrice": 0.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.13,
+        "avg1": 0.15,
+        "avg7": 0.57,
+        "avg30": 0.51,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3496,6 +5996,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "51",
     "artist": "CR CG gangs",
     "rarity": "Uncommon",
@@ -3510,12 +6027,45 @@
       "small": "https://images.pokemontcg.io/neo2/51.png",
       "large": "https://images.pokemontcg.io/neo2/51_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.35,
+          "mid": 2,
+          "high": 8,
+          "market": 2.12,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.5,
+          "mid": 0.91,
+          "high": 89,
+          "market": 1.27,
+          "directLow": 0.86
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.81,
+        "lowPrice": 0.05,
+        "trendPrice": 0.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.86,
+        "avg7": 0.73,
+        "avg30": 0.78,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3570,6 +6120,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Uncommon",
@@ -3584,12 +6151,45 @@
       "small": "https://images.pokemontcg.io/neo2/52.png",
       "large": "https://images.pokemontcg.io/neo2/52_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.27,
+          "mid": 1.52,
+          "high": 4.99,
+          "market": 1.5,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.29,
+          "mid": 0.65,
+          "high": 4.95,
+          "market": 0.73,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.49,
+        "lowPrice": 0.02,
+        "trendPrice": 0.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1.41,
+        "avg7": 0.59,
+        "avg30": 0.57,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3629,6 +6229,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -3643,12 +6260,45 @@
       "small": "https://images.pokemontcg.io/neo2/53.png",
       "large": "https://images.pokemontcg.io/neo2/53_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1.01,
+          "mid": 1.99,
+          "high": 3.25,
+          "market": 2.02,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.5,
+          "high": 5.55,
+          "market": 0.6,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.4,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.44,
+        "avg7": 0.35,
+        "avg30": 0.41,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3687,6 +6337,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -3701,12 +6368,45 @@
       "small": "https://images.pokemontcg.io/neo2/54.png",
       "large": "https://images.pokemontcg.io/neo2/54_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.56,
+          "mid": 1.32,
+          "high": 4.99,
+          "market": 1.46,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.01,
+          "mid": 0.43,
+          "high": 89,
+          "market": 0.45,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.34,
+        "lowPrice": 0.02,
+        "trendPrice": 0.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.44,
+        "avg7": 0.27,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3748,6 +6448,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "55",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -3762,12 +6479,45 @@
       "small": "https://images.pokemontcg.io/neo2/55.png",
       "large": "https://images.pokemontcg.io/neo2/55_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.69,
+          "mid": 0.87,
+          "high": 8.13,
+          "market": 1.03,
+          "directLow": 1.25
+        },
+        "unlimited": {
+          "low": 0.22,
+          "mid": 0.44,
+          "high": 14,
+          "market": 0.48,
+          "directLow": 0.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.39,
+        "avg7": 0.28,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3816,6 +6566,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -3830,12 +6597,45 @@
       "small": "https://images.pokemontcg.io/neo2/56.png",
       "large": "https://images.pokemontcg.io/neo2/56_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.7,
+          "mid": 1.68,
+          "high": 3.05,
+          "market": 1.71,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.1,
+          "mid": 0.5,
+          "high": 201753.79,
+          "market": 0.6,
+          "directLow": 0.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.29,
+        "avg7": 0.32,
+        "avg30": 0.35,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3881,6 +6681,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Hironobu Yoshida",
     "rarity": "Common",
@@ -3895,12 +6712,45 @@
       "small": "https://images.pokemontcg.io/neo2/57.png",
       "large": "https://images.pokemontcg.io/neo2/57_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.73,
+          "mid": 1.5,
+          "high": 4.99,
+          "market": 1.75,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.1,
+          "mid": 0.4,
+          "high": 14.75,
+          "market": 0.47,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.54,
+        "avg7": 0.32,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3941,6 +6791,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -3955,12 +6822,45 @@
       "small": "https://images.pokemontcg.io/neo2/58.png",
       "large": "https://images.pokemontcg.io/neo2/58_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.81,
+          "mid": 1.79,
+          "high": 4.99,
+          "market": 1.95,
+          "directLow": 1.99
+        },
+        "unlimited": {
+          "low": 0.22,
+          "mid": 0.51,
+          "high": 4.95,
+          "market": 0.57,
+          "directLow": 0.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.39,
+        "lowPrice": 0.02,
+        "trendPrice": 0.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.79,
+        "avg7": 0.44,
+        "avg30": 0.41,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4006,6 +6906,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -4020,12 +6937,45 @@
       "small": "https://images.pokemontcg.io/neo2/59.png",
       "large": "https://images.pokemontcg.io/neo2/59_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.67,
+          "mid": 0.99,
+          "high": 7.03,
+          "market": 0.99,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.28,
+        "lowPrice": 0.02,
+        "trendPrice": 0.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.26,
+        "avg30": 0.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4073,6 +7023,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -4087,12 +7054,45 @@
       "small": "https://images.pokemontcg.io/neo2/60.png",
       "large": "https://images.pokemontcg.io/neo2/60_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.45,
+          "mid": 1.81,
+          "high": 4.99,
+          "market": 1.81,
+          "directLow": 0.94
+        },
+        "unlimited": {
+          "low": 0.16,
+          "mid": 0.55,
+          "high": 6.3,
+          "market": 0.68,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.37,
+        "lowPrice": 0.02,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.18,
+        "avg7": 0.21,
+        "avg30": 0.36,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4133,6 +7133,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -4147,12 +7164,45 @@
       "small": "https://images.pokemontcg.io/neo2/61.png",
       "large": "https://images.pokemontcg.io/neo2/61_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.67,
+          "mid": 1,
+          "high": 4.99,
+          "market": 1.62,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.18,
+          "mid": 0.51,
+          "high": 4.95,
+          "market": 0.6,
+          "directLow": 0.42
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.45,
+        "avg7": 0.34,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4201,6 +7251,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Aya Kusube",
     "rarity": "Common",
@@ -4215,12 +7282,45 @@
       "small": "https://images.pokemontcg.io/neo2/62.png",
       "large": "https://images.pokemontcg.io/neo2/62_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.75,
+          "mid": 1.5,
+          "high": 4.99,
+          "market": 1.88,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.51,
+          "high": 4.95,
+          "market": 0.64,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.54,
+        "lowPrice": 0.02,
+        "trendPrice": 0.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.05,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.21,
+        "avg7": 0.28,
+        "avg30": 0.5,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.05,
+        "reverseHoloAvg30": 0.05
       }
     }
   },
@@ -4276,6 +7376,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -4290,12 +7407,45 @@
       "small": "https://images.pokemontcg.io/neo2/63.png",
       "large": "https://images.pokemontcg.io/neo2/63_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.74,
+          "mid": 1.06,
+          "high": 4.99,
+          "market": 1.06,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.15,
+          "mid": 0.47,
+          "high": 5.48,
+          "market": 0.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.35,
+        "lowPrice": 0.02,
+        "trendPrice": 0.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.79,
+        "avg7": 0.4,
+        "avg30": 0.38,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4336,6 +7486,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -4350,12 +7517,45 @@
       "small": "https://images.pokemontcg.io/neo2/64.png",
       "large": "https://images.pokemontcg.io/neo2/64_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.55,
+          "mid": 1.15,
+          "high": 8.81,
+          "market": 1.22,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.14,
+          "mid": 0.43,
+          "high": 4.95,
+          "market": 0.51,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.5,
+        "avg7": 0.33,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4411,6 +7611,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -4425,12 +7642,45 @@
       "small": "https://images.pokemontcg.io/neo2/65.png",
       "large": "https://images.pokemontcg.io/neo2/65_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 1,
+          "mid": 2,
+          "high": 4.99,
+          "market": 2.33,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.23,
+          "mid": 0.5,
+          "high": 5.65,
+          "market": 0.63,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.38,
+        "lowPrice": 0.02,
+        "trendPrice": 0.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.99,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.74,
+        "avg7": 0.42,
+        "avg30": 0.41,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.99,
+        "reverseHoloAvg30": 1.99
       }
     }
   },
@@ -4465,6 +7715,23 @@
         "text": "Flip a coin. If tails, this attack does nothing."
       }
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -4479,12 +7746,45 @@
       "small": "https://images.pokemontcg.io/neo2/66.png",
       "large": "https://images.pokemontcg.io/neo2/66_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.84,
+          "mid": 1.29,
+          "high": 4.99,
+          "market": 1.29,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.25,
+          "mid": 0.52,
+          "high": 35,
+          "market": 0.6,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.22,
+        "avg7": 0.43,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4531,6 +7831,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "67",
     "artist": "CR CG gangs",
     "rarity": "Common",
@@ -4545,12 +7862,45 @@
       "small": "https://images.pokemontcg.io/neo2/67.png",
       "large": "https://images.pokemontcg.io/neo2/67_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.81,
+          "mid": 1.29,
+          "high": 4.99,
+          "market": 1.31,
+          "directLow": 0.98
+        },
+        "unlimited": {
+          "low": 0.17,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.41,
+        "lowPrice": 0.02,
+        "trendPrice": 0.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.51,
+        "avg30": 0.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4597,6 +7947,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "68",
     "artist": "CR CG gangs",
     "rarity": "Common",
@@ -4611,12 +7978,45 @@
       "small": "https://images.pokemontcg.io/neo2/68.png",
       "large": "https://images.pokemontcg.io/neo2/68_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.79,
+          "mid": 1.1,
+          "high": 4.99,
+          "market": 1.16,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.2,
+          "mid": 0.49,
+          "high": 89,
+          "market": 0.6,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.37,
+        "lowPrice": 0.02,
+        "trendPrice": 0.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.57,
+        "avg7": 0.39,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4663,6 +8063,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "69",
     "artist": "CR CG gangs",
     "rarity": "Common",
@@ -4677,12 +8094,45 @@
       "small": "https://images.pokemontcg.io/neo2/69.png",
       "large": "https://images.pokemontcg.io/neo2/69_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.77,
+          "mid": 1.25,
+          "high": 89,
+          "market": 1.19,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.17,
+          "mid": 0.5,
+          "high": 89,
+          "market": 0.61,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.37,
+        "lowPrice": 0.02,
+        "trendPrice": 0.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.32,
+        "avg7": 0.36,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4722,6 +8172,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "70",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -4736,12 +8203,45 @@
       "small": "https://images.pokemontcg.io/neo2/70.png",
       "large": "https://images.pokemontcg.io/neo2/70_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.79,
+          "mid": 1.45,
+          "high": 10.5,
+          "market": 1.83,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.18,
+          "mid": 0.47,
+          "high": 20,
+          "market": 0.5,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.34,
+        "lowPrice": 0.02,
+        "trendPrice": 0.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.52,
+        "avg7": 0.38,
+        "avg30": 0.35,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4797,6 +8297,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "71",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -4811,12 +8328,45 @@
       "small": "https://images.pokemontcg.io/neo2/71.png",
       "large": "https://images.pokemontcg.io/neo2/71_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.97,
+          "mid": 1.84,
+          "high": 5.5,
+          "market": 1.87,
+          "directLow": 5.5
+        },
+        "unlimited": {
+          "low": 0.28,
+          "mid": 0.65,
+          "high": 2.5,
+          "market": 0.76,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.41,
+        "lowPrice": 0.02,
+        "trendPrice": 0.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.71,
+        "avg7": 0.43,
+        "avg30": 0.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4827,6 +8377,23 @@
     "rules": [
       "Flip a coin. If heads, search your deck for a card that evolves from Mysterious Fossil and put it onto your Bench or put a card that evolves from Mysterious Fossil from your hand onto your Bench. Either way, treat the new card as a Basic Pokémon. If you searched your deck, shuffle it. (You can't play this card if your Bench is full.)"
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "72",
     "artist": "K. Hoshiba, CR CG gangs",
     "rarity": "Uncommon",
@@ -4837,12 +8404,45 @@
       "small": "https://images.pokemontcg.io/neo2/72.png",
       "large": "https://images.pokemontcg.io/neo2/72_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.12,
+          "mid": 1.25,
+          "high": 4.99,
+          "market": 1.15,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.24,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.45,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.45,
+        "lowPrice": 0.02,
+        "trendPrice": 0.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.05,
+        "avg1": 1.13,
+        "avg7": 0.59,
+        "avg30": 0.46,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4853,6 +8453,23 @@
     "rules": [
       "Choose 1 of your evolved Pokémon. Take the highest Stage Evolution card from that Pokémon and put it into your hand. (You can't evolve a Pokémon the turn you devolve it.)"
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "73",
     "artist": "K. Hoshiba, CR CG gangs",
     "rarity": "Uncommon",
@@ -4863,12 +8480,45 @@
       "small": "https://images.pokemontcg.io/neo2/73.png",
       "large": "https://images.pokemontcg.io/neo2/73_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.65,
+          "mid": 1.65,
+          "high": 4.99,
+          "market": 1.62,
+          "directLow": 1.99
+        },
+        "unlimited": {
+          "low": 0.22,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.49,
+          "directLow": 0.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.4,
+        "lowPrice": 0.02,
+        "trendPrice": 0.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 1.89,
+        "avg7": 0.65,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4879,6 +8529,23 @@
     "rules": [
       "Search your deck for a card with Unown in its name and put it onto your Bench. Shuffle your deck afterward. (You can't play this card if your Bench is full.)"
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "74",
     "artist": "\"Big Mama\" Tagawa, CR CG gangs",
     "rarity": "Uncommon",
@@ -4889,12 +8556,45 @@
       "small": "https://images.pokemontcg.io/neo2/74.png",
       "large": "https://images.pokemontcg.io/neo2/74_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.5,
+          "mid": 1.12,
+          "high": 8.81,
+          "market": 1.12,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.19,
+          "mid": 0.42,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": 0.42
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.52,
+        "lowPrice": 0.02,
+        "trendPrice": 0.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.35,
+        "avg7": 0.35,
+        "avg30": 0.52,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4905,6 +8605,23 @@
     "rules": [
       "Flip 2 coins. For each heads, search your deck for a Basic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
     ],
+    "set": {
+      "id": "neo2",
+      "name": "Neo Discovery",
+      "series": "Neo",
+      "printedTotal": 75,
+      "total": 75,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "N2",
+      "releaseDate": "2001/06/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/neo2/symbol.png",
+        "logo": "https://images.pokemontcg.io/neo2/logo.png"
+      }
+    },
     "number": "75",
     "artist": "\"Big Mama\" Tagawa & Benimaru Itoh",
     "rarity": "Common",
@@ -4915,12 +8632,45 @@
       "small": "https://images.pokemontcg.io/neo2/75.png",
       "large": "https://images.pokemontcg.io/neo2/75_hires.png"
     },
-    "set": {
-      "id": "neo2",
-      "releaseDate": "2001/06/01",
-      "name": "Neo Discovery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/neo2/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/neo2-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "1stEdition": {
+          "low": 0.2,
+          "mid": 0.61,
+          "high": 4.99,
+          "market": 0.64,
+          "directLow": null
+        },
+        "unlimited": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/neo2-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.49,
+        "avg7": 0.29,
+        "avg30": 0.31,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

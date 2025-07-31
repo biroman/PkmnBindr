@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRules } from "../../contexts/RulesContext";
+import { GLOBAL_CARD_LIMIT } from "../../lib/globalRules.js";
 
 const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
   const { canPerformAction } = useRules();
@@ -26,7 +27,7 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
         console.log("Page check result:", pageCheck);
 
         // Use fallback limits if rules don't provide them
-        const cardLimit = cardCheck.limit || 1000;
+        const cardLimit = cardCheck.limit || GLOBAL_CARD_LIMIT;
         const pageLimit = pageCheck.limit || 100;
 
         // Always calculate percentage, even if limit is not returned
@@ -50,15 +51,15 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
       } catch (error) {
         console.error("Rules system error, using fallback:", error);
         // Fallback if rules system fails entirely
-        const cardPercentage = (currentCardCount / 1000) * 100;
+        const cardPercentage = (currentCardCount / GLOBAL_CARD_LIMIT) * 100;
         const pagePercentage = (currentPageCount / 100) * 100;
 
         setUsage({
           cards: {
             current: currentCardCount,
-            limit: 1000,
+            limit: GLOBAL_CARD_LIMIT,
             percentage: cardPercentage,
-            canAdd: currentCardCount < 1000,
+            canAdd: currentCardCount < GLOBAL_CARD_LIMIT,
           },
           pages: {
             current: currentPageCount,

@@ -1,4 +1,5 @@
 import { RULE_TEMPLATES } from "./rules";
+import { GLOBAL_CARD_LIMIT } from "./globalRules.js";
 
 // Binder-specific rule templates
 export const BINDER_RULE_TEMPLATES = {
@@ -21,7 +22,7 @@ export const BINDER_RULE_TEMPLATES = {
     type: "feature_limit",
     config: {
       feature: "cards_per_binder",
-      limit: 500, // Default: 500 cards per binder
+      limit: GLOBAL_CARD_LIMIT, // Default limit
       scope: "user",
     },
   },
@@ -287,7 +288,7 @@ export const USER_TIER_RULES = {
         ...BINDER_RULE_TEMPLATES.max_cards_per_binder,
         config: {
           ...BINDER_RULE_TEMPLATES.max_cards_per_binder.config,
-          limit: 1000,
+          limit: GLOBAL_CARD_LIMIT,
         },
       },
       {

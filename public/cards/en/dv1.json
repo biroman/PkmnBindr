@@ -35,6 +35,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo",
@@ -50,12 +68,38 @@
       "small": "https://images.pokemontcg.io/dv1/1.png",
       "large": "https://images.pokemontcg.io/dv1/1_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.74,
+          "mid": 1.99,
+          "high": 89,
+          "market": 2.01,
+          "directLow": 2.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.36,
+        "lowPrice": 0.15,
+        "trendPrice": 2.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 2.09,
+        "lowPriceExPlus": 0.94,
+        "avg1": 0.94,
+        "avg7": 1.73,
+        "avg30": 2.14,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 2.64,
+        "reverseHoloAvg30": 1.73
       }
     }
   },
@@ -103,6 +147,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Naoki Saito",
     "rarity": "Rare Holo",
@@ -118,12 +180,38 @@
       "small": "https://images.pokemontcg.io/dv1/2.png",
       "large": "https://images.pokemontcg.io/dv1/2_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 4.49,
+          "high": 89,
+          "market": 4.91,
+          "directLow": 2.82
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.27,
+        "lowPrice": 0.2,
+        "trendPrice": 5.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.92,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 2.37,
+        "lowPriceExPlus": 1,
+        "avg1": 3.45,
+        "avg7": 3.13,
+        "avg30": 4.02,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 2.91,
+        "reverseHoloAvg30": 2.4
       }
     }
   },
@@ -176,6 +264,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Hajime Kusajima",
     "rarity": "Rare Holo",
@@ -191,12 +297,38 @@
       "small": "https://images.pokemontcg.io/dv1/3.png",
       "large": "https://images.pokemontcg.io/dv1/3_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.3,
+          "mid": 3.12,
+          "high": 89,
+          "market": 3.03,
+          "directLow": 2.64
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.74,
+        "lowPrice": 0.35,
+        "trendPrice": 3.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 2.51,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2,
+        "avg7": 2.74,
+        "avg30": 3.14,
+        "reverseHoloAvg1": 1.9,
+        "reverseHoloAvg7": 2.14,
+        "reverseHoloAvg30": 2.29
       }
     }
   },
@@ -247,6 +379,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -262,12 +412,38 @@
       "small": "https://images.pokemontcg.io/dv1/4.png",
       "large": "https://images.pokemontcg.io/dv1/4_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.91,
+          "mid": 5.99,
+          "high": 14.95,
+          "market": 6.43,
+          "directLow": 3.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.24,
+        "lowPrice": 0.19,
+        "trendPrice": 2.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4,
+        "reverseHoloLow": 0.68,
+        "reverseHoloTrend": 4.84,
+        "lowPriceExPlus": 0.5,
+        "avg1": 5,
+        "avg7": 3.21,
+        "avg30": 4.61,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.19,
+        "reverseHoloAvg30": 3.79
       }
     }
   },
@@ -320,6 +496,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -335,12 +529,38 @@
       "small": "https://images.pokemontcg.io/dv1/5.png",
       "large": "https://images.pokemontcg.io/dv1/5_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.94,
+          "mid": 6.5,
+          "high": 49.95,
+          "market": 9.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.79,
+        "lowPrice": 0.5,
+        "trendPrice": 5.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 3.38,
+        "lowPriceExPlus": 0.99,
+        "avg1": 0.49,
+        "avg7": 5.25,
+        "avg30": 4.75,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.48,
+        "reverseHoloAvg30": 3.85
       }
     }
   },
@@ -389,6 +609,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -404,12 +642,38 @@
       "small": "https://images.pokemontcg.io/dv1/6.png",
       "large": "https://images.pokemontcg.io/dv1/6_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.6,
+          "mid": 1.05,
+          "high": 8.89,
+          "market": 1.07,
+          "directLow": 0.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.5,
+        "lowPrice": 4.99,
+        "trendPrice": 10.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.43,
+        "lowPriceExPlus": 9.9,
+        "avg1": 6.99,
+        "avg7": 8.26,
+        "avg30": 9.09,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 8.23,
+        "reverseHoloAvg30": 8.23
       }
     }
   },
@@ -462,6 +726,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Akira Komayama",
     "rarity": "Rare Holo",
@@ -477,12 +759,38 @@
       "small": "https://images.pokemontcg.io/dv1/7.png",
       "large": "https://images.pokemontcg.io/dv1/7_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.3,
+          "high": 3.99,
+          "market": 1.44,
+          "directLow": 3.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.05,
+        "lowPrice": 0.15,
+        "trendPrice": 1.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 1.32,
+        "lowPriceExPlus": 0.8,
+        "avg1": 0.95,
+        "avg7": 1.04,
+        "avg30": 1.48,
+        "reverseHoloAvg1": 0.45,
+        "reverseHoloAvg7": 1.43,
+        "reverseHoloAvg30": 1.27
       }
     }
   },
@@ -530,6 +838,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "8",
     "artist": "BERUBURI",
     "rarity": "Rare Holo",
@@ -545,12 +871,38 @@
       "small": "https://images.pokemontcg.io/dv1/8.png",
       "large": "https://images.pokemontcg.io/dv1/8_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 4.23,
+          "high": 89,
+          "market": 4.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.14,
+        "lowPrice": 0.3,
+        "trendPrice": 2.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.8,
+        "reverseHoloLow": 0.7,
+        "reverseHoloTrend": 2.96,
+        "lowPriceExPlus": 0.45,
+        "avg1": 7.58,
+        "avg7": 3.62,
+        "avg30": 2.68,
+        "reverseHoloAvg1": 2.8,
+        "reverseHoloAvg7": 2.09,
+        "reverseHoloAvg30": 2.69
       }
     }
   },
@@ -596,6 +948,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Hideaki Hakozaki",
     "rarity": "Rare Holo",
@@ -611,12 +981,38 @@
       "small": "https://images.pokemontcg.io/dv1/9.png",
       "large": "https://images.pokemontcg.io/dv1/9_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.05,
+          "mid": 4.77,
+          "high": 89,
+          "market": 6.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.02,
+        "lowPrice": 0.3,
+        "trendPrice": 6.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.78,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 6.54,
+        "lowPriceExPlus": 1.94,
+        "avg1": 6,
+        "avg7": 4.79,
+        "avg30": 5.46,
+        "reverseHoloAvg1": 4.9,
+        "reverseHoloAvg7": 8.1,
+        "reverseHoloAvg30": 6.04
       }
     }
   },
@@ -664,6 +1060,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ryo Ueda",
     "rarity": "Rare Holo",
@@ -679,12 +1093,38 @@
       "small": "https://images.pokemontcg.io/dv1/10.png",
       "large": "https://images.pokemontcg.io/dv1/10_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.59,
+          "mid": 4.98,
+          "high": 19.95,
+          "market": 5.48,
+          "directLow": 2.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.26,
+        "lowPrice": 0.47,
+        "trendPrice": 5.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.5,
+        "reverseHoloLow": 0.47,
+        "reverseHoloTrend": 3.85,
+        "lowPriceExPlus": 1.45,
+        "avg1": 5,
+        "avg7": 3.43,
+        "avg30": 4.28,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 3.96,
+        "reverseHoloAvg30": 4.97
       }
     }
   },
@@ -733,6 +1173,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "11",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo",
@@ -748,12 +1206,38 @@
       "small": "https://images.pokemontcg.io/dv1/11.png",
       "large": "https://images.pokemontcg.io/dv1/11_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.23,
+          "mid": 21.84,
+          "high": 44.69,
+          "market": 22.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.29,
+        "lowPrice": 0.95,
+        "trendPrice": 11.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8,
+        "reverseHoloLow": 4.5,
+        "reverseHoloTrend": 17.01,
+        "lowPriceExPlus": 3,
+        "avg1": 4,
+        "avg7": 12.53,
+        "avg30": 10.98,
+        "reverseHoloAvg1": 14,
+        "reverseHoloAvg7": 20.53,
+        "reverseHoloAvg30": 13.95
       }
     }
   },
@@ -801,6 +1285,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Mizue",
     "rarity": "Rare Holo",
@@ -816,12 +1318,38 @@
       "small": "https://images.pokemontcg.io/dv1/12.png",
       "large": "https://images.pokemontcg.io/dv1/12_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.04,
+          "high": 89,
+          "market": 1.25,
+          "directLow": 0.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.2,
+        "lowPrice": 0.1,
+        "trendPrice": 1.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.96,
+        "lowPriceExPlus": 0.49,
+        "avg1": 0.49,
+        "avg7": 1.13,
+        "avg30": 1.49,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.01,
+        "reverseHoloAvg30": 1.23
       }
     }
   },
@@ -861,6 +1389,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "13",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -876,12 +1422,38 @@
       "small": "https://images.pokemontcg.io/dv1/13.png",
       "large": "https://images.pokemontcg.io/dv1/13_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.21,
+          "high": 89,
+          "market": 1.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.02,
+        "lowPrice": 0.1,
+        "trendPrice": 0.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.1,
+        "reverseHoloLow": 0.14,
+        "reverseHoloTrend": 2.05,
+        "lowPriceExPlus": 0.27,
+        "avg1": 1.5,
+        "avg7": 0.7,
+        "avg30": 1.45,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.63,
+        "reverseHoloAvg30": 1.79
       }
     }
   },
@@ -930,6 +1502,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -945,12 +1535,38 @@
       "small": "https://images.pokemontcg.io/dv1/14.png",
       "large": "https://images.pokemontcg.io/dv1/14_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.58,
+          "mid": 1.5,
+          "high": 89,
+          "market": 1.63,
+          "directLow": 0.84
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.46,
+        "lowPrice": 0.15,
+        "trendPrice": 1.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2,
+        "reverseHoloLow": 0.29,
+        "reverseHoloTrend": 1.15,
+        "lowPriceExPlus": 0.49,
+        "avg1": 0.35,
+        "avg7": 1.15,
+        "avg30": 1.46,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.67,
+        "reverseHoloAvg30": 1.38
       }
     }
   },
@@ -1003,6 +1619,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "15",
     "artist": "match",
     "rarity": "Rare Holo",
@@ -1018,12 +1652,38 @@
       "small": "https://images.pokemontcg.io/dv1/15.png",
       "large": "https://images.pokemontcg.io/dv1/15_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.37,
+          "high": 4.99,
+          "market": 1.38,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.5,
+        "lowPrice": 0.15,
+        "trendPrice": 2.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.6,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 1.07,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1.5,
+        "avg7": 2.04,
+        "avg30": 1.63,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.73,
+        "reverseHoloAvg30": 0.88
       }
     }
   },
@@ -1074,6 +1734,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Eske Yoshinob",
     "rarity": "Rare Holo",
@@ -1089,12 +1767,38 @@
       "small": "https://images.pokemontcg.io/dv1/16.png",
       "large": "https://images.pokemontcg.io/dv1/16_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.29,
+          "mid": 2.98,
+          "high": 5,
+          "market": 2.89,
+          "directLow": 2.81
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.49,
+        "lowPrice": 0.29,
+        "trendPrice": 5.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.9,
+        "reverseHoloTrend": 4.87,
+        "lowPriceExPlus": 0.75,
+        "avg1": 10,
+        "avg7": 5.96,
+        "avg30": 4.08,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.17,
+        "reverseHoloAvg30": 4.77
       }
     }
   },
@@ -1143,6 +1847,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "17",
     "artist": "kawayoo",
     "rarity": "Rare Holo",
@@ -1158,12 +1880,38 @@
       "small": "https://images.pokemontcg.io/dv1/17.png",
       "large": "https://images.pokemontcg.io/dv1/17_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.23,
+          "mid": 2.49,
+          "high": 4.16,
+          "market": 2.68,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.09,
+        "lowPrice": 0.4,
+        "trendPrice": 2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 10,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 3.7,
+        "lowPriceExPlus": 1,
+        "avg1": 1.5,
+        "avg7": 2.09,
+        "avg30": 3.39,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 4.28,
+        "reverseHoloAvg30": 3.87
       }
     }
   },
@@ -1179,6 +1927,24 @@
       "When your Active Pokémon is Knocked Out by damage from an opponent's attack, you may move 1 basic Energy card that was attached to that Pokémon to the Pokémon this card is attached to.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Ryo Ueda",
     "legalities": {
@@ -1190,12 +1956,38 @@
       "small": "https://images.pokemontcg.io/dv1/18.png",
       "large": "https://images.pokemontcg.io/dv1/18_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.95,
+          "mid": 1.42,
+          "high": 4.99,
+          "market": 1.58,
+          "directLow": 1.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.93,
+        "lowPrice": 0.18,
+        "trendPrice": 1.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.1,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 1.44,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2,
+        "avg7": 1.22,
+        "avg30": 1.61,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.45,
+        "reverseHoloAvg30": 1.04
       }
     }
   },
@@ -1210,6 +2002,24 @@
       "Before you flip a coin to decide who goes first in a game, you may play this card. Don't flip that coin, and you go first. If both players play First Ticket, flip the coin as normal. (You may play only 1 First Ticket before you flip that coin.)",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "19",
     "artist": "5ban Graphics",
     "legalities": {
@@ -1220,12 +2030,38 @@
       "small": "https://images.pokemontcg.io/dv1/19.png",
       "large": "https://images.pokemontcg.io/dv1/19_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.76,
+          "high": 4.99,
+          "market": 0.75,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.9,
+        "lowPrice": 0.3,
+        "trendPrice": 2.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 1.14,
+        "lowPriceExPlus": 0.34,
+        "avg1": 0.4,
+        "avg7": 3.2,
+        "avg30": 1.66,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1,
+        "reverseHoloAvg30": 1.15
       }
     }
   },
@@ -1240,6 +2076,24 @@
       "Shuffle 3 in any combination of Pokémon and basic Energy cards from your discard pile back into your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "20",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo",
@@ -1252,12 +2106,38 @@
       "small": "https://images.pokemontcg.io/dv1/20.png",
       "large": "https://images.pokemontcg.io/dv1/20_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.69,
+          "mid": 9,
+          "high": 16.79,
+          "market": 8.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4,
+        "lowPrice": 0.35,
+        "trendPrice": 5.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 2.87,
+        "lowPriceExPlus": 1,
+        "avg1": 3.5,
+        "avg7": 4.67,
+        "avg30": 4.01,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.9,
+        "reverseHoloAvg30": 1.95
       }
     }
   },
@@ -1308,6 +2188,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "dv1",
+      "name": "Dragon Vault",
+      "series": "Black & White",
+      "printedTotal": 20,
+      "total": 21,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DRV",
+      "releaseDate": "2012/10/05",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/dv1/symbol.png",
+        "logo": "https://images.pokemontcg.io/dv1/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Ryo Ueda",
     "flavorText": "It can produce ultracold air. Its body is frozen.",
@@ -1322,12 +2220,38 @@
       "small": "https://images.pokemontcg.io/dv1/21.png",
       "large": "https://images.pokemontcg.io/dv1/21_hires.png"
     },
-    "set": {
-      "id": "dv1",
-      "releaseDate": "2012/10/05",
-      "name": "Dragon Vault",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/dv1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/dv1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 45,
+          "mid": 62.19,
+          "high": 199.99,
+          "market": 53.92,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/dv1-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 39.75,
+        "lowPrice": 24.99,
+        "trendPrice": 52.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 24.99,
+        "reverseHoloTrend": 48.48,
+        "lowPriceExPlus": 39,
+        "avg1": 52,
+        "avg7": 52.64,
+        "avg30": 44.93,
+        "reverseHoloAvg1": 50,
+        "reverseHoloAvg7": 44.56,
+        "reverseHoloAvg30": 37.14
       }
     }
   }

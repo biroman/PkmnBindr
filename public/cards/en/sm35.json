@@ -36,6 +36,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Mizue",
     "rarity": "Common",
@@ -51,12 +69,45 @@
       "small": "https://images.pokemontcg.io/sm35/1.png",
       "large": "https://images.pokemontcg.io/sm35/1_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.18,
+          "mid": 0.44,
+          "high": 999.99,
+          "market": 0.5,
+          "directLow": 0.18
+        },
+        "reverseHolofoil": {
+          "low": 0.31,
+          "mid": 1,
+          "high": 4.95,
+          "market": 1.09,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.38,
+        "lowPrice": 0.02,
+        "trendPrice": 0.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.93,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.73,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.26,
+        "avg7": 0.78,
+        "avg30": 0.34,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.98,
+        "reverseHoloAvg30": 1.42
       }
     }
   },
@@ -112,6 +163,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -127,12 +196,45 @@
       "small": "https://images.pokemontcg.io/sm35/2.png",
       "large": "https://images.pokemontcg.io/sm35/2_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.35,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": 0.22
+        },
+        "reverseHolofoil": {
+          "low": 0.31,
+          "mid": 0.95,
+          "high": 4.95,
+          "market": 0.96,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.87,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.99,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.67,
+        "reverseHoloAvg30": 0.83
       }
     }
   },
@@ -182,6 +284,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Eske Yoshinob",
     "rarity": "Uncommon",
@@ -197,12 +317,45 @@
       "small": "https://images.pokemontcg.io/sm35/3.png",
       "large": "https://images.pokemontcg.io/sm35/3_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.96,
+          "high": 5,
+          "market": 0.96,
+          "directLow": 0.88
+        },
+        "reverseHolofoil": {
+          "low": 1.1,
+          "mid": 2.09,
+          "high": 6.27,
+          "market": 2.11,
+          "directLow": 1.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.52,
+        "lowPrice": 0.02,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.1,
+        "reverseHoloLow": 0.34,
+        "reverseHoloTrend": 1.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.75,
+        "avg7": 0.56,
+        "avg30": 0.56,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.32,
+        "reverseHoloAvg30": 1.79
       }
     }
   },
@@ -242,6 +395,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "4",
     "artist": "kawayoo",
     "rarity": "Common",
@@ -257,12 +428,45 @@
       "small": "https://images.pokemontcg.io/sm35/4.png",
       "large": "https://images.pokemontcg.io/sm35/4_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.14,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.49,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.38,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -311,6 +515,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Mizue",
     "rarity": "Common",
@@ -326,12 +548,45 @@
       "small": "https://images.pokemontcg.io/sm35/5.png",
       "large": "https://images.pokemontcg.io/sm35/5_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.19
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.47,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.53,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.55,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -378,6 +633,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Tomokazu Komiya",
     "rarity": "Uncommon",
@@ -393,12 +666,45 @@
       "small": "https://images.pokemontcg.io/sm35/6.png",
       "large": "https://images.pokemontcg.io/sm35/6_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 5.54,
+          "market": 0.23,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.59,
+          "high": 4.95,
+          "market": 0.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.12,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.33,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.15,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.33,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -444,6 +750,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Mizue",
     "rarity": "Rare Holo",
@@ -459,12 +783,45 @@
       "small": "https://images.pokemontcg.io/sm35/7.png",
       "large": "https://images.pokemontcg.io/sm35/7_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.3
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.57,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": 0.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.05,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.1,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.93,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.18,
+        "avg7": 0.21,
+        "avg30": 0.38,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 1.08,
+        "reverseHoloAvg30": 0.8
       }
     }
   },
@@ -511,6 +868,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "8",
     "artist": "kawayoo",
     "rarity": "Rare Holo",
@@ -526,12 +901,45 @@
       "small": "https://images.pokemontcg.io/sm35/8.png",
       "large": "https://images.pokemontcg.io/sm35/8_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.09,
+          "mid": 0.31,
+          "high": 4.95,
+          "market": 0.3,
+          "directLow": 0.3
+        },
+        "reverseHolofoil": {
+          "low": 0.01,
+          "mid": 0.43,
+          "high": 4.95,
+          "market": 0.41,
+          "directLow": 0.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.2,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.42,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.62,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.1,
+        "avg7": 0.28,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 0.49,
+        "reverseHoloAvg30": 0.62
       }
     }
   },
@@ -577,6 +985,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Shining",
@@ -592,12 +1018,38 @@
       "small": "https://images.pokemontcg.io/sm35/9.png",
       "large": "https://images.pokemontcg.io/sm35/9_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.75,
+          "mid": 10.27,
+          "high": 89,
+          "market": 10.12,
+          "directLow": 12.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.46,
+        "lowPrice": 4,
+        "trendPrice": 14.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.37,
+        "lowPriceExPlus": 4.95,
+        "avg1": 32.5,
+        "avg7": 13.34,
+        "avg30": 13.36,
+        "reverseHoloAvg1": 11,
+        "reverseHoloAvg7": 18.54,
+        "reverseHoloAvg30": 24.02
       }
     }
   },
@@ -661,6 +1113,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "10",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -675,12 +1145,38 @@
       "small": "https://images.pokemontcg.io/sm35/10.png",
       "large": "https://images.pokemontcg.io/sm35/10_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.95,
+          "mid": 2.78,
+          "high": 89,
+          "market": 2.62,
+          "directLow": 2.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.98,
+        "lowPrice": 0.98,
+        "trendPrice": 2.96,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.04,
+        "lowPriceExPlus": 1.8,
+        "avg1": 2.99,
+        "avg7": 3.07,
+        "avg30": 2.97,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 2.94,
+        "reverseHoloAvg30": 2.98
       }
     }
   },
@@ -744,6 +1240,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "10a",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -758,12 +1272,25 @@
       "small": "https://images.pokemontcg.io/sm35/10a.png",
       "large": "https://images.pokemontcg.io/sm35/10a_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-10a",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.82,
+        "lowPrice": 2,
+        "trendPrice": 3.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.34,
+        "lowPriceExPlus": 2,
+        "avg1": 2,
+        "avg7": 4.02,
+        "avg30": 3.76,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 4.22,
+        "reverseHoloAvg30": 5.85
       }
     }
   },
@@ -813,6 +1340,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Suwama Chiaki",
     "rarity": "Common",
@@ -828,12 +1373,45 @@
       "small": "https://images.pokemontcg.io/sm35/11.png",
       "large": "https://images.pokemontcg.io/sm35/11_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.34,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.07,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.29,
+        "reverseHoloAvg7": 0.36,
+        "reverseHoloAvg30": 0.36
       }
     }
   },
@@ -875,6 +1453,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "12",
     "artist": "kawayoo",
     "rarity": "Common",
@@ -890,12 +1486,45 @@
       "small": "https://images.pokemontcg.io/sm35/12.png",
       "large": "https://images.pokemontcg.io/sm35/12_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.13,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.25,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -940,6 +1569,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "13",
     "artist": "nagimiso",
     "rarity": "Uncommon",
@@ -955,12 +1602,45 @@
       "small": "https://images.pokemontcg.io/sm35/13.png",
       "large": "https://images.pokemontcg.io/sm35/13_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.23,
+          "mid": 0.39,
+          "high": 4.95,
+          "market": 0.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.42,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.13,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.42,
+        "reverseHoloAvg30": 0.32
       }
     }
   },
@@ -1010,6 +1690,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "14",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -1025,12 +1723,45 @@
       "small": "https://images.pokemontcg.io/sm35/14.png",
       "large": "https://images.pokemontcg.io/sm35/14_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.42,
+          "mid": 0.58,
+          "high": 4.95,
+          "market": 0.51,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.49,
+        "lowPrice": 0.09,
+        "trendPrice": 0.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.59,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 2.45,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.33,
+        "avg7": 0.3,
+        "avg30": 0.4,
+        "reverseHoloAvg1": 8.99,
+        "reverseHoloAvg7": 2.46,
+        "reverseHoloAvg30": 2.03
       }
     }
   },
@@ -1069,6 +1800,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -1084,12 +1833,45 @@
       "small": "https://images.pokemontcg.io/sm35/15.png",
       "large": "https://images.pokemontcg.io/sm35/15_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 5.67,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.36,
+          "high": 4.95,
+          "market": 0.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.4,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.46,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.05,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.41,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -1139,6 +1921,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Shin Nagasawa",
     "rarity": "Common",
@@ -1154,12 +1954,45 @@
       "small": "https://images.pokemontcg.io/sm35/16.png",
       "large": "https://images.pokemontcg.io/sm35/16_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.19
+        },
+        "reverseHolofoil": {
+          "low": 0.14,
+          "mid": 0.39,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": 0.37
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.44,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.53,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.47,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -1209,6 +2042,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Emi Ando",
     "rarity": "Uncommon",
@@ -1224,12 +2075,45 @@
       "small": "https://images.pokemontcg.io/sm35/17.png",
       "large": "https://images.pokemontcg.io/sm35/17_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.21,
+          "high": 8.81,
+          "market": 0.17,
+          "directLow": 0.15
+        },
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.48,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.43,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.53,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.17,
+        "avg7": 0.16,
+        "avg30": 0.13,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.51,
+        "reverseHoloAvg30": 0.45
       }
     }
   },
@@ -1278,6 +2162,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "18",
     "artist": "TOKIYA",
     "rarity": "Common",
@@ -1293,12 +2195,45 @@
       "small": "https://images.pokemontcg.io/sm35/18.png",
       "large": "https://images.pokemontcg.io/sm35/18_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.57,
+          "high": 4.95,
+          "market": 0.68,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.52,
+        "reverseHoloLow": 0.18,
+        "reverseHoloTrend": 0.57,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.12,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.74,
+        "reverseHoloAvg7": 0.64,
+        "reverseHoloAvg30": 0.49
       }
     }
   },
@@ -1349,6 +2284,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Naoki Saito",
     "rarity": "Common",
@@ -1364,12 +2317,45 @@
       "small": "https://images.pokemontcg.io/sm35/19.png",
       "large": "https://images.pokemontcg.io/sm35/19_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.44,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.41,
+        "reverseHoloLow": 0.19,
+        "reverseHoloTrend": 0.52,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.68,
+        "reverseHoloAvg7": 0.45,
+        "reverseHoloAvg30": 0.47
       }
     }
   },
@@ -1422,6 +2408,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "20",
     "artist": "nagimiso",
     "rarity": "Uncommon",
@@ -1437,12 +2441,45 @@
       "small": "https://images.pokemontcg.io/sm35/20.png",
       "large": "https://images.pokemontcg.io/sm35/20_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.39,
+          "high": 4.95,
+          "market": 0.46,
+          "directLow": 0.33
+        },
+        "reverseHolofoil": {
+          "low": 0.45,
+          "mid": 0.85,
+          "high": 5.25,
+          "market": 0.82,
+          "directLow": 0.83
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.58,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.18,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.56,
+        "reverseHoloAvg30": 0.84
       }
     }
   },
@@ -1488,6 +2525,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Shin Nagasawa",
     "rarity": "Common",
@@ -1503,12 +2558,45 @@
       "small": "https://images.pokemontcg.io/sm35/21.png",
       "large": "https://images.pokemontcg.io/sm35/21_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.05,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -1558,6 +2646,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Sekio",
     "rarity": "Common",
@@ -1573,12 +2679,45 @@
       "small": "https://images.pokemontcg.io/sm35/22.png",
       "large": "https://images.pokemontcg.io/sm35/22_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.13,
+          "mid": 0.35,
+          "high": 4.95,
+          "market": 0.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.54,
+        "avg7": 0.1,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -1626,6 +2765,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Suwama Chiaki",
     "rarity": "Uncommon",
@@ -1641,12 +2798,45 @@
       "small": "https://images.pokemontcg.io/sm35/23.png",
       "large": "https://images.pokemontcg.io/sm35/23_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.43,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.08,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.44,
+        "reverseHoloAvg30": 0.36
       }
     }
   },
@@ -1695,6 +2885,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Eske Yoshinob",
     "rarity": "Rare Holo",
@@ -1710,12 +2918,45 @@
       "small": "https://images.pokemontcg.io/sm35/24.png",
       "large": "https://images.pokemontcg.io/sm35/24_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.39,
+          "high": 4.99,
+          "market": 0.38,
+          "directLow": 0.33
+        },
+        "reverseHolofoil": {
+          "low": 0.11,
+          "mid": 0.52,
+          "high": 4.95,
+          "market": 0.51,
+          "directLow": 0.54
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.06,
+        "trendPrice": 0.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.52,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.66,
+        "lowPriceExPlus": 0.14,
+        "avg1": 0.29,
+        "avg7": 0.24,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 0.68,
+        "reverseHoloAvg30": 0.55
       }
     }
   },
@@ -1759,6 +3000,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -1774,12 +3033,45 @@
       "small": "https://images.pokemontcg.io/sm35/25.png",
       "large": "https://images.pokemontcg.io/sm35/25_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.25
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.49,
+          "high": 4.95,
+          "market": 0.44,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.32,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.49,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.49,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.09,
+        "avg7": 0.14,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 0.62,
+        "reverseHoloAvg30": 0.48
       }
     }
   },
@@ -1826,6 +3118,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "26",
     "artist": "kodama",
     "rarity": "Rare Holo",
@@ -1841,12 +3151,45 @@
       "small": "https://images.pokemontcg.io/sm35/26.png",
       "large": "https://images.pokemontcg.io/sm35/26_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.25
+        },
+        "reverseHolofoil": {
+          "low": 0.29,
+          "mid": 0.61,
+          "high": 4.95,
+          "market": 0.64,
+          "directLow": 0.63
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.44,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 1.42,
+        "lowPriceExPlus": 0.08,
+        "avg1": 0.19,
+        "avg7": 0.27,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 1.24,
+        "reverseHoloAvg30": 1.15
       }
     }
   },
@@ -1898,6 +3241,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Shining",
@@ -1913,12 +3274,38 @@
       "small": "https://images.pokemontcg.io/sm35/27.png",
       "large": "https://images.pokemontcg.io/sm35/27_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.5,
+          "mid": 5.99,
+          "high": 29.99,
+          "market": 4.3,
+          "directLow": 4.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.99,
+        "lowPrice": 1.49,
+        "trendPrice": 5.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.46,
+        "lowPriceExPlus": 2.9,
+        "avg1": 5.48,
+        "avg7": 5.83,
+        "avg30": 8.88,
+        "reverseHoloAvg1": 12.23,
+        "reverseHoloAvg7": 13.53,
+        "reverseHoloAvg30": 18.53
       }
     }
   },
@@ -1963,6 +3350,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -1978,12 +3383,45 @@
       "small": "https://images.pokemontcg.io/sm35/28.png",
       "large": "https://images.pokemontcg.io/sm35/28_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.19,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.61,
+          "directLow": 0.34
+        },
+        "reverseHolofoil": {
+          "low": 0.6,
+          "mid": 1.66,
+          "high": 6.27,
+          "market": 1.74,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.82,
+        "lowPrice": 0.02,
+        "trendPrice": 0.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.49,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 2.71,
+        "lowPriceExPlus": 0.02,
+        "avg1": 1.13,
+        "avg7": 1.07,
+        "avg30": 0.79,
+        "reverseHoloAvg1": 2.63,
+        "reverseHoloAvg7": 2.17,
+        "reverseHoloAvg30": 2.8
       }
     }
   },
@@ -2053,6 +3491,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "29",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -2067,12 +3523,38 @@
       "small": "https://images.pokemontcg.io/sm35/29.png",
       "large": "https://images.pokemontcg.io/sm35/29_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.74,
+          "mid": 3.99,
+          "high": 89,
+          "market": 3.61,
+          "directLow": 3.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.55,
+        "lowPrice": 1,
+        "trendPrice": 3.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.76,
+        "lowPriceExPlus": 1.29,
+        "avg1": 2.78,
+        "avg7": 3.7,
+        "avg30": 3.25,
+        "reverseHoloAvg1": 2.25,
+        "reverseHoloAvg7": 2.48,
+        "reverseHoloAvg30": 3.04
       }
     }
   },
@@ -2117,6 +3599,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "30",
     "artist": "match",
     "rarity": "Common",
@@ -2132,12 +3632,45 @@
       "small": "https://images.pokemontcg.io/sm35/30.png",
       "large": "https://images.pokemontcg.io/sm35/30_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.3,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.06,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -2176,6 +3709,24 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Kyoko Umemoto",
     "rarity": "Uncommon",
@@ -2191,12 +3742,45 @@
       "small": "https://images.pokemontcg.io/sm35/31.png",
       "large": "https://images.pokemontcg.io/sm35/31_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.37,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.39,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.07,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.37,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -2250,6 +3834,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -2265,12 +3867,45 @@
       "small": "https://images.pokemontcg.io/sm35/32.png",
       "large": "https://images.pokemontcg.io/sm35/32_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.4,
+          "mid": 0.9,
+          "high": 9.99,
+          "market": 0.84,
+          "directLow": 0.99
+        },
+        "reverseHolofoil": {
+          "low": 0.98,
+          "mid": 1.34,
+          "high": 2.28,
+          "market": 1.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1,
+        "lowPrice": 0.11,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.5,
+        "reverseHoloLow": 0.45,
+        "reverseHoloTrend": 1,
+        "lowPriceExPlus": 0.11,
+        "avg1": 2.99,
+        "avg7": 0.6,
+        "avg30": 1.76,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 1.38,
+        "reverseHoloAvg30": 1.82
       }
     }
   },
@@ -2312,6 +3947,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -2327,12 +3980,45 @@
       "small": "https://images.pokemontcg.io/sm35/33.png",
       "large": "https://images.pokemontcg.io/sm35/33_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.2
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.62,
+          "high": 4.95,
+          "market": 0.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.44,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.21,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.56,
+        "reverseHoloAvg7": 0.87,
+        "reverseHoloAvg30": 0.65
       }
     }
   },
@@ -2383,6 +4069,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "34",
     "artist": "nagimiso",
     "rarity": "Common",
@@ -2398,12 +4102,45 @@
       "small": "https://images.pokemontcg.io/sm35/34.png",
       "large": "https://images.pokemontcg.io/sm35/34_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.22,
+          "high": 5.53,
+          "market": 0.23,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.18,
+        "avg30": 0.11,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -2459,6 +4196,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "35",
     "artist": "nagimiso",
     "rarity": "Rare Holo",
@@ -2474,12 +4229,45 @@
       "small": "https://images.pokemontcg.io/sm35/35.png",
       "large": "https://images.pokemontcg.io/sm35/35_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": 0.2
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.35,
+        "lowPrice": 0.02,
+        "trendPrice": 0.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.69,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.69,
+        "lowPriceExPlus": 0.08,
+        "avg1": 0.47,
+        "avg7": 0.3,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 0.81,
+        "reverseHoloAvg30": 0.59
       }
     }
   },
@@ -2519,6 +4307,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "36",
     "artist": "DemizuPosuka",
     "rarity": "Common",
@@ -2534,12 +4340,45 @@
       "small": "https://images.pokemontcg.io/sm35/36.png",
       "large": "https://images.pokemontcg.io/sm35/36_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.31,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.05,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.08,
+        "reverseHoloAvg7": 0.23,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -2587,6 +4426,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "37",
     "artist": "kodama",
     "rarity": "Uncommon",
@@ -2602,12 +4459,45 @@
       "small": "https://images.pokemontcg.io/sm35/37.png",
       "large": "https://images.pokemontcg.io/sm35/37_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.13,
+          "mid": 0.62,
+          "high": 4.95,
+          "market": 0.62,
+          "directLow": 0.77
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.4,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.11,
+        "avg7": 0.11,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.38,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -2653,6 +4543,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -2668,12 +4576,45 @@
       "small": "https://images.pokemontcg.io/sm35/38.png",
       "large": "https://images.pokemontcg.io/sm35/38_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.36,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.43,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -2735,6 +4676,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "39",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -2749,12 +4708,38 @@
       "small": "https://images.pokemontcg.io/sm35/39.png",
       "large": "https://images.pokemontcg.io/sm35/39_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 7.97,
+          "high": 89,
+          "market": 7.62,
+          "directLow": 5.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.4,
+        "lowPrice": 1.99,
+        "trendPrice": 4.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.3,
+        "lowPriceExPlus": 2.32,
+        "avg1": 5.49,
+        "avg7": 4.93,
+        "avg30": 5.32,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 6.64,
+        "reverseHoloAvg30": 8.39
       }
     }
   },
@@ -2795,6 +4780,24 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare Shining",
@@ -2810,12 +4813,38 @@
       "small": "https://images.pokemontcg.io/sm35/40.png",
       "large": "https://images.pokemontcg.io/sm35/40_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 61.49,
+          "mid": 75,
+          "high": 199.95,
+          "market": 75.62,
+          "directLow": 62.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 63.58,
+        "lowPrice": 20,
+        "trendPrice": 84.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 58.36,
+        "lowPriceExPlus": 29.9,
+        "avg1": 66.83,
+        "avg7": 71.59,
+        "avg30": 60.13,
+        "reverseHoloAvg1": 74.95,
+        "reverseHoloAvg7": 63.51,
+        "reverseHoloAvg30": 78.4
       }
     }
   },
@@ -2863,6 +4892,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -2878,12 +4925,45 @@
       "small": "https://images.pokemontcg.io/sm35/41.png",
       "large": "https://images.pokemontcg.io/sm35/41_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.05,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.35,
+          "mid": 0.7,
+          "high": 4.95,
+          "market": 0.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.54,
+        "lowPrice": 0.05,
+        "trendPrice": 0.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.87,
+        "reverseHoloLow": 0.19,
+        "reverseHoloTrend": 1.42,
+        "lowPriceExPlus": 0.14,
+        "avg1": 0.7,
+        "avg7": 0.3,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 1.47,
+        "reverseHoloAvg30": 1.28
       }
     }
   },
@@ -2919,6 +4999,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Shigenori Negishi",
     "rarity": "Rare Shining",
@@ -2934,12 +5032,38 @@
       "small": "https://images.pokemontcg.io/sm35/42.png",
       "large": "https://images.pokemontcg.io/sm35/42_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.39,
+          "mid": 13.71,
+          "high": 89,
+          "market": 12.49,
+          "directLow": 12.47
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18.69,
+        "lowPrice": 4.99,
+        "trendPrice": 14.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.04,
+        "lowPriceExPlus": 5.5,
+        "avg1": 24.95,
+        "avg7": 13.48,
+        "avg30": 19.18,
+        "reverseHoloAvg1": 26.95,
+        "reverseHoloAvg7": 24.11,
+        "reverseHoloAvg30": 27.7
       }
     }
   },
@@ -2988,6 +5112,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Kyoko Umemoto",
     "rarity": "Common",
@@ -3003,12 +5145,45 @@
       "small": "https://images.pokemontcg.io/sm35/43.png",
       "large": "https://images.pokemontcg.io/sm35/43_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.22,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.32,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -3068,6 +5243,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -3083,12 +5276,45 @@
       "small": "https://images.pokemontcg.io/sm35/44.png",
       "large": "https://images.pokemontcg.io/sm35/44_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.18,
+          "mid": 0.36,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.31,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.4,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.06,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.38
       }
     }
   },
@@ -3138,6 +5364,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Emi Ando",
     "rarity": "Rare Holo",
@@ -3153,12 +5397,45 @@
       "small": "https://images.pokemontcg.io/sm35/45.png",
       "large": "https://images.pokemontcg.io/sm35/45_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.18,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.55,
+          "directLow": 0.44
+        },
+        "reverseHolofoil": {
+          "low": 1,
+          "mid": 1.53,
+          "high": 4.49,
+          "market": 1.53,
+          "directLow": 1.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.93,
+        "lowPrice": 1.56,
+        "trendPrice": 3.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.56,
+        "avg1": 1.93,
+        "avg7": 2.96,
+        "avg30": 2.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3208,6 +5485,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -3223,12 +5518,45 @@
       "small": "https://images.pokemontcg.io/sm35/46.png",
       "large": "https://images.pokemontcg.io/sm35/46_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.88,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.71,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 0.5,
+        "reverseHoloAvg30": 0.54
       }
     }
   },
@@ -3267,6 +5595,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "47",
     "artist": "Kouki Saitou",
     "rarity": "Uncommon",
@@ -3282,12 +5628,45 @@
       "small": "https://images.pokemontcg.io/sm35/47.png",
       "large": "https://images.pokemontcg.io/sm35/47_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 5.54,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.36,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.48,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.46,
+        "reverseHoloAvg30": 0.35
       }
     }
   },
@@ -3342,6 +5721,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -3357,12 +5754,45 @@
       "small": "https://images.pokemontcg.io/sm35/48.png",
       "large": "https://images.pokemontcg.io/sm35/48_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.16,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.37,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -3415,6 +5845,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "49",
     "artist": "kawayoo",
     "rarity": "Uncommon",
@@ -3430,12 +5878,45 @@
       "small": "https://images.pokemontcg.io/sm35/49.png",
       "large": "https://images.pokemontcg.io/sm35/49_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.38,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.41,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.41,
+        "reverseHoloAvg30": 0.38
       }
     }
   },
@@ -3490,6 +5971,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Sekio",
     "rarity": "Common",
@@ -3505,12 +6004,45 @@
       "small": "https://images.pokemontcg.io/sm35/50.png",
       "large": "https://images.pokemontcg.io/sm35/50_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.35,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -3566,6 +6098,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -3581,12 +6131,45 @@
       "small": "https://images.pokemontcg.io/sm35/51.png",
       "large": "https://images.pokemontcg.io/sm35/51_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.36,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.49,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.47,
+        "reverseHoloAvg30": 0.36
       }
     }
   },
@@ -3641,6 +6224,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "52",
     "artist": "kodama",
     "rarity": "Common",
@@ -3656,12 +6257,45 @@
       "small": "https://images.pokemontcg.io/sm35/52.png",
       "large": "https://images.pokemontcg.io/sm35/52_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.19
+        },
+        "reverseHolofoil": {
+          "low": 0.3,
+          "mid": 0.78,
+          "high": 6.27,
+          "market": 1.01,
+          "directLow": 0.73
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 0.1,
+        "avg7": 0.32,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3727,6 +6361,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "53",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -3741,12 +6393,38 @@
       "small": "https://images.pokemontcg.io/sm35/53.png",
       "large": "https://images.pokemontcg.io/sm35/53_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3,
+          "high": 89,
+          "market": 2.5,
+          "directLow": 2.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.44,
+        "lowPrice": 0.75,
+        "trendPrice": 2.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.74,
+        "lowPriceExPlus": 1.49,
+        "avg1": 2.5,
+        "avg7": 2.42,
+        "avg30": 2.28,
+        "reverseHoloAvg1": 1.7,
+        "reverseHoloAvg7": 2.06,
+        "reverseHoloAvg30": 2.28
       }
     }
   },
@@ -3801,6 +6479,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -3816,12 +6512,45 @@
       "small": "https://images.pokemontcg.io/sm35/54.png",
       "large": "https://images.pokemontcg.io/sm35/54_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.24
+        },
+        "reverseHolofoil": {
+          "low": 0.29,
+          "mid": 0.61,
+          "high": 4.95,
+          "market": 0.58,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.34,
+        "lowPrice": 0.05,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.29,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 1.33,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.39,
+        "avg7": 0.34,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 1.03,
+        "reverseHoloAvg30": 0.86
       }
     }
   },
@@ -3873,6 +6602,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "55",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -3888,12 +6635,45 @@
       "small": "https://images.pokemontcg.io/sm35/55.png",
       "large": "https://images.pokemontcg.io/sm35/55_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.1,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.22
+        },
+        "reverseHolofoil": {
+          "low": 0.36,
+          "mid": 0.69,
+          "high": 8.33,
+          "market": 0.69,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.05,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.65,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.62,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.5,
+        "avg7": 0.18,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.47,
+        "reverseHoloAvg30": 0.8
       }
     }
   },
@@ -3943,6 +6723,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Naoki Saito",
     "rarity": "Rare Shining",
@@ -3958,12 +6756,38 @@
       "small": "https://images.pokemontcg.io/sm35/56.png",
       "large": "https://images.pokemontcg.io/sm35/56_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 41.81,
+          "mid": 59.99,
+          "high": 179,
+          "market": 52.02,
+          "directLow": 59.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 35.85,
+        "lowPrice": 15,
+        "trendPrice": 51.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 53.16,
+        "lowPriceExPlus": 25,
+        "avg1": 25,
+        "avg7": 57.43,
+        "avg30": 38.85,
+        "reverseHoloAvg1": 75,
+        "reverseHoloAvg7": 61.74,
+        "reverseHoloAvg30": 61.27
       }
     }
   },
@@ -4010,6 +6834,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Kouki Saitou",
     "rarity": "Rare Shining",
@@ -4025,12 +6867,38 @@
       "small": "https://images.pokemontcg.io/sm35/57.png",
       "large": "https://images.pokemontcg.io/sm35/57_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.13,
+          "mid": 21.65,
+          "high": 89,
+          "market": 20.6,
+          "directLow": 15.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 26.54,
+        "lowPrice": 7.5,
+        "trendPrice": 27.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 27.12,
+        "lowPriceExPlus": 10,
+        "avg1": 68.63,
+        "avg7": 35.74,
+        "avg30": 28.22,
+        "reverseHoloAvg1": 28,
+        "reverseHoloAvg7": 29.65,
+        "reverseHoloAvg30": 33.49
       }
     }
   },
@@ -4045,6 +6913,24 @@
       "Move 3 damage counters from 1 of your Pokémon to another of your Pokémon.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -4056,12 +6942,45 @@
       "small": "https://images.pokemontcg.io/sm35/58.png",
       "large": "https://images.pokemontcg.io/sm35/58_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.14
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.39,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.17,
+        "avg7": 0.11,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -4076,6 +6995,24 @@
       "Put 2 basic Energy cards from your discard pile into your hand.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -4088,12 +7025,45 @@
       "small": "https://images.pokemontcg.io/sm35/59.png",
       "large": "https://images.pokemontcg.io/sm35/59_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.06,
+          "mid": 0.36,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.15,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.14,
+        "reverseHoloTrend": 0.36,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.12,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.41,
+        "reverseHoloAvg30": 0.4
       }
     }
   },
@@ -4108,6 +7078,24 @@
       "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -4120,12 +7108,45 @@
       "small": "https://images.pokemontcg.io/sm35/60.png",
       "large": "https://images.pokemontcg.io/sm35/60_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.19,
+          "mid": 0.33,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.4,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.05,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.43,
+        "reverseHoloAvg30": 0.46
       }
     }
   },
@@ -4140,6 +7161,24 @@
       "Draw 3 cards.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -4151,12 +7190,45 @@
       "small": "https://images.pokemontcg.io/sm35/61.png",
       "large": "https://images.pokemontcg.io/sm35/61_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.18,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.3,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.42,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -4171,6 +7243,24 @@
       "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -4182,12 +7272,45 @@
       "small": "https://images.pokemontcg.io/sm35/62.png",
       "large": "https://images.pokemontcg.io/sm35/62_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.19,
+          "mid": 0.39,
+          "high": 4.95,
+          "market": 0.39,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.48,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.09,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.49,
+        "reverseHoloAvg30": 0.51
       }
     }
   },
@@ -4202,6 +7325,24 @@
       "Draw 2 cards and heal 20 damage from your Active Pokémon. If you have no cards in your deck, you can't play this card.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Kanako Eo",
     "rarity": "Uncommon",
@@ -4213,12 +7354,45 @@
       "small": "https://images.pokemontcg.io/sm35/63.png",
       "large": "https://images.pokemontcg.io/sm35/63_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.07,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.11,
+          "mid": 0.35,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.39,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.42,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -4233,6 +7407,24 @@
       "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -4245,12 +7437,45 @@
       "small": "https://images.pokemontcg.io/sm35/64.png",
       "large": "https://images.pokemontcg.io/sm35/64_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.14,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.34,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.44,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.41,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -4265,6 +7490,24 @@
       "Discard 2 cards from your hand. If you do, draw 4 cards.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -4276,12 +7519,45 @@
       "small": "https://images.pokemontcg.io/sm35/65.png",
       "large": "https://images.pokemontcg.io/sm35/65_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.16,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.06,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.34,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -4296,6 +7572,24 @@
       "Flip a coin. If heads, put 1 of your Pokémon and all cards attached to it into your hand.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -4307,12 +7601,45 @@
       "small": "https://images.pokemontcg.io/sm35/66.png",
       "large": "https://images.pokemontcg.io/sm35/66_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.36,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.34,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.05,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.47,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -4327,6 +7654,24 @@
       "Switch your Active Pokémon with 1 of your Benched Pokémon.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "67",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -4339,12 +7684,45 @@
       "small": "https://images.pokemontcg.io/sm35/67.png",
       "large": "https://images.pokemontcg.io/sm35/67_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.47,
+          "high": 4.95,
+          "market": 0.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.45,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.15,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.48,
+        "reverseHoloAvg30": 0.37
       }
     }
   },
@@ -4359,6 +7737,24 @@
       "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "68",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -4371,12 +7767,45 @@
       "small": "https://images.pokemontcg.io/sm35/68.png",
       "large": "https://images.pokemontcg.io/sm35/68_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.39,
+          "mid": 1,
+          "high": 6,
+          "market": 1.06,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.53,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.6,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.3,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.38,
+        "reverseHoloAvg7": 0.53,
+        "reverseHoloAvg30": 0.71
       }
     }
   },
@@ -4391,6 +7820,24 @@
       "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "68a",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -4402,12 +7849,25 @@
       "small": "https://images.pokemontcg.io/sm35/68a.png",
       "large": "https://images.pokemontcg.io/sm35/68a_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-68a",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.02,
+        "lowPrice": 8.95,
+        "trendPrice": 17.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.64,
+        "lowPriceExPlus": 8.95,
+        "avg1": 10,
+        "avg7": 17.08,
+        "avg30": 12.93,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.71,
+        "reverseHoloAvg30": 1.68
       }
     }
   },
@@ -4421,6 +7881,24 @@
     "rules": [
       "Double Colorless Energy provides ColorlessColorless Energy."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "69",
     "rarity": "Uncommon",
     "legalities": {
@@ -4431,12 +7909,45 @@
       "small": "https://images.pokemontcg.io/sm35/69.png",
       "large": "https://images.pokemontcg.io/sm35/69_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.69,
+          "high": 89,
+          "market": 0.71,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.29,
+          "mid": 0.99,
+          "high": 6.5,
+          "market": 1.1,
+          "directLow": 1.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.62,
+        "lowPrice": 0.05,
+        "trendPrice": 0.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.95,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 0.79,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.4,
+        "avg7": 0.73,
+        "avg30": 0.51,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.23,
+        "reverseHoloAvg30": 1.26
       }
     }
   },
@@ -4451,6 +7962,24 @@
       "This card provides Colorless Energy.",
       "When you attach this card from your hand to your Active Pokémon, switch that Pokémon with 1 of your Benched Pokémon."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "70",
     "rarity": "Uncommon",
     "legalities": {
@@ -4461,12 +7990,45 @@
       "small": "https://images.pokemontcg.io/sm35/70.png",
       "large": "https://images.pokemontcg.io/sm35/70_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.47,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.45,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.07,
+        "avg30": 0.11,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 0.54,
+        "reverseHoloAvg30": 0.4
       }
     }
   },
@@ -4530,6 +8092,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "71",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4544,12 +8124,38 @@
       "small": "https://images.pokemontcg.io/sm35/71.png",
       "large": "https://images.pokemontcg.io/sm35/71_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.95,
+          "mid": 6.88,
+          "high": 19.8,
+          "market": 5.51,
+          "directLow": 5.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.67,
+        "lowPrice": 2.7,
+        "trendPrice": 5.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5,
+        "lowPriceExPlus": 2.7,
+        "avg1": 5,
+        "avg7": 5.09,
+        "avg30": 5.44,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 5.66,
+        "reverseHoloAvg30": 6.71
       }
     }
   },
@@ -4611,6 +8217,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "72",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4625,12 +8249,38 @@
       "small": "https://images.pokemontcg.io/sm35/72.png",
       "large": "https://images.pokemontcg.io/sm35/72_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12,
+          "mid": 24.08,
+          "high": 99.99,
+          "market": 18.46,
+          "directLow": 21.58
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.41,
+        "lowPrice": 4.99,
+        "trendPrice": 28.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.43,
+        "lowPriceExPlus": 8.5,
+        "avg1": 15.31,
+        "avg7": 20.49,
+        "avg30": 14.59,
+        "reverseHoloAvg1": 13,
+        "reverseHoloAvg7": 13.76,
+        "reverseHoloAvg30": 14.21
       }
     }
   },
@@ -4645,6 +8295,24 @@
       "Draw 2 cards and heal 20 damage from your Active Pokémon. If you have no cards in your deck, you can't play this card.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "73",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare Ultra",
@@ -4656,12 +8324,38 @@
       "small": "https://images.pokemontcg.io/sm35/73.png",
       "large": "https://images.pokemontcg.io/sm35/73_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 7.3,
+          "high": 41,
+          "market": 7.23,
+          "directLow": 3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.05,
+        "lowPrice": 2.2,
+        "trendPrice": 5.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.56,
+        "lowPriceExPlus": 3,
+        "avg1": 5.69,
+        "avg7": 5.45,
+        "avg30": 5.08,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 6.02,
+        "reverseHoloAvg30": 5.78
       }
     }
   },
@@ -4725,6 +8419,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "74",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4739,12 +8451,38 @@
       "small": "https://images.pokemontcg.io/sm35/74.png",
       "large": "https://images.pokemontcg.io/sm35/74_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15.79,
+          "mid": 25.53,
+          "high": 149.95,
+          "market": 25.52,
+          "directLow": 22.88
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 47.77,
+        "lowPrice": 16.99,
+        "trendPrice": 47.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 40.82,
+        "lowPriceExPlus": 22,
+        "avg1": 23,
+        "avg7": 44.71,
+        "avg30": 32.07,
+        "reverseHoloAvg1": 39.95,
+        "reverseHoloAvg7": 40.21,
+        "reverseHoloAvg30": 36.5
       }
     }
   },
@@ -4814,6 +8552,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "75",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4828,12 +8584,38 @@
       "small": "https://images.pokemontcg.io/sm35/75.png",
       "large": "https://images.pokemontcg.io/sm35/75_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 31.19,
+          "mid": 43.55,
+          "high": 99.99,
+          "market": 43.18,
+          "directLow": 31.78
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.74,
+        "lowPrice": 3,
+        "trendPrice": 20.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 44.39,
+        "lowPriceExPlus": 20,
+        "avg1": 14.95,
+        "avg7": 20.6,
+        "avg30": 26.44,
+        "reverseHoloAvg1": 49.85,
+        "reverseHoloAvg7": 54.68,
+        "reverseHoloAvg30": 42.78
       }
     }
   },
@@ -4895,6 +8677,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "76",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4909,12 +8709,38 @@
       "small": "https://images.pokemontcg.io/sm35/76.png",
       "large": "https://images.pokemontcg.io/sm35/76_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 51.99,
+          "mid": 65,
+          "high": 99.99,
+          "market": 56.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 47.45,
+        "lowPrice": 20,
+        "trendPrice": 62.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 109.38,
+        "lowPriceExPlus": 35,
+        "avg1": 38,
+        "avg7": 50.73,
+        "avg30": 60.46,
+        "reverseHoloAvg1": 105.95,
+        "reverseHoloAvg7": 98.37,
+        "reverseHoloAvg30": 92.24
       }
     }
   },
@@ -4980,6 +8806,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "77",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4994,12 +8838,38 @@
       "small": "https://images.pokemontcg.io/sm35/77.png",
       "large": "https://images.pokemontcg.io/sm35/77_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.99,
+          "mid": 17.22,
+          "high": 31.31,
+          "market": 13.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 21.33,
+        "lowPrice": 10,
+        "trendPrice": 22.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 27.32,
+        "lowPriceExPlus": 15.61,
+        "avg1": 26.5,
+        "avg7": 22.4,
+        "avg30": 23.09,
+        "reverseHoloAvg1": 31,
+        "reverseHoloAvg7": 27.24,
+        "reverseHoloAvg30": 27.05
       }
     }
   },
@@ -5065,6 +8935,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "77a",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -5079,12 +8967,25 @@
       "small": "https://images.pokemontcg.io/sm35/77a.png",
       "large": "https://images.pokemontcg.io/sm35/77a_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-77a",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.6,
+        "lowPrice": 10.9,
+        "trendPrice": 17.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 23.13,
+        "lowPriceExPlus": 10.9,
+        "avg1": 17.98,
+        "avg7": 18.61,
+        "avg30": 16.85,
+        "reverseHoloAvg1": 19.99,
+        "reverseHoloAvg7": 19.78,
+        "reverseHoloAvg30": 21.2
       }
     }
   },
@@ -5146,6 +9047,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm35",
+      "name": "Shining Legends",
+      "series": "Sun & Moon",
+      "printedTotal": 73,
+      "total": 81,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SLG",
+      "releaseDate": "2017/10/06",
+      "updatedAt": "2022/10/11 21:39:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm35/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm35/logo.png"
+      }
+    },
     "number": "78",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Secret",
@@ -5160,12 +9079,38 @@
       "small": "https://images.pokemontcg.io/sm35/78.png",
       "large": "https://images.pokemontcg.io/sm35/78_hires.png"
     },
-    "set": {
-      "id": "sm35",
-      "releaseDate": "2017/10/06",
-      "name": "Shining Legends",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm35-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 349.99,
+          "mid": 467.33,
+          "high": 683.89,
+          "market": 426.61,
+          "directLow": 499.91
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm35-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 281.75,
+        "lowPrice": 110,
+        "trendPrice": 295.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 108.73,
+        "lowPriceExPlus": 160,
+        "avg1": 315,
+        "avg7": 307.42,
+        "avg30": 275.06,
+        "reverseHoloAvg1": 49.99,
+        "reverseHoloAvg7": 117.48,
+        "reverseHoloAvg30": 106.32
       }
     }
   }

@@ -44,6 +44,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -53,6 +72,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -60,12 +80,45 @@
       "small": "https://images.pokemontcg.io/swsh45/1.png",
       "large": "https://images.pokemontcg.io/swsh45/1_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.01,
+          "mid": 0.16,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.13,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.12,
+        "reverseHoloAvg30": 0.11
       }
     }
   },
@@ -108,6 +161,25 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Souichirou Gunjima",
     "rarity": "Rare",
@@ -117,6 +189,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -124,12 +197,45 @@
       "small": "https://images.pokemontcg.io/swsh45/2.png",
       "large": "https://images.pokemontcg.io/swsh45/2_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.04,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.36,
+        "reverseHoloAvg7": 0.4,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -174,6 +280,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Yuu Nishida",
     "rarity": "Rare",
@@ -183,6 +308,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -190,12 +316,45 @@
       "small": "https://images.pokemontcg.io/swsh45/3.png",
       "large": "https://images.pokemontcg.io/swsh45/3_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": 0.26
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.6,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.24,
+        "avg7": 0.18,
+        "avg30": 0.12,
+        "reverseHoloAvg1": 0.38,
+        "reverseHoloAvg7": 0.54,
+        "reverseHoloAvg30": 0.39
       }
     }
   },
@@ -236,6 +395,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Uta",
     "rarity": "Common",
@@ -245,6 +423,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -252,12 +431,45 @@
       "small": "https://images.pokemontcg.io/swsh45/4.png",
       "large": "https://images.pokemontcg.io/swsh45/4_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.09
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.03,
+          "market": 0.03,
+          "directLow": 0.01
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.03,
+        "avg30": 0.02,
+        "reverseHoloAvg1": 0.16,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.17
       }
     }
   },
@@ -303,6 +515,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Akira Komayama",
     "rarity": "Uncommon",
@@ -312,6 +543,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -319,12 +551,45 @@
       "small": "https://images.pokemontcg.io/swsh45/5.png",
       "large": "https://images.pokemontcg.io/swsh45/5_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.18,
+          "high": 25.1,
+          "market": 0.1,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.04,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.13,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -372,6 +637,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "6",
     "artist": "HYOGONOSUKE",
     "rarity": "Common",
@@ -388,12 +672,45 @@
       "small": "https://images.pokemontcg.io/swsh45/6.png",
       "large": "https://images.pokemontcg.io/swsh45/6_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.1
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.11,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.12,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.11,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -433,6 +750,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "7",
     "artist": "AKIRA EGAWA",
     "rarity": "Uncommon",
@@ -449,12 +785,45 @@
       "small": "https://images.pokemontcg.io/swsh45/7.png",
       "large": "https://images.pokemontcg.io/swsh45/7_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.03,
+          "market": 0.03,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 25.11,
+          "market": 0.11,
+          "directLow": 0.08
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.07,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -500,6 +869,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Ryota Murayama",
     "rarity": "Rare Holo",
@@ -516,12 +904,45 @@
       "small": "https://images.pokemontcg.io/swsh45/8.png",
       "large": "https://images.pokemontcg.io/swsh45/8_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.24,
+          "high": 15,
+          "market": 0.21,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.06,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.36,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.14,
+        "avg7": 0.12,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.34,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -573,6 +994,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Eske Yoshinob",
     "rarity": "Rare Holo V",
@@ -588,12 +1028,38 @@
       "small": "https://images.pokemontcg.io/swsh45/9.png",
       "large": "https://images.pokemontcg.io/swsh45/9_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.39,
+          "mid": 0.98,
+          "high": 5,
+          "market": 0.58,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.66,
+        "lowPrice": 0.17,
+        "trendPrice": 0.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.95,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.84,
+        "avg7": 0.82,
+        "avg30": 0.66,
+        "reverseHoloAvg1": 0.89,
+        "reverseHoloAvg7": 0.94,
+        "reverseHoloAvg30": 1.15
       }
     }
   },
@@ -646,6 +1112,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "10",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo VMAX",
@@ -661,12 +1146,38 @@
       "small": "https://images.pokemontcg.io/swsh45/10.png",
       "large": "https://images.pokemontcg.io/swsh45/10_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.2,
+          "mid": 2,
+          "high": 89,
+          "market": 1.65,
+          "directLow": 1.58
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.44,
+        "lowPrice": 0.5,
+        "trendPrice": 1.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.57,
+        "lowPriceExPlus": 0.7,
+        "avg1": 1.4,
+        "avg7": 1.4,
+        "avg30": 1.37,
+        "reverseHoloAvg1": 2.63,
+        "reverseHoloAvg7": 2.59,
+        "reverseHoloAvg30": 2.97
       }
     }
   },
@@ -705,6 +1216,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Naoki Saito",
     "rarity": "Common",
@@ -721,12 +1251,45 @@
       "small": "https://images.pokemontcg.io/swsh45/11.png",
       "large": "https://images.pokemontcg.io/swsh45/11_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.12
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.19,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.23,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -754,7 +1317,7 @@
     ],
     "attacks": [
       {
-        "name": "Branch Poke",
+        "name": "Branch Poké",
         "cost": [
           "Grass"
         ],
@@ -774,6 +1337,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "12",
     "artist": "0313",
     "rarity": "Uncommon",
@@ -790,12 +1372,45 @@
       "small": "https://images.pokemontcg.io/swsh45/12.png",
       "large": "https://images.pokemontcg.io/swsh45/12_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.07,
+          "market": 0.07,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.02,
+          "mid": 0.2,
+          "high": 25.13,
+          "market": 0.13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.15,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -844,6 +1459,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Anesaki Dynamic",
     "rarity": "Rare Holo",
@@ -860,12 +1494,45 @@
       "small": "https://images.pokemontcg.io/swsh45/13.png",
       "large": "https://images.pokemontcg.io/swsh45/13_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.24,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.34,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -904,6 +1571,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -913,6 +1599,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -920,12 +1607,45 @@
       "small": "https://images.pokemontcg.io/swsh45/14.png",
       "large": "https://images.pokemontcg.io/swsh45/14_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.18,
+          "high": 25.16,
+          "market": 0.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.1,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.02,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.06,
+        "reverseHoloAvg30": 0.09
       }
     }
   },
@@ -971,6 +1691,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "15",
     "artist": "kodama",
     "rarity": "Uncommon",
@@ -980,6 +1719,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -987,12 +1727,45 @@
       "small": "https://images.pokemontcg.io/swsh45/15.png",
       "large": "https://images.pokemontcg.io/swsh45/15_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.02,
+          "mid": 0.18,
+          "high": 6.39,
+          "market": 0.14,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.08,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.04,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.02,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.05,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -1041,6 +1814,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -1050,6 +1842,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1057,12 +1850,45 @@
       "small": "https://images.pokemontcg.io/swsh45/16.png",
       "large": "https://images.pokemontcg.io/swsh45/16_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.12
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.19,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.07,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.03,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -1102,6 +1928,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "17",
     "artist": "PLANETA Tsuji",
     "rarity": "Amazing Rare",
@@ -1118,12 +1963,38 @@
       "small": "https://images.pokemontcg.io/swsh45/17.png",
       "large": "https://images.pokemontcg.io/swsh45/17_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.61,
+          "mid": 1.42,
+          "high": 89,
+          "market": 1.2,
+          "directLow": 0.63
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.88,
+        "lowPrice": 0.5,
+        "trendPrice": 1.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.54,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.88,
+        "avg7": 1.61,
+        "avg30": 1.89,
+        "reverseHoloAvg1": 6.57,
+        "reverseHoloAvg7": 7.14,
+        "reverseHoloAvg30": 7.92
       }
     }
   },
@@ -1173,6 +2044,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "18",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo V",
@@ -1188,12 +2078,38 @@
       "small": "https://images.pokemontcg.io/swsh45/18.png",
       "large": "https://images.pokemontcg.io/swsh45/18_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.68,
+          "directLow": 0.63
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.84,
+        "lowPrice": 0.25,
+        "trendPrice": 0.74,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.21,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.8,
+        "avg7": 0.72,
+        "avg30": 0.82,
+        "reverseHoloAvg1": 1.03,
+        "reverseHoloAvg7": 1.1,
+        "reverseHoloAvg30": 1.21
       }
     }
   },
@@ -1246,6 +2162,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "19",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo VMAX",
@@ -1261,12 +2196,38 @@
       "small": "https://images.pokemontcg.io/swsh45/19.png",
       "large": "https://images.pokemontcg.io/swsh45/19_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.23,
+          "mid": 2.07,
+          "high": 7.95,
+          "market": 1.8,
+          "directLow": 1.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.95,
+        "lowPrice": 0.95,
+        "trendPrice": 1.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.52,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.4,
+        "avg7": 1.83,
+        "avg30": 1.9,
+        "reverseHoloAvg1": 2.94,
+        "reverseHoloAvg7": 3.36,
+        "reverseHoloAvg30": 3.79
       }
     }
   },
@@ -1301,6 +2262,25 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Taira Akitsu",
     "rarity": "Common",
@@ -1310,6 +2290,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1317,12 +2298,45 @@
       "small": "https://images.pokemontcg.io/swsh45/20.png",
       "large": "https://images.pokemontcg.io/swsh45/20_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.1
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.12,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.02,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.12,
+        "reverseHoloAvg30": 0.13
       }
     }
   },
@@ -1363,6 +2377,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Anesaki Dynamic",
     "rarity": "Amazing Rare",
@@ -1379,12 +2412,38 @@
       "small": "https://images.pokemontcg.io/swsh45/21.png",
       "large": "https://images.pokemontcg.io/swsh45/21_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.55,
+          "mid": 1.37,
+          "high": 89,
+          "market": 1.07,
+          "directLow": 0.87
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.13,
+        "lowPrice": 0.5,
+        "trendPrice": 1.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.73,
+        "lowPriceExPlus": 0.95,
+        "avg1": 2.21,
+        "avg7": 2.05,
+        "avg30": 2.09,
+        "reverseHoloAvg1": 7.14,
+        "reverseHoloAvg7": 7.71,
+        "reverseHoloAvg30": 8.67
       }
     }
   },
@@ -1423,6 +2482,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "22",
     "artist": "ryoma uratsuka",
     "rarity": "Common",
@@ -1432,6 +2510,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1439,12 +2518,45 @@
       "small": "https://images.pokemontcg.io/swsh45/22.png",
       "large": "https://images.pokemontcg.io/swsh45/22_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.03,
+          "market": 0.03,
+          "directLow": 0.01
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 25.11,
+          "market": 0.11,
+          "directLow": 0.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.07,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.13
       }
     }
   },
@@ -1481,6 +2593,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "23",
     "artist": "AKIRA EGAWA",
     "rarity": "Uncommon",
@@ -1490,6 +2621,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1497,12 +2629,45 @@
       "small": "https://images.pokemontcg.io/swsh45/23.png",
       "large": "https://images.pokemontcg.io/swsh45/23_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.03,
+          "market": 0.03,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.02,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.04,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.22,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -1546,6 +2711,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Narumi Sato",
     "rarity": "Rare",
@@ -1555,6 +2739,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1562,12 +2747,45 @@
       "small": "https://images.pokemontcg.io/swsh45/24.png",
       "large": "https://images.pokemontcg.io/swsh45/24_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 25.2,
+          "market": 0.21,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 5,
+          "market": 0.13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -1618,6 +2836,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "25",
     "artist": "nagimiso",
     "rarity": "Rare",
@@ -1627,6 +2864,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1634,12 +2872,45 @@
       "small": "https://images.pokemontcg.io/swsh45/25.png",
       "large": "https://images.pokemontcg.io/swsh45/25_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.07
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.13,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -1689,6 +2960,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "26",
     "artist": "sowsow",
     "rarity": "Common",
@@ -1698,6 +2988,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1705,12 +2996,45 @@
       "small": "https://images.pokemontcg.io/swsh45/26.png",
       "large": "https://images.pokemontcg.io/swsh45/26_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.04,
+          "market": 0.05,
+          "directLow": 0.01
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 25.11,
+          "market": 0.1,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.13,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.17,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.12
       }
     }
   },
@@ -1758,6 +3082,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -1767,6 +3110,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1774,12 +3118,45 @@
       "small": "https://images.pokemontcg.io/swsh45/27.png",
       "large": "https://images.pokemontcg.io/swsh45/27_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 5.08,
+          "market": 0.13,
+          "directLow": 0.13
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.08,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -1816,6 +3193,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "28",
     "artist": "HYOGONOSUKE",
     "rarity": "Uncommon",
@@ -1825,6 +3221,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1832,12 +3229,45 @@
       "small": "https://images.pokemontcg.io/swsh45/28.png",
       "large": "https://images.pokemontcg.io/swsh45/28_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 25.11,
+          "market": 0.11,
+          "directLow": 0.09
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.04,
+          "market": 0.04,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.07,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.11,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -1877,6 +3307,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Tika Matsuno",
     "rarity": "Common",
@@ -1893,12 +3342,45 @@
       "small": "https://images.pokemontcg.io/swsh45/29.png",
       "large": "https://images.pokemontcg.io/swsh45/29_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.11,
+          "high": 25.1,
+          "market": 0.1,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 49.99,
+          "market": 0.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.02,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.18,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.15
       }
     }
   },
@@ -1944,6 +3426,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -1960,12 +3461,45 @@
       "small": "https://images.pokemontcg.io/swsh45/30.png",
       "large": "https://images.pokemontcg.io/swsh45/30_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.2
+        },
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.41,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.72,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.33,
+        "avg30": 0.28,
+        "reverseHoloAvg1": 0.34,
+        "reverseHoloAvg7": 0.62,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -2004,6 +3538,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Uta",
     "rarity": "Common",
@@ -2020,12 +3573,45 @@
       "small": "https://images.pokemontcg.io/swsh45/31.png",
       "large": "https://images.pokemontcg.io/swsh45/31_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.1,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.13
       }
     }
   },
@@ -2072,6 +3658,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "32",
     "artist": "NC Empire",
     "rarity": "Uncommon",
@@ -2088,12 +3693,45 @@
       "small": "https://images.pokemontcg.io/swsh45/32.png",
       "large": "https://images.pokemontcg.io/swsh45/32_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.12
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.07,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.04,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.08,
+        "reverseHoloAvg7": 0.08,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -2140,6 +3778,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Hasuno",
     "rarity": "Rare Holo",
@@ -2156,12 +3813,45 @@
       "small": "https://images.pokemontcg.io/swsh45/33.png",
       "large": "https://images.pokemontcg.io/swsh45/33_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.22
+        },
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.21,
+          "high": 89,
+          "market": 0.18,
+          "directLow": 0.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.16,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.23,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 0.31,
+        "reverseHoloAvg7": 0.18,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -2205,6 +3895,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "34",
     "artist": "ryoma uratsuka",
     "rarity": "Uncommon",
@@ -2221,12 +3930,45 @@
       "small": "https://images.pokemontcg.io/swsh45/34.png",
       "large": "https://images.pokemontcg.io/swsh45/34_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.07,
+          "market": 0.07,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.1,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.09,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.11,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.13
       }
     }
   },
@@ -2272,6 +4014,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Saya Tsuruta",
     "rarity": "Common",
@@ -2288,12 +4049,45 @@
       "small": "https://images.pokemontcg.io/swsh45/35.png",
       "large": "https://images.pokemontcg.io/swsh45/35_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.11,
+          "high": 25.11,
+          "market": 0.1,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.13
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.17
       }
     }
   },
@@ -2339,6 +4133,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Hideki Ishikawa",
     "rarity": "Common",
@@ -2355,12 +4168,45 @@
       "small": "https://images.pokemontcg.io/swsh45/36.png",
       "large": "https://images.pokemontcg.io/swsh45/36_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.09,
+          "market": 0.08,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -2412,6 +4258,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "37",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo V",
@@ -2427,12 +4292,38 @@
       "small": "https://images.pokemontcg.io/swsh45/37.png",
       "large": "https://images.pokemontcg.io/swsh45/37_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.3,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.76,
+          "directLow": 0.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.97,
+        "lowPrice": 0.15,
+        "trendPrice": 1.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.05,
+        "lowPriceExPlus": 0.19,
+        "avg1": 1.25,
+        "avg7": 1.13,
+        "avg30": 0.97,
+        "reverseHoloAvg1": 1.26,
+        "reverseHoloAvg7": 1.09,
+        "reverseHoloAvg30": 1.16
       }
     }
   },
@@ -2474,6 +4365,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "38",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo VMAX",
@@ -2489,12 +4399,38 @@
       "small": "https://images.pokemontcg.io/swsh45/38.png",
       "large": "https://images.pokemontcg.io/swsh45/38_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.21,
+          "mid": 2,
+          "high": 20,
+          "market": 1.86,
+          "directLow": 2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.14,
+        "lowPrice": 1,
+        "trendPrice": 2.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.08,
+        "lowPriceExPlus": 1,
+        "avg1": 1.88,
+        "avg7": 2.09,
+        "avg30": 2.1,
+        "reverseHoloAvg1": 3.16,
+        "reverseHoloAvg7": 3.19,
+        "reverseHoloAvg30": 3.45
       }
     }
   },
@@ -2550,6 +4486,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "39",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo V",
@@ -2565,12 +4520,38 @@
       "small": "https://images.pokemontcg.io/swsh45/39.png",
       "large": "https://images.pokemontcg.io/swsh45/39_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.59,
+          "directLow": 0.57
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.72,
+        "lowPrice": 0.2,
+        "trendPrice": 0.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.98,
+        "lowPriceExPlus": 0.2,
+        "avg1": 1.84,
+        "avg7": 0.79,
+        "avg30": 0.77,
+        "reverseHoloAvg1": 1.12,
+        "reverseHoloAvg7": 1.07,
+        "reverseHoloAvg30": 1.06
       }
     }
   },
@@ -2609,6 +4590,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "40",
     "artist": "MAHOU",
     "rarity": "Common",
@@ -2625,12 +4625,45 @@
       "small": "https://images.pokemontcg.io/swsh45/40.png",
       "large": "https://images.pokemontcg.io/swsh45/40_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.11
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.06,
+          "market": 0.06,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.18,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.03,
+        "avg30": 0.02,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.11
       }
     }
   },
@@ -2669,6 +4702,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Pani Kobayashi",
     "rarity": "Common",
@@ -2685,12 +4737,45 @@
       "small": "https://images.pokemontcg.io/swsh45/41.png",
       "large": "https://images.pokemontcg.io/swsh45/41_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 25.17,
+          "market": 0.17,
+          "directLow": 0.1
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.07,
+          "market": 0.07,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.13,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.15,
+        "reverseHoloAvg30": 0.15
       }
     }
   },
@@ -2736,6 +4821,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -2752,12 +4856,45 @@
       "small": "https://images.pokemontcg.io/swsh45/42.png",
       "large": "https://images.pokemontcg.io/swsh45/42_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.23
+        },
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 5,
+          "market": 0.21,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.18,
+        "avg7": 0.21,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -2806,6 +4943,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "43",
     "artist": "sowsow",
     "rarity": "Common",
@@ -2822,12 +4978,45 @@
       "small": "https://images.pokemontcg.io/swsh45/43.png",
       "large": "https://images.pokemontcg.io/swsh45/43_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.08
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.04,
+          "market": 0.04,
+          "directLow": 0.01
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.13,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.02,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.11
       }
     }
   },
@@ -2875,6 +5064,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "44",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo V",
@@ -2890,12 +5098,38 @@
       "small": "https://images.pokemontcg.io/swsh45/44.png",
       "large": "https://images.pokemontcg.io/swsh45/44_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.44,
+          "mid": 0.9,
+          "high": 89,
+          "market": 0.66,
+          "directLow": 0.61
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.92,
+        "lowPrice": 0.2,
+        "trendPrice": 0.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.01,
+        "lowPriceExPlus": 0.3,
+        "avg1": 0.7,
+        "avg7": 0.81,
+        "avg30": 0.89,
+        "reverseHoloAvg1": 3.58,
+        "reverseHoloAvg7": 3.16,
+        "reverseHoloAvg30": 3.12
       }
     }
   },
@@ -2947,6 +5181,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "45",
     "artist": "PLANETA Tsuji",
     "rarity": "Rare Holo VMAX",
@@ -2962,12 +5215,38 @@
       "small": "https://images.pokemontcg.io/swsh45/45.png",
       "large": "https://images.pokemontcg.io/swsh45/45_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2,
+          "high": 89,
+          "market": 1.39,
+          "directLow": 1.44
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.5,
+        "lowPrice": 0.5,
+        "trendPrice": 1.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.84,
+        "lowPriceExPlus": 0.7,
+        "avg1": 1.97,
+        "avg7": 1.83,
+        "avg30": 1.56,
+        "reverseHoloAvg1": 2.42,
+        "reverseHoloAvg7": 3.11,
+        "reverseHoloAvg30": 3.57
       }
     }
   },
@@ -3014,6 +5293,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Hasuno",
     "rarity": "Amazing Rare",
@@ -3030,12 +5328,38 @@
       "small": "https://images.pokemontcg.io/swsh45/46.png",
       "large": "https://images.pokemontcg.io/swsh45/46_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.4,
+          "mid": 1.07,
+          "high": 89,
+          "market": 1,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.74,
+        "lowPrice": 0.5,
+        "trendPrice": 1.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.55,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.62,
+        "avg7": 1.71,
+        "avg30": 1.69,
+        "reverseHoloAvg1": 5.38,
+        "reverseHoloAvg7": 6.06,
+        "reverseHoloAvg30": 6.78
       }
     }
   },
@@ -3074,6 +5398,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "47",
     "artist": "kirisAki",
     "rarity": "Common",
@@ -3090,12 +5433,45 @@
       "small": "https://images.pokemontcg.io/swsh45/47.png",
       "large": "https://images.pokemontcg.io/swsh45/47_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.15,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.03,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.16
       }
     }
   },
@@ -3143,6 +5519,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare Holo",
@@ -3159,12 +5554,45 @@
       "small": "https://images.pokemontcg.io/swsh45/48.png",
       "large": "https://images.pokemontcg.io/swsh45/48_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 89,
+          "market": 0.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.19,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.12,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -3213,6 +5641,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "49",
     "artist": "0313",
     "rarity": "Common",
@@ -3229,12 +5676,45 @@
       "small": "https://images.pokemontcg.io/swsh45/49.png",
       "large": "https://images.pokemontcg.io/swsh45/49_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.19,
+          "high": 25.12,
+          "market": 0.12,
+          "directLow": 0.11
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.06,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.02,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.11,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.11,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.02,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -3282,6 +5762,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Saki Hayashiro",
     "rarity": "Rare Holo V",
@@ -3297,12 +5796,38 @@
       "small": "https://images.pokemontcg.io/swsh45/50.png",
       "large": "https://images.pokemontcg.io/swsh45/50_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.1,
+          "mid": 1,
+          "high": 89,
+          "market": 0.87,
+          "directLow": 0.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.07,
+        "lowPrice": 0.3,
+        "trendPrice": 1.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.09,
+        "lowPriceExPlus": 0.4,
+        "avg1": 0.75,
+        "avg7": 1.15,
+        "avg30": 1.07,
+        "reverseHoloAvg1": 1.49,
+        "reverseHoloAvg7": 1.14,
+        "reverseHoloAvg30": 1.24
       }
     }
   },
@@ -3346,6 +5871,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "51",
     "artist": "PLANETA Tsuji",
     "rarity": "Rare Holo VMAX",
@@ -3361,12 +5905,38 @@
       "small": "https://images.pokemontcg.io/swsh45/51.png",
       "large": "https://images.pokemontcg.io/swsh45/51_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.7,
+          "mid": 2.67,
+          "high": 89,
+          "market": 2.38,
+          "directLow": 2.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.17,
+        "lowPrice": 0.94,
+        "trendPrice": 2.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.94,
+        "lowPriceExPlus": 0.94,
+        "avg1": 2.15,
+        "avg7": 2.04,
+        "avg30": 2.17,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 3.03,
+        "reverseHoloAvg30": 3.34
       }
     }
   },
@@ -3422,6 +5992,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "52",
     "artist": "so-taro",
     "rarity": "Common",
@@ -3438,12 +6027,45 @@
       "small": "https://images.pokemontcg.io/swsh45/52.png",
       "large": "https://images.pokemontcg.io/swsh45/52_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 25.2,
+          "market": 0.18,
+          "directLow": 0.09
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.38,
+          "high": 4.95,
+          "market": 0.4,
+          "directLow": 0.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.04,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -3496,6 +6118,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "53",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Holo V",
@@ -3511,12 +6152,38 @@
       "small": "https://images.pokemontcg.io/swsh45/53.png",
       "large": "https://images.pokemontcg.io/swsh45/53_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.66,
+        "lowPrice": 0.18,
+        "trendPrice": 0.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.93,
+        "lowPriceExPlus": 0.18,
+        "avg1": 0.55,
+        "avg7": 0.54,
+        "avg30": 0.64,
+        "reverseHoloAvg1": 0.87,
+        "reverseHoloAvg7": 0.96,
+        "reverseHoloAvg30": 1.13
       }
     }
   },
@@ -3573,6 +6240,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "54",
     "artist": "aky CG Works",
     "rarity": "Rare Holo V",
@@ -3588,12 +6274,38 @@
       "small": "https://images.pokemontcg.io/swsh45/54.png",
       "large": "https://images.pokemontcg.io/swsh45/54_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.25,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.62,
+          "directLow": 0.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.83,
+        "lowPrice": 0.15,
+        "trendPrice": 0.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.14,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.45,
+        "avg7": 0.71,
+        "avg30": 0.86,
+        "reverseHoloAvg1": 1.15,
+        "reverseHoloAvg7": 1.09,
+        "reverseHoloAvg30": 1.2
       }
     }
   },
@@ -3642,6 +6354,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "55",
     "artist": "PLANETA Tsuji",
     "rarity": "Rare Holo VMAX",
@@ -3657,12 +6388,38 @@
       "small": "https://images.pokemontcg.io/swsh45/55.png",
       "large": "https://images.pokemontcg.io/swsh45/55_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.8,
+          "mid": 1.84,
+          "high": 89,
+          "market": 1.16,
+          "directLow": 1.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.33,
+        "lowPrice": 0.7,
+        "trendPrice": 1.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.58,
+        "lowPriceExPlus": 0.75,
+        "avg1": 0.87,
+        "avg7": 1.36,
+        "avg30": 1.39,
+        "reverseHoloAvg1": 2.45,
+        "reverseHoloAvg7": 2.63,
+        "reverseHoloAvg30": 2.91
       }
     }
   },
@@ -3708,6 +6465,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Souichirou Gunjima",
     "rarity": "Rare Holo",
@@ -3724,12 +6500,45 @@
       "small": "https://images.pokemontcg.io/swsh45/56.png",
       "large": "https://images.pokemontcg.io/swsh45/56_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.02,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.2
+        },
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 5,
+          "market": 0.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.18,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.09,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.17
       }
     }
   },
@@ -3744,6 +6553,25 @@
       "Search your deck for up to 3 different Item cards that have the word \"Ball\" in their name, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Hitoshi Ariga",
     "rarity": "Uncommon",
@@ -3756,12 +6584,45 @@
       "small": "https://images.pokemontcg.io/swsh45/57.png",
       "large": "https://images.pokemontcg.io/swsh45/57_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 25.09,
+          "market": 0.09,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.11,
+        "reverseHoloAvg7": 0.16,
+        "reverseHoloAvg30": 0.21
       }
     }
   },
@@ -3776,6 +6637,25 @@
       "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Ryuta Fuse",
     "rarity": "Rare",
@@ -3789,12 +6669,45 @@
       "small": "https://images.pokemontcg.io/swsh45/58.png",
       "large": "https://images.pokemontcg.io/swsh45/58_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.61,
+          "high": 5.95,
+          "market": 0.57,
+          "directLow": 0.35
+        },
+        "normal": {
+          "low": 0.1,
+          "mid": 0.4,
+          "high": 999.99,
+          "market": 0.46,
+          "directLow": 0.27
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.25,
+        "lowPrice": 0.02,
+        "trendPrice": 0.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.36,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.3,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -3809,6 +6722,25 @@
       "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Ryuta Fuse",
     "rarity": "Uncommon",
@@ -3821,12 +6753,45 @@
       "small": "https://images.pokemontcg.io/swsh45/59.png",
       "large": "https://images.pokemontcg.io/swsh45/59_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.05,
+          "market": 0.05,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.15,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -3841,6 +6806,25 @@
       "Discard your hand and draw 7 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare",
@@ -3854,12 +6838,45 @@
       "small": "https://images.pokemontcg.io/swsh45/60.png",
       "large": "https://images.pokemontcg.io/swsh45/60_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.21,
+        "avg30": 0.17,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -3875,6 +6892,25 @@
       "The Zamazenta V this card is attached to gets +70 HP.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "61",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -3887,12 +6923,45 @@
       "small": "https://images.pokemontcg.io/swsh45/61.png",
       "large": "https://images.pokemontcg.io/swsh45/61_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 25.1,
+          "market": 0.1,
+          "directLow": 0.1
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.04,
+          "market": 0.04,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.08,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.07,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.04,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.04,
+        "reverseHoloAvg30": 0.08
       }
     }
   },
@@ -3908,6 +6977,25 @@
       "The attacks of the Zacian V this card is attached to do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "62",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -3920,12 +7008,45 @@
       "small": "https://images.pokemontcg.io/swsh45/62.png",
       "large": "https://images.pokemontcg.io/swsh45/62_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 4.95,
+          "market": 0.06,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 25.12,
+          "market": 0.12,
+          "directLow": 0.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.09,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.08,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.04,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.1
       }
     }
   },
@@ -3940,6 +7061,25 @@
       "Heal 50 damage from both Active Pokémon.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Studio Bora Inc.",
     "rarity": "Uncommon",
@@ -3952,12 +7092,45 @@
       "small": "https://images.pokemontcg.io/swsh45/63.png",
       "large": "https://images.pokemontcg.io/swsh45/63_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 25.04,
+          "market": 0.04,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.09,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.1,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.09,
+        "reverseHoloAvg30": 0.09
       }
     }
   },
@@ -4009,6 +7182,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Ayaka Yoshida",
     "rarity": "Rare Ultra",
@@ -4024,12 +7216,38 @@
       "small": "https://images.pokemontcg.io/swsh45/64.png",
       "large": "https://images.pokemontcg.io/swsh45/64_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.39,
+          "mid": 2.98,
+          "high": 89,
+          "market": 2.44,
+          "directLow": 3.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.28,
+        "lowPrice": 0.08,
+        "trendPrice": 2.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.14,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.24,
+        "avg7": 2.66,
+        "avg30": 2.36,
+        "reverseHoloAvg1": 7.49,
+        "reverseHoloAvg7": 5.73,
+        "reverseHoloAvg30": 6.02
       }
     }
   },
@@ -4044,6 +7262,25 @@
       "Search your deck for up to 3 different Item cards that have the word \"Ball\" in their name, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Ultra",
@@ -4056,12 +7293,38 @@
       "small": "https://images.pokemontcg.io/swsh45/65.png",
       "large": "https://images.pokemontcg.io/swsh45/65_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.81,
+          "mid": 3.34,
+          "high": 19.99,
+          "market": 3.21,
+          "directLow": 3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.81,
+        "lowPrice": 1,
+        "trendPrice": 2.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.51,
+        "lowPriceExPlus": 1,
+        "avg1": 1.74,
+        "avg7": 2.81,
+        "avg30": 2.67,
+        "reverseHoloAvg1": 9.98,
+        "reverseHoloAvg7": 9.13,
+        "reverseHoloAvg30": 9.26
       }
     }
   },
@@ -4076,6 +7339,25 @@
       "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare Ultra",
@@ -4088,12 +7370,38 @@
       "small": "https://images.pokemontcg.io/swsh45/66.png",
       "large": "https://images.pokemontcg.io/swsh45/66_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2,
+          "high": 999.99,
+          "market": 1.7,
+          "directLow": 1.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.73,
+        "lowPrice": 0.99,
+        "trendPrice": 2.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.48,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.19,
+        "avg7": 2.43,
+        "avg30": 2.64,
+        "reverseHoloAvg1": 8.49,
+        "reverseHoloAvg7": 8.75,
+        "reverseHoloAvg30": 9.63
       }
     }
   },
@@ -4108,6 +7416,25 @@
       "Search your deck for up to 2 Rare Fossil cards and put them onto your Bench. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "67",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Ultra",
@@ -4120,12 +7447,38 @@
       "small": "https://images.pokemontcg.io/swsh45/67.png",
       "large": "https://images.pokemontcg.io/swsh45/67_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.85,
+          "mid": 1.43,
+          "high": 19.99,
+          "market": 1.11,
+          "directLow": 1.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.23,
+        "lowPrice": 0.95,
+        "trendPrice": 2.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.27,
+        "lowPriceExPlus": 0.95,
+        "avg1": 2.39,
+        "avg7": 1.87,
+        "avg30": 2.14,
+        "reverseHoloAvg1": 7.63,
+        "reverseHoloAvg7": 7.85,
+        "reverseHoloAvg30": 8.85
       }
     }
   },
@@ -4140,6 +7493,25 @@
       "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "68",
     "artist": "nagimiso",
     "rarity": "Rare Ultra",
@@ -4152,12 +7524,38 @@
       "small": "https://images.pokemontcg.io/swsh45/68.png",
       "large": "https://images.pokemontcg.io/swsh45/68_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.7,
+          "mid": 1.27,
+          "high": 89,
+          "market": 1.09,
+          "directLow": 1.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.59,
+        "lowPrice": 0.85,
+        "trendPrice": 1.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.9,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.68,
+        "avg7": 1.3,
+        "avg30": 1.49,
+        "reverseHoloAvg1": 5.75,
+        "reverseHoloAvg7": 6.37,
+        "reverseHoloAvg30": 7.57
       }
     }
   },
@@ -4172,6 +7570,25 @@
       "Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "69",
     "artist": "Megumi Mizutani",
     "rarity": "Rare Ultra",
@@ -4184,12 +7601,38 @@
       "small": "https://images.pokemontcg.io/swsh45/69.png",
       "large": "https://images.pokemontcg.io/swsh45/69_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.11,
+          "mid": 2,
+          "high": 100,
+          "market": 1.53,
+          "directLow": 1.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.45,
+        "lowPrice": 1.5,
+        "trendPrice": 1.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.29,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2,
+        "avg7": 1.98,
+        "avg30": 2.47,
+        "reverseHoloAvg1": 9.12,
+        "reverseHoloAvg7": 9.54,
+        "reverseHoloAvg30": 10.48
       }
     }
   },
@@ -4204,6 +7647,25 @@
       "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "70",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare Ultra",
@@ -4216,12 +7678,38 @@
       "small": "https://images.pokemontcg.io/swsh45/70.png",
       "large": "https://images.pokemontcg.io/swsh45/70_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.99,
+          "mid": 5.99,
+          "high": 69.95,
+          "market": 5.51,
+          "directLow": 5.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.81,
+        "lowPrice": 2.48,
+        "trendPrice": 7.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.78,
+        "lowPriceExPlus": 2.92,
+        "avg1": 5.75,
+        "avg7": 6.24,
+        "avg30": 6.6,
+        "reverseHoloAvg1": 16.33,
+        "reverseHoloAvg7": 14.71,
+        "reverseHoloAvg30": 17.38
       }
     }
   },
@@ -4236,6 +7724,25 @@
       "Attach up to 2 basic Energy cards from your discard pile to 1 of your Pokémon VMAX. If you attached any Energy cards in this way, discard your hand.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "71",
     "artist": "Megumi Mizutani",
     "rarity": "Rare Ultra",
@@ -4248,12 +7755,38 @@
       "small": "https://images.pokemontcg.io/swsh45/71.png",
       "large": "https://images.pokemontcg.io/swsh45/71_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.2,
+          "high": 89,
+          "market": 1.04,
+          "directLow": 0.96
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.59,
+        "lowPrice": 0.5,
+        "trendPrice": 1.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.41,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1,
+        "avg7": 1.73,
+        "avg30": 1.53,
+        "reverseHoloAvg1": 7.86,
+        "reverseHoloAvg7": 8.95,
+        "reverseHoloAvg30": 9.89
       }
     }
   },
@@ -4268,6 +7801,25 @@
       "Search your deck for a Trainer card, reveal it, and put it into your hand. Shuffle your deck afterward.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "72",
     "artist": "kirisAki",
     "rarity": "Rare Ultra",
@@ -4280,12 +7832,38 @@
       "small": "https://images.pokemontcg.io/swsh45/72.png",
       "large": "https://images.pokemontcg.io/swsh45/72_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10,
+          "mid": 12.7,
+          "high": 79.99,
+          "market": 11.35,
+          "directLow": 10.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.83,
+        "lowPrice": 6.99,
+        "trendPrice": 20.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 27.35,
+        "lowPriceExPlus": 6.99,
+        "avg1": 24.98,
+        "avg7": 20.58,
+        "avg30": 14.68,
+        "reverseHoloAvg1": 32.88,
+        "reverseHoloAvg7": 29.55,
+        "reverseHoloAvg30": 29.73
       }
     }
   },
@@ -4337,6 +7915,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh45",
+      "name": "Shining Fates",
+      "series": "Sword & Shield",
+      "printedTotal": 72,
+      "total": 73,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "SHF",
+      "releaseDate": "2021/02/19",
+      "updatedAt": "2021/02/24 16:17:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh45/logo.png"
+      }
+    },
     "number": "73",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4352,12 +7949,38 @@
       "small": "https://images.pokemontcg.io/swsh45/73.png",
       "large": "https://images.pokemontcg.io/swsh45/73_hires.png"
     },
-    "set": {
-      "id": "swsh45",
-      "releaseDate": "2021/02/19",
-      "name": "Shining Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh45/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh45-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.69,
+          "mid": 6.15,
+          "high": 89,
+          "market": 4.99,
+          "directLow": 4.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh45-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.36,
+        "lowPrice": 1.25,
+        "trendPrice": 1.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.73,
+        "lowPriceExPlus": 1.25,
+        "avg1": 1.75,
+        "avg7": 2.25,
+        "avg30": 2.34,
+        "reverseHoloAvg1": 4.1,
+        "reverseHoloAvg7": 4.02,
+        "reverseHoloAvg30": 4.37
       }
     }
   }

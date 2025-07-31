@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "clone:pokemontcg": "node scripts/clone-pokemontcg.js",
     "validate-sitemap": "node scripts/validate-sitemap.js"
   },
   "dependencies": {
@@ -53,7 +54,10 @@
     "react-router-dom": "^7.6.2",
     "tailwind-merge": "^3.3.0",
     "zod": "^3.25.56",
-    "zustand": "^5.0.5"
+    "zustand": "^5.0.5",
+    "chalk": "^5.3.0",
+    "ora": "^6.3.1",
+    "cli-progress": "^3.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

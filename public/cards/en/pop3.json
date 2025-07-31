@@ -46,6 +46,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -59,12 +75,38 @@
       "small": "https://images.pokemontcg.io/pop3/1.png",
       "large": "https://images.pokemontcg.io/pop3/1_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 124.99,
+          "mid": 137.49,
+          "high": 149.99,
+          "market": 58.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 54.98,
+        "lowPrice": 30,
+        "trendPrice": 114.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 59.99,
+        "lowPriceExPlus": 79,
+        "avg1": 94.95,
+        "avg7": 107.99,
+        "avg30": 73.15,
+        "reverseHoloAvg1": 99.99,
+        "reverseHoloAvg7": 50,
+        "reverseHoloAvg30": 50
       }
     }
   },
@@ -113,6 +155,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -126,12 +184,45 @@
       "small": "https://images.pokemontcg.io/pop3/2.png",
       "large": "https://images.pokemontcg.io/pop3/2_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4,
+          "mid": 6.95,
+          "high": 12.22,
+          "market": 9.12,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 8,
+          "mid": 13.43,
+          "high": 26.99,
+          "market": 14.21,
+          "directLow": 12.57
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.49,
+        "lowPrice": 4,
+        "trendPrice": 10.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.29,
+        "lowPriceExPlus": 10.5,
+        "avg1": 5.7,
+        "avg7": 11.08,
+        "avg30": 10.37,
+        "reverseHoloAvg1": 14.9,
+        "reverseHoloAvg7": 9.77,
+        "reverseHoloAvg30": 15.28
       }
     }
   },
@@ -182,6 +273,22 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -195,12 +302,45 @@
       "small": "https://images.pokemontcg.io/pop3/3.png",
       "large": "https://images.pokemontcg.io/pop3/3_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 6,
+          "mid": 6.23,
+          "high": 30,
+          "market": 9.54,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 7,
+          "mid": 9.34,
+          "high": 89,
+          "market": 11.69,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.66,
+        "lowPrice": 1.5,
+        "trendPrice": 18.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.57,
+        "lowPriceExPlus": 10,
+        "avg1": 7,
+        "avg7": 11.68,
+        "avg30": 10.88,
+        "reverseHoloAvg1": 4.8,
+        "reverseHoloAvg7": 8.18,
+        "reverseHoloAvg30": 12.89
       }
     }
   },
@@ -262,6 +402,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -275,12 +431,38 @@
       "small": "https://images.pokemontcg.io/pop3/4.png",
       "large": "https://images.pokemontcg.io/pop3/4_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.18,
+          "mid": 8.81,
+          "high": 15,
+          "market": 11.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.7,
+        "lowPrice": 0.93,
+        "trendPrice": 5.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.68,
+        "lowPriceExPlus": 7,
+        "avg1": 5,
+        "avg7": 6.36,
+        "avg30": 8.4,
+        "reverseHoloAvg1": 3.95,
+        "reverseHoloAvg7": 6.46,
+        "reverseHoloAvg30": 5.63
       }
     }
   },
@@ -342,6 +524,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -355,12 +553,45 @@
       "small": "https://images.pokemontcg.io/pop3/5.png",
       "large": "https://images.pokemontcg.io/pop3/5_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.16,
+          "mid": 2.5,
+          "high": 2.6,
+          "market": 4.6,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 8.99,
+          "mid": 11,
+          "high": 15.99,
+          "market": 6.16,
+          "directLow": 5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.08,
+        "lowPrice": 0.95,
+        "trendPrice": 5.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.78,
+        "lowPriceExPlus": 5.5,
+        "avg1": 5,
+        "avg7": 6.4,
+        "avg30": 6.38,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 8.69,
+        "reverseHoloAvg30": 5.41
       }
     }
   },
@@ -407,6 +638,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -420,12 +667,45 @@
       "small": "https://images.pokemontcg.io/pop3/6.png",
       "large": "https://images.pokemontcg.io/pop3/6_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 7.8,
+          "mid": 14.5,
+          "high": 39.82,
+          "market": 27.82,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 7.99,
+          "mid": 13.47,
+          "high": 21.43,
+          "market": 14.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.6,
+        "lowPrice": 3,
+        "trendPrice": 10.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 60,
+        "reverseHoloTrend": 7.95,
+        "lowPriceExPlus": 9.99,
+        "avg1": 9.99,
+        "avg7": 13.16,
+        "avg30": 11.96,
+        "reverseHoloAvg1": 17.95,
+        "reverseHoloAvg7": 9.56,
+        "reverseHoloAvg30": 12.07
       }
     }
   },
@@ -476,6 +756,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -489,12 +785,38 @@
       "small": "https://images.pokemontcg.io/pop3/7.png",
       "large": "https://images.pokemontcg.io/pop3/7_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 8,
+          "mid": 9.37,
+          "high": 12.46,
+          "market": 9.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.94,
+        "lowPrice": 1.99,
+        "trendPrice": 9.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15,
+        "lowPriceExPlus": 4.5,
+        "avg1": 12,
+        "avg7": 8.92,
+        "avg30": 7.14,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 15,
+        "reverseHoloAvg30": 15
       }
     }
   },
@@ -542,6 +864,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Tomoaki Imakuni",
     "rarity": "Uncommon",
@@ -555,12 +893,38 @@
       "small": "https://images.pokemontcg.io/pop3/8.png",
       "large": "https://images.pokemontcg.io/pop3/8_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 16.36,
+          "mid": 18.12,
+          "high": 27,
+          "market": 15.12,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.37,
+        "lowPrice": 1.69,
+        "trendPrice": 13.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15,
+        "lowPriceExPlus": 4,
+        "avg1": 25,
+        "avg7": 11.68,
+        "avg30": 10.89,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 15,
+        "reverseHoloAvg30": 15
       }
     }
   },
@@ -610,6 +974,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Midori Harada",
     "rarity": "Uncommon",
@@ -623,12 +1003,38 @@
       "small": "https://images.pokemontcg.io/pop3/9.png",
       "large": "https://images.pokemontcg.io/pop3/9_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 6.24,
+          "mid": 9.1,
+          "high": 15,
+          "market": 6.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.12,
+        "lowPrice": 1.4,
+        "trendPrice": 5.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.8,
+        "lowPriceExPlus": 2,
+        "avg1": 1,
+        "avg7": 4.5,
+        "avg30": 6.13,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 7.9,
+        "reverseHoloAvg30": 7.9
       }
     }
   },
@@ -643,6 +1049,22 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "Each player pays Colorless less to retreat his or her Fire and Water Pokémon."
     ],
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ken Ikuji",
     "rarity": "Uncommon",
@@ -653,12 +1075,38 @@
       "small": "https://images.pokemontcg.io/pop3/10.png",
       "large": "https://images.pokemontcg.io/pop3/10_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.24,
+          "mid": 3.41,
+          "high": 4.17,
+          "market": 3.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.5,
+        "trendPrice": 2.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10,
+        "lowPriceExPlus": 0.84,
+        "avg1": 0.5,
+        "avg7": 1.88,
+        "avg30": 2.18,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 3.85,
+        "reverseHoloAvg30": 3.85
       }
     }
   },
@@ -673,6 +1121,22 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "Each Grass and Lightning Pokémon in play (both yours and your opponent's) gets +10 HP."
     ],
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Shin-ichi Yoshikawa",
     "rarity": "Uncommon",
@@ -683,12 +1147,38 @@
       "small": "https://images.pokemontcg.io/pop3/11.png",
       "large": "https://images.pokemontcg.io/pop3/11_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.54,
+          "mid": 7.59,
+          "high": 9,
+          "market": 4.58,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.18,
+        "lowPrice": 0.3,
+        "trendPrice": 4.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10,
+        "lowPriceExPlus": 0.85,
+        "avg1": 0.39,
+        "avg7": 2.91,
+        "avg30": 2.9,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 10,
+        "reverseHoloAvg30": 10
       }
     }
   },
@@ -732,6 +1222,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -745,12 +1251,38 @@
       "small": "https://images.pokemontcg.io/pop3/12.png",
       "large": "https://images.pokemontcg.io/pop3/12_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 8.05,
+          "mid": 14.26,
+          "high": 15,
+          "market": 12.88,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.47,
+        "lowPrice": 2.5,
+        "trendPrice": 7.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3,
+        "lowPriceExPlus": 2.5,
+        "avg1": 9.95,
+        "avg7": 6.76,
+        "avg30": 7.58,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 3,
+        "reverseHoloAvg30": 3
       }
     }
   },
@@ -806,6 +1338,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -819,12 +1367,38 @@
       "small": "https://images.pokemontcg.io/pop3/13.png",
       "large": "https://images.pokemontcg.io/pop3/13_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 12.93,
+          "mid": 24.47,
+          "high": 36,
+          "market": 13.01,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.24,
+        "lowPrice": 4.95,
+        "trendPrice": 16.97,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5,
+        "lowPriceExPlus": 9,
+        "avg1": 19.7,
+        "avg7": 18.47,
+        "avg30": 11.99,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 5,
+        "reverseHoloAvg30": 5
       }
     }
   },
@@ -875,6 +1449,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -888,12 +1478,38 @@
       "small": "https://images.pokemontcg.io/pop3/14.png",
       "large": "https://images.pokemontcg.io/pop3/14_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.18,
+          "mid": 5.25,
+          "high": 89,
+          "market": 3.75,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.27,
+        "lowPrice": 0.4,
+        "trendPrice": 3.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3,
+        "lowPriceExPlus": 1.2,
+        "avg1": 10.3,
+        "avg7": 2.68,
+        "avg30": 2.52,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.63,
+        "reverseHoloAvg30": 1.63
       }
     }
   },
@@ -944,6 +1560,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -957,12 +1589,38 @@
       "small": "https://images.pokemontcg.io/pop3/15.png",
       "large": "https://images.pokemontcg.io/pop3/15_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.07,
+          "mid": 3.54,
+          "high": 5,
+          "market": 2.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.65,
+        "lowPrice": 0.08,
+        "trendPrice": 0.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.76,
+        "avg7": 2.06,
+        "avg30": 1.34,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 3,
+        "reverseHoloAvg30": 3
       }
     }
   },
@@ -1002,6 +1660,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -1015,12 +1689,38 @@
       "small": "https://images.pokemontcg.io/pop3/16.png",
       "large": "https://images.pokemontcg.io/pop3/16_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 23.3,
+          "mid": 26.99,
+          "high": 54,
+          "market": 22.54,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.68,
+        "lowPrice": 2.79,
+        "trendPrice": 18.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.71,
+        "lowPriceExPlus": 5,
+        "avg1": 75,
+        "avg7": 24.04,
+        "avg30": 13.57,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 8.78,
+        "reverseHoloAvg30": 8.78
       }
     }
   },
@@ -1070,6 +1770,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop3",
+      "name": "POP Series 3",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2006/04/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop3/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop3/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -1083,12 +1799,38 @@
       "small": "https://images.pokemontcg.io/pop3/17.png",
       "large": "https://images.pokemontcg.io/pop3/17_hires.png"
     },
-    "set": {
-      "id": "pop3",
-      "releaseDate": "2006/04/01",
-      "name": "POP Series 3",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop3/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop3-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 55,
+          "mid": 59.99,
+          "high": 87.21,
+          "market": 59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop3-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.72,
+        "lowPrice": 3.95,
+        "trendPrice": 11.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.08,
+        "lowPriceExPlus": 12.95,
+        "avg1": 6.5,
+        "avg7": 10.39,
+        "avg30": 13.42,
+        "reverseHoloAvg1": 69,
+        "reverseHoloAvg7": 13.36,
+        "reverseHoloAvg30": 7.46
       }
     }
   }

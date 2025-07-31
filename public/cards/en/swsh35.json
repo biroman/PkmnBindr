@@ -51,6 +51,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "1",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo V",
@@ -66,12 +84,38 @@
       "small": "https://images.pokemontcg.io/swsh35/1.png",
       "large": "https://images.pokemontcg.io/swsh35/1_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.18,
+          "mid": 2.32,
+          "high": 89,
+          "market": 1.99,
+          "directLow": 1.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.45,
+        "lowPrice": 1,
+        "trendPrice": 5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.88,
+        "lowPriceExPlus": 1,
+        "avg1": 2.99,
+        "avg7": 4.84,
+        "avg30": 3.17,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.05,
+        "reverseHoloAvg30": 3.59
       }
     }
   },
@@ -110,6 +154,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -126,12 +188,45 @@
       "small": "https://images.pokemontcg.io/swsh35/2.png",
       "large": "https://images.pokemontcg.io/swsh35/2_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": 0.24
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.18,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.3,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.12,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.33,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -173,6 +268,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -189,12 +302,45 @@
       "small": "https://images.pokemontcg.io/swsh35/3.png",
       "large": "https://images.pokemontcg.io/swsh35/3_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.06,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.22,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -231,6 +377,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Hideki Ishikawa",
     "rarity": "Uncommon",
@@ -247,12 +411,45 @@
       "small": "https://images.pokemontcg.io/swsh35/4.png",
       "large": "https://images.pokemontcg.io/swsh35/4_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.19
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.1,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.22,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -300,6 +497,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "5",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo V",
@@ -315,12 +530,38 @@
       "small": "https://images.pokemontcg.io/swsh35/5.png",
       "large": "https://images.pokemontcg.io/swsh35/5_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.38,
+          "mid": 0.99,
+          "high": 25.79,
+          "market": 0.57,
+          "directLow": 0.63
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.2,
+        "lowPrice": 0.35,
+        "trendPrice": 1.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.62,
+        "lowPriceExPlus": 0.49,
+        "avg1": 0.95,
+        "avg7": 1.07,
+        "avg30": 1.11,
+        "reverseHoloAvg1": 1.48,
+        "reverseHoloAvg7": 1.67,
+        "reverseHoloAvg30": 1.78
       }
     }
   },
@@ -369,6 +610,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Shibuzoh.",
     "rarity": "Common",
@@ -385,12 +644,45 @@
       "small": "https://images.pokemontcg.io/swsh35/6.png",
       "large": "https://images.pokemontcg.io/swsh35/6_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.22
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.13,
+        "avg7": 0.07,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.23,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -436,6 +728,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Taira Akitsu",
     "rarity": "Uncommon",
@@ -452,12 +762,45 @@
       "small": "https://images.pokemontcg.io/swsh35/7.png",
       "large": "https://images.pokemontcg.io/swsh35/7_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.06
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.08,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.23,
+        "reverseHoloAvg7": 0.22,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -513,6 +856,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo V",
@@ -528,12 +889,38 @@
       "small": "https://images.pokemontcg.io/swsh35/8.png",
       "large": "https://images.pokemontcg.io/swsh35/8_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.49,
+          "mid": 1.48,
+          "high": 89,
+          "market": 1.38,
+          "directLow": 1.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.64,
+        "lowPrice": 0.45,
+        "trendPrice": 1.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.9,
+        "lowPriceExPlus": 0.5,
+        "avg1": 3.39,
+        "avg7": 1.76,
+        "avg30": 1.81,
+        "reverseHoloAvg1": 1.92,
+        "reverseHoloAvg7": 1.74,
+        "reverseHoloAvg30": 1.86
       }
     }
   },
@@ -583,6 +970,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Akira Komayama",
     "rarity": "Common",
@@ -599,12 +1004,45 @@
       "small": "https://images.pokemontcg.io/swsh35/9.png",
       "large": "https://images.pokemontcg.io/swsh35/9_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.11,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.19,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.21
       }
     }
   },
@@ -657,6 +1095,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -673,12 +1129,45 @@
       "small": "https://images.pokemontcg.io/swsh35/10.png",
       "large": "https://images.pokemontcg.io/swsh35/10_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.11
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.15,
+        "avg30": 0.17,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -717,6 +1206,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Shigenori Negishi",
     "rarity": "Common",
@@ -733,12 +1240,45 @@
       "small": "https://images.pokemontcg.io/swsh35/11.png",
       "large": "https://images.pokemontcg.io/swsh35/11_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.09,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.08,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -775,6 +1315,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Ryuta Fuse",
     "rarity": "Uncommon",
@@ -791,12 +1349,45 @@
       "small": "https://images.pokemontcg.io/swsh35/12.png",
       "large": "https://images.pokemontcg.io/swsh35/12_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.2
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.12,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.29,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -851,6 +1442,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "13",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Holo V",
@@ -866,12 +1475,38 @@
       "small": "https://images.pokemontcg.io/swsh35/13.png",
       "large": "https://images.pokemontcg.io/swsh35/13_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.22,
+          "high": 89,
+          "market": 0.98,
+          "directLow": 0.92
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.18,
+        "lowPrice": 0.5,
+        "trendPrice": 2.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.56,
+        "lowPriceExPlus": 0.8,
+        "avg1": 1.8,
+        "avg7": 1.71,
+        "avg30": 1.98,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 1.46,
+        "reverseHoloAvg30": 1.86
       }
     }
   },
@@ -923,6 +1558,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "14",
     "artist": "aky CG Works",
     "rarity": "Rare Holo V",
@@ -938,12 +1591,38 @@
       "small": "https://images.pokemontcg.io/swsh35/14.png",
       "large": "https://images.pokemontcg.io/swsh35/14_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.4,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.64,
+          "directLow": 0.7
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.96,
+        "lowPrice": 0.6,
+        "trendPrice": 1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.33,
+        "lowPriceExPlus": 0.6,
+        "avg1": 1.4,
+        "avg7": 1.02,
+        "avg30": 1.1,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 1.35,
+        "reverseHoloAvg30": 1.46
       }
     }
   },
@@ -995,6 +1674,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "15",
     "artist": "aky CG Works",
     "rarity": "Rare Holo VMAX",
@@ -1010,12 +1707,38 @@
       "small": "https://images.pokemontcg.io/swsh35/15.png",
       "large": "https://images.pokemontcg.io/swsh35/15_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2.24,
+          "high": 19.99,
+          "market": 1.83,
+          "directLow": 2.01
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.19,
+        "lowPrice": 1,
+        "trendPrice": 2.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.35,
+        "lowPriceExPlus": 1,
+        "avg1": 3.75,
+        "avg7": 2.22,
+        "avg30": 2.16,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.36,
+        "reverseHoloAvg30": 4.85
       }
     }
   },
@@ -1067,6 +1790,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo V",
@@ -1082,12 +1823,38 @@
       "small": "https://images.pokemontcg.io/swsh35/16.png",
       "large": "https://images.pokemontcg.io/swsh35/16_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1,
+          "high": 89,
+          "market": 0.95,
+          "directLow": 0.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.46,
+        "lowPrice": 0.7,
+        "trendPrice": 1.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.19,
+        "lowPriceExPlus": 0.75,
+        "avg1": 1.2,
+        "avg7": 1.29,
+        "avg30": 1.43,
+        "reverseHoloAvg1": 1.49,
+        "reverseHoloAvg7": 1.34,
+        "reverseHoloAvg30": 1.53
       }
     }
   },
@@ -1130,6 +1897,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "17",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo VMAX",
@@ -1145,12 +1930,38 @@
       "small": "https://images.pokemontcg.io/swsh35/17.png",
       "large": "https://images.pokemontcg.io/swsh35/17_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.97,
+          "mid": 2.89,
+          "high": 29.99,
+          "market": 2.45,
+          "directLow": 1.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.61,
+        "lowPrice": 1.6,
+        "trendPrice": 2.7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.57,
+        "lowPriceExPlus": 1.8,
+        "avg1": 2.45,
+        "avg7": 2.72,
+        "avg30": 2.58,
+        "reverseHoloAvg1": 5.07,
+        "reverseHoloAvg7": 4.31,
+        "reverseHoloAvg30": 4.4
       }
     }
   },
@@ -1205,6 +2016,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Akira Komayama",
     "rarity": "Common",
@@ -1221,12 +2050,45 @@
       "small": "https://images.pokemontcg.io/swsh35/18.png",
       "large": "https://images.pokemontcg.io/swsh35/18_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.19
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.13,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.08,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.23,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -1283,6 +2145,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Hitoshi Ariga",
     "rarity": "Uncommon",
@@ -1299,12 +2179,45 @@
       "small": "https://images.pokemontcg.io/swsh35/19.png",
       "large": "https://images.pokemontcg.io/swsh35/19_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.09,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.21
       }
     }
   },
@@ -1356,6 +2269,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Naoki Saito",
     "rarity": "Rare Holo",
@@ -1372,12 +2303,45 @@
       "small": "https://images.pokemontcg.io/swsh35/20.png",
       "large": "https://images.pokemontcg.io/swsh35/20_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.25,
+          "high": 6.58,
+          "market": 0.2,
+          "directLow": 0.19
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.4,
+        "avg7": 0.18,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.35,
+        "reverseHoloAvg30": 0.38
       }
     }
   },
@@ -1432,6 +2396,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "21",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo V",
@@ -1447,12 +2429,38 @@
       "small": "https://images.pokemontcg.io/swsh35/21.png",
       "large": "https://images.pokemontcg.io/swsh35/21_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.45,
+          "mid": 0.99,
+          "high": 5,
+          "market": 0.84,
+          "directLow": 0.84
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.13,
+        "lowPrice": 0.49,
+        "trendPrice": 1.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.23,
+        "lowPriceExPlus": 0.49,
+        "avg1": 1.11,
+        "avg7": 1.11,
+        "avg30": 1.05,
+        "reverseHoloAvg1": 1.03,
+        "reverseHoloAvg7": 1.24,
+        "reverseHoloAvg30": 1.43
       }
     }
   },
@@ -1504,6 +2512,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Ayaka Yoshida",
     "rarity": "Rare Holo V",
@@ -1519,12 +2545,38 @@
       "small": "https://images.pokemontcg.io/swsh35/22.png",
       "large": "https://images.pokemontcg.io/swsh35/22_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.54,
+          "mid": 1.48,
+          "high": 99,
+          "market": 1.01,
+          "directLow": 1.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.49,
+        "lowPrice": 0.48,
+        "trendPrice": 2.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.44,
+        "lowPriceExPlus": 0.48,
+        "avg1": 1.8,
+        "avg7": 1.9,
+        "avg30": 1.56,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.38,
+        "reverseHoloAvg30": 1.43
       }
     }
   },
@@ -1576,6 +2628,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "23",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo VMAX",
@@ -1591,12 +2661,38 @@
       "small": "https://images.pokemontcg.io/swsh35/23.png",
       "large": "https://images.pokemontcg.io/swsh35/23_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3,
+          "mid": 4.41,
+          "high": 19.95,
+          "market": 4.23,
+          "directLow": 4.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.35,
+        "lowPrice": 1,
+        "trendPrice": 3.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.05,
+        "lowPriceExPlus": 1.45,
+        "avg1": 5.91,
+        "avg7": 3.98,
+        "avg30": 3.61,
+        "reverseHoloAvg1": 3.98,
+        "reverseHoloAvg7": 3.81,
+        "reverseHoloAvg30": 5.16
       }
     }
   },
@@ -1646,6 +2742,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Shibuzoh.",
     "rarity": "Common",
@@ -1662,12 +2776,45 @@
       "small": "https://images.pokemontcg.io/swsh35/24.png",
       "large": "https://images.pokemontcg.io/swsh35/24_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.09,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.18,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -1720,6 +2867,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "25",
     "artist": "AKIRA EGAWA",
     "rarity": "Uncommon",
@@ -1736,12 +2901,45 @@
       "small": "https://images.pokemontcg.io/swsh35/25.png",
       "large": "https://images.pokemontcg.io/swsh35/25_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.2
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.24,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.11,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.29,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -1792,6 +2990,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Anesaki Dynamic",
     "rarity": "Rare Holo",
@@ -1808,12 +3024,45 @@
       "small": "https://images.pokemontcg.io/swsh35/26.png",
       "large": "https://images.pokemontcg.io/swsh35/26_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.23
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.24,
+        "lowPrice": 0.02,
+        "trendPrice": 0.31,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.41,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.39,
+        "avg7": 0.32,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.44
       }
     }
   },
@@ -1865,6 +3114,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "27",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Holo V",
@@ -1880,12 +3147,38 @@
       "small": "https://images.pokemontcg.io/swsh35/27.png",
       "large": "https://images.pokemontcg.io/swsh35/27_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.98,
+          "mid": 1.88,
+          "high": 49.99,
+          "market": 1.61,
+          "directLow": 1.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.48,
+        "lowPrice": 0.5,
+        "trendPrice": 1.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.29,
+        "lowPriceExPlus": 0.8,
+        "avg1": 0.98,
+        "avg7": 1.38,
+        "avg30": 1.44,
+        "reverseHoloAvg1": 1.35,
+        "reverseHoloAvg7": 1.28,
+        "reverseHoloAvg30": 1.38
       }
     }
   },
@@ -1935,6 +3228,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -1951,12 +3262,45 @@
       "small": "https://images.pokemontcg.io/swsh35/28.png",
       "large": "https://images.pokemontcg.io/swsh35/28_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.14
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 6.58,
+          "market": 0.17,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.34,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.28,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.21,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -2005,6 +3349,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -2021,12 +3383,45 @@
       "small": "https://images.pokemontcg.io/swsh35/29.png",
       "large": "https://images.pokemontcg.io/swsh35/29_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.25,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -2075,6 +3470,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Ryuta Fuse",
     "rarity": "Rare Holo",
@@ -2091,12 +3504,45 @@
       "small": "https://images.pokemontcg.io/swsh35/30.png",
       "large": "https://images.pokemontcg.io/swsh35/30_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.2
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.41,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.39,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.24,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.45,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -2136,6 +3582,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -2152,12 +3616,45 @@
       "small": "https://images.pokemontcg.io/swsh35/31.png",
       "large": "https://images.pokemontcg.io/swsh35/31_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.2
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 4.95,
+          "market": 0.05,
+          "directLow": 0.02
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.07,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -2209,6 +3706,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "32",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Holo V",
@@ -2224,12 +3739,38 @@
       "small": "https://images.pokemontcg.io/swsh35/32.png",
       "large": "https://images.pokemontcg.io/swsh35/32_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.29,
+          "mid": 0.97,
+          "high": 5,
+          "market": 0.68,
+          "directLow": 0.72
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.05,
+        "lowPrice": 0.29,
+        "trendPrice": 1.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.18,
+        "lowPriceExPlus": 0.29,
+        "avg1": 2,
+        "avg7": 1.03,
+        "avg30": 1.09,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 1.11,
+        "reverseHoloAvg30": 1.15
       }
     }
   },
@@ -2278,6 +3819,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Uta",
     "rarity": "Common",
@@ -2294,12 +3853,45 @@
       "small": "https://images.pokemontcg.io/swsh35/33.png",
       "large": "https://images.pokemontcg.io/swsh35/33_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.04,
+          "directLow": 0.01
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.2,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.06,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -2346,6 +3938,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "34",
     "artist": "nagimiso",
     "rarity": "Uncommon",
@@ -2362,12 +3972,45 @@
       "small": "https://images.pokemontcg.io/swsh35/34.png",
       "large": "https://images.pokemontcg.io/swsh35/34_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.22
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.09,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.08,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -2407,6 +4050,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -2423,12 +4084,45 @@
       "small": "https://images.pokemontcg.io/swsh35/35.png",
       "large": "https://images.pokemontcg.io/swsh35/35_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.06,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.22,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.09,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -2470,6 +4164,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Akira Komayama",
     "rarity": "Common",
@@ -2486,12 +4198,45 @@
       "small": "https://images.pokemontcg.io/swsh35/36.png",
       "large": "https://images.pokemontcg.io/swsh35/36_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.13,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.16
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.21
       }
     }
   },
@@ -2538,6 +4283,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -2554,12 +4317,45 @@
       "small": "https://images.pokemontcg.io/swsh35/37.png",
       "large": "https://images.pokemontcg.io/swsh35/37_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.14
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.24,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.26,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 0.14,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -2596,6 +4392,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "38",
     "artist": "kodama",
     "rarity": "Uncommon",
@@ -2612,12 +4426,45 @@
       "small": "https://images.pokemontcg.io/swsh35/38.png",
       "large": "https://images.pokemontcg.io/swsh35/38_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.28,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.29,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -2666,6 +4513,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "39",
     "artist": "sowsow",
     "rarity": "Common",
@@ -2682,12 +4547,45 @@
       "small": "https://images.pokemontcg.io/swsh35/39.png",
       "large": "https://images.pokemontcg.io/swsh35/39_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.17
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.18,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.12,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -2733,6 +4631,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Hasuno",
     "rarity": "Uncommon",
@@ -2749,12 +4665,45 @@
       "small": "https://images.pokemontcg.io/swsh35/40.png",
       "large": "https://images.pokemontcg.io/swsh35/40_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.14,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -2803,6 +4752,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "41",
     "artist": "miki kudo",
     "rarity": "Common",
@@ -2819,12 +4786,45 @@
       "small": "https://images.pokemontcg.io/swsh35/41.png",
       "large": "https://images.pokemontcg.io/swsh35/41_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.2
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.11,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.03,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -2873,6 +4873,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "42",
     "artist": "tetsuya koizumi",
     "rarity": "Rare Holo",
@@ -2889,12 +4907,45 @@
       "small": "https://images.pokemontcg.io/swsh35/42.png",
       "large": "https://images.pokemontcg.io/swsh35/42_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.19
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.32,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.2,
+        "avg30": 0.17,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.31,
+        "reverseHoloAvg30": 0.3
       }
     }
   },
@@ -2934,6 +4985,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "43",
     "artist": "nagimiso",
     "rarity": "Common",
@@ -2950,12 +5019,45 @@
       "small": "https://images.pokemontcg.io/swsh35/43.png",
       "large": "https://images.pokemontcg.io/swsh35/43_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.07
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.14,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.12,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.05,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -3004,6 +5106,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "44",
     "artist": "sui",
     "rarity": "Common",
@@ -3020,12 +5140,45 @@
       "small": "https://images.pokemontcg.io/swsh35/44.png",
       "large": "https://images.pokemontcg.io/swsh35/44_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.1,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.02
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.16,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.22,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.03,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.15,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -3076,6 +5229,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "45",
     "artist": "kawayoo",
     "rarity": "Uncommon",
@@ -3092,12 +5263,45 @@
       "small": "https://images.pokemontcg.io/swsh35/45.png",
       "large": "https://images.pokemontcg.io/swsh35/45_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.15
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.09,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.11,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -3146,6 +5350,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Naoki Saito",
     "rarity": "Common",
@@ -3162,12 +5384,45 @@
       "small": "https://images.pokemontcg.io/swsh35/46.png",
       "large": "https://images.pokemontcg.io/swsh35/46_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.03
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.19,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.06,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -3224,6 +5479,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "47",
     "artist": "aky CG Works",
     "rarity": "Rare Holo V",
@@ -3239,12 +5512,38 @@
       "small": "https://images.pokemontcg.io/swsh35/47.png",
       "large": "https://images.pokemontcg.io/swsh35/47_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.44,
+          "mid": 0.99,
+          "high": 89,
+          "market": 0.76,
+          "directLow": 0.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.26,
+        "lowPrice": 0.29,
+        "trendPrice": 1.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.46,
+        "lowPriceExPlus": 0.29,
+        "avg1": 2,
+        "avg7": 1.12,
+        "avg30": 1.15,
+        "reverseHoloAvg1": 1.22,
+        "reverseHoloAvg7": 1.27,
+        "reverseHoloAvg30": 1.45
       }
     }
   },
@@ -3289,6 +5588,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "48",
     "artist": "0313",
     "rarity": "Common",
@@ -3305,12 +5622,45 @@
       "small": "https://images.pokemontcg.io/swsh35/48.png",
       "large": "https://images.pokemontcg.io/swsh35/48_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.22,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.06,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.12,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -3361,6 +5711,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Taira Akitsu",
     "rarity": "Rare Holo",
@@ -3377,12 +5745,45 @@
       "small": "https://images.pokemontcg.io/swsh35/49.png",
       "large": "https://images.pokemontcg.io/swsh35/49_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.2
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.2,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.32,
+        "avg7": 0.15,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -3397,6 +5798,24 @@
       "Attach a basic Energy card from your hand to 1 of your Benched Pokémon.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Naoki Saito",
     "rarity": "Uncommon",
@@ -3409,12 +5828,45 @@
       "small": "https://images.pokemontcg.io/swsh35/50.png",
       "large": "https://images.pokemontcg.io/swsh35/50_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.29,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.06,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -3429,6 +5881,24 @@
       "Remove all Special Conditions from your Active Pokémon.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Yoshinobu Saito",
     "rarity": "Uncommon",
@@ -3441,12 +5911,45 @@
       "small": "https://images.pokemontcg.io/swsh35/51.png",
       "large": "https://images.pokemontcg.io/swsh35/51_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.14,
+          "high": 4.95,
+          "market": 0.06,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -3461,6 +5964,24 @@
       "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Toyste Beach",
     "rarity": "Uncommon",
@@ -3474,12 +5995,45 @@
       "small": "https://images.pokemontcg.io/swsh35/52.png",
       "large": "https://images.pokemontcg.io/swsh35/52_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.25
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.08
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.07,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -3494,6 +6048,24 @@
       "Draw 3 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Sanosuke Sakuma",
     "rarity": "Uncommon",
@@ -3506,12 +6078,45 @@
       "small": "https://images.pokemontcg.io/swsh35/53.png",
       "large": "https://images.pokemontcg.io/swsh35/53_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.23,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.29,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.05,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -3526,6 +6131,24 @@
       "Heal 120 damage from 1 of your Pokémon that has at least 2 Energy attached. If you healed any damage in this way, discard 2 Energy from it.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -3538,12 +6161,45 @@
       "small": "https://images.pokemontcg.io/swsh35/54.png",
       "large": "https://images.pokemontcg.io/swsh35/54_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 999.99,
+          "market": 0.16,
+          "directLow": 0.17
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.04,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.09,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -3558,6 +6214,24 @@
       "Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "55",
     "artist": "take",
     "rarity": "Uncommon",
@@ -3570,12 +6244,45 @@
       "small": "https://images.pokemontcg.io/swsh35/55.png",
       "large": "https://images.pokemontcg.io/swsh35/55_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.12
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.11,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.16,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.14,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.11,
+        "reverseHoloAvg30": 0.2
       }
     }
   },
@@ -3590,6 +6297,24 @@
       "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "56",
     "artist": "kirisAki",
     "rarity": "Rare Holo",
@@ -3602,12 +6327,45 @@
       "small": "https://images.pokemontcg.io/swsh35/56.png",
       "large": "https://images.pokemontcg.io/swsh35/56_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.12,
+          "mid": 0.35,
+          "high": 131.88,
+          "market": 0.28,
+          "directLow": 0.27
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.45,
+          "high": 999.99,
+          "market": 0.36,
+          "directLow": 0.39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.32,
+        "lowPrice": 0.02,
+        "trendPrice": 0.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.58,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.32,
+        "avg30": 0.31,
+        "reverseHoloAvg1": 0.13,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.58
       }
     }
   },
@@ -3622,6 +6380,24 @@
       "Discard up to 2 cards from your hand, and draw 2 cards for each card you discarded in this way.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "57",
     "artist": "take",
     "rarity": "Uncommon",
@@ -3634,12 +6410,45 @@
       "small": "https://images.pokemontcg.io/swsh35/57.png",
       "large": "https://images.pokemontcg.io/swsh35/57_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.14
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.19,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.04,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.13,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -3654,6 +6463,24 @@
       "Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "58",
     "artist": "take",
     "rarity": "Uncommon",
@@ -3666,12 +6493,45 @@
       "small": "https://images.pokemontcg.io/swsh35/58.png",
       "large": "https://images.pokemontcg.io/swsh35/58_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.24
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -3686,6 +6546,24 @@
       "Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Studio Bora Inc.",
     "rarity": "Common",
@@ -3699,12 +6577,45 @@
       "small": "https://images.pokemontcg.io/swsh35/59.png",
       "large": "https://images.pokemontcg.io/swsh35/59_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.21,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.2,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -3719,6 +6630,24 @@
       "Heal 60 damage from 1 of your Pokémon, and it recovers from all Special Conditions.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "60",
     "artist": "kirisAki",
     "rarity": "Uncommon",
@@ -3731,12 +6660,45 @@
       "small": "https://images.pokemontcg.io/swsh35/60.png",
       "large": "https://images.pokemontcg.io/swsh35/60_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.18,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.19,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.09,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -3751,6 +6713,24 @@
       "Heal 30 damage from 1 of your Pokémon.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Ryo Ueda",
     "rarity": "Common",
@@ -3764,12 +6744,45 @@
       "small": "https://images.pokemontcg.io/swsh35/61.png",
       "large": "https://images.pokemontcg.io/swsh35/61_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.14
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.11,
+          "high": 4.95,
+          "market": 0.06,
+          "directLow": 0.07
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.19,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.05,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -3784,6 +6797,24 @@
       "Discard your hand and draw 7 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Yusuke Ohmura",
     "rarity": "Rare Holo",
@@ -3797,12 +6828,45 @@
       "small": "https://images.pokemontcg.io/swsh35/62.png",
       "large": "https://images.pokemontcg.io/swsh35/62_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.17
+        },
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.24,
+          "high": 999.99,
+          "market": 0.14,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.36,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.25,
+        "avg7": 0.11,
+        "avg30": 0.13,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -3817,6 +6881,24 @@
       "Draw cards until you have 6 cards in your hand. Your turn ends.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "63",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -3829,12 +6911,45 @@
       "small": "https://images.pokemontcg.io/swsh35/63.png",
       "large": "https://images.pokemontcg.io/swsh35/63_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.14
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.16,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.07,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -3849,6 +6964,24 @@
       "Look at the top 5 cards of your deck, choose 1 of them, and shuffle the other cards back into your deck. Then, put the card you chose on top of your deck.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -3861,12 +6994,45 @@
       "small": "https://images.pokemontcg.io/swsh35/64.png",
       "large": "https://images.pokemontcg.io/swsh35/64_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.16,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.09
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.12,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.22,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.11,
+        "avg30": 0.12,
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.23,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -3881,6 +7047,24 @@
       "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Yusuke Ohmura",
     "rarity": "Uncommon",
@@ -3893,12 +7077,45 @@
       "small": "https://images.pokemontcg.io/swsh35/65.png",
       "large": "https://images.pokemontcg.io/swsh35/65_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.14
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.3,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.12,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.19,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.05,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.19
       }
     }
   },
@@ -3913,6 +7130,24 @@
       "Heal 80 damage from 1 of your Pokémon that has at least 1 Psychic Energy attached. If you healed any damage in this way, discard a Psychic Energy from it.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -3925,12 +7160,45 @@
       "small": "https://images.pokemontcg.io/swsh35/66.png",
       "large": "https://images.pokemontcg.io/swsh35/66_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.17
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.11,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.07,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -3945,6 +7213,24 @@
       "Put an Energy attached to 1 of your opponent's Pokémon into their hand.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "67",
     "artist": "nagimiso",
     "rarity": "Uncommon",
@@ -3957,12 +7243,45 @@
       "small": "https://images.pokemontcg.io/swsh35/67.png",
       "large": "https://images.pokemontcg.io/swsh35/67_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.13
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.07,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.11,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.32,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -3977,6 +7296,24 @@
       "Once during each player's turn, that player may search their deck for an Evolution Grass Pokémon, reveal it, and put it into their hand. Then, that player shuffles their deck.",
       "This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "68",
     "artist": "aky CG Works",
     "rarity": "Uncommon",
@@ -3989,12 +7326,45 @@
       "small": "https://images.pokemontcg.io/swsh35/68.png",
       "large": "https://images.pokemontcg.io/swsh35/68_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.32,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.07,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.21,
+        "reverseHoloAvg7": 0.33,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -4046,6 +7416,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "69",
     "artist": "aky CG Works",
     "rarity": "Rare Ultra",
@@ -4061,12 +7449,38 @@
       "small": "https://images.pokemontcg.io/swsh35/69.png",
       "large": "https://images.pokemontcg.io/swsh35/69_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.49,
+          "high": 89,
+          "market": 1.14,
+          "directLow": 1.48
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.69,
+        "lowPrice": 0.48,
+        "trendPrice": 1.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.36,
+        "lowPriceExPlus": 0.48,
+        "avg1": 1.83,
+        "avg7": 1.39,
+        "avg30": 1.64,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 2.28,
+        "reverseHoloAvg30": 2.54
       }
     }
   },
@@ -4118,6 +7532,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "70",
     "artist": "PLANETA Mochizuki",
     "rarity": "Rare Ultra",
@@ -4133,12 +7565,38 @@
       "small": "https://images.pokemontcg.io/swsh35/70.png",
       "large": "https://images.pokemontcg.io/swsh35/70_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.1,
+          "high": 89,
+          "market": 2.82,
+          "directLow": 2.62
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.05,
+        "lowPrice": 1.4,
+        "trendPrice": 4.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.13,
+        "lowPriceExPlus": 1.4,
+        "avg1": 2.87,
+        "avg7": 3.26,
+        "avg30": 3.59,
+        "reverseHoloAvg1": 2.7,
+        "reverseHoloAvg7": 3.29,
+        "reverseHoloAvg30": 3.55
       }
     }
   },
@@ -4193,6 +7651,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "71",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -4208,12 +7684,38 @@
       "small": "https://images.pokemontcg.io/swsh35/71.png",
       "large": "https://images.pokemontcg.io/swsh35/71_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.9,
+          "mid": 1.5,
+          "high": 89,
+          "market": 1.28,
+          "directLow": 1.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.76,
+        "lowPrice": 0.5,
+        "trendPrice": 1.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.1,
+        "lowPriceExPlus": 0.8,
+        "avg1": 1.32,
+        "avg7": 1.71,
+        "avg30": 1.77,
+        "reverseHoloAvg1": 2.9,
+        "reverseHoloAvg7": 2.22,
+        "reverseHoloAvg30": 2.45
       }
     }
   },
@@ -4265,6 +7767,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "72",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Ultra",
@@ -4280,12 +7800,38 @@
       "small": "https://images.pokemontcg.io/swsh35/72.png",
       "large": "https://images.pokemontcg.io/swsh35/72_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.7,
+          "mid": 1.29,
+          "high": 89,
+          "market": 1.07,
+          "directLow": 1.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.45,
+        "lowPrice": 0.5,
+        "trendPrice": 1.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.17,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.4,
+        "avg7": 1.53,
+        "avg30": 1.49,
+        "reverseHoloAvg1": 2.15,
+        "reverseHoloAvg7": 1.98,
+        "reverseHoloAvg30": 2.32
       }
     }
   },
@@ -4300,6 +7846,24 @@
       "Draw 3 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "73",
     "artist": "Naoki Saito",
     "rarity": "Rare Ultra",
@@ -4312,12 +7876,38 @@
       "small": "https://images.pokemontcg.io/swsh35/73.png",
       "large": "https://images.pokemontcg.io/swsh35/73_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.84,
+          "mid": 1.51,
+          "high": 89,
+          "market": 1.26,
+          "directLow": 1.28
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.57,
+        "lowPrice": 0.85,
+        "trendPrice": 1.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.98,
+        "lowPriceExPlus": 0.85,
+        "avg1": 1.13,
+        "avg7": 1.45,
+        "avg30": 1.61,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 3.15,
+        "reverseHoloAvg30": 3.26
       }
     }
   },
@@ -4374,6 +7964,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "74",
     "artist": "aky CG Works",
     "rarity": "Rare Rainbow",
@@ -4389,12 +7997,38 @@
       "small": "https://images.pokemontcg.io/swsh35/74.png",
       "large": "https://images.pokemontcg.io/swsh35/74_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 144.44,
+          "mid": 179.17,
+          "high": 1500,
+          "market": 161.77,
+          "directLow": 149.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 179.98,
+        "lowPrice": 44,
+        "trendPrice": 182.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 271.61,
+        "lowPriceExPlus": 134.99,
+        "avg1": 50,
+        "avg7": 158.73,
+        "avg30": 164.74,
+        "reverseHoloAvg1": 245,
+        "reverseHoloAvg7": 273.18,
+        "reverseHoloAvg30": 293.48
       }
     }
   },
@@ -4446,6 +8080,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "75",
     "artist": "aky CG Works",
     "rarity": "Rare Rainbow",
@@ -4461,12 +8113,38 @@
       "small": "https://images.pokemontcg.io/swsh35/75.png",
       "large": "https://images.pokemontcg.io/swsh35/75_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.5,
+          "mid": 7.85,
+          "high": 22.79,
+          "market": 6.69,
+          "directLow": 7.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.53,
+        "lowPrice": 3.5,
+        "trendPrice": 6.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.04,
+        "lowPriceExPlus": 4.89,
+        "avg1": 5.58,
+        "avg7": 6.69,
+        "avg30": 7.7,
+        "reverseHoloAvg1": 12.99,
+        "reverseHoloAvg7": 16.06,
+        "reverseHoloAvg30": 18.15
       }
     }
   },
@@ -4509,6 +8187,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "76",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4524,12 +8220,38 @@
       "small": "https://images.pokemontcg.io/swsh35/76.png",
       "large": "https://images.pokemontcg.io/swsh35/76_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.3,
+          "mid": 15.02,
+          "high": 89,
+          "market": 13.7,
+          "directLow": 14.34
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.96,
+        "lowPrice": 5,
+        "trendPrice": 15.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.77,
+        "lowPriceExPlus": 5,
+        "avg1": 10.5,
+        "avg7": 10.48,
+        "avg30": 12.59,
+        "reverseHoloAvg1": 19.25,
+        "reverseHoloAvg7": 21.24,
+        "reverseHoloAvg30": 21.8
       }
     }
   },
@@ -4544,6 +8266,24 @@
       "Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "77",
     "artist": "Hitoshi Ariga",
     "rarity": "Rare Rainbow",
@@ -4556,12 +8296,38 @@
       "small": "https://images.pokemontcg.io/swsh35/77.png",
       "large": "https://images.pokemontcg.io/swsh35/77_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.25,
+          "mid": 4,
+          "high": 25.99,
+          "market": 3.6,
+          "directLow": 2.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.39,
+        "lowPrice": 2,
+        "trendPrice": 1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 12.61,
+        "lowPriceExPlus": 3,
+        "avg1": 3,
+        "avg7": 4.26,
+        "avg30": 5.42,
+        "reverseHoloAvg1": 13,
+        "reverseHoloAvg7": 11.87,
+        "reverseHoloAvg30": 14.27
       }
     }
   },
@@ -4576,6 +8342,24 @@
       "Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "78",
     "artist": "kirisAki",
     "rarity": "Rare Rainbow",
@@ -4588,12 +8372,38 @@
       "small": "https://images.pokemontcg.io/swsh35/78.png",
       "large": "https://images.pokemontcg.io/swsh35/78_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.99,
+          "high": 29.95,
+          "market": 3.34,
+          "directLow": 3.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.78,
+        "lowPrice": 3,
+        "trendPrice": 4.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.89,
+        "lowPriceExPlus": 3,
+        "avg1": 3.48,
+        "avg7": 4.26,
+        "avg30": 5.25,
+        "reverseHoloAvg1": 13.5,
+        "reverseHoloAvg7": 10.91,
+        "reverseHoloAvg30": 13.46
       }
     }
   },
@@ -4649,6 +8459,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "79",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -4664,12 +8492,38 @@
       "small": "https://images.pokemontcg.io/swsh35/79.png",
       "large": "https://images.pokemontcg.io/swsh35/79_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 204.65,
+          "mid": 238.78,
+          "high": 499,
+          "market": 216.89,
+          "directLow": 216.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 227.9,
+        "lowPrice": 90,
+        "trendPrice": 238.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 313.39,
+        "lowPriceExPlus": 149.99,
+        "avg1": 189,
+        "avg7": 231.14,
+        "avg30": 218.5,
+        "reverseHoloAvg1": 349.99,
+        "reverseHoloAvg7": 331.81,
+        "reverseHoloAvg30": 351
       }
     }
   },
@@ -4684,6 +8538,24 @@
       "Heal 80 damage from 1 of your Pokémon that has at least 1 Psychic Energy attached. If you healed any damage in this way, discard a Psychic Energy from it.",
       "You may play any number of Item cards during your turn."
     ],
+    "set": {
+      "id": "swsh35",
+      "name": "Champion's Path",
+      "series": "Sword & Shield",
+      "printedTotal": 73,
+      "total": 80,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "CPA",
+      "releaseDate": "2020/09/25",
+      "updatedAt": "2020/10/25 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh35/logo.png"
+      }
+    },
     "number": "80",
     "artist": "Ryo Ueda",
     "rarity": "Rare Secret",
@@ -4696,12 +8568,38 @@
       "small": "https://images.pokemontcg.io/swsh35/80.png",
       "large": "https://images.pokemontcg.io/swsh35/80_hires.png"
     },
-    "set": {
-      "id": "swsh35",
-      "releaseDate": "2020/09/25",
-      "name": "Champion's Path",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh35/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh35-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 2.04,
+          "high": 20,
+          "market": 1.76,
+          "directLow": 1.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh35-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.46,
+        "lowPrice": 0.99,
+        "trendPrice": 1.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.44,
+        "lowPriceExPlus": 0.99,
+        "avg1": 2.99,
+        "avg7": 2.47,
+        "avg30": 2.97,
+        "reverseHoloAvg1": 5.12,
+        "reverseHoloAvg7": 5.11,
+        "reverseHoloAvg30": 5.41
       }
     }
   }

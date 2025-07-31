@@ -41,6 +41,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW01",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -56,12 +74,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW01.png",
       "large": "https://images.pokemontcg.io/bwp/BW01_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.84,
+          "mid": 1.1,
+          "high": 6.85,
+          "market": 1.19,
+          "directLow": 4.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.42,
+        "lowPrice": 0.05,
+        "trendPrice": 2.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.18,
+        "lowPriceExPlus": 0.3,
+        "avg1": 0.3,
+        "avg7": 1.26,
+        "avg30": 1.57,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.06,
+        "reverseHoloAvg30": 0.67
       }
     }
   },
@@ -102,6 +146,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW02",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -117,12 +179,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW02.png",
       "large": "https://images.pokemontcg.io/bwp/BW02_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.9,
+          "mid": 1.38,
+          "high": 5,
+          "market": 1.51,
+          "directLow": 1.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.51,
+        "lowPrice": 0.1,
+        "trendPrice": 1.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.1,
+        "lowPriceExPlus": 0.15,
+        "avg1": 1,
+        "avg7": 0.78,
+        "avg30": 1.26,
+        "reverseHoloAvg1": 1.9,
+        "reverseHoloAvg7": 0.78,
+        "reverseHoloAvg30": 0.77
       }
     }
   },
@@ -162,6 +250,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW03",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -177,12 +283,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW03.png",
       "large": "https://images.pokemontcg.io/bwp/BW03_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 3.99,
+          "high": 5.59,
+          "market": 2.84,
+          "directLow": 4.22
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.41,
+        "lowPrice": 0.1,
+        "trendPrice": 2.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.95,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1,
+        "avg7": 3.85,
+        "avg30": 1.93,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.78,
+        "reverseHoloAvg30": 0.87
       }
     }
   },
@@ -231,6 +363,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW004",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -246,12 +396,17 @@
       "small": "https://images.pokemontcg.io/bwp/BW004.png",
       "large": "https://images.pokemontcg.io/bwp/BW004_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW004",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.11,
+          "mid": 2.52,
+          "high": 89,
+          "market": 2.42,
+          "directLow": 1.7
+        }
       }
     }
   },
@@ -300,6 +455,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW005",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -315,12 +488,17 @@
       "small": "https://images.pokemontcg.io/bwp/BW005.png",
       "large": "https://images.pokemontcg.io/bwp/BW005_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW005",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.67,
+          "high": 89,
+          "market": 1.6,
+          "directLow": 0.72
+        }
       }
     }
   },
@@ -375,6 +553,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW06",
     "artist": "Shizurow",
     "rarity": "Promo",
@@ -390,12 +586,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW06.png",
       "large": "https://images.pokemontcg.io/bwp/BW06_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.72,
+          "mid": 1.13,
+          "high": 3.99,
+          "market": 1.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5,
+        "lowPrice": 2.5,
+        "trendPrice": 4.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.5,
+        "lowPriceExPlus": 4,
+        "avg1": 4.04,
+        "avg7": 4.35,
+        "avg30": 4.24,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 1.94,
+        "reverseHoloAvg30": 1.55
       }
     }
   },
@@ -444,6 +666,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW07",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -459,12 +699,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW07.png",
       "large": "https://images.pokemontcg.io/bwp/BW07_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.7,
+          "mid": 1.08,
+          "high": 3,
+          "market": 1.08,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.5,
+        "lowPrice": 1.3,
+        "trendPrice": 3.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.85,
+        "lowPriceExPlus": 1.3,
+        "avg1": 3.5,
+        "avg7": 3.67,
+        "avg30": 3.02,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 2.15,
+        "reverseHoloAvg30": 1.87
       }
     }
   },
@@ -513,6 +779,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW08",
     "artist": "Mitsuhiro Arita",
     "rarity": "Promo",
@@ -528,12 +812,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW08.png",
       "large": "https://images.pokemontcg.io/bwp/BW08_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.67,
+          "mid": 2.29,
+          "high": 8.81,
+          "market": 1.91,
+          "directLow": 2.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.25,
+        "lowPrice": 0.99,
+        "trendPrice": 3.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.03,
+        "lowPriceExPlus": 2,
+        "avg1": 2.5,
+        "avg7": 2.84,
+        "avg30": 2.87,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 2.1,
+        "reverseHoloAvg30": 1.62
       }
     }
   },
@@ -586,6 +896,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW09",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -601,12 +929,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW09.png",
       "large": "https://images.pokemontcg.io/bwp/BW09_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.85,
+          "mid": 2.2,
+          "high": 3.69,
+          "market": 2.84,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.45,
+        "lowPrice": 0.3,
+        "trendPrice": 1.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.13,
+        "lowPriceExPlus": 0.99,
+        "avg1": 1.79,
+        "avg7": 1.45,
+        "avg30": 1.68,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.13,
+        "reverseHoloAvg30": 1.17
       }
     }
   },
@@ -640,6 +994,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW10",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -655,12 +1027,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW10.png",
       "large": "https://images.pokemontcg.io/bwp/BW10_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.67,
+          "high": 4.19,
+          "market": 1.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.61,
+        "lowPrice": 3,
+        "trendPrice": 5.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.76,
+        "lowPriceExPlus": 3,
+        "avg1": 2.49,
+        "avg7": 6.61,
+        "avg30": 5.72,
+        "reverseHoloAvg1": 2.75,
+        "reverseHoloAvg7": 1.71,
+        "reverseHoloAvg30": 1.43
       }
     }
   },
@@ -706,6 +1104,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW11",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -721,12 +1137,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW11.png",
       "large": "https://images.pokemontcg.io/bwp/BW11_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.61,
+          "mid": 1.97,
+          "high": 4.89,
+          "market": 1.61,
+          "directLow": 1.93
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3,
+        "lowPrice": 1.6,
+        "trendPrice": 3.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.64,
+        "lowPriceExPlus": 2.38,
+        "avg1": 2.99,
+        "avg7": 2.94,
+        "avg30": 3.18,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.84,
+        "reverseHoloAvg30": 1.7
       }
     }
   },
@@ -772,6 +1214,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW12",
     "artist": "Tomokazu Komiya",
     "rarity": "Promo",
@@ -787,12 +1247,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW12.png",
       "large": "https://images.pokemontcg.io/bwp/BW12_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.58,
+          "mid": 19.98,
+          "high": 89,
+          "market": 10.09,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 19.49,
+        "lowPrice": 10,
+        "trendPrice": 8.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.31,
+        "lowPriceExPlus": 19.99,
+        "avg1": 19.49,
+        "avg7": 12.6,
+        "avg30": 17.82,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 2.34,
+        "reverseHoloAvg30": 1.72
       }
     }
   },
@@ -841,6 +1327,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW13",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -856,12 +1360,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW13.png",
       "large": "https://images.pokemontcg.io/bwp/BW13_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11.9,
+          "mid": 11.95,
+          "high": 13,
+          "market": 6.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.45,
+        "lowPrice": 8,
+        "trendPrice": 28.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.33,
+        "lowPriceExPlus": 15,
+        "avg1": 17.45,
+        "avg7": 16.78,
+        "avg30": 15.93,
+        "reverseHoloAvg1": 3.5,
+        "reverseHoloAvg7": 2.58,
+        "reverseHoloAvg30": 2.45
       }
     }
   },
@@ -907,6 +1437,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW14",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -922,12 +1470,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW14.png",
       "large": "https://images.pokemontcg.io/bwp/BW14_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 33.41,
+          "mid": 33.42,
+          "high": 33.43,
+          "market": 33.43,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 41.7,
+        "lowPrice": 3,
+        "trendPrice": 19.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3,
+        "lowPriceExPlus": 6,
+        "avg1": 79.9,
+        "avg7": 14.29,
+        "avg30": 11.78,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 3.67,
+        "reverseHoloAvg30": 3.67
       }
     }
   },
@@ -973,6 +1547,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW15",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -988,12 +1580,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW15.png",
       "large": "https://images.pokemontcg.io/bwp/BW15_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW15",
+      "updatedAt": "2025/07/25",
+      "prices": {
+        "normal": {
+          "low": 59.99,
+          "mid": 59.99,
+          "high": 59.99,
+          "market": 40,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 110,
+        "lowPrice": 99.99,
+        "trendPrice": 210.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 110,
+        "avg7": 125.12,
+        "avg30": 125.12,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1027,6 +1645,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW16",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -1042,12 +1678,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW16.png",
       "large": "https://images.pokemontcg.io/bwp/BW16_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 40,
+          "mid": 73.72,
+          "high": 75,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 76.51,
+        "lowPrice": 5,
+        "trendPrice": 58.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.46,
+        "lowPriceExPlus": 10,
+        "avg1": 13.03,
+        "avg7": 39.36,
+        "avg30": 30.81,
+        "reverseHoloAvg1": 14.9,
+        "reverseHoloAvg7": 4.98,
+        "reverseHoloAvg30": 4.98
       }
     }
   },
@@ -1092,6 +1754,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW17",
     "artist": "Kagemaru Himeno",
     "rarity": "Promo",
@@ -1107,12 +1787,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW17.png",
       "large": "https://images.pokemontcg.io/bwp/BW17_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.47,
+          "mid": 0.99,
+          "high": 9.99,
+          "market": 1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.97,
+        "lowPrice": 3.45,
+        "trendPrice": 3.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.31,
+        "lowPriceExPlus": 3.45,
+        "avg1": 2.95,
+        "avg7": 3.26,
+        "avg30": 2.86,
+        "reverseHoloAvg1": 2.49,
+        "reverseHoloAvg7": 2.62,
+        "reverseHoloAvg30": 2.62
       }
     }
   },
@@ -1153,6 +1859,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW18",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -1168,12 +1892,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW18.png",
       "large": "https://images.pokemontcg.io/bwp/BW18_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.04,
+          "mid": 6.62,
+          "high": 8.33,
+          "market": 5.09,
+          "directLow": 6.62
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.99,
+        "lowPrice": 1.55,
+        "trendPrice": 4.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.04,
+        "lowPriceExPlus": 2,
+        "avg1": 5.99,
+        "avg7": 4.99,
+        "avg30": 4.16,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 1.12,
+        "reverseHoloAvg30": 1.16
       }
     }
   },
@@ -1227,6 +1977,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW19",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1242,12 +2010,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW19.png",
       "large": "https://images.pokemontcg.io/bwp/BW19_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.71,
+          "mid": 1.97,
+          "high": 3.81,
+          "market": 2.14,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.47,
+        "lowPrice": 0.95,
+        "trendPrice": 4.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.92,
+        "lowPriceExPlus": 1.9,
+        "avg1": 2.99,
+        "avg7": 3.67,
+        "avg30": 2.93,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.83,
+        "reverseHoloAvg30": 1.69
       }
     }
   },
@@ -1298,6 +2092,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW20",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1313,12 +2125,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW20.png",
       "large": "https://images.pokemontcg.io/bwp/BW20_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.41,
+          "high": 27.98,
+          "market": 7.05,
+          "directLow": 27.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.88,
+        "lowPrice": 0.05,
+        "trendPrice": 2.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.89,
+        "lowPriceExPlus": 1.5,
+        "avg1": 4,
+        "avg7": 1.95,
+        "avg30": 1.87,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 0.74,
+        "reverseHoloAvg30": 0.74
       }
     }
   },
@@ -1368,6 +2206,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW21",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1383,12 +2239,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW21.png",
       "large": "https://images.pokemontcg.io/bwp/BW21_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.62,
+          "mid": 2.76,
+          "high": 89,
+          "market": 2.76,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.14,
+        "lowPrice": 0.2,
+        "trendPrice": 1.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.47,
+        "lowPriceExPlus": 1,
+        "avg1": 2.19,
+        "avg7": 1.08,
+        "avg30": 1.58,
+        "reverseHoloAvg1": 0.45,
+        "reverseHoloAvg7": 0.46,
+        "reverseHoloAvg30": 0.68
       }
     }
   },
@@ -1435,6 +2317,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW22",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1450,12 +2350,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW22.png",
       "large": "https://images.pokemontcg.io/bwp/BW22_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2.64,
+          "high": 10.5,
+          "market": 2.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.6,
+        "lowPrice": 0.2,
+        "trendPrice": 2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.93,
+        "lowPriceExPlus": 0.5,
+        "avg1": 2.23,
+        "avg7": 1.34,
+        "avg30": 1.45,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 1.13,
+        "reverseHoloAvg30": 0.83
       }
     }
   },
@@ -1504,6 +2430,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW23",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1519,12 +2463,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW23.png",
       "large": "https://images.pokemontcg.io/bwp/BW23_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.99,
+          "mid": 5,
+          "high": 7.92,
+          "market": 5.87,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.4,
+        "lowPrice": 0.9,
+        "trendPrice": 3.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.27,
+        "lowPriceExPlus": 3.09,
+        "avg1": 1.29,
+        "avg7": 5.1,
+        "avg30": 3.9,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.72,
+        "reverseHoloAvg30": 1.94
       }
     }
   },
@@ -1573,6 +2543,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW24",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1588,12 +2576,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW24.png",
       "large": "https://images.pokemontcg.io/bwp/BW24_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.85,
+          "mid": 2.14,
+          "high": 8.54,
+          "market": 4.02,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7,
+        "lowPrice": 1.5,
+        "trendPrice": 5.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.41,
+        "lowPriceExPlus": 3.15,
+        "avg1": 4,
+        "avg7": 6.61,
+        "avg30": 4.71,
+        "reverseHoloAvg1": 4.9,
+        "reverseHoloAvg7": 2.55,
+        "reverseHoloAvg30": 2.27
       }
     }
   },
@@ -1649,6 +2663,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW25",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -1664,12 +2696,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW25.png",
       "large": "https://images.pokemontcg.io/bwp/BW25_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.29,
+          "high": 5,
+          "market": 2.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.98,
+        "lowPrice": 16.9,
+        "trendPrice": 12.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.31,
+        "lowPriceExPlus": 17.5,
+        "avg1": 8,
+        "avg7": 12.41,
+        "avg30": 6.49,
+        "reverseHoloAvg1": 1.95,
+        "reverseHoloAvg7": 2.59,
+        "reverseHoloAvg30": 1.96
       }
     }
   },
@@ -1703,6 +2761,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW26",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -1718,12 +2794,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW26.png",
       "large": "https://images.pokemontcg.io/bwp/BW26_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.74,
+          "mid": 3.98,
+          "high": 4.52,
+          "market": 3.44,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7,
+        "lowPrice": 1,
+        "trendPrice": 3.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.52,
+        "lowPriceExPlus": 3.5,
+        "avg1": 7,
+        "avg7": 3.41,
+        "avg30": 3.67,
+        "reverseHoloAvg1": 3.95,
+        "reverseHoloAvg7": 5.44,
+        "reverseHoloAvg30": 3.61
       }
     }
   },
@@ -1772,6 +2874,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW27",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -1787,12 +2907,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW27.png",
       "large": "https://images.pokemontcg.io/bwp/BW27_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.7,
+          "mid": 20.95,
+          "high": 99.99,
+          "market": 19.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 0.8,
+        "trendPrice": 2.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.18,
+        "lowPriceExPlus": 4,
+        "avg1": 2,
+        "avg7": 3.47,
+        "avg30": 4.49,
+        "reverseHoloAvg1": 1.3,
+        "reverseHoloAvg7": 2.1,
+        "reverseHoloAvg30": 1.8
       }
     }
   },
@@ -1807,6 +2953,24 @@
       "Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW28",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -1818,12 +2982,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW28.png",
       "large": "https://images.pokemontcg.io/bwp/BW28_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW28",
+      "updatedAt": "2024/06/28",
+      "prices": {
+        "normal": {
+          "low": 350,
+          "mid": 350,
+          "high": 350,
+          "market": 99.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 99.95,
+        "trendPrice": 150.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 43.62,
+        "lowPriceExPlus": 99.95,
+        "avg1": 85,
+        "avg7": 143.75,
+        "avg30": 151.35,
+        "reverseHoloAvg1": 47.5,
+        "reverseHoloAvg7": 41.56,
+        "reverseHoloAvg30": 41.56
       }
     }
   },
@@ -1838,6 +3028,24 @@
       "Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW29",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1849,12 +3057,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW29.png",
       "large": "https://images.pokemontcg.io/bwp/BW29_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 74.95,
+          "mid": 80,
+          "high": 84.23,
+          "market": 77.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 40,
+        "lowPrice": 40,
+        "trendPrice": 32.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.74,
+        "lowPriceExPlus": 40,
+        "avg1": 39.99,
+        "avg7": 38.13,
+        "avg30": 37.39,
+        "reverseHoloAvg1": 30,
+        "reverseHoloAvg7": 13.22,
+        "reverseHoloAvg30": 7.94
       }
     }
   },
@@ -1869,6 +3103,24 @@
       "Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW30",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1880,12 +3132,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW30.png",
       "large": "https://images.pokemontcg.io/bwp/BW30_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 49.99,
+          "mid": 79.79,
+          "high": 109.13,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 51.99,
+        "lowPrice": 50,
+        "trendPrice": 55.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.88,
+        "lowPriceExPlus": 50,
+        "avg1": 51.99,
+        "avg7": 44.7,
+        "avg30": 35.9,
+        "reverseHoloAvg1": 50,
+        "reverseHoloAvg7": 35.85,
+        "reverseHoloAvg30": 14.86
       }
     }
   },
@@ -1900,6 +3178,24 @@
       "Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",
       "You may play as many Item cards as you like during your turn (before your attack)."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW31",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1911,12 +3207,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW31.png",
       "large": "https://images.pokemontcg.io/bwp/BW31_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 300,
+          "mid": 300,
+          "high": 300,
+          "market": 115.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 99.5,
+        "lowPrice": 95,
+        "trendPrice": 112.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 33.82,
+        "lowPriceExPlus": 95,
+        "avg1": 100,
+        "avg7": 85.56,
+        "avg30": 56.07,
+        "reverseHoloAvg1": 120,
+        "reverseHoloAvg7": 41.16,
+        "reverseHoloAvg30": 20.9
       }
     }
   },
@@ -1960,6 +3282,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW32",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -1975,12 +3315,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW32.png",
       "large": "https://images.pokemontcg.io/bwp/BW32_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.65,
+          "mid": 3.48,
+          "high": 39.99,
+          "market": 3.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.9,
+        "lowPrice": 0.05,
+        "trendPrice": 1.96,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.81,
+        "lowPriceExPlus": 0.7,
+        "avg1": 4.5,
+        "avg7": 2.06,
+        "avg30": 1.67,
+        "reverseHoloAvg1": 1.2,
+        "reverseHoloAvg7": 0.81,
+        "reverseHoloAvg30": 0.79
       }
     }
   },
@@ -2029,6 +3395,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW33",
     "artist": "sui",
     "rarity": "Promo",
@@ -2044,12 +3428,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW33.png",
       "large": "https://images.pokemontcg.io/bwp/BW33_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW33",
+      "updatedAt": "2025/05/20",
+      "prices": {
+        "holofoil": {
+          "low": 9.9,
+          "mid": 9.9,
+          "high": 9.9,
+          "market": 9.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.68,
+        "lowPrice": 0.45,
+        "trendPrice": 2.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.86,
+        "lowPriceExPlus": 3,
+        "avg1": 3,
+        "avg7": 3.76,
+        "avg30": 3.85,
+        "reverseHoloAvg1": 1.75,
+        "reverseHoloAvg7": 1.74,
+        "reverseHoloAvg30": 1.86
       }
     }
   },
@@ -2100,6 +3510,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW34",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -2115,12 +3543,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW34.png",
       "large": "https://images.pokemontcg.io/bwp/BW34_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 17.44,
+          "mid": 17.44,
+          "high": 17.44,
+          "market": 17.08,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 1.2,
+        "trendPrice": 4.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.94,
+        "lowPriceExPlus": 3,
+        "avg1": 6,
+        "avg7": 4.76,
+        "avg30": 3.22,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 3.03,
+        "reverseHoloAvg30": 2.47
       }
     }
   },
@@ -2169,6 +3623,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW35",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Promo",
@@ -2184,12 +3656,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW35.png",
       "large": "https://images.pokemontcg.io/bwp/BW35_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 10,
+          "mid": 11.25,
+          "high": 13.5,
+          "market": 10,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.43,
+        "lowPrice": 1.2,
+        "trendPrice": 6.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 6.4,
+        "avg7": 6.46,
+        "avg30": 7.02,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2245,6 +3743,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW36",
     "artist": "Shizurow",
     "rarity": "Promo",
@@ -2259,12 +3775,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW36.png",
       "large": "https://images.pokemontcg.io/bwp/BW36_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 9.56,
+          "high": 14.99,
+          "market": 6.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.49,
+        "lowPrice": 0.95,
+        "trendPrice": 11.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.74,
+        "lowPriceExPlus": 3,
+        "avg1": 4.5,
+        "avg7": 8.24,
+        "avg30": 7.09,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 2.77,
+        "reverseHoloAvg30": 2.86
       }
     }
   },
@@ -2320,6 +3862,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW37",
     "artist": "Shizurow",
     "rarity": "Promo",
@@ -2334,12 +3894,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW37.png",
       "large": "https://images.pokemontcg.io/bwp/BW37_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.4,
+          "mid": 3.89,
+          "high": 9.99,
+          "market": 3.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.34,
+        "lowPrice": 1,
+        "trendPrice": 6.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.99,
+        "lowPriceExPlus": 2,
+        "avg1": 1.5,
+        "avg7": 3.34,
+        "avg30": 6.15,
+        "reverseHoloAvg1": 3.69,
+        "reverseHoloAvg7": 3,
+        "reverseHoloAvg30": 2.67
       }
     }
   },
@@ -2395,6 +3981,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW38",
     "artist": "Shizurow",
     "rarity": "Promo",
@@ -2409,12 +4013,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW38.png",
       "large": "https://images.pokemontcg.io/bwp/BW38_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.59,
+          "high": 8.64,
+          "market": 6.16,
+          "directLow": 3.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.81,
+        "lowPrice": 0.99,
+        "trendPrice": 7.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.43,
+        "lowPriceExPlus": 2.5,
+        "avg1": 5.25,
+        "avg7": 5.44,
+        "avg30": 7.28,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 3.1,
+        "reverseHoloAvg30": 3.12
       }
     }
   },
@@ -2429,6 +4059,24 @@
       "Once during each player's turn, that player may flip a coin. If heads, the player draws a card.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW39",
     "artist": "Hideaki Hakozaki",
     "rarity": "Promo",
@@ -2440,12 +4088,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW39.png",
       "large": "https://images.pokemontcg.io/bwp/BW39_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.53,
+          "mid": 9.75,
+          "high": 38,
+          "market": 3.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.13,
+        "lowPrice": 0.49,
+        "trendPrice": 3.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.7,
+        "reverseHoloLow": 0.49,
+        "reverseHoloTrend": 4.64,
+        "lowPriceExPlus": 1.44,
+        "avg1": 3.5,
+        "avg7": 3.24,
+        "avg30": 3.19,
+        "reverseHoloAvg1": 3.39,
+        "reverseHoloAvg7": 4.63,
+        "reverseHoloAvg30": 4.07
       }
     }
   },
@@ -2493,6 +4167,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW40",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -2508,12 +4200,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW40.png",
       "large": "https://images.pokemontcg.io/bwp/BW40_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.99,
+          "mid": 10.26,
+          "high": 15,
+          "market": 15.39,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.66,
+        "lowPrice": 6,
+        "trendPrice": 15.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.71,
+        "lowPriceExPlus": 6,
+        "avg1": 12,
+        "avg7": 14.75,
+        "avg30": 12.02,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 2.67,
+        "reverseHoloAvg30": 2.91
       }
     }
   },
@@ -2560,6 +4278,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW41",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -2575,12 +4311,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW41.png",
       "large": "https://images.pokemontcg.io/bwp/BW41_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.68,
+          "mid": 1,
+          "high": 4.19,
+          "market": 0.92,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.33,
+        "lowPrice": 2,
+        "trendPrice": 2.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.43,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 3.62,
+        "lowPriceExPlus": 3.99,
+        "avg1": 2.95,
+        "avg7": 2.22,
+        "avg30": 2.83,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 3.52,
+        "reverseHoloAvg30": 2.9
       }
     }
   },
@@ -2633,6 +4395,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW42",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -2648,12 +4428,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW42.png",
       "large": "https://images.pokemontcg.io/bwp/BW42_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 1.09,
+          "mid": 1.84,
+          "high": 4.99,
+          "market": 1.8,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.35,
+        "lowPrice": 2.45,
+        "trendPrice": 3.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3,
+        "reverseHoloLow": 2.45,
+        "reverseHoloTrend": 3.36,
+        "lowPriceExPlus": 3,
+        "avg1": 3.35,
+        "avg7": 3.21,
+        "avg30": 2.81,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 3.28,
+        "reverseHoloAvg30": 2.18
       }
     }
   },
@@ -2706,6 +4512,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW43",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -2721,12 +4545,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW43.png",
       "large": "https://images.pokemontcg.io/bwp/BW43_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 17.71,
+          "mid": 23.99,
+          "high": 81.9,
+          "market": 14.41,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.19,
+        "lowPrice": 1,
+        "trendPrice": 8.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.64,
+        "lowPriceExPlus": 6.99,
+        "avg1": 4,
+        "avg7": 8.12,
+        "avg30": 11.19,
+        "reverseHoloAvg1": 7.48,
+        "reverseHoloAvg7": 5.66,
+        "reverseHoloAvg30": 6.67
       }
     }
   },
@@ -2775,6 +4625,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW44",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -2790,12 +4658,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW44.png",
       "large": "https://images.pokemontcg.io/bwp/BW44_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.26,
+          "mid": 3.33,
+          "high": 6.67,
+          "market": 2.93,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4,
+        "lowPrice": 0.95,
+        "trendPrice": 4.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.22,
+        "lowPriceExPlus": 1,
+        "avg1": 4,
+        "avg7": 4.63,
+        "avg30": 3.56,
+        "reverseHoloAvg1": 0.99,
+        "reverseHoloAvg7": 2,
+        "reverseHoloAvg30": 2.29
       }
     }
   },
@@ -2851,6 +4745,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW45",
     "artist": "Toyste Beach",
     "rarity": "Promo",
@@ -2865,12 +4777,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW45.png",
       "large": "https://images.pokemontcg.io/bwp/BW45_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5,
+          "mid": 10.31,
+          "high": 19.99,
+          "market": 9.79,
+          "directLow": 7.29
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.42,
+        "lowPrice": 1.5,
+        "trendPrice": 8.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.02,
+        "lowPriceExPlus": 4.7,
+        "avg1": 7,
+        "avg7": 5.71,
+        "avg30": 8.4,
+        "reverseHoloAvg1": 3.25,
+        "reverseHoloAvg7": 3.25,
+        "reverseHoloAvg30": 4.4
       }
     }
   },
@@ -2926,6 +4864,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW46",
     "artist": "Toyste Beach",
     "rarity": "Promo",
@@ -2940,12 +4896,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW46.png",
       "large": "https://images.pokemontcg.io/bwp/BW46_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.23,
+          "mid": 5.69,
+          "high": 21.99,
+          "market": 5.87,
+          "directLow": 5.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.88,
+        "lowPrice": 2,
+        "trendPrice": 5.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.38,
+        "lowPriceExPlus": 4,
+        "avg1": 2.2,
+        "avg7": 5.51,
+        "avg30": 6.06,
+        "reverseHoloAvg1": 4.13,
+        "reverseHoloAvg7": 3.56,
+        "reverseHoloAvg30": 3.83
       }
     }
   },
@@ -2998,6 +4980,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW47",
     "artist": "Eske Yoshinob",
     "rarity": "Promo",
@@ -3012,12 +5012,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW47.png",
       "large": "https://images.pokemontcg.io/bwp/BW47_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 20,
+          "mid": 37.84,
+          "high": 69.98,
+          "market": 13.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.9,
+        "lowPrice": 2,
+        "trendPrice": 5.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.95,
+        "lowPriceExPlus": 4,
+        "avg1": 3,
+        "avg7": 8.35,
+        "avg30": 7.51,
+        "reverseHoloAvg1": 7.95,
+        "reverseHoloAvg7": 6.66,
+        "reverseHoloAvg30": 4.44
       }
     }
   },
@@ -3063,6 +5089,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW48",
     "artist": "HiRON",
     "rarity": "Promo",
@@ -3078,12 +5122,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW48.png",
       "large": "https://images.pokemontcg.io/bwp/BW48_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.75,
+          "mid": 10.16,
+          "high": 15.1,
+          "market": 8.67,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.38,
+        "lowPrice": 5,
+        "trendPrice": 15.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.99,
+        "lowPriceExPlus": 5,
+        "avg1": 21.5,
+        "avg7": 13.99,
+        "avg30": 9.62,
+        "reverseHoloAvg1": 4.92,
+        "reverseHoloAvg7": 5.46,
+        "reverseHoloAvg30": 4.97
       }
     }
   },
@@ -3136,6 +5206,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW49",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -3151,12 +5239,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW49.png",
       "large": "https://images.pokemontcg.io/bwp/BW49_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 22,
+          "mid": 24,
+          "high": 24.99,
+          "market": 14.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 23.96,
+        "lowPrice": 21.99,
+        "trendPrice": 19.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.45,
+        "lowPriceExPlus": 25,
+        "avg1": 29.88,
+        "avg7": 20.48,
+        "avg30": 15.37,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 7.2,
+        "reverseHoloAvg30": 6.55
       }
     }
   },
@@ -3171,6 +5285,24 @@
       "Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW50",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -3182,12 +5314,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW50.png",
       "large": "https://images.pokemontcg.io/bwp/BW50_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 499.99,
+          "mid": 499.99,
+          "high": 499.99,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 45,
+        "lowPrice": 32.5,
+        "trendPrice": 46.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 41.57,
+        "lowPriceExPlus": 32.5,
+        "avg1": 45,
+        "avg7": 52.37,
+        "avg30": 117.49,
+        "reverseHoloAvg1": 45,
+        "reverseHoloAvg7": 43.66,
+        "reverseHoloAvg30": 43.66
       }
     }
   },
@@ -3236,6 +5394,24 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW51",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -3251,12 +5427,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW51.png",
       "large": "https://images.pokemontcg.io/bwp/BW51_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15,
+          "mid": 21.1,
+          "high": 39.99,
+          "market": 13.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.5,
+        "lowPrice": 5,
+        "trendPrice": 9.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.81,
+        "lowPriceExPlus": 9,
+        "avg1": 9.5,
+        "avg7": 9.21,
+        "avg30": 8.62,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 4.84,
+        "reverseHoloAvg30": 4.23
       }
     }
   },
@@ -3296,6 +5498,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW52",
     "artist": "Mizue",
     "rarity": "Promo",
@@ -3311,12 +5531,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW52.png",
       "large": "https://images.pokemontcg.io/bwp/BW52_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 1.54,
+          "mid": 3.08,
+          "high": 5.99,
+          "market": 3.33,
+          "directLow": 2.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4,
+        "lowPrice": 4,
+        "trendPrice": 9.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 9.69,
+        "lowPriceExPlus": 4,
+        "avg1": 4,
+        "avg7": 7.74,
+        "avg30": 7.46,
+        "reverseHoloAvg1": 10.79,
+        "reverseHoloAvg7": 8.88,
+        "reverseHoloAvg30": 5.75
       }
     }
   },
@@ -3363,6 +5609,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW53",
     "artist": "BERUBURI",
     "rarity": "Promo",
@@ -3378,12 +5642,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW53.png",
       "large": "https://images.pokemontcg.io/bwp/BW53_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.95,
+          "mid": 12.46,
+          "high": 15.49,
+          "market": 14.22,
+          "directLow": 15.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.99,
+        "lowPrice": 10,
+        "trendPrice": 18.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.11,
+        "lowPriceExPlus": 12.99,
+        "avg1": 14.95,
+        "avg7": 14.27,
+        "avg30": 13.66,
+        "reverseHoloAvg1": 7.99,
+        "reverseHoloAvg7": 7.49,
+        "reverseHoloAvg30": 6.76
       }
     }
   },
@@ -3433,6 +5723,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW54",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -3448,12 +5756,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW54.png",
       "large": "https://images.pokemontcg.io/bwp/BW54_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 28.41,
+          "mid": 42.64,
+          "high": 86,
+          "market": 48.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20.32,
+        "lowPrice": 29.32,
+        "trendPrice": 37.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 14.91,
+        "lowPriceExPlus": 30,
+        "avg1": 20.32,
+        "avg7": 47.73,
+        "avg30": 33.14,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 12.66,
+        "reverseHoloAvg30": 12.66
       }
     }
   },
@@ -3500,6 +5834,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW55",
     "artist": "Mizue",
     "rarity": "Promo",
@@ -3515,12 +5867,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW55.png",
       "large": "https://images.pokemontcg.io/bwp/BW55_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.9,
+          "mid": 3.3,
+          "high": 3.3,
+          "market": 3.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 9.9,
+        "trendPrice": 8.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.9,
+        "lowPriceExPlus": 9.95,
+        "avg1": 9.9,
+        "avg7": 7.72,
+        "avg30": 6.26,
+        "reverseHoloAvg1": 6.9,
+        "reverseHoloAvg7": 6.9,
+        "reverseHoloAvg30": 6.9
       }
     }
   },
@@ -3569,6 +5947,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW56",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -3584,12 +5980,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW56.png",
       "large": "https://images.pokemontcg.io/bwp/BW56_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.97,
+          "mid": 3.17,
+          "high": 3.96,
+          "market": 3.9,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.29,
+        "lowPrice": 1.5,
+        "trendPrice": 4.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.27,
+        "lowPriceExPlus": 3.25,
+        "avg1": 3.29,
+        "avg7": 4.92,
+        "avg30": 4.06,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 3.34,
+        "reverseHoloAvg30": 2.37
       }
     }
   },
@@ -3640,6 +6062,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW57",
     "artist": "kawayoo",
     "rarity": "Promo",
@@ -3655,12 +6095,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW57.png",
       "large": "https://images.pokemontcg.io/bwp/BW57_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8,
+          "mid": 24.99,
+          "high": 26.5,
+          "market": 12.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.72,
+        "lowPrice": 2.5,
+        "trendPrice": 6.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.47,
+        "lowPriceExPlus": 4.3,
+        "avg1": 5,
+        "avg7": 6.31,
+        "avg30": 5.35,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.47,
+        "reverseHoloAvg30": 2.38
       }
     }
   },
@@ -3710,6 +6176,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW58",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -3725,12 +6209,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW58.png",
       "large": "https://images.pokemontcg.io/bwp/BW58_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 15.5,
+          "mid": 19.99,
+          "high": 25.54,
+          "market": 17.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1,
+        "lowPrice": 3.5,
+        "trendPrice": 16.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.12,
+        "lowPriceExPlus": 9,
+        "avg1": 1,
+        "avg7": 17.84,
+        "avg30": 12.67,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4.77,
+        "reverseHoloAvg30": 4.61
       }
     }
   },
@@ -3780,6 +6290,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW59",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -3795,12 +6323,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW59.png",
       "large": "https://images.pokemontcg.io/bwp/BW59_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.99,
+          "mid": 4.25,
+          "high": 19.66,
+          "market": 14.08,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.24,
+        "lowPrice": 5,
+        "trendPrice": 16.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.56,
+        "lowPriceExPlus": 13.89,
+        "avg1": 9,
+        "avg7": 16.42,
+        "avg30": 9.66,
+        "reverseHoloAvg1": 3.5,
+        "reverseHoloAvg7": 4.5,
+        "reverseHoloAvg30": 3.98
       }
     }
   },
@@ -3847,6 +6401,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW60",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -3862,12 +6434,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW60.png",
       "large": "https://images.pokemontcg.io/bwp/BW60_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.98,
+          "mid": 3,
+          "high": 7,
+          "market": 4.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.99,
+        "lowPrice": 0.98,
+        "trendPrice": 1.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.6,
+        "lowPriceExPlus": 1.2,
+        "avg1": 3.36,
+        "avg7": 1.99,
+        "avg30": 3.46,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 2.41,
+        "reverseHoloAvg30": 2.25
       }
     }
   },
@@ -3917,6 +6515,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW61",
     "artist": "Toyste Beach",
     "rarity": "Promo",
@@ -3931,12 +6547,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW61.png",
       "large": "https://images.pokemontcg.io/bwp/BW61_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.95,
+          "mid": 1.75,
+          "high": 9.99,
+          "market": 1.71,
+          "directLow": 1.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.4,
+        "lowPrice": 0.5,
+        "trendPrice": 2.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.03,
+        "lowPriceExPlus": 1.99,
+        "avg1": 2.4,
+        "avg7": 2.44,
+        "avg30": 2.15,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 2.11,
+        "reverseHoloAvg30": 2.33
       }
     }
   },
@@ -3992,6 +6634,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW62",
     "artist": "Eske Yoshinob",
     "rarity": "Promo",
@@ -4006,12 +6666,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW62.png",
       "large": "https://images.pokemontcg.io/bwp/BW62_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.62,
+          "mid": 3.5,
+          "high": 4.99,
+          "market": 4.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.02,
+        "lowPrice": 0.6,
+        "trendPrice": 4.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.79,
+        "lowPriceExPlus": 2.75,
+        "avg1": 4.25,
+        "avg7": 3.85,
+        "avg30": 4.75,
+        "reverseHoloAvg1": 2.9,
+        "reverseHoloAvg7": 2.84,
+        "reverseHoloAvg30": 2.76
       }
     }
   },
@@ -4067,6 +6753,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW63",
     "artist": "Eske Yoshinob",
     "rarity": "Promo",
@@ -4081,12 +6785,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW63.png",
       "large": "https://images.pokemontcg.io/bwp/BW63_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.73,
+          "high": 8.75,
+          "market": 5.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.46,
+        "lowPrice": 1,
+        "trendPrice": 3.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.32,
+        "lowPriceExPlus": 2.8,
+        "avg1": 5.5,
+        "avg7": 4.77,
+        "avg30": 4.22,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 3.4,
+        "reverseHoloAvg30": 3.11
       }
     }
   },
@@ -4133,6 +6863,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW64",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -4148,12 +6896,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW64.png",
       "large": "https://images.pokemontcg.io/bwp/BW64_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 0.99,
+          "high": 7,
+          "market": 3.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 3,
+        "trendPrice": 3.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.27,
+        "lowPriceExPlus": 3.5,
+        "avg1": 3.76,
+        "avg7": 3.66,
+        "avg30": 3.96,
+        "reverseHoloAvg1": 3.74,
+        "reverseHoloAvg7": 3.74,
+        "reverseHoloAvg30": 3.74
       }
     }
   },
@@ -4192,6 +6966,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW65",
     "artist": "MAHOU",
     "rarity": "Promo",
@@ -4207,12 +6999,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW65.png",
       "large": "https://images.pokemontcg.io/bwp/BW65_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 14.63,
+          "mid": 14.63,
+          "high": 14.63,
+          "market": 8.61,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 18,
+        "lowPrice": 20,
+        "trendPrice": 24.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 20,
+        "avg1": 18,
+        "avg7": 20.42,
+        "avg30": 15.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4256,6 +7074,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW66",
     "artist": "Hideaki Hakozaki",
     "rarity": "Promo",
@@ -4271,12 +7107,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW66.png",
       "large": "https://images.pokemontcg.io/bwp/BW66_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11.19,
+          "mid": 11.25,
+          "high": 11.31,
+          "market": 11.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 26.35,
+        "lowPrice": 3.5,
+        "trendPrice": 17.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.16,
+        "lowPriceExPlus": 7.5,
+        "avg1": 75,
+        "avg7": 22.16,
+        "avg30": 13.12,
+        "reverseHoloAvg1": 13.99,
+        "reverseHoloAvg7": 6.57,
+        "reverseHoloAvg30": 5
       }
     }
   },
@@ -4325,6 +7187,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW67",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -4340,12 +7220,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW67.png",
       "large": "https://images.pokemontcg.io/bwp/BW67_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.97,
+          "mid": 10.12,
+          "high": 18.88,
+          "market": 10.12,
+          "directLow": 8.97
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.05,
+        "lowPrice": 3.25,
+        "trendPrice": 6.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.94,
+        "lowPriceExPlus": 3.95,
+        "avg1": 3.15,
+        "avg7": 6.35,
+        "avg30": 7.22,
+        "reverseHoloAvg1": 4.49,
+        "reverseHoloAvg7": 3.93,
+        "reverseHoloAvg30": 3.37
       }
     }
   },
@@ -4392,6 +7298,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW68",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -4407,12 +7331,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW68.png",
       "large": "https://images.pokemontcg.io/bwp/BW68_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.91,
+          "mid": 0.99,
+          "high": 3.25,
+          "market": 1.34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.63,
+        "lowPrice": 1.5,
+        "trendPrice": 3.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 2.98,
+        "avg7": 3.42,
+        "avg30": 3.03,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4459,6 +7409,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW69",
     "artist": "Shin Nagasawa",
     "rarity": "Promo",
@@ -4474,12 +7442,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW69.png",
       "large": "https://images.pokemontcg.io/bwp/BW69_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.26,
+          "mid": 0.54,
+          "high": 7.21,
+          "market": 0.48,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.45,
+        "lowPrice": 0.4,
+        "trendPrice": 1.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.65,
+        "avg1": 1.47,
+        "avg7": 1.4,
+        "avg30": 1.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -4530,6 +7524,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW70",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4545,12 +7557,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW70.png",
       "large": "https://images.pokemontcg.io/bwp/BW70_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.5,
+          "mid": 1.7,
+          "high": 2,
+          "market": 1.76,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.8,
+        "lowPrice": 0.5,
+        "trendPrice": 2.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.63,
+        "lowPriceExPlus": 2.34,
+        "avg1": 0.5,
+        "avg7": 2.31,
+        "avg30": 2.86,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.64,
+        "reverseHoloAvg30": 1.9
       }
     }
   },
@@ -4599,6 +7637,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW71",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4614,12 +7670,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW71.png",
       "large": "https://images.pokemontcg.io/bwp/BW71_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.85,
+          "mid": 1.15,
+          "high": 3.36,
+          "market": 2.37,
+          "directLow": 1.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.15,
+        "lowPrice": 0.49,
+        "trendPrice": 2.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.52,
+        "lowPriceExPlus": 2,
+        "avg1": 1.65,
+        "avg7": 2.26,
+        "avg30": 2.16,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.63,
+        "reverseHoloAvg30": 1.88
       }
     }
   },
@@ -4672,6 +7754,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW72",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4687,12 +7787,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW72.png",
       "large": "https://images.pokemontcg.io/bwp/BW72_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.26,
+          "high": 3.08,
+          "market": 2.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.02,
+        "lowPrice": 1,
+        "trendPrice": 2.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.75,
+        "lowPriceExPlus": 1.9,
+        "avg1": 2.05,
+        "avg7": 2.76,
+        "avg30": 2.35,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.78,
+        "reverseHoloAvg30": 1.63
       }
     }
   },
@@ -4749,6 +7875,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW73",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4764,12 +7908,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW73.png",
       "large": "https://images.pokemontcg.io/bwp/BW73_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 180,
+          "mid": 219.99,
+          "high": 370,
+          "market": 91.05,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 56.43,
+        "lowPrice": 2.5,
+        "trendPrice": 52.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.74,
+        "lowPriceExPlus": 24.9,
+        "avg1": 19.9,
+        "avg7": 43.84,
+        "avg30": 36.34,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 9.43,
+        "reverseHoloAvg30": 9.33
       }
     }
   },
@@ -4822,6 +7992,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW74",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4837,12 +8025,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW74.png",
       "large": "https://images.pokemontcg.io/bwp/BW74_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 50.7,
+          "mid": 54.12,
+          "high": 65.07,
+          "market": 72.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 34.19,
+        "lowPrice": 10,
+        "trendPrice": 37.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.23,
+        "lowPriceExPlus": 20,
+        "avg1": 13.85,
+        "avg7": 33.02,
+        "avg30": 24.36,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 6.14,
+        "reverseHoloAvg30": 5.79
       }
     }
   },
@@ -4891,6 +8105,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW75",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4906,12 +8138,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW75.png",
       "large": "https://images.pokemontcg.io/bwp/BW75_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.75,
+          "mid": 12.09,
+          "high": 19.46,
+          "market": 18.46,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.45,
+        "lowPrice": 9,
+        "trendPrice": 12.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.47,
+        "lowPriceExPlus": 10,
+        "avg1": 12.75,
+        "avg7": 13.95,
+        "avg30": 12.04,
+        "reverseHoloAvg1": 3.89,
+        "reverseHoloAvg7": 3.69,
+        "reverseHoloAvg30": 5.92
       }
     }
   },
@@ -4956,6 +8214,24 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW76",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -4971,12 +8247,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW76.png",
       "large": "https://images.pokemontcg.io/bwp/BW76_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.19,
+          "mid": 15.5,
+          "high": 49.99,
+          "market": 16.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13,
+        "lowPrice": 13.95,
+        "trendPrice": 14.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.53,
+        "lowPriceExPlus": 13.95,
+        "avg1": 13,
+        "avg7": 12.62,
+        "avg30": 12,
+        "reverseHoloAvg1": 4.49,
+        "reverseHoloAvg7": 6.71,
+        "reverseHoloAvg30": 6.71
       }
     }
   },
@@ -5026,6 +8328,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW77",
     "artist": "Mizue",
     "rarity": "Promo",
@@ -5040,14 +8360,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/bwp/BW77.png",
       "large": "https://images.pokemontcg.io/bwp/BW77_hires.png"
-    },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
-      }
     }
   },
   {
@@ -5095,6 +8407,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW78",
     "artist": "Mizue",
     "rarity": "Promo",
@@ -5109,14 +8439,6 @@
     "images": {
       "small": "https://images.pokemontcg.io/bwp/BW78.png",
       "large": "https://images.pokemontcg.io/bwp/BW78_hires.png"
-    },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
-      }
     }
   },
   {
@@ -5172,6 +8494,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW79",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -5187,12 +8527,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW79.png",
       "large": "https://images.pokemontcg.io/bwp/BW79_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 194.95,
+          "mid": 195.98,
+          "high": 499.99,
+          "market": 99.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14.11,
+        "lowPrice": 1,
+        "trendPrice": 5.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.45,
+        "lowPriceExPlus": 3.95,
+        "avg1": 3.9,
+        "avg7": 8.59,
+        "avg30": 9,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 5.84,
+        "reverseHoloAvg30": 4.12
       }
     }
   },
@@ -5241,6 +8607,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW80",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -5256,12 +8640,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW80.png",
       "large": "https://images.pokemontcg.io/bwp/BW80_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3,
+          "mid": 4.19,
+          "high": 9,
+          "market": 2.82,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.8,
+        "lowPrice": 0.5,
+        "trendPrice": 2.78,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.96,
+        "lowPriceExPlus": 1,
+        "avg1": 3.5,
+        "avg7": 2.78,
+        "avg30": 2.6,
+        "reverseHoloAvg1": 2.49,
+        "reverseHoloAvg7": 1.57,
+        "reverseHoloAvg30": 1.86
       }
     }
   },
@@ -5314,6 +8724,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW81",
     "artist": "Eske Yoshinob",
     "rarity": "Promo",
@@ -5328,12 +8756,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW81.png",
       "large": "https://images.pokemontcg.io/bwp/BW81_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.72,
+          "mid": 3.34,
+          "high": 89,
+          "market": 3.26,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.49,
+        "lowPrice": 0.75,
+        "trendPrice": 4.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.09,
+        "lowPriceExPlus": 2.95,
+        "avg1": 4,
+        "avg7": 3.42,
+        "avg30": 3.27,
+        "reverseHoloAvg1": 2.08,
+        "reverseHoloAvg7": 1.88,
+        "reverseHoloAvg30": 1.95
       }
     }
   },
@@ -5383,6 +8837,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW82",
     "artist": "Eske Yoshinob",
     "rarity": "Promo",
@@ -5397,12 +8869,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW82.png",
       "large": "https://images.pokemontcg.io/bwp/BW82_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.99,
+          "mid": 9,
+          "high": 26.02,
+          "market": 10.53,
+          "directLow": 3.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.77,
+        "lowPrice": 2,
+        "trendPrice": 7.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.23,
+        "lowPriceExPlus": 4.49,
+        "avg1": 10,
+        "avg7": 6.56,
+        "avg30": 6.57,
+        "reverseHoloAvg1": 2.95,
+        "reverseHoloAvg7": 3.3,
+        "reverseHoloAvg30": 3.49
       }
     }
   },
@@ -5460,6 +8958,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW83",
     "artist": "Toyste Beach",
     "rarity": "Promo",
@@ -5474,12 +8990,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW83.png",
       "large": "https://images.pokemontcg.io/bwp/BW83_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.77,
+          "mid": 12.54,
+          "high": 24.03,
+          "market": 17.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 15.75,
+        "lowPrice": 3,
+        "trendPrice": 11.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.49,
+        "lowPriceExPlus": 11,
+        "avg1": 20,
+        "avg7": 11.65,
+        "avg30": 12.31,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 9.28,
+        "reverseHoloAvg30": 6.12
       }
     }
   },
@@ -5526,6 +9068,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW84",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -5541,12 +9101,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW84.png",
       "large": "https://images.pokemontcg.io/bwp/BW84_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.99,
+          "mid": 14,
+          "high": 19.98,
+          "market": 9.44,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13,
+        "lowPrice": 5,
+        "trendPrice": 10.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.93,
+        "lowPriceExPlus": 5,
+        "avg1": 20,
+        "avg7": 11.05,
+        "avg30": 10.15,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 3.65,
+        "reverseHoloAvg30": 3.67
       }
     }
   },
@@ -5593,6 +9179,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW85",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -5608,12 +9212,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW85.png",
       "large": "https://images.pokemontcg.io/bwp/BW85_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 300,
+          "mid": 300,
+          "high": 300,
+          "market": 39.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.87,
+        "lowPrice": 2,
+        "trendPrice": 23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.05,
+        "lowPriceExPlus": 3.5,
+        "avg1": 2.79,
+        "avg7": 22.42,
+        "avg30": 35.28,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 12.25,
+        "reverseHoloAvg30": 8.77
       }
     }
   },
@@ -5664,6 +9294,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW86",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -5679,12 +9327,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW86.png",
       "large": "https://images.pokemontcg.io/bwp/BW86_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 58,
+          "mid": 141.74,
+          "high": 180,
+          "market": 139.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.06,
+        "lowPrice": 1.45,
+        "trendPrice": 10.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.09,
+        "lowPriceExPlus": 2.4,
+        "avg1": 17.5,
+        "avg7": 11.69,
+        "avg30": 13.44,
+        "reverseHoloAvg1": 16.4,
+        "reverseHoloAvg7": 9.25,
+        "reverseHoloAvg30": 6.9
       }
     }
   },
@@ -5737,6 +9411,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW87",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -5752,12 +9444,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW87.png",
       "large": "https://images.pokemontcg.io/bwp/BW87_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 25.99,
+          "mid": 46.51,
+          "high": 149.99,
+          "market": 36.33,
+          "directLow": 45.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.52,
+        "lowPrice": 1.85,
+        "trendPrice": 13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.91,
+        "lowPriceExPlus": 8,
+        "avg1": 5,
+        "avg7": 12.55,
+        "avg30": 8.99,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4.91,
+        "reverseHoloAvg30": 4.85
       }
     }
   },
@@ -5805,6 +9523,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW88",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -5820,12 +9556,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW88.png",
       "large": "https://images.pokemontcg.io/bwp/BW88_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 26.15,
+          "mid": 42.92,
+          "high": 77.34,
+          "market": 28.95,
+          "directLow": 35.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.11,
+        "lowPrice": 1,
+        "trendPrice": 17.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.35,
+        "lowPriceExPlus": 6,
+        "avg1": 4,
+        "avg7": 17.93,
+        "avg30": 13.02,
+        "reverseHoloAvg1": 19.99,
+        "reverseHoloAvg7": 6.58,
+        "reverseHoloAvg30": 6.51
       }
     }
   },
@@ -5860,7 +9622,7 @@
         ],
         "convertedEnergyCost": 3,
         "damage": "60",
-        "text": "Heal 20 damage from this Pokémon."
+        "text": "Recover 20 damage from this Pokémon."
       }
     ],
     "weaknesses": [
@@ -5874,6 +9636,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW89",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -5889,12 +9669,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW89.png",
       "large": "https://images.pokemontcg.io/bwp/BW89_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 20.63,
+          "mid": 31.5,
+          "high": 70.85,
+          "market": 27.11,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.46,
+        "lowPrice": 3,
+        "trendPrice": 13.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.9,
+        "lowPriceExPlus": 8,
+        "avg1": 21.5,
+        "avg7": 14.81,
+        "avg30": 11.11,
+        "reverseHoloAvg1": 2.75,
+        "reverseHoloAvg7": 3.95,
+        "reverseHoloAvg30": 4.57
       }
     }
   },
@@ -5941,6 +9747,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW90",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -5956,12 +9780,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW90.png",
       "large": "https://images.pokemontcg.io/bwp/BW90_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 22,
+          "mid": 37.99,
+          "high": 99.99,
+          "market": 32.4,
+          "directLow": 35.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.43,
+        "lowPrice": 2.5,
+        "trendPrice": 15.91,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.58,
+        "lowPriceExPlus": 5,
+        "avg1": 5,
+        "avg7": 12.74,
+        "avg30": 9.64,
+        "reverseHoloAvg1": 3.5,
+        "reverseHoloAvg7": 3.89,
+        "reverseHoloAvg30": 4.72
       }
     }
   },
@@ -6005,6 +9855,24 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW91",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -6020,12 +9888,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW91.png",
       "large": "https://images.pokemontcg.io/bwp/BW91_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 20,
+          "mid": 40.54,
+          "high": 99.99,
+          "market": 26.55,
+          "directLow": 29.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.51,
+        "lowPrice": 2.5,
+        "trendPrice": 9.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.73,
+        "lowPriceExPlus": 5,
+        "avg1": 4,
+        "avg7": 10.09,
+        "avg30": 10.31,
+        "reverseHoloAvg1": 8.99,
+        "reverseHoloAvg7": 6.13,
+        "reverseHoloAvg30": 5.04
       }
     }
   },
@@ -6071,6 +9965,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW92",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -6086,12 +9998,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW92.png",
       "large": "https://images.pokemontcg.io/bwp/BW92_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 28.03,
+          "mid": 53.64,
+          "high": 99.99,
+          "market": 37.26,
+          "directLow": 16.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.12,
+        "lowPrice": 2,
+        "trendPrice": 9.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.89,
+        "lowPriceExPlus": 5.75,
+        "avg1": 4,
+        "avg7": 10.64,
+        "avg30": 8.28,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 3.81,
+        "reverseHoloAvg30": 6.23
       }
     }
   },
@@ -6147,6 +10085,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW93",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -6162,12 +10118,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW93.png",
       "large": "https://images.pokemontcg.io/bwp/BW93_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 70.07,
+          "mid": 139.12,
+          "high": 299.99,
+          "market": 85.42,
+          "directLow": 77.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 41,
+        "lowPrice": 5,
+        "trendPrice": 40.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.53,
+        "lowPriceExPlus": 15,
+        "avg1": 13,
+        "avg7": 41.62,
+        "avg30": 38.72,
+        "reverseHoloAvg1": 17.5,
+        "reverseHoloAvg7": 13.8,
+        "reverseHoloAvg30": 11.51
       }
     }
   },
@@ -6223,6 +10205,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW94",
     "artist": "The Pokémon Company Art Team",
     "rarity": "Promo",
@@ -6238,12 +10238,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW94.png",
       "large": "https://images.pokemontcg.io/bwp/BW94_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 33.99,
+          "mid": 52.36,
+          "high": 199.99,
+          "market": 51.06,
+          "directLow": 48.74
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW94",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.88,
+        "lowPrice": 3.5,
+        "trendPrice": 13.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.71,
+        "lowPriceExPlus": 7,
+        "avg1": 4.99,
+        "avg7": 12.57,
+        "avg30": 10.03,
+        "reverseHoloAvg1": 12.89,
+        "reverseHoloAvg7": 9.14,
+        "reverseHoloAvg30": 8.53
       }
     }
   },
@@ -6258,6 +10284,24 @@
       "Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW95",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -6269,12 +10313,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW95.png",
       "large": "https://images.pokemontcg.io/bwp/BW95_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW95",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 250,
+          "mid": 250,
+          "high": 250,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW95",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 157.5,
+        "lowPrice": 74.95,
+        "trendPrice": 193.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 34.99,
+        "lowPriceExPlus": 74.95,
+        "avg1": 157.5,
+        "avg7": 139.41,
+        "avg30": 133.36,
+        "reverseHoloAvg1": 34.99,
+        "reverseHoloAvg7": 34.99,
+        "reverseHoloAvg30": 34.99
       }
     }
   },
@@ -6332,6 +10402,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW96",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -6346,12 +10434,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW96.png",
       "large": "https://images.pokemontcg.io/bwp/BW96_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW96",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.99,
+          "mid": 15,
+          "high": 39.99,
+          "market": 19.54,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW96",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.08,
+        "lowPrice": 12,
+        "trendPrice": 11.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.87,
+        "lowPriceExPlus": 12,
+        "avg1": 11.99,
+        "avg7": 12.15,
+        "avg30": 12.88,
+        "reverseHoloAvg1": 5.99,
+        "reverseHoloAvg7": 4.42,
+        "reverseHoloAvg30": 4.85
       }
     }
   },
@@ -6407,6 +10521,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW97",
     "artist": "Akira Komayama",
     "rarity": "Promo",
@@ -6422,12 +10554,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW97.png",
       "large": "https://images.pokemontcg.io/bwp/BW97_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW97",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 269,
+          "mid": 270.27,
+          "high": 464.95,
+          "market": 239.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW97",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 161.33,
+        "lowPrice": 180,
+        "trendPrice": 115.03,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.59,
+        "lowPriceExPlus": 180,
+        "avg1": 110,
+        "avg7": 104.68,
+        "avg30": 99.99,
+        "reverseHoloAvg1": 30,
+        "reverseHoloAvg7": 11.81,
+        "reverseHoloAvg30": 10.6
       }
     }
   },
@@ -6470,6 +10628,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW98",
     "artist": "Naoki Saito",
     "rarity": "Promo",
@@ -6485,12 +10661,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW98.png",
       "large": "https://images.pokemontcg.io/bwp/BW98_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW98",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 199.95,
+          "mid": 224.97,
+          "high": 249.98,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW98",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 46.5,
+        "lowPrice": 14.9,
+        "trendPrice": 37.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 33.75,
+        "lowPriceExPlus": 40,
+        "avg1": 24.99,
+        "avg7": 40.96,
+        "avg30": 41.72,
+        "reverseHoloAvg1": 69.99,
+        "reverseHoloAvg7": 35.39,
+        "reverseHoloAvg30": 22.02
       }
     }
   },
@@ -6539,6 +10741,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW99",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -6554,12 +10774,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW99.png",
       "large": "https://images.pokemontcg.io/bwp/BW99_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW99",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 2.32,
+          "high": 4.37,
+          "market": 2.22,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW99",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.09,
+        "lowPrice": 1.75,
+        "trendPrice": 6.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.99,
+        "lowPriceExPlus": 3.9,
+        "avg1": 6.3,
+        "avg7": 6.44,
+        "avg30": 5.5,
+        "reverseHoloAvg1": 2.9,
+        "reverseHoloAvg7": 2.03,
+        "reverseHoloAvg30": 1.75
       }
     }
   },
@@ -6574,6 +10820,24 @@
       "Each player shuffles his or her hand into his or her deck. Then, each player draws a card for each of his or her remaining Prize cards.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW100",
     "artist": "Yusuke Ohmura",
     "rarity": "Promo",
@@ -6585,12 +10849,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW100.png",
       "large": "https://images.pokemontcg.io/bwp/BW100_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW100",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.99,
+          "mid": 8.8,
+          "high": 15,
+          "market": 8.27,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW100",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 2.95,
+        "trendPrice": 2.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.92,
+        "reverseHoloLow": 2.95,
+        "reverseHoloTrend": 4.66,
+        "lowPriceExPlus": 2.95,
+        "avg1": 1,
+        "avg7": 1.71,
+        "avg30": 1.71,
+        "reverseHoloAvg1": 2.89,
+        "reverseHoloAvg7": 3.94,
+        "reverseHoloAvg30": 3.52
       }
     }
   },
@@ -6639,6 +10929,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "bwp",
+      "name": "BW Black Star Promos",
+      "series": "Black & White",
+      "printedTotal": 101,
+      "total": 101,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "PR-BLW",
+      "releaseDate": "2011/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/bwp/symbol.png",
+        "logo": "https://images.pokemontcg.io/bwp/logo.png"
+      }
+    },
     "number": "BW101",
     "artist": "5ban Graphics",
     "rarity": "Promo",
@@ -6654,12 +10962,38 @@
       "small": "https://images.pokemontcg.io/bwp/BW101.png",
       "large": "https://images.pokemontcg.io/bwp/BW101_hires.png"
     },
-    "set": {
-      "id": "bwp",
-      "releaseDate": "2011/03/01",
-      "name": "BW Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/bwp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/bwp-BW101",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 241.52,
+          "mid": 270.76,
+          "high": 299.99,
+          "market": 67.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/bwp-BW101",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 97,
+        "lowPrice": 4.5,
+        "trendPrice": 61.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.5,
+        "lowPriceExPlus": 30,
+        "avg1": 180,
+        "avg7": 71.12,
+        "avg30": 44.25,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 4.5,
+        "reverseHoloAvg30": 4.5
       }
     }
   }

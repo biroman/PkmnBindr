@@ -51,6 +51,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS01",
     "artist": "Takashi Yamaguchi",
     "rarity": "Promo",
@@ -65,12 +82,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS01.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS01_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.69,
+          "mid": 17.15,
+          "high": 26.07,
+          "market": 19.71,
+          "directLow": 26.06
+        }
       }
     }
   },
@@ -125,6 +147,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS02",
     "artist": "Takashi Yamaguchi",
     "rarity": "Promo",
@@ -139,12 +178,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS02.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS02_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 24.38,
+          "mid": 33.67,
+          "high": 48.57,
+          "market": 45.44,
+          "directLow": null
+        }
       }
     }
   },
@@ -201,6 +245,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS03",
     "artist": "Kanako Eo",
     "rarity": "Promo",
@@ -215,12 +276,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS03.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS03_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 7.95,
+          "high": 89,
+          "market": 6,
+          "directLow": 8.18
+        }
       }
     }
   },
@@ -266,6 +332,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS04",
     "artist": "match",
     "rarity": "Promo",
@@ -280,12 +363,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS04.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS04_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.98,
+          "mid": 4.4,
+          "high": 8.39,
+          "market": 3.53,
+          "directLow": null
+        }
       }
     }
   },
@@ -337,6 +425,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS05",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -351,12 +456,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS05.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS05_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.3,
+          "mid": 4.75,
+          "high": 89,
+          "market": 4.6,
+          "directLow": 2
+        }
       }
     }
   },
@@ -408,6 +518,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS06",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -422,12 +549,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS06.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS06_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.8,
+          "mid": 3,
+          "high": 7,
+          "market": 4.42,
+          "directLow": null
+        }
       }
     }
   },
@@ -477,6 +609,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS07",
     "artist": "Kent Kanetsuna",
     "rarity": "Promo",
@@ -490,12 +639,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS07.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS07_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 28.01,
+          "mid": 29.5,
+          "high": 40,
+          "market": 19.64,
+          "directLow": null
+        }
       }
     }
   },
@@ -550,6 +704,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS08",
     "artist": "Noriko Hotta",
     "rarity": "Promo",
@@ -563,12 +734,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS08.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS08_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16,
+          "mid": 18.45,
+          "high": 25.99,
+          "market": 23.33,
+          "directLow": 10.83
+        }
       }
     }
   },
@@ -616,6 +792,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS09",
     "artist": "Wataru Kawahara",
     "rarity": "Promo",
@@ -629,12 +822,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS09.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS09_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.51,
+          "mid": 23.23,
+          "high": 35.96,
+          "market": 25.78,
+          "directLow": 16.52
+        }
       }
     }
   },
@@ -681,6 +879,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS10",
     "artist": "Wataru Kawahara",
     "rarity": "Promo",
@@ -695,12 +910,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS10.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS10_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.99,
+          "mid": 10.46,
+          "high": 16.8,
+          "market": 14.78,
+          "directLow": null
+        }
       }
     }
   },
@@ -747,6 +967,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS11",
     "artist": "Wataru Kawahara",
     "rarity": "Promo",
@@ -761,12 +998,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS11.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS11_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 17.99,
+          "mid": 25,
+          "high": 31.29,
+          "market": 19.25,
+          "directLow": null
+        }
       }
     }
   },
@@ -800,6 +1042,23 @@
         "text": "Shuffle your hand into your deck, then draw 6 cards. Cleffa is now Asleep."
       }
     ],
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS12",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -814,12 +1073,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS12.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS12_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 13.99,
+          "mid": 20.71,
+          "high": 31.03,
+          "market": 17.86,
+          "directLow": null
+        }
       }
     }
   },
@@ -853,6 +1117,23 @@
         "text": "Move an Energy card attached to 1 of your opponent's Pokémon to another of your opponent's Pokémon. Smoochum is now Asleep."
       }
     ],
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS13",
     "artist": "Midori Harada",
     "rarity": "Promo",
@@ -867,12 +1148,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS13.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS13_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8,
+          "mid": 11.31,
+          "high": 25.7,
+          "market": 16.59,
+          "directLow": 9.28
+        }
       }
     }
   },
@@ -920,6 +1206,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS14",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -934,12 +1237,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS14.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS14_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.21,
+          "mid": 17.07,
+          "high": 20,
+          "market": 17.44,
+          "directLow": 18.97
+        }
       }
     }
   },
@@ -983,6 +1291,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS15",
     "artist": "match",
     "rarity": "Promo",
@@ -997,12 +1322,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS15.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS15_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14.65,
+          "mid": 15,
+          "high": 16.5,
+          "market": 9.73,
+          "directLow": 14.65
+        }
       }
     }
   },
@@ -1053,6 +1383,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS16",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1067,12 +1414,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS16.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS16_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.5,
+          "mid": 12.15,
+          "high": 15,
+          "market": 9.47,
+          "directLow": null
+        }
       }
     }
   },
@@ -1123,6 +1475,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS17",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1137,12 +1506,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS17.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS17_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11.19,
+          "mid": 11.29,
+          "high": 11.39,
+          "market": 7.36,
+          "directLow": null
+        }
       }
     }
   },
@@ -1156,6 +1530,23 @@
     "rules": [
       "Flip a coin. If heads, discard all Trainer and Stadium cards your opponent has in play. If tails, discard all Trainer and Stadium cards you have in play."
     ],
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS18",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Promo",
@@ -1166,12 +1557,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS18.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS18_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 599.95,
+          "mid": 599.95,
+          "high": 599.95,
+          "market": null,
+          "directLow": null
+        }
       }
     }
   },
@@ -1215,6 +1611,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS19",
     "artist": "Noriko Hotta",
     "rarity": "Promo",
@@ -1229,12 +1642,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS19.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS19_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.98,
+          "mid": 17.99,
+          "high": 38.38,
+          "market": 20.71,
+          "directLow": null
+        }
       }
     }
   },
@@ -1272,6 +1690,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS20",
     "artist": "Yuri Umemura",
     "rarity": "Promo",
@@ -1286,12 +1721,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS20.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS20_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 18.49,
+          "mid": 22.49,
+          "high": 119.99,
+          "market": 25.34,
+          "directLow": 20.34
+        }
       }
     }
   },
@@ -1329,6 +1769,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS21",
     "artist": "Hideaki Hakozaki",
     "rarity": "Promo",
@@ -1343,12 +1800,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS21.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS21_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 27.35,
+          "mid": 31.49,
+          "high": 51.51,
+          "market": 32.56,
+          "directLow": null
+        }
       }
     }
   },
@@ -1397,6 +1859,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS22",
     "artist": "TOKIYA",
     "rarity": "Promo",
@@ -1411,12 +1890,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS22.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS22_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 5.06,
+          "high": 6.6,
+          "market": 7.01,
+          "directLow": null
+        }
       }
     }
   },
@@ -1466,6 +1950,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS23",
     "artist": "TOKIYA",
     "rarity": "Promo",
@@ -1480,12 +1981,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS23.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS23_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19.44,
+          "mid": 56,
+          "high": 59.99,
+          "market": 6.71,
+          "directLow": null
+        }
       }
     }
   },
@@ -1531,6 +2037,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS24",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1545,12 +2068,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS24.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS24_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.7,
+          "mid": 5.96,
+          "high": 26.99,
+          "market": 6.68,
+          "directLow": null
+        }
       }
     }
   },
@@ -1598,6 +2126,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "hsp",
+      "name": "HGSS Black Star Promos",
+      "series": "HeartGold & SoulSilver",
+      "printedTotal": 25,
+      "total": 25,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-HS",
+      "releaseDate": "2010/02/10",
+      "updatedAt": "2019/01/28 16:44:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/hsp/symbol.png",
+        "logo": "https://images.pokemontcg.io/hsp/logo.png"
+      }
+    },
     "number": "HGSS25",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1612,12 +2157,17 @@
       "small": "https://images.pokemontcg.io/hsp/HGSS25.png",
       "large": "https://images.pokemontcg.io/hsp/HGSS25_hires.png"
     },
-    "set": {
-      "id": "hsp",
-      "releaseDate": "2010/02/10",
-      "name": "HGSS Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/hsp/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/hsp-HGSS25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 8.15,
+          "high": 13.28,
+          "market": 8.57,
+          "directLow": null
+        }
       }
     }
   }

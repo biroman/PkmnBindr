@@ -45,6 +45,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Katsura Tabata",
     "rarity": "Rare",
@@ -58,12 +74,45 @@
       "small": "https://images.pokemontcg.io/pop1/1.png",
       "large": "https://images.pokemontcg.io/pop1/1_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.51,
+          "mid": 8.62,
+          "high": 9.79,
+          "market": 8.71,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 5,
+          "mid": 8.99,
+          "high": 14.99,
+          "market": 7.81,
+          "directLow": 8.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 29.62,
+        "lowPrice": 2.99,
+        "trendPrice": 24.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.77,
+        "lowPriceExPlus": 8.9,
+        "avg1": 35,
+        "avg7": 20.31,
+        "avg30": 18.14,
+        "reverseHoloAvg1": 6.95,
+        "reverseHoloAvg7": 12.95,
+        "reverseHoloAvg30": 8.02
       }
     }
   },
@@ -121,6 +170,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -134,12 +199,45 @@
       "small": "https://images.pokemontcg.io/pop1/2.png",
       "large": "https://images.pokemontcg.io/pop1/2_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.78,
+          "mid": 6.13,
+          "high": 6.5,
+          "market": 4.63,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 1.99,
+          "mid": 3.02,
+          "high": 10,
+          "market": 3.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.62,
+        "lowPrice": 3,
+        "trendPrice": 11.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.29,
+        "lowPriceExPlus": 8.99,
+        "avg1": 19.5,
+        "avg7": 12.51,
+        "avg30": 11.62,
+        "reverseHoloAvg1": 24.99,
+        "reverseHoloAvg7": 8.14,
+        "reverseHoloAvg30": 4.33
       }
     }
   },
@@ -185,6 +283,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Katsura Tabata",
     "rarity": "Rare",
@@ -198,12 +312,45 @@
       "small": "https://images.pokemontcg.io/pop1/3.png",
       "large": "https://images.pokemontcg.io/pop1/3_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 16.01,
+          "mid": 43,
+          "high": 69.99,
+          "market": 16.06,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 19.99,
+          "mid": 26.72,
+          "high": 199.99,
+          "market": 21.52,
+          "directLow": 6.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.6,
+        "lowPrice": 8.95,
+        "trendPrice": 19.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 15.89,
+        "reverseHoloTrend": 11.95,
+        "lowPriceExPlus": 13,
+        "avg1": 10,
+        "avg7": 13.56,
+        "avg30": 23.06,
+        "reverseHoloAvg1": 9,
+        "reverseHoloAvg7": 23.17,
+        "reverseHoloAvg30": 11.27
       }
     }
   },
@@ -258,6 +405,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Hiromichi Sugiyama",
     "rarity": "Rare",
@@ -271,12 +434,45 @@
       "small": "https://images.pokemontcg.io/pop1/4.png",
       "large": "https://images.pokemontcg.io/pop1/4_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4,
+          "mid": 8.54,
+          "high": 10.58,
+          "market": 8.54,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 5.99,
+          "mid": 8.74,
+          "high": 175.98,
+          "market": 10.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.34,
+        "lowPrice": 0.8,
+        "trendPrice": 7.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.17,
+        "lowPriceExPlus": 3,
+        "avg1": 2.5,
+        "avg7": 3.12,
+        "avg30": 7.32,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 4.75,
+        "reverseHoloAvg30": 3.12
       }
     }
   },
@@ -325,6 +521,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Hiromichi Sugiyama",
     "rarity": "Rare",
@@ -338,12 +550,45 @@
       "small": "https://images.pokemontcg.io/pop1/5.png",
       "large": "https://images.pokemontcg.io/pop1/5_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.99,
+          "mid": 5.11,
+          "high": 6,
+          "market": 5.9,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 4.69,
+          "mid": 8.37,
+          "high": 29.99,
+          "market": 11.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.87,
+        "lowPrice": 0.99,
+        "trendPrice": 7,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.07,
+        "lowPriceExPlus": 6,
+        "avg1": 1.25,
+        "avg7": 6.51,
+        "avg30": 4.58,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 3.85,
+        "reverseHoloAvg30": 3.41
       }
     }
   },
@@ -388,6 +633,22 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -401,12 +662,38 @@
       "small": "https://images.pokemontcg.io/pop1/6.png",
       "large": "https://images.pokemontcg.io/pop1/6_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.97,
+          "mid": 5.33,
+          "high": 9.95,
+          "market": 5.08,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.09,
+        "lowPrice": 1,
+        "trendPrice": 1.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.2,
+        "avg1": 1,
+        "avg7": 1.53,
+        "avg30": 2.81,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -456,6 +743,22 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -469,12 +772,38 @@
       "small": "https://images.pokemontcg.io/pop1/7.png",
       "large": "https://images.pokemontcg.io/pop1/7_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.54,
+          "mid": 3.98,
+          "high": 4.49,
+          "market": 4.06,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.16,
+        "lowPrice": 0.5,
+        "trendPrice": 1.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.98,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 1.5,
+        "avg7": 1.9,
+        "avg30": 1.97,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -527,6 +856,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -540,12 +885,38 @@
       "small": "https://images.pokemontcg.io/pop1/8.png",
       "large": "https://images.pokemontcg.io/pop1/8_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5.45,
+          "mid": 5.45,
+          "high": 5.45,
+          "market": 5.88,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4,
+        "lowPrice": 1.52,
+        "trendPrice": 3.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.52,
+        "avg1": 2,
+        "avg7": 2.66,
+        "avg30": 2.93,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -586,6 +957,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Hisao Nakamura",
     "rarity": "Uncommon",
@@ -599,12 +986,38 @@
       "small": "https://images.pokemontcg.io/pop1/9.png",
       "large": "https://images.pokemontcg.io/pop1/9_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5,
+          "mid": 5.06,
+          "high": 6,
+          "market": 5.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.22,
+        "lowPrice": 0.75,
+        "trendPrice": 2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 0.37,
+        "avg7": 1.86,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -651,6 +1064,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -664,12 +1093,38 @@
       "small": "https://images.pokemontcg.io/pop1/10.png",
       "large": "https://images.pokemontcg.io/pop1/10_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5.5,
+          "mid": 7.26,
+          "high": 9,
+          "market": 6.24,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.94,
+        "lowPrice": 2.55,
+        "trendPrice": 5.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.55,
+        "avg1": 3.35,
+        "avg7": 4.91,
+        "avg30": 4.99,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -708,6 +1163,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Hisao Nakamura",
     "rarity": "Common",
@@ -721,12 +1192,38 @@
       "small": "https://images.pokemontcg.io/pop1/11.png",
       "large": "https://images.pokemontcg.io/pop1/11_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.55,
+          "mid": 0.74,
+          "high": 4.95,
+          "market": 0.84,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.06,
+        "trendPrice": 0.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.99,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.29,
+        "avg7": 0.16,
+        "avg30": 0.44,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 1.99,
+        "reverseHoloAvg30": 1.99
       }
     }
   },
@@ -778,6 +1275,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -791,12 +1304,38 @@
       "small": "https://images.pokemontcg.io/pop1/12.png",
       "large": "https://images.pokemontcg.io/pop1/12_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.65,
+          "mid": 1.35,
+          "high": 6.27,
+          "market": 1.37,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.42,
+        "lowPrice": 0.06,
+        "trendPrice": 1.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.14,
+        "lowPriceExPlus": 0.06,
+        "avg1": 3,
+        "avg7": 0.65,
+        "avg30": 0.58,
+        "reverseHoloAvg1": 0.14,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.14
       }
     }
   },
@@ -848,6 +1387,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -861,12 +1416,38 @@
       "small": "https://images.pokemontcg.io/pop1/13.png",
       "large": "https://images.pokemontcg.io/pop1/13_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.56,
+          "mid": 1,
+          "high": 2,
+          "market": 1.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.43,
+        "lowPrice": 0.06,
+        "trendPrice": 0.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.3,
+        "avg7": 0.27,
+        "avg30": 0.47,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -905,6 +1486,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -918,12 +1515,38 @@
       "small": "https://images.pokemontcg.io/pop1/14.png",
       "large": "https://images.pokemontcg.io/pop1/14_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.51,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.06,
+        "trendPrice": 0.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.3,
+        "avg7": 0.26,
+        "avg30": 0.38,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -976,6 +1599,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -989,12 +1628,38 @@
       "small": "https://images.pokemontcg.io/pop1/15.png",
       "large": "https://images.pokemontcg.io/pop1/15_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.65,
+          "directLow": 0.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.06,
+        "trendPrice": 0.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.45,
+        "avg7": 0.25,
+        "avg30": 0.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1055,6 +1720,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Hikaru Koike",
     "rarity": "Rare",
@@ -1068,12 +1749,38 @@
       "small": "https://images.pokemontcg.io/pop1/16.png",
       "large": "https://images.pokemontcg.io/pop1/16_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 14,
+          "mid": 49736.68,
+          "high": 99459.36,
+          "market": 17.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 31.33,
+        "lowPrice": 19,
+        "trendPrice": 51.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 32.08,
+        "lowPriceExPlus": 35,
+        "avg1": 45,
+        "avg7": 49.14,
+        "avg30": 49.16,
+        "reverseHoloAvg1": 39.99,
+        "reverseHoloAvg7": 20.21,
+        "reverseHoloAvg30": 20.21
       }
     }
   },
@@ -1139,6 +1846,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "pop1",
+      "name": "POP Series 1",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2004/09/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop1/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop1/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Hisao Nakamura",
     "rarity": "Rare",
@@ -1152,12 +1875,38 @@
       "small": "https://images.pokemontcg.io/pop1/17.png",
       "large": "https://images.pokemontcg.io/pop1/17_hires.png"
     },
-    "set": {
-      "id": "pop1",
-      "releaseDate": "2004/09/01",
-      "name": "POP Series 1",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 85,
+          "mid": 132,
+          "high": 179,
+          "market": 40.45,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.89,
+        "lowPrice": 1,
+        "trendPrice": 16.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.21,
+        "lowPriceExPlus": 9.9,
+        "avg1": 15.51,
+        "avg7": 6.72,
+        "avg30": 18.61,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 8.29,
+        "reverseHoloAvg30": 7.95
       }
     }
   }

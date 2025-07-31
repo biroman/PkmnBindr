@@ -34,6 +34,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "1",
     "artist": "tetsuya koizumi",
     "rarity": "Common",
@@ -49,12 +67,45 @@
       "small": "https://images.pokemontcg.io/sm115/1.png",
       "large": "https://images.pokemontcg.io/sm115/1_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.29,
+          "high": 99,
+          "market": 0.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.03,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.04,
+        "avg30": 0.04,
+        "reverseHoloAvg1": 0.18,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -96,6 +147,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Shibuzoh.",
     "rarity": "Uncommon",
@@ -111,12 +180,45 @@
       "small": "https://images.pokemontcg.io/sm115/2.png",
       "large": "https://images.pokemontcg.io/sm115/2_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.13,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.33,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.1,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.28,
+        "reverseHoloAvg7": 0.37,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -154,6 +256,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -169,12 +289,45 @@
       "small": "https://images.pokemontcg.io/sm115/3.png",
       "large": "https://images.pokemontcg.io/sm115/3_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.71,
+          "high": 4.95,
+          "market": 0.68,
+          "directLow": 0.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.48,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.5,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.29,
+        "avg30": 0.17,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.51,
+        "reverseHoloAvg30": 0.61
       }
     }
   },
@@ -223,6 +376,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "4",
     "artist": "OOYAMA",
     "rarity": "Common",
@@ -238,12 +409,45 @@
       "small": "https://images.pokemontcg.io/sm115/4.png",
       "large": "https://images.pokemontcg.io/sm115/4_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.01
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -292,6 +496,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Hasuno",
     "rarity": "Uncommon",
@@ -307,12 +529,45 @@
       "small": "https://images.pokemontcg.io/sm115/5.png",
       "large": "https://images.pokemontcg.io/sm115/5_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.14,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.07
+        },
+        "reverseHolofoil": {
+          "low": 0.18,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.3,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.07,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -366,6 +621,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "6",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -380,12 +653,38 @@
       "small": "https://images.pokemontcg.io/sm115/6.png",
       "large": "https://images.pokemontcg.io/sm115/6_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.65,
+          "mid": 1.37,
+          "high": 6,
+          "market": 1.05,
+          "directLow": 0.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.26,
+        "lowPrice": 0.45,
+        "trendPrice": 0.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.21,
+        "lowPriceExPlus": 0.45,
+        "avg1": 0.9,
+        "avg7": 1.03,
+        "avg30": 1.24,
+        "reverseHoloAvg1": 1.32,
+        "reverseHoloAvg7": 1.17,
+        "reverseHoloAvg30": 1.29
       }
     }
   },
@@ -434,6 +733,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Megumi Mizutani",
     "rarity": "Common",
@@ -449,12 +766,45 @@
       "small": "https://images.pokemontcg.io/sm115/7.png",
       "large": "https://images.pokemontcg.io/sm115/7_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.21,
+          "mid": 0.7,
+          "high": 89,
+          "market": 0.7,
+          "directLow": 0.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.57,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.56,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.13,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.43,
+        "reverseHoloAvg7": 0.52,
+        "reverseHoloAvg30": 0.59
       }
     }
   },
@@ -506,6 +856,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Shin Nagasawa",
     "rarity": "Uncommon",
@@ -521,12 +889,45 @@
       "small": "https://images.pokemontcg.io/sm115/8.png",
       "large": "https://images.pokemontcg.io/sm115/8_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.13,
+          "mid": 0.42,
+          "high": 50,
+          "market": 0.44,
+          "directLow": 0.3
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.47,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.53,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.43,
+        "avg7": 0.14,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.48,
+        "reverseHoloAvg30": 0.53
       }
     }
   },
@@ -584,6 +985,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "9",
     "artist": "aky CG Works",
     "rarity": "Rare Holo GX",
@@ -598,12 +1017,38 @@
       "small": "https://images.pokemontcg.io/sm115/9.png",
       "large": "https://images.pokemontcg.io/sm115/9_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 7.5,
+          "high": 35,
+          "market": 5.51,
+          "directLow": 6.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.95,
+        "lowPrice": 3.25,
+        "trendPrice": 3.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 8.92,
+        "lowPriceExPlus": 4,
+        "avg1": 6.53,
+        "avg7": 5.8,
+        "avg30": 9.46,
+        "reverseHoloAvg1": 8.6,
+        "reverseHoloAvg7": 9.36,
+        "reverseHoloAvg30": 8.86
       }
     }
   },
@@ -644,6 +1089,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Satoshi Shirai",
     "rarity": "Uncommon",
@@ -659,12 +1122,45 @@
       "small": "https://images.pokemontcg.io/sm115/10.png",
       "large": "https://images.pokemontcg.io/sm115/10_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.17
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.1,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.07,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -703,6 +1199,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "11",
     "artist": "nagimiso",
     "rarity": "Common",
@@ -718,12 +1232,45 @@
       "small": "https://images.pokemontcg.io/sm115/11.png",
       "large": "https://images.pokemontcg.io/sm115/11_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.08
+        },
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.38,
+          "high": 4.95,
+          "market": 0.38,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.47,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.47,
+        "reverseHoloAvg30": 0.49
       }
     }
   },
@@ -764,6 +1311,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Misa Tsutsui",
     "rarity": "Common",
@@ -779,12 +1344,45 @@
       "small": "https://images.pokemontcg.io/sm115/12.png",
       "large": "https://images.pokemontcg.io/sm115/12_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.07
+        },
+        "reverseHolofoil": {
+          "low": 0.16,
+          "mid": 0.31,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.37,
+        "reverseHoloLow": 0.06,
+        "reverseHoloTrend": 0.35,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.07,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.45,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -823,6 +1421,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -838,12 +1454,45 @@
       "small": "https://images.pokemontcg.io/sm115/13.png",
       "large": "https://images.pokemontcg.io/sm115/13_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.21
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.05,
+          "directLow": 0.04
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.24,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.08,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.22,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -900,6 +1549,24 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "14",
     "artist": "PLANETA Otani",
     "rarity": "Rare Holo GX",
@@ -914,12 +1581,38 @@
       "small": "https://images.pokemontcg.io/sm115/14.png",
       "large": "https://images.pokemontcg.io/sm115/14_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.89,
+          "mid": 1.56,
+          "high": 89,
+          "market": 1.39,
+          "directLow": 0.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.48,
+        "lowPrice": 0.5,
+        "trendPrice": 1.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.31,
+        "lowPriceExPlus": 0.95,
+        "avg1": 1.5,
+        "avg7": 1.57,
+        "avg30": 1.45,
+        "reverseHoloAvg1": 1.37,
+        "reverseHoloAvg7": 1.23,
+        "reverseHoloAvg30": 1.37
       }
     }
   },
@@ -958,6 +1651,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Shigenori Negishi",
     "rarity": "Common",
@@ -973,12 +1684,45 @@
       "small": "https://images.pokemontcg.io/sm115/15.png",
       "large": "https://images.pokemontcg.io/sm115/15_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.16,
+          "mid": 0.43,
+          "high": 4.95,
+          "market": 0.42,
+          "directLow": 0.25
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.19,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.42,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.43,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.08,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.15,
+        "reverseHoloAvg7": 0.36,
+        "reverseHoloAvg30": 0.41
       }
     }
   },
@@ -1036,6 +1780,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "16",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -1050,12 +1812,38 @@
       "small": "https://images.pokemontcg.io/sm115/16.png",
       "large": "https://images.pokemontcg.io/sm115/16_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.72,
+          "high": 20,
+          "market": 3.29,
+          "directLow": 3.84
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.73,
+        "lowPrice": 0.79,
+        "trendPrice": 3.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.9,
+        "lowPriceExPlus": 1,
+        "avg1": 6.95,
+        "avg7": 2.73,
+        "avg30": 2.65,
+        "reverseHoloAvg1": 2.16,
+        "reverseHoloAvg7": 1.92,
+        "reverseHoloAvg30": 2.1
       }
     }
   },
@@ -1094,6 +1882,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "17",
     "artist": "kodama",
     "rarity": "Rare",
@@ -1109,12 +1915,45 @@
       "small": "https://images.pokemontcg.io/sm115/17.png",
       "large": "https://images.pokemontcg.io/sm115/17_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.4,
+          "mid": 0.83,
+          "high": 4.95,
+          "market": 0.77,
+          "directLow": 0.65
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.02,
+        "trendPrice": 0.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.01,
+        "reverseHoloLow": 0.18,
+        "reverseHoloTrend": 1.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.26,
+        "avg30": 0.23,
+        "reverseHoloAvg1": 0.88,
+        "reverseHoloAvg7": 1.06,
+        "reverseHoloAvg30": 1.69
       }
     }
   },
@@ -1165,6 +2004,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo",
@@ -1180,12 +2037,45 @@
       "small": "https://images.pokemontcg.io/sm115/18.png",
       "large": "https://images.pokemontcg.io/sm115/18_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.2,
+          "mid": 0.69,
+          "high": 5,
+          "market": 0.68,
+          "directLow": 0.4
+        },
+        "reverseHolofoil": {
+          "low": 0.7,
+          "mid": 1.17,
+          "high": 4.99,
+          "market": 1.17,
+          "directLow": 0.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.75,
+        "lowPrice": 0.1,
+        "trendPrice": 0.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.79,
+        "reverseHoloLow": 0.4,
+        "reverseHoloTrend": 2.64,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.75,
+        "avg7": 0.67,
+        "avg30": 0.73,
+        "reverseHoloAvg1": 4.49,
+        "reverseHoloAvg7": 2.22,
+        "reverseHoloAvg30": 1.58
       }
     }
   },
@@ -1241,6 +2131,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Kagemaru Himeno",
     "rarity": "Common",
@@ -1256,12 +2164,45 @@
       "small": "https://images.pokemontcg.io/sm115/19.png",
       "large": "https://images.pokemontcg.io/sm115/19_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 1.15,
+          "high": 4,
+          "market": 1.19,
+          "directLow": 0.8
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.27,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.12,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 2.33,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.19,
+        "avg7": 0.98,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 2.33,
+        "reverseHoloAvg7": 2.09,
+        "reverseHoloAvg30": 2.34
       }
     }
   },
@@ -1321,6 +2262,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "20",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -1335,12 +2294,38 @@
       "small": "https://images.pokemontcg.io/sm115/20.png",
       "large": "https://images.pokemontcg.io/sm115/20_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.9,
+          "mid": 1.96,
+          "high": 26.42,
+          "market": 1.46,
+          "directLow": 2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.86,
+        "lowPrice": 0.5,
+        "trendPrice": 1.89,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.49,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.5,
+        "avg7": 1.46,
+        "avg30": 1.87,
+        "reverseHoloAvg1": 1.98,
+        "reverseHoloAvg7": 1.55,
+        "reverseHoloAvg30": 1.54
       }
     }
   },
@@ -1385,6 +2370,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "21",
     "artist": "SATOSHI NAKAI",
     "rarity": "Common",
@@ -1400,12 +2403,45 @@
       "small": "https://images.pokemontcg.io/sm115/21.png",
       "large": "https://images.pokemontcg.io/sm115/21_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.05,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.04,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.04,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg30": 0.21
       }
     }
   },
@@ -1459,6 +2495,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Anesaki Dynamic",
     "rarity": "Rare",
@@ -1474,12 +2528,45 @@
       "small": "https://images.pokemontcg.io/sm115/22.png",
       "large": "https://images.pokemontcg.io/sm115/22_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.46,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": 0.25
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.16,
+        "lowPrice": 0.02,
+        "trendPrice": 0.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.15,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.59,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.16,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.55,
+        "reverseHoloAvg30": 0.74
       }
     }
   },
@@ -1526,6 +2613,24 @@
         "value": "-20"
       }
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -1541,12 +2646,45 @@
       "small": "https://images.pokemontcg.io/sm115/23.png",
       "large": "https://images.pokemontcg.io/sm115/23_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.37,
+          "high": 4.95,
+          "market": 0.36,
+          "directLow": 0.28
+        },
+        "reverseHolofoil": {
+          "low": 0.25,
+          "mid": 0.8,
+          "high": 4.95,
+          "market": 0.78,
+          "directLow": 0.97
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.02,
+        "trendPrice": 0.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.8,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 1.02,
+        "lowPriceExPlus": 0.08,
+        "avg1": 0.1,
+        "avg7": 0.36,
+        "avg30": 0.38,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.77,
+        "reverseHoloAvg30": 0.92
       }
     }
   },
@@ -1601,6 +2739,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Shin Nagasawa",
     "rarity": "Rare Holo",
@@ -1616,12 +2772,45 @@
       "small": "https://images.pokemontcg.io/sm115/24.png",
       "large": "https://images.pokemontcg.io/sm115/24_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.41,
+          "high": 4.95,
+          "market": 0.41,
+          "directLow": 0.25
+        },
+        "reverseHolofoil": {
+          "low": 0.29,
+          "mid": 0.71,
+          "high": 3.97,
+          "market": 0.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.56,
+        "lowPrice": 0.06,
+        "trendPrice": 0.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.94,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 0.75,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.2,
+        "avg7": 0.55,
+        "avg30": 0.55,
+        "reverseHoloAvg1": 1.29,
+        "reverseHoloAvg7": 1.05,
+        "reverseHoloAvg30": 0.93
       }
     }
   },
@@ -1660,6 +2849,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "25",
     "artist": "MAHOU",
     "rarity": "Common",
@@ -1675,12 +2882,45 @@
       "small": "https://images.pokemontcg.io/sm115/25.png",
       "large": "https://images.pokemontcg.io/sm115/25_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.12,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.27,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.23,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -1720,6 +2960,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Masakazu Fukuda",
     "rarity": "Common",
@@ -1735,12 +2993,45 @@
       "small": "https://images.pokemontcg.io/sm115/26.png",
       "large": "https://images.pokemontcg.io/sm115/26_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.29,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.29,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.07,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.26,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -1787,6 +3078,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "27",
     "artist": "kirisAki",
     "rarity": "Rare",
@@ -1802,12 +3111,45 @@
       "small": "https://images.pokemontcg.io/sm115/27.png",
       "large": "https://images.pokemontcg.io/sm115/27_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.28,
+          "mid": 1,
+          "high": 1.99,
+          "market": 1.2,
+          "directLow": 0.35
+        },
+        "normal": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.24,
+          "directLow": 0.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.38,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.18,
+        "avg7": 0.21,
+        "avg30": 0.35,
+        "reverseHoloAvg1": 0.45,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.52
       }
     }
   },
@@ -1846,6 +3188,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Saya Tsuruta",
     "rarity": "Common",
@@ -1861,12 +3221,45 @@
       "small": "https://images.pokemontcg.io/sm115/28.png",
       "large": "https://images.pokemontcg.io/sm115/28_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.28
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.03
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.17,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.18,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.03,
+        "avg7": 0.04,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.17,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -1912,6 +3305,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare",
@@ -1927,12 +3338,45 @@
       "small": "https://images.pokemontcg.io/sm115/29.png",
       "large": "https://images.pokemontcg.io/sm115/29_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.15
+        },
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": 0.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.4,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.32,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.08,
+        "avg7": 0.33,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.31,
+        "reverseHoloAvg30": 0.43
       }
     }
   },
@@ -1978,6 +3422,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Kouki Saitou",
     "rarity": "Uncommon",
@@ -1993,12 +3455,45 @@
       "small": "https://images.pokemontcg.io/sm115/30.png",
       "large": "https://images.pokemontcg.io/sm115/30_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.32
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.1,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.31,
+        "reverseHoloAvg30": 0.29
       }
     }
   },
@@ -2052,6 +3547,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "31",
     "artist": "aky CG Works",
     "rarity": "Rare Holo GX",
@@ -2066,12 +3579,38 @@
       "small": "https://images.pokemontcg.io/sm115/31.png",
       "large": "https://images.pokemontcg.io/sm115/31_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.2,
+          "mid": 4,
+          "high": 15.99,
+          "market": 3.18,
+          "directLow": 3.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.98,
+        "lowPrice": 1.99,
+        "trendPrice": 4.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 3,
+        "avg7": 3.82,
+        "avg30": 3.99,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2108,6 +3647,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Atsuko Nishida",
     "rarity": "Rare",
@@ -2123,12 +3680,45 @@
       "small": "https://images.pokemontcg.io/sm115/32.png",
       "large": "https://images.pokemontcg.io/sm115/32_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.37,
+          "mid": 0.99,
+          "high": 4.95,
+          "market": 1.04,
+          "directLow": 0.65
+        },
+        "reverseHolofoil": {
+          "low": 0.42,
+          "mid": 1.51,
+          "high": 3.23,
+          "market": 1.41,
+          "directLow": 0.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.37,
+        "lowPrice": 0.49,
+        "trendPrice": 1.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.49,
+        "avg1": 1,
+        "avg7": 1.14,
+        "avg30": 1.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -2168,6 +3758,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Ken Sugimori",
     "rarity": "Common",
@@ -2183,12 +3791,45 @@
       "small": "https://images.pokemontcg.io/sm115/33.png",
       "large": "https://images.pokemontcg.io/sm115/33_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.17,
+          "directLow": 0.26
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.12,
+          "high": 4.95,
+          "market": 0.09,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.05,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.21,
+        "reverseHoloLow": 0.06,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.07,
+        "avg30": 0.05,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -2243,6 +3884,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -2258,12 +3917,45 @@
       "small": "https://images.pokemontcg.io/sm115/34.png",
       "large": "https://images.pokemontcg.io/sm115/34_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.19
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.14,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.05
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.05,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -2317,6 +4009,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -2332,12 +4042,45 @@
       "small": "https://images.pokemontcg.io/sm115/35.png",
       "large": "https://images.pokemontcg.io/sm115/35_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.22,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.42,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.37,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.25,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.19,
+        "reverseHoloAvg7": 0.45,
+        "reverseHoloAvg30": 0.42
       }
     }
   },
@@ -2409,6 +4152,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "36",
     "artist": "PLANETA Igarashi",
     "rarity": "Rare Holo GX",
@@ -2423,12 +4184,38 @@
       "small": "https://images.pokemontcg.io/sm115/36.png",
       "large": "https://images.pokemontcg.io/sm115/36_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.8,
+          "mid": 1.76,
+          "high": 89,
+          "market": 1.37,
+          "directLow": 1.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.57,
+        "lowPrice": 0.8,
+        "trendPrice": 1.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.14,
+        "lowPriceExPlus": 0.95,
+        "avg1": 2.45,
+        "avg7": 1.45,
+        "avg30": 1.6,
+        "reverseHoloAvg1": 1.3,
+        "reverseHoloAvg7": 1.09,
+        "reverseHoloAvg30": 1.25
       }
     }
   },
@@ -2469,6 +4256,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Hasuno",
     "rarity": "Common",
@@ -2484,12 +4289,45 @@
       "small": "https://images.pokemontcg.io/sm115/37.png",
       "large": "https://images.pokemontcg.io/sm115/37_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.17,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.49,
+          "directLow": 0.25
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.21,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.07,
+        "avg7": 0.07,
+        "avg30": 0.06,
+        "reverseHoloAvg1": 0.33,
+        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -2543,6 +4381,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Saya Tsuruta",
     "rarity": "Common",
@@ -2558,12 +4414,45 @@
       "small": "https://images.pokemontcg.io/sm115/38.png",
       "large": "https://images.pokemontcg.io/sm115/38_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.47,
+          "high": 4.95,
+          "market": 0.5,
+          "directLow": 0.28
+        },
+        "normal": {
+          "low": 0.03,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.3,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.31,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.11,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.32
       }
     }
   },
@@ -2618,6 +4507,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "39",
     "artist": "kirisAki",
     "rarity": "Common",
@@ -2633,12 +4540,45 @@
       "small": "https://images.pokemontcg.io/sm115/39.png",
       "large": "https://images.pokemontcg.io/sm115/39_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.43,
+          "directLow": 0.29
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.09,
+        "reverseHoloTrend": 0.31,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.11,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -2694,6 +4634,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "40",
     "artist": "sui",
     "rarity": "Rare",
@@ -2709,12 +4667,45 @@
       "small": "https://images.pokemontcg.io/sm115/40.png",
       "large": "https://images.pokemontcg.io/sm115/40_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.53,
+          "directLow": 0.35
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 5,
+          "market": 0.23,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.05,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.38,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.02,
+        "avg7": 0.19,
+        "avg30": 0.18,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.43,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -2769,6 +4760,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Mizue",
     "rarity": "Common",
@@ -2784,12 +4793,45 @@
       "small": "https://images.pokemontcg.io/sm115/41.png",
       "large": "https://images.pokemontcg.io/sm115/41_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.63,
+          "high": 4.95,
+          "market": 0.79,
+          "directLow": 0.5
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.18,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.33,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.08,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.35,
+        "reverseHoloAvg30": 0.35
       }
     }
   },
@@ -2850,6 +4892,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "42",
     "artist": "5ban Graphics",
     "rarity": "Rare Holo GX",
@@ -2864,12 +4924,38 @@
       "small": "https://images.pokemontcg.io/sm115/42.png",
       "large": "https://images.pokemontcg.io/sm115/42_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.4,
+          "mid": 2,
+          "high": 89,
+          "market": 1.87,
+          "directLow": 1.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.71,
+        "lowPrice": 0.5,
+        "trendPrice": 1.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.21,
+        "lowPriceExPlus": 0.75,
+        "avg1": 1.99,
+        "avg7": 1.8,
+        "avg30": 1.69,
+        "reverseHoloAvg1": 1.16,
+        "reverseHoloAvg7": 1.23,
+        "reverseHoloAvg30": 1.31
       }
     }
   },
@@ -2921,6 +5007,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare",
@@ -2936,12 +5040,45 @@
       "small": "https://images.pokemontcg.io/sm115/43.png",
       "large": "https://images.pokemontcg.io/sm115/43_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.47,
+          "directLow": 0.15
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 5.48,
+          "market": 0.23,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.34,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 0.33,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.16,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 0.31,
+        "reverseHoloAvg7": 0.38,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -3002,6 +5139,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo GX",
@@ -3018,12 +5173,38 @@
       "small": "https://images.pokemontcg.io/sm115/44.png",
       "large": "https://images.pokemontcg.io/sm115/44_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 32.12,
+          "mid": 39.99,
+          "high": 99.99,
+          "market": 34.95,
+          "directLow": 34.94
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 33.25,
+        "lowPrice": 12,
+        "trendPrice": 50.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.03,
+        "lowPriceExPlus": 20,
+        "avg1": 31.49,
+        "avg7": 43.73,
+        "avg30": 34.01,
+        "reverseHoloAvg1": 6.75,
+        "reverseHoloAvg7": 5.93,
+        "reverseHoloAvg30": 6.28
       }
     }
   },
@@ -3069,6 +5250,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Eri Yamaki",
     "rarity": "Uncommon",
@@ -3084,12 +5283,45 @@
       "small": "https://images.pokemontcg.io/sm115/45.png",
       "large": "https://images.pokemontcg.io/sm115/45_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.06
+        },
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.07,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.09,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -3131,6 +5363,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "46",
     "artist": "sowsow",
     "rarity": "Uncommon",
@@ -3146,12 +5396,45 @@
       "small": "https://images.pokemontcg.io/sm115/46.png",
       "large": "https://images.pokemontcg.io/sm115/46_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.15,
+          "mid": 0.31,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": 0.2
+        },
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.39,
+        "reverseHoloTrend": 0.45,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.26,
+        "avg7": 0.3,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.38,
+        "reverseHoloAvg30": 0.38
       }
     }
   },
@@ -3189,6 +5472,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "47",
     "artist": "You Iribi",
     "rarity": "Rare",
@@ -3204,12 +5505,45 @@
       "small": "https://images.pokemontcg.io/sm115/47.png",
       "large": "https://images.pokemontcg.io/sm115/47_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.14,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.32,
+          "directLow": 0.25
+        },
+        "normal": {
+          "low": 0.05,
+          "mid": 0.22,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.56,
+        "reverseHoloLow": 0.14,
+        "reverseHoloTrend": 0.6,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.17,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.42,
+        "reverseHoloAvg7": 0.51,
+        "reverseHoloAvg30": 0.44
       }
     }
   },
@@ -3265,6 +5599,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -3280,12 +5632,45 @@
       "small": "https://images.pokemontcg.io/sm115/48.png",
       "large": "https://images.pokemontcg.io/sm115/48_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.35,
+          "mid": 1,
+          "high": 3.49,
+          "market": 0.99,
+          "directLow": 0.75
+        },
+        "reverseHolofoil": {
+          "low": 0.85,
+          "mid": 1.38,
+          "high": 5.99,
+          "market": 1.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1,
+        "lowPrice": 0.2,
+        "trendPrice": 0.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.51,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 2.73,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.63,
+        "avg7": 0.58,
+        "avg30": 0.88,
+        "reverseHoloAvg1": 2.6,
+        "reverseHoloAvg7": 2.76,
+        "reverseHoloAvg30": 2.15
       }
     }
   },
@@ -3331,6 +5716,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Hitoshi Ariga",
     "rarity": "Common",
@@ -3346,12 +5749,45 @@
       "small": "https://images.pokemontcg.io/sm115/49.png",
       "large": "https://images.pokemontcg.io/sm115/49_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.19,
+          "directLow": 0.14
+        },
+        "reverseHolofoil": {
+          "low": 0.19,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.76,
+          "directLow": 0.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.55,
+        "lowPrice": 0.03,
+        "trendPrice": 0.48,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 9.5,
+        "reverseHoloTrend": 4,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.99,
+        "avg7": 0.53,
+        "avg30": 0.5,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 4,
+        "reverseHoloAvg30": 4
       }
     }
   },
@@ -3392,6 +5828,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Akira Komayama",
     "rarity": "Rare",
@@ -3407,12 +5861,45 @@
       "small": "https://images.pokemontcg.io/sm115/50.png",
       "large": "https://images.pokemontcg.io/sm115/50_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.65,
+          "mid": 0.95,
+          "high": 2,
+          "market": 1,
+          "directLow": null
+        },
+        "normal": {
+          "low": 0.18,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.56,
+          "directLow": 0.62
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.56,
+        "lowPrice": 0.15,
+        "trendPrice": 0.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 9,
+        "reverseHoloTrend": 0.02,
+        "lowPriceExPlus": 0.15,
+        "avg1": 1.99,
+        "avg7": 0.95,
+        "avg30": 0.6,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.97,
+        "reverseHoloAvg30": 0.97
       }
     }
   },
@@ -3427,6 +5914,24 @@
       "Look at the top 7 cards of your deck. You may reveal up to 2 Trainer cards you find there and put them into your hand. Shuffle the other cards back into your deck.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Naoki Saito",
     "rarity": "Rare",
@@ -3438,12 +5943,45 @@
       "small": "https://images.pokemontcg.io/sm115/51.png",
       "large": "https://images.pokemontcg.io/sm115/51_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.04,
+          "mid": 0.24,
+          "high": 4.95,
+          "market": 0.16,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.2,
+        "lowPrice": 0.02,
+        "trendPrice": 0.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.36,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.14,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -3459,6 +5997,24 @@
       "Draw 2 cards for each Fire Pokémon you have in play.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Ken Sugimori",
     "rarity": "Rare",
@@ -3470,12 +6026,45 @@
       "small": "https://images.pokemontcg.io/sm115/52.png",
       "large": "https://images.pokemontcg.io/sm115/52_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.15
+        },
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.16,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.29,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.18,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.32,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -3490,6 +6079,24 @@
       "Shuffle 6 in any combination of Pokémon and basic Energy cards from your discard pile into your deck.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -3501,12 +6108,45 @@
       "small": "https://images.pokemontcg.io/sm115/53.png",
       "large": "https://images.pokemontcg.io/sm115/53_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.15
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.12,
+        "lowPrice": 0.02,
+        "trendPrice": 0.17,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.37,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.09,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.39,
+        "reverseHoloAvg30": 0.33
       }
     }
   },
@@ -3521,6 +6161,24 @@
       "Onix-GX (both yours and your opponent's) take 40 less damage from the opponent's attacks (after applying Weakness and Resistance).",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "54",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -3532,12 +6190,45 @@
       "small": "https://images.pokemontcg.io/sm115/54.png",
       "large": "https://images.pokemontcg.io/sm115/54_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.08,
+          "directLow": 0.04
+        },
+        "reverseHolofoil": {
+          "low": 0.09,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.3,
+        "reverseHoloLow": 0.08,
+        "reverseHoloTrend": 0.24,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.06,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.3,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -3552,6 +6243,24 @@
       "Attach an Energy card from your hand to 1 of your Geodude, Graveler, Golem, Onix-GX, Cubone, Rhyhorn, Rhydon, or Sudowoodo.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "55",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -3563,12 +6272,45 @@
       "small": "https://images.pokemontcg.io/sm115/55.png",
       "large": "https://images.pokemontcg.io/sm115/55_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.2,
+          "mid": 0.48,
+          "high": 4.95,
+          "market": 0.45,
+          "directLow": 0.3
+        },
+        "holofoil": {
+          "low": 0.08,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.23,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.03,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.65,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.66,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.48,
+        "avg7": 0.32,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.7,
+        "reverseHoloAvg30": 0.6
       }
     }
   },
@@ -3584,6 +6326,24 @@
       "Draw a card for each of your opponent's Pokémon in play.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare",
@@ -3595,12 +6355,45 @@
       "small": "https://images.pokemontcg.io/sm115/56.png",
       "large": "https://images.pokemontcg.io/sm115/56_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.15
+        },
+        "reverseHolofoil": {
+          "low": 0.08,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.14,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.31,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.16,
+        "avg30": 0.15,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 0.25,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -3615,6 +6408,24 @@
       "Discard up to 2 of your Benched Pokémon that have no damage counters on them and all cards attached to them.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -3626,12 +6437,45 @@
       "small": "https://images.pokemontcg.io/sm115/57.png",
       "large": "https://images.pokemontcg.io/sm115/57_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.08
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.21,
+          "directLow": 0.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.24,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.29,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.27,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -3646,6 +6490,24 @@
       "Each player discards 2 cards from their hand. Your opponent discards first.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Megumi Mizutani",
     "rarity": "Rare Holo",
@@ -3657,12 +6519,45 @@
       "small": "https://images.pokemontcg.io/sm115/58.png",
       "large": "https://images.pokemontcg.io/sm115/58_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.29,
+          "mid": 1.11,
+          "high": 89,
+          "market": 1.12,
+          "directLow": 0.74
+        },
+        "reverseHolofoil": {
+          "low": 1,
+          "mid": 1.61,
+          "high": 10,
+          "market": 1.57,
+          "directLow": 1.55
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.55,
+        "lowPrice": 0.15,
+        "trendPrice": 0.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.5,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 1.67,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.2,
+        "avg7": 0.42,
+        "avg30": 0.45,
+        "reverseHoloAvg1": 0.3,
+        "reverseHoloAvg7": 1.55,
+        "reverseHoloAvg30": 1.75
       }
     }
   },
@@ -3677,6 +6572,24 @@
       "Your opponent's Active Pokémon is now Confused and Poisoned.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -3688,12 +6601,45 @@
       "small": "https://images.pokemontcg.io/sm115/59.png",
       "large": "https://images.pokemontcg.io/sm115/59_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.27,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": 0.15
+        },
+        "normal": {
+          "low": 0.01,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.15,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.26,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.14,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.27,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -3709,6 +6655,24 @@
       "During this turn, you can play 3 Supporter cards (including this card).",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -3720,12 +6684,45 @@
       "small": "https://images.pokemontcg.io/sm115/60.png",
       "large": "https://images.pokemontcg.io/sm115/60_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.07,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.37,
+          "directLow": 0.25
+        },
+        "normal": {
+          "low": 0.04,
+          "mid": 0.2,
+          "high": 4.95,
+          "market": 0.14,
+          "directLow": 0.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.11,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.05,
+        "reverseHoloTrend": 0.13,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.09,
+        "avg30": 0.11,
+        "reverseHoloAvg1": 0.04,
+        "reverseHoloAvg7": 0.14,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -3740,6 +6737,24 @@
       "The attacks of Starmie-GX (both yours and your opponent's) do 40 more damage to the opponent's Active Pokémon (before applying Weakness and Resistance).",
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "61",
     "artist": "5ban Graphics",
     "rarity": "Uncommon",
@@ -3751,12 +6766,45 @@
       "small": "https://images.pokemontcg.io/sm115/61.png",
       "large": "https://images.pokemontcg.io/sm115/61_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.11,
+          "directLow": 0.05
+        },
+        "reverseHolofoil": {
+          "low": 0.1,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.08,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.23,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.2,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.07,
+        "avg30": 0.08,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.25
       }
     }
   },
@@ -3771,6 +6819,24 @@
       "Discard a card from your hand. If you do, look at the top 8 cards of your deck and put 1 of them into your hand. Shuffle the other cards back into your deck.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Megumi Mizutani",
     "rarity": "Uncommon",
@@ -3782,12 +6848,45 @@
       "small": "https://images.pokemontcg.io/sm115/62.png",
       "large": "https://images.pokemontcg.io/sm115/62_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.5,
+          "high": 1.99,
+          "market": 0.43,
+          "directLow": 0.2
+        },
+        "reverseHolofoil": {
+          "low": 0.94,
+          "mid": 1.64,
+          "high": 2.99,
+          "market": 1.64,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.37,
+        "reverseHoloLow": 0.06,
+        "reverseHoloTrend": 0.4,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.07,
+        "avg30": 0.12,
+        "reverseHoloAvg1": 0.48,
+        "reverseHoloAvg7": 0.32,
+        "reverseHoloAvg30": 0.32
       }
     }
   },
@@ -3802,6 +6901,24 @@
       "Move any number of Water Energy from your Pokémon to your Psyduck, Horsea, Staryu, Starmie-GX, Magikarp, Gyarados, or Lapras in any way you like.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "63",
     "artist": "TOKIYA",
     "rarity": "Rare Holo",
@@ -3813,12 +6930,45 @@
       "small": "https://images.pokemontcg.io/sm115/63.png",
       "large": "https://images.pokemontcg.io/sm115/63_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 0.5,
+          "mid": 1.66,
+          "high": 4.99,
+          "market": 1.82,
+          "directLow": 1.64
+        },
+        "holofoil": {
+          "low": 0.15,
+          "mid": 0.86,
+          "high": 4.95,
+          "market": 0.71,
+          "directLow": 1.08
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.4,
+        "lowPrice": 0.05,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.62,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.71,
+        "lowPriceExPlus": 0.06,
+        "avg1": 0.02,
+        "avg7": 0.49,
+        "avg30": 0.39,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.64,
+        "reverseHoloAvg30": 0.63
       }
     }
   },
@@ -3833,6 +6983,24 @@
       "Heal 60 damage and remove all Special Conditions from 1 of your Pokémon.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "64",
     "artist": "TOKIYA",
     "rarity": "Uncommon",
@@ -3844,12 +7012,45 @@
       "small": "https://images.pokemontcg.io/sm115/64.png",
       "large": "https://images.pokemontcg.io/sm115/64_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.02,
+          "mid": 0.17,
+          "high": 4.95,
+          "market": 0.12,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.16,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.39,
+          "directLow": 0.36
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.28,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.26,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.29,
+        "avg7": 0.14,
+        "avg30": 0.1,
+        "reverseHoloAvg1": 0.25,
+        "reverseHoloAvg7": 0.22,
+        "reverseHoloAvg30": 0.31
       }
     }
   },
@@ -3864,6 +7065,24 @@
       "Your opponent reveals their hand. You may choose a Supporter card you find there and use the effect of that card as the effect of this card.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Hitoshi Ariga",
     "rarity": "Uncommon",
@@ -3875,12 +7094,45 @@
       "small": "https://images.pokemontcg.io/sm115/65.png",
       "large": "https://images.pokemontcg.io/sm115/65_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.15,
+          "high": 4.95,
+          "market": 0.13,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 0.14,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.25,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.23,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.2,
+        "avg7": 0.06,
+        "avg30": 0.07,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.24
       }
     }
   },
@@ -3941,6 +7193,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "66",
     "artist": "5ban Graphics",
     "rarity": "Rare Ultra",
@@ -3957,12 +7227,38 @@
       "small": "https://images.pokemontcg.io/sm115/66.png",
       "large": "https://images.pokemontcg.io/sm115/66_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 34.79,
+          "mid": 42,
+          "high": 94.99,
+          "market": 41.96,
+          "directLow": 40.71
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.38,
+        "lowPrice": 5.99,
+        "trendPrice": 35.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.4,
+        "lowPriceExPlus": 15.95,
+        "avg1": 21.89,
+        "avg7": 23.35,
+        "avg30": 22.35,
+        "reverseHoloAvg1": 7.29,
+        "reverseHoloAvg7": 7.41,
+        "reverseHoloAvg30": 8
       }
     }
   },
@@ -3977,6 +7273,24 @@
       "Discard up to 2 of your Benched Pokémon that have no damage counters on them and all cards attached to them.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "67",
     "artist": "TOKIYA",
     "rarity": "Rare Ultra",
@@ -3988,12 +7302,38 @@
       "small": "https://images.pokemontcg.io/sm115/67.png",
       "large": "https://images.pokemontcg.io/sm115/67_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.55,
+          "mid": 5.41,
+          "high": 35,
+          "market": 4.42,
+          "directLow": 3.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.65,
+        "lowPrice": 1,
+        "trendPrice": 7.21,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.01,
+        "lowPriceExPlus": 5,
+        "avg1": 7.81,
+        "avg7": 6.51,
+        "avg30": 7.55,
+        "reverseHoloAvg1": 2.55,
+        "reverseHoloAvg7": 2.31,
+        "reverseHoloAvg30": 2.51
       }
     }
   },
@@ -4008,6 +7348,24 @@
       "Each player discards 2 cards from their hand. Your opponent discards first.",
       "You may play only 1 Supporter card during your turn (before your attack)."
     ],
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "68",
     "artist": "Megumi Mizutani",
     "rarity": "Rare Ultra",
@@ -4019,12 +7377,38 @@
       "small": "https://images.pokemontcg.io/sm115/68.png",
       "large": "https://images.pokemontcg.io/sm115/68_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 46.24,
+          "mid": 55.54,
+          "high": 200,
+          "market": 48.22,
+          "directLow": 47.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 43.71,
+        "lowPrice": 24,
+        "trendPrice": 38.96,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.5,
+        "lowPriceExPlus": 32.99,
+        "avg1": 36.33,
+        "avg7": 41.43,
+        "avg30": 44.13,
+        "reverseHoloAvg1": 5.85,
+        "reverseHoloAvg7": 5.69,
+        "reverseHoloAvg30": 7.13
       }
     }
   },
@@ -4085,6 +7469,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "sm115",
+      "name": "Hidden Fates",
+      "series": "Sun & Moon",
+      "printedTotal": 68,
+      "total": 69,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "HIF",
+      "releaseDate": "2019/08/23",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/sm115/symbol.png",
+        "logo": "https://images.pokemontcg.io/sm115/logo.png"
+      }
+    },
     "number": "69",
     "artist": "5ban Graphics",
     "rarity": "Rare Rainbow",
@@ -4101,12 +7503,38 @@
       "small": "https://images.pokemontcg.io/sm115/69.png",
       "large": "https://images.pokemontcg.io/sm115/69_hires.png"
     },
-    "set": {
-      "id": "sm115",
-      "releaseDate": "2019/08/23",
-      "name": "Hidden Fates",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/sm115/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/sm115-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 31.54,
+          "mid": 50,
+          "high": 179,
+          "market": 46.13,
+          "directLow": 39
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/sm115-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 20.14,
+        "lowPrice": 5.49,
+        "trendPrice": 21.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.2,
+        "lowPriceExPlus": 11,
+        "avg1": 20,
+        "avg7": 15.79,
+        "avg30": 19.78,
+        "reverseHoloAvg1": 13.94,
+        "reverseHoloAvg7": 14.53,
+        "reverseHoloAvg30": 14.69
       }
     }
   }

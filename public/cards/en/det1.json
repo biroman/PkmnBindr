@@ -34,6 +34,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "1",
     "artist": "MPC Film",
     "rarity": "Common",
@@ -49,12 +67,38 @@
       "small": "https://images.pokemontcg.io/det1/1.png",
       "large": "https://images.pokemontcg.io/det1/1_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.12,
+          "mid": 0.49,
+          "high": 5.03,
+          "market": 0.4,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.82,
+        "lowPrice": 0.02,
+        "trendPrice": 0.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.63,
+        "reverseHoloLow": 0.07,
+        "reverseHoloTrend": 0.41,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.33,
+        "avg7": 0.35,
+        "avg30": 0.71,
+        "reverseHoloAvg1": 0.4,
+        "reverseHoloAvg7": 0.54,
+        "reverseHoloAvg30": 0.52
       }
     }
   },
@@ -102,6 +146,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Framestore",
     "rarity": "Rare",
@@ -117,12 +179,38 @@
       "small": "https://images.pokemontcg.io/det1/2.png",
       "large": "https://images.pokemontcg.io/det1/2_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.38,
+          "mid": 0.65,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": 0.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.56,
+        "lowPrice": 0.1,
+        "trendPrice": 1.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.65,
+        "reverseHoloTrend": 1.67,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1.75,
+        "avg7": 1.33,
+        "avg30": 1.54,
+        "reverseHoloAvg1": 1.45,
+        "reverseHoloAvg7": 1.6,
+        "reverseHoloAvg30": 1.97
       }
     }
   },
@@ -161,6 +249,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "3",
     "artist": "MPC Film",
     "rarity": "Common",
@@ -176,12 +282,38 @@
       "small": "https://images.pokemontcg.io/det1/3.png",
       "large": "https://images.pokemontcg.io/det1/3_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.08,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.2,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.32,
+        "reverseHoloLow": 0.04,
+        "reverseHoloTrend": 0.29,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.1,
+        "avg7": 0.27,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.29,
+        "reverseHoloAvg30": 0.26
       }
     }
   },
@@ -220,6 +352,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "4",
     "artist": "MPC Film",
     "rarity": "Common",
@@ -235,12 +385,38 @@
       "small": "https://images.pokemontcg.io/det1/4.png",
       "large": "https://images.pokemontcg.io/det1/4_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.1,
+          "mid": 0.32,
+          "high": 65,
+          "market": 0.25,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.47,
+        "lowPrice": 0.02,
+        "trendPrice": 0.4,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.27,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.38,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.6,
+        "avg7": 0.58,
+        "avg30": 0.47,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.53,
+        "reverseHoloAvg30": 0.42
       }
     }
   },
@@ -293,6 +469,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Framestore",
     "rarity": "Rare Ultra",
@@ -308,12 +502,38 @@
       "small": "https://images.pokemontcg.io/det1/5.png",
       "large": "https://images.pokemontcg.io/det1/5_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.99,
+          "mid": 7.58,
+          "high": 19.95,
+          "market": 7.3,
+          "directLow": 6.93
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.86,
+        "lowPrice": 3,
+        "trendPrice": 11.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.65,
+        "lowPriceExPlus": 5,
+        "avg1": 12.5,
+        "avg7": 11.19,
+        "avg30": 10.48,
+        "reverseHoloAvg1": 17.45,
+        "reverseHoloAvg7": 18.32,
+        "reverseHoloAvg30": 18.7
       }
     }
   },
@@ -361,6 +581,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "6",
     "artist": "MPC Film",
     "rarity": "Rare",
@@ -376,12 +614,38 @@
       "small": "https://images.pokemontcg.io/det1/6.png",
       "large": "https://images.pokemontcg.io/det1/6_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.74,
+          "high": 7,
+          "market": 1.76,
+          "directLow": 1.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.26,
+        "lowPrice": 0.9,
+        "trendPrice": 2.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.5,
+        "reverseHoloLow": 2.99,
+        "reverseHoloTrend": 6.5,
+        "lowPriceExPlus": 0.9,
+        "avg1": 2.34,
+        "avg7": 2.43,
+        "avg30": 2.68,
+        "reverseHoloAvg1": 8.5,
+        "reverseHoloAvg7": 4.63,
+        "reverseHoloAvg30": 5.22
       }
     }
   },
@@ -422,6 +686,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Framestore",
     "rarity": "Common",
@@ -437,12 +719,38 @@
       "small": "https://images.pokemontcg.io/det1/7.png",
       "large": "https://images.pokemontcg.io/det1/7_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.07,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.27,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.39,
+        "lowPrice": 0.02,
+        "trendPrice": 0.33,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.02,
+        "reverseHoloLow": 0.1,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.19,
+        "avg7": 0.41,
+        "avg30": 0.37,
+        "reverseHoloAvg1": 0.02,
+        "reverseHoloAvg7": 0.24,
+        "reverseHoloAvg30": 0.34
       }
     }
   },
@@ -481,6 +789,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Framestore",
     "rarity": "Common",
@@ -496,12 +822,38 @@
       "small": "https://images.pokemontcg.io/det1/8.png",
       "large": "https://images.pokemontcg.io/det1/8_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.06,
+          "mid": 0.33,
+          "high": 40,
+          "market": 0.34,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.27,
+        "lowPrice": 0.02,
+        "trendPrice": 0.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.13,
+        "reverseHoloLow": 0.03,
+        "reverseHoloTrend": 0.39,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.17,
+        "avg7": 0.28,
+        "avg30": 0.27,
+        "reverseHoloAvg1": 0.05,
+        "reverseHoloAvg7": 0.26,
+        "reverseHoloAvg30": 0.23
       }
     }
   },
@@ -546,6 +898,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "9",
     "artist": "MPC Film",
     "rarity": "Rare Ultra",
@@ -561,12 +931,38 @@
       "small": "https://images.pokemontcg.io/det1/9.png",
       "large": "https://images.pokemontcg.io/det1/9_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.64,
+          "high": 8,
+          "market": 4.07,
+          "directLow": 1.85
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.96,
+        "lowPrice": 2.99,
+        "trendPrice": 6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.96,
+        "lowPriceExPlus": 3,
+        "avg1": 5.25,
+        "avg7": 5.64,
+        "avg30": 5.79,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 8.61,
+        "reverseHoloAvg30": 7.15
       }
     }
   },
@@ -623,6 +1019,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "10",
     "artist": "MPC Film",
     "rarity": "Rare",
@@ -638,12 +1052,38 @@
       "small": "https://images.pokemontcg.io/det1/10.png",
       "large": "https://images.pokemontcg.io/det1/10_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.98,
+          "mid": 4.4,
+          "high": 9.99,
+          "market": 4.55,
+          "directLow": 1.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.58,
+        "lowPrice": 0.99,
+        "trendPrice": 7.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 10.39,
+        "lowPriceExPlus": 4.15,
+        "avg1": 6.09,
+        "avg7": 6.05,
+        "avg30": 7.66,
+        "reverseHoloAvg1": 13,
+        "reverseHoloAvg7": 11.07,
+        "reverseHoloAvg30": 8.25
       }
     }
   },
@@ -687,6 +1127,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "11",
     "artist": "MPC Film",
     "rarity": "Rare",
@@ -702,12 +1160,38 @@
       "small": "https://images.pokemontcg.io/det1/11.png",
       "large": "https://images.pokemontcg.io/det1/11_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.4,
+          "mid": 1.07,
+          "high": 4.99,
+          "market": 1.01,
+          "directLow": 1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.82,
+        "lowPrice": 0.19,
+        "trendPrice": 2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 1.81,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.95,
+        "avg7": 2.35,
+        "avg30": 2.09,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 1.95,
+        "reverseHoloAvg30": 2.84
       }
     }
   },
@@ -756,6 +1240,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "12",
     "artist": "MPC Film",
     "rarity": "Rare Ultra",
@@ -771,12 +1273,38 @@
       "small": "https://images.pokemontcg.io/det1/12.png",
       "large": "https://images.pokemontcg.io/det1/12_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.5,
+          "mid": 4.35,
+          "high": 9.95,
+          "market": 4.36,
+          "directLow": 3.55
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.1,
+        "lowPrice": 2.2,
+        "trendPrice": 5.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 10.41,
+        "lowPriceExPlus": 3.86,
+        "avg1": 5,
+        "avg7": 5.59,
+        "avg30": 6.1,
+        "reverseHoloAvg1": 6.63,
+        "reverseHoloAvg7": 9.97,
+        "reverseHoloAvg30": 9.86
       }
     }
   },
@@ -824,6 +1352,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "13",
     "artist": "MPC Film",
     "rarity": "Rare",
@@ -839,12 +1385,38 @@
       "small": "https://images.pokemontcg.io/det1/13.png",
       "large": "https://images.pokemontcg.io/det1/13_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.3,
+          "mid": 1.02,
+          "high": 3.95,
+          "market": 0.97,
+          "directLow": 0.45
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.45,
+        "lowPrice": 0.3,
+        "trendPrice": 1.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.2,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 1.77,
+        "lowPriceExPlus": 0.3,
+        "avg1": 1.64,
+        "avg7": 1.25,
+        "avg30": 1.41,
+        "reverseHoloAvg1": 0.6,
+        "reverseHoloAvg7": 1.89,
+        "reverseHoloAvg30": 1.99
       }
     }
   },
@@ -889,6 +1461,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Framestore",
     "rarity": "Common",
@@ -904,12 +1494,38 @@
       "small": "https://images.pokemontcg.io/det1/14.png",
       "large": "https://images.pokemontcg.io/det1/14_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.05,
+          "mid": 0.29,
+          "high": 35,
+          "market": 0.23,
+          "directLow": 0.2
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.5,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.31,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.27,
+        "avg7": 0.22,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.28
       }
     }
   },
@@ -956,6 +1572,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Framestore",
     "rarity": "Common",
@@ -971,12 +1605,38 @@
       "small": "https://images.pokemontcg.io/det1/15.png",
       "large": "https://images.pokemontcg.io/det1/15_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 30,
+          "market": 0.25,
+          "directLow": 0.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.26,
+        "lowPrice": 0.02,
+        "trendPrice": 0.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.31,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.28,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.31,
+        "avg30": 0.25,
+        "reverseHoloAvg1": 0.5,
+        "reverseHoloAvg7": 0.28,
+        "reverseHoloAvg30": 0.22
       }
     }
   },
@@ -1018,6 +1678,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "16",
     "artist": "MPC Film",
     "rarity": "Common",
@@ -1033,12 +1711,38 @@
       "small": "https://images.pokemontcg.io/det1/16.png",
       "large": "https://images.pokemontcg.io/det1/16_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.03,
+          "mid": 0.25,
+          "high": 30,
+          "market": 0.22,
+          "directLow": 0.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.21,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.35,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.31,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.18,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 0.2,
+        "reverseHoloAvg7": 0.33,
+        "reverseHoloAvg30": 0.27
       }
     }
   },
@@ -1074,6 +1778,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "17",
     "artist": "MPC Film",
     "rarity": "Rare Ultra",
@@ -1089,12 +1811,38 @@
       "small": "https://images.pokemontcg.io/det1/17.png",
       "large": "https://images.pokemontcg.io/det1/17_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.45,
+          "high": 7.45,
+          "market": 3.48,
+          "directLow": 2.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.75,
+        "lowPrice": 1,
+        "trendPrice": 4.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.08,
+        "lowPriceExPlus": 2,
+        "avg1": 4.99,
+        "avg7": 4.53,
+        "avg30": 5.26,
+        "reverseHoloAvg1": 6.73,
+        "reverseHoloAvg7": 5.59,
+        "reverseHoloAvg30": 6.54
       }
     }
   },
@@ -1137,6 +1885,24 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "det1",
+      "name": "Detective Pikachu",
+      "series": "Sun & Moon",
+      "printedTotal": 18,
+      "total": 18,
+      "legalities": {
+        "unlimited": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "DET",
+      "releaseDate": "2019/04/05",
+      "updatedAt": "2021/09/01 05:37:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+        "logo": "https://images.pokemontcg.io/det1/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Framestore",
     "rarity": "Rare",
@@ -1152,12 +1918,38 @@
       "small": "https://images.pokemontcg.io/det1/18.png",
       "large": "https://images.pokemontcg.io/det1/18_hires.png"
     },
-    "set": {
-      "id": "det1",
-      "releaseDate": "2019/04/05",
-      "name": "Detective Pikachu",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/det1/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/det1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.35,
+          "mid": 0.86,
+          "high": 3.95,
+          "market": 0.86,
+          "directLow": 0.59
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/det1-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.71,
+        "lowPrice": 0.2,
+        "trendPrice": 1.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3,
+        "reverseHoloLow": 4,
+        "reverseHoloTrend": 1.93,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.74,
+        "avg7": 1.49,
+        "avg30": 1.67,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.18,
+        "reverseHoloAvg30": 2.09
       }
     }
   }

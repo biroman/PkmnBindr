@@ -42,6 +42,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG01",
     "artist": "You Iribi",
     "rarity": "Trainer Gallery Rare Holo",
@@ -58,12 +77,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG01.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG01_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8,
+          "mid": 10.99,
+          "high": 999.99,
+          "market": 9.58,
+          "directLow": 8.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.26,
+        "lowPrice": 4.5,
+        "trendPrice": 8.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 7.99,
+        "avg7": 8.09,
+        "avg30": 8.24,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -109,6 +154,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG02",
     "artist": "Jiro Sasumo",
     "rarity": "Trainer Gallery Rare Holo",
@@ -125,12 +189,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG02.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG02_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.99,
+          "mid": 11.89,
+          "high": 89,
+          "market": 10.06,
+          "directLow": 9.91
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.01,
+        "lowPrice": 5,
+        "trendPrice": 9.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 9.11,
+        "avg7": 9.85,
+        "avg30": 10.01,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -178,6 +268,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG03",
     "artist": "Shinya Komatsu",
     "rarity": "Trainer Gallery Rare Holo",
@@ -187,6 +296,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -194,12 +304,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG03.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG03_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 2,
+          "high": 999.99,
+          "market": 1.66,
+          "directLow": 2.01
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.57,
+        "lowPrice": 0.5,
+        "trendPrice": 1.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.33,
+        "avg7": 1.51,
+        "avg30": 1.57,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -245,6 +381,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG04",
     "artist": "DOM",
     "rarity": "Trainer Gallery Rare Holo",
@@ -261,12 +416,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG04.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG04_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6,
+          "mid": 8.93,
+          "high": 79.99,
+          "market": 6.75,
+          "directLow": 6.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.97,
+        "lowPrice": 3.9,
+        "trendPrice": 6.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.5,
+        "avg1": 7.36,
+        "avg7": 7.05,
+        "avg30": 7.01,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -316,6 +497,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG05",
     "artist": "AKIRA EGAWA",
     "rarity": "Trainer Gallery Rare Holo",
@@ -332,12 +532,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG05.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG05_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.99,
+          "mid": 11.52,
+          "high": 100,
+          "market": 10.07,
+          "directLow": 8.86
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.69,
+        "lowPrice": 5,
+        "trendPrice": 9.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7.9,
+        "avg1": 8.85,
+        "avg7": 9.51,
+        "avg30": 9.84,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -390,6 +616,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG06",
     "artist": "Megumi Higuchi",
     "rarity": "Trainer Gallery Rare Holo",
@@ -406,12 +651,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG06.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG06_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.99,
+          "high": 999.99,
+          "market": 1.6,
+          "directLow": 1.5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.56,
+        "lowPrice": 0.7,
+        "trendPrice": 1.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.7,
+        "avg1": 1.43,
+        "avg7": 1.6,
+        "avg30": 1.56,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -447,6 +718,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG07",
     "artist": "kurumitsu",
     "rarity": "Trainer Gallery Rare Holo",
@@ -456,6 +746,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -463,12 +754,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG07.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG07_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.84,
+          "high": 999.99,
+          "market": 3.51,
+          "directLow": 3.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.34,
+        "lowPrice": 0.9,
+        "trendPrice": 2.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.9,
+        "avg1": 2.27,
+        "avg7": 2.29,
+        "avg30": 2.33,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -513,6 +830,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG08",
     "artist": "OKACHEKE",
     "rarity": "Trainer Gallery Rare Holo",
@@ -522,6 +858,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -529,12 +866,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG08.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG08_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 1.97,
+          "high": 999.99,
+          "market": 1.55,
+          "directLow": 1.52
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.48,
+        "lowPrice": 0.5,
+        "trendPrice": 1.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.42,
+        "avg7": 1.65,
+        "avg30": 1.5,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -580,6 +943,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG09",
     "artist": "Shiburingaru",
     "rarity": "Trainer Gallery Rare Holo",
@@ -596,12 +978,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG09.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG09_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.98,
+          "mid": 1.62,
+          "high": 999.99,
+          "market": 1.32,
+          "directLow": 1.11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.38,
+        "lowPrice": 0.49,
+        "trendPrice": 1.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.29,
+        "avg7": 1.39,
+        "avg30": 1.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -648,6 +1056,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG10",
     "artist": "NC Empire",
     "rarity": "Trainer Gallery Rare Holo",
@@ -657,6 +1084,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -664,12 +1092,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG10.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG10_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.06,
+          "mid": 2.19,
+          "high": 999.99,
+          "market": 1.65,
+          "directLow": 1.68
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.68,
+        "lowPrice": 0.9,
+        "trendPrice": 1.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.68,
+        "avg7": 1.79,
+        "avg30": 1.68,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -725,6 +1179,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG11",
     "artist": "Souichirou Gunjima",
     "rarity": "Trainer Gallery Rare Holo",
@@ -734,6 +1207,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -741,12 +1215,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG11.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG11_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.5,
+          "mid": 9.36,
+          "high": 999.99,
+          "market": 7.42,
+          "directLow": 7.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.09,
+        "lowPrice": 3.4,
+        "trendPrice": 7.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.9,
+        "avg1": 6.87,
+        "avg7": 7.15,
+        "avg30": 7.13,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -792,6 +1292,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG12",
     "artist": "Akira Komayama",
     "rarity": "Trainer Gallery Rare Holo",
@@ -808,12 +1327,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG12.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG12_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.98,
+          "mid": 1.99,
+          "high": 999.99,
+          "market": 1.35,
+          "directLow": 1.6
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.42,
+        "lowPrice": 0.9,
+        "trendPrice": 1.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.18,
+        "avg7": 1.39,
+        "avg30": 1.41,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -864,6 +1409,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG13",
     "artist": "GIDORA",
     "rarity": "Rare Holo V",
@@ -879,12 +1443,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG13.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG13_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.5,
+          "mid": 9.36,
+          "high": 38.23,
+          "market": 8.07,
+          "directLow": 8.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.28,
+        "lowPrice": 1.99,
+        "trendPrice": 6.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.98,
+        "avg1": 5.5,
+        "avg7": 6.71,
+        "avg30": 7.21,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -933,6 +1523,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG14",
     "artist": "Megumi Mizutani",
     "rarity": "Rare Holo V",
@@ -941,6 +1550,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -948,12 +1558,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG14.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG14_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 37.31,
+          "mid": 43.24,
+          "high": 149.99,
+          "market": 39.64,
+          "directLow": 39.43
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.4,
+        "lowPrice": 12,
+        "trendPrice": 30.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 22.99,
+        "avg1": 30.11,
+        "avg7": 28.39,
+        "avg30": 31.58,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1006,6 +1642,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG15",
     "artist": "sui",
     "rarity": "Rare Holo VMAX",
@@ -1014,6 +1669,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1021,12 +1677,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG15.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG15_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 39.99,
+          "mid": 50.14,
+          "high": 114.99,
+          "market": 43.46,
+          "directLow": 49.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 36.09,
+        "lowPrice": 17,
+        "trendPrice": 32.09,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 25,
+        "avg1": 38.7,
+        "avg7": 32.44,
+        "avg30": 36.48,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1080,6 +1762,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG16",
     "artist": "saino misaki",
     "rarity": "Rare Holo V",
@@ -1088,6 +1789,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1095,12 +1797,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG16.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG16_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 35.8,
+          "mid": 46,
+          "high": 150,
+          "market": 38.91,
+          "directLow": 36.35
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.96,
+        "lowPrice": 15,
+        "trendPrice": 26.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 17.9,
+        "avg1": 47.74,
+        "avg7": 28.36,
+        "avg30": 27.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1157,6 +1885,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG17",
     "artist": "Naoki Saito",
     "rarity": "Rare Holo VMAX",
@@ -1165,6 +1912,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1172,12 +1920,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG17.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG17_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 28,
+          "mid": 35,
+          "high": 79.99,
+          "market": 31.39,
+          "directLow": 31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 23.83,
+        "lowPrice": 16.95,
+        "trendPrice": 25.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 17,
+        "avg1": 45.81,
+        "avg7": 28.15,
+        "avg30": 23.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1230,6 +2004,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG18",
     "artist": "Yuu Nishida",
     "rarity": "Rare Holo V",
@@ -1238,6 +2031,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1245,12 +2039,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG18.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG18_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.66,
+          "mid": 4.6,
+          "high": 999.99,
+          "market": 3.88,
+          "directLow": 3.65
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.09,
+        "lowPrice": 2.9,
+        "trendPrice": 3.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 3,
+        "avg7": 3.67,
+        "avg30": 4.05,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1307,6 +2127,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG19",
     "artist": "kodama",
     "rarity": "Rare Holo VMAX",
@@ -1315,6 +2154,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1322,12 +2162,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG19.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG19_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.7,
+          "mid": 7.49,
+          "high": 999.99,
+          "market": 6.26,
+          "directLow": 5.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.63,
+        "lowPrice": 4,
+        "trendPrice": 5.97,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.44,
+        "avg1": 6.76,
+        "avg7": 6.36,
+        "avg30": 6.38,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1380,6 +2246,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG20",
     "artist": "takuyoa",
     "rarity": "Rare Holo V",
@@ -1388,6 +2273,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1395,12 +2281,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG20.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG20_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.89,
+          "mid": 4.25,
+          "high": 89,
+          "market": 3.65,
+          "directLow": 3.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.83,
+        "lowPrice": 2,
+        "trendPrice": 3.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2.95,
+        "avg1": 3.74,
+        "avg7": 3.95,
+        "avg30": 4.75,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1453,6 +2365,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG21",
     "artist": "Scav",
     "rarity": "Rare Holo VMAX",
@@ -1461,6 +2392,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1468,12 +2400,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG21.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG21_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6,
+          "mid": 8.99,
+          "high": 89,
+          "market": 7.42,
+          "directLow": 7.19
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.25,
+        "lowPrice": 4.7,
+        "trendPrice": 9.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6,
+        "avg1": 7.22,
+        "avg7": 8.58,
+        "avg30": 8.15,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1526,6 +2484,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG22",
     "artist": "Ligton",
     "rarity": "Rare Holo V",
@@ -1534,6 +2511,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1541,12 +2519,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG22.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG22_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 34.99,
+          "mid": 44.99,
+          "high": 111.11,
+          "market": 39.24,
+          "directLow": 36.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 49.33,
+        "lowPrice": 24,
+        "trendPrice": 56.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 32.9,
+        "avg1": 40.95,
+        "avg7": 52.68,
+        "avg30": 48.77,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1597,6 +2601,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG23",
     "artist": "kawayoo",
     "rarity": "Rare Holo VMAX",
@@ -1605,6 +2628,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1612,12 +2636,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG23.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG23_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 50,
+          "mid": 69.98,
+          "high": 999,
+          "market": 58.56,
+          "directLow": 54.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 62.06,
+        "lowPrice": 23.5,
+        "trendPrice": 61.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 40,
+        "avg1": 53.02,
+        "avg7": 58.18,
+        "avg30": 62.69,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1632,11 +2682,31 @@
       "Your opponent reveals their hand, and you draw a card for each Trainer card you find there.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG24",
     "artist": "yuu",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1644,12 +2714,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG24.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG24_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.34,
+          "mid": 7.99,
+          "high": 37,
+          "market": 7.18,
+          "directLow": 6.96
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.76,
+        "lowPrice": 2.9,
+        "trendPrice": 5.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.3,
+        "avg1": 5.49,
+        "avg7": 5.35,
+        "avg30": 5.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1664,11 +2760,31 @@
       "Choose up to 3 of your Benched Pokémon. For each of those Pokémon, search your deck for a different type of basic Energy card and attach it to that Pokémon. Then, shuffle your deck. Your turn ends.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG25",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1676,12 +2792,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG25.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG25_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.6,
+          "high": 999.99,
+          "market": 1.27,
+          "directLow": 1.54
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.75,
+        "lowPrice": 0.89,
+        "trendPrice": 1.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.89,
+        "avg1": 2.22,
+        "avg7": 1.89,
+        "avg30": 1.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1696,11 +2838,31 @@
       "Search your deck for up to 3 Basic Pokémon that don't have a Rule Box and put them onto your Bench. Then, shuffle your deck. (Pokémon V, Pokémon-GX, etc. have Rule Boxes.)",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG26",
     "artist": "Naoki Saito",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1708,12 +2870,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG26.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG26_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 3.91,
+          "mid": 6,
+          "high": 89,
+          "market": 5.62,
+          "directLow": 5
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.07,
+        "lowPrice": 1.5,
+        "trendPrice": 4.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.99,
+        "avg1": 2.97,
+        "avg7": 3.81,
+        "avg30": 3.96,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1730,11 +2918,31 @@
       "Put a Rapid Strike Pokémon from your discard pile onto your Bench. If you do, draw 5 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG27",
     "artist": "KIYOTAKA OSHIYAMA",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1742,12 +2950,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG27.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG27_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.95,
+          "mid": 1.75,
+          "high": 999.99,
+          "market": 1.36,
+          "directLow": 1.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.66,
+        "lowPrice": 0.45,
+        "trendPrice": 1.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.88,
+        "avg1": 1.21,
+        "avg7": 1.56,
+        "avg30": 1.7,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1764,11 +2998,31 @@
       "Search your deck for a Single Strike Pokémon and put it onto your Bench. Then, shuffle your deck. If you searched your deck in this way, draw 5 cards.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG28",
     "artist": "Souichirou Gunjima",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1776,12 +3030,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG28.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG28_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.64,
+          "mid": 1.45,
+          "high": 999.99,
+          "market": 1.21,
+          "directLow": 1.26
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.78,
+        "lowPrice": 0.65,
+        "trendPrice": 1.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.65,
+        "avg1": 1.37,
+        "avg7": 1.54,
+        "avg30": 1.79,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1838,6 +3118,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG29",
     "artist": "PLANETA Tsuji",
     "rarity": "Rare Secret",
@@ -1846,6 +3145,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1853,12 +3153,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG29.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG29_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.99,
+          "mid": 4.99,
+          "high": 19.95,
+          "market": 4.34,
+          "directLow": 4.46
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.63,
+        "lowPrice": 1.49,
+        "trendPrice": 2.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.49,
+        "avg1": 2.73,
+        "avg7": 2.89,
+        "avg30": 2.6,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1911,6 +3237,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh9tg",
+      "name": "Brilliant Stars Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "BRS",
+      "releaseDate": "2022/02/25",
+      "updatedAt": "2022/02/23 09:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh9tg/logo.png"
+      }
+    },
     "number": "TG30",
     "artist": "PLANETA Tsuji",
     "rarity": "Rare Secret",
@@ -1919,6 +3264,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1926,12 +3272,38 @@
       "small": "https://images.pokemontcg.io/swsh9tg/TG30.png",
       "large": "https://images.pokemontcg.io/swsh9tg/TG30_hires.png"
     },
-    "set": {
-      "id": "swsh9tg",
-      "releaseDate": "2022/02/25",
-      "name": "Brilliant Stars Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh9tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh9tg-TG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.98,
+          "mid": 4.5,
+          "high": 999.99,
+          "market": 3.57,
+          "directLow": 4.48
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh9tg-TG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.67,
+        "lowPrice": 0.5,
+        "trendPrice": 2.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.5,
+        "avg1": 2.06,
+        "avg7": 2.59,
+        "avg30": 2.65,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

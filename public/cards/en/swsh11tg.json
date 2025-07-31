@@ -41,6 +41,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG01",
     "artist": "Oswaldo KATO",
     "rarity": "Trainer Gallery Rare Holo",
@@ -58,12 +77,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG01.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG01_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 1.75,
+          "high": 999.99,
+          "market": 1.41,
+          "directLow": 1.48
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG01",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.66,
+        "lowPrice": 0.85,
+        "trendPrice": 1.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.87,
+        "avg1": 1.55,
+        "avg7": 1.63,
+        "avg30": 1.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -110,6 +155,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG02",
     "artist": "saino misaki",
     "rarity": "Trainer Gallery Rare Holo",
@@ -127,12 +191,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG02.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG02_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1,
+          "mid": 1.96,
+          "high": 999.99,
+          "market": 1.6,
+          "directLow": 1.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG02",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.61,
+        "lowPrice": 0.5,
+        "trendPrice": 1.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.51,
+        "avg7": 1.64,
+        "avg30": 1.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -179,6 +269,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG03",
     "artist": "GIDORA",
     "rarity": "Trainer Gallery Rare Holo",
@@ -195,12 +304,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG03.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG03_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9.37,
+          "mid": 12.9,
+          "high": 100,
+          "market": 11.12,
+          "directLow": 9.75
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG03",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.38,
+        "lowPrice": 4.21,
+        "trendPrice": 12.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 10.5,
+        "avg1": 13.25,
+        "avg7": 12.7,
+        "avg30": 12.15,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -246,6 +381,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG04",
     "artist": "chibi",
     "rarity": "Trainer Gallery Rare Holo",
@@ -263,12 +417,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG04.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG04_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.76,
+          "high": 89,
+          "market": 1.42,
+          "directLow": 1.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG04",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.42,
+        "lowPrice": 0.5,
+        "trendPrice": 1.51,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.5,
+        "avg1": 1.5,
+        "avg7": 1.55,
+        "avg30": 1.45,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -316,6 +496,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG05",
     "artist": "Atsushi Furusawa",
     "rarity": "Trainer Gallery Rare Holo",
@@ -333,12 +532,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG05.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG05_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 12.7,
+          "mid": 16.73,
+          "high": 418.15,
+          "market": 14.01,
+          "directLow": 14.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG05",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.11,
+        "lowPrice": 7.45,
+        "trendPrice": 11.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7.45,
+        "avg1": 12.33,
+        "avg7": 11.96,
+        "avg30": 12.4,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -389,6 +614,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG06",
     "artist": "Akira Komayama",
     "rarity": "Trainer Gallery Rare Holo",
@@ -406,12 +650,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG06.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG06_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.77,
+          "mid": 24.99,
+          "high": 52,
+          "market": 20.04,
+          "directLow": 17.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG06",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.95,
+        "lowPrice": 6,
+        "trendPrice": 11.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8,
+        "avg1": 12.09,
+        "avg7": 11.9,
+        "avg30": 11.71,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -465,6 +735,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG07",
     "artist": "Tomomi Kaneko",
     "rarity": "Trainer Gallery Rare Holo",
@@ -474,6 +763,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -481,12 +771,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG07.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG07_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 1.73,
+          "high": 999.99,
+          "market": 1.41,
+          "directLow": 1.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG07",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.37,
+        "lowPrice": 0.79,
+        "trendPrice": 1.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.79,
+        "avg1": 1.51,
+        "avg7": 1.32,
+        "avg30": 1.38,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -533,6 +849,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG08",
     "artist": "You Iribi",
     "rarity": "Trainer Gallery Rare Holo",
@@ -550,12 +885,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG08.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG08_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.25,
+          "mid": 2.59,
+          "high": 89,
+          "market": 2.17,
+          "directLow": 1.89
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG08",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2,
+        "lowPrice": 0.5,
+        "trendPrice": 2.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1,
+        "avg1": 1.88,
+        "avg7": 2.21,
+        "avg30": 2.11,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -600,6 +961,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG09",
     "artist": "Hitoshi Ariga",
     "rarity": "Trainer Gallery Rare Holo",
@@ -617,12 +997,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG09.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG09_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.75,
+          "mid": 1.6,
+          "high": 89,
+          "market": 1.41,
+          "directLow": 1.38
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG09",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.46,
+        "lowPrice": 0.75,
+        "trendPrice": 1.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.75,
+        "avg1": 1.28,
+        "avg7": 1.35,
+        "avg30": 1.43,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -670,6 +1076,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG10",
     "artist": "Kouki Saitou",
     "rarity": "Trainer Gallery Rare Holo",
@@ -687,12 +1112,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG10.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG10_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 5.11,
+          "mid": 7.39,
+          "high": 89,
+          "market": 6.43,
+          "directLow": 5.11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.38,
+        "lowPrice": 3,
+        "trendPrice": 5.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.4,
+        "avg1": 4.41,
+        "avg7": 4.82,
+        "avg30": 4.56,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -733,6 +1184,25 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG11",
     "artist": "Atsushi Furusawa",
     "rarity": "Trainer Gallery Rare Holo",
@@ -742,6 +1212,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -749,12 +1220,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG11.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG11_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.5,
+          "mid": 1.49,
+          "high": 89,
+          "market": 1.1,
+          "directLow": 0.9
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.17,
+        "lowPrice": 0.35,
+        "trendPrice": 1.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.35,
+        "avg1": 0.93,
+        "avg7": 1.1,
+        "avg30": 1.18,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -804,6 +1301,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG12",
     "artist": "Nisota Niso",
     "rarity": "Rare Holo V",
@@ -819,12 +1335,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG12.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG12_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 4.16,
+          "high": 17.99,
+          "market": 3.76,
+          "directLow": 3.06
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.88,
+        "lowPrice": 2.9,
+        "trendPrice": 4.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.2,
+        "avg1": 4.95,
+        "avg7": 5.08,
+        "avg30": 4.85,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -872,6 +1414,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG13",
     "artist": "Teeziro",
     "rarity": "Rare Holo VMAX",
@@ -887,12 +1448,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG13.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG13_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 7.33,
+          "high": 29.99,
+          "market": 6.27,
+          "directLow": 6.56
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.21,
+        "lowPrice": 3,
+        "trendPrice": 5.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.49,
+        "avg1": 5.13,
+        "avg7": 6.42,
+        "avg30": 6.3,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -946,6 +1533,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG14",
     "artist": "Yuya Oka",
     "rarity": "Rare Holo V",
@@ -961,12 +1567,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG14.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG14_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2.5,
+          "mid": 3.62,
+          "high": 14.99,
+          "market": 3.42,
+          "directLow": 2.91
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.31,
+        "lowPrice": 3,
+        "trendPrice": 4.39,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3,
+        "avg1": 4.44,
+        "avg7": 4.77,
+        "avg30": 4.45,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1009,6 +1641,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG15",
     "artist": "Oswaldo KATO",
     "rarity": "Rare Holo VMAX",
@@ -1024,12 +1675,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG15.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG15_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.5,
+          "mid": 6.01,
+          "high": 89,
+          "market": 5.29,
+          "directLow": 5.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.97,
+        "lowPrice": 3.8,
+        "trendPrice": 5.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.8,
+        "avg1": 5.4,
+        "avg7": 5.66,
+        "avg30": 5.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1083,6 +1760,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG16",
     "artist": "Ryota Murayama",
     "rarity": "Rare Holo V",
@@ -1098,12 +1794,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG16.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG16_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 39.59,
+          "mid": 48.23,
+          "high": 125,
+          "market": 41.75,
+          "directLow": 40.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 46.91,
+        "lowPrice": 20,
+        "trendPrice": 38.73,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 25,
+        "avg1": 38.98,
+        "avg7": 40.34,
+        "avg30": 44.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1149,6 +1871,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG17",
     "artist": "Souichirou Gunjima",
     "rarity": "Rare Holo VMAX",
@@ -1164,12 +1905,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG17.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG17_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 52.35,
+          "mid": 69.99,
+          "high": 179,
+          "market": 57.95,
+          "directLow": 59.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 52.48,
+        "lowPrice": 34.99,
+        "trendPrice": 40.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 35,
+        "avg1": 42.45,
+        "avg7": 41.62,
+        "avg30": 48.31,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1219,6 +1986,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG18",
     "artist": "AKIRA EGAWA",
     "rarity": "Rare Holo V",
@@ -1235,12 +2021,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG18.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG18_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6,
+          "mid": 8.24,
+          "high": 29.99,
+          "market": 7.13,
+          "directLow": 7.1
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.04,
+        "lowPrice": 4.45,
+        "trendPrice": 5.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.45,
+        "avg1": 5.33,
+        "avg7": 6.13,
+        "avg30": 5.91,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1293,6 +2105,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG19",
     "artist": "Souichirou Gunjima",
     "rarity": "Rare Holo V",
@@ -1309,12 +2140,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG19.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG19_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.15,
+          "mid": 6.87,
+          "high": 89,
+          "market": 5.88,
+          "directLow": 5.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.92,
+        "lowPrice": 4,
+        "trendPrice": 6.05,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.49,
+        "avg1": 5.6,
+        "avg7": 6,
+        "avg30": 6.73,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1362,6 +2219,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG20",
     "artist": "GOSSAN",
     "rarity": "Rare Holo V",
@@ -1377,12 +2253,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG20.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG20_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.99,
+          "mid": 6.99,
+          "high": 24.99,
+          "market": 5.98,
+          "directLow": 5.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.39,
+        "lowPrice": 3.95,
+        "trendPrice": 7.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.95,
+        "avg1": 7,
+        "avg7": 7.61,
+        "avg30": 7.59,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1435,6 +2337,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG21",
     "artist": "kodama",
     "rarity": "Rare Holo V",
@@ -1450,12 +2371,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG21.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG21_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 2,
+          "mid": 3.35,
+          "high": 19.99,
+          "market": 3.04,
+          "directLow": 2.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.62,
+        "lowPrice": 2,
+        "trendPrice": 4.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.45,
+        "avg1": 4.3,
+        "avg7": 4.29,
+        "avg30": 5.45,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1506,6 +2453,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG22",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo VMAX",
@@ -1521,12 +2487,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG22.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG22_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7,
+          "mid": 8.84,
+          "high": 41.07,
+          "market": 7.74,
+          "directLow": 7.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.36,
+        "lowPrice": 5,
+        "trendPrice": 5.68,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5.49,
+        "avg1": 6,
+        "avg7": 7.49,
+        "avg30": 8.1,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1541,11 +2533,31 @@
       "Search your deck for up to 3 Pokémon V, reveal them, and put them into your hand. Then, shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG23",
     "artist": "Taira Akitsu",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1553,12 +2565,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG23.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG23_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.21,
+          "mid": 2.83,
+          "high": 29.95,
+          "market": 2.25,
+          "directLow": 1.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.17,
+        "lowPrice": 0.8,
+        "trendPrice": 3.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.5,
+        "avg1": 3.04,
+        "avg7": 3.42,
+        "avg30": 3.2,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1573,6 +2611,25 @@
       "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG24",
     "artist": "NC Empire",
     "rarity": "Rare Ultra",
@@ -1587,12 +2644,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG24.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG24_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.41,
+          "mid": 6.99,
+          "high": 25,
+          "market": 5.67,
+          "directLow": 6.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.13,
+        "lowPrice": 3,
+        "trendPrice": 5.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.8,
+        "avg1": 4.45,
+        "avg7": 5.2,
+        "avg30": 5.12,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1607,11 +2690,31 @@
       "Heal 70 damage from your Active Pokémon.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG25",
     "artist": "Sanosuke Sakuma",
     "rarity": "Rare Ultra",
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1619,12 +2722,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG25.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG25_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.93,
+          "mid": 1.77,
+          "high": 15.99,
+          "market": 1.44,
+          "directLow": 1.18
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.11,
+        "lowPrice": 0.5,
+        "trendPrice": 1.61,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.98,
+        "avg1": 2.17,
+        "avg7": 1.51,
+        "avg30": 1.99,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1639,6 +2768,25 @@
       "Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG26",
     "artist": "Hideki Ishikawa",
     "rarity": "Rare Ultra",
@@ -1651,12 +2799,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG26.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG26_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.59,
+          "mid": 1.6,
+          "high": 14.99,
+          "market": 1.22,
+          "directLow": 1.15
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.02,
+        "lowPrice": 0.92,
+        "trendPrice": 1.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.92,
+        "avg1": 2.44,
+        "avg7": 1.95,
+        "avg30": 1.91,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1671,6 +2845,25 @@
       "Put up to 4 in any combination of Water Pokémon and Water Energy cards from your discard pile into your hand.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG27",
     "artist": "saino misaki",
     "rarity": "Rare Ultra",
@@ -1683,12 +2876,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG27.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG27_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 7.35,
+          "mid": 9.13,
+          "high": 89,
+          "market": 7.91,
+          "directLow": 7.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.67,
+        "lowPrice": 3.95,
+        "trendPrice": 8.18,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 3.95,
+        "avg1": 7.75,
+        "avg7": 6.32,
+        "avg30": 7.41,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1703,6 +2922,25 @@
       "Flip 2 coins. Search your deck for a number of cards up to the number of heads, put them into your hand, and shuffle your deck.",
       "You may play only 1 Supporter card during your turn."
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG28",
     "artist": "Taira Akitsu",
     "rarity": "Rare Ultra",
@@ -1715,12 +2953,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG28.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG28_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 0.97,
+          "mid": 1.64,
+          "high": 12.95,
+          "market": 1.31,
+          "directLow": 1.31
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.93,
+        "lowPrice": 0.9,
+        "trendPrice": 1.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0.9,
+        "avg1": 1.42,
+        "avg7": 1.68,
+        "avg30": 1.89,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1766,6 +3030,25 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG29",
     "artist": "aky CG Works",
     "rarity": "Rare Secret",
@@ -1781,12 +3064,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG29.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG29_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.83,
+          "mid": 12.84,
+          "high": 34.99,
+          "market": 10.36,
+          "directLow": 10.09
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.22,
+        "lowPrice": 5,
+        "trendPrice": 8.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 5,
+        "avg1": 9.69,
+        "avg7": 9.9,
+        "avg30": 8.64,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1840,6 +3149,25 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "swsh11tg",
+      "name": "Lost Origin Trainer Gallery",
+      "series": "Sword & Shield",
+      "printedTotal": 30,
+      "total": 30,
+      "legalities": {
+        "unlimited": "Legal",
+        "standard": "Legal",
+        "expanded": "Legal"
+      },
+      "ptcgoCode": "LOR",
+      "releaseDate": "2022/09/09",
+      "updatedAt": "2022/09/09 13:45:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png",
+        "logo": "https://images.pokemontcg.io/swsh11tg/logo.png"
+      }
+    },
     "number": "TG30",
     "artist": "5ban Graphics",
     "rarity": "Rare Secret",
@@ -1848,6 +3176,7 @@
     ],
     "legalities": {
       "unlimited": "Legal",
+      "standard": "Legal",
       "expanded": "Legal"
     },
     "regulationMark": "E",
@@ -1855,12 +3184,38 @@
       "small": "https://images.pokemontcg.io/swsh11tg/TG30.png",
       "large": "https://images.pokemontcg.io/swsh11tg/TG30_hires.png"
     },
-    "set": {
-      "id": "swsh11tg",
-      "releaseDate": "2022/09/09",
-      "name": "Lost Origin Trainer Gallery",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/swsh11tg/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/swsh11tg-TG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 9,
+          "mid": 15.18,
+          "high": 39.99,
+          "market": 13.13,
+          "directLow": 10.85
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/swsh11tg-TG30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.74,
+        "lowPrice": 3,
+        "trendPrice": 9.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 6.3,
+        "avg1": 7.69,
+        "avg7": 9.06,
+        "avg30": 8.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   }

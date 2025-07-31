@@ -45,6 +45,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -58,12 +74,45 @@
       "small": "https://images.pokemontcg.io/pop5/1.png",
       "large": "https://images.pokemontcg.io/pop5/1_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 5,
+          "mid": 8.48,
+          "high": 38.95,
+          "market": 17.23,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 5,
+          "mid": 16.98,
+          "high": 24.64,
+          "market": 19.79,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 46.19,
+        "lowPrice": 9.99,
+        "trendPrice": 44.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.19,
+        "lowPriceExPlus": 29.99,
+        "avg1": 100,
+        "avg7": 44.41,
+        "avg30": 31.49,
+        "reverseHoloAvg1": 12.99,
+        "reverseHoloAvg7": 12.81,
+        "reverseHoloAvg30": 9.16
       }
     }
   },
@@ -112,6 +161,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -125,12 +190,45 @@
       "small": "https://images.pokemontcg.io/pop5/2.png",
       "large": "https://images.pokemontcg.io/pop5/2_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 11,
+          "mid": 13.06,
+          "high": 40,
+          "market": 61.5,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 50.12,
+          "mid": 89.1,
+          "high": 109.76,
+          "market": 96.75,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 44,
+        "lowPrice": 9.99,
+        "trendPrice": 52.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 175,
+        "reverseHoloTrend": 31.46,
+        "lowPriceExPlus": 64.55,
+        "avg1": 58,
+        "avg7": 49.21,
+        "avg30": 44.2,
+        "reverseHoloAvg1": 25,
+        "reverseHoloAvg7": 23.42,
+        "reverseHoloAvg30": 23.42
       }
     }
   },
@@ -175,6 +273,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -188,12 +302,45 @@
       "small": "https://images.pokemontcg.io/pop5/3.png",
       "large": "https://images.pokemontcg.io/pop5/3_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 117.39,
+          "mid": 152.85,
+          "high": 188.3,
+          "market": 134.99,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 89.99,
+          "mid": 96.88,
+          "high": 175,
+          "market": 135.6,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 296.33,
+        "lowPrice": 239.99,
+        "trendPrice": 209.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 70.57,
+        "lowPriceExPlus": 350,
+        "avg1": 359.5,
+        "avg7": 222.99,
+        "avg30": 208.55,
+        "reverseHoloAvg1": 55,
+        "reverseHoloAvg7": 53.56,
+        "reverseHoloAvg30": 43.21
       }
     }
   },
@@ -207,6 +354,22 @@
     "rules": [
       "Double Rainbow Energy can be attached only to an Evolved Pokémon (excluding Pokémon-ex). While in play, Double Rainbow Energy provides every type of Energy but provides 2 Energy at a time. (Has no effect other than providing Energy.) Damage done to your opponent's Pokémon by the Pokémon Double Rainbow Energy is attached to is reduced by 10 (before applying Weakness and Resistance). When the Pokémon Double Rainbow Energy is attached to is no longer an Evolved Pokémon, discard Double Rainbow Energy."
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Takumi Akabane",
     "rarity": "Rare",
@@ -217,12 +380,38 @@
       "small": "https://images.pokemontcg.io/pop5/4.png",
       "large": "https://images.pokemontcg.io/pop5/4_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 14.99,
+          "mid": 17.97,
+          "high": 35,
+          "market": 26.25,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 4.98,
+        "trendPrice": 7.85,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 7.13,
+        "avg1": 8.99,
+        "avg7": 8.31,
+        "avg30": 7.45,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -274,6 +463,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Mitsuhiro Arita",
     "rarity": "Uncommon",
@@ -287,12 +492,38 @@
       "small": "https://images.pokemontcg.io/pop5/5.png",
       "large": "https://images.pokemontcg.io/pop5/5_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 19.82,
+          "mid": 74.84,
+          "high": 99.99,
+          "market": 26.06,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 18,
+        "trendPrice": 15.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 18,
+        "avg1": 19,
+        "avg7": 17.78,
+        "avg30": 18.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -307,6 +538,22 @@
       "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
       "If you have any cards in your hand, shuffle 1 of them into your deck, then draw 3 cards."
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -318,12 +565,38 @@
       "small": "https://images.pokemontcg.io/pop5/6.png",
       "large": "https://images.pokemontcg.io/pop5/6_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.86,
+          "mid": 3.99,
+          "high": 5.86,
+          "market": 4.38,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.75,
+        "lowPrice": 1.49,
+        "trendPrice": 2.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.49,
+        "avg1": 1.75,
+        "avg7": 2.44,
+        "avg30": 2.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -337,6 +610,22 @@
     "rules": [
       "Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -349,12 +638,38 @@
       "small": "https://images.pokemontcg.io/pop5/7.png",
       "large": "https://images.pokemontcg.io/pop5/7_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 9.99,
+          "mid": 11.04,
+          "high": 11.04,
+          "market": 12.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.5,
+        "lowPrice": 1.99,
+        "trendPrice": 4.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 8,
+        "avg1": 10,
+        "avg7": 4.05,
+        "avg30": 3.83,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -368,6 +683,22 @@
     "rules": [
       "Boost Energy can be attached only to an Evolved Pokémon. Discard Boost Energy at the end of the turn it was attached. Boost Energy provides ColorlessColorlessColorless Energy. The Pokémon Boost Energy is attached to can't retreat. If the Pokémon Boost Energy is attached to isn't an Evolved Pokémon, discard Boost Energy."
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Shin-ichi Yoshikawa",
     "rarity": "Uncommon",
@@ -378,12 +709,38 @@
       "small": "https://images.pokemontcg.io/pop5/8.png",
       "large": "https://images.pokemontcg.io/pop5/8_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.75,
+          "mid": 3.5,
+          "high": 5.09,
+          "market": 3.23,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.79,
+        "lowPrice": 1,
+        "trendPrice": 2.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.48,
+        "lowPriceExPlus": 1.99,
+        "avg1": 1.79,
+        "avg7": 2.22,
+        "avg30": 2.22,
+        "reverseHoloAvg1": 1.48,
+        "reverseHoloAvg7": 2.08,
+        "reverseHoloAvg30": 2.08
       }
     }
   },
@@ -397,6 +754,22 @@
     "rules": [
       "δ Rainbow Energy provides Colorless Energy. While attached to a Pokémon that has δ on its card, δ Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.)"
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Takumi Akabane",
     "rarity": "Uncommon",
@@ -407,12 +780,38 @@
       "small": "https://images.pokemontcg.io/pop5/9.png",
       "large": "https://images.pokemontcg.io/pop5/9_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 4.9,
+          "mid": 6.11,
+          "high": 8,
+          "market": 4.11,
+          "directLow": 4.82
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.85,
+        "lowPrice": 1.99,
+        "trendPrice": 3.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0.83,
+        "lowPriceExPlus": 3.5,
+        "avg1": 4.7,
+        "avg7": 3.74,
+        "avg30": 3.4,
+        "reverseHoloAvg1": 0.83,
+        "reverseHoloAvg7": 0.83,
+        "reverseHoloAvg30": 0.83
       }
     }
   },
@@ -461,6 +860,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -474,12 +889,38 @@
       "small": "https://images.pokemontcg.io/pop5/10.png",
       "large": "https://images.pokemontcg.io/pop5/10_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 10,
+          "mid": 14.3,
+          "high": 28,
+          "market": 13,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.82,
+        "lowPrice": 3.5,
+        "trendPrice": 8.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 4.5,
+        "avg1": 9,
+        "avg7": 6.82,
+        "avg30": 7.95,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -518,6 +959,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -531,12 +988,38 @@
       "small": "https://images.pokemontcg.io/pop5/11.png",
       "large": "https://images.pokemontcg.io/pop5/11_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.69,
+          "mid": 4,
+          "high": 9.5,
+          "market": 3.97,
+          "directLow": 4.79
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.95,
+        "lowPrice": 1.3,
+        "trendPrice": 2.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.95,
+        "avg1": 3.95,
+        "avg7": 2.43,
+        "avg30": 1.88,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -586,6 +1069,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Naoyo Kimura",
     "rarity": "Common",
@@ -599,12 +1098,45 @@
       "small": "https://images.pokemontcg.io/pop5/12.png",
       "large": "https://images.pokemontcg.io/pop5/12_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 16,
+          "mid": 22.47,
+          "high": 29.99,
+          "market": 26.34,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 47.5,
+          "mid": 68.4,
+          "high": 110.25,
+          "market": 99.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 21.82,
+        "lowPrice": 9.99,
+        "trendPrice": 23.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 200,
+        "reverseHoloTrend": 128.75,
+        "lowPriceExPlus": 18,
+        "avg1": 16.95,
+        "avg7": 21.21,
+        "avg30": 26.17,
+        "reverseHoloAvg1": 175,
+        "reverseHoloAvg7": 43.72,
+        "reverseHoloAvg30": 37.05
       }
     }
   },
@@ -653,6 +1185,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Ryo Ueda",
     "rarity": "Common",
@@ -666,12 +1214,38 @@
       "small": "https://images.pokemontcg.io/pop5/13.png",
       "large": "https://images.pokemontcg.io/pop5/13_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 7.27,
+          "mid": 12.22,
+          "high": 16.91,
+          "market": 18.51,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.16,
+        "lowPrice": 10.42,
+        "trendPrice": 12.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 11.9,
+        "avg1": 7.95,
+        "avg7": 11.74,
+        "avg30": 15.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -719,6 +1293,22 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -732,12 +1322,45 @@
       "small": "https://images.pokemontcg.io/pop5/14.png",
       "large": "https://images.pokemontcg.io/pop5/14_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.56,
+          "mid": 2.65,
+          "high": 21.11,
+          "market": 0.87,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 1.99,
+          "mid": 3,
+          "high": 12,
+          "market": 4.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.48,
+        "lowPrice": 0.3,
+        "trendPrice": 2.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.31,
+        "lowPriceExPlus": 0.6,
+        "avg1": 0.5,
+        "avg7": 3.21,
+        "avg30": 2.48,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.61,
+        "reverseHoloAvg30": 2.61
       }
     }
   },
@@ -784,6 +1407,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Kouki Saitou",
     "rarity": "Common",
@@ -797,12 +1436,45 @@
       "small": "https://images.pokemontcg.io/pop5/15.png",
       "large": "https://images.pokemontcg.io/pop5/15_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.56,
+          "mid": 0.99,
+          "high": 4.19,
+          "market": 1.79,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 3.41,
+          "mid": 5.7,
+          "high": 7.28,
+          "market": 6.07,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.37,
+        "lowPrice": 0.29,
+        "trendPrice": 2.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.41,
+        "lowPriceExPlus": 1,
+        "avg1": 10,
+        "avg7": 2.34,
+        "avg30": 1.89,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 3.86,
+        "reverseHoloAvg30": 3.86
       }
     }
   },
@@ -851,6 +1523,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -864,12 +1552,38 @@
       "small": "https://images.pokemontcg.io/pop5/16.png",
       "large": "https://images.pokemontcg.io/pop5/16_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 49999.99,
+          "mid": 52500,
+          "high": 55000,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3800,
+        "lowPrice": 25000,
+        "trendPrice": 2906.24,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 25000,
+        "avg1": 3800,
+        "avg7": 3062.25,
+        "avg30": 1546.07,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -923,6 +1637,22 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "pop5",
+      "name": "POP Series 5",
+      "series": "POP",
+      "printedTotal": 17,
+      "total": 17,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "releaseDate": "2007/03/01",
+      "updatedAt": "2020/08/14 09:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/pop5/symbol.png",
+        "logo": "https://images.pokemontcg.io/pop5/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare",
@@ -936,12 +1666,38 @@
       "small": "https://images.pokemontcg.io/pop5/17.png",
       "large": "https://images.pokemontcg.io/pop5/17_hires.png"
     },
-    "set": {
-      "id": "pop5",
-      "releaseDate": "2007/03/01",
-      "name": "POP Series 5",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/pop5/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/pop5-17",
+      "updatedAt": "2024/06/05",
+      "prices": {
+        "normal": {
+          "low": 1999,
+          "mid": 1999,
+          "high": 1999,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/pop5-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4142.5,
+        "lowPrice": 20000,
+        "trendPrice": 4047.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 550,
+        "lowPriceExPlus": 20000,
+        "avg1": 3790,
+        "avg7": 4087.86,
+        "avg30": 2192.4,
+        "reverseHoloAvg1": 550,
+        "reverseHoloAvg7": 450,
+        "reverseHoloAvg30": 450
       }
     }
   }

@@ -40,6 +40,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Hiromichi Sugiyama",
     "rarity": "Promo",
@@ -53,12 +70,38 @@
       "small": "https://images.pokemontcg.io/np/1.png",
       "large": "https://images.pokemontcg.io/np/1_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 9.89,
+          "mid": 18.98,
+          "high": 23.39,
+          "market": 10.61,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 58.71,
+        "lowPrice": 11,
+        "trendPrice": 37.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 25.5,
+        "lowPriceExPlus": 18.95,
+        "avg1": 15,
+        "avg7": 48.97,
+        "avg30": 44.03,
+        "reverseHoloAvg1": 28.12,
+        "reverseHoloAvg7": 21.14,
+        "reverseHoloAvg30": 17.58
       }
     }
   },
@@ -103,6 +146,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Kazuo Yazawa",
     "rarity": "Promo",
@@ -116,12 +176,45 @@
       "small": "https://images.pokemontcg.io/np/2.png",
       "large": "https://images.pokemontcg.io/np/2_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 17.99,
+          "mid": 19.32,
+          "high": 41,
+          "market": 11.75,
+          "directLow": null
+        },
+        "holofoil": {
+          "low": 36.25,
+          "mid": 55.85,
+          "high": 56.19,
+          "market": 54.87,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 51.25,
+        "lowPrice": 9.9,
+        "trendPrice": 38.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 31.43,
+        "lowPriceExPlus": 21.99,
+        "avg1": 21.95,
+        "avg7": 51.52,
+        "avg30": 35.47,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 28.07,
+        "reverseHoloAvg30": 22.74
       }
     }
   },
@@ -176,6 +269,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -189,12 +299,38 @@
       "small": "https://images.pokemontcg.io/np/3.png",
       "large": "https://images.pokemontcg.io/np/3_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 10.99,
+          "mid": 11.93,
+          "high": 13.49,
+          "market": 12.48,
+          "directLow": 11.69
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.88,
+        "lowPrice": 2.49,
+        "trendPrice": 11.41,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.38,
+        "lowPriceExPlus": 6.04,
+        "avg1": 5,
+        "avg7": 13.39,
+        "avg30": 6.97,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.71,
+        "reverseHoloAvg30": 2.34
       }
     }
   },
@@ -252,6 +388,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Midori Harada",
     "rarity": "Promo",
@@ -265,12 +418,38 @@
       "small": "https://images.pokemontcg.io/np/4.png",
       "large": "https://images.pokemontcg.io/np/4_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 98.49,
+          "mid": 142.48,
+          "high": 199.99,
+          "market": 99.96,
+          "directLow": 199.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 122,
+        "trendPrice": 0,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 0,
+        "avg7": 0,
+        "avg30": 0,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -319,6 +498,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -332,12 +528,36 @@
       "small": "https://images.pokemontcg.io/np/5.png",
       "large": "https://images.pokemontcg.io/np/5_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-5",
+      "updatedAt": "2024/02/04",
+      "prices": {
+        "holofoil": {
+          "low": 299.95,
+          "mid": 299.95,
+          "high": 299.95
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 357.5,
+        "lowPrice": 180,
+        "trendPrice": 221.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 74.08,
+        "lowPriceExPlus": 180,
+        "avg1": 500,
+        "avg7": 236.14,
+        "avg30": 175.53,
+        "reverseHoloAvg1": 39.99,
+        "reverseHoloAvg7": 66.87,
+        "reverseHoloAvg30": 50.13
       }
     }
   },
@@ -386,6 +606,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -399,12 +636,38 @@
       "small": "https://images.pokemontcg.io/np/6.png",
       "large": "https://images.pokemontcg.io/np/6_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 199.99,
+          "mid": 199.99,
+          "high": 199.99,
+          "market": 238.9,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 699.99,
+        "lowPrice": 125,
+        "trendPrice": 475.53,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 105.6,
+        "lowPriceExPlus": 749.99,
+        "avg1": 699.99,
+        "avg7": 419.28,
+        "avg30": 303.08,
+        "reverseHoloAvg1": 90,
+        "reverseHoloAvg7": 77.5,
+        "reverseHoloAvg30": 71.66
       }
     }
   },
@@ -459,6 +722,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -472,12 +752,38 @@
       "small": "https://images.pokemontcg.io/np/7.png",
       "large": "https://images.pokemontcg.io/np/7_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 374.95,
+          "mid": 437.47,
+          "high": 499.99,
+          "market": 417.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.5,
+        "lowPrice": 0,
+        "trendPrice": 163.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 259.15,
+        "lowPriceExPlus": 0,
+        "avg1": 9.5,
+        "avg7": 148.72,
+        "avg30": 124.52,
+        "reverseHoloAvg1": 89.99,
+        "reverseHoloAvg7": 130.55,
+        "reverseHoloAvg30": 130.55
       }
     }
   },
@@ -526,6 +832,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -539,12 +862,38 @@
       "small": "https://images.pokemontcg.io/np/8.png",
       "large": "https://images.pokemontcg.io/np/8_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 11.99,
+          "mid": 14.96,
+          "high": 24.44,
+          "market": 14.24,
+          "directLow": 13.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.33,
+        "lowPrice": 2,
+        "trendPrice": 9.01,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.88,
+        "lowPriceExPlus": 6.95,
+        "avg1": 7.25,
+        "avg7": 7.63,
+        "avg30": 7.34,
+        "reverseHoloAvg1": 1.79,
+        "reverseHoloAvg7": 2.23,
+        "reverseHoloAvg30": 1.7
       }
     }
   },
@@ -595,6 +944,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -608,12 +974,38 @@
       "small": "https://images.pokemontcg.io/np/9.png",
       "large": "https://images.pokemontcg.io/np/9_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 24.5,
+          "mid": 26.78,
+          "high": 59.95,
+          "market": 27.75,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 262.45,
+        "lowPrice": 31.99,
+        "trendPrice": 81.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.5,
+        "lowPriceExPlus": 31.99,
+        "avg1": 500,
+        "avg7": 92.54,
+        "avg30": 29.22,
+        "reverseHoloAvg1": 4.95,
+        "reverseHoloAvg7": 4.76,
+        "reverseHoloAvg30": 4.76
       }
     }
   },
@@ -662,6 +1054,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -675,12 +1084,38 @@
       "small": "https://images.pokemontcg.io/np/10.png",
       "large": "https://images.pokemontcg.io/np/10_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "reverseHolofoil": {
+          "low": 14.23,
+          "mid": 16.3,
+          "high": 23.47,
+          "market": 16.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 13.75,
+        "lowPrice": 3.24,
+        "trendPrice": 10.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.36,
+        "lowPriceExPlus": 6.5,
+        "avg1": 13.75,
+        "avg7": 9.7,
+        "avg30": 11.3,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 2.87,
+        "reverseHoloAvg30": 1.68
       }
     }
   },
@@ -731,6 +1166,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Mitsuhiro Arita",
     "rarity": "Promo",
@@ -744,12 +1196,38 @@
       "small": "https://images.pokemontcg.io/np/11.png",
       "large": "https://images.pokemontcg.io/np/11_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 89.95,
+          "mid": 89.95,
+          "high": 89.95,
+          "market": 47.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 110,
+        "lowPrice": 0,
+        "trendPrice": 110,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 110,
+        "avg7": 77,
+        "avg30": 77,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -798,6 +1276,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -811,12 +1306,38 @@
       "small": "https://images.pokemontcg.io/np/12.png",
       "large": "https://images.pokemontcg.io/np/12_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 40.48,
+          "mid": 60,
+          "high": 199.99,
+          "market": 40.66,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 73.84,
+        "lowPrice": 14.99,
+        "trendPrice": 152.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 57.69,
+        "lowPriceExPlus": 40,
+        "avg1": 140,
+        "avg7": 76.35,
+        "avg30": 92.52,
+        "reverseHoloAvg1": 29.95,
+        "reverseHoloAvg7": 43.55,
+        "reverseHoloAvg30": 36.66
       }
     }
   },
@@ -865,6 +1386,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -878,12 +1416,38 @@
       "small": "https://images.pokemontcg.io/np/13.png",
       "large": "https://images.pokemontcg.io/np/13_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.61,
+          "mid": 13,
+          "high": 503.37,
+          "market": 8.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.75,
+        "lowPrice": 6.99,
+        "trendPrice": 14.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.42,
+        "lowPriceExPlus": 12,
+        "avg1": 7.5,
+        "avg7": 13.5,
+        "avg30": 13.85,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 7.07,
+        "reverseHoloAvg30": 5.11
       }
     }
   },
@@ -930,6 +1494,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -943,12 +1524,38 @@
       "small": "https://images.pokemontcg.io/np/14.png",
       "large": "https://images.pokemontcg.io/np/14_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 15.98,
+          "mid": 26.85,
+          "high": 29.53,
+          "market": 10.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.73,
+        "lowPrice": 11.75,
+        "trendPrice": 15.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 16.95,
+        "avg1": 11.95,
+        "avg7": 16.1,
+        "avg30": 14.28,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -997,6 +1604,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Ken Sugimori",
     "rarity": "Promo",
@@ -1010,12 +1634,38 @@
       "small": "https://images.pokemontcg.io/np/15.png",
       "large": "https://images.pokemontcg.io/np/15_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 8,
+          "mid": 9.99,
+          "high": 23.86,
+          "market": 7.89,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.47,
+        "lowPrice": 10,
+        "trendPrice": 16.04,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.99,
+        "lowPriceExPlus": 26.99,
+        "avg1": 5.95,
+        "avg7": 16.41,
+        "avg30": 15.45,
+        "reverseHoloAvg1": 7.99,
+        "reverseHoloAvg7": 7.99,
+        "reverseHoloAvg30": 7.99
       }
     }
   },
@@ -1069,6 +1719,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Kagemaru Himeno",
     "rarity": "Promo",
@@ -1082,12 +1749,38 @@
       "small": "https://images.pokemontcg.io/np/16.png",
       "large": "https://images.pokemontcg.io/np/16_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.88,
+          "mid": 10,
+          "high": 19.99,
+          "market": 9.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 11.31,
+        "lowPrice": 1,
+        "trendPrice": 11.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.92,
+        "lowPriceExPlus": 2,
+        "avg1": 30,
+        "avg7": 15.83,
+        "avg30": 5.9,
+        "reverseHoloAvg1": 1.49,
+        "reverseHoloAvg7": 2.26,
+        "reverseHoloAvg30": 1.82
       }
     }
   },
@@ -1127,6 +1820,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Kagemaru Himeno",
     "rarity": "Promo",
@@ -1140,12 +1850,38 @@
       "small": "https://images.pokemontcg.io/np/17.png",
       "large": "https://images.pokemontcg.io/np/17_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11,
+          "mid": 13.49,
+          "high": 30,
+          "market": 11.01,
+          "directLow": 11.98
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 10.8,
+        "lowPrice": 0.69,
+        "trendPrice": 9.3,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 2.1,
+        "lowPriceExPlus": 2.48,
+        "avg1": 50,
+        "avg7": 11.7,
+        "avg30": 5.83,
+        "reverseHoloAvg1": 0.49,
+        "reverseHoloAvg7": 2.22,
+        "reverseHoloAvg30": 1.51
       }
     }
   },
@@ -1194,6 +1930,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Kagemaru Himeno",
     "rarity": "Promo",
@@ -1207,12 +1960,38 @@
       "small": "https://images.pokemontcg.io/np/18.png",
       "large": "https://images.pokemontcg.io/np/18_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 8.08,
+          "mid": 17.33,
+          "high": 19.99,
+          "market": 12.41,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.09,
+        "lowPrice": 0.99,
+        "trendPrice": 11.97,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.94,
+        "lowPriceExPlus": 4.69,
+        "avg1": 50,
+        "avg7": 12.21,
+        "avg30": 7.48,
+        "reverseHoloAvg1": 9.99,
+        "reverseHoloAvg7": 6.59,
+        "reverseHoloAvg30": 4.26
       }
     }
   },
@@ -1260,6 +2039,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Kagemaru Himeno",
     "rarity": "Promo",
@@ -1273,12 +2069,38 @@
       "small": "https://images.pokemontcg.io/np/19.png",
       "large": "https://images.pokemontcg.io/np/19_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4.15,
+          "mid": 4.34,
+          "high": 8.23,
+          "market": 3.93,
+          "directLow": 3.49
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.68,
+        "lowPrice": 0.7,
+        "trendPrice": 2.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 1.24,
+        "lowPriceExPlus": 0.85,
+        "avg1": 2.93,
+        "avg7": 2.9,
+        "avg30": 2.56,
+        "reverseHoloAvg1": 1.49,
+        "reverseHoloAvg7": 1.11,
+        "reverseHoloAvg30": 1.43
       }
     }
   },
@@ -1325,6 +2147,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1338,12 +2177,38 @@
       "small": "https://images.pokemontcg.io/np/20.png",
       "large": "https://images.pokemontcg.io/np/20_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.81,
+          "mid": 20.3,
+          "high": 29.99,
+          "market": 9.29,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.23,
+        "lowPrice": 12.5,
+        "trendPrice": 19.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.97,
+        "lowPriceExPlus": 14.8,
+        "avg1": 24.5,
+        "avg7": 17.91,
+        "avg30": 15.79,
+        "reverseHoloAvg1": 8.5,
+        "reverseHoloAvg7": 8.18,
+        "reverseHoloAvg30": 8.26
       }
     }
   },
@@ -1388,6 +2253,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -1401,12 +2283,38 @@
       "small": "https://images.pokemontcg.io/np/21.png",
       "large": "https://images.pokemontcg.io/np/21_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.99,
+          "mid": 6.17,
+          "high": 19.99,
+          "market": 12.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 29.9,
+        "lowPrice": 19.95,
+        "trendPrice": 32.65,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 28,
+        "avg1": 29.9,
+        "avg7": 33.52,
+        "avg30": 21.73,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1460,6 +2368,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Mitsuhiro Arita",
     "rarity": "Promo",
@@ -1473,12 +2398,38 @@
       "small": "https://images.pokemontcg.io/np/22.png",
       "large": "https://images.pokemontcg.io/np/22_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.65,
+          "mid": 2.78,
+          "high": 7.99,
+          "market": 2.55,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 29.5,
+        "lowPrice": 13.5,
+        "trendPrice": 17.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 13.75,
+        "avg1": 14,
+        "avg7": 18.49,
+        "avg30": 12.66,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1535,6 +2486,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Mitsuhiro Arita",
     "rarity": "Promo",
@@ -1548,12 +2516,38 @@
       "small": "https://images.pokemontcg.io/np/23.png",
       "large": "https://images.pokemontcg.io/np/23_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 279.95,
+          "mid": 294.89,
+          "high": 295.95,
+          "market": null,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 150,
+        "lowPrice": 300,
+        "trendPrice": 71.16,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 150,
+        "avg7": 33.99,
+        "avg30": 29.05,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1599,6 +2593,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -1612,12 +2623,38 @@
       "small": "https://images.pokemontcg.io/np/24.png",
       "large": "https://images.pokemontcg.io/np/24_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 3.1,
+          "mid": 5.19,
+          "high": 15,
+          "market": 5.19,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 24.9,
+        "lowPrice": 20,
+        "trendPrice": 20.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 20,
+        "avg1": 24.9,
+        "avg7": 20.21,
+        "avg30": 14.63,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1674,6 +2711,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Kouki Saitou",
     "rarity": "Promo",
@@ -1687,12 +2741,38 @@
       "small": "https://images.pokemontcg.io/np/25.png",
       "large": "https://images.pokemontcg.io/np/25_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 25,
+          "mid": 31.05,
+          "high": 34.99,
+          "market": 30.94,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 47.4,
+        "lowPrice": 49.99,
+        "trendPrice": 46.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 49.99,
+        "avg1": 50,
+        "avg7": 39.51,
+        "avg30": 39.51,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1706,6 +2786,23 @@
     "rules": [
       "Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokémon has only 1). If tails, each Active Pokémon is now Asleep."
     ],
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Promo",
@@ -1716,12 +2813,38 @@
       "small": "https://images.pokemontcg.io/np/26.png",
       "large": "https://images.pokemontcg.io/np/26_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 47.24,
+          "mid": 55.58,
+          "high": 62.99,
+          "market": 39.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 79.99,
+        "lowPrice": 64,
+        "trendPrice": 19.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 20,
+        "lowPriceExPlus": 64,
+        "avg1": 79.99,
+        "avg7": 84.13,
+        "avg30": 179.38,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 16,
+        "reverseHoloAvg30": 16
       }
     }
   },
@@ -1735,6 +2858,23 @@
     "rules": [
       "Flip a coin. If heads, discard all Trainer cards your opponent has in play. If tails, discard all Trainer (excluding Supporter cards) you have in play."
     ],
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Promo",
@@ -1745,12 +2885,29 @@
       "small": "https://images.pokemontcg.io/np/27.png",
       "large": "https://images.pokemontcg.io/np/27_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-27",
+      "updatedAt": "2023/03/27"
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 461.9,
+        "lowPrice": 239.95,
+        "trendPrice": 515.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 50,
+        "lowPriceExPlus": 239.95,
+        "avg1": 461.9,
+        "avg7": 448.98,
+        "avg30": 472.73,
+        "reverseHoloAvg1": 50,
+        "reverseHoloAvg7": 50,
+        "reverseHoloAvg30": 50
       }
     }
   },
@@ -1765,6 +2922,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "At the end of each player's turn, if that player has 8 or more cards in his or her hand, that player discards a number of cards until that player has 7 cards left in his or her hand."
     ],
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -1775,12 +2949,29 @@
       "small": "https://images.pokemontcg.io/np/28.png",
       "large": "https://images.pokemontcg.io/np/28_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-28",
+      "updatedAt": "2023/03/27"
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 0,
+        "trendPrice": 2999,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 0,
+        "avg1": 2999,
+        "avg7": 2624.5,
+        "avg30": 2624.5,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
       }
     }
   },
@@ -1817,6 +3008,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Hajime Kusajima",
     "rarity": "Promo",
@@ -1830,12 +3038,38 @@
       "small": "https://images.pokemontcg.io/np/29.png",
       "large": "https://images.pokemontcg.io/np/29_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 14.68,
+          "mid": 39.89,
+          "high": 89,
+          "market": 17.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 14,
+        "lowPrice": 2.25,
+        "trendPrice": 13.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 6.14,
+        "lowPriceExPlus": 12.99,
+        "avg1": 28,
+        "avg7": 12.79,
+        "avg30": 12.62,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 6.43,
+        "reverseHoloAvg30": 5.27
       }
     }
   },
@@ -1880,6 +3114,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Atsuko Nishida",
     "rarity": "Promo",
@@ -1893,12 +3144,38 @@
       "small": "https://images.pokemontcg.io/np/30.png",
       "large": "https://images.pokemontcg.io/np/30_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 17.19,
+          "mid": 17.79,
+          "high": 25,
+          "market": 16.38,
+          "directLow": 17.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 12.28,
+        "lowPrice": 1.99,
+        "trendPrice": 8.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.59,
+        "lowPriceExPlus": 10.99,
+        "avg1": 7.33,
+        "avg7": 8.08,
+        "avg30": 9.09,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 6.25,
+        "reverseHoloAvg30": 5.59
       }
     }
   },
@@ -1957,6 +3234,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Ken Ikuji",
     "rarity": "Promo",
@@ -1970,12 +3264,38 @@
       "small": "https://images.pokemontcg.io/np/31.png",
       "large": "https://images.pokemontcg.io/np/31_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 99.99,
+          "mid": 129.99,
+          "high": 199.99,
+          "market": 25.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 39.56,
+        "lowPrice": 4.85,
+        "trendPrice": 48.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 5.82,
+        "lowPriceExPlus": 17,
+        "avg1": 100,
+        "avg7": 39.56,
+        "avg30": 42.01,
+        "reverseHoloAvg1": 3.7,
+        "reverseHoloAvg7": 6.38,
+        "reverseHoloAvg30": 8.55
       }
     }
   },
@@ -2034,6 +3354,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Nakaoka",
     "rarity": "Promo",
@@ -2047,12 +3384,38 @@
       "small": "https://images.pokemontcg.io/np/32.png",
       "large": "https://images.pokemontcg.io/np/32_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 68,
+          "mid": 148.19,
+          "high": 199.99,
+          "market": 149.62,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 16.89,
+        "lowPrice": 4,
+        "trendPrice": 18.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 7.88,
+        "lowPriceExPlus": 18,
+        "avg1": 15,
+        "avg7": 17.93,
+        "avg30": 25.56,
+        "reverseHoloAvg1": 4.48,
+        "reverseHoloAvg7": 5.4,
+        "reverseHoloAvg30": 12.82
       }
     }
   },
@@ -2111,6 +3474,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "33",
     "artist": "K. Hoshiba",
     "rarity": "Promo",
@@ -2124,12 +3504,38 @@
       "small": "https://images.pokemontcg.io/np/33.png",
       "large": "https://images.pokemontcg.io/np/33_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 97.58,
+          "mid": 103.73,
+          "high": 139.99,
+          "market": 107.46,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 32.22,
+        "lowPrice": 7.45,
+        "trendPrice": 42.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 24.5,
+        "lowPriceExPlus": 19.9,
+        "avg1": 19.5,
+        "avg7": 36.91,
+        "avg30": 33.27,
+        "reverseHoloAvg1": 6,
+        "reverseHoloAvg7": 26.55,
+        "reverseHoloAvg30": 11.91
       }
     }
   },
@@ -2184,6 +3590,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Hajime Kusajima",
     "rarity": "Promo",
@@ -2197,12 +3620,38 @@
       "small": "https://images.pokemontcg.io/np/34.png",
       "large": "https://images.pokemontcg.io/np/34_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.22,
+          "mid": 10.9,
+          "high": 51.97,
+          "market": 20.14,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 6.49,
+        "lowPrice": 0.98,
+        "trendPrice": 6.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 4.44,
+        "lowPriceExPlus": 7,
+        "avg1": 11.25,
+        "avg7": 7.56,
+        "avg30": 5.27,
+        "reverseHoloAvg1": 0.75,
+        "reverseHoloAvg7": 3.22,
+        "reverseHoloAvg30": 3.41
       }
     }
   },
@@ -2251,6 +3700,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -2264,12 +3730,38 @@
       "small": "https://images.pokemontcg.io/np/35.png",
       "large": "https://images.pokemontcg.io/np/35_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 56.15,
+          "mid": 64,
+          "high": 69.99,
+          "market": 82.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 114.99,
+        "lowPrice": 69.99,
+        "trendPrice": 105.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 33.91,
+        "lowPriceExPlus": 149.99,
+        "avg1": 153.99,
+        "avg7": 106.11,
+        "avg30": 115.05,
+        "reverseHoloAvg1": 29.5,
+        "reverseHoloAvg7": 37.06,
+        "reverseHoloAvg30": 36.04
       }
     }
   },
@@ -2283,6 +3775,23 @@
     "rules": [
       "Flip a coin. If heads, discard all Trainer cards your opponent has in play. If tails, discard all Trainer cards (excluding Supporter cards) you have in play."
     ],
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Promo",
@@ -2293,12 +3802,29 @@
       "small": "https://images.pokemontcg.io/np/36.png",
       "large": "https://images.pokemontcg.io/np/36_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-36",
+      "updatedAt": "2023/03/27"
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 150,
+        "lowPrice": 150,
+        "trendPrice": 155.83,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 49.9,
+        "lowPriceExPlus": 169.99,
+        "avg1": 150,
+        "avg7": 251.98,
+        "avg30": 279.56,
+        "reverseHoloAvg1": 49.9,
+        "reverseHoloAvg7": 49.9,
+        "reverseHoloAvg30": 49.9
       }
     }
   },
@@ -2358,6 +3884,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -2371,12 +3914,38 @@
       "small": "https://images.pokemontcg.io/np/37.png",
       "large": "https://images.pokemontcg.io/np/37_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 43.55,
+          "mid": 50.25,
+          "high": 149.99,
+          "market": 47.86,
+          "directLow": 99.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 27.44,
+        "lowPrice": 2.5,
+        "trendPrice": 23.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 11.03,
+        "lowPriceExPlus": 20,
+        "avg1": 28.07,
+        "avg7": 26.86,
+        "avg30": 24.54,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4,
+        "reverseHoloAvg30": 11.26
       }
     }
   },
@@ -2436,6 +4005,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -2449,12 +4035,38 @@
       "small": "https://images.pokemontcg.io/np/38.png",
       "large": "https://images.pokemontcg.io/np/38_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 24.99,
+          "mid": 49.99,
+          "high": 99.99,
+          "market": 41.36,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22.69,
+        "lowPrice": 4,
+        "trendPrice": 21.57,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 9.24,
+        "lowPriceExPlus": 14.5,
+        "avg1": 28.3,
+        "avg7": 23.16,
+        "avg30": 21.14,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 7.2,
+        "reverseHoloAvg30": 10.44
       }
     }
   },
@@ -2519,6 +4131,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "39",
     "artist": "Ryo Ueda",
     "rarity": "Promo",
@@ -2532,12 +4161,38 @@
       "small": "https://images.pokemontcg.io/np/39.png",
       "large": "https://images.pokemontcg.io/np/39_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 86.4,
+          "mid": 333.33,
+          "high": 359.99,
+          "market": 121.1,
+          "directLow": 359.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 61.19,
+        "lowPrice": 10,
+        "trendPrice": 57.36,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 17.92,
+        "lowPriceExPlus": 39.9,
+        "avg1": 40,
+        "avg7": 67.85,
+        "avg30": 59.01,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 17.42,
+        "reverseHoloAvg30": 15.64
       }
     }
   },
@@ -2582,6 +4237,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "np",
+      "name": "Nintendo Black Star Promos",
+      "series": "NP",
+      "printedTotal": 40,
+      "total": 40,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "PR-NP",
+      "releaseDate": "2003/10/01",
+      "updatedAt": "2020/05/01 16:06:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/np/symbol.png",
+        "logo": "https://images.pokemontcg.io/np/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Masakazu Fukuda",
     "rarity": "Promo",
@@ -2595,12 +4267,38 @@
       "small": "https://images.pokemontcg.io/np/40.png",
       "large": "https://images.pokemontcg.io/np/40_hires.png"
     },
-    "set": {
-      "id": "np",
-      "releaseDate": "2003/10/01",
-      "name": "Nintendo Black Star Promos",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/np/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/np-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 90,
+          "mid": 102.48,
+          "high": 149.99,
+          "market": 27.16,
+          "directLow": 104.96
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/np-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 52.05,
+        "lowPrice": 49.45,
+        "trendPrice": 42.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 26.56,
+        "lowPriceExPlus": 49.45,
+        "avg1": 54.65,
+        "avg7": 49.58,
+        "avg30": 30.25,
+        "reverseHoloAvg1": 24.99,
+        "reverseHoloAvg7": 25.16,
+        "reverseHoloAvg30": 23.18
       }
     }
   }

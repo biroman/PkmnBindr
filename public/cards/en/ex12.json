@@ -52,6 +52,23 @@
         "value": "-30"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "1",
     "artist": "Hajime Kusajima",
     "rarity": "Rare Holo",
@@ -65,12 +82,45 @@
       "small": "https://images.pokemontcg.io/ex12/1.png",
       "large": "https://images.pokemontcg.io/ex12/1_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 78.99,
+          "mid": 94.05,
+          "high": 95,
+          "market": 34.74,
+          "directLow": 79.99
+        },
+        "reverseHolofoil": {
+          "low": 94.58,
+          "mid": 97.29,
+          "high": 99.99,
+          "market": 37.66,
+          "directLow": 99.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-1",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.45,
+        "lowPrice": 1.98,
+        "trendPrice": 8.96,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 38.16,
+        "reverseHoloLow": 2.5,
+        "reverseHoloTrend": 27.38,
+        "lowPriceExPlus": 6.95,
+        "avg1": 11.98,
+        "avg7": 6.12,
+        "avg30": 10.79,
+        "reverseHoloAvg1": 49,
+        "reverseHoloAvg7": 29.61,
+        "reverseHoloAvg30": 20.56
       }
     }
   },
@@ -130,6 +180,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "2",
     "artist": "Hisao Nakamura",
     "rarity": "Rare Holo",
@@ -143,12 +210,45 @@
       "small": "https://images.pokemontcg.io/ex12/2.png",
       "large": "https://images.pokemontcg.io/ex12/2_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.33,
+          "mid": 19.9,
+          "high": 34.99,
+          "market": 15.55,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 11.05,
+          "mid": 13.99,
+          "high": 27.49,
+          "market": 18.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-2",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.26,
+        "lowPrice": 1.89,
+        "trendPrice": 5.6,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 18.94,
+        "lowPriceExPlus": 4.77,
+        "avg1": 2.37,
+        "avg7": 4.51,
+        "avg30": 5.13,
+        "reverseHoloAvg1": 50,
+        "reverseHoloAvg7": 18.27,
+        "reverseHoloAvg30": 11.69
       }
     }
   },
@@ -208,6 +308,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "3",
     "artist": "Hajime Kusajima",
     "rarity": "Rare Holo",
@@ -221,12 +338,45 @@
       "small": "https://images.pokemontcg.io/ex12/3.png",
       "large": "https://images.pokemontcg.io/ex12/3_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 4,
+          "mid": 6.7,
+          "high": 26.53,
+          "market": 6.53,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.85,
+          "mid": 12.98,
+          "high": 15,
+          "market": 9.74,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-3",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.34,
+        "lowPrice": 0.75,
+        "trendPrice": 3.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.17,
+        "reverseHoloLow": 0.9,
+        "reverseHoloTrend": 10.42,
+        "lowPriceExPlus": 4,
+        "avg1": 1.99,
+        "avg7": 3.09,
+        "avg30": 3.57,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 9.61,
+        "reverseHoloAvg30": 10.89
       }
     }
   },
@@ -281,6 +431,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "4",
     "artist": "Naoyo Kimura",
     "rarity": "Rare Holo",
@@ -294,12 +461,45 @@
       "small": "https://images.pokemontcg.io/ex12/4.png",
       "large": "https://images.pokemontcg.io/ex12/4_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 1.46,
+          "mid": 3.48,
+          "high": 29.99,
+          "market": 7.93,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10.11,
+          "mid": 11,
+          "high": 12,
+          "market": 9.69,
+          "directLow": 11
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-4",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 5.27,
+        "lowPrice": 0.5,
+        "trendPrice": 5.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.97,
+        "reverseHoloLow": 3.79,
+        "reverseHoloTrend": 4.81,
+        "lowPriceExPlus": 1.9,
+        "avg1": 5,
+        "avg7": 6.35,
+        "avg30": 4.26,
+        "reverseHoloAvg1": 4.2,
+        "reverseHoloAvg7": 8.34,
+        "reverseHoloAvg30": 9.05
       }
     }
   },
@@ -360,6 +560,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "5",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -373,12 +590,45 @@
       "small": "https://images.pokemontcg.io/ex12/5.png",
       "large": "https://images.pokemontcg.io/ex12/5_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 84.99,
+          "mid": 99.98,
+          "high": 149.99,
+          "market": 61.72,
+          "directLow": 99.98
+        },
+        "reverseHolofoil": {
+          "low": 53,
+          "mid": 54.85,
+          "high": 100,
+          "market": 75.67,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-5",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 9.79,
+        "lowPrice": 1,
+        "trendPrice": 14.64,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 26.97,
+        "reverseHoloLow": 5,
+        "reverseHoloTrend": 40.66,
+        "lowPriceExPlus": 4.5,
+        "avg1": 33,
+        "avg7": 13,
+        "avg30": 10.08,
+        "reverseHoloAvg1": 80,
+        "reverseHoloAvg7": 31.22,
+        "reverseHoloAvg30": 34.69
       }
     }
   },
@@ -439,6 +689,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "6",
     "artist": "Hajime Kusajima",
     "rarity": "Rare Holo",
@@ -452,12 +719,45 @@
       "small": "https://images.pokemontcg.io/ex12/6.png",
       "large": "https://images.pokemontcg.io/ex12/6_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.47,
+          "mid": 9.08,
+          "high": 19,
+          "market": 6.76,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 11.33,
+          "mid": 12.05,
+          "high": 15.33,
+          "market": 13.46,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-6",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0,
+        "lowPrice": 2,
+        "trendPrice": 24.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 3.99,
+        "lowPriceExPlus": 0,
+        "avg1": 5,
+        "avg7": 15.88,
+        "avg30": 15.02,
+        "reverseHoloAvg1": 3.99,
+        "reverseHoloAvg7": 3.99,
+        "reverseHoloAvg30": 3.99
       }
     }
   },
@@ -513,6 +813,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "7",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -526,12 +843,45 @@
       "small": "https://images.pokemontcg.io/ex12/7.png",
       "large": "https://images.pokemontcg.io/ex12/7_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 19.99,
+          "mid": 30,
+          "high": 39.99,
+          "market": 19.73,
+          "directLow": 39.98
+        },
+        "reverseHolofoil": {
+          "low": 19.94,
+          "mid": 24.47,
+          "high": 28.99,
+          "market": 21.56,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-7",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.44,
+        "lowPrice": 1,
+        "trendPrice": 10.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 16.73,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 20.3,
+        "lowPriceExPlus": 5.99,
+        "avg1": 9.99,
+        "avg7": 8.89,
+        "avg30": 8.6,
+        "reverseHoloAvg1": 22.5,
+        "reverseHoloAvg7": 21.4,
+        "reverseHoloAvg30": 15.2
       }
     }
   },
@@ -576,6 +926,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "8",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare Holo",
@@ -589,12 +956,45 @@
       "small": "https://images.pokemontcg.io/ex12/8.png",
       "large": "https://images.pokemontcg.io/ex12/8_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 30.64,
+          "mid": 44.97,
+          "high": 99.99,
+          "market": 30.64,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 37.69,
+          "mid": 47.49,
+          "high": 99.99,
+          "market": 57.51,
+          "directLow": 99.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-8",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 8.65,
+        "lowPrice": 4.5,
+        "trendPrice": 23.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 14,
+        "reverseHoloLow": 4.5,
+        "reverseHoloTrend": 16.24,
+        "lowPriceExPlus": 8.9,
+        "avg1": 5.75,
+        "avg7": 6.97,
+        "avg30": 14.59,
+        "reverseHoloAvg1": 6,
+        "reverseHoloAvg7": 15.19,
+        "reverseHoloAvg30": 18.99
       }
     }
   },
@@ -644,6 +1044,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "9",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -657,12 +1074,45 @@
       "small": "https://images.pokemontcg.io/ex12/9.png",
       "large": "https://images.pokemontcg.io/ex12/9_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 11.88,
+          "mid": 14.99,
+          "high": 29.99,
+          "market": 16.81,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 17,
+          "mid": 18.9,
+          "high": 20.99,
+          "market": 20.94,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-9",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.09,
+        "lowPrice": 1.98,
+        "trendPrice": 8.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 10.75,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 7.48,
+        "lowPriceExPlus": 2.5,
+        "avg1": 5.88,
+        "avg7": 8.81,
+        "avg30": 7.38,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 7.68,
+        "reverseHoloAvg30": 10.81
       }
     }
   },
@@ -706,6 +1156,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "10",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -719,12 +1186,45 @@
       "small": "https://images.pokemontcg.io/ex12/10.png",
       "large": "https://images.pokemontcg.io/ex12/10_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 79.99,
+          "mid": 89.99,
+          "high": 99.99,
+          "market": 61,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 99.99,
+          "mid": 120.81,
+          "high": 213.41,
+          "market": 137.86,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-10",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 22,
+        "lowPrice": 6,
+        "trendPrice": 20.84,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 18.48,
+        "reverseHoloLow": 12,
+        "reverseHoloTrend": 52.34,
+        "lowPriceExPlus": 23,
+        "avg1": 19,
+        "avg7": 23.55,
+        "avg30": 27.79,
+        "reverseHoloAvg1": 9.95,
+        "reverseHoloAvg7": 18.48,
+        "reverseHoloAvg30": 53.83
       }
     }
   },
@@ -781,6 +1281,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "11",
     "artist": "Midori Harada",
     "rarity": "Rare Holo",
@@ -794,12 +1311,45 @@
       "small": "https://images.pokemontcg.io/ex12/11.png",
       "large": "https://images.pokemontcg.io/ex12/11_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6.25,
+          "mid": 77.95,
+          "high": 102.48,
+          "market": 7.84,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 1.98,
+          "mid": 5.99,
+          "high": 9.99,
+          "market": 8.21,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-11",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.59,
+        "lowPrice": 1.2,
+        "trendPrice": 3.94,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.85,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 7.01,
+        "lowPriceExPlus": 2.99,
+        "avg1": 2.5,
+        "avg7": 3.21,
+        "avg30": 3.61,
+        "reverseHoloAvg1": 3.9,
+        "reverseHoloAvg7": 6.74,
+        "reverseHoloAvg30": 7.32
       }
     }
   },
@@ -861,6 +1411,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "12",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo",
@@ -874,12 +1441,45 @@
       "small": "https://images.pokemontcg.io/ex12/12.png",
       "large": "https://images.pokemontcg.io/ex12/12_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 6,
+          "mid": 8.63,
+          "high": 11.25,
+          "market": 7.49,
+          "directLow": 11.25
+        },
+        "reverseHolofoil": {
+          "low": 12.38,
+          "mid": 15.2,
+          "high": 18.01,
+          "market": 9.51,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-12",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.4,
+        "lowPrice": 1,
+        "trendPrice": 2.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.25,
+        "reverseHoloLow": 3.5,
+        "reverseHoloTrend": 10.15,
+        "lowPriceExPlus": 1,
+        "avg1": 4,
+        "avg7": 3.33,
+        "avg30": 3.98,
+        "reverseHoloAvg1": 8.49,
+        "reverseHoloAvg7": 12.78,
+        "reverseHoloAvg30": 8.53
       }
     }
   },
@@ -936,6 +1536,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "13",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare Holo",
@@ -949,12 +1566,45 @@
       "small": "https://images.pokemontcg.io/ex12/13.png",
       "large": "https://images.pokemontcg.io/ex12/13_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 17.01,
+          "mid": 18,
+          "high": 19,
+          "market": 11.33,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 12,
+          "mid": 19.1,
+          "high": 28.2,
+          "market": 18.8,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-13",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 4.17,
+        "lowPrice": 1,
+        "trendPrice": 4.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.75,
+        "reverseHoloLow": 2.75,
+        "reverseHoloTrend": 7.93,
+        "lowPriceExPlus": 4.79,
+        "avg1": 5.33,
+        "avg7": 4.39,
+        "avg30": 4.22,
+        "reverseHoloAvg1": 5.5,
+        "reverseHoloAvg7": 8.55,
+        "reverseHoloAvg30": 7.67
       }
     }
   },
@@ -1015,6 +1665,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 4,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "14",
     "artist": "Kouki Saitou",
     "rarity": "Rare Holo",
@@ -1028,12 +1695,45 @@
       "small": "https://images.pokemontcg.io/ex12/14.png",
       "large": "https://images.pokemontcg.io/ex12/14_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 10.79,
+          "mid": 98.94,
+          "high": 99.9,
+          "market": 15.18,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.29,
+          "mid": 13.54,
+          "high": 14.82,
+          "market": 18.53,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-14",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 7.31,
+        "lowPrice": 0.8,
+        "trendPrice": 15.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 27.99,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 14.46,
+        "lowPriceExPlus": 5,
+        "avg1": 0.99,
+        "avg7": 20.59,
+        "avg30": 8.79,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 19.73,
+        "reverseHoloAvg30": 14.99
       }
     }
   },
@@ -1092,6 +1792,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "15",
     "artist": "Midori Harada",
     "rarity": "Rare",
@@ -1105,12 +1822,45 @@
       "small": "https://images.pokemontcg.io/ex12/15.png",
       "large": "https://images.pokemontcg.io/ex12/15_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.75,
+          "mid": 3.48,
+          "high": 4.91,
+          "market": 3.15,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 16.75,
+          "mid": 21,
+          "high": 38,
+          "market": 24.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-15",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.37,
+        "lowPrice": 0.25,
+        "trendPrice": 1.56,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 30.58,
+        "reverseHoloLow": 3,
+        "reverseHoloTrend": 18.17,
+        "lowPriceExPlus": 0.34,
+        "avg1": 1.99,
+        "avg7": 1.42,
+        "avg30": 1.72,
+        "reverseHoloAvg1": 30.58,
+        "reverseHoloAvg7": 13.14,
+        "reverseHoloAvg30": 13.92
       }
     }
   },
@@ -1163,6 +1913,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "16",
     "artist": "Aya Kusube",
     "rarity": "Rare",
@@ -1176,12 +1943,45 @@
       "small": "https://images.pokemontcg.io/ex12/16.png",
       "large": "https://images.pokemontcg.io/ex12/16_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.34,
+          "mid": 2.64,
+          "high": 4.99,
+          "market": 2.64,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 14,
+          "mid": 16.75,
+          "high": 27.5,
+          "market": 11.01,
+          "directLow": 14.4
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-16",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.23,
+        "lowPrice": 0.04,
+        "trendPrice": 1.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 15,
+        "reverseHoloLow": 2.99,
+        "reverseHoloTrend": 11.51,
+        "lowPriceExPlus": 0.77,
+        "avg1": 0.59,
+        "avg7": 2.15,
+        "avg30": 1.92,
+        "reverseHoloAvg1": 15,
+        "reverseHoloAvg7": 13.09,
+        "reverseHoloAvg30": 11.3
       }
     }
   },
@@ -1222,6 +2022,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "17",
     "artist": "Atsuko Nishida",
     "rarity": "Rare",
@@ -1235,12 +2052,45 @@
       "small": "https://images.pokemontcg.io/ex12/17.png",
       "large": "https://images.pokemontcg.io/ex12/17_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.58,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.56,
+          "mid": 6.25,
+          "high": 9.69,
+          "market": 5.59,
+          "directLow": 8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-17",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.02,
+        "trendPrice": 0.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 18,
+        "reverseHoloLow": 2.87,
+        "reverseHoloTrend": 7.3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.51,
+        "avg7": 0.36,
+        "avg30": 0.55,
+        "reverseHoloAvg1": 18,
+        "reverseHoloAvg7": 8.2,
+        "reverseHoloAvg30": 8.89
       }
     }
   },
@@ -1286,6 +2136,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "18",
     "artist": "Midori Harada",
     "rarity": "Rare",
@@ -1299,12 +2166,45 @@
       "small": "https://images.pokemontcg.io/ex12/18.png",
       "large": "https://images.pokemontcg.io/ex12/18_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.39,
+          "mid": 0.89,
+          "high": 4,
+          "market": 1.08,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 9.7,
+          "mid": 10.66,
+          "high": 29.99,
+          "market": 10.16,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-18",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.92,
+        "lowPrice": 0.05,
+        "trendPrice": 0.99,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 7.26,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 4.75,
+        "lowPriceExPlus": 0.49,
+        "avg1": 0.49,
+        "avg7": 0.68,
+        "avg30": 0.76,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 6.27,
+        "reverseHoloAvg30": 6.32
       }
     }
   },
@@ -1361,6 +2261,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "19",
     "artist": "Kagemaru Himeno",
     "rarity": "Rare",
@@ -1374,12 +2291,45 @@
       "small": "https://images.pokemontcg.io/ex12/19.png",
       "large": "https://images.pokemontcg.io/ex12/19_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.49,
+          "mid": 0.8,
+          "high": 4.95,
+          "market": 0.72,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.2,
+          "mid": 8.72,
+          "high": 11.24,
+          "market": 8.99,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-19",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.58,
+        "lowPrice": 0.02,
+        "trendPrice": 1.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 10,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 5.92,
+        "lowPriceExPlus": 0.02,
+        "avg1": 5.99,
+        "avg7": 1.56,
+        "avg30": 1.17,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 9.23,
+        "reverseHoloAvg30": 9.12
       }
     }
   },
@@ -1431,6 +2381,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "20",
     "artist": "Hisao Nakamura",
     "rarity": "Rare",
@@ -1444,12 +2411,45 @@
       "small": "https://images.pokemontcg.io/ex12/20.png",
       "large": "https://images.pokemontcg.io/ex12/20_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.06,
+          "mid": 1.99,
+          "high": 5,
+          "market": 1.95,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 7.23,
+          "mid": 10.91,
+          "high": 28.97,
+          "market": 10.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-20",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.21,
+        "lowPrice": 0.16,
+        "trendPrice": 0.79,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.3,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 4.94,
+        "lowPriceExPlus": 0.4,
+        "avg1": 1.19,
+        "avg7": 0.81,
+        "avg30": 1.48,
+        "reverseHoloAvg1": 4.52,
+        "reverseHoloAvg7": 3.93,
+        "reverseHoloAvg30": 5.29
       }
     }
   },
@@ -1506,6 +2506,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "21",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Rare",
@@ -1519,12 +2536,45 @@
       "small": "https://images.pokemontcg.io/ex12/21.png",
       "large": "https://images.pokemontcg.io/ex12/21_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.12,
+          "mid": 1.61,
+          "high": 5,
+          "market": 1.58,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 13.19,
+          "mid": 16.65,
+          "high": 25,
+          "market": 23.87,
+          "directLow": 13.32
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-21",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 3.88,
+        "lowPrice": 0.3,
+        "trendPrice": 3.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 24.95,
+        "reverseHoloLow": 1.99,
+        "reverseHoloTrend": 11.85,
+        "lowPriceExPlus": 0.5,
+        "avg1": 0.9,
+        "avg7": 3.92,
+        "avg30": 2.57,
+        "reverseHoloAvg1": 24.95,
+        "reverseHoloAvg7": 10.03,
+        "reverseHoloAvg30": 11.62
       }
     }
   },
@@ -1590,6 +2640,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "22",
     "artist": "Hisao Nakamura",
     "rarity": "Rare",
@@ -1603,12 +2670,45 @@
       "small": "https://images.pokemontcg.io/ex12/22.png",
       "large": "https://images.pokemontcg.io/ex12/22_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.29,
+          "mid": 0.61,
+          "high": 4.95,
+          "market": 0.84,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 8.68,
+          "mid": 11.81,
+          "high": 19.98,
+          "market": 14.03,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-22",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.55,
+        "lowPrice": 0.02,
+        "trendPrice": 0.38,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.74,
+        "reverseHoloLow": 1.69,
+        "reverseHoloTrend": 10.44,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.58,
+        "avg7": 0.57,
+        "avg30": 0.69,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 4.5,
+        "reverseHoloAvg30": 12.75
       }
     }
   },
@@ -1663,6 +2763,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "23",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -1676,12 +2793,45 @@
       "small": "https://images.pokemontcg.io/ex12/23.png",
       "large": "https://images.pokemontcg.io/ex12/23_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.85,
+          "mid": 1.45,
+          "high": 4,
+          "market": 1.46,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 15.23,
+          "mid": 21.22,
+          "high": 29.99,
+          "market": 12.48,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-23",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.23,
+        "lowPrice": 0.1,
+        "trendPrice": 1.59,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.84,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 8.3,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.99,
+        "avg7": 1.23,
+        "avg30": 1.31,
+        "reverseHoloAvg1": 9.87,
+        "reverseHoloAvg7": 7.69,
+        "reverseHoloAvg30": 6.82
       }
     }
   },
@@ -1734,6 +2884,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "24",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare",
@@ -1747,12 +2914,45 @@
       "small": "https://images.pokemontcg.io/ex12/24.png",
       "large": "https://images.pokemontcg.io/ex12/24_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.8,
+          "high": 4.95,
+          "market": 0.79,
+          "directLow": 0.78
+        },
+        "reverseHolofoil": {
+          "low": 5.5,
+          "mid": 14.5,
+          "high": 17,
+          "market": 11.74,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-24",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.07,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.99,
+        "reverseHoloLow": 1.74,
+        "reverseHoloTrend": 9.31,
+        "lowPriceExPlus": 0.3,
+        "avg1": 0.45,
+        "avg7": 0.39,
+        "avg30": 0.5,
+        "reverseHoloAvg1": 12.5,
+        "reverseHoloAvg7": 8.06,
+        "reverseHoloAvg30": 6.43
       }
     }
   },
@@ -1804,6 +3004,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "25",
     "artist": "Hisao Nakamura",
     "rarity": "Rare",
@@ -1817,12 +3034,45 @@
       "small": "https://images.pokemontcg.io/ex12/25.png",
       "large": "https://images.pokemontcg.io/ex12/25_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.53,
+          "mid": 3.72,
+          "high": 75.08,
+          "market": 3.96,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 9.28,
+          "mid": 10.64,
+          "high": 12,
+          "market": 8.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-25",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.53,
+        "lowPrice": 0.05,
+        "trendPrice": 0.96,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.93,
+        "reverseHoloLow": 1.25,
+        "reverseHoloTrend": 4.98,
+        "lowPriceExPlus": 0.5,
+        "avg1": 0.5,
+        "avg7": 0.86,
+        "avg30": 1.69,
+        "reverseHoloAvg1": 7.5,
+        "reverseHoloAvg7": 5.91,
+        "reverseHoloAvg30": 6.89
       }
     }
   },
@@ -1875,6 +3125,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "26",
     "artist": "Motofumi Fujiwara",
     "rarity": "Rare",
@@ -1888,12 +3155,45 @@
       "small": "https://images.pokemontcg.io/ex12/26.png",
       "large": "https://images.pokemontcg.io/ex12/26_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.49,
+          "mid": 0.91,
+          "high": 4,
+          "market": 1.13,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 8,
+          "mid": 17.53,
+          "high": 59.99,
+          "market": 10.28,
+          "directLow": 8
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-26",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.09,
+        "trendPrice": 0.58,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 15.37,
+        "reverseHoloLow": 1.9,
+        "reverseHoloTrend": 7.02,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.23,
+        "avg7": 0.32,
+        "avg30": 0.91,
+        "reverseHoloAvg1": 15.37,
+        "reverseHoloAvg7": 7.04,
+        "reverseHoloAvg30": 6.68
       }
     }
   },
@@ -1940,6 +3240,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "27",
     "artist": "Atsuko Nishida",
     "rarity": "Rare",
@@ -1953,12 +3270,45 @@
       "small": "https://images.pokemontcg.io/ex12/27.png",
       "large": "https://images.pokemontcg.io/ex12/27_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.36,
+          "mid": 1.15,
+          "high": 5,
+          "market": 1.16,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10,
+          "mid": 10,
+          "high": 12,
+          "market": 7.96,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-27",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1,
+        "lowPrice": 0.04,
+        "trendPrice": 0.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 7.4,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 7.54,
+        "lowPriceExPlus": 0.39,
+        "avg1": 0.5,
+        "avg7": 0.9,
+        "avg30": 0.8,
+        "reverseHoloAvg1": 2.2,
+        "reverseHoloAvg7": 7.58,
+        "reverseHoloAvg30": 5.92
       }
     }
   },
@@ -2013,6 +3363,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "28",
     "artist": "Kouki Saitou",
     "rarity": "Rare",
@@ -2026,12 +3393,45 @@
       "small": "https://images.pokemontcg.io/ex12/28.png",
       "large": "https://images.pokemontcg.io/ex12/28_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.34,
+          "mid": 1.43,
+          "high": 5,
+          "market": 1.46,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 19.99,
+          "mid": 22.5,
+          "high": 25,
+          "market": 11.68,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-28",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.42,
+        "lowPrice": 0.09,
+        "trendPrice": 1.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 11.68,
+        "reverseHoloLow": 0.85,
+        "reverseHoloTrend": 10.61,
+        "lowPriceExPlus": 0.35,
+        "avg1": 1.15,
+        "avg7": 2.02,
+        "avg30": 1.05,
+        "reverseHoloAvg1": 14.55,
+        "reverseHoloAvg7": 10.02,
+        "reverseHoloAvg30": 8.41
       }
     }
   },
@@ -2081,6 +3481,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "29",
     "artist": "Atsuko Nishida",
     "rarity": "Uncommon",
@@ -2094,12 +3511,45 @@
       "small": "https://images.pokemontcg.io/ex12/29.png",
       "large": "https://images.pokemontcg.io/ex12/29_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.97,
+          "mid": 6.44,
+          "high": 7.72,
+          "market": 4.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-29",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.38,
+        "lowPrice": 0.02,
+        "trendPrice": 0.44,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.88,
+        "reverseHoloTrend": 4.57,
+        "lowPriceExPlus": 0.17,
+        "avg1": 0.15,
+        "avg7": 0.31,
+        "avg30": 0.46,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 5.48,
+        "reverseHoloAvg30": 5.23
       }
     }
   },
@@ -2148,6 +3598,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "30",
     "artist": "Sachiko Adachi",
     "rarity": "Uncommon",
@@ -2161,12 +3628,45 @@
       "small": "https://images.pokemontcg.io/ex12/30.png",
       "large": "https://images.pokemontcg.io/ex12/30_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.75,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.26,
+          "mid": 7.29,
+          "high": 7.29,
+          "market": 5.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-30",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.82,
+        "lowPrice": 0.02,
+        "trendPrice": 0.92,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.7,
+        "reverseHoloTrend": 5.04,
+        "lowPriceExPlus": 0.1,
+        "avg1": 1,
+        "avg7": 0.78,
+        "avg30": 0.73,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4.44,
+        "reverseHoloAvg30": 4.94
       }
     }
   },
@@ -2218,6 +3718,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "31",
     "artist": "Hajime Kusajima",
     "rarity": "Uncommon",
@@ -2231,12 +3748,45 @@
       "small": "https://images.pokemontcg.io/ex12/31.png",
       "large": "https://images.pokemontcg.io/ex12/31_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 1.05,
+          "high": 2.49,
+          "market": 1.04,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 7.25,
+          "mid": 10.01,
+          "high": 14.88,
+          "market": 11.36,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-31",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.38,
+        "lowPrice": 0.02,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.95,
+        "reverseHoloLow": 1.4,
+        "reverseHoloTrend": 6.6,
+        "lowPriceExPlus": 0.15,
+        "avg1": 0.12,
+        "avg7": 0.4,
+        "avg30": 0.51,
+        "reverseHoloAvg1": 5.49,
+        "reverseHoloAvg7": 6.12,
+        "reverseHoloAvg30": 5.43
       }
     }
   },
@@ -2281,6 +3831,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "32",
     "artist": "Midori Harada",
     "rarity": "Uncommon",
@@ -2294,12 +3861,45 @@
       "small": "https://images.pokemontcg.io/ex12/32.png",
       "large": "https://images.pokemontcg.io/ex12/32_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.48,
+          "high": 4.95,
+          "market": 0.52,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.53,
+          "mid": 10.29,
+          "high": 10.29,
+          "market": 6.94,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-32",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.62,
+        "lowPrice": 0.05,
+        "trendPrice": 0.55,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.77,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 4.88,
+        "lowPriceExPlus": 0.25,
+        "avg1": 0.18,
+        "avg7": 0.64,
+        "avg30": 0.71,
+        "reverseHoloAvg1": 3.97,
+        "reverseHoloAvg7": 4.14,
+        "reverseHoloAvg30": 5.66
       }
     }
   },
@@ -2348,6 +3948,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "33",
     "artist": "Tomokazu Komiya",
     "rarity": "Uncommon",
@@ -2361,12 +3978,45 @@
       "small": "https://images.pokemontcg.io/ex12/33.png",
       "large": "https://images.pokemontcg.io/ex12/33_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 1.27,
+          "mid": 1.65,
+          "high": 4.99,
+          "market": 1.5,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10.39,
+          "mid": 10.85,
+          "high": 11.84,
+          "market": 10.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-33",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 2.31,
+        "lowPrice": 0.02,
+        "trendPrice": 2.08,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 14.99,
+        "reverseHoloLow": 2.9,
+        "reverseHoloTrend": 6.87,
+        "lowPriceExPlus": 0.02,
+        "avg1": 5,
+        "avg7": 2.35,
+        "avg30": 1.55,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 5.67,
+        "reverseHoloAvg30": 6.2
       }
     }
   },
@@ -2415,6 +4065,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "34",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Uncommon",
@@ -2428,12 +4095,45 @@
       "small": "https://images.pokemontcg.io/ex12/34.png",
       "large": "https://images.pokemontcg.io/ex12/34_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.63,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.99,
+          "mid": 9.97,
+          "high": 10.81,
+          "market": 8.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-34",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.28,
+        "lowPrice": 0.02,
+        "trendPrice": 0.66,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.25,
+        "reverseHoloLow": 1.9,
+        "reverseHoloTrend": 5.81,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.09,
+        "avg7": 0.32,
+        "avg30": 0.44,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 6,
+        "reverseHoloAvg30": 7.07
       }
     }
   },
@@ -2490,6 +4190,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "35",
     "artist": "Aya Kusube",
     "rarity": "Uncommon",
@@ -2503,12 +4220,45 @@
       "small": "https://images.pokemontcg.io/ex12/35.png",
       "large": "https://images.pokemontcg.io/ex12/35_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.23,
+          "mid": 3.59,
+          "high": 6.99,
+          "market": 3.49,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 22.99,
+          "mid": 34.99,
+          "high": 35.34,
+          "market": 53.02,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-35",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.49,
+        "lowPrice": 0.02,
+        "trendPrice": 1.88,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 20.5,
+        "reverseHoloLow": 3.5,
+        "reverseHoloTrend": 35.53,
+        "lowPriceExPlus": 0.03,
+        "avg1": 1.15,
+        "avg7": 1.82,
+        "avg30": 1.15,
+        "reverseHoloAvg1": 1,
+        "reverseHoloAvg7": 33.13,
+        "reverseHoloAvg30": 21.33
       }
     }
   },
@@ -2557,6 +4307,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "36",
     "artist": "Takao Unno",
     "rarity": "Uncommon",
@@ -2570,12 +4337,45 @@
       "small": "https://images.pokemontcg.io/ex12/36.png",
       "large": "https://images.pokemontcg.io/ex12/36_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.38,
+          "mid": 0.66,
+          "high": 4.95,
+          "market": 0.83,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.99,
+          "mid": 9.99,
+          "high": 29.99,
+          "market": 8.52,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-36",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.74,
+        "lowPrice": 0.05,
+        "trendPrice": 0.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.75,
+        "reverseHoloLow": 2.5,
+        "reverseHoloTrend": 8.22,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.2,
+        "avg7": 0.82,
+        "avg30": 0.69,
+        "reverseHoloAvg1": 3.75,
+        "reverseHoloAvg7": 13.72,
+        "reverseHoloAvg30": 8.8
       }
     }
   },
@@ -2628,6 +4428,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "37",
     "artist": "Tomokazu Komiya",
     "rarity": "Uncommon",
@@ -2641,12 +4458,45 @@
       "small": "https://images.pokemontcg.io/ex12/37.png",
       "large": "https://images.pokemontcg.io/ex12/37_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.89,
+          "mid": 0.98,
+          "high": 2.53,
+          "market": 0.93,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 10.24,
+          "mid": 11.77,
+          "high": 15.63,
+          "market": 13.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-37",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.25,
+        "lowPrice": 0.1,
+        "trendPrice": 0.98,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 14.99,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 6.09,
+        "lowPriceExPlus": 0.4,
+        "avg1": 2.25,
+        "avg7": 1.16,
+        "avg30": 1.4,
+        "reverseHoloAvg1": 14.99,
+        "reverseHoloAvg7": 7.61,
+        "reverseHoloAvg30": 9.03
       }
     }
   },
@@ -2704,6 +4554,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "38",
     "artist": "Naoyo Kimura",
     "rarity": "Uncommon",
@@ -2717,12 +4584,45 @@
       "small": "https://images.pokemontcg.io/ex12/38.png",
       "large": "https://images.pokemontcg.io/ex12/38_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.55,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.33,
+          "mid": 5.43,
+          "high": 5.52,
+          "market": 3.7,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-38",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.41,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.9,
+        "reverseHoloLow": 0.95,
+        "reverseHoloTrend": 5.45,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.39,
+        "avg30": 0.76,
+        "reverseHoloAvg1": 3.9,
+        "reverseHoloAvg7": 5.7,
+        "reverseHoloAvg30": 4.51
       }
     }
   },
@@ -2780,6 +4680,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "39",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -2793,12 +4710,45 @@
       "small": "https://images.pokemontcg.io/ex12/39.png",
       "large": "https://images.pokemontcg.io/ex12/39_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.29,
+          "mid": 0.8,
+          "high": 89.11,
+          "market": 0.93,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 12,
+          "mid": 13.65,
+          "high": 19.99,
+          "market": 10.51,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-39",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.64,
+        "lowPrice": 0.05,
+        "trendPrice": 0.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.34,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 5.64,
+        "lowPriceExPlus": 0.07,
+        "avg1": 1.49,
+        "avg7": 0.64,
+        "avg30": 0.96,
+        "reverseHoloAvg1": 3.34,
+        "reverseHoloAvg7": 3.67,
+        "reverseHoloAvg30": 6.55
       }
     }
   },
@@ -2859,6 +4809,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "40",
     "artist": "Yukiko Baba",
     "rarity": "Uncommon",
@@ -2872,12 +4839,45 @@
       "small": "https://images.pokemontcg.io/ex12/40.png",
       "large": "https://images.pokemontcg.io/ex12/40_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.39,
+          "mid": 0.72,
+          "high": 6.13,
+          "market": 0.77,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 11.5,
+          "mid": 12.5,
+          "high": 20,
+          "market": 10.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-40",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.62,
+        "lowPrice": 0.02,
+        "trendPrice": 0.72,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 15.25,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 7.41,
+        "lowPriceExPlus": 0.23,
+        "avg1": 0.15,
+        "avg7": 0.55,
+        "avg30": 0.57,
+        "reverseHoloAvg1": 15.25,
+        "reverseHoloAvg7": 7.71,
+        "reverseHoloAvg30": 8.01
       }
     }
   },
@@ -2933,6 +4933,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "41",
     "artist": "Katsura Tabata",
     "rarity": "Uncommon",
@@ -2946,12 +4963,45 @@
       "small": "https://images.pokemontcg.io/ex12/41.png",
       "large": "https://images.pokemontcg.io/ex12/41_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.21,
+          "mid": 0.35,
+          "high": 4.95,
+          "market": 0.47,
+          "directLow": 0.75
+        },
+        "reverseHolofoil": {
+          "low": 7.01,
+          "mid": 10.96,
+          "high": 36.83,
+          "market": 5.05,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-41",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.76,
+        "lowPrice": 0.02,
+        "trendPrice": 0.81,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 1.95,
+        "reverseHoloTrend": 5.4,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.22,
+        "avg7": 0.4,
+        "avg30": 0.64,
+        "reverseHoloAvg1": 3.3,
+        "reverseHoloAvg7": 3.47,
+        "reverseHoloAvg30": 4.72
       }
     }
   },
@@ -2997,6 +5047,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "42",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -3010,12 +5077,45 @@
       "small": "https://images.pokemontcg.io/ex12/42.png",
       "large": "https://images.pokemontcg.io/ex12/42_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.33,
+          "mid": 0.78,
+          "high": 4.95,
+          "market": 0.89,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 1.61,
+          "mid": 2.29,
+          "high": 19.99,
+          "market": 6.86,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-42",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.04,
+        "trendPrice": 0.46,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.74,
+        "reverseHoloLow": 3.5,
+        "reverseHoloTrend": 8.52,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.02,
+        "avg7": 0.36,
+        "avg30": 0.56,
+        "reverseHoloAvg1": 4.74,
+        "reverseHoloAvg7": 10.06,
+        "reverseHoloAvg30": 6.46
       }
     }
   },
@@ -3063,6 +5163,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "43",
     "artist": "Midori Harada",
     "rarity": "Uncommon",
@@ -3076,12 +5193,45 @@
       "small": "https://images.pokemontcg.io/ex12/43.png",
       "large": "https://images.pokemontcg.io/ex12/43_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.4,
+          "high": 8.81,
+          "market": 0.41,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 9.6,
+          "mid": 9.83,
+          "high": 11.99,
+          "market": 7.34,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-43",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.39,
+        "lowPrice": 0.02,
+        "trendPrice": 0.28,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.5,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 6.75,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.05,
+        "avg7": 0.27,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 1.5,
+        "reverseHoloAvg7": 4.37,
+        "reverseHoloAvg30": 5.11
       }
     }
   },
@@ -3144,6 +5294,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "44",
     "artist": "Aya Kusube",
     "rarity": "Uncommon",
@@ -3157,12 +5324,45 @@
       "small": "https://images.pokemontcg.io/ex12/44.png",
       "large": "https://images.pokemontcg.io/ex12/44_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.35,
+          "mid": 0.66,
+          "high": 4.95,
+          "market": 0.52,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.89,
+          "mid": 8,
+          "high": 8,
+          "market": 9.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-44",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.47,
+        "lowPrice": 0.02,
+        "trendPrice": 0.5,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 9.74,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 9.92,
+        "lowPriceExPlus": 0.2,
+        "avg1": 0.4,
+        "avg7": 0.51,
+        "avg30": 0.58,
+        "reverseHoloAvg1": 4.48,
+        "reverseHoloAvg7": 8.04,
+        "reverseHoloAvg30": 8.64
       }
     }
   },
@@ -3212,6 +5412,23 @@
         "value": "×2"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "45",
     "artist": "Kagemaru Himeno",
     "rarity": "Uncommon",
@@ -3225,12 +5442,45 @@
       "small": "https://images.pokemontcg.io/ex12/45.png",
       "large": "https://images.pokemontcg.io/ex12/45_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.29,
+          "mid": 0.75,
+          "high": 15,
+          "market": 0.87,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 7.23,
+          "mid": 9.95,
+          "high": 9.99,
+          "market": 11.73,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-45",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.26,
+        "lowPrice": 0.02,
+        "trendPrice": 2.67,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 6.54,
+        "reverseHoloLow": 3,
+        "reverseHoloTrend": 7.1,
+        "lowPriceExPlus": 0.02,
+        "avg1": 18,
+        "avg7": 1.78,
+        "avg30": 1.33,
+        "reverseHoloAvg1": 6.35,
+        "reverseHoloAvg7": 9.34,
+        "reverseHoloAvg30": 8.65
       }
     }
   },
@@ -3286,6 +5536,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "46",
     "artist": "Atsuko Nishida",
     "rarity": "Uncommon",
@@ -3299,12 +5566,45 @@
       "small": "https://images.pokemontcg.io/ex12/46.png",
       "large": "https://images.pokemontcg.io/ex12/46_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.68,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.16,
+          "mid": 7.43,
+          "high": 9.15,
+          "market": 5.83,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-46",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.48,
+        "lowPrice": 0.02,
+        "trendPrice": 0.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.91,
+        "reverseHoloTrend": 4.35,
+        "lowPriceExPlus": 0.19,
+        "avg1": 0.19,
+        "avg7": 0.48,
+        "avg30": 0.45,
+        "reverseHoloAvg1": 4.26,
+        "reverseHoloAvg7": 4.18,
+        "reverseHoloAvg30": 4.03
       }
     }
   },
@@ -3356,6 +5656,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "47",
     "artist": "Katsura Tabata",
     "rarity": "Uncommon",
@@ -3369,12 +5686,45 @@
       "small": "https://images.pokemontcg.io/ex12/47.png",
       "large": "https://images.pokemontcg.io/ex12/47_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.19,
+          "mid": 0.34,
+          "high": 8.81,
+          "market": 0.33,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.42,
+          "mid": 9,
+          "high": 10.99,
+          "market": 6.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-47",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.6,
+        "lowPrice": 0.04,
+        "trendPrice": 0.77,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.75,
+        "reverseHoloLow": 1.5,
+        "reverseHoloTrend": 6.58,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.05,
+        "avg7": 0.96,
+        "avg30": 0.41,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 5.91,
+        "reverseHoloAvg30": 5.93
       }
     }
   },
@@ -3430,6 +5780,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "48",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -3443,12 +5810,45 @@
       "small": "https://images.pokemontcg.io/ex12/48.png",
       "large": "https://images.pokemontcg.io/ex12/48_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.31,
+          "high": 4.95,
+          "market": 0.33,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.5,
+          "mid": 7.06,
+          "high": 9.99,
+          "market": 5.19,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-48",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.43,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.34,
+        "reverseHoloLow": 0.95,
+        "reverseHoloTrend": 2.45,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.46,
+        "avg7": 0.25,
+        "avg30": 0.3,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 2.69,
+        "reverseHoloAvg30": 3.54
       }
     }
   },
@@ -3487,6 +5887,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "49",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -3500,12 +5917,45 @@
       "small": "https://images.pokemontcg.io/ex12/49.png",
       "large": "https://images.pokemontcg.io/ex12/49_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.11,
+          "mid": 0.33,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": 0.23
+        },
+        "reverseHolofoil": {
+          "low": 4.27,
+          "mid": 4.28,
+          "high": 6.45,
+          "market": 4.28,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-49",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.63,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.74,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 3.61,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.12,
+        "avg7": 0.18,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 2.99,
+        "reverseHoloAvg7": 3.47,
+        "reverseHoloAvg30": 4.76
       }
     }
   },
@@ -3554,6 +6004,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "50",
     "artist": "Sachiko Adachi",
     "rarity": "Common",
@@ -3567,12 +6034,45 @@
       "small": "https://images.pokemontcg.io/ex12/50.png",
       "large": "https://images.pokemontcg.io/ex12/50_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.3,
+          "high": 4.95,
+          "market": 0.29,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.53,
+          "mid": 4.59,
+          "high": 6.97,
+          "market": 4.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-50",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.23,
+        "lowPrice": 0.02,
+        "trendPrice": 0.2,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.45,
+        "reverseHoloLow": 0.9,
+        "reverseHoloTrend": 3.99,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.15,
+        "avg7": 0.26,
+        "avg30": 0.21,
+        "reverseHoloAvg1": 2.45,
+        "reverseHoloAvg7": 3.95,
+        "reverseHoloAvg30": 3.42
       }
     }
   },
@@ -3621,6 +6121,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "51",
     "artist": "Sachiko Adachi",
     "rarity": "Common",
@@ -3634,12 +6151,45 @@
       "small": "https://images.pokemontcg.io/ex12/51.png",
       "large": "https://images.pokemontcg.io/ex12/51_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.19,
+          "mid": 0.4,
+          "high": 4.95,
+          "market": 0.46,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.35,
+          "mid": 4.86,
+          "high": 10.95,
+          "market": 4.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-51",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.94,
+        "reverseHoloLow": 0.6,
+        "reverseHoloTrend": 2.1,
+        "lowPriceExPlus": 0.03,
+        "avg1": 0.09,
+        "avg7": 0.27,
+        "avg30": 0.18,
+        "reverseHoloAvg1": 0.79,
+        "reverseHoloAvg7": 1.79,
+        "reverseHoloAvg30": 2.15
       }
     }
   },
@@ -3693,6 +6243,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "52",
     "artist": "Hajime Kusajima",
     "rarity": "Common",
@@ -3706,12 +6273,45 @@
       "small": "https://images.pokemontcg.io/ex12/52.png",
       "large": "https://images.pokemontcg.io/ex12/52_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.5,
+          "high": 4.95,
+          "market": 0.54,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 9.08,
+          "mid": 15.5,
+          "high": 29.99,
+          "market": 18.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-52",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 11.79,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 14.56,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.24,
+        "avg7": 0.25,
+        "avg30": 0.28,
+        "reverseHoloAvg1": 35,
+        "reverseHoloAvg7": 13.13,
+        "reverseHoloAvg30": 9.08
       }
     }
   },
@@ -3751,6 +6351,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "53",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -3764,12 +6381,45 @@
       "small": "https://images.pokemontcg.io/ex12/53.png",
       "large": "https://images.pokemontcg.io/ex12/53_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.11,
+          "mid": 0.25,
+          "high": 5.32,
+          "market": 0.22,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 3.43,
+          "mid": 4.03,
+          "high": 4.99,
+          "market": 4.94,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-53",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.18,
+        "lowPrice": 0.02,
+        "trendPrice": 0.26,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.16,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 3.71,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.23,
+        "avg7": 0.21,
+        "avg30": 0.28,
+        "reverseHoloAvg1": 4.99,
+        "reverseHoloAvg7": 3.74,
+        "reverseHoloAvg30": 3.63
       }
     }
   },
@@ -3818,6 +6468,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "54",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -3831,12 +6498,45 @@
       "small": "https://images.pokemontcg.io/ex12/54.png",
       "large": "https://images.pokemontcg.io/ex12/54_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.25,
+          "mid": 0.43,
+          "high": 5.3,
+          "market": 0.45,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.52,
+          "mid": 12.22,
+          "high": 17.81,
+          "market": 8.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-54",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.31,
+        "lowPrice": 0.02,
+        "trendPrice": 0.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.41,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 7.07,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.34,
+        "avg7": 0.51,
+        "avg30": 0.33,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 3.71,
+        "reverseHoloAvg30": 7.6
       }
     }
   },
@@ -3885,6 +6585,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "55",
     "artist": "Kanako Eo",
     "rarity": "Common",
@@ -3898,12 +6615,45 @@
       "small": "https://images.pokemontcg.io/ex12/55.png",
       "large": "https://images.pokemontcg.io/ex12/55_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.49,
+          "mid": 1.05,
+          "high": 89.11,
+          "market": 1.52,
+          "directLow": 1.05
+        },
+        "reverseHolofoil": {
+          "low": 9.99,
+          "mid": 11.99,
+          "high": 27,
+          "market": 16.35,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-55",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.28,
+        "lowPrice": 0.02,
+        "trendPrice": 0.23,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 16.49,
+        "reverseHoloLow": 2.99,
+        "reverseHoloTrend": 13.53,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.45,
+        "avg7": 0.37,
+        "avg30": 0.49,
+        "reverseHoloAvg1": 32,
+        "reverseHoloAvg7": 14.97,
+        "reverseHoloAvg30": 11.81
       }
     }
   },
@@ -3954,6 +6704,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "56",
     "artist": "Atsuko Nishida",
     "rarity": "Common",
@@ -3967,12 +6734,45 @@
       "small": "https://images.pokemontcg.io/ex12/56.png",
       "large": "https://images.pokemontcg.io/ex12/56_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.34,
+          "high": 6.48,
+          "market": 0.36,
+          "directLow": 0.27
+        },
+        "reverseHolofoil": {
+          "low": 3.2,
+          "mid": 3.85,
+          "high": 19.99,
+          "market": 3.56,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-56",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.13,
+        "lowPrice": 0.02,
+        "trendPrice": 0.06,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.8,
+        "reverseHoloLow": 0.87,
+        "reverseHoloTrend": 0.79,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.14,
+        "avg7": 0.16,
+        "avg30": 0.2,
+        "reverseHoloAvg1": 1.25,
+        "reverseHoloAvg7": 1.37,
+        "reverseHoloAvg30": 2.63
       }
     }
   },
@@ -4011,6 +6811,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "57",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -4024,12 +6841,45 @@
       "small": "https://images.pokemontcg.io/ex12/57.png",
       "large": "https://images.pokemontcg.io/ex12/57_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.31,
+          "directLow": 0.2
+        },
+        "reverseHolofoil": {
+          "low": 4.32,
+          "mid": 5.47,
+          "high": 6.62,
+          "market": 5.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-57",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.94,
+        "reverseHoloLow": 0.15,
+        "reverseHoloTrend": 3.43,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.1,
+        "avg7": 0.12,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 4.5,
+        "reverseHoloAvg7": 2.59,
+        "reverseHoloAvg30": 3.01
       }
     }
   },
@@ -4075,6 +6925,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "58",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -4088,12 +6955,45 @@
       "small": "https://images.pokemontcg.io/ex12/58.png",
       "large": "https://images.pokemontcg.io/ex12/58_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.48,
+          "mid": 1.14,
+          "high": 7.98,
+          "market": 1.1,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.06,
+          "mid": 15.28,
+          "high": 18.88,
+          "market": 11.31,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-58",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.44,
+        "lowPrice": 0.02,
+        "trendPrice": 0.63,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.11,
+        "reverseHoloLow": 1.19,
+        "reverseHoloTrend": 4.17,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.09,
+        "avg7": 0.63,
+        "avg30": 0.53,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 4.16,
+        "reverseHoloAvg30": 4.12
       }
     }
   },
@@ -4138,6 +7038,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "59",
     "artist": "Hiroki Fuchino",
     "rarity": "Common",
@@ -4151,12 +7068,45 @@
       "small": "https://images.pokemontcg.io/ex12/59.png",
       "large": "https://images.pokemontcg.io/ex12/59_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.19,
+          "mid": 0.3,
+          "high": 5.33,
+          "market": 0.29,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6,
+          "mid": 7.66,
+          "high": 12.43,
+          "market": 6.7,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-59",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.17,
+        "reverseHoloLow": 0.9,
+        "reverseHoloTrend": 3.69,
+        "lowPriceExPlus": 0.09,
+        "avg1": 2.27,
+        "avg7": 0.47,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 4.12,
+        "reverseHoloAvg30": 3.49
       }
     }
   },
@@ -4204,6 +7154,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "60",
     "artist": "Kenkichi Toyama",
     "rarity": "Common",
@@ -4217,12 +7184,45 @@
       "small": "https://images.pokemontcg.io/ex12/60.png",
       "large": "https://images.pokemontcg.io/ex12/60_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.94,
+          "mid": 1.95,
+          "high": 4.62,
+          "market": 2.34,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 13.95,
+          "mid": 15.48,
+          "high": 17,
+          "market": 17.71,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-60",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.46,
+        "lowPrice": 0.05,
+        "trendPrice": 0.43,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.7,
+        "reverseHoloLow": 0.75,
+        "reverseHoloTrend": 7.97,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.19,
+        "avg7": 0.45,
+        "avg30": 0.56,
+        "reverseHoloAvg1": 8,
+        "reverseHoloAvg7": 7.05,
+        "reverseHoloAvg30": 7.39
       }
     }
   },
@@ -4270,6 +7270,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "61",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -4283,12 +7300,45 @@
       "small": "https://images.pokemontcg.io/ex12/61.png",
       "large": "https://images.pokemontcg.io/ex12/61_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.28,
+          "mid": 0.59,
+          "high": 4.95,
+          "market": 0.64,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.53,
+          "mid": 8.97,
+          "high": 9.15,
+          "market": 6.09,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-61",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.29,
+        "lowPrice": 0.02,
+        "trendPrice": 0.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.66,
+        "reverseHoloLow": 0.89,
+        "reverseHoloTrend": 3.04,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.05,
+        "avg7": 0.19,
+        "avg30": 0.28,
+        "reverseHoloAvg1": 4,
+        "reverseHoloAvg7": 3.28,
+        "reverseHoloAvg30": 2.97
       }
     }
   },
@@ -4337,6 +7387,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "62",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -4350,12 +7417,45 @@
       "small": "https://images.pokemontcg.io/ex12/62.png",
       "large": "https://images.pokemontcg.io/ex12/62_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.45,
+          "high": 4.95,
+          "market": 0.45,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.14,
+          "mid": 8,
+          "high": 9.99,
+          "market": 4.47,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-62",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.02,
+        "trendPrice": 0.52,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.22,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 3.42,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.3,
+        "avg7": 0.46,
+        "avg30": 0.42,
+        "reverseHoloAvg1": 0.39,
+        "reverseHoloAvg7": 3.39,
+        "reverseHoloAvg30": 3.67
       }
     }
   },
@@ -4410,6 +7510,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "63",
     "artist": "Mitsuhiro Arita",
     "rarity": "Common",
@@ -4423,12 +7540,45 @@
       "small": "https://images.pokemontcg.io/ex12/63.png",
       "large": "https://images.pokemontcg.io/ex12/63_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.29,
+          "high": 75.03,
+          "market": 0.36,
+          "directLow": 0.31
+        },
+        "reverseHolofoil": {
+          "low": 4.95,
+          "mid": 5.21,
+          "high": 29.99,
+          "market": 4.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-63",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.15,
+        "lowPrice": 0.02,
+        "trendPrice": 0.07,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.65,
+        "reverseHoloLow": 0.5,
+        "reverseHoloTrend": 4.4,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.19,
+        "avg30": 0.22,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 3.96,
+        "reverseHoloAvg30": 3.54
       }
     }
   },
@@ -4477,6 +7627,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "64",
     "artist": "Satoshi Ohta",
     "rarity": "Common",
@@ -4490,12 +7657,45 @@
       "small": "https://images.pokemontcg.io/ex12/64.png",
       "large": "https://images.pokemontcg.io/ex12/64_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.2,
+          "mid": 0.44,
+          "high": 8.81,
+          "market": 0.54,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.24,
+          "mid": 7.06,
+          "high": 18.53,
+          "market": 8.17,
+          "directLow": 5.23
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-64",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.37,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 5.31,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.41,
+        "avg7": 0.32,
+        "avg30": 0.42,
+        "reverseHoloAvg1": 3.12,
+        "reverseHoloAvg7": 6.54,
+        "reverseHoloAvg30": 4.67
       }
     }
   },
@@ -4535,6 +7735,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "65",
     "artist": "Miki Tanaka",
     "rarity": "Common",
@@ -4548,12 +7765,45 @@
       "small": "https://images.pokemontcg.io/ex12/65.png",
       "large": "https://images.pokemontcg.io/ex12/65_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.15,
+          "mid": 0.38,
+          "high": 4.95,
+          "market": 0.39,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 8.03,
+          "mid": 19.99,
+          "high": 29.01,
+          "market": 6.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-65",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.3,
+        "lowPrice": 0.02,
+        "trendPrice": 0.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.99,
+        "reverseHoloLow": 0.99,
+        "reverseHoloTrend": 2.41,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.46,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 1.99,
+        "reverseHoloAvg7": 2.81,
+        "reverseHoloAvg30": 4.16
       }
     }
   },
@@ -4592,6 +7842,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "66",
     "artist": "Tomoaki Imakuni",
     "rarity": "Common",
@@ -4605,12 +7872,45 @@
       "small": "https://images.pokemontcg.io/ex12/66.png",
       "large": "https://images.pokemontcg.io/ex12/66_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.26,
+          "high": 4.95,
+          "market": 0.26,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2,
+          "mid": 3.18,
+          "high": 5.28,
+          "market": 4.63,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-66",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.33,
+        "lowPrice": 0.02,
+        "trendPrice": 0.37,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.16,
+        "reverseHoloLow": 0.66,
+        "reverseHoloTrend": 3.65,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.17,
+        "avg7": 0.29,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 3.16,
+        "reverseHoloAvg7": 3.52,
+        "reverseHoloAvg30": 3.57
       }
     }
   },
@@ -4659,6 +7959,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "67",
     "artist": "Tomokazu Komiya",
     "rarity": "Common",
@@ -4672,12 +7989,45 @@
       "small": "https://images.pokemontcg.io/ex12/67.png",
       "large": "https://images.pokemontcg.io/ex12/67_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.1,
+          "mid": 0.41,
+          "high": 4.95,
+          "market": 0.46,
+          "directLow": 0.25
+        },
+        "reverseHolofoil": {
+          "low": 2.99,
+          "mid": 8.44,
+          "high": 12,
+          "market": 3.6,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-67",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 4.19,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 4,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.14,
+        "avg7": 0.24,
+        "avg30": 0.27,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 3.72,
+        "reverseHoloAvg30": 3.99
       }
     }
   },
@@ -4726,6 +8076,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "68",
     "artist": "Midori Harada",
     "rarity": "Common",
@@ -4739,12 +8106,45 @@
       "small": "https://images.pokemontcg.io/ex12/68.png",
       "large": "https://images.pokemontcg.io/ex12/68_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.34,
+          "high": 4.95,
+          "market": 0.34,
+          "directLow": 0.25
+        },
+        "reverseHolofoil": {
+          "low": 1.5,
+          "mid": 15.75,
+          "high": 29.99,
+          "market": 7.83,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-68",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.22,
+        "lowPrice": 0.02,
+        "trendPrice": 0.12,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.57,
+        "reverseHoloLow": 0.87,
+        "reverseHoloTrend": 4.77,
+        "lowPriceExPlus": 0.09,
+        "avg1": 0.08,
+        "avg7": 0.23,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 4.22,
+        "reverseHoloAvg30": 4.32
       }
     }
   },
@@ -4797,6 +8197,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "69",
     "artist": "Sumiyoshi Kizuki",
     "rarity": "Common",
@@ -4810,12 +8227,45 @@
       "small": "https://images.pokemontcg.io/ex12/69.png",
       "large": "https://images.pokemontcg.io/ex12/69_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.24,
+          "mid": 0.49,
+          "high": 22.69,
+          "market": 0.58,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 6.25,
+          "mid": 10.56,
+          "high": 14.99,
+          "market": 9.77,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-69",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.25,
+        "lowPrice": 0.02,
+        "trendPrice": 0.25,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.73,
+        "reverseHoloLow": 0.3,
+        "reverseHoloTrend": 5.01,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.3,
+        "avg7": 0.23,
+        "avg30": 0.29,
+        "reverseHoloAvg1": 6.98,
+        "reverseHoloAvg7": 5.04,
+        "reverseHoloAvg30": 4.15
       }
     }
   },
@@ -4862,6 +8312,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "70",
     "artist": "Yukiko Baba",
     "rarity": "Common",
@@ -4875,12 +8342,45 @@
       "small": "https://images.pokemontcg.io/ex12/70.png",
       "large": "https://images.pokemontcg.io/ex12/70_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.22,
+          "mid": 0.39,
+          "high": 4.95,
+          "market": 0.41,
+          "directLow": 0.4
+        },
+        "reverseHolofoil": {
+          "low": 2.6,
+          "mid": 4.48,
+          "high": 5.33,
+          "market": 3.61,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-70",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.17,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 8.15,
+        "reverseHoloLow": 0.75,
+        "reverseHoloTrend": 5.37,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.5,
+        "avg7": 0.16,
+        "avg30": 0.26,
+        "reverseHoloAvg1": 1.95,
+        "reverseHoloAvg7": 5.96,
+        "reverseHoloAvg30": 4.27
       }
     }
   },
@@ -4926,6 +8426,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "71",
     "artist": "Yuka Morii",
     "rarity": "Common",
@@ -4939,12 +8456,45 @@
       "small": "https://images.pokemontcg.io/ex12/71.png",
       "large": "https://images.pokemontcg.io/ex12/71_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.49,
+          "mid": 0.88,
+          "high": 4.95,
+          "market": 0.83,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 7.98,
+          "mid": 12,
+          "high": 19.97,
+          "market": 6.59,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-71",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.39,
+        "lowPrice": 0.02,
+        "trendPrice": 0.42,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 7.18,
+        "reverseHoloLow": 1.49,
+        "reverseHoloTrend": 6.34,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.29,
+        "avg7": 0.5,
+        "avg30": 0.32,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 6.13,
+        "reverseHoloAvg30": 3.93
       }
     }
   },
@@ -4959,6 +8509,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "At any time between turns, each player puts 1 damage counter on his or her Pokémon that has a Poké-Power."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "72",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -4969,12 +8536,45 @@
       "small": "https://images.pokemontcg.io/ex12/72.png",
       "large": "https://images.pokemontcg.io/ex12/72_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 2.87,
+          "mid": 4.1,
+          "high": 5.45,
+          "market": 4.02,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 5.99,
+          "mid": 8.24,
+          "high": 12.53,
+          "market": 8.07,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-72",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.89,
+        "lowPrice": 0.2,
+        "trendPrice": 0.87,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 2,
+        "reverseHoloTrend": 6.19,
+        "lowPriceExPlus": 0.65,
+        "avg1": 1,
+        "avg7": 0.9,
+        "avg30": 1.28,
+        "reverseHoloAvg1": 7,
+        "reverseHoloAvg7": 4.55,
+        "reverseHoloAvg30": 5.94
       }
     }
   },
@@ -4989,6 +8589,23 @@
       "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.",
       "Draw 3 cards. Your opponent may also draw a card."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "73",
     "artist": "Ken Sugimori",
     "rarity": "Uncommon",
@@ -4999,12 +8616,45 @@
       "small": "https://images.pokemontcg.io/ex12/73.png",
       "large": "https://images.pokemontcg.io/ex12/73_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.16,
+          "mid": 0.66,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": 0.16
+        },
+        "reverseHolofoil": {
+          "low": 26.63,
+          "mid": 39.06,
+          "high": 99.99,
+          "market": 38.41,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-73",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.09,
+        "lowPrice": 0.02,
+        "trendPrice": 0.02,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 26.33,
+        "reverseHoloLow": 4.99,
+        "reverseHoloTrend": 28.64,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.04,
+        "avg7": 0.09,
+        "avg30": 0.16,
+        "reverseHoloAvg1": 23,
+        "reverseHoloAvg7": 32.74,
+        "reverseHoloAvg30": 22.6
       }
     }
   },
@@ -5019,6 +8669,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "Put 4 damage counters instead of 2 on each Burned Pokémon between turns. The Special Condition Burned can't be removed by evolving or devolving the Burned Pokémon."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "74",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -5029,12 +8696,45 @@
       "small": "https://images.pokemontcg.io/ex12/74.png",
       "large": "https://images.pokemontcg.io/ex12/74_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.45,
+          "mid": 0.97,
+          "high": 2.21,
+          "market": 0.94,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.99,
+          "mid": 4.1,
+          "high": 11.18,
+          "market": 4.15,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-74",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.36,
+        "lowPrice": 0.03,
+        "trendPrice": 0.47,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 3.75,
+        "reverseHoloLow": 1,
+        "reverseHoloTrend": 4.33,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.3,
+        "avg7": 0.4,
+        "avg30": 0.59,
+        "reverseHoloAvg1": 3,
+        "reverseHoloAvg7": 4.24,
+        "reverseHoloAvg30": 4.48
       }
     }
   },
@@ -5050,6 +8750,23 @@
       "Each player can't have more than 3 Benched Pokémon.",
       "When Giant Stump comes into play, each player discards Benched Pokémon and any cards attached to them until he or she has 3 Benched Pokémon. (You discard your Pokémon first.)"
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "75",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -5060,12 +8777,45 @@
       "small": "https://images.pokemontcg.io/ex12/75.png",
       "large": "https://images.pokemontcg.io/ex12/75_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.5,
+          "mid": 1.18,
+          "high": 2.41,
+          "market": 1.16,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 4.4,
+          "mid": 4.97,
+          "high": 5.97,
+          "market": 5.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-75",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.85,
+        "lowPrice": 0.07,
+        "trendPrice": 0.54,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5.82,
+        "reverseHoloLow": 0.9,
+        "reverseHoloTrend": 4.97,
+        "lowPriceExPlus": 0.22,
+        "avg1": 0.2,
+        "avg7": 0.67,
+        "avg30": 0.95,
+        "reverseHoloAvg1": 12,
+        "reverseHoloAvg7": 5.86,
+        "reverseHoloAvg30": 4.17
       }
     }
   },
@@ -5080,6 +8830,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "Once during each player's turn, if the player has no Special Energy cards in his or her discard pile, that player searches his or her discard pile for a basic Energy card, show it to the opponent, and put it into his or her hand."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "76",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -5090,12 +8857,45 @@
       "small": "https://images.pokemontcg.io/ex12/76.png",
       "large": "https://images.pokemontcg.io/ex12/76_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.45,
+          "mid": 0.82,
+          "high": 1.99,
+          "market": 0.95,
+          "directLow": 0.59
+        },
+        "reverseHolofoil": {
+          "low": 1.99,
+          "mid": 3.32,
+          "high": 5.33,
+          "market": 3.3,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-76",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.44,
+        "lowPrice": 0.05,
+        "trendPrice": 0.32,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.5,
+        "reverseHoloLow": 1.49,
+        "reverseHoloTrend": 5.39,
+        "lowPriceExPlus": 0.05,
+        "avg1": 0.05,
+        "avg7": 0.32,
+        "avg30": 0.63,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 3.38,
+        "reverseHoloAvg30": 5.07
       }
     }
   },
@@ -5110,6 +8910,23 @@
       "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
       "Once during each player's turn, that player may put an Omanyte, Kabuto, Aerodactyl, Aerodactyl ex, Lileep, or Anorith onto his or her Bench from his or her hand. Treat the new Benched Pokémon as Basic Pokémon."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "77",
     "artist": "Ryo Ueda",
     "rarity": "Uncommon",
@@ -5120,12 +8937,45 @@
       "small": "https://images.pokemontcg.io/ex12/77.png",
       "large": "https://images.pokemontcg.io/ex12/77_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.22,
+          "mid": 0.55,
+          "high": 4.95,
+          "market": 0.62,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2,
+          "mid": 2.05,
+          "high": 5.1,
+          "market": 2.05,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-77",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.5,
+        "lowPrice": 0.02,
+        "trendPrice": 0.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 5,
+        "reverseHoloLow": 0.75,
+        "reverseHoloTrend": 4.41,
+        "lowPriceExPlus": 0.1,
+        "avg1": 0.3,
+        "avg7": 0.33,
+        "avg30": 0.39,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 3.66,
+        "reverseHoloAvg30": 3.69
       }
     }
   },
@@ -5147,6 +8997,23 @@
         "type": "Poké-Body"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "78",
     "artist": "Ryo Ueda",
     "rarity": "Common",
@@ -5157,12 +9024,45 @@
       "small": "https://images.pokemontcg.io/ex12/78.png",
       "large": "https://images.pokemontcg.io/ex12/78_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.08,
+          "mid": 0.28,
+          "high": 4.95,
+          "market": 0.28,
+          "directLow": 0.11
+        },
+        "reverseHolofoil": {
+          "low": 1.25,
+          "mid": 2.25,
+          "high": 7,
+          "market": 1.85,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-78",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.1,
+        "lowPrice": 0.02,
+        "trendPrice": 0.15,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.1,
+        "reverseHoloLow": 0.49,
+        "reverseHoloTrend": 1.63,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.02,
+        "avg7": 0.09,
+        "avg30": 0.18,
+        "reverseHoloAvg1": 0.8,
+        "reverseHoloAvg7": 1.05,
+        "reverseHoloAvg30": 1.37
       }
     }
   },
@@ -5177,6 +9077,23 @@
     "rules": [
       "Play Mysterious Fossil as if it were a Basic Pokémon. While in play, Mysterious Fossil counts as a Colorless Pokémon (as well as a Trainer card). Mysterious Fossil has no attacks of its own, can't retreat, and can't be affected by any Special Conditions. If Mysterious Fossil is Knocked Out, it doesn't count as a Knocked Out Pokémon. (Discard it anyway.) At any time during your turn before your attack, you may discard Mysterious Fossil from play."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "79",
     "artist": "Ryo Ueda",
     "rarity": "Common",
@@ -5187,12 +9104,45 @@
       "small": "https://images.pokemontcg.io/ex12/79.png",
       "large": "https://images.pokemontcg.io/ex12/79_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.13,
+          "mid": 0.32,
+          "high": 4.95,
+          "market": 0.33,
+          "directLow": 0.1
+        },
+        "reverseHolofoil": {
+          "low": 1.19,
+          "mid": 2.32,
+          "high": 8.48,
+          "market": 2.37,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-79",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.2,
+        "lowPrice": 0.02,
+        "trendPrice": 0.19,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 1.83,
+        "reverseHoloLow": 0.29,
+        "reverseHoloTrend": 2.26,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.3,
+        "avg7": 0.17,
+        "avg30": 0.19,
+        "reverseHoloAvg1": 1.49,
+        "reverseHoloAvg7": 2.56,
+        "reverseHoloAvg30": 2.12
       }
     }
   },
@@ -5214,6 +9164,23 @@
         "type": "Poké-Body"
       }
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "80",
     "artist": "Ryo Ueda",
     "rarity": "Common",
@@ -5224,12 +9191,45 @@
       "small": "https://images.pokemontcg.io/ex12/80.png",
       "large": "https://images.pokemontcg.io/ex12/80_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.01,
+          "mid": 0.25,
+          "high": 4.95,
+          "market": 0.25,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 1.39,
+          "mid": 2,
+          "high": 3.87,
+          "market": 1.88,
+          "directLow": 1.73
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-80",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.11,
+        "lowPrice": 0.02,
+        "trendPrice": 0.14,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.53,
+        "reverseHoloLow": 0.36,
+        "reverseHoloTrend": 3,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.14,
+        "avg7": 0.09,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 2.5,
+        "reverseHoloAvg7": 2.13,
+        "reverseHoloAvg30": 2.37
       }
     }
   },
@@ -5243,6 +9243,23 @@
     "rules": [
       "Attach Rainbow Energy to 1 of your Pokémon. While in play, Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.) When you attach this card from your hand to 1 of your Pokémon, put 1 damage counter on that Pokémon."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "81",
     "artist": "Takumi Akabane",
     "rarity": "Rare",
@@ -5254,12 +9271,45 @@
       "small": "https://images.pokemontcg.io/ex12/81.png",
       "large": "https://images.pokemontcg.io/ex12/81_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.99,
+          "mid": 2.28,
+          "high": 5.55,
+          "market": 2.27,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 7.5,
+          "mid": 9.97,
+          "high": 17,
+          "market": 7.65,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-81",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 1.34,
+        "lowPrice": 0.2,
+        "trendPrice": 1.45,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0.2,
+        "reverseHoloTrend": 6.54,
+        "lowPriceExPlus": 0.9,
+        "avg1": 2.23,
+        "avg7": 1.18,
+        "avg30": 1.26,
+        "reverseHoloAvg1": 5,
+        "reverseHoloAvg7": 6.77,
+        "reverseHoloAvg30": 7.07
       }
     }
   },
@@ -5273,6 +9323,23 @@
     "rules": [
       "React Energy provides Colorless Energy."
     ],
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "82",
     "artist": "Takumi Akabane",
     "rarity": "Uncommon",
@@ -5283,12 +9350,45 @@
       "small": "https://images.pokemontcg.io/ex12/82.png",
       "large": "https://images.pokemontcg.io/ex12/82_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "normal": {
+          "low": 0.21,
+          "mid": 0.6,
+          "high": 4.95,
+          "market": 0.66,
+          "directLow": null
+        },
+        "reverseHolofoil": {
+          "low": 2.29,
+          "mid": 3,
+          "high": 7.49,
+          "market": 2.81,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-82",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 0.19,
+        "lowPrice": 0.02,
+        "trendPrice": 0.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 2.98,
+        "reverseHoloLow": 0.66,
+        "reverseHoloTrend": 2.22,
+        "lowPriceExPlus": 0.04,
+        "avg1": 0.29,
+        "avg7": 0.31,
+        "avg30": 0.24,
+        "reverseHoloAvg1": 3.52,
+        "reverseHoloAvg7": 2.4,
+        "reverseHoloAvg30": 3.35
       }
     }
   },
@@ -5349,6 +9449,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "83",
     "artist": "Hikaru Koike",
     "rarity": "Rare Holo EX",
@@ -5362,12 +9479,38 @@
       "small": "https://images.pokemontcg.io/ex12/83.png",
       "large": "https://images.pokemontcg.io/ex12/83_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 300,
+          "mid": 325,
+          "high": 350,
+          "market": 275,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-83",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 87.25,
+        "lowPrice": 18,
+        "trendPrice": 68.35,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 48.83,
+        "lowPriceExPlus": 80,
+        "avg1": 109,
+        "avg7": 72.12,
+        "avg30": 84.93,
+        "reverseHoloAvg1": 49.99,
+        "reverseHoloAvg7": 33.14,
+        "reverseHoloAvg30": 32.4
       }
     }
   },
@@ -5429,6 +9572,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "84",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo EX",
@@ -5442,12 +9602,38 @@
       "small": "https://images.pokemontcg.io/ex12/84.png",
       "large": "https://images.pokemontcg.io/ex12/84_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 45,
+          "mid": 74.99,
+          "high": 75.5,
+          "market": 95.97,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-84",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 25.93,
+        "lowPrice": 17.5,
+        "trendPrice": 36.82,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 15.9,
+        "lowPriceExPlus": 43.98,
+        "avg1": 16.99,
+        "avg7": 30.17,
+        "avg30": 33.34,
+        "reverseHoloAvg1": 13.49,
+        "reverseHoloAvg7": 15.06,
+        "reverseHoloAvg30": 16.32
       }
     }
   },
@@ -5502,6 +9688,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "85",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo EX",
@@ -5515,12 +9718,38 @@
       "small": "https://images.pokemontcg.io/ex12/85.png",
       "large": "https://images.pokemontcg.io/ex12/85_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 64.99,
+          "mid": 86.42,
+          "high": 107.07,
+          "market": 95.88,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-85",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.67,
+        "lowPrice": 14,
+        "trendPrice": 33.86,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 21.86,
+        "lowPriceExPlus": 14,
+        "avg1": 40,
+        "avg7": 42.98,
+        "avg30": 32.61,
+        "reverseHoloAvg1": 23,
+        "reverseHoloAvg7": 23.49,
+        "reverseHoloAvg30": 16.94
       }
     }
   },
@@ -5580,6 +9809,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "86",
     "artist": "Mitsuhiro Arita",
     "rarity": "Rare Holo EX",
@@ -5593,12 +9839,38 @@
       "small": "https://images.pokemontcg.io/ex12/86.png",
       "large": "https://images.pokemontcg.io/ex12/86_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 16.99,
+          "mid": 28.5,
+          "high": 40,
+          "market": 36.27,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-86",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 17.49,
+        "lowPrice": 6.5,
+        "trendPrice": 46.76,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 13.92,
+        "lowPriceExPlus": 27,
+        "avg1": 24.99,
+        "avg7": 37.2,
+        "avg30": 44.43,
+        "reverseHoloAvg1": 20,
+        "reverseHoloAvg7": 18.55,
+        "reverseHoloAvg30": 12.7
       }
     }
   },
@@ -5667,6 +9939,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 2,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "87",
     "artist": "Ryo Ueda",
     "rarity": "Rare Holo EX",
@@ -5680,12 +9969,38 @@
       "small": "https://images.pokemontcg.io/ex12/87.png",
       "large": "https://images.pokemontcg.io/ex12/87_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 68,
+          "mid": 75,
+          "high": 149.99,
+          "market": 99.57,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-87",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 33.63,
+        "lowPrice": 9.9,
+        "trendPrice": 41.62,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 18.92,
+        "lowPriceExPlus": 50,
+        "avg1": 15,
+        "avg7": 29.72,
+        "avg30": 32.25,
+        "reverseHoloAvg1": 10,
+        "reverseHoloAvg7": 16.06,
+        "reverseHoloAvg30": 16.51
       }
     }
   },
@@ -5733,6 +10048,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "88",
     "artist": "Ryo Ueda",
     "rarity": "Rare Holo EX",
@@ -5746,12 +10078,38 @@
       "small": "https://images.pokemontcg.io/ex12/88.png",
       "large": "https://images.pokemontcg.io/ex12/88_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 98.68,
+          "mid": 172.74,
+          "high": 249.99,
+          "market": 188.82,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-88",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 140.16,
+        "lowPrice": 9,
+        "trendPrice": 81.29,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 59.61,
+        "lowPriceExPlus": 30,
+        "avg1": 360,
+        "avg7": 101.69,
+        "avg30": 81.03,
+        "reverseHoloAvg1": 35,
+        "reverseHoloAvg7": 52.87,
+        "reverseHoloAvg30": 49.78
       }
     }
   },
@@ -5818,6 +10176,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "89",
     "artist": "Kimiya Masago",
     "rarity": "Rare Holo EX",
@@ -5831,12 +10206,38 @@
       "small": "https://images.pokemontcg.io/ex12/89.png",
       "large": "https://images.pokemontcg.io/ex12/89_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 55,
+          "mid": 62,
+          "high": 95.99,
+          "market": 53.01,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-89",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 31.91,
+        "lowPrice": 7.5,
+        "trendPrice": 29.93,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 19.25,
+        "lowPriceExPlus": 29,
+        "avg1": 5.99,
+        "avg7": 29,
+        "avg30": 23.82,
+        "reverseHoloAvg1": 45,
+        "reverseHoloAvg7": 17.94,
+        "reverseHoloAvg30": 12.37
       }
     }
   },
@@ -5889,6 +10290,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "90",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo Star",
@@ -5902,12 +10320,38 @@
       "small": "https://images.pokemontcg.io/ex12/90.png",
       "large": "https://images.pokemontcg.io/ex12/90_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-90",
+      "updatedAt": "2025/07/03",
+      "prices": {
+        "holofoil": {
+          "low": 660,
+          "mid": 660,
+          "high": 660,
+          "market": 399,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-90",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 383.15,
+        "lowPrice": 300,
+        "trendPrice": 540.9,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 93.16,
+        "lowPriceExPlus": 450,
+        "avg1": 299.45,
+        "avg7": 351.35,
+        "avg30": 381.73,
+        "reverseHoloAvg1": 100,
+        "reverseHoloAvg7": 93.16,
+        "reverseHoloAvg30": 69.76
       }
     }
   },
@@ -5960,6 +10404,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "91",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo Star",
@@ -5973,12 +10434,38 @@
       "small": "https://images.pokemontcg.io/ex12/91.png",
       "large": "https://images.pokemontcg.io/ex12/91_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-91",
+      "updatedAt": "2025/07/17",
+      "prices": {
+        "holofoil": {
+          "low": 349.99,
+          "mid": 349.99,
+          "high": 349.99,
+          "market": 504.98,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-91",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 390.87,
+        "lowPrice": 150,
+        "trendPrice": 408.69,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 106.69,
+        "lowPriceExPlus": 450,
+        "avg1": 538.7,
+        "avg7": 332.79,
+        "avg30": 352.11,
+        "reverseHoloAvg1": 149.9,
+        "reverseHoloAvg7": 91.2,
+        "reverseHoloAvg30": 86.22
       }
     }
   },
@@ -6037,6 +10524,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 3,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "92",
     "artist": "Masakazu Fukuda",
     "rarity": "Rare Holo Star",
@@ -6050,12 +10554,38 @@
       "small": "https://images.pokemontcg.io/ex12/92.png",
       "large": "https://images.pokemontcg.io/ex12/92_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-92",
+      "updatedAt": "2025/07/08",
+      "prices": {
+        "holofoil": {
+          "low": 499.99,
+          "mid": 499.99,
+          "high": 499.99,
+          "market": 320.64,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-92",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 443.66,
+        "lowPrice": 160,
+        "trendPrice": 718.27,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 265,
+        "reverseHoloTrend": 201.95,
+        "lowPriceExPlus": 599.99,
+        "avg1": 383.81,
+        "avg7": 851.6,
+        "avg30": 448.87,
+        "reverseHoloAvg1": 210,
+        "reverseHoloAvg7": 135.86,
+        "reverseHoloAvg30": 110.13
       }
     }
   },
@@ -6104,6 +10634,23 @@
       "Colorless"
     ],
     "convertedRetreatCost": 1,
+    "set": {
+      "id": "ex12",
+      "name": "Legend Maker",
+      "series": "EX",
+      "printedTotal": 92,
+      "total": 93,
+      "legalities": {
+        "unlimited": "Legal"
+      },
+      "ptcgoCode": "LM",
+      "releaseDate": "2006/02/01",
+      "updatedAt": "2018/03/04 10:35:00",
+      "images": {
+        "symbol": "https://images.pokemontcg.io/ex12/symbol.png",
+        "logo": "https://images.pokemontcg.io/ex12/logo.png"
+      }
+    },
     "number": "93",
     "artist": "Ryo Ueda",
     "rarity": "Rare Secret",
@@ -6117,12 +10664,38 @@
       "small": "https://images.pokemontcg.io/ex12/93.png",
       "large": "https://images.pokemontcg.io/ex12/93_hires.png"
     },
-    "set": {
-      "id": "ex12",
-      "releaseDate": "2006/02/01",
-      "name": "Legend Maker",
-      "images": {
-        "symbol": "https://images.pokemontcg.io/ex12/symbol.png"
+    "tcgplayer": {
+      "url": "https://prices.pokemontcg.io/tcgplayer/ex12-93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "holofoil": {
+          "low": 99.85,
+          "mid": 99.85,
+          "high": 99.85,
+          "market": 133.1,
+          "directLow": null
+        }
+      }
+    },
+    "cardmarket": {
+      "url": "https://prices.pokemontcg.io/cardmarket/ex12-93",
+      "updatedAt": "2025/07/31",
+      "prices": {
+        "averageSellPrice": 48.14,
+        "lowPrice": 10.9,
+        "trendPrice": 33.8,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 57.44,
+        "lowPriceExPlus": 28.99,
+        "avg1": 34.99,
+        "avg7": 38.12,
+        "avg30": 46.21,
+        "reverseHoloAvg1": 35.99,
+        "reverseHoloAvg7": 48.7,
+        "reverseHoloAvg30": 33.26
       }
     }
   }
