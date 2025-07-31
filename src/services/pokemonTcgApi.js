@@ -649,7 +649,69 @@ export const pokemonTcgApi = {
     }
   },
 
-  async getFeaturedCards(limit = 12) {
+  async getFeaturedCards(limit = 12, lang = "en") {
+    /* 1. Prefer random cards from Scarlet & Violet 151 (set id: zsv10pt5) */
+    try {
+      const setUrl = `${
+        import.meta.env.BASE_URL || "/"
+      }cards/${lang}/zsv10pt5.json`;
+      const setResp = await fetch(setUrl);
+      if (setResp.ok) {
+        const setCards = await setResp.json();
+        if (setCards && setCards.length > 0) {
+          const sampled = [...setCards]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, limit);
+          return sampled;
+        }
+      }
+    } catch (err) {
+      console.warn("Failed to load zsv10pt5 set for featured cards", err);
+    }
+
+    /* 2. Fallback: random from all local cards */
+    try {
+      const cacheKey = `${lang}_ALL`;
+      let allCards = localCardsCache.get(cacheKey);
+      if (!allCards) {
+        // Attempt to load aggregated all.json first
+        const allUrl = `${
+          import.meta.env.BASE_URL || "/"
+        }cards/${lang}/all.json`;
+        const resp = await fetch(allUrl);
+        if (resp.ok) {
+          allCards = await resp.json();
+          localCardsCache.set(cacheKey, allCards);
+        } else {
+          // Fallback: aggregate per-set files
+          const sets = await loadLocalSetsData();
+          if (sets) {
+            const fetches = await Promise.all(
+              sets.map((s) =>
+                fetch(
+                  `${import.meta.env.BASE_URL || "/"}cards/${lang}/${s.id}.json`
+                )
+                  .then((r) => (r.ok ? r.json() : []))
+                  .catch(() => [])
+              )
+            );
+            allCards = fetches.flat();
+            localCardsCache.set(cacheKey, allCards);
+          }
+        }
+      }
+      if (allCards && allCards.length > 0) {
+        // Simple random sample
+        const sampled = [...allCards]
+          .sort(() => 0.5 - Math.random())
+          .slice(0, limit);
+        return sampled;
+      }
+    } catch (err) {
+      console.warn("Local featured cards fallback failed", err);
+    }
+
+    /* Remote fallback */
     try {
       const response = await apiRequest("/cards", {
         params: {
@@ -657,7 +719,6 @@ export const pokemonTcgApi = {
           pageSize: limit,
         },
       });
-
       return response.data || [];
     } catch (error) {
       console.error("Get featured cards failed:", error);
