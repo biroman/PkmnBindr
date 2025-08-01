@@ -156,7 +156,24 @@ const useSetSearch = () => {
           const localResp = await fetch(localUrl);
           if (localResp.ok) {
             const localData = await localResp.json();
-            const normalizedLocal = localData.map(normalizeCardData);
+            // Ensure cards are ordered by card number ascending for consistent binder layout
+            const sortedLocalData = [...localData].sort((a, b) => {
+              // Extract numeric part of the card number for sorting. This handles formats like "001", "25a", "SWSH045", "110/99", etc.
+              const extractNumber = (numStr) => {
+                if (!numStr) return 999999;
+                // Remove non-digit characters, then parse. Fallback to large number if NaN.
+                const numeric = parseInt(numStr.replace(/[^0-9]/g, ""), 10);
+                return isNaN(numeric) ? 999999 : numeric;
+              };
+
+              const nA = extractNumber(a.number);
+              const nB = extractNumber(b.number);
+              if (nA !== nB) return nA - nB;
+              // When numeric parts are identical, fall back to lexicographic compare to keep a stable order
+              return (a.number || "").localeCompare(b.number || "");
+            });
+
+            const normalizedLocal = sortedLocalData.map(normalizeCardData);
             // Cache and return
             localSetCache.set(setId, normalizedLocal);
             addCardsToCache(normalizedLocal);
