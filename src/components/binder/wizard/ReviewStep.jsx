@@ -160,7 +160,7 @@ const ReviewStep = ({
     try {
       const url = `${
         import.meta.env.BASE_URL || "/"
-      }cards/${lang}/${setId}.json`;
+      }data/${lang}/cards/${setId}.json`;
       const resp = await fetch(url);
       if (!resp.ok) throw new Error("not found");
       const cards = await resp.json();

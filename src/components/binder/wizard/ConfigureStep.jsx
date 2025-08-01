@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 
 const fetchSetCardStats = async (setId, lang = "en") => {
   try {
-    const url = `${import.meta.env.BASE_URL || "/"}cards/${lang}/${setId}.json`;
+    const url = `${
+      import.meta.env.BASE_URL || "/"
+    }data/${lang}/cards/${setId}.json`;
     const resp = await fetch(url);
     if (!resp.ok) throw new Error("not found");
     const cards = await resp.json();

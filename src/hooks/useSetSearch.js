@@ -152,7 +152,7 @@ const useSetSearch = () => {
         try {
           const localUrl = `${
             import.meta.env.BASE_URL || "/"
-          }cards/en/${setId}.json`;
+          }data/en/cards/${setId}.json`;
           const localResp = await fetch(localUrl);
           if (localResp.ok) {
             const localData = await localResp.json();
