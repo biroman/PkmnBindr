@@ -604,7 +604,6 @@ export const BinderProvider = ({ children }) => {
         if (user) {
           const cachedData = getCachedData();
           if (cachedData) {
-            console.log("Loading binders from cache on initialization");
             setBinders(cachedData);
             setIsLoading(false);
 
@@ -1062,9 +1061,21 @@ export const BinderProvider = ({ children }) => {
           const updatedCards = { ...binder.cards };
           delete updatedCards[positionKey];
 
+          // CLEANUP: Remove missing instance for the removed card
+          let updatedMissingInstances = binder.metadata?.missingInstances || [];
+          if (removedCard.instanceId) {
+            updatedMissingInstances = updatedMissingInstances.filter(
+              (instanceId) => instanceId !== removedCard.instanceId
+            );
+          }
+
           const updatedBinder = {
             ...binder,
             cards: updatedCards,
+            metadata: {
+              ...binder.metadata,
+              missingInstances: updatedMissingInstances,
+            },
           };
 
           // Use markBinderAsModified to properly track changes and sync status
@@ -1075,6 +1086,9 @@ export const BinderProvider = ({ children }) => {
               cardId: removedCard.cardId,
               position,
               previousValue: removedCard,
+              cleanedMissingInstances:
+                updatedMissingInstances.length !==
+                (binder.metadata?.missingInstances?.length || 0),
             },
             binder.ownerId
           );
@@ -1549,15 +1563,23 @@ export const BinderProvider = ({ children }) => {
           return { success: true, count: 0 }; // Already empty
         }
 
-        console.log(`Clearing ${cardCount} cards from binder ${binderId}`);
+        // Capture original missing count for reporting
+        const originalMissingCount =
+          targetBinder.metadata?.missingInstances?.length || 0;
 
         // Single atomic operation to clear all cards
         const updateBinder = (binder) => {
           if (binder.id !== binderId) return binder;
 
+          // CLEANUP: Clear missing instances when clearing all cards
+
           const clearedBinder = {
             ...binder,
             cards: {}, // Clear all cards in one operation
+            metadata: {
+              ...binder.metadata,
+              missingInstances: [], // Clear all missing instances since no cards remain
+            },
             settings: {
               ...binder.settings,
               pageCount: binder.settings?.minPages || 1, // Reset to minimum pages
@@ -1571,6 +1593,7 @@ export const BinderProvider = ({ children }) => {
             {
               reason,
               clearedCount: cardCount,
+              clearedMissingInstances: originalMissingCount,
               timestamp: new Date().toISOString(),
             },
             binder.ownerId
@@ -2434,16 +2457,29 @@ export const BinderProvider = ({ children }) => {
           );
         };
 
-        setBinders((prev) => prev.map(updateBinder));
+        // Update binders state
+        let updatedBinders;
+        setBinders((prev) => {
+          updatedBinders = prev.map(updateBinder);
+          return updatedBinders;
+        });
 
         // Update current binder if it's the one being updated
+        let updatedCurrentBinder;
         if (currentBinder?.id === binderId) {
-          setCurrentBinder((prev) => updateBinder(prev));
+          setCurrentBinder((prev) => {
+            updatedCurrentBinder = updateBinder(prev);
+            return updatedCurrentBinder;
+          });
         }
 
-        // Save to localStorage
-        const updatedBinders = binders.map(updateBinder);
-        storage.set(STORAGE_KEYS.BINDERS, updatedBinders);
+        // Save to localStorage using the fresh data we just computed
+        // Use a small delay to ensure React state updates have processed
+        setTimeout(() => {
+          if (updatedBinders) {
+            storage.set(STORAGE_KEYS.BINDERS, updatedBinders);
+          }
+        }, 0);
       } catch (error) {
         console.error("Failed to update binder metadata:", error);
         toast.error("Failed to update binder metadata");
@@ -2460,9 +2496,50 @@ export const BinderProvider = ({ children }) => {
         throw new Error("User must be signed in to save");
       }
 
-      const binder = binders.find((b) => b.id === binderId);
+      // RACE CONDITION FIX: Get the most up-to-date binder data
+      // Prefer currentBinder if it's the one being saved (most likely to be fresh)
+      let binder;
+      if (currentBinder?.id === binderId) {
+        binder = currentBinder;
+      } else {
+        binder = binders.find((b) => b.id === binderId);
+      }
+
       if (!binder) {
         throw new Error("Binder not found");
+      }
+
+      // VALIDATION: Ensure missing instances are clean before saving
+      const cardInstanceIdSet = new Set(
+        Object.values(binder.cards || {})
+          .map((cardEntry) => cardEntry?.instanceId)
+          .filter(Boolean)
+      );
+
+      const currentMissingInstances = binder.metadata?.missingInstances || [];
+      const validMissingInstances = currentMissingInstances.filter(
+        (instanceId) => cardInstanceIdSet.has(instanceId)
+      );
+
+      const orphanedCount =
+        currentMissingInstances.length - validMissingInstances.length;
+
+      // If there are orphaned missing instances, clean them up before saving
+      if (orphanedCount > 0) {
+        // Update the binder with cleaned missing instances
+        binder = {
+          ...binder,
+          metadata: {
+            ...binder.metadata,
+            missingInstances: validMissingInstances,
+          },
+        };
+
+        // Also update the local state to keep it in sync
+        if (currentBinder?.id === binderId) {
+          setCurrentBinder(binder);
+        }
+        setBinders((prev) => prev.map((b) => (b.id === binderId ? binder : b)));
       }
 
       // ----------------- Local rate limiting for Save action -----------------
@@ -2717,8 +2794,6 @@ export const BinderProvider = ({ children }) => {
         }
       }
 
-      console.log("Loading binders from Firebase");
-
       try {
         // Get all cloud binders
         const cloudBinders = await binderSyncService.getAllCloudBinders(
@@ -2794,6 +2869,11 @@ export const BinderProvider = ({ children }) => {
                 cloudVersion > localVersion ||
                 cloudModified > localModified
               ) {
+                const localMissingInstances =
+                  localBinder.metadata?.missingInstances || [];
+                const cloudMissingInstances =
+                  cloudBinder.metadata?.missingInstances || [];
+
                 console.log(
                   `Cloud binder "${cloudBinder.metadata?.name}" is newer:`,
                   {
@@ -2803,6 +2883,7 @@ export const BinderProvider = ({ children }) => {
                     localModified: localModified.toISOString(),
                   }
                 );
+
                 const updatedCloudBinder = {
                   ...cloudBinder,
                   sync: {
@@ -2877,7 +2958,7 @@ export const BinderProvider = ({ children }) => {
     await autoSyncCloudBinders(true);
   }, [autoSyncCloudBinders]);
 
-  // Force clear cache and resync (for debugging sync issues)
+  // Force clear cache and resync
   const forceClearAndSync = useCallback(async () => {
     console.log("Force clearing cache and resyncing...");
     invalidateCache();

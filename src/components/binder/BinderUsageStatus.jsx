@@ -22,10 +22,6 @@ const BinderUsageStatus = ({ binder, showProgress = true, className = "" }) => {
           currentCount: currentPageCount,
         });
 
-        // Debug what we're getting from the rules system
-        console.log("Card check result:", cardCheck);
-        console.log("Page check result:", pageCheck);
-
         // Use fallback limits if rules don't provide them
         const cardLimit = cardCheck.limit || GLOBAL_CARD_LIMIT;
         const pageLimit = pageCheck.limit || 100;

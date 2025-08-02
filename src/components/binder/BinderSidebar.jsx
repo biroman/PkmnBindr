@@ -16,6 +16,7 @@ import PageManager from "./PageManager";
 import RevertConfirmationModal from "./RevertConfirmationModal";
 import SortControls from "./SortControls";
 import MissingCardsModal from "./MissingCardsModal";
+
 import { X } from "lucide-react";
 
 const GridSizeSelector = ({ currentSize, onSizeChange }) => {
