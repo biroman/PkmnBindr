@@ -124,11 +124,11 @@ const FloatingSyncControls = ({ binder }) => {
 
     switch (syncState) {
       case "synced":
-        return "bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900";
+        return "bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300";
       case "error":
-        return "bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900";
+        return "bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300";
       case "conflict":
-        return "bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 hover:bg-orange-200 dark:hover:bg-orange-900";
+        return "bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300";
       default:
         return "bg-blue-600 text-white hover:bg-blue-700";
     }
@@ -211,7 +211,12 @@ const FloatingSyncControls = ({ binder }) => {
         {/* Save */}
         <button
           onClick={handleSave}
-          disabled={!user || isSaving || binderSyncStatus.status === "saving"}
+          disabled={
+            !user ||
+            isSaving ||
+            binderSyncStatus.status === "saving" ||
+            !hasUnsyncedChanges()
+          }
           className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${getButtonStyle()}`}
           aria-label="Save binder to cloud"
           title={getSyncText()}

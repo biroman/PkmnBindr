@@ -4,6 +4,7 @@ import {
   useState,
   useEffect,
   useCallback,
+  useRef,
 } from "react";
 import { toast } from "react-hot-toast";
 import { useRules } from "./RulesContext";
@@ -540,6 +541,12 @@ export const BinderProvider = ({ children }) => {
   const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
   const CACHE_KEY = "binders_cache";
   const BACKGROUND_SYNC_INTERVAL = 2 * 60 * 1000; // 2 minutes
+
+  const SAVE_RATE_LIMIT = { windowMs: 5 * 60 * 1000, max: 5 };
+  const REVERT_RATE_LIMIT = { windowMs: 5 * 60 * 1000, max: 5 };
+
+  const saveHistoryRef = useRef({});
+  const revertHistoryRef = useRef({});
 
   // Cache management functions
   const isCacheValid = useCallback((cacheData) => {
@@ -2458,6 +2465,27 @@ export const BinderProvider = ({ children }) => {
         throw new Error("Binder not found");
       }
 
+      // ----------------- Local rate limiting for Save action -----------------
+      {
+        const now = Date.now();
+        const history = saveHistoryRef.current[binderId] || [];
+        // prune entries older than window
+        const pruned = history.filter(
+          (ts) => now - ts < SAVE_RATE_LIMIT.windowMs
+        );
+        if (pruned.length >= SAVE_RATE_LIMIT.max) {
+          const oldest = Math.min(...pruned);
+          const waitMs = SAVE_RATE_LIMIT.windowMs - (now - oldest);
+          const waitSeconds = Math.ceil(waitMs / 1000);
+          toast.error(
+            `Save limit reached. Please wait ${waitSeconds}s before saving again.`
+          );
+          return { success: false, rateLimited: true };
+        }
+        pruned.push(now);
+        saveHistoryRef.current[binderId] = pruned;
+      }
+
       try {
         setSyncStatus((prev) => ({
           ...prev,
@@ -2558,6 +2586,26 @@ export const BinderProvider = ({ children }) => {
     async (binderId) => {
       if (!user) {
         throw new Error("User must be signed in to download");
+      }
+
+      // ---------------- Local rate limiting for Revert action ---------------
+      {
+        const now = Date.now();
+        const history = revertHistoryRef.current[binderId] || [];
+        const pruned = history.filter(
+          (ts) => now - ts < REVERT_RATE_LIMIT.windowMs
+        );
+        if (pruned.length >= REVERT_RATE_LIMIT.max) {
+          const oldest = Math.min(...pruned);
+          const waitMs = REVERT_RATE_LIMIT.windowMs - (now - oldest);
+          const waitSeconds = Math.ceil(waitMs / 1000);
+          toast.error(
+            `Revert limit reached. Please wait ${waitSeconds}s before trying again.`
+          );
+          return { success: false, rateLimited: true };
+        }
+        pruned.push(now);
+        revertHistoryRef.current[binderId] = pruned;
       }
 
       try {

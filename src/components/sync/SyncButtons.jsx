@@ -159,7 +159,12 @@ const MobileSyncButtons = ({
       {/* Save Button */}
       <button
         onClick={handleSaveToCloud}
-        disabled={!user || isLoading || binderSyncStatus?.status === "saving"}
+        disabled={
+          !user ||
+          isLoading ||
+          binderSyncStatus?.status === "saving" ||
+          !hasUnsyncedChanges()
+        }
         className={`flex items-center px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${getSyncButtonStyle()}`}
         title="Save to Cloud"
       >
